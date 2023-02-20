@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+\begin{document}
+
+\begin{tikzpicture}[scale=3]
+  \draw[->] (0,0)--(2,0) node[right] {$x$};
+  \draw[->] (0,0)--(0,2) node[right] {$y$};
+  \begin{scope}[rotate=20, gray]
+  \draw[->] (0,0)--(2,0) node[right] {$x'$};
+  \draw[->] (0,0)--(0,2) node[right] {$y'$};
+  \draw[fill=blue] (1,0) circle (1pt) node[below right, blue] {$(x',y')=(1,0)$, $(x,y)=(\cos\theta,\sin\theta)$};
+  \draw[fill=red] (0,1) circle (1pt) node[above right, red] {$(x',y')=(0,1)$, $(x,y)=(-\sin \theta,\cos\theta)$};
+\end{scope}
+\draw[red,-latex] (0.5,0) to [bend right=45]  node[right] {$\theta$} ({0.5*cos(20)},{0.5*sin(20)});
+\end{tikzpicture}
+\end{document}

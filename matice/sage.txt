@@ -1,0 +1,63 @@
+vzory=([0,0],[1,0],[1,1],[0.5,1.6],[0,1],[0,0])
+A=matrix([[2,0],[0,2]])
+B=matrix([[1,3/4],[0,2/3]])
+theta=pi/3
+P=matrix([[cos(theta)^2,sin(theta)*cos(theta)],[sin(theta)*cos(theta),sin(theta)^2]]) # projekce
+R=matrix([[cos(theta),-sin(theta)],[sin(theta),cos(theta)]]) # rotace
+
+for M in [A,B,P,R,R*P,P*R]:
+    obrazy=[M*vector(i) for i in vzory]
+    IMG=point(obrazy, color='red', size=40)+polygon(obrazy, color='red', alpha=0.5)+line(obrazy, color='red')
+    IMG=IMG+point(vzory, size=40, color='blue')
+    IMG=IMG+polygon(vzory, fill=True, alpha=0.5, color='blue')
+    show (M)
+    show(IMG, aspect_ratio=1)
+
+
+
+
+------------------------------
+
+vzory=([0,0],[1,0],[1,1],[0.5,1.6],[0,1],[0,0])
+Vzory3d=[[0,i[0],i[1]] for i in vzory] + [[5/3,i[0],i[1]] for i in vzory]
+
+Matice=[matrix([[1,0,0],[0,1,0]]), matrix([[0,1,0],[0,0,1]]), matrix([[1,0,0],[0,0,1]]), matrix([[1,-1,0],[-1/2,-1,1]]), matrix([[-1,1,0],[-1,-1/2,1]]), matrix([[1,1/sqrt(2),0],[0,1/sqrt(2),1]]), matrix([[1,-1/sqrt(2)/2,0],[0,-1/sqrt(2)/2,1]])]
+
+for A in Matice:
+    Vzory=[A*vector(i) for i in Vzory3d] 
+
+    IMG=polygon(Vzory[:6], fill=False)
+    for i in [0,1,2,3,4]:
+        IMG+=polygon(Vzory[0+i:2+i]+Vzory[7+i:5+i:-1], fill=False)
+    IMG+=polygon(Vzory[6:], fill=False)
+
+    show(A)
+    show(IMG, aspect_ratio=1, axes=False)
+
+
+------------------------------
+
+# 1. Rozklad obecne transformace na otoceni a symetrickou transformaci
+# 2. Rozklad symetricke transformace na izotropni cast a deviator deformaci
+
+vzory=([0,0],[1,0],[1,1],[0.5,1.6],[0,1],[0,0])
+A=matrix([[.1,0.25],[0.05,-.2]])
+AT=A.transpose()
+B_sym=(A+AT)/2
+B_asym=(A-AT)/2
+# Vysvetleni B_asym: k prispevku, ktery reprezentuje zmenu otocenim, pridame identitu, abychom meli celou transformaci
+
+B_izo=B_sym.trace()/2*identity_matrix(2)
+B_dev=B_sym-B_izo
+# Vysvetleni B_dev: k prispevku, ktery reprezentuje deviaci od izotroniho pripadu, pridame identitu, abychom meli celou transformaci
+
+for M in [[A,"Celá deformace"],[B_asym,"Antisymetrická èást, pootoèení"], [B_sym,"Symetrická èást, zmìna tvaru"], [B_izo,"Izotropní èást zmìny tvaru"], [B_dev,"Deviátor deformací"]]:
+    obrazy=[(M[0]+identity_matrix(2))*vector(i) for i in vzory]
+    IMG=point(obrazy, color='red', size=40)+polygon(obrazy, color='red', alpha=0.5)+line(obrazy, color='red')
+    IMG=IMG+point(vzory, size=40, color='blue')
+    IMG=IMG+polygon(vzory, fill=True, alpha=0.5, color='blue')
+    show(html("<h2>"+M[1]+"</h2>"))
+    show (n(M[0], digits=3))
+    show(IMG, aspect_ratio=1)
+    show(html("<hr>"))
+

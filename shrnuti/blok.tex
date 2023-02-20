@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\everymath{\displaystyle}
+\usepackage{tikz}
+\usepackage[margin=1.5in, landscape]{geometry}
+\usepackage[latin2]{inputenc}
+\usetikzlibrary{shapes,arrows}
+\begin{document}
+\pagestyle{empty}
+
+\tikzstyle{block} = [draw, fill=blue!20, rectangle, 
+    minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+\begin{center}
+
+\textbf{Obecné schema a jeho specifikace\\ pro rùst populace a pro práci v~potenciálovém poli.}
+
+\bigskip
+\bigskip
+\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [block, text width=3cm, text centered] (controller) {Hodnota velièiny\\ v èase\\ (èasový prùbìh)};
+    \node [block, right of=controller,text width=3cm, text centered, node distance=6cm] (system) {Rychlost zmìny velièiny\\ v èase};
+    \node [block, right of=controller,text width=3cm, text centered, node distance=3cm, yshift=-3cm] (ui) {Zmìna  velièiny za èasový interval};
+    \begin{scope}[transform canvas={yshift=.7em}]
+      \draw [->, shift={(0,10pt)}] (controller) -- node {$\frac{\mathrm d}{\mathrm dt}$, $\frac{\partial}{\partial t}$} (system);
+    \end{scope}
+    \begin{scope}[transform canvas={yshift=-.7em}]
+      \draw [->, shift={(0,10pt)}] (system) -- node[text width= 4cm, text centered] {$\int \dots \mathrm dt$\\ a integraèní konstanta} (controller);
+    \end{scope}
+    \draw [->, shift={(0,10pt)}] (system) to [bend left=25] node[] {$\int_a^b \dots \mathrm dt$} (ui.east);
+    \draw [->, shift={(0,10pt)}] (controller) to [bend right=25] node[left, text centered, text width=2cm] {rozdíl\\funkèních hodnot} (ui.west);
+  \end{tikzpicture}
+
+  \bigskip
+  \bigskip
+  \tikzstyle{block} = [draw, fill=green!20]
+\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [block, text width=3cm, text centered] (controller) {Velikost populace\\ v libovolém èase};
+    \node [block, right of=controller,text width=3cm, text centered, node distance=6cm] (system) {Rychlost zmìny velikosti populace (porodnost sní¾ená o úmrtnost)};
+    \node [block, right of=controller,text width=3cm, text centered, node distance=3cm, yshift=-3cm] (ui) {Zmìna velikosti populace za èasový interval};
+    \begin{scope}[transform canvas={yshift=.7em}]
+      \draw [->, shift={(0,10pt)}] (controller) -- node {$\frac{\mathrm d}{\mathrm dt}$, $\frac{\partial}{\partial t}$} (system);
+    \end{scope}
+    \begin{scope}[transform canvas={yshift=-.7em}]
+      \draw [->, shift={(0,10pt)}] (system) -- node[text width= 4cm, text centered] {$\int \dots \mathrm dt$\\ a integraèní konstanta} (controller);
+    \end{scope}
+    \draw [->, shift={(0,10pt)}] (system) to [bend left=25] node[] {$\int_a^b \dots \mathrm dt$} (ui.east);
+    \draw [->, shift={(0,10pt)}] (controller) to [bend right=25] node[left, text centered, text width=2cm] {rozdíl\\funkèních hodnot} (ui.west);
+\end{tikzpicture}
+\hfill
+    \tikzstyle{block} = [draw, fill=red!20]
+\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [block, text width=3cm, text centered] (controller) {Potenciální energie v silovém poli};
+    \node [block, right of=controller,text width=3cm, text centered, node distance=6cm] (system) {Pùsobící síla na pøekonání silového pole};
+    \node [block, right of=controller,text width=3cm, text centered, node distance=3cm, yshift=-3cm] (ui) {Vykonaná práce\\(nárùst potenciální energie)};
+    \begin{scope}[transform canvas={yshift=.7em}]
+      \draw [->, shift={(0,10pt)}] (controller) -- node {$\frac{\mathrm d}{\mathrm dx}$} (system);
+    \end{scope}
+    \begin{scope}[transform canvas={yshift=-.7em}]
+      \draw [->, shift={(0,10pt)}] (system) -- node[text width= 4cm, text centered] {$\int \dots \mathrm dx$\\ a integraèní konstanta} (controller);
+    \end{scope}
+    \draw [->, shift={(0,10pt)}] (system) to [bend left=25] node[] {$\int_a^b \dots \mathrm dx$} (ui.east);
+    \draw [->, shift={(0,10pt)}] (controller) to [bend right=25] node[left, text centered, text width=2cm] {rozdíl\\funkèních hodnot} (ui.west);
+  \end{tikzpicture}
+
+\end{center}
+
+\end{document}

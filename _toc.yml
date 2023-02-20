@@ -1,0 +1,38 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Přednášky
+    numbered: true
+    chapters:
+    - file: derivace_I/slidy.md
+    - file: derivace_II/slidy.md
+    - file: derivace_III/slidy.md
+    - file: integraly/slidy.md
+    - file: integraly2/slidy.md
+    - file: ode/slidy.md
+    - file: matice/slidy.md
+    - file: inverzni_matice/slidy.md
+    - file: soustavy/slidy.md
+    - file: vektorove_pole/slidy.md
+    - file: dvojny_integral/slidy.md
+    - file: numerika/slidy.md
+    - file: shrnuti/slidy.md
+  - caption: Cvičení
+    numbered: true
+    chapters:
+    - file: cviceni/cviceni01.md
+    - file: cviceni/cviceni02.md
+    - file: cviceni/cviceni03.md
+    - file: cviceni/cviceni04.md
+    - file: cviceni/cviceni05.md
+    - file: cviceni/cviceni06.md
+    - file: cviceni/cviceni07.md
+    - file: cviceni/cviceni08.md
+    - file: cviceni/cviceni09.md
+    - file: cviceni/cviceni10.md
+    - file: cviceni/cviceni11.md
+    - file: cviceni/cviceni12.md
+    - file: cviceni/cviceni13.md
