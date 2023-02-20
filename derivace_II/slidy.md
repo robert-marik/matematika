@@ -116,10 +116,11 @@ blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
 (1+x)^n\approx 1+nx.$$ První dva vzorce využijeme později při popisu malých
 rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na webu [fyzikální olympiády](http://fyzikalniolympiada.cz/studijni-texty) v dokumentu [Aproximace ve fyzikálních úlohách](http://fyzikalniolympiada.cz/texty/aproxim.pdf).
 
-<div class="shorten" data-text="Lineární aproximace se běžně využívá v při aproximaci fyzikálních zákonů. Středoškolské vzorce pro potenciální a kinetickou energii jsou lineárními aproximacemi obecnějších vztahů.">
-
 
 ### Lineární aproximace v některých fyzikálních zákonech
+
+<div class="shorten" data-text="Lineární aproximace se běžně využívá v při aproximaci fyzikálních zákonů. Středoškolské vzorce pro potenciální a kinetickou energii jsou lineárními aproximacemi obecnějších vztahů.">
+
 
 
 \iffalse
@@ -282,9 +283,10 @@ $$\frac{\partial ^2 f}{\partial y^2}:=\frac{\partial }{\partial y}\left(\frac{\p
 nebo 
 $$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(\frac{\partial f}{\partial x}\right).$$
 
-<div class="shorten" data-text="Derivace vyšších řádů se využívají při výpočtu ohybové čáry nosníků.">
 
 ### Druhá derivace a deformace nosníků
+
+<div class="shorten" data-text="Derivace vyšších řádů se využívají při výpočtu ohybové čáry nosníků.">
 
 \iffalse
 
@@ -397,10 +399,11 @@ $$
 a odsud dostáváme aproximaci druhé derivace
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 
-<div class="shorten" data-text="">
 
 
 ## Odbočka: od vazeb mezi atomy k materiálovým vlastnostem
+
+<div class="shorten" data-text="">
 
 \iffalse
 

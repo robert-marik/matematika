@@ -248,10 +248,11 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 **Příklad.** Najděte lokální extrém funkce $y=\frac{x^3}{x+2}$. Derivace je $y'=\frac{2(x+3)x^2}{(x+2)^2}$.
 
-<div class="shorten" data-text="Využití derivace hledání lokálního extrému funkce.">
 
 
 ### Příklad: kritická tloušťka izolace trubky
+
+<div class="shorten" data-text="Využití derivace hledání lokálního extrému funkce.">
 
 
 \iffalse
@@ -520,10 +521,11 @@ vektorem. Nazývá se *nabla* nebo *Hamiltonův operátor*.
 > Poznámka (fyzikální význam gradientu). Gradient skalární veličiny $f$ je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny $f$. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat, například vedení tepla nebo difuze. V praxi nás proto většinou zajímá směr maximálního poklesu, tj. $-\nabla f$.
 
 
-<div class="shorten" data-text="Derivace a lineární aproximace funkce více proměnných. Využívá se například při popisu deformace">
-
 
 ### Lineární aproximace rovinné transformace
+
+<div class="shorten" data-text="Derivace a lineární aproximace funkce více proměnných. Využívá se například při popisu deformace">
+
 
 <div class='obtekat'>
 
