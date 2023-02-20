@@ -16,7 +16,10 @@ $$
 \end{aligned}
 $$
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 
 $$
@@ -27,7 +30,8 @@ $$
 \end{aligned}
 $$
 
-</div>
+```
+
 
 
 
@@ -53,7 +57,10 @@ $$  \iint_\Omega x\,\mathrm dx \mathrm dy
 $$
 přes trojúhelník $\Omega$ s vrcholy v bodech $(0,0)$, $(1,0)$ a $(0,1)$ a poté vydělením obsahem trojúhleníka najděte $x$-ovou polohu těžiště.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Rovnice přímky, ve které leží přepona trojúhelníka, je
 $$y=1-x$$ a trojúhelník tedy je možno zapsat soustavou nerovností
@@ -80,7 +87,8 @@ $$
 
 $$x_T=\frac{\frac 16}{\frac 12}=\frac 13$$
 
-</div> 
+```
+ 
 
 
 

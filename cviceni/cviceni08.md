@@ -14,7 +14,10 @@ $$
 
 _V tomto příkladě si vyzkoušíme násobení matic a kromě toho uvidíme, že násobení diagonální maticí je v jistém smyslu jednoduché. Podle toho, v jakém pořadí násobíme matice, se diagonálními prvky se násobí řádky nebo sloupce druhé matice._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 S rozepsáním pomocí lineárních kombinací vektorů tvořených sloupci matice $A$ dostáváme
 $$2\cdot   \begin{pmatrix}  1 \\  0 \\  1 \end{pmatrix} -1\cdot\begin{pmatrix}   -2 \\   1 \\   2 \end{pmatrix} +0\cdot\begin{pmatrix}3\\ 0\\ -2\end{pmatrix} = \begin{pmatrix} 4\\ -1\\ 0\end{pmatrix}$$
@@ -73,7 +76,8 @@ CB= \begin{pmatrix}
 $$
 V případě součinů s diagonální maticí se diagonálními prvky násobí odpovídající řádky nebo sloupce matice, podle toho, v jakém pořadí součin uvažujeme.
 
-</div>
+```
+
 
 
 ## Soustava rovnic jako násobení matic
@@ -87,7 +91,10 @@ $$
 \end{aligned}
 $$
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
   \begin{pmatrix}
@@ -99,7 +106,8 @@ $$
   12\\21\\0
 \end{pmatrix}
 $$
-</div>
+```
+
 
 
 
@@ -112,7 +120,10 @@ Figurka na obrázku je Timmy ve třech situacích. Jednou se pozoruje svůj obra
 
 Poznámka: Stačí si všímat, kam se zobrazují jednotkové vektory ve směru os, tj. kam se zobrazí Timmiho nakročená noha a Timyho ruka, která je natažená dozadu. Případné neceločíselné složky matice jenom odhadněte. \textit{Podle LAFF Linear Algebra - Foundations to Frontiers (www.ulaff.net)}
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Nakročená noha je v bodě $(1,0)$ a tento bod se transformuje sám na sebe pro krajní obrázky a na bod $(0,1)$ pro prostřední obrázek. Tím je dán první sloupec matice zobrazení. Ruka natažená dozadu je v bodě $(0,1)$ a u modrého Timmyho se transformuje (odhadem) na $(0,-0.8)$, u červeného Timmyho na $(-1,0)$ a u šedého Timmyho (odhadem) na $(1,0.8)$. Matice jsou postupně
 $$
@@ -134,7 +145,8 @@ $$
   \end{pmatrix}.
 $$
 
-</div>
+```
+
 
 ## Matice rotace
 
@@ -150,7 +162,10 @@ _Návod:_ Funkce kosinus je sudá funkce a funkce sinus je lichá funkce. Proto 
 
 _Matice rotace je důležitá v aplikacích zabývajících se deformacemi, protože umožní odfiltrovat tu část změny polohy referenčních bodů, která je způsobena rotací a nepřispívá tedy ke změně tvaru tělesa._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Při zkratce $S=\sin \theta$ a $C=\cos\theta$ platí
 $$ 
@@ -164,7 +179,8 @@ a potom $$R_\theta R_{-\theta}=   \begin{pmatrix}     C & -S \\ S& C  \end{pmatr
 kde jsme využili identitu
 $$\sin^2\theta + \cos^2\theta=1.$$
 
-</div>
+```
+
 
 
 
@@ -184,7 +200,10 @@ je matice posunutí o $a$ doprava a $b$ nahoru. Odhadněte, jak bude
 vypadat matice popisující opačnou transformaci a pro jedno nějaké pořadí
 součinu ověřte, že součin těchto matic je jednotková matice.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Platí
 $$ \begin{pmatrix}  1& 0& a\\  0 & 1 & b\\  0& 0& 1\end{pmatrix}\begin{pmatrix}  x\\y\\1\end{pmatrix} = \begin{pmatrix}  x+a\\y+b\\1\end{pmatrix} $$
@@ -194,7 +213,8 @@ $$   \begin{pmatrix}  1& 0& -a\\  0 & 1 & -b\\  0& 0& 1\end{pmatrix}.$$
 Přímým výpočtem vidíme, že platí
 $$ \begin{pmatrix}  1& 0& a\\  0 & 1 & b\\  0& 0& 1\end{pmatrix}  \begin{pmatrix}  1& 0& -a\\  0 & 1 & -b\\  0& 0& 1\end{pmatrix}=   \begin{pmatrix}  1& 0& 0\\  0 & 1 & 0\\  0& 0& 1\end{pmatrix}.$$
 
-</div>
+```
+
 
 
 
@@ -211,7 +231,10 @@ fyzikálních zákonů se zjednoduší. Nyní si ukážeme proč. Najděte
 
 _V tomto příkladě uvidíme, že matice zachovávající směr os souřadnic jsou v určitém smyslu pěkné._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 ad 1.
 $$  \begin{pmatrix}    a & b & c \\ d & e & f \\ g& h& i \end{pmatrix}  \begin{pmatrix}    1\\0\\0  \end{pmatrix}   =   \begin{pmatrix}    a \\ d \\g  \end{pmatrix}$$ 
@@ -224,7 +247,8 @@ $$     \begin{pmatrix}    a & 0 & 0 \\ 0 & e & f \\ 0& f& i \end{pmatrix}.$$
 ad 3. Jako minulý případ, ale ještě se musí zachovávat směry vektorů $(0,1,0)^T$ a $(0,0,1)^T$. Platí
 $$    \begin{pmatrix}    a & 0 & 0 \\ 0 & e & f \\ 0& f& i \end{pmatrix}  \begin{pmatrix}    0 \\1\\0  \end{pmatrix}   =   \begin{pmatrix}    0 \\ e\\f  \end{pmatrix},\quad    \begin{pmatrix}    a & 0 & 0 \\ 0 & e & f \\ 0& f& i \end{pmatrix}  \begin{pmatrix}    0 \\0\\1  \end{pmatrix}   =   \begin{pmatrix}    0 \\ f\\i \end{pmatrix}$$
 a aby vzor a obraz měly stejný směr, musí být $f=0$. Nejobecnější symetrická matice, která zachovává směr všech tří základních bázových vektorů je matice, která má mimo hlavní diagonálu nuly.
-</div>
+```
+
 
 
 
@@ -240,7 +264,10 @@ _Návod: je možné ukázat buď pro obecný polynom $ax^2+bx+c$, nebo samostatn
  V tomto příkladě mimo jiné vidíme, že mocnina nenulové matice může být nula. To je efekt, který nemá obdobu u násobení reálných čísel._
 
 
-<div class=reseni> 
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ 
 
 Polynom $x^2$ má derivaci $2x$, tj. v označení pomocí vektorů
 se musí vektor $(1,0,0)^T$ zobrazit na $(0,2,0)^T$. Toto snadno
@@ -264,7 +291,8 @@ Matice $A^2$ je druhá derivace a $A^3$ třetí derivace a mají tvar
 $$  A^2=   \begin{pmatrix}  0 & 0 & 0 \\  0 & 0 & 0 \\  2 & 0 & 0\end{pmatrix}, \qquad   A^3=   \begin{pmatrix}  0 & 0 & 0 \\  0 & 0 & 0 \\  0 & 0 & 0\end{pmatrix}.$$
 
 
-</div>
+```
+
 
 
 
@@ -280,7 +308,10 @@ Matice $P=\begin{pmatrix}  \cos^2 \alpha & \cos \alpha \sin \alpha \\  \cos\alph
   mít inverzní zobrazení. Proto neexistuje inverzní matice.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Pro $C=\cos \alpha$ a $S=\sin\alpha$ dostáváme
 $$  \begin{aligned}P^2&=  \begin{pmatrix}    C^2 & CS \\CS & S^2  \end{pmatrix}  \begin{pmatrix}    C^2 & CS \\CS & S^2  \end{pmatrix} = \begin{pmatrix}  C^4+C^2S^2 & C^3S+CS^3 \\C^3S+CS^3 & C^2S^2+S^4\end{pmatrix} \\&= \begin{pmatrix}  C^2(C^2+S^2) & CS(C^2+S^2) \\CS(C^2+S^2) & S^2(C^2+S^2) \end{pmatrix} = \begin{pmatrix}  C^2 & CS \\CS & S^2\end{pmatrix} =P\end{aligned}$$
@@ -291,7 +322,8 @@ Pro determinant platí
 $$  |P|=   \begin{vmatrix}      C^2 & CS \\CS & S^2  \end{vmatrix} =C^2S^2-(CS)(CS)=C^2S^2-C^2S^2=0$$
 a tento výpočet potvrzuje, že neexistuje inverzní matice.
 
-</div>
+```
+
 
 
 

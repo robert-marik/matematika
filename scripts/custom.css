@@ -47,3 +47,8 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
   max-width: 100%; 
 }
 }
+
+
+.cviceni p img {max-width:50%; float:right; padding-left:10px;}
+.cviceni h2 {clear:both;}
+.admonition {clear:both !important;}

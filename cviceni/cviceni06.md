@@ -30,7 +30,10 @@ Najděte následující integrály integrováním substituční metodou.
 -->
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 V integrované funkci se snažíme "rozšifrovat" součin složené funkce a
 derivace vnitřní složky. Pokud se to podaří, dáváme substituci
@@ -65,7 +68,8 @@ $$\int  \cos x\sqrt{\sin x}\,\mathrm dx  = \frac 23 t^{3/2} = \frac 23 \sin^{3/2
 
 Kontrola [zde](https://sagecell.sagemath.org/?z=eJwljMEKwjAQRO-F_sPcuolVUfAi9EvESiiJBiGpSdT9fDfmMvvYN8zHJBrMoPrOvcNzsdOFteWVeD6qEZW2RrMg7-tvcxDMPhArvcQsZz6NaKTzKxVqUl1lMCY4-IC2fO47wN18KJPbSdp7MsVKF6gmP-IX9PfqBxQILQY=&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
-</div>
+```
+
 
 
 
@@ -85,7 +89,10 @@ V posledním příkladě určete hodnotu konstanty $a$ tak, aby střední hodnot
 
 Tok tepla v jedné dimenzi je dán Fourierovým zákonem $$Q=-k\frac{\mathrm dT}{\mathrm dx}.$$ Pro ustálené proudění je $Q$ konstantní. Pro homogenní materiál s lineární odezvou je výše uvedený vztah přesně lineární, tj. $k$ je konstanta. Určete tok tepla stěnou šířky $d$ oddělující prostory o teplotě $T_1$ a $T_2$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Vztah
 $$Q=-k\frac{\mathrm dT}{\mathrm dx}$$
@@ -99,7 +106,8 @@ $$T_2-T_1=-\frac Qk d$$
 a odsud
 $$Q=k\frac{T_1-T_2}d$$
 
-</div>
+```
+
 
 
 ## Vedení tepla stěnou, nelineární materiálové vztahy
@@ -121,7 +129,10 @@ Na tomto příkladě jsou zajímavé tři věci.
     teploty. Přesto se podařilo integrál vypočítat. Teplotní profil se naučíme hledat jako řešení rovnice vedení tepla.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Stejně jako v předchozím příkladě, máme
 $$k(T)\frac{\mathrm dT}{\mathrm dx}=-Q$$
@@ -137,7 +148,8 @@ $$Q=\frac{k (T_1)+k (T_2)}{2}\frac{T_1-T_2}{d}.$$
 
 
 
-</div>
+```
+
 
 ## Střední hodnota funkce dané tabulkou
 
@@ -163,7 +175,10 @@ Pro výpočet na intervalu od 100 do 800 Kelvinů bychom museli integrovat na in
 Table: Zdroj: Cengel, Mass and heat transfer.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Integrál vypočteme lichoběžníkovým pravidlem
 $$\int_{100}^{400}\lambda(T)\,\mathrm dT\approx
@@ -186,7 +201,8 @@ $$\int_{100}^{800}\lambda(T)\,\mathrm dT=\int_{100}^{400}\lambda(T)\,\mathrm dT+
 a pro každý integrál máme data v ekvidistantních krocích a můžeme
 použít přímo lichoběžníkové pravidlo.
 
-</div>
+```
+
 
 
 ## Růst populace a přežívání jedinců
@@ -221,7 +237,10 @@ _(Podle J. Stewart, T. Day: Biocalculus,  Calculus for Life Sciences.)_
 % print 5600*S(10)+integrate(720*exp(0.1*t)*S(10-t),(t,0,10))
 -->
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Nechť výchozí stav je rok $t=0$.
 
@@ -242,9 +261,11 @@ N(10)&=N(0)S(10)+\int_0^{10} R(t)S(10-t)\,\mathrm dt=\\&=5600 e^{-2}+\int_0^{10}
 $$
 kde i tento integrál se dá vypočítat přímou integrací pomocí vzorce.
 
-</div>
+```
+
 
 </div>
+
 
 
 
@@ -273,7 +294,10 @@ ho počítali. Vlastní výpočet provádět nemusíte.
 _(Volně přeformulováno podle L. Edestein--Keshet: Differential calculus
 for the life sciences. Příklad je použitelný pro stromy s velkými semeny, například dub. Pro jiné stromy musí semena sbírat stromolezci.)_
 
-<div class=reseni> 
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ 
 
 Množství semen na metr čtvereční závisí na vzdálenosti od
 stromu, je to tedy podobná úloha jako úloha s prouděním tekutiny
@@ -286,8 +310,10 @@ roste s poloměrem, $\frac {\mathrm dS}{\mathrm dr}=2\pi r$. Po dosazení této 
 $$N=\int _0^R D_0e^{-r^2}2\pi r\,\mathrm dr,$$
 který můžeme vypočítat pomocí substituce $-r^2=t$.
 
-</div>
+```
 
 
+
 </div>
+
 

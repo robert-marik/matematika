@@ -26,7 +26,10 @@ Najděte následující integrály.
 1. $\int_{-a}^{a} u^3\,\mathrm du$
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\mathrm dx=e^x+c$, $\int e^{ax}\,\mathrm dx=\frac 1a e^{ax}+c$ a dále linearitu (integrál zachovává součet a konstantní násobek)
 
@@ -47,7 +50,8 @@ Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\ma
 1. $\int_0^{10} e^{-0.1 t}\,\mathrm dt=\left[-10 e^{-0.1t}\right]_0^{10}=-10 e^{-0.1\times 10}-\left(-10 e^{-0.1\times 0}\right)=-10 e^{-1}+10$
 1.  $\int_{-a}^{a} u^3\,\mathrm du=\left[\frac 14 u^4\right]_{-a}^a=\frac 14 a^4 - \frac 14 (-a)^4 = 0$
 
-</div>
+```
+
 
 
 
@@ -69,7 +73,10 @@ za hodinu) a $t$ je čas v hodinách. Vypočtěte integrál pro $r(t)=200-4t$.
 
 _Toto a další příklady jsou klasické aplikace integrálu, kdy integrálem rychlosti, s jakou se mění nějaká veličina, je změna této veličiny._
 
-<div class=reseni> 
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ 
 
 Integrál udává objem oleje, který vyteče za prvních 10 hodin. Pro zadanou funkci dostáváme
 $$
@@ -78,7 +85,8 @@ $$
   $$
   Za 10 hodin vyteče 1800 litrů oleje.
 
-</div>
+```
+
 
 ## Populace včel
 
@@ -98,11 +106,15 @@ $$
 $$
 
 
-<div class=reseni> 
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ 
 
 První integrál značí přírůstek populace včel za patnáct jednotek času, druhý integrál značí celkovou velikost populace včel po uplynutí patnácti jednotek času. (Jednotky času nejsou v zadání specifikovány.)
 
-</div>
+```
+
 
 
 ## Napouštění nádrže
@@ -113,14 +125,18 @@ nateče do nádrže během prvních 20 minut.
 
 (Podle Stewart: Calculus.)
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Změna množství v nádrži je integrál rychlosti, tj. 
 $$
   \int_0^{20} (180+3t)\,\mathrm dt=180\times 20 + \left[\frac 32 t^2\right]_0^{20}=4\, 200 \,\mathrm l.
 $$
 
-</div>
+```
+
 
 ## Prasklá kanalizace
 
@@ -138,7 +154,10 @@ rychlostí $$C'(t)=10^3(t-7).$$ Jaká je změna koncentrace bakterií mezi
 
 (Podle Mardsen, Weinstein: Calculus I.)
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Změna koncentrace je integrál z rychlosti s jakou se koncentrace mění, tj. 
 $$
@@ -146,7 +165,8 @@ $$
 $$
 a koncentrace poklesne o $4000$ jednotek (bakterií na kubický centimetr).
 
-</div>
+```
+
 
 
 
@@ -164,7 +184,10 @@ $$W(0)=0\quad \text {a} \quad W'(t)=\frac{4t}{100}-3\left (\frac  t{100}\right)^
 
 (Podle Mardsen, Weinstein: Calculus I.)
 
-<div class=reseni> 
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ 
 
 Výsledná funkce integrálem rychlosti učení, tj.
 $$
@@ -186,7 +209,8 @@ $$
 $$
 a po přeznační proměnné máme stejný výsledek jako předešlým postupem.
 
-</div>
+```
+
 
 
 
@@ -198,7 +222,10 @@ předem stanovenou hodnotu.  Určete hodnotu reálného parametru $a$ tak,
 aby byl integrál $$\int_0^{10} a \sqrt x\,\mathrm dx$$ roven hodnotě
 2019.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$\int _0^{10} a\sqrt x=\left[a\frac 23 x^{\frac 32}\right]_0^{10}=\frac {2a}{3}(10)^{\frac 32}$$
 
@@ -206,7 +233,8 @@ $$\begin{aligned}
   2019&=\frac {2a}{3}(10)^{\frac 32}\\
   a&=\frac 32 2019 (10)^{-\frac 32}\end{aligned}$$
 
-</div>
+```
+
 
 
 ## Práce na pružině
@@ -234,7 +262,10 @@ Změna jednotek je speciální případ substituce, kdy proměnnou podle
 které integrujeme nahradíme proměnnou jinou. Tuto metodu si pro
 integrál představíme na přednášce._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Jednotková délka:
 $$W=\int_0^1 F\,\mathrm dx = \int_0^1 kx\,\mathrm dx = \left[k\frac 12 x^2\right]_0^1=\frac 12 k-0=\frac 12 k$$
@@ -253,7 +284,8 @@ Výpočet v metrech:
 $$W=\int_0^{0.1}  1000 x\,\mathrm dx = \left[500 x^2\right]_0^{0.1}=500\times 0.01\,\mathrm N \mathrm{m}=5\,\mathrm N \mathrm{m}$$
 
 
-</div>
+```
 
 </div>
+
 

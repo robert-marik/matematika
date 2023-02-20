@@ -18,7 +18,10 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 1. $f(x)=\frac {ax}{(x-1)^2}$
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. $f'(x)=1\cdot \ln x+x\frac 1x=1+\ln x$
 1. $f'(x)=\sqrt{x^2+a}+x\frac{x}{\sqrt{x^2+1}}$
@@ -28,7 +31,8 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 1. $f'(x)=\frac {6x^2(x^2+1)-2x^32x}{(x^2+1)^2}$
 1. $f'(x)=\frac{a(x-1)^2-ax2(x-1)}{(x-1)^4}= \frac{a(x-1)-ax2}{(x-1)^3}=\cdots$
 
-</div>
+```
+
 
 
 
@@ -48,7 +52,10 @@ $$
 
 _První dvě aproximace využijeme později pro odvození tvaru matice malých rotací, což je důležité při studiu deformace materiálů. Poslední můžeme využít například pro to, abychom z relativistického vzorce pro  celkovou energii extrahovali část závislou na rychlosti, tj. kinetickou energii (na přednášce)._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $f(x)\approx f(x_0)+f'(x_0)(x-x_0)$
 
@@ -59,7 +66,8 @@ $f(x)\approx f(x_0)+f'(x_0)(x-x_0)$
 1. $f(x)=(1+x)^n$, $x_0=0$, $f(0)=(1+0)^n=1$, $f'(x)=((1+x)^n)'=n(1+x)^{n-1}$, $f'(0)=n(1+0)^{n-1}=n$
   $$(1+x)^n\approx 1+n\cdot (x-0)=1+nx$$
 
-</div>
+```
+
 
 
 
@@ -79,7 +87,10 @@ $x=0$ odpovídá velmi malé populaci. Proto se konstanta úměrnosti ze
 získané lineární aproximace nazývá *invazní parametr*._
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. $f(x)=xe^x$, $x_0=0$, $f(0)=0e^0=0$, $f'(x)=(xe^x)'=e^x+x e^x$, $f'(0)=e^0+0e^0=e^0=1$
   $$xe^x\approx 0+1\cdot (x-0)=x$$
@@ -100,7 +111,8 @@ $f'(x)=
 1. $f(x)=\frac 1{\sqrt x}$, $x_0=1$, $f(1)=\frac 1{\sqrt 1}=1$, $f'(x)=\left(x^{-\frac 12}\right)'=-\frac 12 x^{-\frac 32}$, $f'(1)=-\frac 12$
   $$\frac 1{\sqrt x} \approx 1-\frac 12 (x-1)$$
 
-</div>
+```
+
 
 
 
@@ -120,12 +132,16 @@ $$
 $$
 pro malá $x$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Přímým dosazením dostáváme $f(0)=\frac {a0}{b+0}=0$, $f'(0)=\frac{ab}{(b+0)^2}=\frac {ab}{b^2}=\frac ab$ a odsud
 $$\frac {ax}{b+x}\approx 0+\frac ab (x-0)=\frac ab x.$$
 
-</div>
+```
+
 
 ## Lineární aproximace kvalifikovaným odhadem
 
@@ -147,7 +163,10 @@ $$
   \frac {ax}{b+x}=x\cdot\frac {a}{b+x}.
 $$
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Obecný vzorec je
 $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).$$
@@ -182,10 +201,9 @@ $\left(1-\frac 0K\right)=1$. V okolí $x=0$ je první součinitel lineární a v
   $x=0$ platí
   $$x\frac a{b+x}\approx x\frac ab.$$
 
-</div>
+```
 
 </div>
-
 
 ## Numerické derivování a závislost tepelné vodivosti mědi na teplotě
 
@@ -210,7 +228,10 @@ _Poznámka: Teplota v Kelvinech (termodynamická teplota) je teplota ve stupníc
 Table: Zdroj: Cengel, Mass and heat transfer.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Teploty jsou v ekvidistantních krocích po $200$ kelvinech. Vezmeme od výchozí hodnoty $400$ kelvinů nejbližší nižší ($200\,\mathrm K$) a nejbližší vyšší ($600\,\mathrm K$) teplotu, najdeme v tabulce odpovídající koeficienty tepelné vodivosti, rozdílem určíme změnu v tomto koeficientu a podílem přepočteme změnu na jeden Kelvin.
 $$\frac{\mathrm d\lambda}{\mathrm dT}(400) \approx \frac{(379 -413) \mathrm {W}/(\mathrm m\,\mathrm K)}{2\cdot 200\mathrm K}=-0.085\,\mathrm W \,\mathrm m^{-1}\,\mathrm K^{-2}$$
@@ -218,7 +239,8 @@ Při teplotě $T=400 K$ hodnota koeficientu tepelné vodivosti s rostoucí teplo
 
 Pokusíme se trošku slovně ilustrovat, co nám vlastně vyšlo. Při teplotě $400\,\mathrm K$ a teplotním gradientu jeden stupeň Celsia na metr délky prochází mědí tepelný výkon $393$ wattů na metr čtvereční, tj. za sekundu se plochou metru čtverečního přenese $393$ joulů. S každým stupněm Celsia navíc tato hodnota malinko poklesne: o $0.085$ joulu. Odsud je patrné, že při změně teploty řádově o desítky stupňů se koeficent změní o malé jednotky procent a v těchto situacích nebude závislost na teplotě významná. 
 
-</div>
+```
+
 
 
 
@@ -235,7 +257,10 @@ Koeficient u první mocniny bývá větší než u čtvrté mocniny, protože ko
 Napište iterační vzorec pro řešení této rovnice Newtonovou metodou a proveďte několik iterací s vhodnou celočíselnou počáteční aproximací. Poté porovnejte s postupem, kdy v rovnici osamostatníte $x$ z lineární části a z takové rovnice sestavíte iterační vzorec.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Newtonova metoda: Využitím funkčního předpisu $f(x)=x^4-8x+6$ a derivace $f'(x)=4x^3-8$ dostáváme iterační vzorec $$x_{n+1}=x_n-\frac{x_n^4-8x_n+6}{4x_n^3-8},$$
 který konverguje velmi rychle.
@@ -271,6 +296,7 @@ $x_6$|$0.801715260030858$
 [Sage.](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggrbPA2NijgTbTNNfQ0LTU2IaEFRZl6JgkaFJgDh9g8K&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 
-</div>
+```
+
 
 

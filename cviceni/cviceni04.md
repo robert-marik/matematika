@@ -24,7 +24,10 @@ Najděte lokální extrémy a intervaly monotonie následujících funkcí. Spol
 1. $y=x^2 e^{-x}$, $y'=-(x - 2)xe^{-x}$
 1. $y$ je spojitá na $\mathbb R\setminus\{2\}$,\\ $y'=\frac{(x^2+3)(x^2-3)}{2-x}$
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 
 *1.* $y=\frac x{(x+1)^2}$, $y'=\frac{1-x}{(x+1)^3}$
@@ -73,7 +76,8 @@ Body nespojitosti derivace jsou řešení rovnice $$(x^2+1)^2=0.$$ Tato rovnice 
 Body nespojitosti nejsou a jeden nulový bod rozdělí reálnou osu na dva podintervaly. Z derivace je zřejmé, že derivace má stejné znaménko jako $x$, tj. derivace je záporná nalevo od nuly a kladná napravo od nuly. To znamená, že v nule se funkce mění z klesající na rostoucí a funkce má v tomto bodě lokální minimum. 
   
 
-</div>
+```
+
 
 ## Krabička z papíru
 
@@ -97,7 +101,10 @@ litrovou krabici mléka a porovnávat s tímto referenčním kvádrem._
 
 
 
-<div class=reseni> 
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ 
 
 Papír A4 má rozměry $210\times 297\,\mathrm{mm}$ a je-li vystřižený čtverec o straně $x$, má krabička rozměry $(210-2x)\times(297-2x)\times x$ a objem
 $$
@@ -116,7 +123,8 @@ $$
    V(40.4)=1.12 \times 10^6\,\mathrm {mm}^3=1.12\,\mathrm{l}.
  $$
 
-</div>
+```
+
 
  
 ## Plot ze tří stran pozemku
@@ -143,7 +151,10 @@ s co nejmenším množstvím parametrů. Uvažujte tedy, že máte jednu
 délkovou jednotku pletiva v prvním případě a že chcete oplotit pozemek
 o jednotkovém obsahu v případě druhém._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Obsah obdélníka o stranách $x$ a $y$ je součin délek dvou sousedních stran
 $$
@@ -195,7 +206,8 @@ $$
 $$
 a kratší strana je polovinou délky delší strany. Jako v předchozím případě, obdélník má poměr stran $2:1$.
 
-</div>
+```
+
 
 
 ## Optimální trám vyřezaný z kulatiny
@@ -219,7 +231,10 @@ nosnost a ve druhém tuhost nosníku. Použijte stejný postup jako v minulé ú
 
 \textit{Tento příklad je zajímavý spíše z aplikačního hlediska: nejvíce dřeva neznamená největší nosnost a nosník, který nejvíce unese, vychází jinak, než nosník, který se nejméně prohýbá.}
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 V jednotkách průměru platí $h^2+b^2=1$
 a mají se postupně maximalizovat funkce obsah $S=bh$, nosnost $N=bh^2$ a tuhost $T=bh^3$. Protože $b$ se pomocí $h$ vyjadřuje pomocí druhé odmocniny a naopak, bude výhodnější maximalizovat funkce, kde aspoň jedna mocnina je sudá. To je jenom u nosnosti, u obsahu a tuhosti si sudé mocniny vyrobíme umocněním na druhou a budeme dosazovat $$b^2=1-h^2,$$ tj.
@@ -243,7 +258,8 @@ Vskutku. Funkce $f(h)=h^6-h^8$ má derivaci $\frac{\mathrm df}{\mathrm dh}=6h^5-
 $$b=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\frac{1}{2}$$ a trám má v tomto případě  průřez obdélníka s poměrem stran $h:b=\sqrt 3:1$.
 
 
-</div>
+```
+
 
 ## Ryba migrující proti proudu
 
@@ -267,7 +283,10 @@ _Podle Stewart, Day: Biocalculus. Calculus for the life siences._
 
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Měřeno v násobcích rychlosti vody máme minimalizovat funkci
 $$
@@ -279,7 +298,8 @@ $$
 $$
 Derivace je rovna nule pro $x=-1$ (ryba plave rychlostí stejnou jako voda, ale po proudu) a $x=\frac 12$ (ryba plave proti proudu takovou rychlostí, že její rychlost vzhledem k břehu je poloviční ve srovnání s rychlostí vody v protiproudu). Smysluplné je pouze řešení $x=\frac 12$ tj polovina rychlosti proudu. Například v proudu o rychlosti $20\,\mathrm{km}\,\mathrm{hod}^{-1}$ ryba plave tak, že vzhledem k nehybnému pozorovateli na břehu plave rychlostí $10\,\mathrm{km}\,\mathrm{hod}^{-1}$. Ve vodě tedy plave rychlostí $30\,\mathrm{km}\,\mathrm{hod}^{-1}$, proud $20\,\mathrm{km}\,\mathrm{hod}^{-1}$ ji strhává zpět a výsledná rychlost je $10\,\mathrm{km}\,\mathrm{hod}^{-1}$
 
-</div>
+```
+
 
 
 _Pozorování potvrdila, že migrující ryby "znají" řešení předchozího

@@ -13,7 +13,10 @@
 1.  $D_6=  \begin{vmatrix}    2-\lambda & 0 & 0\\ 0 & 3-\lambda & 0 \\ 0 & 0& 7-\lambda \end{vmatrix}$  (charakteristický polynom diagonální matice)
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
   \begin{aligned}
@@ -26,7 +29,8 @@ $$
 \end{aligned}
 $$
 
-</div>
+```
+
 
 
 

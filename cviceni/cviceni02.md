@@ -24,7 +24,10 @@ v této místnosti.
 
 _V tomto příkladu se učíme, že tam, kde se pracuje s rychlostmi změn hraje při kvantitativním popisu roli derivace. Ze střední školy známe tvary fyzikálních zákonů a vztahů v omezené platnosti, kdy se rychlost nemění (jako například  rovnoměrný pohyb) nebo mění jenom velmi speciálním způsobem (jako například  rovnoměrně zrychlený pohyb). Pomocí derivací tato omezení středoškolské fyziky padají._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je-li $T$ teplota a $t$ čas, je veličina $\frac{\mathrm dT}{\mathrm dt}$ rychlost s jakou roste teplota a veličina $-\frac{\mathrm dT}{\mathrm dt}$ rychlost, s jakou teplota klesá. Podle předpokladů platí
 $$
@@ -36,7 +39,8 @@ $$
 $$
 kde $k$ je konstanta úměrnosti a $T_{\text{venku}}$ teplota venku.
 
-</div>
+```
+
 
 ## Veličiny z rovnice vedení tepla
 
@@ -59,7 +63,10 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 
 _Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasnění si toho, co derivace vyjadřují a kdy jsou kladné a kdy záporné. To je nutné znát při zadávání modelů do numerických simulací. Výpočet za člověka udělají počítače, ale slovní interpretaci ani kontrolu, že je model relevantní a nemá popletená znaménka, za člověka nikdo neudělá. Používáme postup všeobecně přijímaný ve fyzikálních modelech. To však někdy nekoresponduje s výpočetními nástroji. Například ANSYS, nejpoužívanější program na výpočet modelů typu rovnice vedení tepla, používá pro zadání okrajových podmínek nikoliv tok ven z tělesa, ale tok dovnitř tělesa. Tedy pro fyzika a výpočtáře mají tyto podmínky opačné znaménko. Proto je potřeba vědět co se počítá, jak se systém chová, jak se to projeví na jeho vlastnostech a potom zkontrolovat, jestli to tak vychází i vě výpočetním modelu, jestli nepočítáme něco nesmyslného._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Shrneme si, co je možné očekávát během průběhu děje. U studené tyče ohřejeme levý konec a teplotu udržujeme, pravý konec udržujmeme na nízké teplotě. Tyč se postupně ohřeje a pořád, během dosahování rovnováhy i po nastolení rovnováhy, bude blíž k teplému konci teplota vyšší. Směrem doprava tedy teplota bude klesat a tím směrem také poteče teplo. Po dodsažení rovnováhy bude toto teplo stejné, jako energie, kterou musíme na ohřívaném konci dodávat a na ochlazovaném konci odebírat. Než však nastane rovnováha, musí se všechny části tyče prohřát na cílovou teplotu. To znamená, že při předávání tepla směrem k chladnějšímu konci musí část tepla zůstat v daném místě jako vnitřní energie a projeví se zvýšením teploty. Do dosažení rovnovážného stavu tyč vede teplo, ale každá část tyče předává dál jenom část tepla, protože další část použije na zvýšení své teploty. Proto platí, že čím více jsme napravo, tím méně tam teče tepla. 
 
@@ -75,7 +82,8 @@ Shrneme si, co je možné očekávát během průběhu děje. U studené tyče o
 1. Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy je $-\frac {\partial q}{\partial x}$ a tato veličina je kladná, což plyne z předchozího bodu a z toho, že jsme změnili znaménko. Tato veličina udává, kolik tepla za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže "ztratit", ale použije se na zvýšení teploty, což je právě obsahem rovnice vedení tepla. Měříme v joulech za sekundu na metr.
             $\left[-\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}$ 
 
-</div>
+```
+
 
 
 
@@ -94,7 +102,10 @@ Shrneme si, co je možné očekávát během průběhu děje. U studené tyče o
 _Zpracováno podle Cengel: Mass and heat transfer._
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je-li podmínka na teplotu, figuruje v matematické formulaci $T$ vypočtená v bodě $x=0$ nebo $x=L$ podle toho, jedná-li se o vnitřní nebo vnější část stěny. 
 $T$ je funkce polohy, tj. $T=T(x).$ Je-li podmínka na tok, figuruje v matematické formulaci tok ve tvaru $-k\frac{\partial T}{\partial x}$, opět vypočtená v jednom z krajních bodů.
@@ -108,7 +119,8 @@ $T$ je funkce polohy, tj. $T=T(x).$ Je-li podmínka na tok, figuruje v matematic
 
 Všimněte si, že poslední dvě podmínky se liší znaménkem u $T$. To proto, že v jednom případě je kladný směr toku tepla do materiálu a jednou z materiálu. Pokud chceme mít popis jednotný, nebo nezávislý na zvolené souřadné soustavě, formulujeme podmínky pro tok tepla ven z materiálu. Tento tok získáme tak, že tok tepla vynásobíme skalárně s jednotkovým vektorem směřujícím ven z materiálu kolmo na jeho povrch. V tomto případě by pro tok ze stěny do místnosti bylo $k\frac{\partial T}{\partial x}(0)=h(T(0)-T_{\text{místnost}})$. Tento tok by byl záporný, protože ve skutečnosti teplo uniká z místnosti stěnou ven.
 
-  </div>
+```
+
 
 ## Model růstu úměrného velikosti chybějícího množství
 
@@ -132,11 +144,15 @@ _Jakmile vidíme, že v zadání figuruje rychlost změny veličiny,
   derivaci. Zatím se učíme model zapsat, později ho budeme umět i vyřešit._
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky chybí  $L_{\max}-L$ a model má tvar $$\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).$$
 
-</div>
+```
+
 
 ## Kontaminace a čištění
 
@@ -154,12 +170,16 @@ modelu.
 _Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na změně podílejí dva procesy a jejich účinek se sčítá. Příklad navíc připomíná, jak se pracuje se změnou vyjádřenou procenty. Toto je používané například při úročení spojitým úrokem. Pokud pokles změníme na růst, tj. pokud změníme
   znaménka u derivace, máme okamžitě model růstu financí na účtu, na kterém se pravidelně připisuje úrok a k tomu se přidává fixní úložka._
 
-<div class=reseni> 
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ 
 
 Je-li $y$ znečištění v galonech a $t$ čas ve dnech, má model tvar
 $$\frac{\mathrm dy}{\mathrm dt}=-0.08y-30.$$
 
-</div>
+```
+
 
 
 
@@ -183,13 +203,17 @@ trvalé přežívání?
 
 _Toto je asi nejdůležitější rovnice pro modelování biologických jevů. Používá se při modelování vývoje obnovitelných zdrojů a bývá modifikována pro konkrétní případy podle toho, jak populace interaguje s okolím._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Funkce $f(x)=rx\left(1-\frac xK\right)$ je kvadratická funkce s nulovými body $x=0$ a $x=K$, vrcholem uprostřed mezi nulovými body (tj. pro $x=\frac K2$) a parabola je otočená vrcholem nahoru. Proto je napravo od $x=K$ záporná. To odpovídá tomu, že populace s velikostí přesahující nosnou kapacitu v dlouhodobém horizontu vymírá.
 
 Funkce $f_h(x)=rx\left(1-\frac xK\right)-h$ vznikne posunutím funkce $f(x)=rx\left(1-\frac xK\right)$ o $h$ dolů. Pokud posuneme hodně, dostane se celá parabola pod osu $x$ a funkce bude pořád záporná. Kritická hodnota je v situaci, kdy mizí možnost, že $f_h(x)$ má body kde je kladná a populace se může rozvíjet. To nastane,  pokud se vrchol paraboly dostane na osu $x$, tj. $h$ je rovno funkční hodnotě funkce $f(x)$ v bodě $x=\frac K2.$
 
-</div>
+```
+
 
 
 ## Populace jelenů
@@ -204,7 +228,10 @@ Populace jelenů v národním parku přibývá rychlostí 10\% za
 rok. Správa parku každý rok odebere 50 jedinců. Napište
 matematický model pro velikost populace jelenů v tomto parku.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je-li $x$ velikost populace jelenů, platí
 $$
@@ -212,7 +239,8 @@ $$
 $$
 kde $t$ je čas v letech.
 
-</div>
+```
+
 
 
 
@@ -224,12 +252,16 @@ počtu nemocných a počtu zdravých jedinců. Sestavte model takového
 
 _Toto je současně model popisující šíření informace v populaci, stačí si místo chřipky představit nějakou informaci předávanou mezi lidmi (sociální difuze)._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je-li $M$ velikost populace a $y$ počet nemocných, je v populaci $M-y$ zdravých a model má tvar
 $$\frac{\mathrm dy}{\mathrm dt}=ky(M-y).$$
 
-</div>
+```
+
 
 
 ## Ropná skvrna
@@ -246,12 +278,16 @@ nepřímo úměrná druhé mocnině poloměru. Vyjádřete proces kvantitativně
 pomocí derivací.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je-li $r$ poloměr, je $r^2$ druhá mocnina a protože se jedná o nepřímou úměrnost, platí
 $$\frac{\mathrm dr}{\mathrm dt}=\frac{k}{r^2}.$$
 
-</div>
+```
+
 
 ## Model učení
 
@@ -260,12 +296,16 @@ osvojené látky nebo procento z maximální manuální zručnosti) je úměrná
 objemu dosud nenaučené látky. Vyjádřete proces kvantitativně pomocí
 derivací.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky kterou je možné se naučit, je objem dosud nenaučené látky $L_{\max}-L$ a model má tvar
 $$\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).$$
 
-</div>
+```
+
 
 ## Výpočet derivace
 
@@ -288,7 +328,10 @@ Určete derivace následujících funkcí jedné proměnné. Ostatní veličiny 
 
 _V tomto příkladě se učíme mimo jiné derivovat i podle jiné proměnné než podle $x$. To je nezbytné pro aplikace. Abychom nebyli fixováni na proměnnou $x$, je vhodné se učit vzorce pro derivování vyjadřovat slovně a bez jména konkrétní proměnné._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1.  $\frac{\mathrm dV}{\mathrm dr}=4\pi r^2$, rychlost změny objemu koule při změnách poloměru, tj. změna objemu koule vztažená k jednotkové změně poloměru
 1.  $\frac{\mathrm dS}{\mathrm dr}=8\pi r$, rychlost změny povrchu koule při změnách poloměru, tj. změna povrchu koule vztažená k jednotkové změně poloměru
@@ -303,7 +346,9 @@ _V tomto příkladě se učíme mimo jiné derivovat i podle jiné proměnné ne
 1.  $\frac{\mathrm dS}{\mathrm da}=\frac 12v$,
 1.  $\frac{\mathrm dL}{\mathrm dr}=2\pi$, 
 
-</div>
+```
+
 
 </div>
+
 

@@ -57,7 +57,9 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 1.  $f(x)=\frac{a}{(\mu x+b)^2}.$
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
 
 1. $f'(x)=6x^5-\frac{6}{x^7}$
 1. $f'(x)=2x+2$
@@ -69,7 +71,8 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 1. $f'(x)=\frac{-2}{(x+6)^3}$
 1. $f'(x)=\frac{-2a\mu}{(\mu x+b)^3}$
 
-</div>
+```
+
 
 
 ## Růst ryby
@@ -86,29 +89,21 @@ $$
 
 _Upraveno podle Stewart, Day: Biocalculus. Calculus for the life siences. V tomto příkladě se setkáváme s klasickou interpretací derivace jako rychlosti změny, tj. hodnoty o kterou se změní závislá veličina, když se nezávislá veličina změní o jednotku._
 
-<div class=reseni> 
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
 
 Jednotka derivace délky podle věku je stejná, jako bychom délku dělili věkem. Tedy $\left[\frac{\mathrm dl}{\mathrm dt}\right]=\mathrm{cm}/\mathrm{rok}$, tj. centimetr za rok. 
 
 Derivace je rychlost změny. Pokud derivujeme délku ryby podle času, je derivace rychlost s jakou se mění délka ryby v čase. Převedeno do srozumitelnějšího jazyka to je možné elegantněji vyjádřit tak, že derivace udává (v centimetrech za rok) okamžitou rychlost růstu ryby, přičemž velikost ryby vyjadřujeme její délkou (a ne například hmotností).
 
-Zadaná funkce vyjadřující závislost délky na čase je polynom. Použitím pravidel pro derivování je snadné ukázat, že pro derivaci délky podle času platí
-$$
-    \frac{\mathrm dl}{\mathrm dt} =3\cdot 0.03937 t^2 - 2\cdot 0.945 t + 10.033 =
-    0.11811 t^2 -1.89 t + 10.033 
-  $$
-  a pro $t=12\,\mathrm{let}$ dostáváme 
-$$
-   \frac{\mathrm dl}{\mathrm dt}\Bigr\vert_{t=12} =4.4\, \mathrm{cm}/\mathrm{rok}.
-  $$
-  Dvanáctiletá ryba roste rychlostí přibližně $4.4$ centimetrů za rok,
-tj. mezi dvanáctým a třináctým rokem vyroste přibližně o $4.4$
-centimetru. (Slovo přibližně je použito proto, že derivace je okamžitá rychlost růstu a není zaručeno, že tato rychlost se udrží po celou jednotku času, tj. po celý rok.) 
+Zadaná funkce vyjadřující závislost délky na čase je polynom. Použitím pravidel pro derivování je snadné ukázat, že pro derivaci délky podle času platí $$\frac{\mathrm dl}{\mathrm dt} =3\cdot 0.03937 t^2 - 2\cdot 0.945 t + 10.033 =  0.11811 t^2 -1.89 t + 10.033$$   a pro $t=12\,\mathrm{let}$ dostáváme  $$    \frac{\mathrm dl}{\mathrm dt}\Bigr\vert_{t=12} =4.4\, \mathrm{cm}/\mathrm{rok}.   $$   Dvanáctiletá ryba roste rychlostí přibližně $4.4$ centimetrů za rok, tj. mezi dvanáctým a třináctým rokem vyroste přibližně o $4.4$ centimetru. (Slovo přibližně je použito proto, že derivace je okamžitá rychlost růstu a není zaručeno, že tato rychlost se udrží po celou jednotku času, tj. po celý rok.) 
 
 * <a href="https://sagecell.sagemath.org/?z=eJx1jM0KgkAUhfeC73ChhX81jE0hLtz1AC1aB5MzojjNjZnRsKdPUyGCzupw-M7nip6bMHBBBGs2cDZ4l1pzcFsoufU9FbqooISynGWxu7IdJfnhOLZ9kk4zi13CCM3YeD5J1XIww23wPVvjM5zO3_ZLY1t4GIQWtTOoOt8T0jQ9L2WhiGiqKozgI5rHRbMys23RiD9Muh-hHwYsCLT8JTV2UKPQ6LB7AzQ9S-8=&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a>
 * <a href="https://sagecell.sagemath.org/?z=eJyFUs1uozAQviPxDhN6MQmhJuyqalVuvfXQS29VN3LAERY_RsZpS96pT9EXq8fghG2r3TnYZr4fz4zRNEs2vlcTHWY0pul1erXUf9I1ja9__TanzSrBdLrUqzSmVylcwB2vKwZq2A2-15fylaA4hP_EBTyKvoJOSahkq5WsD75XKVkNkMFTQqMkonESgbltXN122mfxQ2rMP_ueGvKylr0W6Gu-89JUOp1LWbQy563DCq7EC8u5-azjQuz3JCQ60zQE2-cI-t5eKsBSQbR2H25mbd0jgG0xs7yJhuUCZMWao9AczsV0spEGmSXUoeGqNfboU-BQt53cHhve2nqIpiu8LPyLoHhhKfIwcdYzDgLM5L-Yrb-LR74rxkhG6SWQzXJmeKo2Zl3H24K4xITjbPFCtuvJaZZr-IE1OAcrmQCxnxxu7bPfjFmM00M5WfBwH0wqXvf8n9TFYuG4GL6n2e6A_6yZmOg1OYoOiH3H6NxhNJYZnf3C0CprTia9wTgzbW6VfM2eAnQIokAWJSvAdR9EENie8OCsPt6D5_ATIrP-Bw==&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage numerický odhad</a> s ilustrací toho, že výsledek se dá odhadnout u použitím základních aritmetických operací, ale že délka kroku nemůže být ani moc krátká ani moc dlouhá. </a>
 
-</div>
+```
+
 
 
 
@@ -124,16 +119,13 @@ a určete i fyzikální jednotku a slovní interpretaci této derivace.
 
 _Zpracováno podle Monteith, Unsworth: Principles of Environmental Physics. Tady je opět klasická interpretace derivace jako rychlosti změny. Rychlost změny ale nemusí být jenom klasické chápání rychlosti jako závislosti na čase. Derivace vyjadřuje, jak závislá veličina reaguje na změny nezávislé veličiny. Pro pochopení, co derivace vyjadřuje, hraje velkou roli i jednotka této derivace. Označení je ponecháno z původní literatury, mimo jiné $M$ není hmotnost a $W$ není watt. Vztah je v literatuře znám jako Kleiberův zákon. Vysvětluje se pomocí něj rozdílná délka života různých živočišných druhů._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
 
-Pro výpočet si stačí uvědomit, že funkce je konstantním násobkem mocninné funkce a umíme ji tedy zderivovat podle pravidla pro derivaci konstantního násobku a pravidla pro derivaci mocninné funkce. 
-Derivace je $$\frac {\mathrm dM}{\mathrm dW}=\frac {\mathrm d}{\mathrm dW}(AW^n)=nAW^{n-1}$$ podle pravidla pro
-derivaci konstantního násobku a pro derivaci mocniny. Jednotka derivace je stejná, jako bychom místo derivování dělili, tj. watt
-na kilogram, 
-$$\left[\frac {\mathrm dM}{\mathrm dW}\right]=\frac{\mathrm W}{\mathrm
-  {kg}}.$$ Derivace udává rychlost, s jakou se projeví změna hmotnosti na bazálním metabolismu. Je to nárůst bazálního metabolismu způsobený nárůstem hmotnosti a přepočtený na jednotkovou změnu hmotnosti. Přibližně také změna bazálního metabolismu ve wattech při změně hmotnosti o kilogram u velkých živočichů nebo v miliwatech při změně hmotnosti o gram u drobných živočichů. Například u malých ptáčků nemá smysl uvažovat nárůst hmotnosti o kilogram a pro interpretaci raději přejdeme k jednotkám tisíckrát menším.
+Pro výpočet si stačí uvědomit, že funkce je konstantním násobkem mocninné funkce a umíme ji tedy zderivovat podle pravidla pro derivaci konstantního násobku a pravidla pro derivaci mocninné funkce. Derivace je $$\frac {\mathrm dM}{\mathrm dW}=\frac {\mathrm d}{\mathrm dW}(AW^n)=nAW^{n-1}$$ podle pravidla pro derivaci konstantního násobku a pro derivaci mocniny. Jednotka derivace je stejná, jako bychom místo derivování dělili, tj. watt na kilogram, $$\left[\frac {\mathrm dM}{\mathrm dW}\right]=\frac{\mathrm W}{\mathrm {kg}}.$$ Derivace udává rychlost, s jakou se projeví změna hmotnosti na bazálním metabolismu. Je to nárůst bazálního metabolismu způsobený nárůstem hmotnosti a přepočtený na jednotkovou změnu hmotnosti. Přibližně také změna bazálního metabolismu ve wattech při změně hmotnosti o kilogram u velkých živočichů nebo v miliwatech při změně hmotnosti o gram u drobných živočichů. Například u malých ptáčků nemá smysl uvažovat nárůst hmotnosti o kilogram a pro interpretaci raději přejdeme k jednotkám tisíckrát menším.
+```
 
-</div>
 
 ## Mezní náklady (marginal cost)
 
@@ -147,7 +139,9 @@ interpretaci a určete i jednotku této derivace.
 
 _Toto je jedna z nejrozšířenější aplikací derivací mimo přírodní vědy. Zajímáme se o to, jak rychle rostou ekonomické veličiny, protože ekonomika je za vším. Veličiny, které v ekonomii získáváme derivováním, obsahují zpravidla slovo "mezní", nebo též "marginální". Podle Wikipedie nastupující technická revoluce nazývaná Průmysl 4.0 přinese výrobu s velmi malými mezními náklady. Tedy derivace nákladů na výrobu podle množství vyrobeného zboží bude malá. To odpovídá představě výroby v robotizovaných halách, kde hlavním nákladem je vybudování výrobního zařízení._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
 
 Jednotka derivace $C'(x)$ je $\mathrm{milion\ Euro}/\mathrm{kus}$, resp. 
 $\mathrm{milion\ Euro}/\mathrm{letadlo}$, resp. milion Euro, podle toho, jak nazveme jednotky v nichž měříme počet letadel.
@@ -160,7 +154,8 @@ $$C'(x)=\frac{2}{\sqrt{4x+4}}.$$ Ve druhém případě máme zlomek s konstantn�
 
 *Poznámka 2:* Možná jste si vzpomněli na příklady z nižších škol týkající se přímé úměrnosti. Jsou to příklady typu "Za výrobu patnácti jachet ruský oligarcha zaplatí částku $C$. Kolik zaplatí za šestnáct jachet?" Takové příklady jsou založeny na předpokladu, že výroba každé jachty stojí stejně a cena je nezávislá na počtu. V takovém případě je možné řešit úlohu trojčlenkou, pomocí přímé úměrnosti. V takové situaci by závislost ceny na množství byla lineární. V praxi tomu tak ale často není, závislost je nelineární. Proto není možné použít úměrnost a proto mají v ekonomii místo i veličiny jako [mezní náklady](https://cs.wikipedia.org/wiki/Mezn%C3%AD_n%C3%A1klady), které jsme vypočítali v tomto příkladě pomocí derivace. Slovo "mezní" je odvozeno od skutečnosti, že tato veličina pomáhá určit mez množství výroby, kdy se zvýší cena za jednotku
 
-</div>
+```
+
 
 ## Vzdálenost k horizontu
 
@@ -170,7 +165,10 @@ Vzdálenost k horizontu pro pozorovatele ve výšce $h$ nad Zemí je dána funkc
 
 _Tento příklad opět udává derivaci jako rychlost změny, ale nezávislá proměnná není čas. Sledujeme vzájmenou relaci dvou délek - vzdálenosti k horizontu a výšky pozorovatele. V případech jako je tento je rozměr veličiny derivované stejný, jako rozměr veličiny, podle které se derivuje. Potom je derivace vlastně bez rozměru. Někdy je však vhodné pro srozumitelnější interpretaci jednotky nevykrátit, obzvlášť v případě jako zde, kdy se obě délky udávají v řádově jiných jednotkách (metry versus kilometry)._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Pro $H=3.57\sqrt h$ platí $$\frac{\mathrm dH}{\mathrm dh}=\frac 12 \times 3.57 \times \frac {1}{\sqrt h}$$ a numericky
 $$\frac{\mathrm dH}{\mathrm dh}(5)=\frac{3.57}{2\sqrt 5}\approx 0.7983 \frac {\mathrm{km}}{\mathrm m}\approx 0.8 \frac {\mathrm{km}}{\mathrm m}.$$ Vzdálenost k horizontu pro pozorovatele ve výšce $5$ metrů roste rychlostí 0.8 kilometru na každý metr výšky navíc. Toto je interpretace pro praktické využití. Kromě toho se jednotky dají upravit a ve skutečnosti derivace žádný fyzikální rozměr nemá
@@ -178,7 +176,8 @@ $$\frac{\mathrm dH}{\mathrm dh}(5)=0.7983 \times \frac {1000\, \mathrm{m}}{\math
 
 <a href="https://sagecell.sagemath.org/?z=eJwtzEEKwjAQheG94B0GXDSRko0UV9256DViMmGGtBNNmkA9vUFcPv6PR3OzWQ00aLjAA-Nqs3UIr5w2FMHzaVGk55uZ7tfyznsf8IOBhbsLVaLrynMIahlJm1KfRdE8aSPqbzO3_jmCT8V-UBgoeUn7ARakbj27iNAOx2Xt9Qvbki8M&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a>
 
-</div>
+```
+
 
 
 ## Rychlost s jakou roste obsah kruhu
@@ -195,7 +194,10 @@ derivací a určete jak rychle roste plocha zasažená ohněm.
 
 _V tomto příkladě se učíme, že ze znalosti vztahů mezi veličinami můžeme odvodit vztah, mezi rychlostmi změn, tj. do statických vzorců můžeme dodat dynamiku vývoje. V praxi někdy jde příklad tohoto typu obejít úvahou: teď je poloměr 50 metrů, tomu odpovídá jakási plocha, za minutu  bude poloměr 51.5 metru, tomu odpovídá opět jakási plocha a provnáním s plochou původní snadno zjistím přírůstek. To pro nás může být kontrola, že aparát funguje. Pro nás je teď důležité naučit se tento aparát na malých věcech, abyste mohli později dělat věci velké._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
 
@@ -212,7 +214,8 @@ $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathr
 
 <a href="https://sagecell.sagemath.org/?z=eJx1UjtPwzAQ3iPlP5zoQIKiCpAYvbGDhFhAIF1tl7hJfJUfgeTXc2niFhXIFPk-f6_zCp5bqhGc9gZiQ20FjRpg5ynCiArtAHtqqdMOGhfrCAwdZN2SD-CiDxEC1RQooeIa8mwFz8ykO9hpiE6acH6HNh7rmGd5FkSPrrgMlyWcfSt4dMxoLUKoQKLPMye20cpgyBYX7qKy6D68uCln8OLSwQ4bAgY2UrMBZTXsZyKdZ09FKMXewBUUjn_L99uT3MNkakn5kyMlq45NjNgbroudsS1m9TV9FhP1HyFeaONwNN3BBTRkg6P22G0_ktPyMKKT_FTMKdGvxpMh6HBnZiYNNSlLYcgzRR5HbY14nRIKcXddKbPdHvJW08HN-u5t8Zyw5ax4r53pkSPP-2Eh1eopI2f_Z4NquSIOGk-zRmJfZomdxdRUhCJIo1_uk4xIiLWPG39u9MWkUvtxTzJoy8_16BDZeJh2z-3YyE0Z2fAcuWX5ZTqUhvW9DsbaoQNpPD_VxXLiSBHs6aT8BnG_DrA=&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a> (v tomto jednoduchém případě spíše jako ukázka zápisu, než jako nástroj pro urychlení výpočtu)
 
-</div>
+```
+
 
 
 
@@ -222,7 +225,10 @@ $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathr
 
 V pohádce _Sůl nad zlato_ sype Maruška z bezedné slánky sůl na hromadu soli ve tvaru kužele, který roste tak, že objem je v každém okamžiku svázán s výškou vzorcem $$V=\frac 14h^3.$$ Výška je $0.5$ metru a vydatnost solničky $10$ litrů (tj. $0.01$ krychlových metrů) soli za minutu. Určete, jak rychle roste hromada soli do výšky.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
 
@@ -236,7 +242,8 @@ Hromada roste do výšky rychlostí 5.3 centimetru za minutu.
 
 <a href="https://sagecell.sagemath.org/?z=eJx9kk2P0zAQhu-R8h9Gu4dNUFRaAUff9sANxKEHqoLceLp2k9iV7RjFvx7HH0u3AnLKfD3zzowtcVQ3T_aphbvvEb5qNaGUFGwHPTV1xcl5lr0VSjYP_KGTVL8Ysmtj8n4xA4ULHRSEpKFHuCCTCNcEwbra31Tv76q_nC44_bdaKydFj2Tf2JaQ3fuP8A4aHoz2x4ci-FvKgQm9ABWRFFwQpuZb9iTWcea6Mlz9albgX4b_rk6aejFFDTAoabUaZ_CUUbmA80pjH0Nrm7qqq0f4rJhUdolepgz1KEX4gSy9roqTHHicYrv5tO2YOJ-jiC65trtjVlbS24R_Ri0cDeNlHlwVGzGPwnKQRFzOCMSCyuGM2i8azaquoJznI7KwrwFyqgD-pkEqIEaNDl9x3SG240n98R_0DrJ9mhmCQS_p1IFHGCxq5Aqm2ayLDpfCEQerHLWwgq6aunA6YzWVc7DcjWJfSHMXOUt4MbnPlIdOVhDF-E9mSTIP2-NGc9O8bmaNlQ2HhbNVSThaGTFdHIGn44ZFLD0flbEkVm7MfDL3l_rzdpy3lKf3WOomUeRlR_sb5Qknag==&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a> (v tomto jednoduchém případě spíše jako ukázka zápisu, než jako nástroj pro urychlení výpočtu)
 
-</div>
+```
+
 
 
 ## Rychlost s jakou roste obsah kruhu II
@@ -250,7 +257,9 @@ a chceme udržet stejnou hustotu osídlení?
 
 _Toto je mírná modifikace příkladu s požárem. Protože město má konstantní hustotu osídlení, jsou počet obyvatel i rozloha přímo úměrné a je to podobné, jako bychom jednu veličinu vyjadřovali ve dvou různých jednotkách._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
 
 Ze zadání: $r=10\,\mathrm{km}$, $N=300\,000$, $\sigma=\frac{N}{\pi r^2}$ je hustota osídlení a ta je konstantní, $\frac {\mathrm dN}{\mathrm dt}=10\,000 \,\text{rok}^{-1}$. Zajímá nás $\frac{\mathrm dr}{\mathrm dt}$.
 
@@ -277,4 +286,5 @@ $$
 $$
 a výsledek je stejný jako v předchozím postupu.
 
-</div>
+```
+

@@ -30,7 +30,10 @@ Proudění řídí \textit{Darcyho zákon}, který
 
 (\textit{Podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9.})
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 \begin{enumerate}[A)]
   \item  $$v_f=-k\frac{\mathrm dh}{\mathrm dx}$$
@@ -45,7 +48,8 @@ Proudění řídí \textit{Darcyho zákon}, který
     V souřadnicích, kdy osa $x$ směřuje doprava a $h$ nahoru, se jedná
     se o parabolu "otočenou vrcholem směrem doprava".
 \end{enumerate}
-</div>
+```
+
 
 
 
@@ -62,7 +66,10 @@ odvozenou v \ref{pokles} B. Tentokrát budeme studovat studnu s volnou hladinou\
 (\textit{Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Analogickým způsobem se počítají tepelné ztráty při prostupu tepla válcovou stěnou (viz \url{https://youtu.be/rvyogmaUmUQ}).})
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 $$
 \begin{aligned}
   -\frac{Q}{2\pi x}&=-kh\frac{\mathrm dh}{\mathrm dx}\\
@@ -91,7 +98,8 @@ poměry v okolí a tyto poměry dokážeme měnit a přizpůsobovat našim
 potřebám. Častou aplikací je například hydraulická clona (soustava
 prvků rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace z chemické výroby do vodárensky využívaných vod).
 
-</div>
+```
+
 
 
 
@@ -106,7 +114,10 @@ derivací a určete, jak rychle ztrácí kluzák výšku. Návod: Uvažujte slo�
 
 \textit{Tento příklad ukazuje, že pravidlo pro derivaci složené funkce je logické. V tomto případě vlastně přepočítává klesání z jednotek stupně Celsia za sekundu na jednotky kilometr výšky za sekundu. Můžete si to zkusit na prstech nebo pomocí trojčlenky a dojdete k tomu stejnému, k čemu pomocí derivace funkce. Při měnících se rychlostech výpočet pomocí trojčlenky použitelný není, pravidlo pro derivaci složené funkce je však k dispozici vždy.}
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Je-li $h$ výška, $T$ teplota a $t$ čas, můžeme zadání přepsat do tvaru
 $$
   \frac{\mathrm dT}{\mathrm dh}=-2^\circ\mathrm C/\mathrm{km}, \quad
@@ -127,7 +138,8 @@ $$
 $$
 Kluzák klesá rychlostí půl metru za sekundu. To odpovídá i "selskému rozumu", kdy uvažujeme tak, že jeden stupeň Celsia odpovídá půl kilometru, tj. 500 metrů. Za jednu sekundu klesne teplota podle zadání o $10^{-3}{}^\circ\mathrm{C}$, což je tisícina z jednoho stupně a tomu odpovídá tisícina z 500 metrů, tedy půl metru. Příklady, které si můžeme alespoň orientačně zkontrolovat výpočtem založeným na "selské logice" jsou obzvlášť cenné, protože nám dávají jistotu nutnou při použití v aplikacích, kde úvaha na provedení výpočtu bez derivací není reálná. 
 
-</div>
+```
+
 
 
 ![pixabay.com](autobus.jpg) ## Změna tlaku a lupání v uších
@@ -149,7 +161,10 @@ tlak vzduchu.
 
 \textit{Toto je jenom jednodušší obměna příkladu s kluzákem.}
 
-<div class=reseni> Derivace jsou záporné, protože tlak s rostoucí výškou klesá a
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ Derivace jsou záporné, protože tlak s rostoucí výškou klesá a
 nadmořská výška klesá s časem (vozidlo jede z kopce).
 Pomocí derivace složené funkce platí
 $$\frac{\mathrm dp}{\mathrm dt}=\frac{\mathrm dp}{\mathrm du} \cdot \frac{\mathrm du}{\mathrm dt}=-0.12
@@ -158,7 +173,8 @@ $$\frac{\mathrm dp}{\mathrm dt}=\frac{\mathrm dp}{\mathrm du} \cdot \frac{\mathr
 =0.36 \,\mathrm{g}\,\mathrm{cm}^{-2}\mathrm{s}^{-1}.
 $$
 Tlak roste rychlostí $0.36$ gramů na centimetr čtvereční za sekundu.
-</div>
+```
+
 
 
 
@@ -172,7 +188,10 @@ Potvrďte tyto obecné závěry pro náš konkrétní případ přímým výpoč
 
 \textit{Na tomto příkladě si ověříme platnost pouček, které jsme si na přednášce zmínilo o objemech a površích těles, které jsou si navzájem podobné, tj. vznikají jenom vhodným zvětšením nebo zmenšením stejného referenčního objektu.}
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Ze zadání víme, že platí $s=\frac 53 r$ a $h=\frac 43 r$ a přímým dosazením vidíme
 $$V=\frac 13 \pi r^2 \frac 43 r=\frac 49 \pi r^3$$
 a
@@ -193,7 +212,8 @@ $$S=\frac 53 \pi r^2 = \frac 53 \pi \left(\frac {9}{4\pi}\right)^{2/3}V^{2/3}
 =5\pi^{1/3}\left (\frac 3{16}\right)^{1/3} V^{2/3}$$
 
 
-</div>
+```
+
 
 ## Chemická směs Chemikálii rozpouštíme v nádrži tak, že do
 nádrže pumpujeme vodu a směs odčerpáváme. Objem směsi roste podle
@@ -202,9 +222,13 @@ vztahu $20+2t$. Množství chemikálie $y$ klesá rychlostí, která je
 Vyjádřete proces kvantitativně pomocí derivací.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 $$\frac{\mathrm dy}{\mathrm dt}=-ky\frac1{20+2t}$$
-</div>
+```
+
 
 
 
@@ -241,7 +265,10 @@ $\rho_0.$
 }
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Hmotnost $m$ je dána vztahem $m=\rho V$, kde $\rho$ je hustota a $V=Sh$ objem hranolu o podstavě $S$ a výšce $h$. Odsud
 $$
   m=Sh\rho.
@@ -279,7 +306,8 @@ $$
 $$
 Pokud by závislost hustoty na výšce byla lineární, musely by dva poslední výpočty vycházet stejně, což není náš případ.
 
-</div>
+```
+
 
 
 % var('h ')
@@ -328,13 +356,17 @@ konci oboru integrace (viz přednáška).
 
 }
 
-% <div class=reseni>
+% ```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 % Hmotnost je součin hustoty $\rho$ a objemu, objem je součin obsahu průřeru $S$ a výšky.
 
 
 
-% </div>
+%```
+
 
 
 
@@ -357,7 +389,10 @@ Napište jenom potřebné integrály a vztahy, integrály nepočítejte.
 \textit{(Volně přeformulováno podle University of British Columbia,
   Sessional Examinations April 2009.)}
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Pro konstantní $f$ by mrkev byla ve tvaru válce o poloměru $f$ a objem by byl $V=\pi f^2 h$, kde $h$ je výška válce (délka mrkve). Pokud se $f$ mění s $x$, musíme místo součinu uvažovat integrál a dostáváme
 $$V=\int_0^{12} \pi f^2(x)\,\mathrm dx=\pi\int_0^{12} 14-x\,\mathrm dx.$$
 
@@ -366,7 +401,8 @@ $$m=\int_0^{12} \pi c(x)f^2(x)\,\mathrm dx=\pi \frac 1{12}\int_0^{12} (14-x)e^{-
 
 Průměrná koncentrace je hmotnost dělená objemem a stačí tedy vypočtené hodnoty vydělit.
 
-</div>
+```
+
 
 
 
@@ -386,7 +422,10 @@ $C$ je přibližně po dvou letech.
 \textit{(Podle J. Berry, A. Norcliffe, S. Humble: Introductory mathematics through science applications.)}
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 $$C=e^{-0.25 T}\left[-\frac{0.32}{0.64}e^{-0.64 t}\right]_0^T=\cdots
 =\frac 12 e^{-0.25T}-\frac 12 e^{-0.89T}$$
 Odsud
@@ -402,7 +441,8 @@ $${0.64 T}=\ln \frac{89}{25}$$
 a
 $${ T}=\frac 1{0.64}\ln \frac{89}{25}\approx 1.98.$$
 
-</div>
+```
+
 
 
 ![pixabay.com](bunka.jpg)
@@ -423,7 +463,10 @@ $1\,\mathrm{mm}$ se nevyskytují příliš často. Volně podle
 L. Edelstein-Keshet: Differential Calculus for the Life Sciences.
 }
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Budeme používat kladné konstanty úměrnosti a součin několika konstant budeme vždy přeznačovat jako novou konstantu, aby výsledná rovnice byla co nejjednodušší.
 
@@ -447,7 +490,8 @@ $$\frac{\mathrm dr}{\mathrm dt}= A_0-B_0r.$$
 Tato rovnice má jediné konstantní řešení pro $r=\frac{A_0}{B_0}$. Protože platí
 $$\frac{\mathrm d}{\mathrm dr} (A_0-B_0r)=-B_0<0,$$ je toto řešení stabilní. Pokud buňka přesáhne tuto hodnotu, je výdej větší než příjem a buňka neudrží vyrovnanou bilanci.
 
-</div>
+```
+
 
 
 
@@ -467,10 +511,14 @@ má hodnotu $K=3\,\mathrm m/\mathrm{den}$, kde $q$ je tok na metr čtvereční a
 
 }
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Tok ($Q$) určíme vynásobením toku jednotkovou plochou ($q$) s obsahem průřezu roury ($S=\pi \left(\frac d2\right)^2$). Hydraulický gradient určíme z rozdílu výšek a vodorovné vzdálenosti, tj. $\frac{\mathrm dh}{\mathrm ds}=\frac hL.$ Odsud pro velikost toku dostáváme
 $$|Q|= \pi \left(\frac d2\right)^2 K \frac hL=0.48 \,\mathrm{m}^3/\mathrm{den}.$$
-</div>
+```
+
 
 
 ![https://www.flickr.com/photos/undpeuropeandcis, UNDP in Uzbekistan](kapkova_zavlaha.jpg)
@@ -481,9 +529,13 @@ Při kapkové závlaze uvažujme trubici, která má podél své délky otvory a
 
 \textit{Tento příklad ukazuje na velmi jednoduchém příkladě, že změna v toku souvisí se zdroji. Pokles toku signalizuje, že voda někam mizí, což je v tomto případě žádoucí jev. Ztráta na průtoku je vlastně záporně vzatá divergence. V odvození rovnice kontinuity postupujeme stejně jako v tomto případě, jenom uvažujeme proměnné parametry (derivace místo podílu), trojrozměrný prostor (tři směry místo jednoho) a možnost, že změna toku může kromě zdrojů a spotřebičů být způsobena i akumulací.}
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Na úseku $15\,\mathrm m$ se "ztratí" litr vody za minutu a tento litr se spotřebuje ve spotřebiči, tj. ve zdroji se zápornou vydatností. Vydatnost zdrojů je  $$\sigma = -\frac{1\,\mathrm{l}/\mathrm{min}}{15\,\mathrm m}=-0.067\,\mathrm l \,\mathrm{m}^{-1}\,\mathrm{min}^{-1}.$$
-</div>
+```
+
 
 ## Rovnice podzemní vody
 \def\raggedright{\rightskip 0 pt plus 1 em}
@@ -557,7 +609,10 @@ odpovězte na otázky a splňte úkoly.
 
 \textit{Podle Jacob Bear, Modeling Groundwater Flow and Pollution a Charles Fitts, Groundwater Science.}
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 \begin{enumerate}[A)]
 \item $\vec q=-T \nabla h$ kde $T$ je koeficient průtočnosti a $-\nabla h$
@@ -595,7 +650,8 @@ odpovězte na otázky a splňte úkoly.
   $$
 
 \end{enumerate}
-</div>
+```
+
 
 
 ## Rovinné proudění podzemní vody podruhé
@@ -612,7 +668,10 @@ příkladě \ref{pokles}.
 \end{enumerate}
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 \begin{enumerate}[A)]
 \item $$S_s\frac{\partial h}{\partial t}=\sigma + \frac{\partial }{\partial x}\left (T \frac{\partial h}{\partial x} \right)
   +
@@ -631,7 +690,8 @@ $$0=k\left(\frac 12 (h^2)'\right )'.$$ Po vydělení rovnice konstantou $k$ a vy
   Křivka odpovídá výsledku příkladu  \ref{pokles}, kde je
   $$h^2=\frac{-2q}k x + \text{const.}$$
 \end{enumerate}
-</div>
+```
+
 
 ## O Otesánkovi.
 Otesánek se vykrmil do tvaru koule o průměru $2{,}4\,\mathrm{m}$ a dále baští. Jeho objem roste konstantní rychlostí $0{,}002 \mathrm{m}^3/\mathrm{hod}$. Jak tato úloha souvisí s derivacemi a jak rychle roste průměr koule (Otesánka)? $$V=\frac 16 \pi d^3$$
@@ -761,7 +821,10 @@ teplota (směrem doprava).
 Poté oba zákony spojte do jednoho vztahu a odvodíte rovnici vedení tepla v 1D.
 Ukažte, že pokud bude tyč homogenní, po nastolení rovnováhy bude teplota lineární funkcí polohy.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 \begin{enumerate}[a)]
 \item To, že tok tepla (směrem doprava) je úměrný rychlosti, s jakou klesá
@@ -805,7 +868,8 @@ k_1 \frac{\partial }{\partial x}
 $$
 Druhá derivace podle $x$ je tedy nulová, což znamená, že $T$  je vzhledem k $x$ lineární.
 
-</div>
+```
+
 
 ![pixabay.com](destnik)[-20pt]
 
@@ -816,11 +880,15 @@ na povrchu a výsledek této kondenzace, voda, zvětšuje objem.) Přepište ten
 
 \textit{Klasický případ, kdy v zadání figuruje rychlost s jakou se mění objem, tj. derivace objemu, a tento vztah zformulujeme matematicky. Protože tato formulace obsahuje povrch koule, je nutné tento povrch přepočítat na objem.}
 
-<div class=reseni> Je-li $V$ objem a $S$ povrch koule, je $\frac{\mathrm dV}{\mathrm dt}$ rychlost s jakou roste objem koule a přepisem zadání do kvantitativních vztahů dostáváme
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ Je-li $V$ objem a $S$ povrch koule, je $\frac{\mathrm dV}{\mathrm dt}$ rychlost s jakou roste objem koule a přepisem zadání do kvantitativních vztahů dostáváme
 $$\frac {\mathrm dV}{\mathrm dt}= k_1S, $$ kde $k$ je konstanta úměrnosti. Protože díky podobnosti pro kouli platí $S=k_2 V^{2/3}$ kde $k_2$ je vhodná konstanta, dostáváme 
 $$\frac{\mathrm dV}{\mathrm dt}=k_1k_2 V^{2/3}.$$ Spojením obou konstant do jediné $k=k_1k_2$ obdržíme výsledný model 
 $$\frac{\mathrm dV}{\mathrm dt}=kV^{2/3}.$$ 
-</div>
+```
+
 
 
 
@@ -833,14 +901,18 @@ jako funkce času se zvětšuje rychlostí úměrnou povrchu. Ukažte,
 
 \textit{Klasický případ, kdy v zadání figuruje rychlost s jakou se mění objem, tj. derivace objemu, ale protože nás zajímá jiná veličina, musíme ještě najít vztah mezi rychlostí, s jakou roste objem, a rychlostí, s jakou roste poloměr.}
 
-<div class=reseni> Je-li $V=\frac 43 \pi r^3$ objem kulovité kapky, platí
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ Je-li $V=\frac 43 \pi r^3$ objem kulovité kapky, platí
 (derivováním) $$\frac {\mathrm dV}{\mathrm dt}=4\pi r^2\frac{\mathrm dr}{\mathrm dt}$$
 a (přepisem zadání do řeči derivací a s využitím vzorce pro povrch koule)
 $$\frac {\mathrm dV}{\mathrm dt}= k 4\pi r^2, $$ kde $k$ je konstanta úměrnosti. Odsud
 $$4\pi r^2\frac{\mathrm dr}{\mathrm dt}=k 4\pi r^2$$
 a
 $$\frac{\mathrm dr}{\mathrm dt}=k.$$ Napravo je konstanta, poloměr tedy roste konstantní rychlostí.
-</div>
+```
+
 
 
 
@@ -872,7 +944,10 @@ efektivnější pro výpočet $\pi$, než starší metoda pravidelných
 mnohoúhelníků vepsaných do kružnice. Dnes máme k dispozici řady,
 které k hodnotě $\pi$ konvergují mnohem rychleji.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Platí $$\int_0^1 \frac {1}{x^2+1}\,\mathrm dx=\left [\mathop{\mathrm{arctg}} x\right]_0^1=\mathop{\mathrm{arctg}} 1 - \mathop{\mathrm{arctg}} 0 = \frac \pi 4$$
 a
@@ -884,7 +959,8 @@ $$\frac{\pi}{4}=1-\frac 13 +\frac 15 - \frac 17+\cdots$$
 a vyjádření $\pi$ pomocí řady je
 $$\pi=4-\frac 43 +\frac 45 - \frac 47+\cdots .$$
 Čím více členů započítáme, tím je aproximace čísla $\pi$ přesnější.
-</div>
+```
+
 
 
 
@@ -895,7 +971,10 @@ $$\pi=4-\frac 43 +\frac 45 - \frac 47+\cdots .$$
 Tlakem v pneumatice rozumíme ve skutečnosti přetlak vůči atmosférickému tlaku. Poškozená pneumatika ztrácí vzduch tak, že množství vzduchu v pneumatice klesá rychlostí, která je úměrná tomuto tlaku. Tlak v pneumatice a množství vzduchu v pneumatice jsou také navzájem úměrné. Napište matematický model popisující pokles tlaku v čase.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Je-li $m$ hmotnost vzduchu v pneumatice a $p$ tlak, z úměrnosti mezi oběma veličinami plyne $$\frac{\mathrm dm}{\mathrm dt}=k_1\frac{\mathrm dp}{\mathrm dt}.$$
 Podle zadání platí
@@ -903,7 +982,8 @@ $$\frac{\mathrm dm}{\mathrm dt}=-k_2p.$$
 Odsud $$\frac{\mathrm dp}{\mathrm dt}=-kp,$$
 kde $k$ je konstanta, která vznikne sloučením konstant $k_1$ a $k_2$.
 
-</div>
+```
+
 
 ## Kvadratický moment kruhu
 

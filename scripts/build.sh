@@ -5,6 +5,8 @@ directory=../_build/html
 sphinx-build -Ea ../ $directory -b html
 
 
+
+
 # # Loop over lectures do open ipynb files in Colab rather than md files.
 # echo "Fixing Colab links from md to ipynb."
 # for i in $directory/prednaska/*.html
@@ -14,11 +16,16 @@ sphinx-build -Ea ../ $directory -b html
 
 # sed -i 's/colab.research.google.com\/github\/robert-marik\/dmp\/blob\/main\/intro\.md/colab.research.google.com\/github\/robert-marik\/dmp\/blob\/gh-pages\/_sources\/intro.ipynb/' $directory/intro.html
 
-# sed -i 's/Corollary/Důsledek/' $directory/prednaska/*html
-# sed -i 's/Theorem/Věta/' $directory/prednaska/*html
-# sed -i 's/Remark/Poznámka/' $directory/prednaska/*html
-# sed -i 's/Definition/Definice/' $directory/prednaska/*html
-# sed -i 's/Example/Příklad/' $directory/prednaska/*html
+sed -i 's/<p>\\iffalse<\/p>//' $directory/*/*.html
+sed -i 's/<p>\\fi<\/p>//' $directory/*/*.html
+sed -i 's/<span>Example <\/span> (Řešení)/Řešení/' $directory/cviceni/cviceni*.html
+sed -i 's/<body /<body class="cviceni" /' $directory/cviceni/cviceni*.html
+
+sed -i 's/Corollary/Důsledek/' $directory/*/slidy.html
+sed -i 's/Theorem/Věta/' $directory/*/slidy.html
+sed -i 's/Remark/Poznámka/' $directory/*/slidy.html
+sed -i 's/Definition/Definice/' $directory/*/slidy.html
+sed -i 's/Example/Příklad/' $directory/*/slidy.html
 
 # Copy custom css file
 cp custom.css $directory/_static/styles/

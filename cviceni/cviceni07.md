@@ -15,7 +15,10 @@ _Umění najít řešení diferenciální rovnice je sympatické a naučíme se 
 1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2$
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. $\frac{\mathrm dy}{\mathrm dx}=x\cdot y^2$
    *  Konstantní řešení jsou řešení rovnice $$ y^2=0,$$ tj. je jediné konstantní řešení $$ y=0.$$
@@ -39,7 +42,8 @@ _Umění najít řešení diferenciální rovnice je sympatické a naučíme se 
     * Konstantní řešení jsou řešení rovnice $$ m+2=0,$$ tj. $$ m=-2.$$ Toto řešení splňuje počáteční podmínku.
     * Pravá strana má ohraničenou (dokonce konstantní) derivaci podle $m$. Proto je řešení každé počáteční úlohy určeno jednoznačně. Řešení z předchozího bodu je jediné a další nemusíme hledat.
 
-</div>
+```
+
 
 ## Tloušťka ledu
 
@@ -54,7 +58,10 @@ stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapiš
 tento fakt pomocí vhodného matematického modelu a najděte řešení
 vzniklé diferenciální rovnice.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -65,7 +72,8 @@ h\,\mathrm dh&=k\, \mathrm dt\\
 \end{aligned}
 $$
 
-</div> 
+```
+ 
 
 
 
@@ -96,7 +104,10 @@ a nádrž ve tvaru *kužele* otočeného vrcholem dolů (trychtýř).
 
 _V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Buď $V$ objem vody a $h$ výška hladiny od dna.
 Podle zadání ve všech případech platí $$\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h$$ a musíme derivaci $\frac {\mathrm dV}{\mathrm dt}$ vyjádřit pomocí $\frac {\mathrm dh}{\mathrm dt}$.
@@ -118,7 +129,8 @@ a po přeznačení konstanty má model pro kuželovou nádrž tvar
 $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
 
-</div>
+```
+
 
 
 ## Problematika jednoznačnosti v modelu vypouštění nádrže
@@ -145,7 +157,10 @@ popisující úbytek hladiny vody v nádrži tvaru kvádru, ze které vypouští
 Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmyslete, jestli nejednoznačnost je jenom matematický trik, nebo jestli má
  fyzikální interpretaci.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Ad 1: Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv z nich. 
 
@@ -172,8 +187,7 @@ Ad 2: Pro $h=\frac 14 k^2 t^2$ a $t<0$ dostáváme
 Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například $h(t)=0$ je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce $h(t)=\frac 14 k^2t^2$ pro $t<0$ odpovídá tomu, že pro $t<0$ v nádrži voda byla a vytekla v čase $t=0$.
 
 
-</div>
-
+```
 
 </div>
 
@@ -198,7 +212,10 @@ derivací.  Napište rovnici pro derivaci objemu hromady podle času.
 
 _Toto je podobný model jako model vypouštění nádrže, ale kratší. Opět máme po přepisu zadání do matematického modelu dvě veličiny měnící se s časem v jedné rovnici. Derivace objemu, která nás zajímá, již v rovnici přítomna naštěstí je. Stačí vyjádřit obsah pomocí objemu, nejlépe pomocí rozměrové analýzy._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Rychlost s jakou se mění objem je $\frac{\mathrm dV}{\mathrm dt}$, rychlost přisypávání označme $R$, povrch návětrné strany $S$.
 Podle zadání platí
@@ -207,7 +224,8 @@ Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměr
 $$  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},$$
 kde $r$ a $k=k_0k_1$ jsou konstanty.
 
-</div>
+```
+
 
 
 ## Stavebniny vedle čebínského nádraží: stabilita řešení
@@ -228,7 +246,10 @@ kde $R$ je rychlost přisypávání a $k$ konstanta.
 1. Může hromada skončit i při neustálém přisypávání celá rozfoukaná?
 1. Mohou pracovníci navršit hromadu do libovolné výšky anebo pro velkou hromadu je již rozfoukávání rychlejší než přisypávání?
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Označme $f(V)=R-kV^{\frac 23}$.
 Konstantní řešení je řešením rovnice $f(V)=0$, tj. $$R-kV^{\frac 23}=0.$$ Odsud
@@ -238,6 +259,7 @@ Protože $f(0)>0$, malá hromada vždy roste a proto nemůže skončit celá roz
 
 Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou. 
 
-</div>
+```
+
 
 

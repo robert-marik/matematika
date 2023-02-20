@@ -5,21 +5,28 @@
 Ukažte, že vektor $\vec a=  \begin{pmatrix}    1\\2  \end{pmatrix}$
 není vlastním směrem matice $$A=\begin{pmatrix}  3& 0 \\ 2 &4\end{pmatrix}.$$
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Pomocí maticového násobení vidíme, že platí
 $$ A\vec a=\begin{pmatrix}  3& 0 \\ 2 &4\end{pmatrix}\begin{pmatrix}  1\\2\end{pmatrix}=\begin{pmatrix}  3\\2\end{pmatrix}+2\begin{pmatrix}  0\\4\end{pmatrix}=\begin{pmatrix}  3\\10\end{pmatrix}.$$
 
 Výsledkem zobrazení vektoru pomocí matice je vektor který není násobkem původního vektoru (podle první komponenty by se muselo jednat o trojnásobek, ale to nekoresponduje s druhou komponentou) a proto se nejedná o vlastní vektor matice.
 
-</div>
+```
+
 
 
 ## Vektor, který je vlastním směrem
 
 Ukažte, že vektor $\vec a=  \begin{pmatrix}    2\\3  \end{pmatrix}$  je vlastním směrem matice $$A=\begin{pmatrix}  6& 0 \\ 3 &4\end{pmatrix}$$  a určete příslušné vlastní číslo
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Pomocí maticového násobení vidíme, že platí
 $$A\vec a=\begin{pmatrix}  6& 0 \\ 3 &4\end{pmatrix}\begin{pmatrix}  2\\3\end{pmatrix}=2\begin{pmatrix}  6\\3\end{pmatrix}+3\begin{pmatrix}  0\\4\end{pmatrix}=\begin{pmatrix}  12\\18\end{pmatrix}.$$
@@ -27,7 +34,8 @@ $$A\vec a=\begin{pmatrix}  6& 0 \\ 3 &4\end{pmatrix}\begin{pmatrix}  2\\3\end{pm
 Výsledkem zobrazení vektoru $\vec a$ pomocí matice je vektor $\begin{pmatrix}  12\\18\end{pmatrix},$ který je šestinásobkem původního vektoru $\begin{pmatrix}  2\\3\end{pmatrix}$.
 Protože je obraz násobkem vzoru, jedná se o vlastní vektor matice. Příslušné vlastní číslo je $6$, protože se vektor zobrazuje na svůj šestinásobek.
 
-</div>
+```
+
 
 
 
@@ -36,7 +44,10 @@ Protože je obraz násobkem vzoru, jedná se o vlastní vektor matice. Příslu�
 Najděte vlastní čísla matice $$A=\begin{pmatrix}  -2 & 2 \\ 2 &1\end{pmatrix}$$
 a jim příslušné vlastní vektory.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Vlastní čísla jsou nulovými body determinantu
 $$\begin{vmatrix}  -2-\lambda &2 \\ 2 & 1-\lambda\end{vmatrix}=(-2-\lambda)(1-\lambda)-(2)(2)=\lambda^2+\lambda-6=(\lambda-2)(\lambda+3).$$
@@ -56,7 +67,8 @@ Protože platí $$A-(-3) I=\begin{pmatrix}  -2 & 2\\2&1\end{pmatrix}+\begin{pmat
 která má nekonečně mnoho řešení. Musíme najít alespoň jendo nenulové řešení. Pokud zapíšeme jako soustavu rovnic, dostáváme první rovnici ve tvaru
 $$x_1+2x_2=0$$ a druhá rovnice je jejím násobkem. Volbou $x_2=1$ dostáváme $x_1=-2x_2=-2$ a vlastní vektor příslušný vlastnímu číslu $\lambda_2=-3$ je $\vec e_2=\begin{pmatrix}   -2\\1\end{pmatrix}.$ Tento vektor je dán jednoznačně až na nenulový konstantní násobek.
 
-</div>
+```
+
 
 
 ## Transformace matice $2\times 2$ na diagonální tvar
@@ -71,7 +83,10 @@ Pokud je to možné, napište matici $P$ tak, aby její determinant byl kladný.
 
 _Návod: Vlastní vektory příslušné různým vlastním číslům jsou na sebe kolmé._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Charakteristický polynom je
 $$  \begin{vmatrix}    3-\lambda & 1\\1 & 3-\lambda  \end{vmatrix}  =(3-\lambda)^2-1=9-6\lambda+\lambda^2-1=\lambda^2-6\lambda+8=(\lambda-4)(\lambda-2)$$
@@ -92,7 +107,8 @@ Pokud ještě před násobením matic vytkneme opakující se faktor z obou mati
 $$  \begin{aligned}  P^TAP&=\begin{pmatrix}      \frac 1{\sqrt 2} & -\frac 1{\sqrt 2}\\      \frac {1}{\sqrt 2} & \frac 1{\sqrt 2}    \end{pmatrix}        \begin{pmatrix}    3 & 1 \\ 1 &3  \end{pmatrix}  \begin{pmatrix}      \frac 1{\sqrt 2} & \frac 1{\sqrt 2}\\      -\frac {1}{\sqrt 2} & \frac 1{\sqrt 2}    \end{pmatrix}\\&    =\frac 1{\sqrt 2}\frac 1{\sqrt 2}    \begin{pmatrix}      1 & -1 \\ 1 &1    \end{pmatrix}        \begin{pmatrix}    3 & 1 \\ 1 &3  \end{pmatrix}    \begin{pmatrix}      1 & 1 \\ -1 &1    \end{pmatrix}    \\&=    \frac 1{2}    \begin{pmatrix}      1 & -1 \\ 1 &1    \end{pmatrix}    \begin{pmatrix}      2 & 4 \\-2 & 4    \end{pmatrix}    \\&=    \frac 1{ 2}    \begin{pmatrix}      4& 0 \\ 0& 8    \end{pmatrix}=    \begin{pmatrix}      2& 0 \\0& 4    \end{pmatrix}.  \end{aligned}$$
 Podle očekávání vyšla diagonální matice s vlastními hodnotami v hlavní diagonále.
 
-</div>
+```
+
 
 
 ## Poměr délky vzoru a obrazu vektoru
@@ -100,7 +116,10 @@ Podle očekávání vyšla diagonální matice s vlastními hodnotami v hlavní 
 Pro matici $$A= \begin{pmatrix}   3&1\\1&3 \end{pmatrix}$$ z minulého příkladu a vektor $$\vec u=\begin{pmatrix}  -1\\2\end{pmatrix}$$
 určete podíl délky obrazu $A\vec u$ a vzoru $\vec u$ při zobrazení pomocí matice $A$. Ověřte, že tento podíl leží mezi menší a větší vlastní hodnotou, které jsme vypočítali v předchozím příkladě.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Platí
 $$A\vec u=\begin{pmatrix}  3&1\\1&3\end{pmatrix}\begin{pmatrix}  -1\\2\end{pmatrix}=-\begin{pmatrix}  3\\1\end{pmatrix}+2\begin{pmatrix}  1\\3\end{pmatrix}=\begin{pmatrix}  -1\\5\end{pmatrix}$$
@@ -113,7 +132,8 @@ Podíl délek je
 $$\frac{||A\vec u||}{||\vec u||}=\frac{\sqrt {26}}{\sqrt 5}\approx 2.28$$
 což je podle očekávání hodnota mezi menší a větší vlastní hodnotou, které vyšly v předchozím příkladě.
 
-</div>
+```
+
 
 <!--
 % 
@@ -179,7 +199,10 @@ Uvažujme tyč ve směru osy $x$ namáhanou v ose tahem, při kterém vzniká je
 1. Určete smykové napětí ve spoji a určte, pro jakou hodnotu úhlu je smykové napětí největší.
 1. Určete, jestli je v tomto případě z hlediska působícího napětí výhodnější udělat šikmý spoj po směru nebo proti směru hodinových ručiček.  
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 V souřadné soustavě podle zadání je tah ve směru osy $x$ roven jedné a další komponenty jsou nulové. Tedy $\sigma=\begin{pmatrix}  1 & 0 \\ 0& 0\end{pmatrix}.$ Budeme otáčet proti směru hodinových ručiček, tj. o kladný úhel $\theta$.
 
@@ -195,7 +218,8 @@ Odsud již dostaneme odpovědi na všechny uvedené otázky.
 1. Smykové namáhání je prvek v matici mimo hlavní diagonálu. V našem případě $-\frac 12 \sin(2\theta)$. Smykové namáhání je maximální, pokud má tato funkce maximum nebo minimum. Takový extrém je pro $2\theta=\frac \pi 2$ tj. pro $\theta = \frac\pi4.$ Maximální smykové namáhání je pro spoj skloněný pod úhlem 45 stupňů.
 1. Nezáleží. Změnou znaménka u úhlu $\theta$ se napětí ve směru kolmo na spoj ani podél spoje nemění, funkce $\cos^2\theta$ i $\sin^2\theta$ jsou obě sudé. U smykového napětí se mění znaménko, ale to jenom znamená namáhání v opačném smyslu (Pokud si na stěnu materiálu nakreslíme čtvereček s jednou stranou podél spoje a s druhou stranou kolmo na spoj, podle směru sklonu spoje máme dva zrcadlové případy, jak se tento čtvereček deformuje. Tomu odpovídá opačné znaménko smykové derivace.)
 
-</div>
+```
+
 
 <!-- 
 % ## Extrémy diagonálních prvků transformovaného tenzoru
@@ -212,7 +236,10 @@ která je tohoto typu.
 Určete vlastní čísla a zbylé vlastní vektory matice.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Podle zadání víme, že jeden z vlastních vektorů je $e_1=(1,0,0)^T$ a protože se zobrazí na pětinásobek, je příslušná vlastní hodnota $\lambda_1=5$. Charakteristický polynom je
 $$  \begin{aligned}  \begin{vmatrix}  5-\lambda & 0 & 0\\  0 & 2-\lambda & 2\\  0 & 2 & 5-\lambda\end{vmatrix}&=(5-\lambda)(2-\lambda)(5-\lambda)-(5-\lambda)\times 2\times 2\\& =(5-\lambda)\Bigl[(2-\lambda)(5-\lambda) -4\Bigr]\\&=(5-\lambda)(\lambda^2 -7\lambda +6)=(5-\lambda)(\lambda-1)(\lambda-6)\end{aligned}$$
@@ -230,7 +257,8 @@ Soustava
 $$  \begin{pmatrix}    -1 & 0 & 0\\    0 & -4 & 2\\    0 & 2& -1  \end{pmatrix}  \begin{pmatrix}    x_1\\x_2\\x_3  \end{pmatrix}  =  \begin{pmatrix}    0 \\0\\0  \end{pmatrix}$$
 má řešení $x_1=0$ (plyne z první rovnice) a například $x_2=1$ a $x_3=2$ (plyne z druhé a třetí rovnice, které jsou jedna násobkem druhé). Vlastní vektor příslušný vlastní hodnotě $\lambda_3=6$ je $e_3=(0,1,2)^T$.
 
-</div>
+```
+
 
 
 

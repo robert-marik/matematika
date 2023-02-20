@@ -258,25 +258,9 @@ sloupcový vektor.
 
 ### Obecný případ (anizotropní)
 
-Veličina $K$ je matice $$K=
-\begin{pmatrix}
-  k_{11}& k_{12} & k_{13}\\
-  k_{21}& k_{22} & k_{23}\\
-  k_{31}& k_{32} & k_{33}
-\end{pmatrix}
-$$
-jejíž komponenty splňují $k_{ij}=k_{ji}$. Často jsou všechny
-veličiny kladné a prvky v hlavní diagonále jsou dominantní.
+Veličina $K$ je matice $$K=\begin{pmatrix}  k_{11}& k_{12} & k_{13}\\  k_{21}& k_{22} & k_{23}\\  k_{31}& k_{32} & k_{33}\end{pmatrix}$$ jejíž komponenty splňují $k_{ij}=k_{ji}$. Často jsou všechny veličiny kladné a prvky v hlavní diagonále jsou dominantní.
 
-Komponenty vektoru $\vec j=(j_x, j_y, j_z)^T$ jsou
-$$
-\begin{aligned}
-  j_x&=-k_{11}\frac{\partial u }{\partial x}-k_{12}\frac{\partial u }{\partial y}-k_{13}\frac{\partial u }{\partial z},\\
-  j_y&=-k_{21}\frac{\partial u }{\partial x}-k_{22}\frac{\partial u }{\partial y}-k_{23}\frac{\partial u }{\partial z},\\
-  j_z&=-k_{31}\frac{\partial u }{\partial x}-k_{32}\frac{\partial u }{\partial y}-k_{33}\frac{\partial u }{\partial z},
-\end{aligned}
-$$
-což zjistíme prostým maticovým násobením. Prostor pro další úpravu není.
+Komponenty vektoru $\vec j=(j_x, j_y, j_z)^T$ jsou $$\begin{aligned}  j_x&=-k_{11}\frac{\partial u }{\partial x}-k_{12}\frac{\partial u }{\partial y}-k_{13}\frac{\partial u }{\partial z},\\  j_y&=-k_{21}\frac{\partial u }{\partial x}-k_{22}\frac{\partial u }{\partial y}-k_{23}\frac{\partial u }{\partial z},\\  j_z&=-k_{31}\frac{\partial u }{\partial x}-k_{32}\frac{\partial u }{\partial y}-k_{33}\frac{\partial u }{\partial z},\end{aligned}$$ což zjistíme prostým maticovým násobením. Prostor pro další úpravu není.
 
 ### Ortotropní případ, vhodně zvolené osy
 
