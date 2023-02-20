@@ -119,7 +119,6 @@ Výpočet lineární kombinace si můžete vyzkoušet online.
 
 \fi
 
-<div class="shorten" data-text="Lineární kombinace jsou pro nás zejména cestou k zavedení maticového součinu. Mají však mnoho aplikací i samy o sobě, což je popsáno v následujícím textu.">
 
 <div class='obtekat'>
 
@@ -205,7 +204,6 @@ znát rozložení populace po $k$ letech, situace se komplikuje. Dostali
 bychom rekurentní vzorec, který je nutno stále opakovat. Pro
 odstranění tohoto nepohodlí se zavádí pojem matice, viz níže.
 
-</div>
 
 ### Lineární závislost a nezávislost vektorů
 
@@ -303,25 +301,9 @@ https://youtu.be/DY044M_RbVs
 
 ### Matice a jejich lineární kombinace
 
-> Definice (matice). *Maticí řádu $m\times n$*  rozumíme schema
-$$
-A=
-\begin{pmatrix}
-a_{11}& a_{12}& a_{13}& \cdots{}& a_{1n}\\
-a_{21}& a_{22}& a_{23}& \cdots{}& a_{2n}\\
-\vdots{}& \vdots{}& {}& \ddots{}& \vdots{}\\
-a_{m1}& a_{m2}& \cdots{}& \cdots{}& a_{mn}
-\end{pmatrix}
-$$
-kde $a_{ij}$ pro $i=1..m$ a $j=1..n$ jsou reálná čísla nebo funkce. Množinu
-všech matic řádu $m\times n$, jejichž prvky jsou reálná čísla, označujeme symbolem $\mathbb R^{m\times n}$.
-Zkráceně zapisujeme též
-${A=(a_{ij})}$.
+> Definice (matice). *Maticí řádu $m\times n$*  rozumíme schema $$ A= \begin{pmatrix} a_{11}& a_{12}& a_{13}& \cdots{}& a_{1n}\\a_{21}& a_{22}& a_{23}& \cdots{}& a_{2n}\\\vdots{}& \vdots{}& {}& \ddots{}& \vdots{}\\a_{m1}& a_{m2}& \cdots{}& \cdots{}& a_{mn} \end{pmatrix}$$kde $a_{ij}$ pro $i=1..m$ a $j=1..n$ jsou reálná čísla nebo funkce. Množinuvšech matic řádu $m\times n$, jejichž prvky jsou reálná čísla, označujeme symbolem $\mathbb R^{m\times n}$.Zkráceně zapisujeme též ${A=(a_{ij})}$.
 >
-> Je-li $m=n$ nazývá se matice $A$ *čtvercová
-  matice*, jinak *obdélníková matice*. Je-li $A$ čtvercová
-matice, nazýváme prvky tvaru $a_{ii}$, tj. prvky, jejichž řádkový
-a sloupcový index jsou stejné, *prvky hlavní diagonály*.
+> Je-li $m=n$ nazývá se matice $A$ *čtvercová  matice*, jinak *obdélníková matice*. Je-li $A$ čtvercovámatice, nazýváme prvky tvaru $a_{ii}$, tj. prvky, jejichž řádkovýa sloupcový index jsou stejné, *prvky hlavní diagonály*.
 
 \iffalse
 
@@ -438,24 +420,9 @@ a
 $$ f''(x_4)\approx\frac{1}{h^2} (f(x_3) - 2 f(x_4) +  f(x_5)).$$
 Tyto tři rovnice je možnou zapsat jediným vztahem pomocí 
 maticového násobení 
-$$\begin{pmatrix}f''(x_2)\\f''(x_3)\\f''(x_4)\end{pmatrix}
-=\frac 1{h^2}\begin{pmatrix}
-1 & -2 & 1& 0& 0\\
-0& 1 & -2 & 1& 0\\
-0& 0 & 1  & -2 & 1\\
-\end{pmatrix}
-\begin{pmatrix}f(x_1)\\f(x_2)\\f(x_3)\\f(x_4)\\f(x_5)\end{pmatrix}.
-$$
+$$\begin{pmatrix}f''(x_2)\\f''(x_3)\\f''(x_4)\end{pmatrix} =\frac 1{h^2}\begin{pmatrix} 1 & -2 & 1& 0& 0\\0& 1 & -2 & 1& 0\\0& 0 & 1  & -2 & 1\\\end{pmatrix}\begin{pmatrix}f(x_1)\\f(x_2)\\f(x_3)\\f(x_4)\\f(x_5)\end{pmatrix}.$$
 Proto matice 
-$$
-\begin{pmatrix}
--2 & 1& 0& 0 & 0\\
-1 & -2 & 1& 0& 0\\
-0& 1 & -2 & 1& 0\\
-0& 0 & 1  & -2 & 1\\
-0& 0& 0 & 1  & -2 \\
-\end{pmatrix}
-$$
+$$\begin{pmatrix}-2 & 1& 0& 0 & 0\\1 & -2 & 1& 0& 0\\0& 1 & -2 & 1& 0\\0& 0 & 1  & -2 & 1\\0& 0& 0 & 1  & -2 \\\end{pmatrix}$$
 hraje důležitou roli v numerické matematice při numerickém modelování fyzikálních dějů. Až na první a poslední řádek se jedná o matici, která umí zprostředkovat numerické  derivování funkce. První a poslední řádek se přidávají, aby matice získala čtvercový tvar a jistou míru symetrie. (Symetrickým maticím se budeme věnovat za chviličku.) Tyto dva přidané řádky se uplatní při formulaci okrajových podmínek definujících chování funkce na koncích intervalu.
 
 Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, které zachovává součet a násobení konstantou, mezi něž derivování patří. Jiný přístup k maticové formulaci derivace, k derivování na množině polynomů, si ukážeme ve cvičení.
@@ -474,25 +441,10 @@ Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, kte
 \fi
 
 Budeme pokračovat v příkladě s migrací. Viděli jsme, že po jednom roce je tedy rozložení populace dáno vektorem
-$$ \vec q_1=0.6
-\begin{pmatrix}
-  0.95 \\ 0.05 
-\end{pmatrix}
-+0.4
-\begin{pmatrix}
-  0.03 \\ 0.97
-\end{pmatrix}.
-$$
-Koeficienty vektoru $\vec q_0=\begin{pmatrix}
-  0.6\\0.4
-\end{pmatrix}$ jsou koeficienty v této lineární
-kombinaci.
+$$ \vec q_1=0.6 \begin{pmatrix}  0.95 \\ 0.05 \end{pmatrix}+0.4\begin{pmatrix}  0.03 \\ 0.97\end{pmatrix}.$$
+Koeficienty vektoru $\vec q_0=\begin{pmatrix}  0.6\\0.4\end{pmatrix}$ jsou koeficienty v této lineární kombinaci.
 To lze zapsat jako maticový součin
-$$ \vec q_1= \begin{pmatrix}   0.95 & 0.03 \\ 0.05 & 0.97 \end{pmatrix}
-\begin{pmatrix}
-  0.6\\0.4
-\end{pmatrix}.
-$$
+$$ \vec q_1= \begin{pmatrix}   0.95 & 0.03 \\ 0.05 & 0.97 \end{pmatrix} \begin{pmatrix}  0.6\\0.4\end{pmatrix}.$$
 Pro další rok tento postup opakujeme. 
 Pro matici $A=\begin{pmatrix}   0.95 & 0.03 \\ 0.05 & 0.97 \end{pmatrix}$
 platí $$\vec q_1=A\vec q_0.$$
@@ -555,7 +507,6 @@ generaci a toto se opakuje podobně jako u Markovova řetězce.
 Původně byl Leslieho model odvozen pro modelování populace samic, dá se
 však adaptovat na populaci obecně.
 
-
 Další informace:
 
 * [Z. Pospíšil, Maticové populační modely](http://portal.matematickabiologie.cz/index.php?pg=analyza-a-modelovani-dynamickych-biologickych-dat--maticove-populacni-modely--prolog--leslieho-model-rustu-populace#pro14)
@@ -617,57 +568,22 @@ manimp:MatrixMultiplication|Nejdůležitější rolí matic v materiálovém in�
 </div>
 
 
-
 Je-li $A$ čtvercová matice, můžeme každému vektoru $\vec q$ přiřadit vektor
 $Y=A\vec q$ a tím definovat zobrazení $n$-rozměrného prostoru do sebe. Dá
 se ukázat, že takto dostaneme všechna zobrazení, která zobrazují úsečky na úsečky, počátek nechávají v počátku  a jsou pěkná v tom smyslu, že zachovávají středy úseček, rovnoběžnost a lineární kombinaci vektorů. [Ukázka zobrazení ve 2D](https://sagecell.sagemath.org/?z=eJxtUU9LwzAUvxf6HQIe1nTPrd2mByGH7SIeCqV4K51kNXPR2FfSON0-vUk71ooN5JGX37_wcjyjPrEgjyAqII8vNbY1mt1BPLt3p663GPW9NfvkRsufIM8XLTuCReGATQ_EsJyvOmi-bEFzEIazWs6Xvpf2xBKboIXodgGNrC5N2N9bl9H7AXvr8skNqTW-i49S-F42lgC3veSPKwzSWiONhjsb39ujJgmRFcnXsIEUMsjCFNIwKx58j9iFO83PJ5Yn4VGUBnUgKXEi6URHN9uiIz4lj6xGWZmgkwApUaFmEy1eJ0AaeRZsFdFpjer0htU4i6v6wJn9GDpVshJjJNrH2T3tItuHXEOu_J36Ev8FXf5FspdKsWf9JQbho_rmgN8kSAZdYO2sqqntYF40NxJZTH8BrAC_iQ==&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
 Podobně je možné definovat i zobrazení mezi prostory jiných dimenzí. Například [projekce 3D objektu do 2D](https://sagecell.sagemath.org/?z=eJx9UbFugzAU3JH4B492MQFDSSUkDyytOmTtYlkVSklricapQTTp1_fZJqQhqEgY37u75-dj-NHmxLFIaSqpYOPKYE1XBWWrtd15DBwJgxdryN-4gIISIFeCSYl22iCF1B4NlpcoQkIUSf6PJAzCYFP3attw8Vn3Rh2xsAO4EeBI-EpC0UT5kpsD5rmiLq4FKva2mCWZ3c94Wxl56iQ3fpZ0X6bHGTkPNuGFo84cNPLqq5I1uHvbKCobhQ-gDAMEj4uWi-puaLa9NliRS2Zj7BJZuxU_b574Qbend73HjhQl_Cu0U23LH-u2a4jXTR1cgBnN6b0czxvbRLM-aaTKLFIy8vABYAFvzJbaL_jX5Vzopd2H_sYV-QPATFHdHeC6rwaS0JwBPjbd6PwFZwa9tw==&lang=sage&interacts=eJyLjgUAARUAuQ==). Protože zobrazení zachovává rovnoběžnost, není možné takto jednoduše obdržet například perspektivu. Protože se zachovává počátek, není možné zahrnout ani posunutí. V obou případech si pomáháme trikem, že [přidáme další souřadnici](https://sagecell.sagemath.org/?z=eJxtkc9Og0AQh-8kvMMkHspagmD8c9qz8dCbtw1ptjC2I3SH7AIK7-RT-GJuu02r0QObAb6Z78cwzmwnmag8zctUFaez8Gee3adF9nCowr1_J-JoJfe6t_SRqAOd5tljIHx1HyhPlwKuwHNUIXTsBjPEURzxxup5Wu94L1Wyuh6x6tkmipSXkvKOohQCXtkCARkYD9HKOLqCzlKt9whvWBuqmgHedMPQW-wJGt53bND0A2iYyTXaIHgFb9EYAseD1YcuhHEy2vGG_CAXwn19ntOFbFId09yQug2RjlV5yXT5hFMwHLFGP7FmaLTtcXbNVO0u2iyOnldPsmMyfRK6U6i4ZSsXFutFCo5mlHe5WHbcTls2_1O67XZa-h2LZUsG_4NEUPlrGXTHBZ4FZ3bTDvgbDt4T_kptK1_sgD-kf3rdjt8hWWUmqWlLvZO34vQ08SN9p-v8311bv2WWhfgGgVHIOg==&lang=sage&interacts=eJyLjgUAARUAuQ==), více viz Wikipedie a heslo [Grafické transformace](https://cs.wikipedia.org/wiki/Grafick%C3%A9_transformace) nebo [Camera matrix](https://en.wikipedia.org/wiki/Camera_matrix).
 
-Například matice $$R_\theta=
-\begin{pmatrix}
-  \cos\theta & -\sin \theta\\
-  \sin\theta & \cos\theta
-\end{pmatrix}
-$$
+Například matice $$R_\theta=\begin{pmatrix}  \cos\theta & -\sin \theta\\  \sin\theta & \cos\theta\end{pmatrix}$$
 zobrazí vektory $e_1=(1,0)$ a $e_2=(0,1)$ na
-$$\begin{pmatrix}
-  \cos\theta & -\sin \theta\\
-  \sin\theta & \cos\theta 
-\end{pmatrix}
-\begin{pmatrix}
-  1\\0
-\end{pmatrix}
-=
-\begin{pmatrix}
-  \cos\theta \\
-  \sin\theta
-\end{pmatrix}
-$$
+$$\begin{pmatrix}  \cos\theta & -\sin \theta\\  \sin\theta & \cos\theta \end{pmatrix}\begin{pmatrix}  1\\0\end{pmatrix} = \begin{pmatrix}  \cos\theta \\  \sin\theta\end{pmatrix}$$
 a
-$$\begin{pmatrix}
-  \cos\theta & -\sin \theta\\
-  \sin\theta & \cos\theta 
-\end{pmatrix}
-\begin{pmatrix}
-  0\\1
-\end{pmatrix}
-=
-\begin{pmatrix}
-  -\sin\theta \\
-  \cos\theta
-\end{pmatrix}.
-$$
+$$\begin{pmatrix}  \cos\theta & -\sin \theta\\  \sin\theta & \cos\theta \end{pmatrix}\begin{pmatrix}  0\\1\end{pmatrix} = \begin{pmatrix}  -\sin\theta \\  \cos\theta\end{pmatrix}.$$
 Proto matice $R_\theta$ definuje zobrazení, které pootočí rovinu o\ úhel
 $\theta$ a nazývá se matice rotace. Matice malých rotací je (použitím
 lineární aproximace $\sin\theta\approx \theta$ a $\cos \theta\approx 1$
 v\ okolí nuly)
-$$R_{\theta,0}=
-\begin{pmatrix}
-  1 & - \theta\\
-  \theta & 1
-\end{pmatrix}.
-$$
+$$R_{\theta,0}=\begin{pmatrix}  1 & - \theta\\  \theta & 1\end{pmatrix}.$$
 Tuto matici budeme potřebovat při studiu deformace při odvození matematického popisu malých deformací.
 
 ### Matice jako zobrazení v materiálovém inženýrství
@@ -800,21 +716,9 @@ tj. $a_{ij}=a_{ji}$ se nazývá **symetrická**. Matice, která splňuje
 $a_{ij}=-a_{ji}$ se nazývá **antisymetrická**. Pro libovolnou čtvercovou
 matici $A$ platí
 $$A=\frac{A+A^T}2+\frac{A-A^T}2.$$ První matice v tomto součtu je symetrická a druhá antisymetrická. Takto je možné rozložit matici na součet symetrické a antisymetrické matice. Například matice
-$$A=
-\begin{pmatrix}
-  -4 & 7 \\ -1 & 2
-\end{pmatrix}
-$$
+$$A=\begin{pmatrix}  -4 & 7 \\ -1 & 2\end{pmatrix}$$
 má tento rozklad ve tvaru 
-$$A=
-\begin{pmatrix}
-  -4 & 3 \\ 3 & 2
-\end{pmatrix}
-+
-\begin{pmatrix}
-  0 & 4 \\ -4 & 0
-\end{pmatrix}.
-$$
+$$A=\begin{pmatrix}  -4 & 3 \\ 3 & 2\end{pmatrix}+\begin{pmatrix}  0 & 4 \\ -4 & 0\end{pmatrix}.$$
 Tento trik použijeme pro odvození tvaru tenzoru malých deformací, ze zobrazení takto totiž dokážeme odfiltrovat část související s pootočením a část, která s pootočením nesouvisí. Ta druhá nás zajímá, protože popisuje deformaci.
 
 
@@ -882,13 +786,7 @@ $$ D_{\text{asym}}+I=\begin{pmatrix}
        - \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)& 1
       \end{pmatrix}
       $$
-      abychom měli celou část zobrazení (ne jenom deformaci). Porovnáním s maticí malých rotací
-      $$R_{\theta,0}=
-\begin{pmatrix}
-  1 & - \theta\\
-  \theta & 1
-\end{pmatrix}
-$$
+      abychom měli celou část zobrazení (ne jenom deformaci). Porovnáním s maticí malých rotací $$R_{\theta,0}=\begin{pmatrix}  1 & - \theta\\  \theta & 1\end{pmatrix}$$
 odvozenou na jednom z předchozích slidů 
 získáme přímo pootočení. V teorii deformace nás zajímá spíše symetrická část, tj. matice
 $$ D_{\text{sym}}=\begin{pmatrix}
@@ -938,14 +836,7 @@ bodě je díky tepelné vodivosti desky ovlivněna sousedními uzlovými
 body. Každý sousední bod má stejný vliv, proto teplota v uzlovém bodě
 bude přibližně rovna aritmetickému průměru teplot v sousedních
 bodech. Kvantitativně zformulováno, platí 
-$$
-\begin{aligned}
-  x_1&=\frac 14(10+20+x_2+x_4)\\
-  x_2&=\frac 14(20+40+x_1+x_3)\\
-  x_3&=\frac 14(30+40+x_2+x_4)\\
-  x_4&=\frac 14(10+30+x_1+x_3)
-\end{aligned}\tag{1}
-$$
+$$\begin{aligned}  x_1&=\frac 14(10+20+x_2+x_4)\\  x_2&=\frac 14(20+40+x_1+x_3)\\  x_3&=\frac 14(30+40+x_2+x_4)\\  x_4&=\frac 14(10+30+x_1+x_3)\end{aligned}\tag{1}$$
 anebo po úpravě
 $$
 \begin{aligned}
@@ -957,43 +848,9 @@ $$
 $$
 Dostali jsme soustavu lineárních rovnic o čtyřech neznámých.
 Tuto úlohu je možno zformulovat pomocí lineární kombinace
-$$
-\begin{pmatrix}
-  4\\-1\\0\\-1
-\end{pmatrix} x_1
-+
-\begin{pmatrix}
-  -1\\4\\-1\\0
-\end{pmatrix} x_2
-+
-\begin{pmatrix}
-  0\\-1\\4\\-1
-\end{pmatrix} x_3
-+
-\begin{pmatrix}
-  -1\\0\\-1\\4
-\end{pmatrix} x_4
-=
-\begin{pmatrix}
-  30\\60\\70\\40
-\end{pmatrix} 
-$$
+$$\begin{pmatrix}  4\\-1\\0\\-1\end{pmatrix} x_1+\begin{pmatrix}  -1\\4\\-1\\0\end{pmatrix} x_2+\begin{pmatrix}  0\\-1\\4\\-1\end{pmatrix} x_3+\begin{pmatrix}  -1\\0\\-1\\4\end{pmatrix} x_4 = \begin{pmatrix}  30\\60\\70\\40\end{pmatrix} $$
 nebo pomocí maticového násobení (s vynechanými nulami uvnitř matice)
-$$
-\begin{pmatrix}
- \phantom{-}4&-1&&-1\\
- -1& \phantom{-}4&-1&\\
- &-1& \phantom{-}4&-1\\
- -1&&-1& \phantom{-}4
-\end{pmatrix}
-\begin{pmatrix}
-  x_1\\x_2\\x_3\\x_4
-\end{pmatrix}
-=
-\begin{pmatrix}
-  30\\60\\70\\40
-\end{pmatrix}.
-$$
+$$\begin{pmatrix} \phantom{-}4&-1&&-1\\ -1& \phantom{-}4&-1&\\ &-1& \phantom{-}4&-1\\ -1&&-1& \phantom{-}4\end{pmatrix}\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix} = \begin{pmatrix}  30\\60\\70\\40\end{pmatrix}.$$
 Úloha je tedy převoditelná na úlohu řešení soustavy lineárních
 rovnic. Pro podrobnější popis použijeme stejnou myšlenku, ale mnohem
 více uzlových bodů. Postup je stejný, pouze vznikne soustava s více

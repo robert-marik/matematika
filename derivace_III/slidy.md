@@ -527,14 +527,14 @@ vektorem. Nazývá se *nabla* nebo *Hamiltonův operátor*.
 <div class="shorten" data-text="Derivace a lineární aproximace funkce více proměnných. Využívá se například při popisu deformace">
 
 
+Následující pasáže jsou motivací pro tematický celek, kterému se
+začneme věnovat na další přednášce.
+
 <div class='obtekat'>
 
 ![Působením síly se element materiálu může posunout, rotovat, deformovat. Tuto změnu potřebujeme zachytit. Zdroj: https://physics.stackexchange.com/questions/311716/geometric-derivation-of-the-infinitesimal-strain-tensor/311744](deformace.png)
 
 </div>
-
-Následující pasáže jsou motivací pro tematický celek, kterému se
-začneme věnovat na další přednášce.
 
 Rozšiřují lineární aproximaci na případ, kdy chceme
 popsat transformaci roviny. Protože v tomto případě pracujeme se dvěma

@@ -1,7 +1,4 @@
-% Derivace funkce
-% Robert Mařík
-% 2020,2021, 2022
-
+# Derivace funkce
 
 > **Motivace**.
 >
@@ -12,7 +9,7 @@
 https://youtu.be/yMcaw_J6MKE
 
 
-# Funkce
+## Funkce
 
 https://youtu.be/eNOiuvZ8sas
 
