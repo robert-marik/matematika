@@ -4,14 +4,6 @@ https://youtu.be/DonzhFhcyQ4
 
 ## Připomenutí derivací
 
-\iffalse
-
-<div style="padding-left:40%;font-style:italic;color:gray">
-Každá věda se od určité úrovně automaticky stává částí matematiky. (David Hilbert, německý matematik.)
-</div>
-
-\fi
-
 Derivace umožňují studovat a popisovat změny veličin, vyjadřovat kvantitativně jejich vzájemné souvislosti.
 
 ### (Obyčejná) derivace $\frac{\mathrm df}{\mathrm dt}$. 
@@ -185,8 +177,7 @@ Někdy se tento zákon neformuluje pomocí gradientu tlaku, ale pomocí
 gradientu jiné veličiny, kterou zavádíme v hydrologii pro názorné
 studium efektů, souvisejících s prouděním vody. Nejčastěji se jedná o
 *vodní potenciál* a  hydraulickou výšku či 
-[piezometrickou
-hladinu](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody). Piezometrická hladina je veličina používaná k tomu, abychom do jednoho
+[piezometrickou hladinu](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody). Piezometrická hladina je veličina používaná k tomu, abychom do jednoho
 jednoduše modelovatelného faktoru (má rozměr stejný jako délka)
 započítali všechny veličiny mající vliv na proudění podzemní vody, od
 rozdílu nadmořských výšek, přes kapilární a osmotické jevy až po
@@ -246,15 +237,7 @@ Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k tran
 
 \fi
 
-
-Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla u
-,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě
-vyjádření
-$$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y},\frac{\partial u }{\partial z}\right)^T$$
-a ve 2D
-$$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y}\right)^T,$$
-kde horní index $T$ značí transponovanou matici, tj. jedná se o
-sloupcový vektor.
+Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla u ,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření $$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y},\frac{\partial u }{\partial z}\right)^T$$ a ve 2D $$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y}\right)^T,$$ kde horní index $T$ značí transponovanou matici, tj. jedná se o sloupcový vektor.
 
 ### Obecný případ (anizotropní)
 
