@@ -1,10 +1,11 @@
 # Derivace funkce
 
-> **Motivace**.
->
-> * Seznámíme se s pojmem derivace funkce. Tento pojem umožňuje u měnící se veličiny určovat, jak rychle se tato veličina mění. Zatímco v případě rovnoměrné změny je problematika rychlosti triviální a řešitelná středoškolskými prostředky, v případě změny jejíž rychlost akceleruje nebo klesá je nutné zapojit zcela nový aparát, nazývaný infinitezimální počet. Derivace je jeho prvním představitelem. S dalším, integrálem, se setkáme později.
-> * Ze střední školy je student zvyklý na to, že si má osvojit dovednosti, jak se to počítá. Pro nás je však už důležité si uvědomit, že vůbec nějak dokážeme zachytit rychlost změny. Že s tím dokážeme pracovat, že například dokážeme pomocí těchto pojmů naformulovat fyzikální zákony pracující s rychlostmi změn. A věřte či ne, takové jsou skoro všechny. V podstatě celá středoškolská fyzika je postavena na studiu veličin, měnících se konstantní rychlostí. S tím se dá modelovat mnoho dějů okolo nás, ale pro hlubší poznání světa je to žalostně málo. Derivace umožní pracovat s libovolnými rychlostmi změn. Nesoustřeďte se proto na počítání, soustřeďte se na význam a využití. Soustřeďte se na rozpoznání kontextu, ve kterém problematiku studujeme. 
-> * Po přečtení přednášky byste měli mít v hlavě vybudovanou spojnici mezi derivací a rychlostí. Pokud se ve slovním popisu děje mluví o rychlosti, v matematickém modelu tato rychlost figuruje prostřednictvím derivace. 
+
+```{admonition} Motivace
+* Seznámíme se s pojmem derivace funkce. Tento pojem umožňuje u měnící se veličiny určovat, jak rychle se tato veličina mění. Zatímco v případě rovnoměrné změny je problematika rychlosti triviální a řešitelná středoškolskými prostředky, v případě změny jejíž rychlost akceleruje nebo klesá je nutné zapojit zcela nový aparát, nazývaný infinitezimální počet. Derivace je jeho prvním představitelem. S dalším, integrálem, se setkáme později.
+* Ze střední školy je student zvyklý na to, že si má osvojit dovednosti, jak se to počítá. Pro nás je však už důležité si uvědomit, že vůbec nějak dokážeme zachytit rychlost změny. Že s tím dokážeme pracovat, že například dokážeme pomocí těchto pojmů naformulovat fyzikální zákony pracující s rychlostmi změn. A věřte či ne, takové jsou skoro všechny. V podstatě celá středoškolská fyzika je postavena na studiu veličin, měnících se konstantní rychlostí. S tím se dá modelovat mnoho dějů okolo nás, ale pro hlubší poznání světa je to žalostně málo. Derivace umožní pracovat s libovolnými rychlostmi změn. Nesoustřeďte se proto na počítání, soustřeďte se na význam a využití. Soustřeďte se na rozpoznání kontextu, ve kterém problematiku studujeme. 
+* Po přečtení přednášky byste měli mít v hlavě vybudovanou spojnici mezi derivací a rychlostí. Pokud se ve slovním popisu děje mluví o rychlosti, v matematickém modelu tato rychlost figuruje prostřednictvím derivace. 
+```
 
 https://youtu.be/yMcaw_J6MKE
 
@@ -31,36 +32,45 @@ Na řadu použití stačí intuitivní chápání funkce i jejích vlastností. 
 
 ## Funkce jedné proměnné
 
-> Definice (funkce jedné proměnné).
-  Buďte $A$ a $B$ neprázdné podmnožiny množiny reálných čísel.
-  Pravidlo $f$, které každému prvku množiny $A$ přiřadí jediný prvek
-  množiny $B$ se nazývá *funkce* (přesněji: *reálná
-    funkce jedné reálné proměnné*).  Zapisujeme 
-  $f:A\to B$.  Skutečnost, že prvku $a\in A$ je přiřazen
-  prvek $b\in B$ zapisujeme  $f(a)=b$. Přitom říkáme,
-  že $b$ je *obrazem prvku* $a$ při zobrazení $f$, resp. že $a$
-  je *vzorem prvku* $b$ při zobrazení $f$.
+```{prf:definition} Funkce jedné proměnné.
+:nonumber:
+Buďte $A$ a $B$ neprázdné podmnožiny množiny reálných čísel.  Pravidlo
+$f$, které každému prvku množiny $A$ přiřadí jediný prvek množiny $B$
+se nazývá *funkce* (přesněji: *reálná funkce jedné reálné proměnné*).
+Zapisujeme $f:A\to B$.  Skutečnost, že prvku $a\in A$ je přiřazen
+prvek $b\in B$ zapisujeme $f(a)=b$. Přitom říkáme, že $b$ je *obrazem
+prvku* $a$ při zobrazení $f$, resp. že $a$ je *vzorem prvku* $b$ při
+zobrazení $f$.
+```
 
-> Poznámka (terminologie).  Množina $A$ z definice
-  funkce se nazývá *definiční obor funkce $f$*.  Označujeme 
-  $\mathrm D(f)$ (resp.  $\mathrm{Dom}(f)$). Je-li $M$ podmnožina definičního oboru, definujeme množinu $f(M)$ jako množinu všech obrazů bodů množiny $M$. Množina $f(\mathrm{Dom}(f))=b$ se nazývá *obor
-    hodnot funkce $f$*.  Označujeme  $\mathrm H(f)$ (resp.
-  $\mathrm{Im}(f)$).
->
->  Je-li $y=f(x)$ nazýváme proměnnou $x$ též *nezávislou
-    proměnnou* a proměnnou $y$ *závislou proměnnou*.
-  *Grafem* funkce rozumíme množinu všech uspořádaných dvojic
-  $[x,y]\in\mathbb R^2$ s vlastností $y=f(x)$.
+```{prf:remark} Terminologie.
+:nonumber: 
+Množina $A$ z definice funkce se nazývá *definiční obor funkce $f$*.
+Označujeme $\mathrm D(f)$ (resp.  $\mathrm{Dom}(f)$). Je-li $M$
+podmnožina definičního oboru, definujeme množinu $f(M)$ jako množinu
+všech obrazů bodů množiny $M$. Množina $f(\mathrm{Dom}(f))=b$ se
+nazývá *obor hodnot funkce $f$*.  Označujeme $\mathrm H(f)$ (resp.
+$\mathrm{Im}(f)$).
 
+Je-li $y=f(x)$ nazýváme proměnnou $x$ též *nezávislou proměnnou* a
+proměnnou $y$ *závislou proměnnou*.  *Grafem* funkce rozumíme množinu
+všech uspořádaných dvojic $[x,y]\in\mathbb R^2$ s vlastností $y=f(x)$.
+```
 
 ## Přímá a nepřímá úměrnost
 
 Je to až k nevíře, ale k popisu obrovského množství dějů stačí čtyři základní operace: sčítání, odčítání, násobení a dělení. Vzhledem k požadavku na konzistenci fyzikálních jednotek se nejčastěji setkáváme s násobením a dělením a proto funkce pracující s těmito operacemi mají výsadní postavení. Takový, že si vysloužily pojmenování běžně užívané i mezi nematematiky: přímá a nepřímá úměrnost. Je to formální popis situace, kdy souvislost mezi dvěma veličinami je zprostředkována násobením konstantou (přímá úměrnost), nebo kdy je násobením konstantou zprostředkována souvislost mezi jednou veličinou a převrácenou hodnotou druhé veličiny.
 
-> Definice (přímá a nepřímá úměrnost). Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$ 
+```{prf:definition} Přímá a nepřímá úměrnost.
+:nonumber:
+Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$ 
 Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=\frac kx.$$
+```
 
-**Poznámka.** Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x\text{ nebo }y\propto x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme podobně $y\sim \frac 1x$, $y\propto \frac 1x$ a $y\approx \frac 1x$ s využitím toho, že nepřímá úměrnost je vlastně přímá úměrnost pro převrácenou hodnotu.
+```{prf:remark}
+:nonumber:
+Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x\text{ nebo }y\propto x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme podobně $y\sim \frac 1x$, $y\propto \frac 1x$ a $y\approx \frac 1x$ s využitím toho, že nepřímá úměrnost je vlastně přímá úměrnost pro převrácenou hodnotu.
+```
 
 \iffalse
 
@@ -97,24 +107,30 @@ rostoucí a  klesající funkce. Názorně
 (klesající) směr nerovnosti při aplikaci funkce na obě strany
 nerovnice.
 
-> Definice (monotonie funkce).   Nechť $f$ je funkce a $M\subseteq \mathrm{Dom}(f)$ podmnožina definičního oboru   funkce $f$.
-> 
-> * Řekneme, že funkce $f$ je na množině $M$ *rostoucí*
->  jestliže pro každé $x_1, x_2\in M$ s vlastností $x_1<x_2$, platí
->  $f(x_1)<f(x_2)$.
->  * Řekneme, že funkce $f$ je na množině $M$ *klesající*
->  jestliže pro každé $x_1, x_2\in M$ s vlastností $x_1<x_2$, platí
->  $f(x_1)>f(x_2)$.
->  * Řekneme, že funkce $f$ je na množině $M$ *(ryze) monotonní*
->  je-li buď rostoucí, nebo klesající na $M$.
->
-> Nespecifikujeme-li množinu $M$, máme na mysli, že uvedená vlastnost platí na celém definičním oboru funkce $f$.
+```{prf:definition} Monotonie funkce.
+:nonumber:
+Nechť $f$ je funkce a $M\subseteq \mathrm{Dom}(f)$ podmnožina definičního oboru   funkce $f$.
 
-> Poznámka (monotonie z hlediska řešitelnosti nerovnic). Je-li funkce $f$ rostoucí nebo klesající, je i prostá a nerovnice uvedené v předchozí definici jsou dokonce ekvivalentní. Můžeme tedy na obě strany nerovnice aplikovat tutéž rostoucí funkci, nebo rostoucí funkci z obou stran nerovnice vynechat.
->
->* Je-li $f$ rostoucí, platí $$x_1\leq x_2 \iff f(x_1)\leq f(x_2).$$
->* Je-li $f$ klesající, platí $$x_1\leq x_2 \iff f(x_1)\geq f(x_2).$$
->* Stejné vztahy platí i pro ostré nerovnosti.
+* Řekneme, že funkce $f$ je na množině $M$ *rostoucí*
+ jestliže pro každé $x_1, x_2\in M$ s vlastností $x_1<x_2$, platí
+ $f(x_1)<f(x_2)$.
+ * Řekneme, že funkce $f$ je na množině $M$ *klesající*
+ jestliže pro každé $x_1, x_2\in M$ s vlastností $x_1<x_2$, platí
+ $f(x_1)>f(x_2)$.
+ * Řekneme, že funkce $f$ je na množině $M$ *(ryze) monotonní*
+ je-li buď rostoucí, nebo klesající na $M$.
+
+Nespecifikujeme-li množinu $M$, máme na mysli, že uvedená vlastnost platí na celém definičním oboru funkce $f$.
+```
+
+```{prf:remark} Monotonie z hlediska řešitelnosti nerovnic.
+:nonumber:
+Je-li funkce $f$ rostoucí nebo klesající, je i prostá a nerovnice uvedené v předchozí definici jsou dokonce ekvivalentní. Můžeme tedy na obě strany nerovnice aplikovat tutéž rostoucí funkci, nebo rostoucí funkci z obou stran nerovnice vynechat.
+
+* Je-li $f$ rostoucí, platí $$x_1\leq x_2 \iff f(x_1)\leq f(x_2).$$
+* Je-li $f$ klesající, platí $$x_1\leq x_2 \iff f(x_1)\geq f(x_2).$$
+* Stejné vztahy platí i pro ostré nerovnosti.
+```
 
 Tyto poučky použijeme vždy, když rozvažujeme, zda můžeme k oběma
 stranám nerovnice přičíst stejné číslo (můžeme), zda můžeme obě strany
@@ -226,12 +242,7 @@ Buď $f\colon \mathbb R\to\mathbb R$ funkce jedné proměnné.
 
 Definice spojitosti sice není zcela názorná, ale následující definice a věta velmi pomůže. Zhruba řečeno vysvětlují, proč si v naprosté většině prakticky využitelných případů můžeme spojitost ověřit jenom tím, že zjistíme, zda je funkce definována. 
 
-> Definice (elementární funkce). Všechny mnohočleny, goniometrické, cyklometrické,
-  exponenciální a logaritmické funkce a obecná mocnina se nazývají
-  *základní elementární funkce* Všechny funkce, které ze základních
-  elementárních funkcí získáme konečným počtem operací sčítání,
-  odečítání, násobení, dělení a skládání těchto funkcí navzájem se
-  nazývají *elementární funkce*.
+> Definice (elementární funkce). Všechny mnohočleny, goniometrické, cyklometrické,   exponenciální a logaritmické funkce a obecná mocnina se nazývají  *základní elementární funkce* Všechny funkce, které ze základních  elementárních funkcí získáme konečným počtem operací sčítání,  odečítání, násobení, dělení a skládání těchto funkcí navzájem se  nazývají *elementární funkce*.
 
 
 > Věta (spojitost elementárních funkcí). Všechny elementární funkce jsou spojité v každém vnitřním bodě svého definičního oboru.
@@ -267,20 +278,18 @@ intervalu, jehož délka je nerozlišitelná od nuly. Vypočteme průměrnou ryc
 
 Buď $y=f(x)$ funkce definovaná na nějakém otevřeném intervalu.
 
-> Definice (derivace). *Derivací* funkce $f$ v bodě $x$ rozumíme
-limitu
-$$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$
+> Definice (derivace). *Derivací* funkce $f$ v bodě $x$ rozumíme limitu $$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$
 
 Derivaci funkce $f$ v bodě $x_0$ označujeme $f'(x_0)$ nebo
 $\frac{\mathrm df(x_0)}{\mathrm dx}$. Derivaci v libovolném bodě potom
 $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\mathrm dx}$ je Leibnizova notace, zápis $f'$ je Lagrangeova notace. 
 
-> Poznámka (slovní interpretace definice derivace).
->
+```{prf:remark} Slovní interpretace definice derivace
+:nonumber:
 * Výraz z čitatele, tj. $f(x+h)-f(x)$, je změna veličiny $f$ na intervalu $[x,x+h]$. Často označujeme též $\Delta f$.
 * Podíl, tj. $\frac{f(x+h)-f(x)}h$ je změna veličiny $f$ na intervalu $[x,x+h]$ přepočítaná na jednotku veličiny $x$, tj. v jistém smyslu průměrná rychlost na tomto intervalu. Často označujeme též $\frac{\Delta f}{\Delta x}$.
 * Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost.
-
+```
 
 
 |Část definičního vztahu|Slovní interpretace|
@@ -325,10 +334,11 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 > Věta (existence derivace implikuje spojitost). Má-li funkce $f$ derivaci na intervalu $I$, je na tomto intervalu spojitá.
 
-> Věta (znaménko derivace implikuje monotonii).
->
+```{prf:theorem} Znaménko derivace implikuje monotonii.
+:nonumber:
 * Má-li funkce $f$ kladnou derivaci na intervalu $I$, je na tomto intervalu rostoucí.
 * Má-li funkce $f$ zápornou derivaci na intervalu $I$, je na tomto intervalu klesající.
+```
 
 
 |Derivace funkce |Chování funkce |
@@ -355,16 +365,18 @@ th {color:white; background: #555;}
 
 https://youtu.be/ysSFnm8Yrdo
 
-> Poznámka (slovní vyjádření derivace podle času). Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolným z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
-> 
-> * Rychlost růstu
-> * Rychlost změny (implicitně předpokládáme, že kladná změna odpovídá růstu a záporná změna poklesu)
-> * Nárůst za jednotku času
-> * Změna za jednotku času
-> * Časová změna veličiny 
->
-> Pokud potřebujeme pracovat s poklesem, násobíme derivaci faktorem $-1$. Toto čteme též jako "záporně vzatá derivace."
+```{prf:remark} Slovní vyjádření derivace podle času.
+:nonumber: 
+Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolným z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
 
+* Rychlost růstu
+* Rychlost změny (implicitně předpokládáme, že kladná změna odpovídá růstu a záporná změna poklesu)
+* Nárůst za jednotku času
+* Změna za jednotku času
+* Časová změna veličiny 
+
+Pokud potřebujeme pracovat s poklesem, násobíme derivaci faktorem $-1$. Toto čteme též jako "záporně vzatá derivace."
+```
 
 \iffalse
 
@@ -730,9 +742,10 @@ se projeví zvýšením teploty v daném bodě.
 |Rovnice vedení tepla|Červené výrazy jsou si úměrné.|
 
 
-**Poznámka.** Vyřešit rovnici vedení tepla je bohužel možné jenom v poměrně speciálních případech, které jsou z praktického hlediska málo významné. Existuje však řada numerických metod jak tuto rovnici vyřešit přibližnými metodami. Tato rovnice je potom "schována" například v softwarech umožňujících vizualizovat tepelné namáhání v okolí kritických prvků staveb, jako jsou okna. Všimněte si univerzálnosti této rovnice. Stejná rovnice, jakou můžeme použít pro posouzení teplotního komfortu ve stavbě, dokáže modelovat například vliv stromu na tepelnou pohodu v městském prostředí nebo prostup tepla do dřeva při jeho tepelné modifikaci.
-
-
+```{prf:remark}
+:nonumber:
+Vyřešit rovnici vedení tepla je bohužel možné jenom v poměrně speciálních případech, které jsou z praktického hlediska málo významné. Existuje však řada numerických metod jak tuto rovnici vyřešit přibližnými metodami. Tato rovnice je potom "schována" například v softwarech umožňujících vizualizovat tepelné namáhání v okolí kritických prvků staveb, jako jsou okna. Všimněte si univerzálnosti této rovnice. Stejná rovnice, jakou můžeme použít pro posouzení teplotního komfortu ve stavbě, dokáže modelovat například vliv stromu na tepelnou pohodu v městském prostředí nebo prostup tepla do dřeva při jeho tepelné modifikaci.
+```
 
 ## Shrnutí, hlavní myšlenky
 

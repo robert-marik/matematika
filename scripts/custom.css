@@ -37,3 +37,13 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
 
 
 .reseni {background-color:lightgray;}
+
+
+.bd-toc {display: none;}
+
+@media (min-width: 10px)
+{
+#main-content {
+  max-width: 100%; 
+}
+}
