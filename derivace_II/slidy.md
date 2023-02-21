@@ -180,13 +180,13 @@ $$ V\approx V_0+ g h,$$
 kde $g=G \frac{M}{R^2}$.
 
 Podobně
-aproximací přesných vztahů plynoucích z\ Einsteinovy teorie relativity získáme složku energie související s pohybem, tj. kinetickou energii
+aproximací přesných vztahů plynoucích z Einsteinovy teorie relativity získáme složku energie související s pohybem, tj. kinetickou energii
 \dm $$E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}} =m_0 c^2 \left(1-\frac {v^2}{c^2}\right)^{-1/2} \approx m_0 c^2 \left(1+\left(-\frac 12\right)\left(-\frac {v^2}{c^2}\right)\right)=m_0c^2+\frac 12 m_0v^2 $$
 pro $v$ mnohem menší než $c$. Snadno rozšifrujeme, že s rychlostí souvisí jenom druhý sčítanec a že se jedná o klasický vzorec pro kinetickou energii $\frac 12 mv^2$.
 
 manim:Linearni_aproximace|aOvVJzeWy3o|Lineární aproximace může pomoci zjednodušit komplikované funkční vztahy v případě, kdy vstupní data nejsou příliš variabilní.
 
- Ač se jedná "jenom" o\ lineární aproximaci, je  vzorec $E=\frac 12 mv^2$ dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného relativistického vzorce při malých rychlostech v praxi obvykle zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUb1OwzAQ3iv1HU7t4lSkSQwFOmQMCwNSH6CS45yIG_-UOLVIn55LCm0YGJA8nO8-fT93Js2zDSyhNq6zznfgygM23Wk-kznfbp-2_GHzDARoe1nrAeADdlpAALPyexZn0XwWcp4m9-vHKeybB46u7svTQUlVO_B4BSjgKTQmqV0FxxYDVmgF0LvRzmfHVtkO2OJVWeyUbASgxfZdITRaeGr0BsLZtRINkTgwQk8UFtGVIUv4yqSrsOe33i-FtxKl7UcylCOXVqULTtup5co1zkqkHLoWgZagrDvBWbimdSfCBCGVrEFS5EG8yHISlXtOJc_ZpU6Y_2g7lsVkJqF_FBFyCRcjRQaTD19bdvPLCh4XWTT0fpr_TnAHw4Y84GfXoqHJOfQehxB0A2_HkKGnm1gnKY0dd7iDHHYo9ItCXbEsTceT79jl6DeDO8b-zhhfJlR9AXtJxZs=&lang=sage&interacts=eJyLjgUAARUAuQ==).
+ Ač se jedná "jenom" o lineární aproximaci, je  vzorec $E=\frac 12 mv^2$ dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného relativistického vzorce při malých rychlostech v praxi obvykle zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUb1OwzAQ3iv1HU7t4lSkSQwFOmQMCwNSH6CS45yIG_-UOLVIn55LCm0YGJA8nO8-fT93Js2zDSyhNq6zznfgygM23Wk-kznfbp-2_GHzDARoe1nrAeADdlpAALPyexZn0XwWcp4m9-vHKeybB46u7svTQUlVO_B4BSjgKTQmqV0FxxYDVmgF0LvRzmfHVtkO2OJVWeyUbASgxfZdITRaeGr0BsLZtRINkTgwQk8UFtGVIUv4yqSrsOe33i-FtxKl7UcylCOXVqULTtup5co1zkqkHLoWgZagrDvBWbimdSfCBCGVrEFS5EG8yHISlXtOJc_ZpU6Y_2g7lsVkJqF_FBFyCRcjRQaTD19bdvPLCh4XWTT0fpr_TnAHw4Y84GfXoqHJOfQehxB0A2_HkKGnm1gnKY0dd7iDHHYo9ItCXbEsTceT79jl6DeDO8b-zhhfJlR9AXtJxZs=&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
 </div>
 
@@ -387,7 +387,7 @@ https://youtu.be/U93Q3XaDnDA
 
 ![V praxi často pracujeme s daty získanými po skocích. Místo spojité funkce (křivky) tedy máme funkci definovanou v bodech (diskrétní funkce). I zde je nutné mít možnost měření rychlosti změny, která je co nejvíce kompatibilní s derivací.](diference.png)
 
-![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v\ dřevěných konstrukcích a to i v\ případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: vlastní.](pisarky.jpg)
+![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v dřevěných konstrukcích a to i v případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: vlastní.](pisarky.jpg)
 
 </div>
 
@@ -545,7 +545,7 @@ nulového bodu a funkce má v nulovém bodě nenulovou derivaci) postup
 konverguje ke kořeni studované rovnice a to velmi rychle: každým
 krokem se přibližně zdvojnásobí počet míst, která máme správně.
 
-Z\ lineární aproximace funkce $f$ v bodě $x_0$ $$f(x)\approx
+Z lineární aproximace funkce $f$ v bodě $x_0$ $$f(x)\approx
 f(x_0)+f'(x_0)(x-x_0)$$ pro $x_0=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme
 $$0=f(x_n)+f'(x_n)(x_{n+1}-x_n)$$ a po osamostatnění $x_{n+1}$ přímo
 iterační vzorec $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$ Tento vzorec
@@ -556,7 +556,7 @@ a známe přibližné řešení zadané rovnice.
 
 **Příklad.**
 Zkusme najít číslo takové, jehož kosinus je stejný jako toto číslo. 
-Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vlastně řešení nulový bod funkce $f(x)=x-\cos x$. Po dosazení $f'(x)=1+\sin x$ získáváme iterační vzorec $$x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin x_n}$$ a jednotlivé iterace s počátečním odhadem $x_0=1$ a s\ aproximací na 60 desetinných míst [dávají postupně](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TDXtOLlUgCCCluNCl0gSs4v1qjQ1NTXMNQuzswDMTX18jRSMtMzS4ptLQw0IaoLijLzShSAsgDDoBas&lang=sage&interacts=eJyLjgUAARUAuQ==) následující hodnoty.
+Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vlastně řešení nulový bod funkce $f(x)=x-\cos x$. Po dosazení $f'(x)=1+\sin x$ získáváme iterační vzorec $$x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin x_n}$$ a jednotlivé iterace s počátečním odhadem $x_0=1$ a s aproximací na 60 desetinných míst [dávají postupně](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TDXtOLlUgCCCluNCl0gSs4v1qjQ1NTXMNQuzswDMTX18jRSMtMzS4ptLQw0IaoLijLzShSAsgDDoBas&lang=sage&interacts=eJyLjgUAARUAuQ==) následující hodnoty.
 
 \bgroup \scriptsize
 
@@ -572,7 +572,7 @@ Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vla
 
 \egroup
 
-Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovnice.
+Vidíme, že proces opravdu neuvěřitelně rychle konverguje k řešení rovnice.
 Rychlost konvergence je důležitá, pokud je výpočet funkční hodnoty "drahý".
 Například při modelování namáhání dřevěné konstrukce s nelineární
 charakteristikou aproximujeme rovnici pomocí konečných diferencí soustavou

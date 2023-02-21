@@ -93,17 +93,17 @@ vypočítat hmotnost.
   postupem z minulého bodu hmotnost každého kousku a tyto hmotnosti
   poté sečteme.
 * Zbývá případ, kdy je hustota dána nějakou obecnou funkcí. Pokud se
-  hustota desky mění a v\ obecném bodě $(x,y)$ je dána funkcí
-  $f(x,y)$, můžeme myšlenkově rozdělit desku na malé kousky, v\ rámci
+  hustota desky mění a v obecném bodě $(x,y)$ je dána funkcí
+  $f(x,y)$, můžeme myšlenkově rozdělit desku na malé kousky, v rámci
   každého malého kousku hustotu aproximovat konstantou a postupovat
   jako u desky z konečného počtu (malých) homogenních částí.
 * Získaná veličina je aproximací celkové hmotnosti. Pro jemnější
   dělení se přesnost aproximace zlepšuje.
 
-V\ limitním přechodu kdy rozměry všech kousků na něž je deska dělena
-jde k\ nule dostáváme **dvojný integrál** 
+V limitním přechodu kdy rozměry všech kousků na něž je deska dělena
+jde k nule dostáváme **dvojný integrál** 
 $$ \iint_\Omega f(x,y)\mathrm{d}x \mathrm{d}y , $$ 
-kde $\Omega$ je oblast v\ rovině $(x,y)$ definovaná uvažovanou deskou. V aplikacích je častý též zápis
+kde $\Omega$ je oblast v rovině $(x,y)$ definovaná uvažovanou deskou. V aplikacích je častý též zápis
 $$ \iint_\Omega f(x,y)\mathrm{d}A$$ 
 nebo 
 $$ \iint_\Omega f(x,y)\mathrm{d}S.$$ 
@@ -148,14 +148,14 @@ konstantou. Přesněji, platí následující věty.
 
 </div>
 
-V\ závislosti na tom, jakými nerovnostmi množinu $\Omega$ definujeme,
+V závislosti na tom, jakými nerovnostmi množinu $\Omega$ definujeme,
 můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
 věty udávají, jak je možno dvojný integrál přepsat jako dvojnásobný
 integrál. Mají název **Fubiniovy věty**.
 
 ```{prf:theorem} Fubiniova věta.
 :nonumber:
- Nechť $f$ je funkce spojitá v\ uzavřené oblasti
+ Nechť $f$ je funkce spojitá v uzavřené oblasti
 $$  
 \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq x\leq b}\text{ a }
 {\varphi (x)\leq y\leq \psi (x)}\}.$$ 
@@ -177,7 +177,7 @@ $$
 
 ```{prf:theorem} Fubiniova věta pro jiné pořadí integrace.
 :nonumber:
- Nechť $f$ je funkce spojitá v\ uzavřené oblasti
+ Nechť $f$ je funkce spojitá v uzavřené oblasti
 $$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
 {\varphi (y)\leq x\leq
 \psi (y)}\}.
@@ -221,7 +221,7 @@ $$\int_0^4 \int _{\sqrt y}^{2} f(x,y)\;\mathrm{d}x\;\mathrm{d}y.$$
 Všimněte si, že nestačí prosté prohození integrálů. Je nutno
 přepočítávat meze a hraniční křivky je nutno vyjádřit jednou jako
 funkce proměnné $x$ a jednou jako funkce proměnné $y$. V důsledku
-tohoto dochází v průběhu výpočtu dvěma různými způsoby k\ tomu, že
+tohoto dochází v průběhu výpočtu dvěma různými způsoby k tomu, že
 pracujeme se dvěma různými integrály. Výsledky jsou stejné, nemusí
 však být dosažitelné srovnatelnou námahou, jedna z cest může být
 snazší.
@@ -298,10 +298,10 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 * **Hmotnost** množiny $M$ je $$m=\iint_M \sigma(x,y)\mathrm{d}x
   \mathrm{d}y,$$ kde $\sigma(x,y)$ je **plošná hustota** (hmotnost
   vztažená na jednotku povrchu).
-* **Lineární momenty** hmotné množiny $M$ vzhledem k\ osám $y$ a $x$
+* **Lineární momenty** hmotné množiny $M$ vzhledem k osám $y$ a $x$
   jsou rovny $$\iint_M x\sigma(x,y)\mathrm{d}x \mathrm{d}y$$ a
   $$\iint_M y\sigma(x,y)\mathrm{d}x \mathrm{d}y.$$
-* **Moment setrvačnosti** hmotné množiny $M$ vzhledem k\ ose je
+* **Moment setrvačnosti** hmotné množiny $M$ vzhledem k ose je
   $$J=\iint_M \rho^2(x,y)\sigma(x,y)\mathrm{d}x \mathrm{d}y ,$$ kde
   $\rho(x,y)$ je vzdálenost bodu $(x,y)$ od osy otáčení. Například pro
   osu $x$ je $\rho(x,y)=y$ a pro osu $y$ je $\rho (x,y)=x$. Pro osu
@@ -323,12 +323,12 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   celkové hmotnosti množiny.
 * **Kvadratický moment průřezu** (což je moment setrvačnosti pro
   $\sigma(x,y)=1$, anglicky *second moment of area*) je veličina,
-  která hraje podstatnou roli v\ mechanice (nábytek, stavby) při
+  která hraje podstatnou roli v mechanice (nábytek, stavby) při
   dimenzování (polic, nosných tyčí, nosníků).
 * V technické praxi zpravidla neuvažujeme nekonstantní plošnou hustotu. Potom je možné je bez újmy na obecnosti nahradit jedničkou.
   Vzorce pro obsah, $x$-ovou souřadnici těžiště ($x_0$), $y$-ovou
-  souřadnici těžiště ($y_0$), kvadratický moment vzhledem k\ ose $x$
-  ($I_x$) a kvadratický moment vzhledem k\ ose $y$ ($I_y$) (pro množinu $M$ s plošnou hustotou $1$) jsou
+  souřadnici těžiště ($y_0$), kvadratický moment vzhledem k ose $x$
+  ($I_x$) a kvadratický moment vzhledem k ose $y$ ($I_y$) (pro množinu $M$ s plošnou hustotou $1$) jsou
   $$
   \begin{alignedat}{2}
 	  %  S&=\iint_M\mathrm{d}x \mathrm{d}y \\
@@ -375,11 +375,11 @@ Odsud máme okamžitě několik pozorování
   mocninou. Pokud tedy u nosníku se čtvercovým průřezem zdvojnásobíme
   množství materiálu, tuhost vzroste čtyřnásobně. Toto si můžeme představit tak, že jsme původní nosník obalili trubkou vyrobenou ze stejného množství materiálu. Protože společná tuhost je čtyřnásobná, znamená to, že přidaná trubka má trojnásobnou tuhost než původní tyč. Proto se v konstrukcích nepoužívají tyče, ale trubky nebo analogické struktury (I-čka apod). I příroda zná tyto zákonitosti a kosti tvořící opěrný aparát živočichů jsou trubkovitého tvaru. 
 * Pro čtvercový průřez roste tuhost se čtvrtou mocninou délky
-  strany $$I_x=\frac 1{12} a^4.$$  Stejná závislost (přímá úměrnost mezi kvadratickým momentem a čtvrtou mocninou rozměru) musí být u\ každého průřezu
-  jednoparametrického tvaru, například pro kruh. To plyne například z věty nazývané [Buckinghamův $\Pi$ teorém](https://en.wikipedia.org/wiki/Buckingham_%CF%80_theorem). Jako aplikaci uvažujme strom modelovaný jako nosník s\ kruhovým průřezem. Například strom, ve
-  kterém je dutina o\ velikosti poloviny průměru kmene většinou vyvolá
+  strany $$I_x=\frac 1{12} a^4.$$  Stejná závislost (přímá úměrnost mezi kvadratickým momentem a čtvrtou mocninou rozměru) musí být u každého průřezu
+  jednoparametrického tvaru, například pro kruh. To plyne například z věty nazývané [Buckinghamův $\Pi$ teorém](https://en.wikipedia.org/wiki/Buckingham_%CF%80_theorem). Jako aplikaci uvažujme strom modelovaný jako nosník s kruhovým průřezem. Například strom, ve
+  kterém je dutina o velikosti poloviny průměru kmene většinou vyvolá
   obavy ze stability. I když taková dutina vypadá obrovská, tuhost se
-  sníží o\ původní tuhost vynásobenou koeficientem
+  sníží o původní tuhost vynásobenou koeficientem
   $$(0.5)^4=0.0625\approx 6\%.$$ 
   Vidíme, že i s hrozivě vypadající dutinou má kmen pořád tuhost 
   $94\%$ původní tuhosti (za předpokladu dutiny uprostřed
@@ -409,7 +409,7 @@ x_0&=\frac 1{S_1+S_2}\iint _{M} x\,\mathrm dx\mathrm dy\\
 \end{aligned}
 $$
 Totéž je možné provést pro $y$-ovou souřadnici, nebo pro libovolný
-konečný počet částí. Podobně je možné odvodit vzorec s\ obecnou
+konečný počet částí. Podobně je možné odvodit vzorec s obecnou
 nekonstantní plošnou hustotou.  Poloha těžiště složeného obrazce je
 tedy *váženým průměrem* těžišť jednotlivých složek, kde váha každé
 složky je určena její hmotností. Protože se jedná o vážený průměr,
@@ -504,9 +504,9 @@ kde $S$ je obsah hráze. Formálně tento vztah odpovídá vzorci
 $$F=p_0 S,\tag{H1}\label{H1}$$
 kde $p_0=\rho g y_0$ je tlak v těžišti. *Proto v praxi stačí znát těžiště
 hráze a pro výpočet síly na hráz použít celkovou plochu hráze a tlak
-v\ těžišti.* Protože jsme pracovali s obecnou množinou $M$, není tento
+v těžišti.* Protože jsme pracovali s obecnou množinou $M$, není tento
 poznatek nijak vázán na konkrétní tvar hráze. Musí být však splněna
-podmínka, že všechny body hráze leží v\ jedné rovině.
+podmínka, že všechny body hráze leží v jedné rovině.
 
 Ve výpočtu výše jsme uvažovali svislou rovinu, ale zobecnění na šikmou
 rovinu je snadné. Stačí opravit vztah pro hloubku, protože když svislou množinu
@@ -541,8 +541,8 @@ Tlaková síla působící na svislou hráz má celkový nulový moment
 vzhledem k ose proházející působištěm. Je-li hráz definována množinou
 $M$ a je-li $y_c$ působiště výsledné tlakové síly, je v hloubce $y$
 tlak na plošku o velikosti $\Delta S$ roven $y\rho g \Delta S$ a
-součin $(y_c-y)y\rho g\Delta S$ je příspěvek k\ otáčivému momentu
-vzhledem k\ ose, procházející vodorovně působištěm tlakové
+součin $(y_c-y)y\rho g\Delta S$ je příspěvek k otáčivému momentu
+vzhledem k ose, procházející vodorovně působištěm tlakové
 síly. Součet všech těchto příspěvků se nuluje, tedy musí platit
 $$\iint_M (y_c-y)y\rho g\,\mathrm dx\mathrm dy=0.$$
 Odsud po vydělení konstantami $\rho g$ dostáváme

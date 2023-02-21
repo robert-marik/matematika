@@ -446,7 +446,7 @@ $$\vec q_2=A\vec q_1=A(A \vec q_0)=(AA)\vec q_0=A^2 \vec q_0.$$
 Po $k$ letech je rozložení populace dáno vektorem $$\vec q_k=A^k \vec q_0.$$
 Pokud pro některý vektor $\vec q$ platí $$\vec q=A\vec q$$ znamená to, že systém je
 ve stacionárním stavu a procentuální zastoupení stavů se
-nemění. Například v\ našem modelu to znamená, že stejný počet lidí
+nemění. Například v našem modelu to znamená, že stejný počet lidí
 přestěhovaných z města do vesnice je stejný, jako počet lidí
 přestěhovaných opačným směrem. Tento stacionární stav se dá najít opakovanými iteracemi z náhodného výchozího stavu. [Online výpočet.](https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNCIjjbQszTVMdAzMI7VAbINQGxL89hYTV6uCLgiAz0zoLBJrKZeSVFiXnFBfnGqBlBBcUZ-uYajXp5GSmZ6ZkmxrZEmTDACTTDC1lErggw5sGBGSW6OhpKenp5CYkmKAog2NDBQSEnMObrw8NrkDIXMktSixOTDa5VAOtLyixQyFTLzFIAOTU9V0AAq1bTi5VIAAqhFOOwzw-MWAnIAy25f0Q==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
@@ -565,10 +565,10 @@ zobrazí vektory $e_1=(1,0)$ a $e_2=(0,1)$ na
 $$\begin{pmatrix}  \cos\theta & -\sin \theta\\  \sin\theta & \cos\theta \end{pmatrix}\begin{pmatrix}  1\\0\end{pmatrix} = \begin{pmatrix}  \cos\theta \\  \sin\theta\end{pmatrix}$$
 a
 $$\begin{pmatrix}  \cos\theta & -\sin \theta\\  \sin\theta & \cos\theta \end{pmatrix}\begin{pmatrix}  0\\1\end{pmatrix} = \begin{pmatrix}  -\sin\theta \\  \cos\theta\end{pmatrix}.$$
-Proto matice $R_\theta$ definuje zobrazení, které pootočí rovinu o\ úhel
+Proto matice $R_\theta$ definuje zobrazení, které pootočí rovinu o úhel
 $\theta$ a nazývá se matice rotace. Matice malých rotací je (použitím
 lineární aproximace $\sin\theta\approx \theta$ a $\cos \theta\approx 1$
-v\ okolí nuly)
+v okolí nuly)
 $$R_{\theta,0}=\begin{pmatrix}  1 & - \theta\\  \theta & 1\end{pmatrix}.$$
 Tuto matici budeme potřebovat při studiu deformace při odvození matematického popisu malých deformací.
 
@@ -688,7 +688,7 @@ https://youtu.be/Toqwz-Oxg-4
 ```{prf:definition} Transponovaná matice.
 :nonumber:
   Buď $A=(a_{ij})\in\mathbb R^{m\times n}$ matice. Matice, která vznikne
-  záměnou řádků matice $A$ za sloupce se nazývá *matice     transponovaná k\ matici $A$*. Matici
+  záměnou řádků matice $A$ za sloupce se nazývá *matice     transponovaná k matici $A$*. Matici
   transponovanou označujeme symbolem $A^T$. Platí tedy
   $A^T\in\mathbb R^{n\times m}$ a
   $$     A^T=(a_{ji}), $$

@@ -27,12 +27,12 @@ jednotková matice   $$I= \begin{pmatrix}    1&0&0\\    0&1&0\\    0&0&1 \end{pm
 Buď $A\in\mathbb R^{n\times n}$ čtvercová matice řádu $n$. Jestliže
 existuje čtvercová matice $A^{-1}$ řádu $n$, splňující vztahy
 $$A^{-1}A=I=A A^{-1},$$
-nazýváme matici $A^{-1}$ *inverzní maticí k\ matici $A$*.
+nazýváme matici $A^{-1}$ *inverzní maticí k matici $A$*.
 ```
 
 
 **Poznámka.** Předchozí definice nezaručuje existenci inverzní
-matice. K\ některým čtvercovým maticím inverzní matice existuje, k\ některým ne. Později uvidíme, že existuje jednoduchá charakterizace
+matice. K některým čtvercovým maticím inverzní matice existuje, k některým ne. Později uvidíme, že existuje jednoduchá charakterizace
 matic, ke kterým inverzní matice existuje, pomocí determinantu matice.
 
 ```{prf:theorem} Inverze maticového součinu.
@@ -390,9 +390,9 @@ https://youtu.be/XMyzmN3cq-Q
    Buď $A\in\mathbb R^{n\times n}$ čtvercová matice řádu $n$.   *Determinant matice $A$* je reálné číslo ${\det A}$   přiřazené matici $A$ následujícím způsobem:
 
   * Je-li $A$ matice řádu $1$, tj. $A=(a_{11})$, je $\det A=a_{11}$.
-  * Máme-li definován determinant z\ matice řádu $(n-1)$ označme
+  * Máme-li definován determinant z matice řádu $(n-1)$ označme
     symbolem $M_{ij}$ determinant matice řádu $(n-1)$, která vznikne
-    z\ matice $A$ vynecháním $i$-tého řádku a $j$-tého sloupce.
+    z matice $A$ vynecháním $i$-tého řádku a $j$-tého sloupce.
     Definujme *algebraický doplněk* $A_{ij}$
     prvku $a_{ij}$ jako součin $A_{ij}=(-1)^{i+j}M_{ij}$.
   * Konečně, definujme determinant řádu $n$ následovně: zvolíme
@@ -409,13 +409,13 @@ ale učit se ji nebudeme. Není to totiž tak úplně potřeba. bude nám
 stačit naučit se několik málo speciálních případů.
 
 Determinant matice $A$ označujeme též $|A|$. Je-li
-$A=(a_{ij})$ píšeme zkráceně $|a_{ij}|$ místo $|(a_{ij})|$. K\ záměně
-s\ absolutní hodnotou může dojít jedině v\ případě, že matice $A$ je
-řádu jedna. V\ praxi se však obvykle s\ maticemi řádu jedna nepracuje.
+$A=(a_{ij})$ píšeme zkráceně $|a_{ij}|$ místo $|(a_{ij})|$. K záměně
+s absolutní hodnotou může dojít jedině v případě, že matice $A$ je
+řádu jedna. V praxi se však obvykle s maticemi řádu jedna nepracuje.
 
 ```{prf:definition} Regulární a  singulární matice.
 :nonumber:
-   Buď $A$ čtvercová matice. Je-li $\det A=0$, říkáme, že matice $A$ je *singulární*, v\ opačném případě říkáme, že je *regulární*.
+   Buď $A$ čtvercová matice. Je-li $\det A=0$, říkáme, že matice $A$ je *singulární*, v opačném případě říkáme, že je *regulární*.
 ```
 
 
