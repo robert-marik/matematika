@@ -84,7 +84,7 @@ fyzikální materiálovou konstantou. Ještě se musíme naučit měřit intenzi
 
 https://youtu.be/xUhAudBfGLo 
 
-```{prf:remark} Konstitutivní zákony.
+```{prf:remark} Konstitutivní zákony
 :nonumber:
  V aplikacích často formulujeme
 zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látku nebo materiál a udávají odezvu tohoto materiálu na externí stimul. Tyto zákony se nazývají *konstitutivní zákony* a formulujeme je pomocí gradientu a toku vektorového pole. Viz též [Wikipedie](https://en.wikipedia.org/wiki/Constitutive_equation).
@@ -336,13 +336,13 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 
 Výše uvedenými úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci.)
 
-```{prf:definition} Divergence.
+```{prf:definition} Divergence
 :nonumber:
  *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\nabla\cdot\vec F$ nebo $\mathop{\mathrm{div}} \vec F$.
 ```
 
 
-```{prf:theorem} Výpočet divergence.
+```{prf:theorem} Výpočet divergence
 :nonumber:
 
 Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\nabla\cdot\vec F=\mathop{\mathrm{div}}\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
@@ -350,7 +350,7 @@ Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze 
 ```
 
 
-```{prf:remark} Fyzikální interpretace divergence.
+```{prf:remark} Fyzikální interpretace divergence
 :nonumber:
  Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
 ```
@@ -358,7 +358,7 @@ Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze 
 
 Divergence je lokální veličina. Udává informaci o daném bodě. Pro měření však je nutné mít konečný objem a pro stanovení toku konečně velkou hranici. Vzájemný vztah mezi lokální veličinou a konečným objemem je založený na předpokladu, že podmínky se nemění skokem a okolí každého bodu jsou nepříliš odlišné od podmínek v okolních bodech.
 
-```{prf:remark} Fyzikální interpretace divergence v měřitelných pojmech.
+```{prf:remark} Fyzikální interpretace divergence v měřitelných pojmech
 :nonumber:
  Protože tok přes hranici umíme měřit u těles, představíme si okolo bodu který nás zajímá, těleso. Například kouli nebo krychli. Poté určíme tok přes hranici. Tok hranicí ven počítáme kladně a dovnitř záporně. Celkový tok hranicí určíme jako součet přes všechny části hranice. Podíl celkového toku přes hranici tělesa a objemu tohoto tělesa je odhad pro divergenci v daném bodě.
 ```
@@ -368,7 +368,7 @@ Přesnou divergenci získáme postupem uvedeným v předchozí poznámce, pokud 
 
 Pokud se daném místě množství veličiny nemění s časem, tj. žádná veličina se tam neakumuluje ani neubývá, mluvíme o stacionárním proudění a stacionárním poli. Situace se zjednoduší, protože potom divergence souvisí jenom s přítomností zdrojů a spotřebičů.
 
-```{prf:remark} Praktická interpretace divergence stacionárního pole.
+```{prf:remark} Praktická interpretace divergence stacionárního pole
 :nonumber:
  Pokud při ustáleném proudění je v některém místě divergence kladná, znamená to, že v tomto místě musí být zdroj této veličiny. Pokud je záporná, je v daném místě spotřebič. Pro pohodlí při popisu toku bereme spotřebiče jako záporné zdroje. Vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové pole**. To proto, že pokud toto pole popisuje ustálený tok, tak se jedná o tok v prostředí bez zdrojů a spotřebičů.
 ```
@@ -529,7 +529,7 @@ $$
       {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)},$$
 který se nazývá *difuzní rovnice*.
 
-```{prf:remark} Fyzikální interpretace rovnice difuzní rovnice.
+```{prf:remark} Fyzikální interpretace rovnice difuzní rovnice
 :nonumber:
 
 * Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se mění hustota stavové veličiny $u$. Je stejný jako v rovnici kontinuity.
@@ -562,7 +562,7 @@ teploty a tokem tepla zprostředkovává
 *Fourierův zákon*. Difuzní rovnice má v tomto případě tvar
 $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 
-```{prf:remark} Fyzikální interpretace rovnice vedení tepla.
+```{prf:remark} Fyzikální interpretace rovnice vedení tepla
 :nonumber:
 
 * Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)

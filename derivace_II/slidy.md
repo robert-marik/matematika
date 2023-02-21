@@ -34,7 +34,7 @@ vstupních datech na změnu funkční hodnoty funkce. Pokud změna ve
 vstupních datech není jednotková ale násobek jednotkové změny, je i
 odezva násobná.
 
-```{prf:remark} Derivace jako měřítko citlivosti funkce na změnu vstupních dat.
+```{prf:remark} Derivace jako měřítko citlivosti funkce na změnu vstupních dat
 :nonumber:
 
 Buď $f:\mathbb R\to\mathbb R$ funkce taková, že má derivaci. Pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$, tj. $$\Delta f\approx f'(x_0)\Delta x$$ neboli
@@ -68,7 +68,7 @@ h=18-20=-2\,\mathrm{cm}$$ a tomu odpovídá změna průhybu $$\Delta
 s=-\frac{3\times 80\,000}{(20)^4}(-2)=3\,\mathrm{cm}.$$ Průhyb se tedy
 zvětší o $3\,\mathrm{cm}$.
 
-```{prf:remark} Smysl předchozího příkladu.
+```{prf:remark} Smysl předchozího příkladu
 :nonumber:
  Proč nepočítáme přesně? Stačila by selská logika a změna
 funkce $s=\frac k{h^3}$ by byla
@@ -100,7 +100,7 @@ principem lineární aproximace, neuvěřitelně jednoduché a přitom velice
 mocné techniky používané inženýry k tomu, aby se popis problémů a
 řešení úloh vůbec daly efektivně zvládnout.
 
-```{prf:theorem} Lineární aproximace.
+```{prf:theorem} Lineární aproximace
 :nonumber:
 
 Buď $f:\mathbb R\to\mathbb R$ funkce, která má derivaci. V okolí bodu $x_0$ platí přibližný vzorec $$f(x)\approx f(x_0)+ f'(x_0)(x-x_0)$$ neboli
@@ -108,7 +108,7 @@ $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 ```
 
 
-```{prf:remark} Slovní interpretace vzorce pro lineární aproximaci.
+```{prf:remark} Slovní interpretace vzorce pro lineární aproximaci
 :nonumber:
  Výše uvedený vzorec není těžké rozšifrovat.
 
@@ -122,7 +122,7 @@ používali v minulé přednášce.
 ```
 
 
-```{prf:remark} Alternativní vzorec pro lineární aproximaci.
+```{prf:remark} Alternativní vzorec pro lineární aproximaci
 :nonumber:
  Vzorec pro lineární aproximaci se často píše v ekvivalentním tvaru
 $$f(x+h)\approx f(x)+f'(x)h,$$
@@ -231,7 +231,7 @@ derivace tečnu dokonce definovat. Z geometrického pohledu je tečna přímka
 bodem $[x_0,f(x_0)]$, která má směrnici $f'(x_0)$. Proto se o derivaci
 často mluví jako o směrnici tečny.
 
-```{prf:definition} Tečna.
+```{prf:definition} Tečna
 :nonumber:
  Nechť $f$ je funkce, která má v bodě $x_0$ derivaci $f(x_0)$. Přímka $$y=f(x_0)+f'(x_0)(x-x_0)$$ se nazývá *tečna ke grafu funkce* $f$ v bodě $x_0$.
 ```
@@ -273,7 +273,7 @@ případech.
 
 ### Derivace vyšších řádů
 
-```{prf:definition} Druhá a další vyšší derivace.
+```{prf:definition} Druhá a další vyšší derivace
 :nonumber:
 
 * *Druhou derivací* rozumíme derivaci derivace. Označujeme $f''(x)$ nebo $\frac{\mathrm d^2 f}{\mathrm dx^2}$. 
@@ -342,7 +342,7 @@ Někdy je vhodné mít moment $M(x)$ síly deformující nosník mít vyjádřen
 
 ### Taylorův polynom a polynomiální aproximace v 1D
 
-```{prf:definition} Taylorův polynom.
+```{prf:definition} Taylorův polynom
 :nonumber:
 
 *Taylorův polynom* stupně $n$ pro funkci $f$ v bodě $x_0$ je polynom 
@@ -363,7 +363,7 @@ vyjádřen člen, který je pro $x$ blízká k $x_0$ v absolutní hodnotě
 menší než násobek funkce $(x-x_0)^{n+1}$, tj. v bodě $x_0$ konverguje k nule
 stejně rychle nebo rychleji jako mocninná funkce s exponentem $n+1$.
 
-```{prf:theorem} Taylorova aproximace v okolí nuly.
+```{prf:theorem} Taylorova aproximace v okolí nuly
 :nonumber:
 
 Platí
@@ -485,7 +485,7 @@ funkci $f$ a hodnotu $y_0$ rovnici $$f(x)=y_0.$$ Řešení této rovnice,
 pokud existuje, nemusí být určeno jednoznačně. Pro funkce, pro které
 je určeno jednoznačně, zavádíme následující pojem.
 
-```{prf:definition} Prostá funkce.
+```{prf:definition} Prostá funkce
 :nonumber:
 
   Nechť $f$ je funkce a $M\subseteq \mathrm{Dom}(f)$ podmnožina definičního oboru funkce $f$.   Řekneme, že funkce $f$ je *prostá*,
@@ -496,7 +496,7 @@ je určeno jednoznačně, zavádíme následující pojem.
 ```
 
 
-```{prf:theorem} Rovnice s prostou funkcí.
+```{prf:theorem} Rovnice s prostou funkcí
 :nonumber:
  Pokud je $f$ prostá funkce a platí $$f(x)=f(a),$$ potom platí $x=a.$
 ```
@@ -514,13 +514,13 @@ Inverzní úloha je tak trošku jako reverzní inženýrství. Máme výsledek
 a potřebujeme znát vstupní data. U funkcí to je supersnadné, u
 konstrukcí supersložité. Užitečné je ale obojí.
 
-```{prf:definition} Inverzní funkce.
+```{prf:definition} Inverzní funkce
 :nonumber:
    Nechť funkce $f: A\to B$ je prostá. Pravidlo, které každému $x$   z množiny $f(A)$ přiřadí to (jediné) $y$, pro které platí $f(y)=x$ se nazývá *inverzní funkce* k funkci $f$, označujeme   $f^{-1}$.
 ```
 
 
-```{prf:remark} Inverzní funkce pří řešení rovnic.
+```{prf:remark} Inverzní funkce pří řešení rovnic
 :nonumber:
  Jinak zapsáno, je-li $$f(y)=x$$ a $f$ má inverzní funkci, platí
 $$y=f^{-1}(x).$$ Jedná se o zobecnění pouček jak "převádět výrazy na druhou stranu rovnice".
@@ -591,7 +591,7 @@ mnoho výpočtů a rychlost konvergence je zásadní.
 
 <div class="shorten" data-text="Někdy je možné použít místo Newtonova iteračního vzorce i jednodušší iterace, které například nemusí tak rychle konvergovat, ale zase není nutné znát derivace funkce.">
 
-```{prf:remark} Ad hoc iterace.
+```{prf:remark} Ad hoc iterace
 :nonumber:
 
 Newtonovu metodu je možné chápat také tak, že rovnici $$f(x)=0$$ přepíšeme do ekvivalentního tvaru 

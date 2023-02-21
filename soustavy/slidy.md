@@ -25,7 +25,7 @@ kombinaci a jednou matice a maticový součin!
 
 ## Soustava lineárních rovnic
 
-```{prf:definition} Soustava lineárních rovnic.
+```{prf:definition} Soustava lineárních rovnic
 :nonumber:
  *Soustavou $m$ lineárních rovnic  o $n$ neznámých* nazýváme soustavu rovnic 
  
@@ -35,7 +35,7 @@ kombinaci a jednou matice a maticový součin!
 ```
 
 
-```{prf:definition} Matice soustavy.
+```{prf:definition} Matice soustavy
 :nonumber:
  Matici 
   $$
@@ -240,7 +240,7 @@ složitější objekty nějakým způsobem charakterizovat pomocí objektů
 jednodušších, např. pomocí čísel. Jedno už známe, determinant. Dalším 
 z těchto čísel je hodnost matice, kterou si nadefinujeme nyní.
 
-```{prf:definition} Hodnost matice.
+```{prf:definition} Hodnost matice
 :nonumber:
 
   Buď $A$ matice. *Hodností matice* rozumíme
@@ -255,7 +255,7 @@ Schodovitý tvar jsme si představili u determinantu. U matice ve
 schodovitém tvaru je určení determinantu velmi jednoduché. Podobný
 efekt vidíme i u hodnosti.
 
-```{prf:definition} Schodovitý tvar.
+```{prf:definition} Schodovitý tvar
 :nonumber:
 
   Řekneme, že matice $A$ je ve *schodovitém tvaru*, jestliže
@@ -265,7 +265,7 @@ efekt vidíme i u hodnosti.
 ```
 
 
-```{prf:theorem} Hodnost matice ve schodovitém tvaru.
+```{prf:theorem} Hodnost matice ve schodovitém tvaru
 :nonumber:
 
    Hodnost matice, která je ve schodovitém
@@ -279,7 +279,7 @@ efekt vidíme i u hodnosti.
 
 Výpočet hodnosti se provádí postupným nahrazením zadané matice maticí, která má stejnou hodnost, ale postupně se přibližuje schodovitému tvaru. Uvedeme si jenom základní postup. Tento se sice dá vylepšit, pro nás je však důležité, že i bez jakýchkoliv vylepšení vždy vede k cíli. (Alespoň teoreticky.)
 
-```{prf:theorem} Řádkové operace zachovávající hodnost matice.
+```{prf:theorem} Řádkové operace zachovávající hodnost matice
 :nonumber:
 
 Následující operace nemění hodnost matice:
@@ -312,13 +312,13 @@ matici inverzní nemá smysl uvažovat, nám dávají informaci dvě
 následující věty.  První se týká existence řešení a druhá identifikuje
 případ, kdy řešení je určeno jednoznačně.
 
-```{prf:theorem} Frobeniova věta, Kronecker-Capelliho věta.
+```{prf:theorem} Frobeniova věta, Kronecker-Capelliho věta
 :nonumber:
  Soustava lineárních rovnic je řešitelná právě tehdy, když její matice soustavy a rozšířená matice soustavy mají stejnou hodnost.
 ```
 
 
-```{prf:theorem} Jednoznačnost řešení.
+```{prf:theorem} Jednoznačnost řešení
 :nonumber:
  Nechť soustava lineárních rovnic má řešení. Toto řešení je právě jedno, pokud je společná hodnost matice soustavy a rozšířené matice soustavy rovna počtu neznámých. V opačném případě je společná hodnost matice a rozšířené matice soustavy menší než počet neznámých. 
 ```

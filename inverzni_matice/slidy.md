@@ -21,7 +21,7 @@ matice. Připomeňme ještě, že roli neutrálního prvku při násobení matic
 hraje jednotková matice. Například pro matice $3\times 3$ je
 jednotková matice   $$I= \begin{pmatrix}    1&0&0\\    0&1&0\\    0&0&1 \end{pmatrix}.$$
 
-```{prf:definition} Inverzní matice.
+```{prf:definition} Inverzní matice
 :nonumber:
 
 Buď $A\in\mathbb R^{n\times n}$ čtvercová matice řádu $n$. Jestliže
@@ -35,7 +35,7 @@ nazýváme matici $A^{-1}$ *inverzní maticí k matici $A$*.
 matice. K některým čtvercovým maticím inverzní matice existuje, k některým ne. Později uvidíme, že existuje jednoduchá charakterizace
 matic, ke kterým inverzní matice existuje, pomocí determinantu matice.
 
-```{prf:theorem} Inverze maticového součinu.
+```{prf:theorem} Inverze maticového součinu
 :nonumber:
 
 Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních matic, ale v opačném pořadí, tj. $$(AB)^{-1}=B^{-1}A^{-1}.$$
@@ -67,7 +67,7 @@ tj. že inverzní a transponovaná matice jsou v případě matice rotace stejn�
 
 ### Ortogonální matice
 
-```{prf:definition} Ortogonální matice.
+```{prf:definition} Ortogonální matice
 :nonumber:
  *Ortogonální matice* je matice, jejíž transponovaná matice je současně maticí inverzní.
 ```
@@ -321,14 +321,14 @@ pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
 
 ## Transformace symetrické matice na diagonální tvar
 
-```{prf:theorem} Vlastní čísla symetrické matice.
+```{prf:theorem} Vlastní čísla symetrické matice
 :nonumber:
 
 Symetrická čtvercová matice $A$  řádu $n$ má $n$ reálných vlastních čísel (počítáno i s případnou násobností).
 ```
 
 
-```{prf:theorem} Diagonalizace symetrické matice.
+```{prf:theorem} Diagonalizace symetrické matice
 :nonumber:
 
 Nechť má symetrická čtvercová matice $A$ řádu $n$ celkem $n$ reálných různých vlastních čísel $\lambda_i$. Označme odpovídající vlastní vektory jednotkové délky $\vec v_i$.
@@ -339,7 +339,7 @@ Nechť má symetrická čtvercová matice $A$ řádu $n$ celkem $n$ reálných r
 ```
 
 
-```{prf:remark} Diagonální tvar materiálových vlastností dřeva.
+```{prf:remark} Diagonální tvar materiálových vlastností dřeva
 :nonumber:
  Typickým ortotropním materiálem je dřevo. Pokud transformujeme tenzor difuzní matice pro dřevo na diagonální tvar, jsou diagonální prvky v poměru přibližně $D_L:D_R:D_T=35:3:2$ (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 65). Ortotropní charakter má však nejenom transport tekutin, ale i sesychání a bobtnání. V tomto případě však naopak v podélném směru dřevo bobtná nejméně a tenzor popisující bobtnání má po transformaci na diagonální tvar v diagonále prvky v poměru přibližně $\alpha_T:\alpha_R:\alpha_L=20:10:1$ (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 38).
 ```
@@ -385,7 +385,7 @@ Transformace tenzorů je užitečná a důležitá činnosti. Bohužel však vzo
 
 https://youtu.be/XMyzmN3cq-Q
 
-```{prf:definition} Ddeterminant.
+```{prf:definition} Ddeterminant
 :nonumber:
    Buď $A\in\mathbb R^{n\times n}$ čtvercová matice řádu $n$.   *Determinant matice $A$* je reálné číslo ${\det A}$   přiřazené matici $A$ následujícím způsobem:
 
@@ -413,7 +413,7 @@ $A=(a_{ij})$ píšeme zkráceně $|a_{ij}|$ místo $|(a_{ij})|$. K záměně
 s absolutní hodnotou může dojít jedině v případě, že matice $A$ je
 řádu jedna. V praxi se však obvykle s maticemi řádu jedna nepracuje.
 
-```{prf:definition} Regulární a  singulární matice.
+```{prf:definition} Regulární a  singulární matice
 :nonumber:
    Buď $A$ čtvercová matice. Je-li $\det A=0$, říkáme, že matice $A$ je *singulární*, v opačném případě říkáme, že je *regulární*.
 ```
@@ -444,7 +444,7 @@ diagonály a dvou šikmých řad pod ní se odečítají.
 
 ## Determinant matice ve schodovitém tvaru
 
-```{prf:definition} Schodovitý tvar.
+```{prf:definition} Schodovitý tvar
 :nonumber:
  
   Řekneme, že matice $A$ je ve *schodovitém tvaru*, jestliže
@@ -458,7 +458,7 @@ diagonály a dvou šikmých řad pod ní se odečítají.
 $$\begin{pmatrix}  4& 7 &0\\  0 & -2 & 1\\  0& 0& 5\end{pmatrix}$$
 je ve schodovitém tvaru.
 
-```{prf:theorem} Determinant matice ve schodovitém tvaru.
+```{prf:theorem} Determinant matice ve schodovitém tvaru
 :nonumber:
  
    Determinant matice, která je ve  schodovitém tvaru je
@@ -476,7 +476,7 @@ $$\begin{vmatrix}  4& 7 &0\\  0 & -2 & 1\\  0& 0& 5\end{vmatrix}=4\cdot (-2)\cdo
 
 Pojmy lineární algebry spolu krásně souvisí. 
 
-```{prf:theorem} Řešitelnost soustavy souvisí s determinantem a inverzní maticí. 
+```{prf:theorem} Řešitelnost soustavy souvisí s determinantem a inverzní maticí 
 :nonumber:
 Buď $A$ čtvercová matice řádu $n$. Následující výroky jsou ekvivalentní:
 
@@ -497,7 +497,7 @@ $(A-\lambda I)$, nulovou pravou stranou a nenulovým řešením $\vec q$
 $A-\lambda I$ nulový (tj. bod 2 předchozí věty neplatí). Tím je
 motivována následující definice a dokázána následující věta.
 
-```{prf:definition} Charakteristická rovnice, charakteristický polynom.
+```{prf:definition} Charakteristická rovnice, charakteristický polynom
 :nonumber:
  Rovnice
 $$\det (A-\lambda I)=0$$ s neznámou $\lambda$ se nazývá
@@ -505,7 +505,7 @@ $$\det (A-\lambda I)=0$$ s neznámou $\lambda$ se nazývá
 ```
 
 
-```{prf:corollary} Vlastní čísla.
+```{prf:corollary} Vlastní čísla
 :nonumber:
  Vlastní čísla matice $A$ jsou právě řešení charakteristické rovnice. Vlastní vektor $\vec u$ příslušný vlastnímu číslu $\lambda$ je nenulové řešení homogenní soustavy rovnic $$(A-\lambda I)\vec u=0.$$
 ```

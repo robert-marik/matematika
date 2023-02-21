@@ -113,7 +113,7 @@ je rovnice křivky?
 * Je známa rychlost, s jakou se mění veličina $f$. Jaká je rovnice
 udávající závislost veličiny $f$ na čase?
 
-```{prf:definition} Neurčitý integrál.
+```{prf:definition} Neurčitý integrál
 :nonumber:
  Řekneme, že funkce $F$ je *primitivní funkcí* k funkci $f$ na intervalu $I$, jestliže platí $$F'(x)=f(x)$$ na intervalu $I$. Množina všech primitivních funkcí k funkci $f$ se nazývá *neurčitý integrál* funkce $f$ a značí $$\int f(x)\,\mathrm dx.$$
 ```
@@ -122,7 +122,7 @@ udávající závislost veličiny $f$ na čase?
 Otázkou existence primitivní funkce se budeme zabývat na další
 přednášce. Otázku (ne-)jednoznačnosti řeší následující věta.
 
-```{prf:theorem} Jednoznačnost primitivní funkce.
+```{prf:theorem} Jednoznačnost primitivní funkce
 :nonumber:
  Primitivní funkce je dána jednoznačně, až na aditivní konstantu.
 
@@ -154,7 +154,7 @@ $$     F(x)=G(x)+c $$ na $I$.
 
 </div>
 
-```{prf:theorem} Linearita neurčitého integrálu.
+```{prf:theorem} Linearita neurčitého integrálu
 :nonumber:
 Neurčitý integrál zachovává součet a násobení konstantou. Tedy pro libovolné funkce $f$, $g$ a libovolnou konstantu $c$ platí $$
 \begin{aligned}
@@ -217,7 +217,7 @@ t}\right)\,{}^\circ \mathrm C.$$
 
 **Poznámka (vlhkost dřeva elektrickou metodou).** Podobný výpočet se využívá u měření elektrického odporu dřeva pro stanovení vlhkosti. Protože elektrický odpor dřeva je velký, není vhodné pro určení elektrického odporu použít Ohmův zákon a změřený proud a napětí. Jedna z možností je měření času nutného k nabití nebo vybití kondenzátoru přes odpor. V případě nabíjení proud exponenciálně klesá (zdůvodníme později v přednášce věnované diferenciálním rovnicím) a proto (díky elektrickým vlastnostem kondenzátoru) exponenciálně klesá i rychlost, s jakou roste napětí na kondenzátoru. Toto napětí je nutné pro výpočet odporu. Pokud známe rychlost, s jakou se napětí mění, určíme napětí integrováním a znalostí napětí na začátku nabíjení.
 
-```{prf:remark} Veličina vypočtená z rychlosti své změny.
+```{prf:remark} Veličina vypočtená z rychlosti své změny
 :nonumber:
  Pokud se veličina $f(t)$ mění v čase rychlostí $r(t)$, platí $$f(t)=\int r(t)\,\mathrm dt,$$ přičemž pravá strana je dána jednoznačně až na aditivní konstantu. To koresponduje s pozorováním, že rychlost změn k jednoznačné identifikaci časového průběhu měnící se veličiny nestačí. Je potřeba mít zadán ještě výchozí stav.
 ```
@@ -240,7 +240,7 @@ Představíme si mírnou modifikaci neurčitého integrálu. Rychlost změny
 nebudeme používat k hledání předpisu funkce, ale budeme hledat změnu
 funkce na zadaném intervalu.
 
-```{prf:definition} Newtonův určitý integrál.
+```{prf:definition} Newtonův určitý integrál
 :nonumber:
  Buď $f$ funkce a $F$ její
 primitivní funkce na intervalu $I$. Buď $[a,b]\subset I$ podinterval v
@@ -255,7 +255,7 @@ $[a,b]$, označujeme také $[F(x)]_a^b$. Tento zápis se často používá
 jako mezivýpočet při výpočtu určitého integrálu.
 $$\int_0^1 x^2 \,\mathrm dx=\left[\frac 13 x^3\right]_0^1=\frac 13 (1)^3 -\frac 13 (0)^3=\frac 13$$
 
-```{prf:theorem} Linearita určitého integrálu.
+```{prf:theorem} Linearita určitého integrálu
 :nonumber:
  Určitý integrál zachovává
 součet a násobení konstantou. Tedy pro libovolné funkce $f$, $g$ a
@@ -270,7 +270,7 @@ $$
 
 Snadným důsledkem definice určitého integrálu je následující věta.
 
-```{prf:theorem} Záměna mezí a rovnost mezí v určitém integrálu.
+```{prf:theorem} Záměna mezí a rovnost mezí v určitém integrálu
 :nonumber:
  Platí $$
 \begin{aligned}
@@ -314,7 +314,7 @@ Integrování určitým integrálem si také můžete procvičit v následujíc�
 
 \fi
 
-```{prf:remark} Změna veličiny vypočtená pomocí rychlosti.
+```{prf:remark} Změna veličiny vypočtená pomocí rychlosti
 :nonumber:
  Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
 ```
@@ -372,7 +372,7 @@ Pokud sledujeme prostup tepla izolací, jejíž teplotní vodivost se mění s t
 
 </div>
 
-```{prf:remark} Změna veličiny vypočtená pomocí gradientu.
+```{prf:remark} Změna veličiny vypočtená pomocí gradientu
 :nonumber:
  Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
 ```

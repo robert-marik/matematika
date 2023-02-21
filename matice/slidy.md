@@ -25,7 +25,7 @@ skalární funkce. Aby se s vektory dalo rozumně pracovat, musí tvořit
 vhodnou strukturu. Například operace musí mít neutrální prvek a
 každý vektor musí mít opačný prvek.
 
-```{prf:definition} Vektory, vektorový prostor.
+```{prf:definition} Vektory, vektorový prostor
 :nonumber:
 
 Množinu $V$ uspořádaných $n$-tic  $(a_1, a_2,\dots, a_n)$ s operacemi sčítání a násobení reálným číslem
@@ -98,7 +98,7 @@ Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/P
 
 ### Lineární kombinace
 
-```{prf:definition} Lineární kombinace.
+```{prf:definition} Lineární kombinace
 :nonumber:
 
 Nechť $\vec u_1$, $\vec u_2$, $\dots$ $\vec u_k$ je
@@ -230,7 +230,7 @@ rozlišení toho, zda se nulový vektor dá nebo nedá vyjádřit jako
 netriviální lineární kombinace zavedeme nové pojmy, lineární závislost
 a nezávislost.
 
-```{prf:definition} Lineární závislost a nezávislost.
+```{prf:definition} Lineární závislost a nezávislost
 :nonumber:
 
 Řekneme, že vektory $\vec u_1$, $\vec u_2$, $\dots$, $\vec u_k$ jsou
@@ -295,7 +295,7 @@ https://youtu.be/DY044M_RbVs
 
 ### Matice a jejich lineární kombinace
 
-```{prf:definition} Matice.
+```{prf:definition} Matice
 :nonumber:
  *Maticí řádu $m\times n$*  rozumíme schema $$ A= \begin{pmatrix} a_{11}& a_{12}& a_{13}& \cdots{}& a_{1n}\\a_{21}& a_{22}& a_{23}& \cdots{}& a_{2n}\\\vdots{}& \vdots{}& {}& \ddots{}& \vdots{}\\a_{m1}& a_{m2}& \cdots{}& \cdots{}& a_{mn} \end{pmatrix}$$kde $a_{ij}$ pro $i=1..m$ a $j=1..n$ jsou reálná čísla nebo funkce. Množinuvšech matic řádu $m\times n$, jejichž prvky jsou reálná čísla, označujeme symbolem $\mathbb R^{m\times n}$.Zkráceně zapisujeme též ${A=(a_{ij})}$.
 >
@@ -322,7 +322,7 @@ vektorů provedeme zavedením maticového součinu.
 
 ### Maticový součin
 
-```{prf:definition} Součin matic.
+```{prf:definition} Součin matic
 :nonumber:
 
   Buďte $A=(a_{ij})$ matice řádu $m\times n$ a $B=(b_{ij})$ matice
@@ -592,7 +592,7 @@ Výše popsané chování pozorujeme i u proudění podzemní vody, kde hnací s
 
 **Matematický prostředek, který umožňuje snadno vektoru změnit velikost nebo i směr je právě tenzor (matice) a maticový součin.**
 
-```{prf:remark} Tenzor.
+```{prf:remark} Tenzor
 :nonumber:
  Pod pojmem *tenzor* si můžeme představit veličinu, která figuruje v nějakém fyzikálním zákoně spojujícím dvě vektorové veličiny (podnět a odezvu na podnět) a násobení tenzorem definuje vztah mezi nimi. Pokud jsou podnětem a odezvou vektory, které mají stejný směr, stačí toto násobení provést pomocí skalární veličiny. Pokud však směr vektoru udávajícího odezvu není stejný jako směr vektoru udávajícího podnět, je nutné použít postup, který si s jiným směrem vektoru na vstupu a na výstupu poradí. A tímto postupem je právě maticový součin. Zatímco tedy například tok tepla v izotropních materiálech můžeme studovat pomocí skalárních materiálových charakteristik, tok tepla v anizotropních materiálech už musíme popisovat pomocí tenzorových materiálových charakteristik. Proto například u vedení tepla ve dřevě udáváme součinitele vedení tepla $\lambda_L$, $\lambda_R$ a $\lambda_T$ pro každý anatomický směr samostatně a z těchto veličin poté sestavujeme tenzor tepelné vodivosti $$\begin{pmatrix}\lambda_L &0&0 \cr 0&\lambda_R&0\cr 0&0&\lambda_T\end{pmatrix}.$$ 
 ```
@@ -604,7 +604,7 @@ https://youtu.be/-vYq_TzC6jo
 
 U zobrazování vektorů pomocí maticového násobení nás velice zajímá, které směry se zachovávají, tj. kdy bude obrazem vektoru jeho násobek.
 
-```{prf:definition} Vlastní vektor a vlastní hodnota matice.
+```{prf:definition} Vlastní vektor a vlastní hodnota matice
 :nonumber:
  Řekneme, že nenulový vektor $\vec u$ je *vlastním vektorem* matice $A$ příslušným *vlastní hodnotě* $\lambda$, jestliže platí $$A \vec u=\lambda \vec u.$$
 ```
@@ -614,7 +614,7 @@ Vlastní čísla se nazývají též vlastní hodnoty matice. Každý nenulový
 vlastní násobek vlastního vektoru je vlastní vektor příslušný téže
 vlastní hodnotě.
 
-```{prf:remark} Vlastní vektory a materiálové inženýrství.
+```{prf:remark} Vlastní vektory a materiálové inženýrství
 :nonumber:
  Vlastní vektory jsou nesmírně důležité, protože definují směry, podél nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to, jak se působení vnější síly na těleso projeví na deformaci tohoto tělesa nebo jak se gradient teploty nebo vlhkosti projeví na proudění tepla či vody ve dřevě, půdě nebo jiném materiálu. Často se v aplikacích maticové zobrazení objevuje v *konstitučních vztazích*, vztazích mezi podnětem a materiálovou odezvou. Vlastní směry jsou tedy směry, ve kterých má odezva stejný směr jako podnět.  
 >
@@ -685,7 +685,7 @@ matice vlastní vektory vždy existují. Co se přesně myslí pod pojmem
 
 https://youtu.be/Toqwz-Oxg-4
 
-```{prf:definition} Transponovaná matice.
+```{prf:definition} Transponovaná matice
 :nonumber:
   Buď $A=(a_{ij})\in\mathbb R^{m\times n}$ matice. Matice, která vznikne
   záměnou řádků matice $A$ za sloupce se nazývá *matice     transponovaná k matici $A$*. Matici
@@ -717,7 +717,7 @@ má tento rozklad ve tvaru
 $$A=\begin{pmatrix}  -4 & 3 \\ 3 & 2\end{pmatrix}+\begin{pmatrix}  0 & 4 \\ -4 & 0\end{pmatrix}.$$
 Tento trik použijeme pro odvození tvaru tenzoru malých deformací, ze zobrazení takto totiž dokážeme odfiltrovat část související s pootočením a část, která s pootočením nesouvisí. Ta druhá nás zajímá, protože popisuje deformaci.
 
-```{prf:theorem} Souvislost transponování matice a maticového součinu.
+```{prf:theorem} Souvislost transponování matice a maticového součinu
 :nonumber:
  Pro čtvercové matice platí $$(AB)^T=B^T A^T.$$
 ```
@@ -870,7 +870,7 @@ později například naučíme chytře využít toho, že každý řádek má v
 hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 řádku.
 
-```{prf:remark} Iterační metoda.
+```{prf:remark} Iterační metoda
 :nonumber:
  Soustavu {eq}`s1` je možno vyřešit iterační metodou. Je možno postupovat intuitivně. Vyjdeme z libovolného odhadu řešení a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jacobiho metoda).
 ```

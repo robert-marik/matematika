@@ -87,7 +87,7 @@ zřejmá fakta.
 Je však důležité vědět, že tyto myšlenky platí pro libovolné
 integrovatelné funkce a proto zformulujeme následující věty.
 
-```{prf:theorem} Monotonie vzhledem k funkci.
+```{prf:theorem} Monotonie vzhledem k funkci
 :nonumber:
  Je-li $f(x)\geq g(x)$ na
   intervalu $[a,b]$, platí $$\int_a^b f(x)\,\mathrm dx\geq \int_a^b
@@ -97,7 +97,7 @@ integrovatelné funkce a proto zformulujeme následující věty.
 
 > Důsledek. Integrál nezáporné funkce je nezáporný. Přesněji, je-li $a<b$ a $f(x)\geq 0$ na $[a,b]$, platí $$\int _a^b f(x)\,\mathrm dx \geq 0.$$
 
-```{prf:theorem} Aditivita vzhledem k integračnímu oboru.
+```{prf:theorem} Aditivita vzhledem k integračnímu oboru
 :nonumber:
 
 Platí $$\int_a^b f(x)\,\mathrm dx= \int_a^c f(x)\,\mathrm dx + \int_c^b f(x)\,\mathrm dx.$$
@@ -140,7 +140,7 @@ zadaném intervalu.
 Definice střední hodnoty je snadným důsledkem toho, že hledáme hodnotu
 $\mu$ s vlastností $$\int_a^b f(x)\,\mathrm dx=\int_a^b \mu\,\mathrm dx=\mu \int_a^b \mathrm dx=\mu(b-a).$$
 
-```{prf:definition} Střední hodnota.
+```{prf:definition} Střední hodnota
 :nonumber:
  Nechť $f$ je funkce definovaná a
   integrovatelná na uzavřeném intervalu $[a,b]$. Číslo $\mu$
@@ -163,7 +163,7 @@ výšce $b-a$. Tedy $$\int_a^b f(x)\,\mathrm dx=(b-a)\frac{f(a)+f(b)}2$$
 a střední hodnota lineární funkce je tedy průměrem hodnoty na začátku
 a na konci intervalu.
 
-```{prf:remark} Střední hodnota materiálové konstanty.
+```{prf:remark} Střední hodnota materiálové konstanty
 :nonumber:
  Tepelná vodivost materiálu podobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce $k(T)$, je střední hodnota tepelné vodivosti v tepelném rozsahu od $T_1$ do $T_2$ dána vztahem (viz Cengel, Ghajar: Heat and Mass Transfer) $$k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT$$ V praxi nemáme analytický předpis pro funkci $k(T)$, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.
 ```
@@ -274,7 +274,7 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 </div>
 
-```{prf:remark} Práce konaná silou proměnné velikosti.
+```{prf:remark} Práce konaná silou proměnné velikosti
 :nonumber:
  Práce vykonaná silou $F(x)$ při přemístění tělesa z polohy $x=a$ do polohy $x=b$ je $$W=\int_a^b F(x)\,\mathrm dx.$$ Jako speciální případ dostáváme pro konstantní sélu $F$ středoškolský vzorec $$W=Fs,$$ kde $s=b-a$ je posunutí.
 ```
@@ -410,7 +410,7 @@ Odhadneme celkovou vykonanou práci.
   se hodnoty funkce v dolní a horní mezi objeví jednou a ostatní
   dvakrát. To v obecném případě vede k následujícímu vzorci.
 
-```{prf:theorem} Lichoběžníkové pravidlo.
+```{prf:theorem} Lichoběžníkové pravidlo
 :nonumber:
  Nechť je funkce $f$  spojitá na
   intervalu $[a,b]$. Rozdělme interval $[a,b]$ na $n$ intervalů
@@ -425,7 +425,7 @@ Odhadneme celkovou vykonanou práci.
 ```
 
 
-```{prf:remark} Slovní interpretace lichoběžníkového pravidla.
+```{prf:remark} Slovní interpretace lichoběžníkového pravidla
 :nonumber:
  Pokud ve vzorci pro lichoběžníkové pravidlo dosadíme za hodnotu $h$ odpovídající délku intervalu $\frac{ b-a}n$ a přeuspořádáme členy, dostaneme   $$ \int_a^bf(x)\,\mathrm dx\approx (b-a)\frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n} $$  a $$ \frac 1{b-a}\int_a^bf(x)\,\mathrm dx\approx \frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n}. $$ Toto je odhad pro veličinu, kterou jsme výše nazvali střední hodnotou. Lichoběžníkové pravidlo je tedy možné chápat tak, že vezmeme funkční hodnoty v pravidelných intervalech a vypočteme vážený průměr těchto hodnot, kdy všechny funkční hodnoty ve vnitřních bodech se berou s dvojnásobnou vahou než funkční hodnoty v krajních bodech. To je odhad střední hodnoty, který stačí vynásobit délkou intervalu a dostaneme odhad integrálu.
 ```
@@ -451,7 +451,7 @@ je
 $$uv'=(uv)'-u'v.$$
 Integrací tohoto vztahu dostáváme následující tvrzení.
 
-```{prf:theorem} Metoda per partés pro neurčitý a určitý integrál.
+```{prf:theorem} Metoda per partés pro neurčitý a určitý integrál
 :nonumber:
  Nechť $u$ a
 $v$ jsou funkce proměnné $x$, mající spojité derivace $u'$ a
@@ -500,7 +500,7 @@ dále $v(x)=t$, platí $$u(v(x))=u(t)=\int f(t)\,\mathrm dt.$$ Přeznačme
 ještě $v(x)$ na $\varphi(x)$. Potom má {eq}`1` po záměně levé a pravé
 strany tvar uvedený v následující větě.
 
-```{prf:theorem} Substituční metoda pro neurčitý integrál.
+```{prf:theorem} Substituční metoda pro neurčitý integrál
 :nonumber:
  Platí
  
@@ -538,7 +538,7 @@ v jiných jednotkách) se s integrovanou funkcí se mění i meze. Obecný
 vzorec pro integrování určitého integrálu substituční metodou je v
 následující větě.
 
-```{prf:theorem} Substituční metoda pro určitý integrál.
+```{prf:theorem} Substituční metoda pro určitý integrál
 :nonumber:
  Platí $$\int_a^b f(\varphi (x))\varphi'(x)\,\mathrm dx=\int_{\varphi
   (a)}^{\varphi(b)} f(t)\,\mathrm dt.$$
@@ -560,7 +560,7 @@ Integrál může být součástí definice funkce. Tím se můžeme dostat mimo
 množinu elementárních funkcí a značně tak rozšířit třídu funkcí, se
 kterými umíme pracovat.
 
-```{prf:theorem} Integrál jako funkce horní meze.
+```{prf:theorem} Integrál jako funkce horní meze
 :nonumber:
  Buď $f$ spojitá funkce na intervalu $I$ a $a\in I$. Funkce
 $F(x)$ definovaná vztahem
@@ -580,7 +580,7 @@ Věta o integrálu jako funkci horní meze dokonce udává tvar primitivní
 funkce pro libovolnou spojitou funkci. Tím dostáváme okamžitě
 následující tvrzení.
 
-```{prf:corollary} Postačující podmínka existence primitivní funkce.
+```{prf:corollary} Postačující podmínka existence primitivní funkce
 :nonumber:
 
   Ke každé  spojité funkci existuje neurčitý integrál. 

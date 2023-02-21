@@ -125,14 +125,14 @@ veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
 funkcí, nebo integračních oborů) a s násobení integrované funkce
 konstantou. Přesněji, platí následující věty.
 
-```{prf:theorem} Linearita dvojného integrálu.
+```{prf:theorem} Linearita dvojného integrálu
 :nonumber:
    Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí
 \dm$$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
 ```
 
 
-```{prf:theorem} Aditivita vzhledem k oboru integrace.
+```{prf:theorem} Aditivita vzhledem k oboru integrace
 :nonumber:
   Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
 ```
@@ -153,7 +153,7 @@ můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
 věty udávají, jak je možno dvojný integrál přepsat jako dvojnásobný
 integrál. Mají název **Fubiniovy věty**.
 
-```{prf:theorem} Fubiniova věta.
+```{prf:theorem} Fubiniova věta
 :nonumber:
  Nechť $f$ je funkce spojitá v uzavřené oblasti
 $$  
@@ -175,7 +175,7 @@ $$
 
 </div>
 
-```{prf:theorem} Fubiniova věta pro jiné pořadí integrace.
+```{prf:theorem} Fubiniova věta pro jiné pořadí integrace
 :nonumber:
  Nechť $f$ je funkce spojitá v uzavřené oblasti
 $$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
@@ -237,7 +237,7 @@ Výše uvedené problémy se stanovením a případným přepočítáváním mez
 při záměně pořadí integrace se nevyskytují při integrování přes
 obdélníkovou oblast.
 
-```{prf:theorem} Fubiniova věta na obdélníku.
+```{prf:theorem} Fubiniova věta na obdélníku
 :nonumber:
  Nechť $R=[a,b]\times[c,d]$ je uzavřený obdélník v $\mathbb{R}^2$ a
 $f$ funkce definovaná a spojitá na $R$. Pak platí

@@ -30,7 +30,7 @@ Na řadu použití stačí intuitivní chápání funkce i jejích vlastností. 
 
 ## Funkce jedné proměnné
 
-```{prf:definition} Funkce jedné proměnné.
+```{prf:definition} Funkce jedné proměnné
 :nonumber:
 Buďte $A$ a $B$ neprázdné podmnožiny množiny reálných čísel.  Pravidlo
 $f$, které každému prvku množiny $A$ přiřadí jediný prvek množiny $B$
@@ -41,7 +41,7 @@ prvku* $a$ při zobrazení $f$, resp. že $a$ je *vzorem prvku* $b$ při
 zobrazení $f$.
 ```
 
-```{prf:remark} Terminologie.
+```{prf:remark} Terminologie
 :nonumber: 
 Množina $A$ z definice funkce se nazývá *definiční obor funkce $f$*.
 Označujeme $\mathrm D(f)$ (resp.  $\mathrm{Dom}(f)$). Je-li $M$
@@ -59,7 +59,7 @@ všech uspořádaných dvojic $[x,y]\in\mathbb R^2$ s vlastností $y=f(x)$.
 
 Je to až k nevíře, ale k popisu obrovského množství dějů stačí čtyři základní operace: sčítání, odčítání, násobení a dělení. Vzhledem k požadavku na konzistenci fyzikálních jednotek se nejčastěji setkáváme s násobením a dělením a proto funkce pracující s těmito operacemi mají výsadní postavení. Takový, že si vysloužily pojmenování běžně užívané i mezi nematematiky: přímá a nepřímá úměrnost. Je to formální popis situace, kdy souvislost mezi dvěma veličinami je zprostředkována násobením konstantou (přímá úměrnost), nebo kdy je násobením konstantou zprostředkována souvislost mezi jednou veličinou a převrácenou hodnotou druhé veličiny.
 
-```{prf:definition} Přímá a nepřímá úměrnost.
+```{prf:definition} Přímá a nepřímá úměrnost
 :nonumber:
 Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$ 
 Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=\frac kx.$$
@@ -105,7 +105,7 @@ rostoucí a  klesající funkce. Názorně
 (klesající) směr nerovnosti při aplikaci funkce na obě strany
 nerovnice.
 
-```{prf:definition} Monotonie funkce.
+```{prf:definition} Monotonie funkce
 :nonumber:
 Nechť $f$ je funkce a $M\subseteq \mathrm{Dom}(f)$ podmnožina definičního oboru   funkce $f$.
 
@@ -121,7 +121,7 @@ Nechť $f$ je funkce a $M\subseteq \mathrm{Dom}(f)$ podmnožina definičního ob
 Nespecifikujeme-li množinu $M$, máme na mysli, že uvedená vlastnost platí na celém definičním oboru funkce $f$.
 ```
 
-```{prf:remark} Monotonie z hlediska řešitelnosti nerovnic.
+```{prf:remark} Monotonie z hlediska řešitelnosti nerovnic
 :nonumber:
 Je-li funkce $f$ rostoucí nebo klesající, je i prostá a nerovnice uvedené v předchozí definici jsou dokonce ekvivalentní. Můžeme tedy na obě strany nerovnice aplikovat tutéž rostoucí funkci, nebo rostoucí funkci z obou stran nerovnice vynechat.
 
@@ -227,13 +227,13 @@ Definice spojitosti zavádí jakousi třídu funkcí, které jsou v jistém smys
 
 Buď $f\colon \mathbb R\to\mathbb R$ funkce jedné proměnné.
 
-```{prf:definition} Okolí.
+```{prf:definition} Okolí
 :nonumber:
  *Okolím* bodu $x_0$ rozumíme libovolný otevřený interval obsahující bod $x_0$.
 ```
 
 
-```{prf:definition} Spojitost.
+```{prf:definition} Spojitost
 :nonumber:
  Řekneme, že funkce $f$ je *spojitá v bodě* $x_0$ jestliže je v tomto bodě definovaná a pro libovolnou předem zadanou toleranci (i extrémně malou) existuje okolí bodu $x_0$ takové, že všechny body z okolí bodu $x_0$ mají funkční hodnotu v rámci uvažované tolerance nerozlišitelnou od $f(x_0)$. Řekneme, že funkce $f$ je *spojitá* na otevřeném intervalu, je-li spojitá v každém jeho bodě.
 ```
@@ -241,13 +241,13 @@ Buď $f\colon \mathbb R\to\mathbb R$ funkce jedné proměnné.
 
 Definice spojitosti sice není zcela názorná, ale následující definice a věta velmi pomůže. Zhruba řečeno vysvětlují, proč si v naprosté většině prakticky využitelných případů můžeme spojitost ověřit jenom tím, že zjistíme, zda je funkce definována. 
 
-```{prf:definition} Elementární funkce.
+```{prf:definition} Elementární funkce
 :nonumber:
  Všechny mnohočleny, goniometrické, cyklometrické,   exponenciální a logaritmické funkce a obecná mocnina se nazývají  *základní elementární funkce* Všechny funkce, které ze základních  elementárních funkcí získáme konečným počtem operací sčítání,  odečítání, násobení, dělení a skládání těchto funkcí navzájem se  nazývají *elementární funkce*.
 ```
 
 
-```{prf:theorem} Spojitost elementárních funkcí.
+```{prf:theorem} Spojitost elementárních funkcí
 :nonumber:
  Všechny elementární funkce jsou spojité v každém vnitřním bodě svého definičního oboru.
 ```
@@ -271,7 +271,7 @@ Body, v jejichž okolí je funkce ohraničená, ale je zde porušena spojitost, 
 
 Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď funkční hodnotu spojité funkce (pokud existuje), nebo hodnotu, která danou funkci učiní spojitou. Můžeme tedy limitu považovat za  "nejlepší rozumnou náhradu" funkční hodnoty v tom smyslu, že po předefinování jedné funkční hodnoty se funkce stane spojitou, tj. relativně pěknou. 
 
-```{prf:definition} Limita.
+```{prf:definition} Limita
 :nonumber:
  Nechť $f$ je funkce definovaná v okolí bodu $x_0$, s případnou výjimkou bodu $x_0$. Řekneme, že funkce $f$ má v bodě $x_0$ *limitu* rovnu číslu $L$, jestliže funkce $g(x)$ definovaná vztahem $$g(x)= \begin{cases}   L& x=x_0\\ f(x)& \text {jinak,}\end{cases}$$ je spojitá v bodě $x_0$. Píšeme $$\lim_{x\to x_0}f(x)=L.$$
 ```
@@ -290,7 +290,7 @@ intervalu, jehož délka je nerozlišitelná od nuly. Vypočteme průměrnou ryc
 
 Buď $y=f(x)$ funkce definovaná na nějakém otevřeném intervalu.
 
-```{prf:definition} Derivace.
+```{prf:definition} Derivace
 :nonumber:
  *Derivací* funkce $f$ v bodě $x$ rozumíme limitu $$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$
 ```
@@ -300,7 +300,7 @@ Derivaci funkce $f$ v bodě $x_0$ označujeme $f'(x_0)$ nebo
 $\frac{\mathrm df(x_0)}{\mathrm dx}$. Derivaci v libovolném bodě potom
 $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\mathrm dx}$ je Leibnizova notace, zápis $f'$ je Lagrangeova notace. 
 
-```{prf:remark} Slovní interpretace definice derivace.
+```{prf:remark} Slovní interpretace definice derivace
 :nonumber:
 * Výraz z čitatele, tj. $f(x+h)-f(x)$, je změna veličiny $f$ na intervalu $[x,x+h]$. Často označujeme též $\Delta f$.
 * Podíl, tj. $\frac{f(x+h)-f(x)}h$ je změna veličiny $f$ na intervalu $[x,x+h]$ přepočítaná na jednotku veličiny $x$, tj. v jistém smyslu průměrná rychlost na tomto intervalu. Často označujeme též $\frac{\Delta f}{\Delta x}$.
@@ -343,19 +343,19 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 \fi
 
-```{prf:remark} Jednotka derivace.
+```{prf:remark} Jednotka derivace
 :nonumber:
  Jednotka derivace $\frac{\mathrm df}{\mathrm dx}$ funkce $f(x)$ je stejná, jako jednotka podílu $\frac {f(x)}x$.
 ```
 
 
-```{prf:theorem} Existence derivace implikuje spojitost.
+```{prf:theorem} Existence derivace implikuje spojitost
 :nonumber:
  Má-li funkce $f$ derivaci na intervalu $I$, je na tomto intervalu spojitá.
 ```
 
 
-```{prf:theorem} Znaménko derivace implikuje monotonii.
+```{prf:theorem} Znaménko derivace implikuje monotonii
 :nonumber:
 * Má-li funkce $f$ kladnou derivaci na intervalu $I$, je na tomto intervalu rostoucí.
 * Má-li funkce $f$ zápornou derivaci na intervalu $I$, je na tomto intervalu klesající.
@@ -376,7 +376,7 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 https://youtu.be/ysSFnm8Yrdo
 
-```{prf:remark} Slovní vyjádření derivace podle času.
+```{prf:remark} Slovní vyjádření derivace podle času
 :nonumber: 
 Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolným z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
 
@@ -420,7 +420,7 @@ funkce. Takové rovnice se naučíme řešit později.
 
 V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
-```{prf:remark} Smysl příkladu se zákonem ochlazování.
+```{prf:remark} Smysl příkladu se zákonem ochlazování
 :nonumber:
  Předchozí příklad je často v různých obměnách používán na modelování ochlazování kávy, což je proces, který většina lidí důvěrně zná. Nemáme pochopitelně ambice se domnívat, že bychom dokázali z této rovnice odvodit nějaké zásadní výsledky aplikovatelné při pití ranní kávy nebo při konzumaci horké polévky. Učíme se na malých věcech, abychom později mohli dělat věci velké. Na známých věcech se učíme aparát, který bude naším jediným nástrojem tam, kde intuice začne selhávat. Z tohoto příkladu je nutné si odnést, že derivace, jako rychlost změny, hraje roli při kvantitativním popisu dějů a při studia procesů, kdy se mění veličiny. Ať už doopravdy (studium pohybu nebo dějů, probíhajících v čase) nebo virtuálně (problémy spojené s mechanikou, včetně statiky, stability a deformací, často pracují s virtuálními změnami, tj. se změnami, které jsou sice z hlediska úlohy přípustné, ale příroda je z nějakého důvodu nerealizuje). Tedy naprostá většina dějů a jevů, které studujeme a chceme jim rozumět. Jakmile se v popisu fyzikálního zákona objeví slovo *rychlost*, někdy nahrazené souslovím *časová změna*, znamená to, že kvantitativní popis se děje pomocí derivací.
 ```
@@ -656,7 +656,7 @@ jediné veličiny.
 
 Následující definice výše uvedenou myšlenku odděleného sledování změny funkce (závislé veličiny) jako reakce na změnu jedné jediné vstupní informace (jedné nezávislé veličiny) uvádí v život. Definice je stejná jako u derivace funkce jedné proměnné, změna je pouze v tom, že je přítomna i další proměnná.
 
-```{prf:definition} Parciální derivace.
+```{prf:definition} Parciální derivace
 :nonumber:
  Buď $f\colon \mathbb R^2\to\mathbb R$ funkce dvou proměnných,  $x$ a $y$, tj. $f(x,y)$. Výraz
 $$\frac{\partial f}{\partial x}:=\lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}h$$ se nazývá *parciální derivace funkce $f$ podle $x$*. Podobně,

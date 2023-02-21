@@ -59,7 +59,7 @@ poté poslouží k analýze, jaké jsou pozorovatelné důsledky a tím se
 ověří, jestli příslušná aplikovaná věda správně vystihuje podstatu
 modelovaného děje.
 
-```{prf:definition} Diferenciální rovnice.
+```{prf:definition} Diferenciální rovnice
 :nonumber:
  *Obyčejnou diferenciální rovnicí prvního řádu rozřešenou vzhledem
 k derivaci* (stručněji též diferenciální rovnicí, DR) s neznámou $y$
@@ -88,7 +88,7 @@ všech teoreticky možných průběhů vybere průběh odpovídající modelovan
 situaci. Tento stav vyjadřuje počáteční podmínka, uvedená v
 následující definici.
 
-```{prf:definition} Počáteční podmínka, Cauchyova úloha.
+```{prf:definition} Počáteční podmínka, Cauchyova úloha
 :nonumber:
  Nechť $x_0$, $y_0$ jsou reálná čísla. Úloha najít
 řešení rovnice {eq}`r1` 
@@ -114,7 +114,7 @@ křivka*.
 
 **Příklad.** Najděte všechny funkce splňující $y'=2xy$ a $y(0)=3$. (Naučíme se řešit později.)
 
-```{prf:theorem} Eexistence a jednoznačnost řešení Cauchyovy úlohy.
+```{prf:theorem} Eexistence a jednoznačnost řešení Cauchyovy úlohy
 :nonumber:
  Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha {eq}`r1`-{eq}`r2` právě jedno řešení definované v nějakém okolí počáteční podmínky.
 ```
@@ -529,7 +529,7 @@ uvedeme si je v kontextu vhodném pro studium diferenciálních rovnic.
 
 Výše uvedené výpočty je možno shrnout do pravidla v následující poznámce.
 
-```{prf:remark} Transformace diferenciální rovnice do jiných jednotek.
+```{prf:remark} Transformace diferenciální rovnice do jiných jednotek
 :nonumber:
  Pro $Y=k_1(y-y_0)$ a $X=k_2 x$ platí   $$  \frac{\mathrm d Y}{\mathrm d X} =   \frac{\mathrm d \Bigl(k_1(y-y_0)\Bigr)}{\mathrm d (k_2 x)} = \frac{k_1}{k_2} \frac{\mathrm dy}{\mathrm dx}$$ a podobně (všimněte si druhé mocniny u $k_2$ díky druhé derivaci) $$  \frac{\mathrm d^2 Y}{\mathrm d X^2} = \frac{k_1}{k_2^2} \frac{\mathrm d^2y}{\mathrm dx^2}.$$   Výraz nalevo neobsahuje konstanty, které jsou ve výrazu   napravo. Tyto konstanty jsou v definici nových veličin $X$ a $Y$. 
 ```
@@ -563,7 +563,7 @@ manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parame
 
 \fi
 
-```{prf:remark} Nondimenzionalizace, rozměrová analýza.
+```{prf:remark} Nondimenzionalizace, rozměrová analýza
 :nonumber:
 Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se nazývá nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely bez fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých veličin. V jednoduchých případech však stačí primitivní postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto příkladě veličina $x$ nemá fyzikální jednotku, protože je součinem konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou $\mathrm s$). Je možné ji považovat za *bezrozměrný čas*. Veličina $y$ také nemá fyzikální jednotku, protože je podílem dvou teplot a je možné ji považovat za *bezrozměrnou teplotu*. 
 
@@ -709,7 +709,7 @@ proto můžeme udělat následující závěr.
 
 -->
 
-```{prf:theorem} Sstabilita konstantních řešení.
+```{prf:theorem} Sstabilita konstantních řešení
 :nonumber:
  Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
@@ -738,7 +738,7 @@ manim:Logistic|NyLkjOTYzVQ|U logistické rovnice s lovem dochází v závislosti
   tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
   rovnováha je tedy poněkud křehká. 
 
-```{prf:remark} Autonomní rovnice s rozdílem na pravé straně.
+```{prf:remark} Autonomní rovnice s rozdílem na pravé straně
 :nonumber:
  Rovnice $$\frac{\mathrm dy}{\mathrm dx}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
 ```
@@ -820,7 +820,7 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 
 https://youtu.be/NNQADiRyTEA
 
-```{prf:definition} ODE se separovanými proměnnými.
+```{prf:definition} ODE se separovanými proměnnými
 :nonumber:
  Diferenciální rovnice tvaru
 
@@ -860,7 +860,7 @@ záleží na tom, co dalšího hodláme s řešením dělat. Pro většinu výpo
 je však explicitní tvar vhodnější než tvar implicitní a proto se o něj
 vždy snažíme.
 
-```{prf:remark} Zápis partikulárního řešení pomocí určitého integrálu.
+```{prf:remark} Zápis partikulárního řešení pomocí určitého integrálu
 :nonumber:
  V případě počáteční podmínky $y(x_0) = y_0$ je možné spojit třetí a čtvrtý krok a použít určitý integrál
 $$
@@ -871,7 +871,7 @@ $$
 
 Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivace podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
 
-```{prf:theorem} existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými.
+```{prf:theorem} existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými
 :nonumber:
  Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm dy}{\mathrm dx}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 ```
