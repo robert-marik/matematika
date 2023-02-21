@@ -830,7 +830,6 @@ a
 $$\frac{\mathrm dr}{\mathrm dt}=k.$$ Napravo je konstanta, poloměr tedy roste konstantní rychlostí.
 ```
 
-
 ## Výpočet $\pi$  Pro $n\neq -1$ vypočtěte integrály
 $$\int_0^1 x^n\,\mathrm dx \qquad \text{a} \qquad \int_0^1
 \frac{1}{1+x^2}\,\mathrm dx.$$
@@ -862,7 +861,6 @@ které k hodnotě $\pi$ konvergují mnohem rychleji.
 :class: dropdown
 :nonumber:
 
-
 Platí $$\int_0^1 \frac {1}{x^2+1}\,\mathrm dx=\left [\mathop{\mathrm{arctg}} x\right]_0^1=\mathop{\mathrm{arctg}} 1 - \mathop{\mathrm{arctg}} 0 = \frac \pi 4$$
 a
 $$\int_0^1 x^n \,\mathrm dx=\left[\frac 1{n+1} x^{n+1}\right]_0^1=\frac 1{n+1}.$$
@@ -875,20 +873,15 @@ $$\pi=4-\frac 43 +\frac 45 - \frac 47+\cdots .$$
 Čím více členů započítáme, tím je aproximace čísla $\pi$ přesnější.
 ```
 
-
-
-
 ![pixabay.com](pneumatika.jpg)
 
 ## Tlak v pneumatice
 
 Tlakem v pneumatice rozumíme ve skutečnosti přetlak vůči atmosférickému tlaku. Poškozená pneumatika ztrácí vzduch tak, že množství vzduchu v pneumatice klesá rychlostí, která je úměrná tomuto tlaku. Tlak v pneumatice a množství vzduchu v pneumatice jsou také navzájem úměrné. Napište matematický model popisující pokles tlaku v čase.
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Je-li $m$ hmotnost vzduchu v pneumatice a $p$ tlak, z úměrnosti mezi oběma veličinami plyne $$\frac{\mathrm dm}{\mathrm dt}=k_1\frac{\mathrm dp}{\mathrm dt}.$$
 Podle zadání platí
@@ -898,11 +891,9 @@ kde $k$ je konstanta, která vznikne sloučením konstant $k_1$ a $k_2$.
 
 ```
 
-
 ## Kvadratický moment kruhu
 
 ## Stacionární vedení tepla ve válcovém prostředí
-
 
 ## Chemická reakce
 Při chemické reakci se spotřebovává enzym tak, že spolu za přítomnosti
@@ -923,7 +914,6 @@ diferenciální rovnici popisující tento děj.
   $30 \,\mathrm{km}/\mathrm{rok}$. Jak
   rychle roste plocha kruhu? Jak rychle
   roste obvod kruhu?
-
 
 ## Akumulátor Teplota studeného akumulátoru přeneseného do místnosti o pokojové teplotě roste rychlostí 
   $$
