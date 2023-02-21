@@ -703,7 +703,6 @@ https://youtu.be/5AMXMQyx3jw
 
 \fi
 
-
 Zobrazení roviny do sebe, které může odpovídat deformaci tělesa působením síly, je možné popsat dvojicí funkcí $u_1(x_1,x_2)$, $u_2(x_1,x_2)$. Lineární aproximace těchto funkcí v okolí bodu $(x_1,x_2)$ dávají (viz závěr prezentace z přednášky věnované derivací, kdy ještě vpravo pro stručnost vynecháváme argument $(x_1,x_2)$)
 $$\begin{aligned}
   u_{1}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&\approx u_{1}+\frac{\partial u_{1}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{1}}{\partial x_{2}}\Delta x_{2},\\
@@ -772,7 +771,6 @@ https://youtu.be/xV46lYgdHSQ
 
 <div class="shorten" data-text="Následující text je motivační příklad ukazující aplikaci soustav lineárních rovnic na problém vedení tepla, souvislost s maticovým počtem a zejména přirozenou numerickou metodu řešení soustavy rovnic. Slouží jako motivace a bude pokryto v následující přednášce.">
 
-
 <!-- YTB YJEydfa_mHI -->
 
 Na závěr si ukážeme, že pomocí lineární algebry a maticového počtu je možno popsat funkci dvou proměnných popisující rozložení teploty na tepelně vodivé desce. Postup je takový, že budeme sledovat teplotu v referenčních bodech. Požadavek, že teploty v okolních bodech mají odpovídat našim představám o vedení tepla vyjádříme kvantitativně pomocí vhodné matice.
@@ -813,7 +811,6 @@ rovnic. Pro podrobnější popis použijeme stejnou myšlenku, ale mnohem
 více uzlových bodů. Postup je stejný, pouze vznikne soustava s více
 neznámými a více rovnicemi. 
 
-
 **Poznámka.** Rovnice popisující vedení tepla na základě fyzikálních
 principů je poměrně komplikovaně řešitelná a proto se zpravidla
 převádí na problém lineární algebry. Může to znít překvapivě, ale
@@ -848,7 +845,6 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 ![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
 
 </div>
-
 
 \fi
 

@@ -327,9 +327,6 @@ konci oboru integrace (viz přednáška).
 
 %```
 
-
-
-
 \def\mezera{\vspace*{-20pt}}
 
 ![pixabay.com](mrkev.jpg)
@@ -360,9 +357,6 @@ Průměrná koncentrace je hmotnost dělená objemem a stačí tedy vypočtené 
 
 ```
 
-
-
-
 \def\mezera{\vspace*{-20pt}}
 ![Wikipedie](pesticidy.jpg)
 
@@ -374,10 +368,7 @@ $$C=e^{-0.25T}\int_0^T 0.32 e^{-0.64 t}\,\mathrm dt.$$
 Vypočtěte hodnotu $C$ jako funkci $T$ a ukažte, že maximální hodnota
 $C$ je přibližně po dvou letech. 
 
-
-
 \textit{(Podle J. Berry, A. Norcliffe, S. Humble: Introductory mathematics through science applications.)}
-
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -400,10 +391,7 @@ $${ T}=\frac 1{0.64}\ln \frac{89}{25}\approx 1.98.$$
 
 ```
 
-
-
 ![pixabay.com](bunka.jpg)
-
 
 ## Růst buňky Buňka ve tvaru koule o poloměru $r$ získává
 živiny rychlostí úměrnou povrchu a spotřebovává živiny rychlostí
@@ -423,7 +411,6 @@ L. Edelstein-Keshet: Differential Calculus for the Life Sciences.
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Budeme používat kladné konstanty úměrnosti a součin několika konstant budeme vždy přeznačovat jako novou konstantu, aby výsledná rovnice byla co nejjednodušší.
 
@@ -449,9 +436,6 @@ $$\frac{\mathrm d}{\mathrm dr} (A_0-B_0r)=-B_0<0,$$ je toto řešení stabilní.
 
 ```
 
-
-
-
 ![http://www.danieldean.com](roury.jpg)
 
 ## Konstitutivní vztahy při konstantních parametrech
@@ -462,7 +446,6 @@ $$
 $$
 má hodnotu $K=3\,\mathrm m/\mathrm{den}$, kde $q$ je tok na metr čtvereční a $\frac{\mathrm dh}{\mathrm ds}$ hydraulický gradient (rozdíl výšek při atmosférickém tlaku, nebo odpovídající rozdíl tlaků, vztažený na jednotku vodorovné délky). Jedna strana roury je o $h=1.6\,\mathrm{m}$ výše než druhá a roura je na obou koncích zaplavená vodou po horní okraj. Vypočtěte tok vody rourou. Zkrácení vodorovné vzdálenosti konců při šikmém položení roury neuvažujte.
 (\textit{Podle Charles Fitts, Groundwater Science.})
-
 
 {\textit{V tomto příkladě přepočítáváme na základě materiálových vlastností rozdíl výšek na tok vody. Snadnost příkladu tkví v tom, že podél celé roury předpokládáme konstantní fyzikální charakteristiky a proto například hydraulický gradient počítáme z celé délky roury. V obecném případě musíme mít informaci ne o průměrných změnách hydraulické výšky, ale o změnách okamžitých. Proto je podíl nutno nahradit derivací (v jednorozměrném případě) nebo gradientem (ve vícerozměrném případě). Stejně se pracuje s Fickovým zákonem pro pohyb vody ve dřevě, roli písku hraje dřevo a roli rozdílu výšek hraje rozdíl koncentrací. Analogický je i Fourierův zákon, ale místo vody teče teplo a namísto rozdílu výšek pracujeme s rozdílem teplot.}
 
@@ -475,8 +458,6 @@ má hodnotu $K=3\,\mathrm m/\mathrm{den}$, kde $q$ je tok na metr čtvereční a
 Tok ($Q$) určíme vynásobením toku jednotkovou plochou ($q$) s obsahem průřezu roury ($S=\pi \left(\frac d2\right)^2$). Hydraulický gradient určíme z rozdílu výšek a vodorovné vzdálenosti, tj. $\frac{\mathrm dh}{\mathrm ds}=\frac hL.$ Odsud pro velikost toku dostáváme
 $$|Q|= \pi \left(\frac d2\right)^2 K \frac hL=0.48 \,\mathrm{m}^3/\mathrm{den}.$$
 ```
-
-
 
 ![https://www.flickr.com/photos/undpeuropeandcis, UNDP in Uzbekistan](kapkova_zavlaha.jpg)
 
@@ -492,7 +473,6 @@ Při kapkové závlaze uvažujme trubici, která má podél své délky otvory a
 
 Na úseku $15\,\mathrm m$ se "ztratí" litr vody za minutu a tento litr se spotřebuje ve spotřebiči, tj. ve zdroji se zápornou vydatností. Vydatnost zdrojů je  $$\sigma = -\frac{1\,\mathrm{l}/\mathrm{min}}{15\,\mathrm m}=-0.067\,\mathrm l \,\mathrm{m}^{-1}\,\mathrm{min}^{-1}.$$
 ```
-
 
 ## Rovnice podzemní vody
 \def\raggedright{\rightskip 0 pt plus 1 em}
@@ -523,7 +503,6 @@ Zdroj obrázků: Jacob Bear, https://www.interpore.org/
 \includegraphics[width=0.99\linewidth]{phraq.jpg}
 
 \end{minipage}
-
 
 Zapište pomocí vhodných veličin, operátorů a rovnic následující vztahy, zákony nebo pozorování,
 odpovězte na otázky a splňte úkoly.
@@ -569,7 +548,6 @@ odpovězte na otázky a splňte úkoly.
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 \begin{enumerate}[A)]
 \item $\vec q=-T \nabla h$ kde $T$ je koeficient průtočnosti a $-\nabla h$

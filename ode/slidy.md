@@ -694,7 +694,6 @@ manim:Logistic|NyLkjOTYzVQ|U logistické rovnice s lovem dochází v závislosti
   tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
   rovnováha je tedy poněkud křehká. 
 
-
 > Poznámka (autonomní rovnice s rozdílem na pravé straně). Rovnice $$\frac{\mathrm dy}{\mathrm dx}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
 
 <div class='obtekat'>
@@ -725,7 +724,6 @@ $$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\t
 \iffalse
 
 <div class='obtekat'>
-
 
 ![Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s\ IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.](trolejbus.jpg)
 
@@ -774,20 +772,16 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 
 https://youtu.be/NNQADiRyTEA
 
-
 > Definice (ODE se separovanými proměnnými). Diferenciální rovnice tvaru
 > $$    \frac{\mathrm dy}{\mathrm dx}=f(x)g(y) \tag{S}$$
 > kde $f$ a $g$ jsou funkce spojité na (nějakých) otevřených intervalech
 > se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
 
-
 **Příklad:** Rovnice $$y'+xy +xy^2=0$$ je rovnicí se separovanými
   proměnnými, protože je možno ji zapsat ve tvaru $$y'=-xy(y+1).$$
   Rovnice $$y'=x^2-y^2$$ není rovnice se separovatelnými proměnnými.
 
-
 ### Řešení ODE se separovanými proměnnými
-
 
 1.  Má-li algebraická rovnice $g(y)=0$ řešení $k_1$, $k_2$, …, $k_n$,
     jsou konstantní funkce $y\equiv k_1$, $y\equiv k_2$, …,
@@ -825,7 +819,6 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 
 ### Diferenciální rovnice růstu vodní kapky
 
-
 \iffalse
 
 <div class='obtekat'>
@@ -835,7 +828,6 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 </div>
 
 \fi
-
 
 Modelujme růst kulové kapky. Ta roste tak, že na povrchu kondenzují
 vodní páry. Kapka proto roste tak, že její objem se zvětšuje rychlostí
@@ -879,9 +871,7 @@ uvolněním tepla.
 
 https://youtu.be/ahkeA6fopaQ
 
-
 <div class="shorten" data-text="Diferenciální rovnice obsahující druhé derivace se vyskytují v problémech z mechaniky. Kromě počátečních podmínek je s nimi spojen ještě jiný druh podmínek, okrajové podmínky. Tyto úlohy je možné řešit aproximací derivace centrální diferencí a převodem diferenciální rovnice na soustavu lineárních rovnic. Ovšem soustavu obrovskou.">
-
 
 \iffalse
 
@@ -890,7 +880,6 @@ https://youtu.be/ahkeA6fopaQ
 ![Téměř veškerá klasická mechanika a dynamika pohybů se redukuje na studium diferenciálních rovnic druhého řádu. Ve vesmíru i\ na Zemi. Zdroj: pixabay.com.](satelit.jpg)
 
 </div>
-
 
 \fi
 
@@ -977,7 +966,6 @@ algebra, kterému se začneme věnovat na příští přednášce.
 Pro analogickou úlohu se vzpěrnou tlakovou pevností dřeva viz
 též A. Požgaj, Štruktúra a vlastnosti dreva str. 359.
 
-
 </div>
 
 ## Shrnutí, hlavní myšlenky
@@ -989,7 +977,6 @@ též A. Požgaj, Štruktúra a vlastnosti dreva str. 359.
 ![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
 
 </div>
-
 
 \fi
 
