@@ -267,7 +267,7 @@ _Návod: je možné ukázat buď pro obecný polynom $ax^2+bx+c$, nebo samostatn
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
- 
+
 
 Polynom $x^2$ má derivaci $2x$, tj. v označení pomocí vektorů
 se musí vektor $(1,0,0)^T$ zobrazit na $(0,2,0)^T$. Toto snadno

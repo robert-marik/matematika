@@ -116,7 +116,7 @@ například v letectví, kdy je jedna souřadná soustava spojena s trupem
 a další dvě jsou pootočené ve směru křídel šípovitě připojených k
 trupu.
 
- 
+
 Matici transformace popisující otočení souřadnic budeme zkráceně označovat $R$, pokud budeme potřebovat zdůraznit velikost úhlu, použijeme $R(\theta)$ a pokud budeme potřebovat matici rozepsat ve složkách, budeme zkracovat výrazy $\cos\theta$ a $\sin\theta$ na $C$ a $S$ a psát
 $$R= \begin{pmatrix}  C & -S \\ S & C\end{pmatrix}.$$
 Potom například platí
@@ -444,7 +444,7 @@ diagonály a dvou šikmých řad pod ní se odečítají.
 **Příklad.** Matice
 $$\begin{pmatrix}  4& 7 &0\\  0 & -2 & 1\\  0& 0& 5\end{pmatrix}$$
 je ve schodovitém tvaru.
- 
+
 
 
 > Věta (determinant matice ve schodovitém tvaru). 
@@ -453,7 +453,7 @@ je ve schodovitém tvaru.
 
 Totéž platí zejména pro matice diagonální, které mají nenulové
 prvky jenom v hlavní diagonále a tedy jsou ve schodovitém tvaru.
-   
+
 
 **Příklad.** Platí
 $$\begin{vmatrix}  4& 7 &0\\  0 & -2 & 1\\  0& 0& 5\end{vmatrix}=4\cdot (-2)\cdot 5=-40.$$

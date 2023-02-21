@@ -294,7 +294,7 @@ $$
 
 
 <!-- YTB pIq92-akbaI -->
-   
+
 ## Matice 
 
 https://youtu.be/DY044M_RbVs
@@ -343,7 +343,7 @@ $$
 Na maticový součin můžeme pohlížet i pomocí pojmů  známých z analytické geometrie. Prvky v součinu matic jsou skalárními součiny řádků první matice se sloupci druhé matice.
 
 Maticový součin
-  
+
   * je asociativní $$(AB)C=A(BC)=ABC,$$
   * je distributivní vzhledem ke sčítání $$A(B+C)=AB+AC\qquad \text {a}\qquad (B+C)A=BA+CA,$$
   * není však komutativní ($AB$ je obecně různé od $BA$, proto v předchozím máme roznásobování závorky zleva i zprava),
@@ -536,7 +536,7 @@ Je-li například vektor $v$ sloupcový vektor ze samých jedniček, potom vekto
 Analogicky bývají studovány metabolické sítě, kde místo vztahů jsou chemické reakce a prvky matice označují, které produkty v jakém množství vstupují do těchto reakcí (stoichiometrické koeficienty). Je-li $X$ sloupcový vektor označující množství jednotlivých metabolitů, $v$ sloupcový vektor označující rychlosti jednotlivých reakcí a $A$ matice stoichiometrických koeficientů, platí
 $$\frac{\mathrm dX}{\mathrm dt}=Av,$$
 kde derivaci  vektoru chápeme po složkách jako vektor sestavený z derivací jednotlivých komponent. Viz například [Basic concepts and principles of stoichiometric modeling of metabolic networks](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4671265/)
- 
+
 Reálné sítě mají tisíce uzlů a tisíce vztahů mezi nimi a není možné je studovat jinak, než matematickými metodami. Například [model *Escherichia Coli*](http://bigg.ucsd.edu/models/iJO1366), hojně studované bakerie, obsahuje 1805 metabolitů, 2583 reakcí a 1367 genů. Matice umožňují studovat nejenom vztahy ale i intenzitu toku mezi jednotlivými metabolity a umožní studovat vliv vnějších zásahů, například knokautování některých genů nebo umístění bakerie do anaerobního prostředí. V příkladě s potravním řetězcem například můžeme (po dodání dalších informací do modelu) určit, jakým procentem se jednotlivé složky potravy podílí na celkovém jídelníčku a jak se toto složení změní při odstranění nějaké složky potravy. 
 
 </div>

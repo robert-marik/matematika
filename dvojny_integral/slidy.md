@@ -298,7 +298,7 @@ ambice vyjadřovat vrstevnice v analytickém tvaru a integrovat pomocí
 Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
   \fi
-  
+
 ### Fyzikální aplikace dvojného integrálu
 
 * **Hmotnost** množiny $M$ je $$m=\iint_M \sigma(x,y)\mathrm{d}x

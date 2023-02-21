@@ -116,7 +116,7 @@ intervalem $[0,x]$ působí následující síly.
   působících na uvažovanou část mostu byl roven nule. Jako stavitelé mostu
   chceme, aby směr síly souhlasil se směrem lana, tj. aby síla byla
   tečná k nosnému lanu.
-  
+
 Vektorový součet sil musí být nulový a proto všechny tři síly tvoří
 pravoúhlý trojúhelník. Poměr odvěsen $\frac{\mu g x}{T}$ udává
 směrnici přepony. Křivka udávající směr nosného lana tedy musí mít

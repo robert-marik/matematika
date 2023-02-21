@@ -173,7 +173,7 @@ _Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
- 
+
 
 Je-li $y$ znečištění v galonech a $t$ čas ve dnech, má model tvar
 $$\frac{\mathrm dy}{\mathrm dt}=-0.08y-30.$$

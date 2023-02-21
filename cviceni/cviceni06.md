@@ -297,7 +297,7 @@ for the life sciences. Příklad je použitelný pro stromy s velkými semeny, n
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
- 
+
 
 Množství semen na metr čtvereční závisí na vzdálenosti od
 stromu, je to tedy podobná úloha jako úloha s prouděním tekutiny

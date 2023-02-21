@@ -235,7 +235,7 @@ $$\frac{\mathrm dy}{\mathrm dt}=-ky\frac1{20+2t}$$
 
 
 {
-  
+
 \def\mezera{\vspace*{-20pt}}
 
 ![Wikipedie](kojal.jpg)
@@ -540,7 +540,7 @@ Na úseku $15\,\mathrm m$ se "ztratí" litr vody za minutu a tento litr se spot�
 ## Rovnice podzemní vody
 \def\raggedright{\rightskip 0 pt plus 1 em}
 \begin{minipage}[t]{0.44\linewidth}\raggedright
-   
+
   Stavovou veličinou pro popis podzemní vody je \textit{piezometrická
     hladina} $h$ měřená v metrech (hrubá představa může být hladina
   spodní vody nebo, v případě že je shora ohraničení nepropustnou
@@ -564,7 +564,7 @@ Zdroj obrázků: Jacob Bear, https://www.interpore.org/
   Řez zvodní s volnou hladinou (výška zavodněné části je rovna rozdílu mezi piezometrickou výškou a dolní nepropustnou vrstvou).
 
 \includegraphics[width=0.99\linewidth]{phraq.jpg}
-  
+
 \end{minipage}
 
 
@@ -583,7 +583,7 @@ odpovězte na otázky a splňte úkoly.
   za jednotku času. Jaký bude vztah mezi $\vec v_f$ a $\vec q$? Uvažujte pouze
   speciální případ, kdy je $\vec v_f$ konstantní v celé tloušťce zvodnělé
   vrstvy $b$. (Tloušťka zvodnělé vrstvy $b$ je u proudění s volnou hladinou rovna vzdálenosti piezometrické hladiny od dolní nepropustné vrstvy a u proudění mezi nepropustnými vrstvami rovna vzdálenosti těchto vrstev.) 
-  
+
 \item \textit{Zákon zachování pro vodu}: Množství vody v daném místě (v metrech krychlových vody na metr čtvereční povrchu zvodně) označte $v$. Rychlost s jakou se kumuluje voda v daném místě v kubických
   metrech (vody) na čtvereční metr (povrchu zvodně) za den, tj. derivace $v$ podle času, je
   součtem

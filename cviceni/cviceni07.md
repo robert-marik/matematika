@@ -73,7 +73,7 @@ h\,\mathrm dh&=k\, \mathrm dt\\
 $$
 
 ```
- 
+
 
 
 
@@ -173,7 +173,7 @@ Ad 1: Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv 
 * *Podle věty o jednoznačnosti pro rovnici se separovanými proměnnými:* Stačí ověřit,
   že část závislá na $h$ je nenulová. Toto jistě platí, protože pro
   $h>0$ je $\sqrt{h}\neq 0$. 
-  
+
 Pokud je tedy v nádrži nějaká voda, je jednoznačně dáno, jak bude vytékat a je možné vypočítat, jaká bude v libovolném okamžiku hladina.
 
 Ad 2: Pro $h=\frac 14 k^2 t^2$ a $t<0$ dostáváme
@@ -183,7 +183,7 @@ Ad 2: Pro $h=\frac 14 k^2 t^2$ a $t<0$ dostáváme
       - k \frac 12 k (-t) = \frac 12 k^2 t
     \end{aligned}  $$
     a obě strany rovnice jsou stejné. Pro $h=0$ je dosazení triviální.
-  
+
 Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například $h(t)=0$ je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce $h(t)=\frac 14 k^2t^2$ pro $t<0$ odpovídá tomu, že pro $t<0$ v nádrži voda byla a vytekla v čase $t=0$.
 
 

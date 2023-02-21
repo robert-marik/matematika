@@ -102,7 +102,7 @@ $e_2=\left(\frac 1{\sqrt 2}, \frac 1 {\sqrt 2}\right)^T$. Matici $P$ můžeme vz
 s $e_1$ v prvním a $e_2$ druhém sloupci, tj.
 $$    P=  \begin{pmatrix}      \frac 1{\sqrt 2} & \frac 1{\sqrt 2}\\      -\frac {1}{\sqrt 2} & \frac 1{\sqrt 2}    \end{pmatrix}.  $$
   Rychlý výpočet ukazuje, že matice $P$ má determinant roven jedné. Kdyby vyšel roven minus jedné, stačí prohodit sloupce nebo jeden sloupec vynásobit faktorem $-1$.
-  
+
 Pokud ještě před násobením matic vytkneme opakující se faktor z obou matic, násobením dostáváme
 $$  \begin{aligned}  P^TAP&=\begin{pmatrix}      \frac 1{\sqrt 2} & -\frac 1{\sqrt 2}\\      \frac {1}{\sqrt 2} & \frac 1{\sqrt 2}    \end{pmatrix}        \begin{pmatrix}    3 & 1 \\ 1 &3  \end{pmatrix}  \begin{pmatrix}      \frac 1{\sqrt 2} & \frac 1{\sqrt 2}\\      -\frac {1}{\sqrt 2} & \frac 1{\sqrt 2}    \end{pmatrix}\\&    =\frac 1{\sqrt 2}\frac 1{\sqrt 2}    \begin{pmatrix}      1 & -1 \\ 1 &1    \end{pmatrix}        \begin{pmatrix}    3 & 1 \\ 1 &3  \end{pmatrix}    \begin{pmatrix}      1 & 1 \\ -1 &1    \end{pmatrix}    \\&=    \frac 1{2}    \begin{pmatrix}      1 & -1 \\ 1 &1    \end{pmatrix}    \begin{pmatrix}      2 & 4 \\-2 & 4    \end{pmatrix}    \\&=    \frac 1{ 2}    \begin{pmatrix}      4& 0 \\ 0& 8    \end{pmatrix}=    \begin{pmatrix}      2& 0 \\0& 4    \end{pmatrix}.  \end{aligned}$$
 Podle očekávání vyšla diagonální matice s vlastními hodnotami v hlavní diagonále.

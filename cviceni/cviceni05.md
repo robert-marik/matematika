@@ -76,7 +76,7 @@ _Toto a další příklady jsou klasické aplikace integrálu, kdy integrálem r
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
- 
+
 
 Integrál udává objem oleje, který vyteče za prvních 10 hodin. Pro zadanou funkci dostáváme
 $$
@@ -109,7 +109,7 @@ $$
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
- 
+
 
 První integrál značí přírůstek populace včel za patnáct jednotek času, druhý integrál značí celkovou velikost populace včel po uplynutí patnácti jednotek času. (Jednotky času nejsou v zadání specifikovány.)
 
@@ -187,7 +187,7 @@ $$W(0)=0\quad \text {a} \quad W'(t)=\frac{4t}{100}-3\left (\frac  t{100}\right)^
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
- 
+
 
 Výsledná funkce integrálem rychlosti učení, tj.
 $$

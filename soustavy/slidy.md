@@ -85,7 +85,7 @@ $$    \begin{pmatrix}
 
 
 ## Maticový zápis soustavy lineárních rovnic
-  
+
 Soustavu (1) lze ekvivalentně přepsat do maticového
 tvaru pomocí  maticového součinu
 $$

@@ -229,7 +229,7 @@ $$
 $$\nabla \cdot\vec q=\frac{ \partial}{\partial x} (-15x^2-4y)+\frac{\partial }{\partial y}(-3x^2-8y) = -30x-8.$$
 1. Pro $x>0$ je tato divergence záporná a tok tepla slábne. To znamená, že se deska ohřívá. V každém místě a tedy i uprostřed. 
 ```
- 
+
 
 
 ## Poznámky k online výuce

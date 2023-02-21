@@ -46,7 +46,7 @@ Body nespojitosti a nulové body rozdělí reálnou osu na tři podintervaly.
 
   V bodě $x=-1$ se monotonie funkce mění z rostoucí na klesající, ale lokální extrém zde není, protože funkce ani její derivace v tomto bodě nejsou definovány.
 
-  
+
 *2.* $y=\frac {x^2}{x+1}$, $y'=\frac{x(x+2)}{(x+1)^2}$
 
 Nulové body derivace jsou řešení rovnice $$x(x+2)=0.$$ Tato rovnice má dvě řešení $$x_1=0, \ x_2=-2.$$
@@ -66,7 +66,7 @@ Body nespojitosti a nulové body rozdělí reálnou osu na čtyři podintervaly.
 
   V bodě $x=-1$ se monotonie funkce nemění. Navíc funkce v tomto bodě ani není definována a existenci lokálního extrému tedy ani neuvažujeme
 
-    
+
 *3.* $y=\frac {x^2}{x^2+1}$, $y'=\frac{2x}{(x^2+1)^2}$
 
 Nulové body derivace jsou řešení rovnice $$2x=0.$$ Tato rovnice má jediné řešení $$x=0.$$
@@ -74,7 +74,7 @@ Nulové body derivace jsou řešení rovnice $$2x=0.$$ Tato rovnice má jediné 
 Body nespojitosti derivace jsou řešení rovnice $$(x^2+1)^2=0.$$ Tato rovnice nemá v oboru reálných čísel žádné řešení.
 
 Body nespojitosti nejsou a jeden nulový bod rozdělí reálnou osu na dva podintervaly. Z derivace je zřejmé, že derivace má stejné znaménko jako $x$, tj. derivace je záporná nalevo od nuly a kladná napravo od nuly. To znamená, že v nule se funkce mění z klesající na rostoucí a funkce má v tomto bodě lokální minimum. 
-  
+
 
 ```
 
@@ -104,7 +104,7 @@ litrovou krabici mléka a porovnávat s tímto referenčním kvádrem._
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
- 
+
 
 Papír A4 má rozměry $210\times 297\,\mathrm{mm}$ a je-li vystřižený čtverec o straně $x$, má krabička rozměry $(210-2x)\times(297-2x)\times x$ a objem
 $$
@@ -126,7 +126,7 @@ $$
 ```
 
 
- 
+
 ## Plot ze tří stran pozemku
 
 \iffalse 

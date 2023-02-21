@@ -407,7 +407,7 @@ Matematickou formulací celkové bilance  je **rovnice kontinuity**.
 $$
       {\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   $$
 
-    
+
 
 >Poznámka (fyzikální interpretace členů rovnice kontinuity).
 >

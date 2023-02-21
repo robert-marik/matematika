@@ -496,7 +496,7 @@ množinou.
 * Ve vektorové podobě jde o vyjádření zadaného vektoru jako lineární
   kombinace jiných zadaných vektorů. Tedy například rozklad vektoru do
   daných směrů.
-  
+
 
 ## Diagonální matice
 

@@ -553,7 +553,7 @@ $$
 Věta o integrálu jako funkci horní meze dokonce udává tvar primitivní
 funkce pro libovolnou spojitou funkci. Tím dostáváme okamžitě
 následující tvrzení.
-  
+
 > Důsledek (postačující podmínka existence primitivní funkce).
   Ke každé  spojité funkci existuje neurčitý integrál. 
 
