@@ -711,7 +711,6 @@ například
     BFR se do nápoje uvolní za první hodinu a porovnejte s
     hodnotou, která se uvolní za druhou hodinu.
 
-
     ## Padání sněhu s proměnnou intenzitou
 
     O půlnoci začal padat sníh rychlostí $6$ centimetrů za hodinu. Intenzita
@@ -720,7 +719,6 @@ například
     $r(12)=0$, kde $t$ je počet hodin od půlnoci v
     hodinách a $r$ je rychlost v centimetrech za hodinu. Kolik sněhu napadalo? Zapište obecně a poté pro nejjednodušší funkci, která splňuje uvedené požadavky, pro funkci $$r(t)=6-\frac 12 t.$$
     (Slunce nesvítilo a bylo pořád pod nulou.)
-
 
     ## Vyzařování tepla
 
@@ -732,7 +730,6 @@ například
     \item Derivace z předchozího bodu pro $T=300K$ je číselně rovna $6.12$. Doplňte jednotku a napište slovní interpretaci této derivace.
     \end{enumerate}
     Poznámka: Termodynamická teplota v Kelvinech je teplota ve stupních Celsia zmenšená o hodnotu 273.15.
-
 
 ## Odvození rovnice vedení tepla v 1D
 
@@ -749,7 +746,6 @@ Ukažte, že pokud bude tyč homogenní, po nastolení rovnováhy bude teplota l
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 \begin{enumerate}[a)]
 \item To, že tok tepla (směrem doprava) je úměrný rychlosti, s jakou klesá
@@ -795,7 +791,6 @@ Druhá derivace podle $x$ je tedy nulová, což znamená, že $T$  je vzhledem k
 
 ```
 
-
 ![pixabay.com](destnik)[-20pt]
 
 ## Kapka vody I
@@ -813,9 +808,6 @@ $$\frac {\mathrm dV}{\mathrm dt}= k_1S, $$ kde $k$ je konstanta úměrnosti. Pro
 $$\frac{\mathrm dV}{\mathrm dt}=k_1k_2 V^{2/3}.$$ Spojením obou konstant do jediné $k=k_1k_2$ obdržíme výsledný model 
 $$\frac{\mathrm dV}{\mathrm dt}=kV^{2/3}.$$ 
 ```
-
-
-
 
 ![pixabay.com](destnik)[-20pt]
 
@@ -837,9 +829,6 @@ $$4\pi r^2\frac{\mathrm dr}{\mathrm dt}=k 4\pi r^2$$
 a
 $$\frac{\mathrm dr}{\mathrm dt}=k.$$ Napravo je konstanta, poloměr tedy roste konstantní rychlostí.
 ```
-
-
-
 
 
 ## Výpočet $\pi$  Pro $n\neq -1$ vypočtěte integrály
