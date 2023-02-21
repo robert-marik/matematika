@@ -204,7 +204,7 @@ odhad. Postup opakujeme, dokud nejsou dvě následující iterae
 dostatečně blízké.
 
 **Poznámka.** Předchozí postup je možné použít jenom v případě, že
-iterační proces {eq}`soustava13b` konverguje. Pokud by nekonvergoval, není možné o
+iterační proces {eq}`soustava3b` konverguje. Pokud by nekonvergoval, není možné o
 řešení rovnice nic říct, pouze to, že Jacobiho metoda
 nefunguje. Postačující podmínka, kdy Jacobiho metoda konverguje, je
 aby každý řádek měl v hlavní diagonále číslo, které je v absolutní
