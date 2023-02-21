@@ -587,8 +587,6 @@ odpovězte na otázky a splňte úkoly.
 \end{enumerate}
 ```
 
-
-
 ## Rovinné proudění podzemní vody podruhé
 
 Prozkoumáme podruhé rovinné proudění, kterému jsme se věnovali v
@@ -601,7 +599,6 @@ příkladě \ref{pokles}.
   $(h^2)'=2 h h'$
   pro $h$ jako funkci proměnné  $x$, kde čárka značí derivaci podle $x$. Výsledkem bude podmínka, kterou musí splňovat funkce $h^2$ a odsud již najdete hledanou křivku snížení piezometrické hladiny. (Pokud je $h$ závislé jenom na $x$, plocha ohraničující zvodnělou vrstvu se z bočního pohledu promítne do křivky.)
 \end{enumerate}
-
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -627,7 +624,6 @@ $$0=k\left(\frac 12 (h^2)'\right )'.$$ Po vydělení rovnice konstantou $k$ a vy
 \end{enumerate}
 ```
 
-
 ## O Otesánkovi.
 Otesánek se vykrmil do tvaru koule o průměru $2{,}4\,\mathrm{m}$ a dále baští. Jeho objem roste konstantní rychlostí $0{,}002 \mathrm{m}^3/\mathrm{hod}$. Jak tato úloha souvisí s derivacemi a jak rychle roste průměr koule (Otesánka)? $$V=\frac 16 \pi d^3$$
 
@@ -641,7 +637,6 @@ Formaldehyd se z dřevěného výrobku v malé nevětrané místnosti uvolňuje 
 
 ## Kontaminovaný salát} Bakterie na kontaminovaném salátu se množí rychlostí  $$2e^{0.1t}\text{ milionů bakterií/den,$$  kde $t$ je čas ve dnech. Pokud je to možné, určete, o kolik se změní množství bakterií za čtyři dny. Pokud není dost informací, vysvětlete, jaké další informace potřebujeme.
 
-
 ## Nádrž na zavlažování
 
 Nádrž má tvar válce a je do poloviny naplněna vodou. Máme tři různé úlohy.
@@ -654,7 +649,6 @@ Každý děj zapište pomocí
 vhodného matematického modelu. Zajímá nás
 hloubka vody v nádrži. Výška nádrže nás
 nelimituje (nádrž v úloze A nepřeteče).
-
 
 ## Vlčí mák
 Vlčí mák je oblíbený letní plevel
@@ -694,8 +688,6 @@ Vlčí mák je oblíbený letní plevel
 
 \end{enumerate}
 
-
-
 ## Rychlost zvuku ve dřevě
 
 Rychlost zvuku v pevné látce je dána vzorcem $c=\sqrt{\frac E\varrho}$ kde $c$ je rychlost zvuku v metrech za sekundu, $E$ Yougův modul pružnosti v pascalech a $\varrho$ hustota v kilogramech na metr krychlový. U dřeva předpokládejme, že v závislosti na vlhkosti se $\varrho$ může měnit a $E$ je konstantní. Určete derivaci $\frac{\mathrm dc}{\mathrm d\varrho}$. Pokud například pro břízu $\rho = 640 \,\mathrm{kg}\,\mathrm{m}^{-3}$ je tato derivace číselně rovna hodnotě $-3.3$, doplňte jednotku a napište slovní interpretaci této derivace.
@@ -706,8 +698,6 @@ Na rozdíl od jiných živočichů jsou malé ryby jsou přibližně zmenšeniny
     velkých ryb a proto je u nich hmotnost přibližně úměrná třetí mocnině
     délky. Najděte souvislost mezi rychlostí s jakou roste hmotnost kapra a
     rychlostí, s jakou roste délka kapra.
-
-
 
 ## Termohrnek z rozemleté televize    
 Termohrnek bez atestu, vyrobený z rozemletého plastu ze staré
