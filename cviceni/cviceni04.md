@@ -1,6 +1,5 @@
 # Lokální extrémy
 
-
 > * Naučíme se hledat lokální extrémy funkce
 
 ## Lokální extrémy bez slovního zadání
@@ -14,7 +13,6 @@ vlastně ani nemusíme znát původní funkci. Stačí nám o ní informace
 týkající se spojitosti a poté stačí znát derivaci. I s takovým
 případem se v praxi setkáváme.
 
-
 Najděte lokální extrémy a intervaly monotonie následujících funkcí. Spolu s funkcí je zadána i její derivace.
 
 1. $y=\frac x{(x+1)^2}$, $y'=\frac{1-x}{(x+1)^3}$
@@ -27,8 +25,6 @@ Najděte lokální extrémy a intervaly monotonie následujících funkcí. Spol
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
-
 
 *1.* $y=\frac x{(x+1)^2}$, $y'=\frac{1-x}{(x+1)^3}$
 
@@ -45,7 +41,6 @@ Body nespojitosti a nulové body rozdělí reálnou osu na tři podintervaly.
   V bodě $x=1$ se monotonie funkce mění spojitě z klesající na rostoucí (nakreslete si schema) a funkce má lokální minimum.
 
   V bodě $x=-1$ se monotonie funkce mění z rostoucí na klesající, ale lokální extrém zde není, protože funkce ani její derivace v tomto bodě nejsou definovány.
-
 
 *2.* $y=\frac {x^2}{x+1}$, $y'=\frac{x(x+2)}{(x+1)^2}$
 
@@ -66,7 +61,6 @@ Body nespojitosti a nulové body rozdělí reálnou osu na čtyři podintervaly.
 
   V bodě $x=-1$ se monotonie funkce nemění. Navíc funkce v tomto bodě ani není definována a existenci lokálního extrému tedy ani neuvažujeme
 
-
 *3.* $y=\frac {x^2}{x^2+1}$, $y'=\frac{2x}{(x^2+1)^2}$
 
 Nulové body derivace jsou řešení rovnice $$2x=0.$$ Tato rovnice má jediné řešení $$x=0.$$
@@ -75,9 +69,7 @@ Body nespojitosti derivace jsou řešení rovnice $$(x^2+1)^2=0.$$ Tato rovnice 
 
 Body nespojitosti nejsou a jeden nulový bod rozdělí reálnou osu na dva podintervaly. Z derivace je zřejmé, že derivace má stejné znaménko jako $x$, tj. derivace je záporná nalevo od nuly a kladná napravo od nuly. To znamená, že v nule se funkce mění z klesající na rostoucí a funkce má v tomto bodě lokální minimum. 
 
-
 ```
-
 
 ## Krabička z papíru
 
@@ -92,19 +84,15 @@ poohýbáme nahoru, aby vznikla (až se to slepí) krabička bez horního
 víka. Jak velké čtverce musíme odstříhat, pokud chceme, aby výsledná
 krabička měla co největší objem?
 
-
 _Toto je klasický příklad přítomný snad v každé učebnici
 diferenciálního počtu. Zajímavý je tím, že A4 má ve výuce zpravidla
 každý před sebou a může si tipnout, jaký očekává výsledek a kolik
 maximální objem bude. Pro odhad objemu si můžeme představit třeba
 litrovou krabici mléka a porovnávat s tímto referenčním kvádrem._
 
-
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Papír A4 má rozměry $210\times 297\,\mathrm{mm}$ a je-li vystřižený čtverec o straně $x$, má krabička rozměry $(210-2x)\times(297-2x)\times x$ a objem
 $$
@@ -125,8 +113,6 @@ $$
 
 ```
 
-
-
 ## Plot ze tří stran pozemku
 
 \iffalse 
@@ -142,7 +128,6 @@ stranách.
 1. Jaký tvar pozemku zvolit, pokud je dána délka pletiva a chceme mít plochu pozemku co největší?
 1. Jaký tvar pozemku zvolit, pokud je dána plocha pozemku a chceme mít co nejmenší spotřebu pletiva?
 
-
 _Než začnete řešit, tak si zkuste tipnout jestli optimální je čtverec
 nebo obdélník. Pokud obdélník, tak zda podél přirozené hranice nebo
 kolmo na ni. Také si zkuste tipnout, zda je řešení obou úloh stejné
@@ -154,7 +139,6 @@ o jednotkovém obsahu v případě druhém._
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Obsah obdélníka o stranách $x$ a $y$ je součin délek dvou sousedních stran
 $$
@@ -208,8 +192,6 @@ a kratší strana je polovinou délky delší strany. Jako v předchozím příp
 
 ```
 
-
-
 ## Optimální trám vyřezaný z kulatiny
 
 \iffalse 
@@ -235,7 +217,6 @@ _Tento příklad je zajímavý spíše z aplikačního hlediska: nejvíce dřeva
 :class: dropdown
 :nonumber:
 
-
 V jednotkách průměru platí $h^2+b^2=1$
 a mají se postupně maximalizovat funkce obsah $S=bh$, nosnost $N=bh^2$ a tuhost $T=bh^3$. Protože $b$ se pomocí $h$ vyjadřuje pomocí druhé odmocniny a naopak, bude výhodnější maximalizovat funkce, kde aspoň jedna mocnina je sudá. To je jenom u nosnosti, u obsahu a tuhosti si sudé mocniny vyrobíme umocněním na druhou a budeme dosazovat $$b^2=1-h^2,$$ tj.
 $$
@@ -257,9 +238,7 @@ $$h=\sqrt{1-b^2}=\sqrt{1-\frac 13}=\frac{\sqrt 2}{\sqrt 3}$$ a trám má v tomto
 Vskutku. Funkce $f(h)=h^6-h^8$ má derivaci $\frac{\mathrm df}{\mathrm dh}=6h^5-8h^7=2h^5(3-4h^2)$ a derivace je pro $h>0$ nulová, jestliže $h^2=\frac 34$, tj. $h=\frac{\sqrt 3}{2}$.  Druhý rozměr vychází
 $$b=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\frac{1}{2}$$ a trám má v tomto případě  průřez obdélníka s poměrem stran $h:b=\sqrt 3:1$.
 
-
 ```
-
 
 ## Ryba migrující proti proudu
 
@@ -281,12 +260,9 @@ _Než začnete řešit, uvědomte si, že pokud měříme rychlosti v jednotkác
 
 _Podle Stewart, Day: Biocalculus. Calculus for the life siences._
 
-
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Měřeno v násobcích rychlosti vody máme minimalizovat funkci
 $$
@@ -299,8 +275,6 @@ $$
 Derivace je rovna nule pro $x=-1$ (ryba plave rychlostí stejnou jako voda, ale po proudu) a $x=\frac 12$ (ryba plave proti proudu takovou rychlostí, že její rychlost vzhledem k břehu je poloviční ve srovnání s rychlostí vody v protiproudu). Smysluplné je pouze řešení $x=\frac 12$ tj polovina rychlosti proudu. Například v proudu o rychlosti $20\,\mathrm{km}\,\mathrm{hod}^{-1}$ ryba plave tak, že vzhledem k nehybnému pozorovateli na břehu plave rychlostí $10\,\mathrm{km}\,\mathrm{hod}^{-1}$. Ve vodě tedy plave rychlostí $30\,\mathrm{km}\,\mathrm{hod}^{-1}$, proud $20\,\mathrm{km}\,\mathrm{hod}^{-1}$ ji strhává zpět a výsledná rychlost je $10\,\mathrm{km}\,\mathrm{hod}^{-1}$
 
 ```
-
-
 
 _Pozorování potvrdila, že migrující ryby "znají" řešení předchozího
 příkladu a proto plavou proti proudu rychlostí o polovinu větší než
@@ -323,7 +297,6 @@ _Příklad typu jaký jsme řešili u migrace ryb se ale ve skutečnosti
 * _Někdy je potřeba při konfrontaci s jinými pozorováními hypotézu
   poopravit, zpřesnit nebo bohužel zamítnout. To však je přirozené při
   poznávání světa._
-
 
 <!-- 
 %

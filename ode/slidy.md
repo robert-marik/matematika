@@ -10,7 +10,6 @@ https://youtu.be/gU6ClJwLFs0
 
 \iffalse
 
-
 <div class='obtekat'>
 
 ![Planeta Neptun. Její existence byla matematicky předpovězena na základě jinak nevysvětlitelných poruch v dráze planety Uran. Ještě týž den byl Neptun nalezen na obloze a následující den bylo potvrzeno, že se jedná o planetu. www.publicdomainpictures.net](planet-neptune.jpg)
@@ -20,7 +19,6 @@ https://youtu.be/gU6ClJwLFs0
 </div>
 
 \fi
-
 
 Diferenciální rovnice jsou jakýmsi zlatým grálem modelování. V historii byly matematické modely založené na těchto rovnicích přímou motivací k rozvoji diferenicálního počtu (aby bylo možno tyto rovnice formulovat) a integrálního počtu (aby bylo možno tyto rovnice řešit). Od té doby dosáhla trojice derivace+integrál+diferenciální rovnice na obrovskou řadu úspěchů napříč mnoha obory.
 
@@ -37,7 +35,6 @@ Diferenciální rovnice jsou jakýmsi zlatým grálem modelování. V historii b
 * Výzkum meteoritů s rodokmenem ([Zdeněk Ceplecha](https://cs.wikipedia.org/wiki/Zden%C4%9Bk_Ceplecha), [Pavel Spurný](https://cs.wikipedia.org/wiki/Pavel_Spurn%C3%BD)), výpočet jejich místa dopadu a místa, odkud meteorit přiletěl. Nesmírně cenný zdroj studijního materiálu.
 * Zaměřovače pro řízení protiletecké obrany ([Antonín Svoboda](https://historiepocitacu.cz/prukopnik-pocitacu-antonin-svoboda.html), český kybernetik). Svoboda  později konstruoval výkonnější zaměřovače, získal prestižní vyznamenání námořnictva USA, jeho práce pomohla rozhodnout válku v tichomoří. 
 
-
 Někdy je nutné znát řešení rovnice, někdy stačí znát rovnici řídící studovaný proces a i bez znalosti řešení je možné získat užitečné informace.
 
 * Chování řešení při změně rozměrů systému. Využívá se například v aerodynamických tunelech, kdy se rozměrné objekty testují na zmenšeninách. Dále se využívá tam, kde rovnici nedokážeme vyřešit, například model sesuvu hory do přehrady a následná tsunami v údolí Vajont nebo akustika v Janáčkově hudební síni.
@@ -46,7 +43,6 @@ Někdy je nutné znát řešení rovnice, někdy stačí znát rovnici řídíc�
 </div>
 
 ## Obyčejná diferenciální rovnice prvního řádu
-
 
 https://youtu.be/GSjgp7FGvVw
 
@@ -63,7 +59,6 @@ poté poslouží k analýze, jaké jsou pozorovatelné důsledky a tím se
 ověří, jestli příslušná aplikovaná věda správně vystihuje podstatu
 modelovaného děje.
 
-
 > Definice (diferenciální rovnice). *Obyčejnou diferenciální rovnicí prvního řádu rozřešenou vzhledem
 > k derivaci* (stručněji též diferenciální rovnicí, DR) s neznámou $y$
 > rozumíme rovnici tvaru $$ \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y) \tag{1}$$ kde $\varphi$ je funkce
@@ -75,7 +70,6 @@ modelovaného děje.
   $$y'=\varphi(x,y),$$
   $${\mathrm{d}y}=\varphi(x,y)\mathrm{d}x,$$
   $${\mathrm{d}y}-\varphi(x,y)\mathrm{d}x=0.$$
-
 
 **Příklad.**  Najděte všechny funkce splňující $y'=2xy$. (Naučíme se řešit později.)
 
@@ -108,18 +102,14 @@ následující definici.
 
 **Příklad.** Najděte všechny funkce splňující $y'=2xy$ a $y(0)=3$. (Naučíme se řešit později.)
 
-
 > Věta (existence a jednoznačnost řešení Cauchyovy úlohy). Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha (1)-(2) právě jedno řešení definované v nějakém okolí počáteční podmínky.
-
 
 **Příklad.** Rovnice $$y'=y\tag{3}$$ má řešení $y=e^x$, což nahlédneme
   snadno, protože exponenciální funkce se nemění derivováním. Dosazením je možné ukázat, že má dokonce řešení $$y=Ce^x,\tag{4}$$ kde $C$ je libovolné číslo.
 
 **Příklad.** Řešení počáteční úlohy $$y'=y, \quad y(x_0)=y_0$$ najdeme tak, že využijeme řešení (4) a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je $$y=  (y_0 e^{-x_0}) e^x.$$ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec (4) popisuje dokonce **všechna** řešení rovnice (3).
 
-
 ### Obecné a partikulární řešení
-
 
 Řešení diferenciální rovnice je nekonečně mnoho. Zpravidla je dokážeme
 zapsat pomocí jediného vzorce, který obsahuje nějakou (alespoň do
@@ -135,7 +125,6 @@ splňující diferenciální rovnici.
   $y=5e^{x^2}$. Řešením počáteční úlohy $$y'=2xy, \quad y(0)=3$$ je
   $$y=3e^{x^2}.$$
 
-
 \iffalse
 
 **Softwarové řešiče ODE (symbolicky):**
@@ -145,8 +134,6 @@ splňující diferenciální rovnici.
 * [Sage](https://sagecell.sagemath.org/?z=eJyrtE0rzUsuyczP01CvVNfUqNDk4lJWKMovy8tMTlWoVLet1K_QNuSCCdgqpGSmpWlU6lRoKtjaKgAlFbQVDEFajs5IPbowNe_wWq6U1OL8nLJUDageHYVKTb3ijPxyDU1kZQplQFuq8g4vLM5PAvJX5iqUlCUWlWLVnVpRkJiXogEzBgCkOj_s&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 \fi
-
-
 
 ## Modely využívající diferenciální rovnice
 
@@ -194,7 +181,6 @@ https://youtu.be/UaSCLmV_g4o
 ![Rovnice konstantního růstu nebo úbytku je základem datování pomocí uhlíku,
  https://www.flickr.com/photos/capturetheuncapturable, licence CC BY 2.0](archeology.jpg)
 
-
 </div>
 \fi
 
@@ -239,7 +225,6 @@ https://youtu.be/UaSCLmV_g4o
 
 \fi
 
-
 * Nechť veličina $y$ udává množství látky, která znečišťuje vodu v\ jezeře o\ objemu $V$.
 * Předpokládejme, že do jezera přitéká čistá voda a stejnou rychlostí
   odtéká voda s\ nečistotami (hladina se nemění, je v\ ustáleném
@@ -271,12 +256,9 @@ https://youtu.be/UaSCLmV_g4o
   většina léčiv za běžných koncentrací), řídí se proces odbourávání
   stejnou diferenciální rovnicí.
 
-
 \iffalse
 
-
 ### Akutní normovolemická hemodiluce
-
 
 <div class='obtekat'>
 
@@ -284,8 +266,6 @@ https://youtu.be/UaSCLmV_g4o
  https://pixabay.com](chirurg.jpg)
 
 </div>
-
-
 
 * Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s
   ní i\ krvinky. Při konstantní intenzitě krvácení to znamená, že
@@ -320,7 +300,6 @@ https://youtu.be/UaSCLmV_g4o
 
 \fi
 
-
 ### RC obvod
 
 \iffalse
@@ -339,7 +318,6 @@ Electrical Methods (2019)](RC_circuit_drevostavba.jpg)
 
 \fi
 
-
 Při nabíjení kondenzátoru o kapacitě $C$ přes odpor o velikosti $R$ roste napětí na kondenzátoru, tím se mění nabíjecí proud a proto se mění i rychlost nabíení. Pomocí zákonů elektrotechniky je [možno ukázat](http://fyzikalniolympiada.cz/texty/matematika/difro.pdf), že nabíjecí proud $i$ kondenzátoru se řídí diferenciální rovnicí
 $$R\frac{\mathrm di}{\mathrm dt}+\frac 1Ci=0.$$
 Napětí na kondenzátoru je možno odvodit buď z proudu, napětí na rezistoru a napětí zdroje, nebo z celkového proudu, který prošel kondenzátorem.
@@ -354,7 +332,6 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 ### Vývoj populace a její ekologický lov
 
-
 \iffalse
 
 <div class='obtekat'>
@@ -365,7 +342,6 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 </div>
 
 \fi
-
 
 * Zkoumejme velikost $y$  určité populace, v prostředí s\ nosnou kapacitou $K$.
 * Budeme pracovat s pojmem specifická míru růstu populace, což je rychlost růstu populace vztažená na jednotkové množství
@@ -390,14 +366,11 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 ### Lovci meteoritů z ČSSR a ČR
 
-
 <div class='obtekat'>
 
 ![Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/](benesov.jpeg)
 
 </div>
-
-
 
 Česká republika je na světové špičce ve oblasti propočítávání dráhy meteoritů ze světelné stopy zachycené sítí bolidových kamer. Vědcům z Astronomického ústavu se podařilo 
 
@@ -443,23 +416,19 @@ křivka. Má-li každá počáteční úloha jediné řešení (což bude pro n�
 velice častý případ), znamená to, že integrální křivky se *nikde
 neprotínají*.
 
-
 <!--
 ## Numerické řešení IVP
-
 
 <div class='obtekat'>
 
 ![Eulerova metoda s\ velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou
  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.](euler.png)
 
-
 ![Metoda Runge Kutta s\ velmi dlouhým krokem (modrou barvou, jde jasně
  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou
  barvou.](rk.png)
 
 </div>
-
 
 Řešení počáteční úlohy lze numericky aproximovat poměrně snadno:
 začneme v bodě zadaném počáteční podmínkou a v okolí tohoto bodu
@@ -494,7 +463,6 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
   jednotek, obecnější metodou je transformace diferenciální rovnice
   uvedená v následujícím textu.
 
-
 **Online řešiče ODE (numericky):**
 
 * [dfield](http://math.rice.edu/~dfield/dfpp.html)
@@ -514,10 +482,7 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 ![Model [Janáčkovy koncertní síně](https://www.irozhlas.cz/kultura/desetkrat-mensi-akusticky-dokonaly-model-janackovo-centrum_2107300010_btk) pro Brno. Desetkrát menší a proto s desetkrát většími frekvencemi. Zdroj: Tomáš Kemr, Český rozhlas.](janackova_sin.jpg)
 
-
-
 </div>
-
 
 \fi
 
@@ -545,7 +510,6 @@ Výše uvedené výpočty je možno shrnout do pravidla v následující poznám
 
 Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky. Proto máme Leibnizův tvar zápisu derivací $\frac{\mathrm   dy}{\mathrm dx}$ při studiu diferenciálních rovnic více v oblibě, než zápis Lagrangeův, $y'$.
 
-
 **Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s\ fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
 vydělit konstantou $k$
@@ -566,7 +530,6 @@ manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parame
 
 \fi
 
-
 > Poznámka (nondimenzionalizace, rozměrová analýza).  Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se nazývá nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely bez fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých veličin. V jednoduchých případech však stačí primitivní postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto příkladě veličina $x$ nemá fyzikální jednotku, protože je součinem konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou $\mathrm s$). Je možné ji považovat za *bezrozměrný čas*. Veličina $y$ také nemá fyzikální jednotku, protože je podílem dvou teplot a je možné ji považovat za *bezrozměrnou teplotu*. 
 >
 >V úloze s ochlazováním tělesa bylo zavedení nových veličin přirozené. I u méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v
@@ -580,14 +543,10 @@ manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parame
 >
 > Všechny tři uvedené skutečnosti vedou k tomu, že s transformovanými rovnicemi se lépe pracuje v numerických modelech.
 
-
-
 **Příklad.** Diferenciální rovnici logistického růstu s lovem konstantní intenzity $$\frac{\mathrm dx}{\mathrm dt}=rx\left(1-\frac xK\right)-h$$ je možno přepsat do tvaru 
 $$\frac{\mathrm d\frac xK}{\mathrm d(rt)}=\frac xK\left(1-\frac xK\right)-\frac{h}{rK}$$
 a po zavedení bezrozměrné velikosti populace $X=\frac xK$, bezrozměrného času $T=rt$ a bezrozměrné intenzity lovu $H=\frac{h}{rK}$ má model tvar
 $$\frac{\mathrm dX}{\mathrm dT}=X\left(1-X\right)-H.$$ Jinými slovy, chování modelu například z hlediska konvergence řešení k nenulové hodnotě závisí na parametru $\frac{h}{rK}.$ Pokud se sníží nosná kapacita prostředí o dvacet procent, je nutné pro udržení stejného chování rovnice snížit lov nebo zvýšit koeficient $r$ tak, aby poměr $\frac{h}{rK}$ zůstal zachován. 
-
-
 
 <!--
 
@@ -600,7 +559,6 @@ $$\frac{\mathrm dX}{\mathrm dT}=X\left(1-X\right)-H.$$ Jinými slovy, chování 
 ![Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.](patriot.jpg)
 
 </div>
-
 
 Uvedli jsme, že počáteční úlohu umíme vyřešit numericky. Ukázali jsme
 si základní algoritmus (Eulerův) a řekli, že existují algoritmy
@@ -636,7 +594,6 @@ Pouštní bouře na osvobození Kuvajtu od irácké okupace nesestřelil
 S chybami plynoucími ze zaokrouhlování se setkáme i\ při výpočtech mimo modelování diferenciálních rovnic. Viz například [Floating-point arithmetic may give
 inaccurate results in
 Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-may-give-inaccurate-results-in-excel).
-
 
 \fi
 

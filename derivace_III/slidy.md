@@ -19,9 +19,7 @@ opačném.
 > * Řekneme, že funkce $f$ má *paritu*, je-li
 >   sudá nebo lichá.
 
-
 \iffalse
-
 
 <div class='obtekat'>
 
@@ -31,15 +29,12 @@ opačném.
 
 \fi
 
-
 Graf sudé funkce je osově souměrný podle osy $y$.  Graf liché funkce
 je středově souměrný podle bodu $[0,0]$.
 
 U sudé funkce stačí mít algoritmus nebo tabulky pro kladné argumenty. Například kosinus je sudá funkce a platí $$\cos(-x)=\cos(x).$$ Analogicky pro funkci sinus jako pro lichou funkci platí $$\sin(-x)=-\sin (x).$$
 
-
 > Poznámka (využití sudosti v materiálovém inženýrství). Funkční hodnoty sudé funkce jsou rozloženy symetricky podle osy $y$. Pokud víme, že úloha bude mít osově symetrické řešení, můžeme tuto znalost použít a hledat řešení mezi sudými funkcemi. Například při řešení prostupu tepla deskou, kdy stejný fyzikální proces probíhá na obou stranách desky, je přirozené modelovat jenom polovinu desky a uprostřed nastavit podmínku, která umožní sudé prodloužení do druhé poloviny. Většinou to bývá nulovost derivace. Proto se například při nestacionární difuzi používá v definici bezrozměrného času, který charakterizuje fyzikální proces, polovina tloušťky materiálu. Viz P. Horáček, Fyzikální a mechanické vlastnosti dřeva I nebo odpovídající [e-opora](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180).
-
 
 Sudé a liché funkce jsou, díky svým vlastnostem, v jistém smyslu
 pěkné. V matematice se často snažíme zapsat nějaký objekt pomocí
@@ -49,7 +44,6 @@ snadnou větu. Věta je teď asi málo užitečná, ale naučíme se na ní
 trik, kterým později rozdělíme složitější objekt (matici) na součet
 dvou jiných a šikovnějších objektů (součet symetrické a antisymetrické
 matice).
-
 
 > Věta (o rozkladu funkce na součet sudé a liché funkce). Platí $$f(x)=\frac{f(x)+f(-x)}2 + \frac{f(x)-f(-x)}2.$$
 Každou funkci definovanou na $(-\infty,\infty)$ je možné takto rozložit na součet sudé a liché funkce.
@@ -61,9 +55,7 @@ $\cosh x$, a hyperbolický sinus, $\sinh x$.
 
 **Příklad.** Je-li funkce $f(x)$ polynom, potom rozkladem na sudou a lichou část dostaneme polynomy, které jsou tvořeny členy původního polynomu tak, že sudá část obsahuje právě členy se sudým exponentem a lichá část právě členy s lichým exponentem.
 
-
 ### Využití parity při technických výpočtech
-
 
 <div class='obtekat'>
 
@@ -73,9 +65,7 @@ $\cosh x$, a hyperbolický sinus, $\sinh x$.
 
 ![Tříbodový ohyb nosníku. Sledovaná veličina (smykové napětí v rovnině boční stěny) je symetrická, ale vlevo i vpravo se liší znaménkem.](beam_smyk.png)
 
-
 </div>
-
 
 Model tříbodového namáhání nosníku vykazuje dvě roviny symetrie: uprostřed (levá půlka je zrcadlem pravé) a uprostřed podélně podle svislé osy. Stačí tedy modelovat jenom čtvrtinu nosníku. To je výhoda. Protože dřevo je anizotropní materiál s nelineárními materiálovými vlastnostmi, trvá řešení modelu i na nejrychlejších počítačích dlouho a využití symetrie dokáže značně zkrátit čas výpočtu. Na obrázku nahoře je tříbodové namáhání nosníku modelované i s podporami použitými pro deformaci. Dole je zjednodušená situace, kdy nás zajímá jenom část mezi levou dolní a prostřední horní čelistí zkušebního stroje. Protože se jedná jenom o výřez, končí pravá strana poněkud nepřirozeně. Po zrcadlovém doplnění chybějící části nosníku se však obě poloviny spojí a výsledek bude odpovídat modelování celého nosníku. 
 
@@ -84,7 +74,6 @@ Na dvou obrázcích je barevně napětí ve vodorovném směru. Pokud bychom na 
 Třetí obrázek znázorňuje smykové napětí v rovině $xz$, tj. v rovině boční stěny. Pokud bychom si na boční stěně nakreslili čtverečky, sledujeme tímto sílu, snažící se tyto čtverečky deformovat. Situace je opět symetrická, jako v zrcadle. Ale v tomto případě platí, že co se zkosí doprava se v zrcadle zkosí doleva a naopak. Proto se sledovaná veličina liší v levé a pravé půlce znaménkem. Bude popsána funkcí, která je lichou funkcí proměnné $x$. Stačí vypočítat levou půlku a podle ní doplnit půlku pravou.
 
 Pro zajímavost: u dřeva jako nelineárního anizotropního materiálu je nutné před výpočtem rozhodnout, na kolik elementů se během výpočtu těleso rozdělí a při výpočtu postupně zvyšovat zatížení, sledovat poměry v každém kousku tělesa a rozhodovat, kdy se dostaneme mimo platnost Hookova zákona pro deformaci a přepneme v daném místě na nelineární chování. Proto výpočet trvá cca 20 minut nebo 40 minut (podle velikosti elementů, na které se těleso rozdělí). Oproti tomu výpočet například s ocelí trvá řádově vteřiny, protože úloha je lineární, izotropní, dá se vypočítat hned konečný stav a je možné během výpočtu zmenšovat velikost elementů jenom v místech, kde to je nutné. U dřeva výpočet jedné čtvrtiny modelu výrazně pomůže, závislost doby výpočtu na složitosti dokonce není lineární. Výpočet čtvrtinového modelu trvá výrazně kratší dobu než je čtvrtina doby pro výpočet celého modelu.
-
 
 ## Lokální extrémy
 
@@ -111,7 +100,6 @@ obecnější úlohu, jak hledat nejenom minimální hodnotu, ale i maximální
 hodnotu. Zaměříme se na minima a maxima, která jsou lokální (s funkcí pracujeme
 pouze na určitém intervalu, třeba i krátkém). 
 
-
 ### Lokální extrémy spojitých funkcí
 
 Následující definice si všímají bodů které mají tu vlastnost, že v okolí není možné najít body buď s vyšší funkční hodnotou (potom se jedná o lokální maximum, nikde v okolí mi funkce neukáže více) nebo s nižší funkční hodnotou (analogicky, lokální minimum).
@@ -130,16 +118,13 @@ Předchozí věta představuje *nutnou podmínku* pro lokální extrém. V bodě
 
 ### Příklad: Nosník maximální tuhosti
 
-
 \iffalse
 
 <div class='obtekat'>
 
 ![Ukázka zpracování kulatiny na trám ve VCJR v Útěchově. Zdroj: J. Dömény.](vyrezavani_tramu.jpg)
 
-
 ![Ukázka zpracování kulatiny na trám sekerou. Zdroj: https://www.bladeforums.com](hewing.jpg)
-
 
 ![K problému vyřezání co nejtužšího nosníku. Budeme předpokládat krásný kmen, dokonalý válec bez vad, které by nás limitovaly při plánování, jak má výsledný trám vypadat.](nosnik.png)
 
@@ -179,7 +164,6 @@ Poměr výšky a šířky u nosníku maximální tuhosti tedy bude $\sqrt{3}:1$
 a šířka bude rovna polovině průměru.
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9QSFHX5OVK08jQtM2IM9YqLiwq0UiJM9LNiDMCihdn5JdrpOmlZKaBVGAI6BXn55SlgmQAYWkWzQ==&lang=sage)
-
 
 ## Postačující podmínka pro lokální extrém
 
@@ -248,12 +232,9 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 **Příklad.** Najděte lokální extrém funkce $y=\frac{x^3}{x+2}$. Derivace je $y'=\frac{2(x+3)x^2}{(x+2)^2}$.
 
-
-
 ### Příklad: kritická tloušťka izolace trubky
 
 <div class="shorten" data-text="Využití derivace hledání lokálního extrému funkce.">
-
 
 \iffalse
 
@@ -332,7 +313,6 @@ proudu. Proto by izolace neměla překročit kritický poloměr.
 
 ## Odbočka: triky pro práci s funkcemi 1
 
-
 1. Vhodnou volbou jednotek dokážeme eliminovat některé
 parametry. Přesněji, vhodnou volnou jednotek dokážeme některým
 parametrům dát konkrétní numerickou hodnotu. Vyšetřovaná funkce je
@@ -369,7 +349,6 @@ $$V=k_2r^3,$$ kde $k_1$ a $k_2$ jsou konstanty a $r$ vhodný délkový parametr.
 Díky tomuto je dokonce možné snadno najít vztahy mezi objemem a povrchem $$V=k_3 S^{3/2}$$ a $$S=k_4 V^{2/3}.$$ Tyto vztahy je snadné si pamatovat, stačí se řídit tím, že mocnina musí být taková, aby vycházely správné jednotky. Metodami středoškolské matematiky dokonce dokážeme dokonce konstanty $k_1$ až $k_4$ najít pro jednotlivá tělesa jako je koule apod. Často nás však přesná hodnota konstanty nezajímá a jde nám jenom o charakter funkční závislosti, o přímou úměrnost mezi vhodnými mocninami. Vztahy stejného typu platí například i pro kužel s konstantním úhlem u vrcholu. To je možné využít při skladování sypkého materiálu (písek nasypaný na hromadu zaujme tvar kužele, úhel u vrcholu je daný vlastnostmi písku) nebo vyprazdňování nádrže ve tvaru trychtýře. Podobnost nacházíme i v živé přírodě, výrazná je například u ryb, kdy velká ryba je často tvarově blízká zvětšené malé rybě (viz S. Vogel, Comparative biomechanics, kap. 3). Formálně je podobné úvahy možno zobecnit pomocí [Buckinghamova Pi-teorému](http://geo.mff.cuni.cz/seismosoft/Pi-teorem.pdf).
 
 -->
-
 
 ## Buckinghamův $\Pi$-teorém
 
@@ -413,7 +392,6 @@ bezrozměrných parametrů, tj. $$f_0(\pi_1,\pi_2,\dots,\pi_{n-m})=0,$$
 nebo
 $$\pi_1=f(\pi_2,\dots,\pi_{n-m}).$$
 
-
 Formální tvar a metoda výběru bezrozměrných parametrů jsou v tuto
 chvíli pro nás poměrně komplikované a proto bude nejjednodušší si
 problematiku ukázat na příkladech. Jejich hlavním smyslem je to, že
@@ -446,14 +424,11 @@ alternativní postup nemáme k dispozici.
 
 ![Vánoční strom pro Prahu v prosinci 2019. Ořezání průměru kmene na polovinu sníží tuhost kmene cca 16-krát (za předpokladu homogenity, ve skutečnosti je to ještě výraznější). Vánoční strom v Praze proto musí držet ocelová lana. Zdroj: Pražský deník](strom_praha_2019.jpg)
 
-
 ![Nosníky obdélníkového průřezu. Trojnásobný nosník má devětkrát vetší tuhost než nosníky tři. Slepením tří nosníků k sobě zvýšíme tuhost devětkrát ve srovnání s případem, kdy bychom je na sebe volně položili.](nosniky_unod.jpg)
 
 </div>
 
 \fi
-
-
 
 **Příklad (tuhost nosníků čtvercového a kruhového průřezu).** Veličinou ovlivňující tuhost nosníku při
 daném materiálovém složení je kvadratický moment průřezu $I$ v
@@ -464,8 +439,6 @@ kvadratickým průřezem $I$ a rozměrem $a$ se dá vyjádřit pomocí jedné be
 příkladě existuje konstanta $k$ taková, že $\frac I{a^4}=k,$ tj. $$I=ka^4.$$ Po seznámení se
 s dvojným integrálem uvidíme, že pro čtvercový průřez o straně čtverce
 $a$ je $k=\frac 1{12}.$
-
-
 
 **Příklad (tuhost nosníků obdélníkového průřezu).** Budeme pokračovat
 v předchozím příkladě. Pro obdélníkový průřez o rozměrech $w$ krát $h$
@@ -491,15 +464,12 @@ vzroste tuhost $3^3$-krát, tj. 27-krát v porovnání s jediným
 nosníkem. Tři spojené nosníky mají tedy devítinásobnou tuhost v
 porovnání se třemi na sobě volně položenými.
 
-
 ## Vektorové funkce, gradient
 
 https://youtu.be/trdMQ6WOGlk
 
 Výstupem vektorové funkce je vektor. Vstupem je buď reálné číslo (funkce jedné proměnné), nebo vektor. V prvním případě se jedná o parametrickou křivku v [rovině](https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkv0YhOzi_WKNHUUSjOzAPSsToKGgY6BZmamgDCkhs_&lang=sage&interacts=eJyLjgUAARUAuQ==) nebo v [prostoru](https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkvMU7RiC7RSs4v1ijR1FEo0SrOzAOxSmJ1FDQMdMy0CjI1NQHngx4S&lang=sage&interacts=eJyLjgUAARUAuQ==), ve druhém případě bývá zpravidla na vstupu stejný počet veličin jako na výstupu a jedná se o vektorové pole (každému bodu v rovině je přiřazen [rovinný vektor](https://sagecell.sagemath.org/?z=eJyr0KnUqbItSyzSUK9QqFSoUtfk5SrIyS-JL0tNLskvik_LTM1J0dDQrdSp0NRR0KjQ0TXUMQSxKqGsxOICoMr4osSSzHxbQ00A7BcYPA==&lang=sage&interacts=eJyLjgUAARUAuQ==) nebo každému bodu v prostoru je přiřazen prostorový vektor). Vektory zapisujeme pomocí jejich komponent následovně.
 $$\vec F=(P,Q,R)=P\vec i+Q\vec j+R\vec k = P\vec e_1+Q\vec e_2+R\vec e_3$$
-
-
 
 ### Gradient
 
@@ -520,12 +490,9 @@ vektorem. Nazývá se *nabla* nebo *Hamiltonův operátor*.
 
 > Poznámka (fyzikální význam gradientu). Gradient skalární veličiny $f$ je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny $f$. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat, například vedení tepla nebo difuze. V praxi nás proto většinou zajímá směr maximálního poklesu, tj. $-\nabla f$.
 
-
-
 ### Lineární aproximace rovinné transformace
 
 <div class="shorten" data-text="Derivace a lineární aproximace funkce více proměnných. Využívá se například při popisu deformace">
-
 
 Následující pasáže jsou motivací pro tematický celek, kterému se
 začneme věnovat na další přednášce.
@@ -593,7 +560,6 @@ malých deformací.
 ![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
 
 </div>
-
 
 \fi
 

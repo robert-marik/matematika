@@ -10,7 +10,6 @@
 > * V předchozích přednáškách jsme se seznámili s derivacemi, s nástroji umožňující převést fyzikální představu o procesech v materiálu do kvantitativní podoby, kdy dokážeme studované jevy kvantifikovat. V praxi však je analytické řešení těchto fyzikálních modelů realizovatelné pouze v nejjednodušších případech. Pro netriviální příklady používáme numerický přístup, který je v mnoha případech nakonec redukován na řešení soustavy rovnic. Tyto soustavy mají typicky obrovské množství rovnic a neznámých (řádově i v jednoduchých aplikacích řádově desetitisíce nebo statisíce rovnic) a proto je nutné mít k dispozici nástroje, umožňující práci s takto obrovskými soustavami rovnic. V této přednášce si představíme nové objekty, matice, se kterými je libovolně velkou soustavu rovnic možno zapsat jako jeden součin tvaru $$AX=B.$$
 > * V úvodní přednášce jsme naformulovali [rovnici vedení tepla](https://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/#rovnice-veden%C3%AD-tepla-v-1d) jako rovnici, popisující fyzikální podstatu přenosu tepla v materiálu. Tento popis je ve vícerozměrných úlohách nutno zobecnit na dvourozměrný nebo trojrozměrný případ. Potom však u materiálu, který má v různých směrech různé vlastnosti, dochází k tomu, že odezva nemá stejný směr jako podnět. Například u vedení tepla je tok tepla dán směrem poklesu teploty jenom částečně. Vlivem vysoké vodivosti v podélném směru ve srovnání s příčným směrem však je tok tepla odkloněný částečně do podélného směru. Pro popis takového procesu tedy potřebujeme zobrazení, které dokáže změnit nejenom délku, ale i směr vektoru. Toto zobrazení je možné realizovat pomocí matic.
 
-
 https://youtu.be/cPrmTKdk3yk
 
 ## Vektory 
@@ -25,7 +24,6 @@ nazývá dimenze vektoru. Tyto komponenty jsou zpravidla čísla nebo
 skalární funkce. Aby se s vektory dalo rozumně pracovat, musí tvořit
 vhodnou strukturu. Například operace musí mít neutrální prvek a
 každý vektor musí mít opačný prvek.
-
 
 > Definice (vektory, vektorový prostor).
 > Množinu $V$ uspořádaných $n$-tic  $(a_1, a_2,\dots, a_n)$ s operacemi sčítání a násobení reálným číslem
@@ -43,7 +41,6 @@ Neutrálním prvkem vzhledem ke sčítání vektorů je *nulový vektor* $\vec o
 všechny komponenty jsou nulové. Vektor, ke kterému přičteme nulový
 vektor, se nezmění.
 $$\vec u +\vec o=\vec u$$
-
 
 ### 2D a 3D a vektory v geometrii
 
@@ -95,8 +92,6 @@ Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/P
 
 <!-- YTB qbnZ4wDYYDQ -->
 
-
-
 ### Lineární kombinace
 
 > Definice (lineární kombinace).
@@ -116,16 +111,13 @@ Výpočet lineární kombinace si můžete vyzkoušet online.
 
 `ww2:problems/vektory/linearni_kombinace.pg`
 
-
 \fi
-
 
 <div class='obtekat'>
 
 ![Stejný modrý vektor vyjádřený ve dvou různých bázích ve 3D, v červené a fialové bázi. Bázové vektory volíme zpravidla jednotkové délky, na obrázku už jsou vynásobeny vhodnými konstantami tak, abychom jako lineární kombinaci obdrželi požadovaný vektor. Zdroj: Wikipedia.](baze.png)
 
 </div>
-
 
 **Příklad.** Lichoběžníkové pravidlo   $$
     \int_a^bf(x)\,\mathrm dx\approx \frac h2\Bigl(
@@ -134,15 +126,12 @@ Výpočet lineární kombinace si můžete vyzkoušet online.
 ukazuje, že určitý integrál je možno aproximovat lineární kombinací
 funkčních hodnot na pravidelné mřížce rozdělující obor integrace. Koeficienty lineární kombinace jsou dvojky s vyjímkou prvního  a posledního koeficientu, které jsou jednotkové. Existují i další aproximační vzorce, které používají jiné koeficienty a jsou založeny například na aproximaci funkce parabolami namísto přímek.
 
-
 **Příklad.** V metodě konečných diferencí (viz druhá přednáška o derivacích)  se derivace aproximují výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Pro konkrétnost, pro první derivaci máme
 $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x-h)}{2h} =\frac 1{2h}f(x+h)-\frac 1{2h}f(x-h), $$
 a pro druhou derivaci
 \dm$$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx\frac{f(x-h)-2f(x)+f(x+h)}{h^2}=\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
 
-
 ### Model migrace jako přepínání stavů
-
 
 \iffalse 
 
@@ -204,7 +193,6 @@ znát rozložení populace po $k$ letech, situace se komplikuje. Dostali
 bychom rekurentní vzorec, který je nutno stále opakovat. Pro
 odstranění tohoto nepohodlí se zavádí pojem matice, viz níže.
 
-
 ### Lineární závislost a nezávislost vektorů
 
 V $n$-rozměrném prostoru existuje $n$-tice vektorů, pomocí
@@ -234,7 +222,6 @@ rozlišení toho, zda se nulový vektor dá nebo nedá vyjádřit jako
 netriviální lineární kombinace zavedeme nové pojmy, lineární závislost
 a nezávislost.
 
-
 > Definice (lineární závislost a nezávislost).
 >  Řekneme, že vektory $\vec u_1$, $\vec u_2$, $\dots$, $\vec u_k$ jsou
   *lineárně závislé*, jestliže existuje alespoň jedna
@@ -260,7 +247,6 @@ tom případě říkáme, že vektory mají stejný směr. V ostatních případ
 se lineární závislost a nezávislost naučíme posuzovat později při
 výpočtu hodnosti.
 
-
 ## Pootočení vektoru
 
 https://youtu.be/7vyBwmZZ3Pg
@@ -270,8 +256,6 @@ https://youtu.be/7vyBwmZZ3Pg
 ![Jednotkové vektory ve směru os pootočíme o úhel $\theta$ a výsledek vyjádříme jako lineární kombinaci původních vektorů.](otoceni.png)
 
 </div>
-
-
 
 Ve dvourozměrném vektorovém prostoru uvažujme jednotkové vektory ve směru souřadných os $\vec e_1=(1,0)$ a $\vec e_2=(0,1)$.
 Pokud pootočíme vektory o úhel $\theta$ v kladném směru, mají pootočené vektory $\vec f_1$, $\vec f_2$ souřadnice
@@ -291,8 +275,6 @@ $$
 \end{aligned}
 $$
 
-
-
 <!-- YTB pIq92-akbaI -->
 
 ## Matice 
@@ -311,14 +293,12 @@ https://youtu.be/DY044M_RbVs
 
 \fi
 
-
 Pro matice definujeme *sčítání* a *násobení číslem* stejně jako u vektorů,
 tj. po složkách. Má potom smysl mluvit o lineární kombinaci matic a o
 jejich lineární závislosti či nezávislosti. Tyto operace přirozeně
 přebírají všechny důležité vlastnosti operace sčítání, jako jsou
 asociativita, komutativita, existence neutrálního prvku nebo existence
 opačného prvku.
-
 
 V této fázi je vlastně jedno, jestli prvky jsou uspořádány jako
 řádkový nebo sloupcový vektor nebo jako matice. Odlišení matic a
@@ -339,7 +319,6 @@ $$
   >
   >Slovy: v $j$-tém sloupci matice $AB$ je lineární kombinace sloupců matice $A$, přičemž koeficienty této lineární kombinace jsou prvky z $j$-tého sloupce matice $B$.
 
-
 Na maticový součin můžeme pohlížet i pomocí pojmů  známých z analytické geometrie. Prvky v součinu matic jsou skalárními součiny řádků první matice se sloupci druhé matice.
 
 Maticový součin
@@ -353,7 +332,6 @@ Maticový součin
 
 Můžeme tedy měnit uzávorkování, můžeme
 roznásobovat závorky, nesmíme však měnit pořadí matic při násobení.
-
 
 ### Neutrální prvek maticového součinu
 
@@ -387,11 +365,7 @@ Výpočet operací s maticemi je nejlepší se naučit při výpočtu konkrétn�
 
 `ww2:problems/matice/soucin_matice_a_vektoru.pg`
 
-
 \fi
-
-
-
 
 ## Aplikace maticového součinu 1/3
 
@@ -399,9 +373,7 @@ Nejdůležitější aplikací maticového součinu je to, že pomocí maticovéh
 
 Je-li druhá matice v součinu sloupcový vektor $\vec u$, je výsledkem maticového součinu matice $A$ a tohoto vektoru opět sloupcový vektor $A\vec u$. Matici je tedy možné chápat jako zobrazení, kdy vektoru $\vec u$ je přiřazen vektor $\vec v$ vztahem $$\vec v = A\vec u.$$ Tento vztah je možné chápat jako přímé rozšíření vztahu pro přímou úměrnost mezi veličinami. Zobecnění je v tom, že obě veličiny mezi nimiž je vztah úměrnosti jsou vektorovými veličinami a konstanta úměrnosti je matice. Ve fyzice tato matice mívá ještě některé speciální vlastnosti související například s tím, že fyzikální zákony nezávisí na volbě souřadné soustavy a proto se takové matice nazývají **tenzory** (přesněji tenzory druhého řádu). Používáme je pro popis zobrazení mezi vektory, které nezachovává směr vektoru. Například studium transportních dějů v anizotropních materiálech (tj. například vedení tepla ve dřevě nebo difuze ve dřevě).
 
-
 ## Aplikace maticového součinu 2/3
-
 
 https://youtu.be/4jqBoskZ9Ak
 
@@ -428,7 +400,6 @@ hraje důležitou roli v numerické matematice při numerickém modelování fyz
 Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, které zachovává součet a násobení konstantou, mezi něž derivování patří. Jiný přístup k maticové formulaci derivace, k derivování na množině polynomů, si ukážeme ve cvičení.
 
 ### Markovovy řetězce
-
 
 \iffalse 
 
@@ -547,26 +518,21 @@ https://youtu.be/7NH8p323zxo
 
 Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima materiálového inženýra. Matici budeme chápat jako objekt, který je možné vynásobit s vekorem a získat jiný vektor. V určitém smyslu jde tedy o zobrazení, kdy vzory i obrazy jsou vektory. 
 
-
 ### Matice jako zobrazení v geometrii
-
 
 manimp:MatrixMultiplication|Nejdůležitější rolí matic v materiálovém inženýrství je jejich schopnost jistým způsobem transformovat vektory (body) prostoru. Přesněji, zobrazení zachovává rovnoběžnost a dělící poměr. Rovnoměrně rozmístěná mřížka se zobrazí zase na rovnoměrně rozmístěnou mřížku. (První část prezentace).
 
 <div class='obtekat'>
 
-
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>0.5\linewidth 0.5\linewidth\else\Gin@nat@width\fi}
 \makeatother
-
 
 ![Příklad transformace dané maticí. Zachovává se například rovnoběžnost a středy úseček. Přímky se zobrazují na přímky.](transformace.png)
 
 ![Transformace 3D objektu do roviny pomocí matice. Koeficienty matice můžou realizovat libovolné natočení.](domecek.png)
 
 </div>
-
 
 Je-li $A$ čtvercová matice, můžeme každému vektoru $\vec q$ přiřadit vektor
 $Y=A\vec q$ a tím definovat zobrazení $n$-rozměrného prostoru do sebe. Dá
@@ -597,7 +563,6 @@ Tuto matici budeme potřebovat při studiu deformace při odvození matematické
 </div>
 
 \fi
-
 
 Matice chápejme jako zobrazení, které má na vstupu vektor a na výstupu opět vektor. Vstupem bývá většinou podnět, kde rozhodující je nejenom síla podnětu, ale i jeho směr. Například nerovnováha tlaku. Výstupem bývá odezva, například proudění vyvolané nerovnováhou tlaku. Tato odezva v izotropním prostředí má směr podnětu, v prostředí s určitou strukturou by se však směr odezvy mohl odchýlit. 
 
@@ -635,9 +600,7 @@ vlastní hodnotě.
 
 manim:Eigenvectors|vfzT25D6Zz8|Vlastní směry z hlediska materiálového inženýrství pro ortotropní materiály.
 
-
 \fi
-
 
 **Příklad.** Matice rotace nemá žádnou vlastní hodnotu (pokud tedy
   uvažujeme vlastní hodnoty v množině reálných čísel), protože pootočením se
@@ -650,7 +613,6 @@ vlastní vektor $(0,1)$ příslušný vlastní hodnotě $0$. Protože vlastními
 
 **Příklad.** Platí $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix} \begin{pmatrix}   2\\1 \end{pmatrix} = \begin{pmatrix}   4\\2 \end{pmatrix}$
 a matice $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix}$ má vlastní vektor $(2,1)$ příslušný vlastní hodnotě $2$, protože vektor $(4,2)$ je dvojnásobkem vektoru $(2,1)$. Vlastním vektorem je i každý nenulový násobek vektoru $(2,1)$.
-
 
 \iffalse
 
@@ -687,7 +649,6 @@ V aplikacích často bývá matice "symetrická podle diagonály" a u takové
 matice vlastní vektory vždy existují. Co se přesně myslí pod pojmem
 "symetrická matice" si uvedeme na následujícím slidu.
 
-
 ## Transponovaná matice
 
 https://youtu.be/Toqwz-Oxg-4
@@ -698,7 +659,6 @@ https://youtu.be/Toqwz-Oxg-4
   $A^T\in\mathbb R^{n\times m}$ a
   $$     A^T=(a_{ji}), $$
   kde $a_{ij}$  jsou prvky matice $A$.
-
 
 **Příklad.** Matice transponovaná k matici $A=
 \begin{pmatrix}
@@ -721,16 +681,13 @@ má tento rozklad ve tvaru
 $$A=\begin{pmatrix}  -4 & 3 \\ 3 & 2\end{pmatrix}+\begin{pmatrix}  0 & 4 \\ -4 & 0\end{pmatrix}.$$
 Tento trik použijeme pro odvození tvaru tenzoru malých deformací, ze zobrazení takto totiž dokážeme odfiltrovat část související s pootočením a část, která s pootočením nesouvisí. Ta druhá nás zajímá, protože popisuje deformaci.
 
-
 > Věta (souvislost transponování matice a maticového součinu). Pro čtvercové matice platí $$(AB)^T=B^T A^T.$$
-
 
 **Příklad.** Pro Markovův řetězec s maticí a sloupcovými vektory $\vec q$ dostaneme transponováním vztahu
 $$\vec q_{k+1}=A\vec q_k$$
 vztah
 $$\vec q^T_{k+1}=\vec q^T_k A^T$$
 s řádkovými vektory a maticí, která má součet čísel v každém řádku roven 1. Takto jsou Markovovy řetězce také často zaváděny, například na [Wikipedii](https://cs.wikipedia.org/wiki/Markov%C5%AFv_%C5%99et%C4%9Bzec#Popis_Markovova_%C5%99et%C4%9Bzce).
-
 
 ## Tenzor malých deformací
 

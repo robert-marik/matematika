@@ -65,7 +65,6 @@ Obecná bilance veličiny, která má zdroje a spotřebiče a je přenášena to
     nebo délky, podle počtu dimenzí v úloze) za jednotku času,
     označíme $\sigma$.
 
-
 Zákon zachování (se zohledněním toku a zdrojů) je vlastně celková
 bilance stavové veličiny. Přirozeným jazykem je možno tuto bilanci
 formulovat následovně.  
@@ -81,14 +80,12 @@ se naučili jako jednu z aplikací parciálních derivací: jedná se o
 záporně vzatou derivaci podle prostorové proměnné vynásobenou
 fyzikální materiálovou konstantou. Ještě se musíme naučit měřit intenzitu toku a její změny ve dvou nebo třech dimenzích.
 
-
 ## Tok a gradient v konstitutivních zákonech
 
 https://youtu.be/xUhAudBfGLo 
 
 > Poznámka (konstitutivní zákony). V aplikacích často formulujeme
 zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látku nebo materiál a udávají odezvu tohoto materiálu na externí stimul. Tyto zákony se nazývají *konstitutivní zákony* a formulujeme je pomocí gradientu a toku vektorového pole. Viz též [Wikipedie](https://en.wikipedia.org/wiki/Constitutive_equation).
-
 
 \iffalse
 
@@ -99,7 +96,6 @@ zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látk
 </div>
 
 \fi
-
 
 Například vítr (tok
 molekul vzduchu) je vyvolán nerovnoměrným rozložením vzduchu (jeho
@@ -152,7 +148,6 @@ Difuzí se například dřevo zbavuje vlhkosti při vysoušení.
 
 ### Darcyho zákon (proudění podzemní vody)
 
-
 \iffalse
 
 <div class='obtekat'>
@@ -186,9 +181,7 @@ vlastně o celkovou energii vody s tím, že některé části považujeme za
 zanedbatelné. Například často neuvažujeme
 kinetickou energii nebo osmózu a kapilární jevy.
 
-
 ### Fourierův zákon (vedení tepla)
-
 
 \iffalse
 
@@ -200,7 +193,6 @@ kinetickou energii nebo osmózu a kapilární jevy.
 
 \fi
 
-
 Fourierův zákon se týká vedení tepla a vyjadřuje, 
 že vektor hustoty tepelného toku $\vec q$ vyvolaného gradientem teploty $\nabla T$
 je dán vztahem 
@@ -210,7 +202,6 @@ případ, je veličina $k$ symetrickým
 tenzorem. Je-li materiál izotropní, je
 $k$ skalární veličinou, případně skalární veličina násobená
 jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter.
-
 
 ### Soretův efekt (termodifuze)
 
@@ -225,7 +216,6 @@ kde $s$ je koeficient termodifuze.
 Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. Te je v kontrastu s ostatními konstitutivními zákony, kde tok proudí vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis. Viz Wikipedia a heslo Thermophoresis.
 
 ## Speciální případy vztahu mezi gradientem a tokem
-
 
 \iffalse
 
@@ -289,7 +279,6 @@ souřadnic. Pokud bychom neměli možnost zvolit
 soustavu souřadnic tak, aby matice byla diagonální, máme alespoň
 jistotu, že vlastní čísla zůstanou stejná. 
 
-
 ### Ortotropní případ ve 2D
 
 Stejné jako ve 3D, pouze chybí třetí rovnice.
@@ -298,7 +287,6 @@ Stejné jako ve 3D, pouze chybí třetí rovnice.
 
 Stejné jako ortotropní případ, ale navíc platí $k_{11}=k_{22}=k_{33}=k.$ Potom
 $\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr.
-
 
 ## Divergence
 
@@ -346,11 +334,9 @@ Výše uvedenými úvahami je motivována následující definice a věta. (Defi
 
 > Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\nabla\cdot\vec F$ nebo $\mathop{\mathrm{div}} \vec F$.
 
-
 > Věta (výpočet divergence).
 > Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\nabla\cdot\vec F=\mathop{\mathrm{div}}\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
 > Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen. 
-
 
 > Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
 
@@ -407,8 +393,6 @@ Matematickou formulací celkové bilance  je **rovnice kontinuity**.
 $$
       {\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   $$
 
-
-
 >Poznámka (fyzikální interpretace členů rovnice kontinuity).
 >
 >* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se roste hustota stavové veličiny $u$ v daném místě a čase.
@@ -456,7 +440,6 @@ V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i�
 
 </div>
 
-
 Rovnici kontinuity můžeme použít pro popis vody v korytě. Úloha je jednodimenzionální a tok $Q$ je skalární veličina. Divergence toku se díky jednodimenzionálnosti redukuje na derivaci podle prostorové proměnné $\frac{\partial Q}{\partial x}$. Zachovávající se veličinou je množství vody. Hustota zachovávající se veličiny je množství vody na metr délky toku, tj. _průtočný průřez_ $A$ (obsah průřezu říčního toku  v daném místě). Zdroje zpravidla neuvažujeme, tj. $\sigma=0$. Rovnice kontinuity má potom tvar 
 $$
       {\frac{\partial A}{\partial t}= - {\frac{\partial Q}{\partial x}}}
@@ -497,8 +480,6 @@ průřezem.
 
 [Středoškolský makroskopický tvar](https://cs.wikipedia.org/wiki/Rovnice_kontinuity#Rovnice_kontinuity_ve_st%C5%99edo%C5%A1kolsk%C3%A9_fyzice) jednorozměrné rovnice kontinuity pro proudění nestlačitelné tekutiny je $$S u = \mathrm{konst}.$$
 
-
-
 ## Difuzní rovnice
 
 https://youtu.be/MH8IzenZZCo
@@ -524,7 +505,6 @@ $$
       {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)},$$
 který se nazývá *difuzní rovnice*.
 
-
 >Poznámka (fyzikální interpretace difuzní rovnice).
 >
 >* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se mění
@@ -533,8 +513,6 @@ který se nazývá *difuzní rovnice*.
 >* Člen $\nabla u$ udává nerovnoměrnost v prostorovém rozložení stavové veličiny. Pomocí difuzní matice $D$ a konstitutivního zákona tuto nerovnoměrnost přepočítáme na tok, který se snaží uvažovanou nerovnoměrnost vyrovnat. Tento tok je reprezentován výrazem $-D\nabla u$.
 >* Záporně vzatá divergence toku udává, jak tok v daném místě ztrácí na intenzitě. Vzhledem k zápornému znaménku v konstitutivním zákoně má záporně vzatá divergence tvar $$\nabla\cdot \bigl(D\nabla u\bigr).$$ Představuje přírůstek hustoty stavové veličiny v daném místě za jednotku času, způsobený zeslábnutím toku.
 >* Rovnice jako celek vyjadřuje, že navýšení hustoty stavové veličiny (tj. množství stavové veličiny v jednotkovém objemu) je součtem navýšení díky zdrojům a navýšení díky zeslabení toku v daném místě.
-
-
 
 ## Vedení tepla
 
@@ -607,8 +585,6 @@ elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká
 
 \fi
 
-
-
 V porézním materiálu voda prostupuje materiálem a zachovává se její
 množství, což bude stavová veličina. Hustotu tohoto množství, tj. obsah vody v jednotce
 objemu, označíme $c$ a pro tuto veličinu formulujeme matematický
@@ -623,7 +599,6 @@ $$
     ve vlhkém prostředí*. Stejná rovnice napsaná pro vzduch se používá
   k modelování proudění v atmosféře při *předpovídání počasí*.
 
-
 V literatuře věnované problematice dřeva se rovnice difuze použitá na modelování vlhkosti ve dřevě označuje jako Druhý Fickův zákon (A. Požgaj a kol., Štruktúra a vlastnosti dreva, str. 202, P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60).
 
 V praxi je dřevo často s jistou přesností homogenní, ale difuzní
@@ -632,7 +607,6 @@ vlhkosti a difuzním tokem není lineární. Přesto i v tomto případě
 používáme Fickův zákon, ovšem složky difuzního koeficientu
 nepovažujeme za konstanty, jsou závislé na $c$ a jejím prostřednictvím
 i na $x$.
-
 
 ## Rovnice podzemní vody
 
@@ -681,11 +655,9 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(T\nabla h\bigr
 U proudění s napjatou hladinou (mezi dvěma nepropustnými vrstvami, angl. *confined aquifer*) transmisitiva závisí pouze na fyzikálních vlastnostech zvodně. Například pro homogenní izotropní materiál je konstantní. U proudění s volnou hladinou (bez horní nepropustné vrstvy, angl. *unconfined aquifer*) je transmisivita úměrná tloušťce vrstvy obsahující vodu. Zpravidla nulovou hodnotu piezometrické hladiny volíme na dolní nepropustné vrstvě a potom platí $T=kh$, kde $k$ závisí pouze na fyzikálních vlastnostech půdy. Proto se často rovnice podzemní vody pro proudění s volnou hladinou zapisuje ve tvaru
 $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\bigr).}$$
 
-
 ## Rovnice vedení tepla ve 2D v různých podmínkách
 
 https://youtu.be/5hy6lB1O4KQ
-
 
 \iffalse
 
@@ -697,12 +669,9 @@ https://youtu.be/5hy6lB1O4KQ
 
 ![Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.](rtb.png)
 
-
-
 </div>
 
 \fi
-
 
 Uvažujme rovnici vedení tepla ve dvou rozměrech a v prostředí bez zdrojů.
 $$\rho c\frac{\partial T}{\partial t}=\nabla\cdot (D\nabla T)\tag{***}$$
@@ -711,7 +680,6 @@ $$\rho c\frac{\partial T}{\partial t}=\nabla\cdot (D\nabla T)\tag{***}$$
 
 Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice (***) se redukuje na 
 $$\nabla\cdot (D\nabla T)=0.$$
-
 
 ### Homogenní izotropní materiál a lineární materiálové vztahy
 
@@ -725,7 +693,6 @@ $$\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\
 Pro $\tau=\frac{Dt}{\rho c}$ (změna jednotky času) dostáváme
 $$\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}.$$
 
-
 ### Ortotropní materiál, nehomogenní nebo nelineární
 
 Materiál má dva charakteristické směry související s rovinami
@@ -736,14 +703,11 @@ Veličina $D$ je diagonální matice. Pro $$D=\begin{pmatrix}D_x & 0\\ 0& D_y\en
 $$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial T}{\partial x}\right)
 +\frac{\partial }{\partial y}\left(D_y\frac{\partial T}{\partial y}\right).$$
 
-
-
 ### Homogenní ortotropní materiál a lineární materiálové vztahy
 
 Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné a nezávislá na $T$.
 Stejné jako předchozí případ, ale $D_x$ a $D_y$ jsou konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
 $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.$$
-
 
 ## Umění identifikace předpokladů z tvaru difuzní rovnice
 
@@ -778,7 +742,6 @@ https://youtu.be/TjyB3kP2uXE
 ![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
 
 </div>
-
 
 \fi
 

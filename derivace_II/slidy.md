@@ -12,7 +12,6 @@ https://youtu.be/9N2Z02S2tAw
 
 </div>
 
-
 S využitím aparátu derivací jsme v minulé přednášce poznali a naučili nebo naučíme se ve cvičení řešit úlohy tří základních různých typů:
 
 1. *K funkci najdi její derivaci, tj. rychlost změny.* Toto je klasické derivování, případně doplněné o slovní interpretaci derivace. Použijeme vzorce a jedná se o čistě manuální dovednost. Vstupem je funkce, výstupem její derivace a případně slovní interpretace této derivace. Příkladů je spousta na webu i v učebnicích.
@@ -89,7 +88,6 @@ mocné techniky používané inženýry k tomu, aby se popis problémů a
 Buď $f:\mathbb R\to\mathbb R$ funkce, která má derivaci. V okolí bodu $x_0$ platí přibližný vzorec $$f(x)\approx f(x_0)+ f'(x_0)(x-x_0)$$ neboli
 $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 
-
 > Poznámka (slovní interpretace vzorce pro lineární aproximaci). Výše uvedený vzorec není těžké rozšifrovat.
 >
 >* Veličina $f(x)$ je funkční hodnota v bodě $x$, tu chceme odhadnout.
@@ -108,20 +106,15 @@ což získáme dosazením $x+h$ za $x$ a $x$ za $x_0$.
   rychlostí 0.5 metru za rok. V roce $x$ je jeho výška dána vzorcem
   $$h(x)=3+0.5(x-2019).$$
 
-
-
 **Příklad (aproximace důležitých funkcí v okolí nuly).** Ve cvičení
 ukážeme platnost následujících přibližných vzorců, které platí pro $x$
 blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
 (1+x)^n\approx 1+nx.$$ První dva vzorce využijeme později při popisu malých
 rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na webu [fyzikální olympiády](http://fyzikalniolympiada.cz/studijni-texty) v dokumentu [Aproximace ve fyzikálních úlohách](http://fyzikalniolympiada.cz/texty/aproxim.pdf).
 
-
 ### Lineární aproximace v některých fyzikálních zákonech
 
 <div class="shorten" data-text="Lineární aproximace se běžně využívá v při aproximaci fyzikálních zákonů. Středoškolské vzorce pro potenciální a kinetickou energii jsou lineárními aproximacemi obecnějších vztahů.">
-
-
 
 \iffalse
 
@@ -154,7 +147,6 @@ potenciál v tíhovém poli Země. Tuto veličinu známe lépe ze vzorce pro
 potenciální energii tělesa o hmotnosti $m$, který má tvar $$E=mgh.$$
 
 [Online výpočet tíhového zrychlení](https://sagecell.sagemath.org/?z=eJxNjrEKgzAUAPdA_uFBB6Ngmlir7fDGji4OjoVHRQ22Rp6p31916nhwHDfSPBMWuihzc0usearU2hjgBD3T6oLzE73h5acl0BSkqLG4lNYYsytMrfsu4Dt4EIdBigqv-l5mRyfLj8yHln-DcSVWEUexFI3iGNNxP0iq8wYgRY-Nbl3XbaQY683qf4UjLIo=&lang=sage)
-
 
 **Příklad (potenciální a [kinetická](https://cs.wikipedia.org/wiki/Kinetick%C3%A1_energie) energie).**
 V předchozím příkladě je možné využít vztah 
@@ -203,7 +195,6 @@ Pokusíme se modelovat funkci dávající do souvislosti velikost podnětu a rea
 * Matematicky je tedy povaha přímé úměrnosti v materiálových vztazích zřejmá a experimentálně je možné ověřit, pro jaké oblasti platí. Toto nám však mnohdy nestačí a snažíme se tyto vztahy ještě odvodit ze základních fyzikálních vztahů a z představy jak daný proces funguje. To otevírá možnosti potvrdit si, že naše představa o chování materiálu je správná.
 * V některých velmi speciálních případech dokonce umíme určit materiálovou charakteristiku výpočtem namísto měření. Pro praktické využití tato dovednost není významná (můžeme vypočítat například koeficient filtrace pro půdu složenou z částic ve tvaru stejně velkých kuliček, v praxi se však s takovým materiálem setkáme nanejvýš při speciálních aplikacích v laboratoři), ale dává nám to důležitý prostor pro ověření fyzikálních hypotéz a matematických postupů.
 
-
 ## Derivace a tečna
 
 Lineární aproximace funkce je vlastně aproximace tečnou. Protože 
@@ -219,7 +210,6 @@ Díky souvislosti derivace s tečnou je derivace jedinečným nástrojem při po
 ## Aproximace vyššího řádu
 
 https://youtu.be/PyZcNSio8J0
-
 
 ### Motivace: Je možné chtít více než je lineární aproximace?
 
@@ -242,7 +232,6 @@ Je otázka, zda a jak je možné informaci o tom, jak rychle roste
 rychlost, případně jak rychle roste rychlost růstu rychlosti, využít.
 To znamená že budeme studovat derivaci derivace, derivaci derivace
 derivace atd.
-
 
 Aproximaci funkce $\cos x\approx 1$ zmíněnou výše (odvodíme ve
 cvičení), kdy aproximujeme vlastně konstantní funkcí, je možné také
@@ -283,7 +272,6 @@ $$\frac{\partial ^2 f}{\partial y^2}:=\frac{\partial }{\partial y}\left(\frac{\p
 nebo 
 $$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(\frac{\partial f}{\partial x}\right).$$
 
-
 ### Druhá derivace a deformace nosníků
 
 <div class="shorten" data-text="Derivace vyšších řádů se využívají při výpočtu ohybové čáry nosníků.">
@@ -297,7 +285,6 @@ $$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(
 </div>
 
 \fi
-
 
 Derivace hrají ústřední roli v teorii studující tuhost, deformaci a
 odolnost proti selhání u nosníků. Máme-li nosník podepřený na koncích
@@ -320,13 +307,11 @@ Někdy je vhodné mít moment $M(x)$ síly deformující nosník mít vyjádřen
 
 ### Taylorův polynom a polynomiální aproximace v 1D
 
-
 > Definice (Taylorův polynom).
 > *Taylorův polynom* stupně $n$ pro funkci $f$ v bodě $x_0$ je polynom 
 \dm$$T(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{1}{2!}f''(x_0)(x-x_0)^2+\cdots +\frac{1}{n!}f^{(n)}(x_0)(x-x_0)^n,$$ 
 tj.
 \dm$$T(x)=f(x_0)+\frac {\mathrm df(x_0)}{\mathrm dx}(x-x_0)+\frac{1}{2!} \frac {\mathrm d^2f(x_0)}{\mathrm dx^2} (x-x_0)^2+\cdots +\frac{1}{n!}\frac {\mathrm d^nf(x_0)}{\mathrm dx^n}(x-x_0)^n.$$
-
 
 Taylorův polynom je nejlepší aproximace funkce $f$ polynomem. Je možné
 ukázat, že rozdíl $$f(x)-T(x)$$ je blízký k nule, pokud je $n$
@@ -365,9 +350,7 @@ https://youtu.be/U93Q3XaDnDA
 
 <div class='obtekat'>
 
-
 ![V praxi často pracujeme s daty získanými po skocích. Místo spojité funkce (křivky) tedy máme funkci definovanou v bodech (diskrétní funkce). I zde je nutné mít možnost měření rychlosti změny, která je co nejvíce kompatibilní s derivací.](diference.png)
-
 
 ![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v\ dřevěných konstrukcích a to i v\ případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: vlastní.](pisarky.jpg)
 
@@ -399,8 +382,6 @@ $$
 a odsud dostáváme aproximaci druhé derivace
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 
-
-
 ## Odbočka: od vazeb mezi atomy k materiálovým vlastnostem
 
 <div class="shorten" data-text="">
@@ -414,7 +395,6 @@ $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h
 </div>
 
 \fi
-
 
 Výraz $$V(r)=\frac 1{r^{12}}-\frac 2{r^6}=r^{-12}-2r^{-6}$$ je (až na konstanty, které pro pohodlí volíme pevně) Lennard-Jonesův potenciál často používaný pro interakci mezi atomy nebo molekulami. Napíšeme Taylorův polynom druhého stupně v bodě $r=1$. K tomu potřebujeme znát funkční hodnotu a hodnotu prvních dvou derivací v tomto bodě.
 $$\begin{aligned}
@@ -450,7 +430,6 @@ Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyziká
 
 https://youtu.be/1DxpXD8YEYY
 
-
 V praxi se setkáváme s případy, kdy je znám výsledek po aplikování funkce na vstupní data a je nutné rekonstruovat tato vstupní data. Řešíme tedy rovnici, kde neznámá je argumentem funkce a je známa funkční hodnota. Pojmy nutné pro korektní formulaci a jednu z velmi rychlých přibližných metod řešení rovnic si představíme v následujících pasážích.
 
 Nejprve se budeme zabývat tím, jestli se k funkční hodnotě dají vstupní data rekonstruovat jednoznačně (prostá funkce). Pokud ano, představíme si pravidlo, které toto přiřazení vstupních dat k výsledku po aplikaci funkce dokáže realizovat (inverzní funkce). A na závěr si ukážeme metodu, jak při řešení rovnic (resp. počítat funkční hodnoty inverzních funkcí) využít derivaci. To vede k velmi rychlé a velmi obecné metodě numerického řešení (Newtonova metoda).
@@ -478,7 +457,6 @@ je určeno jednoznačně, zavádíme následující pojem.
 plyne $x=5$.
 * Funkce $x^2$ není prostá a proto z rovnosti $x^2 = 7^2$ neplyne $x=7$. Ve skutečnosti pro každou rovnici ve které není prostá funkce, potřebujeme speciální metodu. Proto máme speciální vzorec pro řešení kvadratické rovnice, nebo například speciální postupy pro řešení goniometrickcýh rovnic.
 
-
 ### Inverzní funkce
 
 Inverzní úloha je tak trošku jako reverzní inženýrství. Máme výsledek
@@ -486,7 +464,6 @@ a potřebujeme znát vstupní data. U funkcí to je supersnadné, u
 konstrukcí supersložité. Užitečné je ale obojí.
 
 > Definice (inverzní funkce).   Nechť funkce $f: A\to B$ je prostá. Pravidlo, které každému $x$   z množiny $f(A)$ přiřadí to (jediné) $y$, pro které platí $f(y)=x$ se nazývá *inverzní funkce* k funkci $f$, označujeme   $f^{-1}$.
-
 
 > Poznámka (inverzní funkce pří řešení rovnic). Jinak zapsáno, je-li $$f(y)=x$$ a $f$ má inverzní funkci, platí
 $$y=f^{-1}(x).$$ Jedná se o zobecnění pouček jak "převádět výrazy na druhou stranu rovnice".
@@ -498,7 +475,6 @@ Symbol $f^{-1}(x)$ lze tedy chápat buď jako hodnotu inverzní funkce
 
 **Příklad.** Funkce $y=x^2$ není prostá na $\mathbb R$ a proto zde nemá inverzní funkci. Pokud definiční obor funkce $y=x^2$ zúžíme na nezáporná čísla, tj. požadujeme $x\geq 0$, je taková funkce prostá a má inverzní funkci. Protože tato úloha má praktický význam, vyplatí se pro tuto inverzní funkcí zavést speciální označení. Jak dobře víme, inverzní funkcí je druhá odmocnina, tj. funkce $y=\sqrt x$.
 
-
 ### Newtonova metoda
 
 Newtonova metoda (též Newtonova Raphsonova metoda) je metoda pro
@@ -506,7 +482,6 @@ numerické řešení rovnic. To používáme v případě, že není možné (ne
 není účelné) řešit rovnici přesně a snažíme se najít přibližné
 řešení. Například neznáme inverzní funkci, nebo s touto funkcí neumíme
 pracovat.
-
 
 Budeme hledat řešení rovnice $$f(x)=0.$$ Budeme postupovat tak, že
 vyjdeme z nějaké aproximace řešení (získáme například graficky nebo
@@ -519,7 +494,6 @@ nulového bodu a funkce má v nulovém bodě nenulovou derivaci) postup
 konverguje ke kořeni studované rovnice a to velmi rychle: každým
 krokem se přibližně zdvojnásobí počet míst, která máme správně.
 
-
 Z\ lineární aproximace funkce $f$ v bodě $x_0$ $$f(x)\approx
 f(x_0)+f'(x_0)(x-x_0)$$ pro $x_0=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme
 $$0=f(x_n)+f'(x_n)(x_{n+1}-x_n)$$ a po osamostatnění $x_{n+1}$ přímo
@@ -528,7 +502,6 @@ používáme opakovaně až do dosažení požadované přesnosti. Obvyklým
 testem pro ukončení výpočtu je porovnání dvou po sobě jdoucích
 iterací. Pokud se v rámci požadované přesnosti shodují, výpočet končí
 a známe přibližné řešení zadané rovnice.
-
 
 **Příklad.**
 Zkusme najít číslo takové, jehož kosinus je stejný jako toto číslo. 
@@ -600,7 +573,6 @@ Vidíme konvergenci a iterační vzorec jsme našli s minimálním úsilím. Ryc
 ![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
 
 </div>
-
 
 \fi
 

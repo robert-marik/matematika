@@ -9,15 +9,12 @@ není vlastním směrem matice $$A=\begin{pmatrix}  3& 0 \\ 2 &4\end{pmatrix}.$$
 :class: dropdown
 :nonumber:
 
-
 Pomocí maticového násobení vidíme, že platí
 $$ A\vec a=\begin{pmatrix}  3& 0 \\ 2 &4\end{pmatrix}\begin{pmatrix}  1\\2\end{pmatrix}=\begin{pmatrix}  3\\2\end{pmatrix}+2\begin{pmatrix}  0\\4\end{pmatrix}=\begin{pmatrix}  3\\10\end{pmatrix}.$$
 
 Výsledkem zobrazení vektoru pomocí matice je vektor který není násobkem původního vektoru (podle první komponenty by se muselo jednat o trojnásobek, ale to nekoresponduje s druhou komponentou) a proto se nejedná o vlastní vektor matice.
 
 ```
-
-
 
 ## Vektor, který je vlastním směrem
 
@@ -27,7 +24,6 @@ Ukažte, že vektor $\vec a=  \begin{pmatrix}    2\\3  \end{pmatrix}$  je vlastn
 :class: dropdown
 :nonumber:
 
-
 Pomocí maticového násobení vidíme, že platí
 $$A\vec a=\begin{pmatrix}  6& 0 \\ 3 &4\end{pmatrix}\begin{pmatrix}  2\\3\end{pmatrix}=2\begin{pmatrix}  6\\3\end{pmatrix}+3\begin{pmatrix}  0\\4\end{pmatrix}=\begin{pmatrix}  12\\18\end{pmatrix}.$$
 
@@ -35,9 +31,6 @@ Výsledkem zobrazení vektoru $\vec a$ pomocí matice je vektor $\begin{pmatrix}
 Protože je obraz násobkem vzoru, jedná se o vlastní vektor matice. Příslušné vlastní číslo je $6$, protože se vektor zobrazuje na svůj šestinásobek.
 
 ```
-
-
-
 
 ## Vlastní čísla a vektory matice $2\times 2$
 
@@ -47,7 +40,6 @@ a jim příslušné vlastní vektory.
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Vlastní čísla jsou nulovými body determinantu
 $$\begin{vmatrix}  -2-\lambda &2 \\ 2 & 1-\lambda\end{vmatrix}=(-2-\lambda)(1-\lambda)-(2)(2)=\lambda^2+\lambda-6=(\lambda-2)(\lambda+3).$$
@@ -69,8 +61,6 @@ $$x_1+2x_2=0$$ a druhá rovnice je jejím násobkem. Volbou $x_2=1$ dostáváme 
 
 ```
 
-
-
 ## Transformace matice $2\times 2$ na diagonální tvar
 
 Uvažujme symetrickou matici
@@ -86,7 +76,6 @@ _Návod: Vlastní vektory příslušné různým vlastním číslům jsou na seb
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Charakteristický polynom je
 $$  \begin{vmatrix}    3-\lambda & 1\\1 & 3-\lambda  \end{vmatrix}  =(3-\lambda)^2-1=9-6\lambda+\lambda^2-1=\lambda^2-6\lambda+8=(\lambda-4)(\lambda-2)$$
@@ -109,8 +98,6 @@ Podle očekávání vyšla diagonální matice s vlastními hodnotami v hlavní 
 
 ```
 
-
-
 ## Poměr délky vzoru a obrazu vektoru
 
 Pro matici $$A= \begin{pmatrix}   3&1\\1&3 \end{pmatrix}$$ z minulého příkladu a vektor $$\vec u=\begin{pmatrix}  -1\\2\end{pmatrix}$$
@@ -119,7 +106,6 @@ určete podíl délky obrazu $A\vec u$ a vzoru $\vec u$ při zobrazení pomocí 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Platí
 $$A\vec u=\begin{pmatrix}  3&1\\1&3\end{pmatrix}\begin{pmatrix}  -1\\2\end{pmatrix}=-\begin{pmatrix}  3\\1\end{pmatrix}+2\begin{pmatrix}  1\\3\end{pmatrix}=\begin{pmatrix}  -1\\5\end{pmatrix}$$
@@ -133,7 +119,6 @@ $$\frac{||A\vec u||}{||\vec u||}=\frac{\sqrt {26}}{\sqrt 5}\approx 2.28$$
 což je podle očekávání hodnota mezi menší a větší vlastní hodnotou, které vyšly v předchozím příkladě.
 
 ```
-
 
 <!--
 % 
@@ -181,14 +166,12 @@ což je podle očekávání hodnota mezi menší a větší vlastní hodnotou, k
 
 % \end{minipage}}
 
-
 % 
 % ## Neceločíslená vlastní čísla a vektory matice $2\times 2$
 
 -->
 
 ## Transformace tenzoru pootočením
-
 
 Uvažujme tyč ve směru osy $x$ namáhanou v ose tahem, při kterém vzniká jednotkové tahové napětí. Tyč je slepena spojem, který svírá s kolmicí na osu úhel $\theta$. (Nakreslete si obrázek.) Normálovým napětím rozumíme napětí ve směru kolmém na spoj.
 
@@ -202,7 +185,6 @@ Uvažujme tyč ve směru osy $x$ namáhanou v ose tahem, při kterém vzniká je
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 V souřadné soustavě podle zadání je tah ve směru osy $x$ roven jedné a další komponenty jsou nulové. Tedy $\sigma=\begin{pmatrix}  1 & 0 \\ 0& 0\end{pmatrix}.$ Budeme otáčet proti směru hodinových ručiček, tj. o kladný úhel $\theta$.
 
@@ -220,11 +202,9 @@ Odsud již dostaneme odpovědi na všechny uvedené otázky.
 
 ```
 
-
 <!-- 
 % ## Extrémy diagonálních prvků transformovaného tenzoru
 -->
-
 
 ## Vlastní čísla a vektory matice $3\times 3$.
 
@@ -235,11 +215,9 @@ $$A=  \begin{pmatrix}  5 & 0 & 0\\  0 & 2 & 2\\  0 & 2 & 5\end{pmatrix},$$
 která je tohoto typu.
 Určete vlastní čísla a zbylé vlastní vektory matice.
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Podle zadání víme, že jeden z vlastních vektorů je $e_1=(1,0,0)^T$ a protože se zobrazí na pětinásobek, je příslušná vlastní hodnota $\lambda_1=5$. Charakteristický polynom je
 $$  \begin{aligned}  \begin{vmatrix}  5-\lambda & 0 & 0\\  0 & 2-\lambda & 2\\  0 & 2 & 5-\lambda\end{vmatrix}&=(5-\lambda)(2-\lambda)(5-\lambda)-(5-\lambda)\times 2\times 2\\& =(5-\lambda)\Bigl[(2-\lambda)(5-\lambda) -4\Bigr]\\&=(5-\lambda)(\lambda^2 -7\lambda +6)=(5-\lambda)(\lambda-1)(\lambda-6)\end{aligned}$$
@@ -258,8 +236,4 @@ $$  \begin{pmatrix}    -1 & 0 & 0\\    0 & -4 & 2\\    0 & 2& -1  \end{pmatrix} 
 má řešení $x_1=0$ (plyne z první rovnice) a například $x_2=1$ a $x_3=2$ (plyne z druhé a třetí rovnice, které jsou jedna násobkem druhé). Vlastní vektor příslušný vlastní hodnotě $\lambda_3=6$ je $e_3=(0,1,2)^T$.
 
 ```
-
-
-
-
 

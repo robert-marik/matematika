@@ -8,9 +8,6 @@ h2 {clear:both;}
 
 ## Matematika a dřevo/půda/příroda/materiál
 
-
-
-
 ### Hookův zákon v 1D nebo pro izotropní materiál
 
 <div class='obtekat'>
@@ -35,20 +32,17 @@ Napětí $\sigma$ v materiálu při mechanickém namáhání relativní deformac
 
 </div>
 
-
 Darcyho zákon je vztah mezi hydraulickým gradientem (hnací síla dávající do pohybu vodu v půdě) a filtračním tokem. Umožňuje modelovat, __jakým směrem a jakou rychlostí prosakuje voda porézní zeminou__. Umožňuje posuzovat hydraulické poměry v půdě, je důležitý pro hospodaření s vodou (kolik je vody v půdě a kterým směrem teče) i pro __ochranu vodních zdrojů__ (ve vnitrozemí ochrana před __znečištěním__, v přímořských státech i ochrana před __průnikem mořské vody do zdrojů vody pitné__). 
 
 Jako všechny materiálové vztahy, je analogický Hookovu zákonu. Často se vyjadřuje pomocí podílu, [například na Wikipedii](https://cs.wikipedia.org/wiki/Darcyho_z%C3%A1kon). To je nejjednodušší formulace. Pokud hydraulický gradient není konstantní, není možné použít tuto jednoduchou formulaci a je nutné použít formulací pomocí [gradientu](https://en.wikipedia.org/wiki/Darcy%27s_law). V jednorozměrném případě se jako obvykle gradient redukuje na derivaci podle prostorové proměnné.
 
 ### Fourierův zákon v 1D nebo pro izotropní materiál 
 
-
 <div class='obtekat'>
 
 ![Ukázka sendvičové konstrukce, Tepelný odpor se počítá stejně jako v elektrotechnice elekrický odpor. Vidíme analogii sériového (materiály 1, 6, ...) i paralelního (materiál 2 nebo 4 a k nim  paralelně dřevo nad a pod) zapojení. Zdroj: https://www.rdrymarov.cz/](panel.jpg)
 
 </div>
-
 
 Fourierův zákon umožňuje __přepočet rozdílu teplot na teplotní tok nebo tepelné ztráty__. Jedná se o vztah mezi teplotním gradientem (hnací síla dávající do pohybu energii v materiálu) a tokem tepla. Analogický Hookovu a Darcyho zákonu, jako ostatně všechny materiálové vztahy aproximované lineární funkcí.
 Fourierův zákon se často vyjadřuje pomocí podílu, [například na Wikipedii](https://cs.wikipedia.org/wiki/Tepeln%C3%A1_vodivost#V%C3%BDpo%C4%8Det_tepla_p%C5%99edan%C3%A9ho_veden%C3%ADm). To je nejjednodušší formulace. Pokud teplotní gradient není konstantní (tok není homogenní), není možné použít tuto jednoduchou formulaci a je nutné použít formulací pomocí [gradientu](https://cs.wikipedia.org/wiki/Fourier%C5%AFv_z%C3%A1kon). V jednorozměrném případě se jako obvykle gradient redukuje na derivaci podle prostorové proměnné.
@@ -64,7 +58,6 @@ Rovnice vedení tepla dokáže modelovat nestacionární děj. Proto je možné 
 ### Rovnice vedení tepla ve 2D nebo 3D
 
 Rozšíření rovnice vedení tepla pro vícerozměrný případ. Umožňuje zmapovat tok tepla a teplotu při proudění energie v krajině, ve městě, v konstrukčním prvku dřevostavby. Tím je možné analyzovat například vliv __tepelných ostrovů v krajině__, nebo vliv __zeleně na teplotní komfort ve městech__.
-
 
 ### Hookův zákon pro ortotropní a anizotropní materiál
 
@@ -88,13 +81,11 @@ Rozšíření rovnice vedení tepla pro vícerozměrný případ. Umožňuje zma
 
 </div>
 
-
 Mnoho dějů spějících k rovnováze probíhá rychlostí úměrnou vzdálenosti od rovnovážného stavu. Příkladem je [Newtonův zákon ochlazování](https://en.wikipedia.org/wiki/Newton%27s_law_of_cooling) nebo [von Bertalanffyho model růstu](https://cs.wikipedia.org/wiki/Ludwig_von_Bertalanffy). To vede k tomu, že měnící se veličina se k rovnovážnému stavu přibližuje. Tím klesá vzdálenost od rovnovážného stavu a rychlost růstu se zpomaluje. Přesná analýza (vyřešení příslušné diferenciální rovnice) ukazuje, že veličina se blíží asymptoticky k rovnovážné poloze a vydálenost od rovnovážné polohy klesá jako klesající exponenciální funkce (exponenciální funkce $y=e^{-kx}$ kde $k>0$). 
 
 Naopak růst úměrný množství je, na rozdíl od předešlého, prudký a stále se zrychluje. Tento růst je exponenciální ($y=e^{kx}$, kde $k>0$), pro malé hodnoty roste pomalu, ale později je velmi prudký. Exponenciální funkce roste nejrychleji ze všech základních elementárních funkcí. Například ani mocnina se sebevětším exponentem neroste tak rychle. Nepříliš známým ale nám blízkým zařízením ilustrujícím rychlost růstu exponenciální funkce je třecí brzda níže.
 
 #### Capstan equation -- třecí pásová brzda, spouštěcí buben
-
 
 <div class='obtekat'>
 
@@ -132,7 +123,6 @@ Bude doplněno.
 
 ### Buckinghamův pí teorém
 
-
 <div class='obtekat'>
 
 ![Model Janáčkova kulturního centra v měřítku 1:10. Zdroj: https://ct24.ceskatelevize.cz/regiony/](hala.jpeg)
@@ -156,13 +146,11 @@ Rovnice vedení tepla, difuzní rovnice nebo rovnice popisující reakci na mech
 
 ### Integrální střední hodnota
 
-
 <div class='obtekat'>
 
 ![Optimální pohyb běžce je takový, aby nedocházelo k výkyvům v poloze těžiště. Těžište hledáme tak, že zprůměrujeme souřadnice všech bodů. Protože však tělo má spojitě rozloženou hmotnost a bodů je nekonečně mnoho, musíme tento průměr chápat ve smyslu integrální střední hodnoty. Zdroj: pixabay.com, autor RoonZ-nl](beh.jpg)
 
 </div>
-
 
 Vypočítat aritmetický průměr, hodnotu ležící z určitého úhlu pohledu uprostřed mezi zadanými hodnotami umíme už ze základní školy a používáme v běžném životě (průměrná známka na vysvědčení, průměrný měsíční plat atd.). Někdy však potřebujeme vypočítat průměr spojitě rozložených hodnot. Například těžiště trojúhelníka nebo soustavy hmotných bodů [vypočítáme právě aritmetickým průměrem](https://en.wikipedia.org/wiki/Centroid#Of_a_finite_set_of_points). Co ale s případem, kdy je průměrovaná veličina rozložena spojitě na úsečce, na dvojrozměrné množině v rovině, nebo v tělese v prostoru? V takových případech je nutno počítat průměr pomocí integrálu a takový průměr se nazývá integrální střední hodnota. 
 
@@ -202,7 +190,6 @@ První dvě operace jsou vlastně totéž, jenom pro jinou nezávislou proměnno
 
 Symbolicky zapsáno, platí
 $\int_a^b f(t)\mathrm dt=F(b)-F(a)$, kde $\int f(t)\,\mathrm dt=F(t)$ tj. $F'(t)=\frac{\mathrm dF}{\mathrm dt}=f(t)$.
-
 
 ## Lineární aproximace
 
@@ -457,7 +444,6 @@ množinou.
 * Vlastní vektory a čísla odpovídají směrům, ve kterých má reakce
   materiálu na vnější podnět maximum nebo minimum.
 
-
 ## Transponovaná matice
 
 * Definice: Matica transponovaná je matice, ve které jsou řádky zaměněny za sloupce.
@@ -496,7 +482,6 @@ množinou.
 * Ve vektorové podobě jde o vyjádření zadaného vektoru jako lineární
   kombinace jiných zadaných vektorů. Tedy například rozklad vektoru do
   daných směrů.
-
 
 ## Diagonální matice
 
@@ -607,7 +592,6 @@ Většinou určitý integrál počítáme pomocí integrálu neurčitého. Někd
 Udává, že prakticky zajímavé funkce (spojité) jsou vždy
 integrovatelné, tj. mohou být rychlostmi změn veličin.
 
-
 ## Věty o diferenciálních rovnicích 
 
 #### Věta o jednoznačnosti řešení počáteční úlohy
@@ -624,7 +608,6 @@ Umožní posoudit, která řešení jsou prakticky zajímavá, bez řešení
 diferenciální rovnice.
 
 ## Věty z lineární algebry
-
 
 #### Věta o hodnosti matice ve schodovitém tvaru
 

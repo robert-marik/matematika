@@ -18,7 +18,6 @@ _V tomto příkladě si vyzkoušíme násobení matic a kromě toho uvidíme, ž
 :class: dropdown
 :nonumber:
 
-
 S rozepsáním pomocí lineárních kombinací vektorů tvořených sloupci matice $A$ dostáváme
 $$2\cdot   \begin{pmatrix}  1 \\  0 \\  1 \end{pmatrix} -1\cdot\begin{pmatrix}   -2 \\   1 \\   2 \end{pmatrix} +0\cdot\begin{pmatrix}3\\ 0\\ -2\end{pmatrix} = \begin{pmatrix} 4\\ -1\\ 0\end{pmatrix}$$
 $$-2\cdot  \begin{pmatrix}  1 \\  0 \\  1 \end{pmatrix}+2\cdot\begin{pmatrix}   -2 \\   1 \\   2 \end{pmatrix}+1\cdot\begin{pmatrix}3\\ 0\\ -2\end{pmatrix} = \begin{pmatrix}-3\\ 2\\ 0\end{pmatrix}$$
@@ -78,8 +77,6 @@ V případě součinů s diagonální maticí se diagonálními prvky násobí o
 
 ```
 
-
-
 ## Soustava rovnic jako násobení matic
 
 Zapište soustavu rovnic pomocí maticového násobení
@@ -95,7 +92,6 @@ $$
 :class: dropdown
 :nonumber:
 
-
 $$
   \begin{pmatrix}
   2 & -3 & 2 \\ 2 & 1 & 1 \\ -1 & 3& 1
@@ -108,22 +104,17 @@ $$
 $$
 ```
 
-
-
-
 ## Timmyho transformace
 
 ![](Timmy.png)
 
 Figurka na obrázku je Timmy ve třech situacích. Jednou se pozoruje svůj obraz ve vodě, jednou spadl na záda, a jednou vrhá stín. Vyjádřete pomocí matice transformaci, která vzor (černá malůvka) převádí na obraz (barevná malůvka).
 
-
 Poznámka: Stačí si všímat, kam se zobrazují jednotkové vektory ve směru os, tj. kam se zobrazí Timmiho nakročená noha a Timyho ruka, která je natažená dozadu. Případné neceločíselné složky matice jenom odhadněte. \textit{Podle LAFF Linear Algebra - Foundations to Frontiers (www.ulaff.net)}
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Nakročená noha je v bodě $(1,0)$ a tento bod se transformuje sám na sebe pro krajní obrázky a na bod $(0,1)$ pro prostřední obrázek. Tím je dán první sloupec matice zobrazení. Ruka natažená dozadu je v bodě $(0,1)$ a u modrého Timmyho se transformuje (odhadem) na $(0,-0.8)$, u červeného Timmyho na $(-1,0)$ a u šedého Timmyho (odhadem) na $(1,0.8)$. Matice jsou postupně
 $$
@@ -147,7 +138,6 @@ $$
 
 ```
 
-
 ## Matice rotace
 
 Matice rotace o úhel $\theta$ v kladném smyslu je
@@ -166,7 +156,6 @@ _Matice rotace je důležitá v aplikacích zabývajících se deformacemi, prot
 :class: dropdown
 :nonumber:
 
-
 Při zkratce $S=\sin \theta$ a $C=\cos\theta$ platí
 $$ 
   R_{-\theta}=\begin{pmatrix} \cos(-\theta) & -\sin(-\theta) \\ \sin(-\theta) & \cos(-\theta)
@@ -180,9 +169,6 @@ kde jsme využili identitu
 $$\sin^2\theta + \cos^2\theta=1.$$
 
 ```
-
-
-
 
 ## Matice posunutí
 
@@ -204,7 +190,6 @@ součinu ověřte, že součin těchto matic je jednotková matice.
 :class: dropdown
 :nonumber:
 
-
 Platí
 $$ \begin{pmatrix}  1& 0& a\\  0 & 1 & b\\  0& 0& 1\end{pmatrix}\begin{pmatrix}  x\\y\\1\end{pmatrix} = \begin{pmatrix}  x+a\\y+b\\1\end{pmatrix} $$
 a vidíme, že k souřadnici $x$ se přičítá $a$ a k souřadnici $y$ se přičítá $b$.
@@ -214,9 +199,6 @@ Přímým výpočtem vidíme, že platí
 $$ \begin{pmatrix}  1& 0& a\\  0 & 1 & b\\  0& 0& 1\end{pmatrix}  \begin{pmatrix}  1& 0& -a\\  0 & 1 & -b\\  0& 0& 1\end{pmatrix}=   \begin{pmatrix}  1& 0& 0\\  0 & 1 & 0\\  0& 0& 1\end{pmatrix}.$$
 
 ```
-
-
-
 
 ## Matice, zachovávající význačné směry
 
@@ -235,7 +217,6 @@ _V tomto příkladě uvidíme, že matice zachovávající směr os souřadnic j
 :class: dropdown
 :nonumber:
 
-
 ad 1.
 $$  \begin{pmatrix}    a & b & c \\ d & e & f \\ g& h& i \end{pmatrix}  \begin{pmatrix}    1\\0\\0  \end{pmatrix}   =   \begin{pmatrix}    a \\ d \\g  \end{pmatrix}$$ 
 a vektory $(1,0,0)^T$
@@ -249,11 +230,6 @@ $$    \begin{pmatrix}    a & 0 & 0 \\ 0 & e & f \\ 0& f& i \end{pmatrix}  \begin
 a aby vzor a obraz měly stejný směr, musí být $f=0$. Nejobecnější symetrická matice, která zachovává směr všech tří základních bázových vektorů je matice, která má mimo hlavní diagonálu nuly.
 ```
 
-
-
-
-
-
 ## Matice derivování
 
 Ukažte, že matice 
@@ -263,11 +239,9 @@ interpretovali matici $A^2$ a $A^3$ a tyto matice vypočtěte.
 _Návod: je možné ukázat buď pro obecný polynom $ax^2+bx+c$, nebo samostatně pro polynomy  $x^2$, $x$ a $1$ a poté si všimnout, že ostatní polynomy můžeme dostat lineárními kombinacemi a maticová násobení tyto l	ineární kombinace nepokazí díky tomu, že je distributivní a komutuje při násobení s konstantou.
  V tomto příkladě mimo jiné vidíme, že mocnina nenulové matice může být nula. To je efekt, který nemá obdobu u násobení reálných čísel._
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Polynom $x^2$ má derivaci $2x$, tj. v označení pomocí vektorů
 se musí vektor $(1,0,0)^T$ zobrazit na $(0,2,0)^T$. Toto snadno
@@ -290,12 +264,7 @@ krátkém výpočtu) splňuje.
 Matice $A^2$ je druhá derivace a $A^3$ třetí derivace a mají tvar
 $$  A^2=   \begin{pmatrix}  0 & 0 & 0 \\  0 & 0 & 0 \\  2 & 0 & 0\end{pmatrix}, \qquad   A^3=   \begin{pmatrix}  0 & 0 & 0 \\  0 & 0 & 0 \\  0 & 0 & 0\end{pmatrix}.$$
 
-
 ```
-
-
-
-
 
 ## Matice projekce
 
@@ -307,11 +276,9 @@ Matice $P=\begin{pmatrix}  \cos^2 \alpha & \cos \alpha \sin \alpha \\  \cos\alph
   se projekcí mohou zobrazit na stejný bod a proto není naděje na to
   mít inverzní zobrazení. Proto neexistuje inverzní matice.
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Pro $C=\cos \alpha$ a $S=\sin\alpha$ dostáváme
 $$  \begin{aligned}P^2&=  \begin{pmatrix}    C^2 & CS \\CS & S^2  \end{pmatrix}  \begin{pmatrix}    C^2 & CS \\CS & S^2  \end{pmatrix} = \begin{pmatrix}  C^4+C^2S^2 & C^3S+CS^3 \\C^3S+CS^3 & C^2S^2+S^4\end{pmatrix} \\&= \begin{pmatrix}  C^2(C^2+S^2) & CS(C^2+S^2) \\CS(C^2+S^2) & S^2(C^2+S^2) \end{pmatrix} = \begin{pmatrix}  C^2 & CS \\CS & S^2\end{pmatrix} =P\end{aligned}$$
@@ -323,8 +290,4 @@ $$  |P|=   \begin{vmatrix}      C^2 & CS \\CS & S^2  \end{vmatrix} =C^2S^2-(CS)(
 a tento výpočet potvrzuje, že neexistuje inverzní matice.
 
 ```
-
-
-
-
 

@@ -1,6 +1,5 @@
 # Determinanty, soustavy rovnic
 
-
 ## Určete následující determinanty
 
 1. $D_1=  \begin{vmatrix}    2 & -1 \\ 4 &3  \end{vmatrix}$
@@ -12,11 +11,9 @@
   $D_5=  \begin{vmatrix}    a & -1 & 0\\ 2 & 3 & 1 \\ -1 &-1 & 2\end{vmatrix}$  
 1.  $D_6=  \begin{vmatrix}    2-\lambda & 0 & 0\\ 0 & 3-\lambda & 0 \\ 0 & 0& 7-\lambda \end{vmatrix}$  (charakteristický polynom diagonální matice)
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 $$
   \begin{aligned}
@@ -30,12 +27,6 @@ $$
 $$
 
 ```
-
-
-
-
-
-
 
 ## Soustava lineárních rovnic s jediným řešením
 
@@ -56,11 +47,7 @@ $$
 \end{pmatrix}
 $$
 
-
 Soustava rovnic je asi nejdůležitější aplikace lineární algebry, ale v dnešním světě není důvod ji řešit ručně. Je však užitečné si alespoň základní manipulace vyzkoušet na jednoduchém příkladě. Tento moc času nezabere.
-
-
-
 
 ## Soustava lineárních rovnic s nekonečně mnoha řešeními
 
@@ -92,7 +79,6 @@ _Soustava s nekonečně mnoha řešeními typicky vychází při
 % Pro jakou hodnotu parametru má soustava nekonečně mnoho řešení?
 
 % 
-
 
 % 
 % # Hlavní cvičení

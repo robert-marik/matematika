@@ -20,8 +20,6 @@ $$
 :class: dropdown
 :nonumber:
 
-
-
 $$
 \begin{aligned}
   \iint_\Omega y^2\,\mathrm dx \mathrm dy
@@ -32,11 +30,7 @@ $$
 
 ```
 
-
-
-
 ## Těžiště trojúhelníku
-
 
 <!-- 
 \Tobrazek{\begin{tikzpicture}[scale=3]
@@ -60,7 +54,6 @@ přes trojúhelník $\Omega$ s vrcholy v bodech $(0,0)$, $(1,0)$ a $(0,1)$ a pot
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Rovnice přímky, ve které leží přepona trojúhelníka, je
 $$y=1-x$$ a trojúhelník tedy je možno zapsat soustavou nerovností
@@ -89,10 +82,6 @@ $$x_T=\frac{\frac 16}{\frac 12}=\frac 13$$
 
 ```
 
-
-
-
-
 ## Velikost tlakové síly na hráz přehrady
 
 Viz video ke cvičení a text k přednášce.
@@ -100,5 +89,4 @@ Viz video ke cvičení a text k přednášce.
 ## Působiště tlakové síly na hráz přehrady
 
 Viz video ke cvičení a text k přednášce.
-
 

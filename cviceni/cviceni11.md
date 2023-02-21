@@ -14,11 +14,9 @@ ve dvourozměrném případě do kartézských souřadnic za předpokladu, že s
 
 Okomentujte, jak předpoklady o vlastnostech materiálu a o modelovaném procesu (stacionárnost, existence či neexistence zdrojů, homogenita materiálu, stejné chování v různých směrech apod.) ovlivní výslednou rovnici.
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Difuzní rovnice ve 2D v kartézských souřadnicích má tvar
 $$\frac{\partial u}{\partial t}
@@ -44,12 +42,7 @@ $$\frac{\partial u}{\partial t} =\sigma + D_x \frac{\partial^2 u}{\partial x^2} 
 Jednotlivé varianty je pochopitelně možné kombinovat. Například stacionární rovnice v homogenním izotropním prostředí má derivaci podle času nulovou, stejné difuzní koeficienty v obou směrech a díky homogenitě a linearitě je možné kvaziderivace napsat jako druhé derivace, tj. rovnice má tvar
 $$0 =\sigma + D \frac{\partial^2 u}{\partial x^2} + D \frac{\partial^2 u}{\partial y^2}.$$
 
-
-
-
 ```
-
-
 
 ## Stacionární vedení tepla, lineární materiál
 
@@ -66,7 +59,6 @@ _Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením vede nap
 :class: dropdown
 :nonumber:
 
-
 Rovnici můžeme vydělit konstantou $k$
 
 Po zintegrování dostáváme $$ \frac{\partial T}{\partial x}=C_1$$
@@ -74,10 +66,7 @@ a po dalším zintegrování $$T=C_1x+C_2.$$ Teplota se mění lineárně. Dvě 
 
 ```
 
-
-
 ## Stacionární vedení tepla, nelineární materiál
-
 
 Najděte rozložení teploty v homogenní stěně při stacionárním vedení
 tepla a v materiálu s nelineární materiálovou odezvou (koeficient
@@ -108,8 +97,6 @@ správnou část paraboly tak, aby teplota zůstala mezi teplotami na
 krajích stěny.
 ```
 
-
-
 ## Stacionární vedení tepla v žebru chladiče
 
 \iffalse 
@@ -129,7 +116,6 @@ teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficientem přestup
 :class: dropdown
 :nonumber:
 
-
 Pokud použijeme předpoklad stacionárnosti a to, že zdroje jsou záporné a jejich výkon je úměrný rozdílu teplot, má rovnice následující tvar.
 
 $$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)$$
@@ -142,7 +128,6 @@ Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, 
 
 ```
 
-
 ## Výpočet  parciálních derivací
 
 1. $\frac{\partial }{\partial x}(x^2y+2xy^3+x+1)$
@@ -154,15 +139,12 @@ Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, 
 :class: dropdown
 :nonumber:
 
-
 1. $\frac{\partial }{\partial x}(x^2y+2xy^3+x+1)=2x\cdot y+2y^3+1+0=2xy+2y^3+1$
 1. $\frac{\partial }{\partial y}(x^2y+2xy^3+x+1)=x^2+2x\cdot 3y^2+0+0=x^2+6xy^2$
 1. $\frac{\partial }{\partial x}(5x^4y^3-3xy^5+x^2)=20x^3y^3-3y^5+2x$
 1. $\frac{\partial }{\partial y}(5x^4y^3-3xy^5+x^2)=15x^4y^2-15xy^4+0=15x^4y^2-15xy^4$
 
-
 ```
-
 
 <!--
 %## Gradient, anizotropní vedení tepla
@@ -190,11 +172,9 @@ Součinitel tepelné vodivosti (pro jednoduchost s celými čísly a bez jednotk
 1. Vypočtěte divergenci toku tepla, tj. $\nabla\cdot(-\lambda \cdot \nabla T).$
 1. V desce nejsou zdroje tepla. Ochlazuje se deska uprostřed, nebo otepluje?
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 1. Parciální derivace jsou
 $$
@@ -229,8 +209,6 @@ $$
 $$\nabla \cdot\vec q=\frac{ \partial}{\partial x} (-15x^2-4y)+\frac{\partial }{\partial y}(-3x^2-8y) = -30x-8.$$
 1. Pro $x>0$ je tato divergence záporná a tok tepla slábne. To znamená, že se deska ohřívá. V každém místě a tedy i uprostřed. 
 ```
-
-
 
 ## Poznámky k online výuce
 

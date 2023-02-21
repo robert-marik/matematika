@@ -16,7 +16,6 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 
 ### Hmotnost nehomogenní desky
 
-
 <div class='obtekat'>
 
 ![Deska s nekonstantní plošnou hustotou,
@@ -24,7 +23,6 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
  2.0](table.jpg)
 
 </div>
-
 
 * Hmotnost desky $\Omega$ je možno vypočítat jako součin plošné
   hustoty (hmotnost na jednotku obsahu) a obsahu desky. $$M=\sigma S$$
@@ -40,10 +38,7 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
   vybudujeme aparát, který nám umožní psát
   $$m=\iint_\Omega \sigma \,\mathrm dS.$$
 
-
-
 ### Objem vody v jezeře
-
 
 <div class='obtekat'>
 
@@ -63,19 +58,14 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
   dokonce nemožné. Potom místo součtu konečně mnoha příspěvků
   použijeme dvojný integrál a dostáváme $$V=\iint_\Omega h\mathrm dS.$$
 
-
 ### Průtok v řece nebo v potrubí
-
 
 <div class='obtekat'>
 
 ![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji
  než ve středu, potrubí na Aljašce, https://www.pixabay.com](pipe.jpg)
 
-
 </div>
-
-
 
 * Teče-li průřezem $\Omega$ tekutina kolmo na průřez rychlostí $v$, je
   celkový průtok $Q$ (objem, který proteče průřezem za jednotku času)
@@ -87,17 +77,11 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
   a ubývá se vzdáleností od středu. Situaci zachraňuje dvojný integrál
   $$Q=\iint_\Omega v\,\mathrm dS.$$
 
-
-
-
 \fi
-
 
 ## Dvojný integrál
 
-
 <div class='sloupce'>
-
 
 Uvažujme plošný materiál (desku) s danou plošnou hustotou. Budeme se snažit
 vypočítat hmotnost.
@@ -136,7 +120,6 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 
 ## Linearita a aditivita
 
-
 Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
 veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
 funkcí, nebo integračních oborů) a s násobení integrované funkce
@@ -146,7 +129,6 @@ konstantou. Přesněji, platí následující věty.
 \dm$$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
 
 > Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
-
 
 ## Výpočet
 
@@ -163,7 +145,6 @@ můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
 věty udávají, jak je možno dvojný integrál přepsat jako dvojnásobný
 integrál. Mají název **Fubiniovy věty**.
 
-
 > Věta (Fubiniova věta). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
 > $$  
 >   \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq x\leq b}\text{ a }
@@ -175,14 +156,12 @@ integrál. Mají název **Fubiniovy věty**.
 >   f(x,y){\mathrm{d}y }\Bigr]{\mathrm{d}x }.
 > $$
 
-
 ### Výpočet pro oblast mezi funkcemi proměnné $y$
 
 <div class='obtekat'>
 ![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
 
 </div>
-
 
 > Věta (Fubiniova věta pro jiné pořadí integrace). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
 > $$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
@@ -196,7 +175,6 @@ integrál. Mají název **Fubiniovy věty**.
 >   f(x,y){\mathrm{d}x }\Bigr]{\mathrm{d}y }.
 > $$
 > 
-
 
 <div class='obtekat'>
 
@@ -239,7 +217,6 @@ snazší.
 
 </div>
 
-
 Výše uvedené problémy se stanovením a případným přepočítáváním mezí
 při záměně pořadí integrace se nevyskytují při integrování přes
 obdélníkovou oblast.
@@ -259,12 +236,9 @@ obdélníkovou oblast.
 >   $$
 > 
 
-
 ## Aplikace dvojného integrálu
 
 ### Matematické aplikace dvojného integrálu
-
-
 
 * **Obsah** $\mu(\Omega)$ množiny $\Omega$ vypočteme jako integrál
     $$\mu(\Omega)=\iint_\Omega \mathrm{d}x \mathrm{d}y.$$
@@ -315,7 +289,6 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 ### Techniké aplikace dvojného integrálu
 
-
 \iffalse
 
 <div class='obtekat'>
@@ -325,7 +298,6 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 </div>
 
 \fi
-
 
 * **Souřadnice těžiště** množiny jsou podílem lineárních momentů a
   celkové hmotnosti množiny.
@@ -349,22 +321,17 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 ### Praktické aplikace dvojného integrálu - tuhost nosníků, stabilita stromů
 
-
 \iffalse
 
 <div class='obtekat'>
 
 ![Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com](beam.jpg)
 
-
 ![Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník](vanocni_strom.jpg)
-
 
 </div>
 
 \fi
-
-
 
 Tuhost (odolnost vůči deformaci) pro nosník obdélníkového průřezu o výšce $b$ a
 šířce $a$ je dána kvadratickým momentem obdélníkového průřezu vzhledem
@@ -433,7 +400,6 @@ těžišťmi jednotlivých částí.
 Zobecnění výše uvedených myšlenek na množinu rozdělenou na více částí
 je již snadné.
 
-
 ### Aplikace dvojného integrálu - Steinerova věta
 
 Nechť je dána množina $M$ s plošnou hustotou $\sigma(x,y)$. *Ukážeme,
@@ -479,7 +445,6 @@ což lze interpretovat tak, že *moment setrvačnosti vhledem k ose $o$
 je součtem momentu setrvačnosti vzhledem k ose procházející těžištěm rovnoběžně s $o$
 a momentu setrvačnosti hmotného bodu ležícího
 v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k ose $o$.*
-
 
 ### Aplikace dvojného integrálu - tlak na svislou plochu
 

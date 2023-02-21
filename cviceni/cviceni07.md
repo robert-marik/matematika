@@ -1,8 +1,6 @@
 # Diferenciální rovnice
 
-
 _Umění najít řešení diferenciální rovnice je sympatické a naučíme se v úvodním příkladě. Není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu a připomeneme si v následujícím příkladě s tloušťkou ledu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech._
-
 
 ## Řešení ODE a IVP 
 
@@ -14,11 +12,9 @@ _Umění najít řešení diferenciální rovnice je sympatické a naučíme se 
 1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=0$
 1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2$
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 1. $\frac{\mathrm dy}{\mathrm dx}=x\cdot y^2$
    *  Konstantní řešení jsou řešení rovnice $$ y^2=0,$$ tj. je jediné konstantní řešení $$ y=0.$$
@@ -44,7 +40,6 @@ _Umění najít řešení diferenciální rovnice je sympatické a naučíme se 
 
 ```
 
-
 ## Tloušťka ledu
 
 \iffalse 
@@ -62,7 +57,6 @@ vzniklé diferenciální rovnice.
 :class: dropdown
 :nonumber:
 
-
 $$
 \begin{aligned}
 \frac{\mathrm dh}{\mathrm dt}&=\frac kh\\
@@ -73,10 +67,6 @@ h\,\mathrm dh&=k\, \mathrm dt\\
 $$
 
 ```
-
-
-
-
 
 ## Model vypouštění nádrže
 
@@ -101,13 +91,11 @@ nádrž ve tvaru
 *kvádru* 
 a nádrž ve tvaru *kužele* otočeného vrcholem dolů (trychtýř). 
 
-
 _V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky._
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Buď $V$ objem vody a $h$ výška hladiny od dna.
 Podle zadání ve všech případech platí $$\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h$$ a musíme derivaci $\frac {\mathrm dV}{\mathrm dt}$ vyjádřit pomocí $\frac {\mathrm dh}{\mathrm dt}$.
@@ -128,10 +116,7 @@ $$\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{3k_3}h^{-3/2}$$
 a po přeznačení konstanty má model pro kuželovou nádrž tvar
 $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
-
 ```
-
-
 
 ## Problematika jednoznačnosti v modelu vypouštění nádrže
 
@@ -161,7 +146,6 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 :class: dropdown
 :nonumber:
 
-
 Ad 1: Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv z nich. 
 
 * *Podle obecné věty o jednoznačnosti:* Stačí ověřit, že pravá strana má ohraničenou parciální derivaci podle $h$. Protože platí
@@ -186,11 +170,9 @@ Ad 2: Pro $h=\frac 14 k^2 t^2$ a $t<0$ dostáváme
 
 Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například $h(t)=0$ je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce $h(t)=\frac 14 k^2t^2$ pro $t<0$ odpovídá tomu, že pro $t<0$ v nádrži voda byla a vytekla v čase $t=0$.
 
-
 ```
 
 </div>
-
 
 ## Stavebniny vedle čebínského nádraží: model
 
@@ -216,7 +198,6 @@ _Toto je podobný model jako model vypouštění nádrže, ale kratší. Opět m
 :class: dropdown
 :nonumber:
 
-
 Rychlost s jakou se mění objem je $\frac{\mathrm dV}{\mathrm dt}$, rychlost přisypávání označme $R$, povrch návětrné strany $S$.
 Podle zadání platí
 $$  \frac{\mathrm dV}{\mathrm dt} = R - k_0S.$$
@@ -225,8 +206,6 @@ $$  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},$$
 kde $r$ a $k=k_0k_1$ jsou konstanty.
 
 ```
-
-
 
 ## Stavebniny vedle čebínského nádraží: stabilita řešení
 
@@ -250,7 +229,6 @@ kde $R$ je rychlost přisypávání a $k$ konstanta.
 :class: dropdown
 :nonumber:
 
-
 Označme $f(V)=R-kV^{\frac 23}$.
 Konstantní řešení je řešením rovnice $f(V)=0$, tj. $$R-kV^{\frac 23}=0.$$ Odsud
 $$V_0=\left(\frac{R}{k}\right)^{3/2}.$$ Protože $f$ klesá v bodě $V_0$, je toto řešení stabilní.
@@ -260,6 +238,4 @@ Protože $f(0)>0$, malá hromada vždy roste a proto nemůže skončit celá roz
 Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou. 
 
 ```
-
-
 

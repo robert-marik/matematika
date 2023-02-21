@@ -1,6 +1,5 @@
 # Vybrané postupy numerické matematiky
 
-
 ## Numerické řešení diferenciálních rovnic
 
 Již v prvním týdnu jsme se při zdůraznění role derivace dostali k formulování modelů použitím derivací, k diferenciálním rovnicím. Tyto rovnice je možné pro konkrétní hodnoty parametrů a konkrétní počáteční podmínku řešit numericky. 
@@ -35,7 +34,6 @@ $$
 V chování této soustavy je možno podle nastavení parametrů pozorovat všechny možné situace pozorované v přírodě, což zahrnuje dominanci jednoho z druhů, slabou konkurenci druhů nebo silnou konkurenci druhů. Více viz učebnice z populační ekologie.
 
 [Model](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=3*x%20-%20x%5E2%20-%20x*y&dydt=2*y%20-%20y%5E2%20-%200.5%20*%20x%20*%20y&x=0,4,20&y=0,3,15&method=rk4&h=0.1&pts1=%5B0.3,0.28328571428571436%5D,%5B0.20714285714285716,0.6434928229665071%5D,%5B2.664285714285714,2.158851674641148%5D,%5B3.1714285714285713,0.7533014354066987%5D,%5B1.7785714285714285,0.2115789473684213%5D)
-
 
 ### Model dravce a kořisti
 
@@ -77,7 +75,6 @@ $$
 Matematicky je možno chování modelu studovat i bez explicitní formulace diferenciálních rovnic, pouze využitím takzvaného kompartmentového modelu. Tímto způsobem je možno relativně snadno přidávat do modelu skupinu bepříznakových, vakcinovaných, skupinu v inkubační době a podobně. 
 
 [Model](https://homepages.bluffton.edu/~nesterd/apps/compartmentalanalysis.html?C&S,999,T,45,189;I,1,T,303,84;R,0,T,593,192&S,I,0.003*S*I;I,R,0.5*I)
-
 
 ## Nondimenzionalizace a bezrozměrné veličiny
 
@@ -138,7 +135,6 @@ veličina se nazývá Fourierovo číslo. Obdobným postupem získáme jiná
 pole ve dřevě je v publikaci Horáček P., Fyzikální a mechanické
 vlastnosti dřeva. Viz též [eopora](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180), rovnice (144) a rovnice následující.
 
-
 ## Metoda konečných diferencí
 
 Vraťme se s aparátem matematického popisu vedení tepla k úloze hledání
@@ -175,7 +171,6 @@ popisující fyzikální proces (rovnice vedení tepla) a na numerické
 aproximaci, která převede parciální diferenciální rovnici na soustavu
 lineárních rovnic.
 
-
 \iffalse
 
 <div class='obtekat'>
@@ -185,7 +180,6 @@ lineárních rovnic.
 </div>
 
 \fi
-
 
 Výše popsaná myšlenka je základem **metody konečných diferencí.** Bohužel je tato metoda 
 poměrně omezená nutností, mít ekvidistantní rozložení uzlů. Proto se v
@@ -235,7 +229,6 @@ END
 Rovnice je v popisu modelu zadána jako divergence gradientu, což v kartézských souřadnicích ve 2D vede právě na rovnici 
 $$\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}=0.$$
 Jiná forma zápisu je přímo pomocí druhých parciálních derivací ve tvaru `DXX(T)+DYY(T)=0`.
-
 
 ![Teplota znázorněná pomocí izoterm.](ctvercova_deska_01_001.png)
 

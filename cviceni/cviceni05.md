@@ -1,6 +1,5 @@
 # Integrály I
 
-
 > * Naučíme se hledat neurčitý integrál funkce. Stačí mít po ruce vzorce.
 > * Naučíme se hledat určitý integrál funkce.
 > * Procvičíme si interpretaci integrálu v kontextu změny veličiny, která se mění nekonstantní rychlostí.
@@ -25,14 +24,11 @@ Najděte následující integrály.
 1. $\int_0^{10} e^{-0.1 t}\,\mathrm dt$
 1. $\int_{-a}^{a} u^3\,\mathrm du$
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
-
 Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\mathrm dx=e^x+c$, $\int e^{ax}\,\mathrm dx=\frac 1a e^{ax}+c$ a dále linearitu (integrál zachovává součet a konstantní násobek)
-
 
 1.   $\int x^2+2x\,\mathrm dx=\frac 13 x^3 + 2\frac 12 x^2 = \frac 13 x^3+x^2+c$
 1.  $\int \sqrt x(x+\sqrt x)\,\mathrm dx=\int x\sqrt x+\sqrt x\sqrt x\,\mathrm dx=\int x^{\frac 32}+x\,\mathrm dx=\frac 25 x^{\frac 52}+\frac 12 x^2+c$
@@ -51,10 +47,6 @@ Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\ma
 1.  $\int_{-a}^{a} u^3\,\mathrm du=\left[\frac 14 u^4\right]_{-a}^a=\frac 14 a^4 - \frac 14 (-a)^4 = 0$
 
 ```
-
-
-
-
 
 ## Vytékání oleje
 
@@ -77,7 +69,6 @@ _Toto a další příklady jsou klasické aplikace integrálu, kdy integrálem r
 :class: dropdown
 :nonumber:
 
-
 Integrál udává objem oleje, který vyteče za prvních 10 hodin. Pro zadanou funkci dostáváme
 $$
     \int_0^{10}r(t)\mathrm{d}t= \int_0^{10}(200-4t)\mathrm{d}t=
@@ -86,7 +77,6 @@ $$
   Za 10 hodin vyteče 1800 litrů oleje.
 
 ```
-
 
 ## Populace včel
 
@@ -105,17 +95,13 @@ $$
   100+\int_0^{15} r(t)\mathrm dt.
 $$
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
-
 První integrál značí přírůstek populace včel za patnáct jednotek času, druhý integrál značí celkovou velikost populace včel po uplynutí patnácti jednotek času. (Jednotky času nejsou v zadání specifikovány.)
 
 ```
-
-
 
 ## Napouštění nádrže
 
@@ -129,14 +115,12 @@ nateče do nádrže během prvních 20 minut.
 :class: dropdown
 :nonumber:
 
-
 Změna množství v nádrži je integrál rychlosti, tj. 
 $$
   \int_0^{20} (180+3t)\,\mathrm dt=180\times 20 + \left[\frac 32 t^2\right]_0^{20}=4\, 200 \,\mathrm l.
 $$
 
 ```
-
 
 ## Prasklá kanalizace
 
@@ -158,7 +142,6 @@ rychlostí $$C'(t)=10^3(t-7).$$ Jaká je změna koncentrace bakterií mezi
 :class: dropdown
 :nonumber:
 
-
 Změna koncentrace je integrál z rychlosti s jakou se koncentrace mění, tj. 
 $$
   \int_4^6 10^3(t-7)\,\mathrm dt= \left[10^3\left (\frac 12 t^2-7t\right)\right]_4^6=-4000
@@ -166,9 +149,6 @@ $$
 a koncentrace poklesne o $4000$ jednotek (bakterií na kubický centimetr).
 
 ```
-
-
-
 
 ## Rychlost učení
 
@@ -187,7 +167,6 @@ $$W(0)=0\quad \text {a} \quad W'(t)=\frac{4t}{100}-3\left (\frac  t{100}\right)^
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Výsledná funkce integrálem rychlosti učení, tj.
 $$
@@ -211,10 +190,6 @@ a po přeznační proměnné máme stejný výsledek jako předešlým postupem.
 
 ```
 
-
-
-
-
 ## Určení parametru tak, aby integrál měl zadanou hodnotu
 
 V praktických úlohách je někdy situace, kdy integrujeme funkci s parametrem a hodnotu parametru je nutno doladit tak, aby integrál měl
@@ -226,7 +201,6 @@ aby byl integrál $$\int_0^{10} a \sqrt x\,\mathrm dx$$ roven hodnotě
 :class: dropdown
 :nonumber:
 
-
 $$\int _0^{10} a\sqrt x=\left[a\frac 23 x^{\frac 32}\right]_0^{10}=\frac {2a}{3}(10)^{\frac 32}$$
 
 $$\begin{aligned}
@@ -234,8 +208,6 @@ $$\begin{aligned}
   a&=\frac 32 2019 (10)^{-\frac 32}\end{aligned}$$
 
 ```
-
-
 
 ## Práce na pružině
 
@@ -266,7 +238,6 @@ integrál představíme na přednášce._
 :class: dropdown
 :nonumber:
 
-
 Jednotková délka:
 $$W=\int_0^1 F\,\mathrm dx = \int_0^1 kx\,\mathrm dx = \left[k\frac 12 x^2\right]_0^1=\frac 12 k-0=\frac 12 k$$
 
@@ -276,16 +247,12 @@ $$W=\int_0^l F\,\mathrm dx = \int_0^l kx\,\mathrm dx = \left[k\frac 12 x^2\right
 Výpočet v centimetrech:
 $$W=\int_0^{10}  10 x\,\mathrm dx = \left[5 x^2\right]_0^{10}=5\times 100=500\,\mathrm N \mathrm{cm}=5\,\mathrm N\mathrm m$$
 
-
 Výpočet v decimetrech:
 $$W=\int_0^{1}  100 x\,\mathrm dx = \left[50 x^2\right]_0^{1}=50\,\mathrm N \mathrm{dm}=5\,\mathrm N\mathrm m$$
 
 Výpočet v metrech:
 $$W=\int_0^{0.1}  1000 x\,\mathrm dx = \left[500 x^2\right]_0^{0.1}=500\times 0.01\,\mathrm N \mathrm{m}=5\,\mathrm N \mathrm{m}$$
-
-
 ```
 
 </div>
-
 

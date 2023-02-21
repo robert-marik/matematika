@@ -26,9 +26,6 @@ kombinaci a jednou matice a maticový součin!
 
 > Definice (soustava lineárních rovnic). *Soustavou $m$ lineárních rovnic  o $n$ neznámých* nazýváme soustavu rovnic $$  \begin{gathered}   a_{11}x_1+a_{12}x_2+a_{13}x_3+\cdots+a_{1n}x_n=b_1 \\   a_{21}x_1+a_{22}x_2+a_{23}x_3+\cdots+a_{2n}x_n=b_2 \\   a_{31}x_1+a_{32}x_2+a_{33}x_3+\cdots+a_{3n}x_n=b_3 \\   \vdots \\   a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\cdots+a_{mn}x_n=b_m \end{gathered}\tag{1} $$  Proměnné $x_1$, $x_2$, ..., $x_n$ nazýváme *neznámé*. Reálná čísla $a_{ij}$ nazýváme *koeficienty levých stran*, reálná čísla $b_j$ *koeficienty pravých stran* soustavy rovnic. *Řešením soustavy rovnic* rozumíme uspořádanou $n$-tici reálných čísel $[t_1, t_2, \ldots, t_n]$ po jejichž dosazení za neznámé (v tomto pořadí) do soustavy dostaneme ve všech rovnicích identity.
 
-
-
-
 > Definice (matice soustavy). Matici 
   $$
    A=\left(
@@ -51,8 +48,6 @@ A_r=\left(
 \right)
 $$
 nazýváme *rozšířenou maticí soustavy* (1).
-
-
 
 ## Vektorový zápis soustavy lineárních rovnic
 
@@ -83,7 +78,6 @@ $$    \begin{pmatrix}
   kombinaci vektorů, které tvoří sloupce  matice
   soustavy.
 
-
 ## Maticový zápis soustavy lineárních rovnic
 
 Soustavu (1) lze ekvivalentně přepsat do maticového
@@ -112,7 +106,6 @@ $$
     $$
     nebo $$AX=B$$
   kde $A$ je  matice soustavy a $\vec b$ resp. $B$ je vektor pravých stran.
-
 
 ## Využití inverzní matice pro řešení soustavy lineárních rovnic
 
@@ -144,7 +137,6 @@ násobení. Bohužel, výpočet inverzní matice je zpravidla velmi drahý
 tento postup užitečným teoretickým nástrojem, ale v praxi postupujeme
 poněkud odlišně.
 
-
 ## Inverzní matice k diagonální matici
 
 Diagonální matice (tj. matice, které mají nenulové prvky jenom na hlavní
@@ -159,8 +151,6 @@ uvažovat podobně jako v následujícím příkladě.
 $$\begin{pmatrix}  2&0&0 \\  0&3&0 \\  0&0&12  \end{pmatrix}\begin{pmatrix}  \frac 12&0&0 \\  0&\frac 13&0 \\  0&0&\frac1{12}  \end{pmatrix}=\begin{pmatrix}  1&0&0 \\  0&1&0 \\  0&0&1  \end{pmatrix}$$
 a tedy
 $$\begin{pmatrix}  2&0&0 \\  0&3&0 \\  0&0&12  \end{pmatrix}^{-1}=\begin{pmatrix}  \frac 12&0&0 \\  0&\frac 13&0 \\  0&0&\frac1{12}  \end{pmatrix}.$$
-
-
 
 ## Iterační metoda řešení soustav lineárních rovnic
 
@@ -219,8 +209,6 @@ na paměť jako u přímých metod, známých například ze střední
 školy. Tímto způsobem se řeší soustavy rovnic při modelování namáhání
 konstrukcí, vedení tepla, proudění vody apod.
 
-
-
 ## Hodnost matice
 
 https://youtu.be/HF-RDBZUenY
@@ -250,11 +238,9 @@ efekt vidíme i u hodnosti.
   jsou uspořádány tak, že každý následující řádek začíná větším počtem
   nul než řádek předchozí.
 
-
 > Věta (hodnost matice ve schodovitém tvaru).
    Hodnost matice, která je ve schodovitém
   tvaru je rovna počtu jejích nenulových řádků.
-
 
 **Příklad.**  Matice $A=   \begin{pmatrix}     2&2&2&3&-1&5\\     0&0&1&0&0&3\\     0&0&0&-1&2&1\\     0&0&0&0&0&0   \end{pmatrix}$ je ve schodovitém tvaru a $h(A)=3$. Matice   $B=  \begin{pmatrix}     2&2&2&3&-1&5\\      0&0&1&0&0&3\\      0&0&3&-1&2&1    \end{pmatrix}$ není ve  schodovitém tvaru a její  hodnost na první pohled nepoznáme.
 
@@ -292,7 +278,6 @@ následující věty.  První se týká existence řešení a druhá identifikuj
 případ, kdy řešení je určeno jednoznačně.
 
 > Věta (Frobeniova věta, Kronecker-Capelliho věta). Soustava lineárních rovnic je řešitelná právě tehdy, když její matice soustavy a rozšířená matice soustavy mají stejnou hodnost.
-
 
 > Věta (jednoznačnost řešení). Nechť soustava lineárních rovnic má řešení. Toto řešení je právě jedno, pokud je společná hodnost matice soustavy a rozšířené matice soustavy rovna počtu neznámých. V opačném případě je společná hodnost matice a rozšířené matice soustavy menší než počet neznámých. 
 
@@ -398,7 +383,6 @@ $$
 Řešení je $x_1=2+t$, $x_2=-t$, $x_3=-1$, $x_4=t$, kde $t$ je libovolné reálné číslo. Vektorově (maticově) máme řešení ve tvaru
 $$\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix} = \begin{pmatrix}  2+t\\-t\\-1\\t\end{pmatrix}=\begin{pmatrix}  2\\0\\-1\\0\end{pmatrix}+t\begin{pmatrix}  1\\-1\\0\\1\end{pmatrix}.$$
 
-
 ## Gaussova-Seidelova iterační metoda
 
 https://youtu.be/KBg1tllDhxM
@@ -461,7 +445,6 @@ https://youtu.be/aeUs2y2QrRw
 ![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
 
 </div>
-
 
 \fi
 

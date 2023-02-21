@@ -1,6 +1,5 @@
 # Výpočet derivací, lineární aproximace
 
-
 > * Naučíme se derivovat součin a podíl funkcí. Jedná se o použití vzorců, nejsou nutné předchozí znalosti, je nutné mít pouze k dispozici vzorce.
 > * Naučíme se používat vzorec pro lineární aproximaci funkce. Naučíme se nahrazovat komplikované funkční závislosti závislostmi jednoduššími.
 > * Naučíme se další triky získané díky lineární a polynomiální aproximaci: numerické derivování a numerické řešení rovnic.
@@ -17,11 +16,9 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 1. $f(x)=\frac {2x^3}{x^2+1}$
 1. $f(x)=\frac {ax}{(x-1)^2}$
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 1. $f'(x)=1\cdot \ln x+x\frac 1x=1+\ln x$
 1. $f'(x)=\sqrt{x^2+a}+x\frac{x}{\sqrt{x^2+1}}$
@@ -32,12 +29,6 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 1. $f'(x)=\frac{a(x-1)^2-ax2(x-1)}{(x-1)^4}= \frac{a(x-1)-ax2}{(x-1)^3}=\cdots$
 
 ```
-
-
-
-
-
-
 
 ## Základní lineární aproximace
 
@@ -56,7 +47,6 @@ _První dvě aproximace využijeme později pro odvození tvaru matice malých r
 :class: dropdown
 :nonumber:
 
-
 $f(x)\approx f(x_0)+f'(x_0)(x-x_0)$
 
 1. $f(x)=\sin x$, $x_0=0$, $f(0)=\sin 0=0$, $f'(x)=(\sin(x))'=\cos x$, $f'(0)=\cos (0)=1$
@@ -67,9 +57,6 @@ $f(x)\approx f(x_0)+f'(x_0)(x-x_0)$
   $$(1+x)^n\approx 1+n\cdot (x-0)=1+nx$$
 
 ```
-
-
-
 
 ## Lineární aproximace
 
@@ -86,11 +73,9 @@ populace v prostředí s nosnou kapacitou $K$. Aproximace v okolí bodu
 $x=0$ odpovídá velmi malé populaci. Proto se konstanta úměrnosti ze
 získané lineární aproximace nazývá *invazní parametr*._
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 1. $f(x)=xe^x$, $x_0=0$, $f(0)=0e^0=0$, $f'(x)=(xe^x)'=e^x+x e^x$, $f'(0)=e^0+0e^0=e^0=1$
   $$xe^x\approx 0+1\cdot (x-0)=x$$
@@ -113,9 +98,6 @@ $f'(x)=
 
 ```
 
-
-
-
 ## Kinetika chemických reakcích pro malé koncentrace
 
 Rychlost mnoha chemických reakcí je dána vzorcem
@@ -136,12 +118,10 @@ pro malá $x$.
 :class: dropdown
 :nonumber:
 
-
 Přímým dosazením dostáváme $f(0)=\frac {a0}{b+0}=0$, $f'(0)=\frac{ab}{(b+0)^2}=\frac {ab}{b^2}=\frac ab$ a odsud
 $$\frac {ax}{b+x}\approx 0+\frac ab (x-0)=\frac ab x.$$
 
 ```
-
 
 ## Lineární aproximace kvalifikovaným odhadem
 
@@ -166,7 +146,6 @@ $$
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Obecný vzorec je
 $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).$$
@@ -217,7 +196,6 @@ Tabulka udává závislost koeficientu tepelné vodivosti mědi na teplotě, $\l
 
 _Poznámka: Teplota v Kelvinech (termodynamická teplota) je teplota ve stupních Celsia posunutá tak, aby teplota $-273{,}15^\circ\mathrm C$ odpovídala $0\,\mathrm K$. Dílky a tedy i změny teploty jsou na obou stupnicích identické._
 
-
 |  $T/\mathrm K$ | $\lambda\Bigm/ \mathrm {W}/(\mathrm{m}\,\mathrm{K})$ |
 |---------|----------|
 |  200 | 413 |
@@ -227,11 +205,9 @@ _Poznámka: Teplota v Kelvinech (termodynamická teplota) je teplota ve stupníc
 
 Table: Zdroj: Cengel, Mass and heat transfer.
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Teploty jsou v ekvidistantních krocích po $200$ kelvinech. Vezmeme od výchozí hodnoty $400$ kelvinů nejbližší nižší ($200\,\mathrm K$) a nejbližší vyšší ($600\,\mathrm K$) teplotu, najdeme v tabulce odpovídající koeficienty tepelné vodivosti, rozdílem určíme změnu v tomto koeficientu a podílem přepočteme změnu na jeden Kelvin.
 $$\frac{\mathrm d\lambda}{\mathrm dT}(400) \approx \frac{(379 -413) \mathrm {W}/(\mathrm m\,\mathrm K)}{2\cdot 200\mathrm K}=-0.085\,\mathrm W \,\mathrm m^{-1}\,\mathrm K^{-2}$$
@@ -240,9 +216,6 @@ Při teplotě $T=400 K$ hodnota koeficientu tepelné vodivosti s rostoucí teplo
 Pokusíme se trošku slovně ilustrovat, co nám vlastně vyšlo. Při teplotě $400\,\mathrm K$ a teplotním gradientu jeden stupeň Celsia na metr délky prochází mědí tepelný výkon $393$ wattů na metr čtvereční, tj. za sekundu se plochou metru čtverečního přenese $393$ joulů. S každým stupněm Celsia navíc tato hodnota malinko poklesne: o $0.085$ joulu. Odsud je patrné, že při změně teploty řádově o desítky stupňů se koeficent změní o malé jednotky procent a v těchto situacích nebude závislost na teplotě významná. 
 
 ```
-
-
-
 
 ## Iterační metoda
 
@@ -256,11 +229,9 @@ Pokusíme se trošku slovně ilustrovat, co nám vlastně vyšlo. Při teplotě 
 Koeficient u první mocniny bývá větší než u čtvrté mocniny, protože konstanta ze Stefanova-Bolzmannova zákona je velmi malá. Typickým představitelem by mohla být rovnice $$x^4-8x+6=0.$$
 Napište iterační vzorec pro řešení této rovnice Newtonovou metodou a proveďte několik iterací s vhodnou celočíselnou počáteční aproximací. Poté porovnejte s postupem, kdy v rovnici osamostatníte $x$ z lineární části a z takové rovnice sestavíte iterační vzorec.
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Newtonova metoda: Využitím funkčního předpisu $f(x)=x^4-8x+6$ a derivace $f'(x)=4x^3-8$ dostáváme iterační vzorec $$x_{n+1}=x_n-\frac{x_n^4-8x_n+6}{4x_n^3-8},$$
 který konverguje velmi rychle.
@@ -295,8 +266,5 @@ $x_6$|$0.801715260030858$
 
 [Sage.](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggrbPA2NijgTbTNNfQ0LTU2IaEFRZl6JgkaFJgDh9g8K&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
-
 ```
-
-
 

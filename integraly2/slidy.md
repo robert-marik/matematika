@@ -27,24 +27,19 @@ nasčítání příspěvků od spojitě se měnící veličiny.
 
 ## Příklad: proč trubky praskají podélně?
 
-
 <div class='obtekat'>
 
 ![Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.](hoop_stress.png)
 
 \iffalse 
 
-
 ![Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových  nádob. Zdroj: J. Dömény.](impregnacni_komora.jpg)
 
 ![Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.](popraskane_trubky.jpg)
 
-
 \fi
 
-
 </div>
-
 
 Uvažujme natlakovanou válcovou nádobu s tlakem $p$, výškou $L$, poloměrem podstavy $r$ a stěnou o tloušťce $t$. 
 
@@ -69,7 +64,6 @@ Pokud se chcete dozvědět více, zkuste Google a heslo "hoop stress".
 
 ## Vlastnosti integrálu
 
-
 https://youtu.be/uyiQAbYZVRU
 
 <div class='obtekat'>
@@ -77,7 +71,6 @@ https://youtu.be/uyiQAbYZVRU
 ![Monotonie a aditivia vzhledem k mezi pro určitý integrál.](int_vlastnosti.png)
 
 </div>
-
 
 Z minulé přednášky víme, že integrál (určitý i neurčitý) je lineární,
 tj. zachovává součet funkcí a násobení konstantou.
@@ -159,12 +152,10 @@ a na konci intervalu.
 
 > Poznámka (střední hodnota materiálové konstanty). Tepelná vodivost materiálu podobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce $k(T)$, je střední hodnota tepelné vodivosti v tepelném rozsahu od $T_1$ do $T_2$ dána vztahem (viz Cengel, Ghajar: Heat and Mass Transfer) $$k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT$$ V praxi nemáme analytický předpis pro funkci $k(T)$, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.
 
-
 **Příklad.** Střední hodnota funkce $y=2x^2-1$ na intervalu $[0,2]$ je
 $$\frac 12 \int_0^2 2x^2-1 \,\mathrm dx=\frac 12 \left[\frac 23 x^3-x\right]_0^2=\frac 12 \left[\frac 23 8-2 - 0\right]=\frac 53.$$
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwz1DfSyswrSU0vSixJ1TDSqogz0jXU0ajQMdAx0tQEAIuACEI=&lang=sage)
-
 
 \iffalse
 
@@ -176,9 +167,7 @@ Výpočet střední hodnoty si také můžete procvičit v následujících cvi�
 
 `ww2:problems/integraly_pouziti/stredni_hodnota_3.pg`
 
-
 \fi
-
 
 <!--
 
@@ -187,7 +176,6 @@ Výpočet střední hodnoty si také můžete procvičit v následujících cvi�
 ![Graf počtu nemocných chřipkou. Čárkovaně je dlouhodobý trend, okolo kterého počet nemocných osciluje s krátkou periodou. Zelená plná křivka je pětiletý průměr začínající v daném roce. Minimum této křivky je vhodný okamžik pro začátek plošné vakcinace.](graf.png)
 
 </div>
-
 
 **Příklad.** (Podle Leah Edelstein-Keshet: Integral Calculus with
 Applications to the Life Sciences). Health Canada dlouhodobě monitoruje
@@ -271,7 +259,6 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 > Poznámka (práce konaná silou proměnné velikosti). Práce vykonaná silou $F(x)$ při přemístění tělesa z polohy $x=a$ do polohy $x=b$ je $$W=\int_a^b F(x)\,\mathrm dx.$$ Jako speciální případ dostáváme pro konstantní sélu $F$ středoškolský vzorec $$W=Fs,$$ kde $s=b-a$ je posunutí.
 
-
 <div class="shorten" data-text="Příklad konání práce konstantní silou ale po různých drahách je vyčerpávání nádrže. Litr vody u hladiny se při čerpání musí přmístit o jinou výšku než litr vody u dna a proto se práce nedá vypočítat jako součin síly a posunutí. Dá se však vypočítat integrálem.">
 
 ## Příklad: práce při čerpání vody
@@ -321,7 +308,6 @@ konstantní a rovno obsahu dna.)
 
 ## Numerická aproximace určitého integrálu
 
-
 https://youtu.be/7jo_pZJjgRA
 
 Následující myšlenka se si týká výlučně určitého integrálu, ale dále v
@@ -359,7 +345,6 @@ různých druzích povrchu po cestě se síla měnila. Pracovníkovi se
 podařilo odhadnout sílu během pohybu. Závislost síly na dráze
 zachycuje následující tabulka.
 
-
 <style>
 table, th, td {
    border: 2px solid green;
@@ -394,10 +379,8 @@ th {text-align: center;}
 |-|-|-|-|-|-|
 |$F$/kN|2.3|1.5|2.1|3.1|2.0|
 
-
 Odhadneme celkovou vykonanou práci.
 \dm$$W=5 \frac{2.3+1.5}2 +5 \frac{1.5+2.1}2 +5 \frac{2.1+3.1}2 +5 \frac{3.1+2.0}2=44.25 \,\mathrm{kN}\,\mathrm {m} = 44.25\,\mathrm{kJ}$$
-
 
 **Poznámka.** V předchozím příkladě byla funkce dána v pravidelných
   intervalech. Proto se ve všech členech objevuje faktor $\frac 52$,
@@ -424,10 +407,7 @@ Výpočet pomocí lichoběžníkového pravidla  si také můžete procvičit v 
 
 `ww2:problems/integraly_vypocet/lichobeznikove_pravidlo.pg`
 
-
 \fi
-
-
 
 <!--
 
@@ -469,8 +449,6 @@ $$\int \ln x\,\mathrm dx=x\ln x-\int \frac 1x x\,\mathrm dx=x\ln x-\int 1\,\math
 
 -->
 
-
-
 ## Integrace substituční metodou
 
 https://youtu.be/tdK-zog1cv0
@@ -509,7 +487,6 @@ tvaru $a\,\mathrm dx=\mathrm dt$. Odsud je možné odvodit vzorec, který
 již známe pro integrál funkce s lineární vnitřní složkou. Vskutku, platí
 $$\int  f(ax+b)\,\mathrm dx= \int  \frac 1af(t)\,\mathrm dt= \frac 1a F(t)= \frac 1a F(ax+b)+C,$$ kde $F(x)=\int f(x)\,\mathrm dx.$
 
-
 Vztah (2) je základní vztah pro substituci v neurčitém
 integrálu. Používáme jej ve vhodných případech zprava doleva i zleva
 doprava. Variantu pro určitý integrál jsme viděli ve speciálním
@@ -536,7 +513,6 @@ https://youtu.be/qUwPJkVBFOQ
 Integrál může být součástí definice funkce. Tím se můžeme dostat mimo
 množinu elementárních funkcí a značně tak rozšířit třídu funkcí, se
 kterými umíme pracovat.
-
 
 > Věta (integrál jako funkce horní meze). Buď $f$ spojitá funkce na intervalu $I$ a $a\in I$. Funkce
 $F(x)$ definovaná vztahem
@@ -569,11 +545,9 @@ funkci vztahem $$\int e^{-x^2}\,\mathrm dx=c+\int_0^x
 e^{-t^2}\,\mathrm dt.$$ Funkční hodnoty takové funkce můžeme určovat
 například tak, že integrál aproximujeme numericky.
 
-
 Následující ukázka demonstruje, že i s funkcí definovanou pomocí
 integrálu je možné jistým způsobem pracovat, aniž bychom měli k
 dispozici analytické vyjádření této funkce.
-
 
 <div class="shorten" data-text="Ukázka demonstruje, že funkce se dají v matematice definovat pomocí integrálu. Vlasntosti funkcí se dají odvodit z vlastností odvozených pomocí metod práce s integrály.">
 
@@ -695,7 +669,6 @@ kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 
 -->
 
-
 <div class="shorten" data-text="Ukázka se vrací k jednomu z předchozích příkladů, k vytahování řetězu. Úlohu je možno vyřešit pomocí potenciální energie. Ale protože každá část řetězu je v jiné výšce, není možné použít klasický vzorec pro potenciální energii. Přípěvky k celkové potenciální energii můžeme nasčítat integrálem.">
 
 ## Příklad: řetěz jinak (pomocí změny potenciální energie)
@@ -726,8 +699,6 @@ rozpojení a případné opětovné napojení. Práce se tedy koná jenom tak,
 kdybychom řetěz nepřetáčeli, jenom odpojili dolních 10 metrů a tuto
 část zvedli nahoru.
 
-
-
 \iffalse
 
 <div class='obtekat'>
@@ -753,7 +724,6 @@ soustavou proplouvaly celý den.
 
 </div>
 
-
 ## Shrnutí, hlavní myšlenky
 
 \iffalse
@@ -763,7 +733,6 @@ soustavou proplouvaly celý den.
 ![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
 
 </div>
-
 
 \fi
 

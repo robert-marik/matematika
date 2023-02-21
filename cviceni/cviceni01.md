@@ -19,7 +19,6 @@
 Zde $c\in\mathbb R$ je konstanta a zbytek jsou vzorce,
 které platí vždy, když je výraz napravo definovaný.
 
-
 ## Triky, které se často hodí.
 
 1. $\sqrt x=x^{\frac 12}$
@@ -56,7 +55,6 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 1. $f(x)=\frac 1{(x+6)^2}.$
 1.  $f(x)=\frac{a}{(\mu x+b)^2}.$
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
@@ -72,8 +70,6 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 1. $f'(x)=\frac{-2a\mu}{(\mu x+b)^3}$
 
 ```
-
-
 
 ## Růst ryby
 
@@ -104,9 +100,6 @@ Zadaná funkce vyjadřující závislost délky na čase je polynom. Použitím 
 
 ```
 
-
-
-
 ## Bazální metabolismus
 
 ![pixabay.com](kolibrik.jpg)
@@ -125,7 +118,6 @@ _Zpracováno podle Monteith, Unsworth: Principles of Environmental Physics. Tady
 
 Pro výpočet si stačí uvědomit, že funkce je konstantním násobkem mocninné funkce a umíme ji tedy zderivovat podle pravidla pro derivaci konstantního násobku a pravidla pro derivaci mocninné funkce. Derivace je $$\frac {\mathrm dM}{\mathrm dW}=\frac {\mathrm d}{\mathrm dW}(AW^n)=nAW^{n-1}$$ podle pravidla pro derivaci konstantního násobku a pro derivaci mocniny. Jednotka derivace je stejná, jako bychom místo derivování dělili, tj. watt na kilogram, $$\left[\frac {\mathrm dM}{\mathrm dW}\right]=\frac{\mathrm W}{\mathrm {kg}}.$$ Derivace udává rychlost, s jakou se projeví změna hmotnosti na bazálním metabolismu. Je to nárůst bazálního metabolismu způsobený nárůstem hmotnosti a přepočtený na jednotkovou změnu hmotnosti. Přibližně také změna bazálního metabolismu ve wattech při změně hmotnosti o kilogram u velkých živočichů nebo v miliwatech při změně hmotnosti o gram u drobných živočichů. Například u malých ptáčků nemá smysl uvažovat nárůst hmotnosti o kilogram a pro interpretaci raději přejdeme k jednotkám tisíckrát menším.
 ```
-
 
 ## Mezní náklady (marginal cost)
 
@@ -156,7 +148,6 @@ $$C'(x)=\frac{2}{\sqrt{4x+4}}.$$ Ve druhém případě máme zlomek s konstantn�
 
 ```
 
-
 ## Vzdálenost k horizontu
 
 ![pixabay.com](horizont.jpg)
@@ -169,7 +160,6 @@ _Tento příklad opět udává derivaci jako rychlost změny, ale nezávislá pr
 :class: dropdown
 :nonumber:
 
-
 Pro $H=3.57\sqrt h$ platí $$\frac{\mathrm dH}{\mathrm dh}=\frac 12 \times 3.57 \times \frac {1}{\sqrt h}$$ a numericky
 $$\frac{\mathrm dH}{\mathrm dh}(5)=\frac{3.57}{2\sqrt 5}\approx 0.7983 \frac {\mathrm{km}}{\mathrm m}\approx 0.8 \frac {\mathrm{km}}{\mathrm m}.$$ Vzdálenost k horizontu pro pozorovatele ve výšce $5$ metrů roste rychlostí 0.8 kilometru na každý metr výšky navíc. Toto je interpretace pro praktické využití. Kromě toho se jednotky dají upravit a ve skutečnosti derivace žádný fyzikální rozměr nemá
 $$\frac{\mathrm dH}{\mathrm dh}(5)=0.7983 \times \frac {1000\, \mathrm{m}}{\mathrm m}=798$$ a každá změna výšky pozorovatele se na vzdálenosti k horizontu projeví svým $800$-násobkem.
@@ -177,8 +167,6 @@ $$\frac{\mathrm dH}{\mathrm dh}(5)=0.7983 \times \frac {1000\, \mathrm{m}}{\math
 <a href="https://sagecell.sagemath.org/?z=eJwtzEEKwjAQheG94B0GXDSRko0UV9256DViMmGGtBNNmkA9vUFcPv6PR3OzWQ00aLjAA-Nqs3UIr5w2FMHzaVGk55uZ7tfyznsf8IOBhbsLVaLrynMIahlJm1KfRdE8aSPqbzO3_jmCT8V-UBgoeUn7ARakbj27iNAOx2Xt9Qvbki8M&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a>
 
 ```
-
-
 
 ## Rychlost s jakou roste obsah kruhu
 
@@ -198,9 +186,7 @@ _V tomto příkladě se učíme, že ze znalosti vztahů mezi veličinami může
 :class: dropdown
 :nonumber:
 
-
 Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
-
 
 Ze zadání známe poloměr $r=50\,\mathrm{m}$ a rychlost růstu poloměru $\frac {\mathrm dr}{\mathrm dt}=1.5\,\text{m}\,\text{min}^{-1}$. Zajímá nás rychlost růstu obsahu $\frac{\mathrm dS}{\mathrm dt}$.
 
@@ -216,9 +202,6 @@ $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathr
 
 ```
 
-
-
-
 ## Sůl nad zlato
 
 ![Že je u koule objem úměrný třetí mocnině poloměru vidíme přímo ze vzorce. Nejinak to je u těles, které si zachovávají proporce, tj. vzniknou zvětšením či zmenšením z jediného vzoru. Typickým příkladem je kromě koule i kužel s pevně zadaným vrcholovým úhlem. Tento tvar zachovávají volně sypané materiály. Obrázek: pixabay.com](kopec_soli.jpg)
@@ -228,7 +211,6 @@ V pohádce _Sůl nad zlato_ sype Maruška z bezedné slánky sůl na hromadu sol
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
 
@@ -244,8 +226,6 @@ Hromada roste do výšky rychlostí 5.3 centimetru za minutu.
 
 ```
 
-
-
 ## Rychlost s jakou roste obsah kruhu II
 
 ![http://mp.mestokyjov.cz/](kyjov.jpg)
@@ -253,7 +233,6 @@ Hromada roste do výšky rychlostí 5.3 centimetru za minutu.
 Město má přibližně tvar kruhu o poloměru $10\,\mathrm{km}$ a žije v něm $300\,000$ obyvatel. Jak rychle musí růst poloměr kruhu (velikost
 města), pokud počet obyvatel roste rychlostí $10\,000$ obyvatel za rok
 a chceme udržet stejnou hustotu osídlení?
-
 
 _Toto je mírná modifikace příkladu s požárem. Protože město má konstantní hustotu osídlení, jsou počet obyvatel i rozloha přímo úměrné a je to podobné, jako bychom jednu veličinu vyjadřovali ve dvou různých jednotkách._
 

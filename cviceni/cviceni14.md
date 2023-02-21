@@ -1,8 +1,6 @@
 # Archiv
 
-
 ![http://ecoursesonline.iasri.res.in](aq.png)
-
 
 ## Pokles hladiny podzemní vody při ustáleném rovinném proudění
 
@@ -34,7 +32,6 @@ Proudění řídí \textit{Darcyho zákon}, který
 :class: dropdown
 :nonumber:
 
-
 \begin{enumerate}[A)]
   \item  $$v_f=-k\frac{\mathrm dh}{\mathrm dx}$$
   \item $$q=-kh\frac{\mathrm dh}{\mathrm dx}$$
@@ -50,11 +47,7 @@ Proudění řídí \textit{Darcyho zákon}, který
 \end{enumerate}
 ```
 
-
-
-
 ![http://ecoursesonline.iasri.res.in](well.png)
-
 
 ## Studna s volnou hladinou
 
@@ -64,7 +57,6 @@ q=-kh\frac{\mathrm dh}{\mathrm dx} \tag{*}\label{*}
 \end{equation}
 odvozenou v \ref{pokles} B. Tentokrát budeme studovat studnu s volnou hladinou\footnote{Zjednodušeně, voda ve studni je na úrovni hladiny podzemní vody. Studna nevznikla navrtáním nepropustné vrstvy, kdy by byla voda natlakovaná a vystoupila do výšky odpovídající tomuto tlaku.} Je-li studna čerpána konstantní rychlostí $Q$, je tok na jednotku délky na kružnici o poloměru $x$ roven $q=-\frac {Q}{2\pi x}$ (voda teče dovnitř, tj. ve směru ve kterém klesá $x$). Dosaďte tento vztah do rovnice \eqref{*} a rovnici vyřešte s počáteční podmínkou $h(R)=H$, kde $H$ odpovídá hladině vody ve studni a $R$ je poloměr studny (na obrázku $h_w$ a $r_w$). Dostanete rovnici \textit{snížení hladiny v okolí studny} čerpané rychlostí $Q$ (depresní křivka).
 (\textit{Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Analogickým způsobem se počítají tepelné ztráty při prostupu tepla válcovou stěnou (viz \url{https://youtu.be/rvyogmaUmUQ}).})
-
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -99,11 +91,6 @@ potřebám. Častou aplikací je například hydraulická clona (soustava
 prvků rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace z chemické výroby do vodárensky využívaných vod).
 
 ```
-
-
-
-
-
 
 ![pixabay.com](kluzak.jpg)
 ## Rychlost klesání kluzáku
@@ -140,8 +127,6 @@ Kluzák klesá rychlostí půl metru za sekundu. To odpovídá i "selskému rozu
 
 ```
 
-
-
 ![pixabay.com](autobus.jpg) ## Změna tlaku a lupání v uších
 V dopravním prostředku, který se pohybuje do kopce nebo z kopce, se
 mění tlak. Tím vznikne tlakový rozdíl mezi vnějším tlakem a tlakem ve
@@ -175,10 +160,6 @@ $$
 Tlak roste rychlostí $0.36$ gramů na centimetr čtvereční za sekundu.
 ```
 
-
-
-
-
 ## Kužel s předepsaným tvarem
 \label{kuzel}
 
@@ -211,16 +192,13 @@ $$r=\left(\frac {9}{4\pi}\right)^{1/3}V^{1/3}$$ a po dosazení
 $$S=\frac 53 \pi r^2 = \frac 53 \pi \left(\frac {9}{4\pi}\right)^{2/3}V^{2/3}
 =5\pi^{1/3}\left (\frac 3{16}\right)^{1/3} V^{2/3}$$
 
-
 ```
-
 
 ## Chemická směs Chemikálii rozpouštíme v nádrži tak, že do
 nádrže pumpujeme vodu a směs odčerpáváme. Objem směsi roste podle
 vztahu $20+2t$. Množství chemikálie $y$ klesá rychlostí, která je
 úměrná $y$ a nepřímo úměrná objemu roztoku v nádrži.
 Vyjádřete proces kvantitativně pomocí derivací.
-
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -229,17 +207,11 @@ Vyjádřete proces kvantitativně pomocí derivací.
 $$\frac{\mathrm dy}{\mathrm dt}=-ky\frac1{20+2t}$$
 ```
 
-
-
-
-
-
 {
 
 \def\mezera{\vspace*{-20pt}}
 
 ![Wikipedie](kojal.jpg)
-
 
 ## Vysílač Kojál Moravský vysílač Kojál nedaleko Vyškova
 je třetí nejvyšší stavbou v ČR a má přibližně tvar hranolu o výšce 340
@@ -261,9 +233,7 @@ Porovnejte výsledek s výsledkem, který byste dostali, kdybyste
 ignorovali změnu hustoty s výškou a použili pro hustotu konstantu
 $\rho_0.$
 
-
 }
-
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -308,8 +278,6 @@ Pokud by závislost hustoty na výšce byla lineární, musely by dva poslední 
 
 ```
 
-
-
 % var('h ')
 % p0=101325
 % rho0=1.225
@@ -322,11 +290,6 @@ Pokud by závislost hustoty na výšce byla lineární, musely by dva poslední 
 % print "S hustotu u zeme: ", n(S*H*rho0)
 % print "S hustotu uprostred: ", n(S*H*rho(H/2))
 % print "Prumer hustoty nahore a dole",n( 0.5* ( S*H*rho0+S*H*rho(H)) )
-
-
-
-
-
 
 \def\mezera{\vspace*{10pt}}
 
@@ -360,15 +323,9 @@ konci oboru integrace (viz přednáška).
 :class: dropdown
 :nonumber:
 
-
 % Hmotnost je součin hustoty $\rho$ a objemu, objem je součin obsahu průřeru $S$ a výšky.
 
-
-
 %```
-
-
-
 
 
 

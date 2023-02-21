@@ -1,7 +1,5 @@
 # Integrály II
 
-
-
 ## Výpočet integrálu substitucí
 
 Najděte následující integrály integrováním substituční metodou.
@@ -29,11 +27,9 @@ Najděte následující integrály integrováním substituční metodou.
 %\item \priklad x^2 e^x.
 -->
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 V integrované funkci se snažíme "rozšifrovat" součin složené funkce a
 derivace vnitřní složky. Pokud se to podaří, dáváme substituci
@@ -70,9 +66,6 @@ Kontrola [zde](https://sagecell.sagemath.org/?z=eJwljMEKwjAQRO-F_sPcuolVUfAi9EvE
 
 ```
 
-
-
-
 ## Střední hodnota funkce
 
 Určete střední hodnotu funkce na zadaném intervalu.
@@ -84,7 +77,6 @@ Určete střední hodnotu funkce na zadaném intervalu.
 
 V posledním příkladě určete hodnotu konstanty $a$ tak, aby střední hodnota byla rovna jedné.
 
-
 ## Vedení tepla stěnou, lineární materiálové vztahy
 
 Tok tepla v jedné dimenzi je dán Fourierovým zákonem $$Q=-k\frac{\mathrm dT}{\mathrm dx}.$$ Pro ustálené proudění je $Q$ konstantní. Pro homogenní materiál s lineární odezvou je výše uvedený vztah přesně lineární, tj. $k$ je konstanta. Určete tok tepla stěnou šířky $d$ oddělující prostory o teplotě $T_1$ a $T_2$.
@@ -92,7 +84,6 @@ Tok tepla v jedné dimenzi je dán Fourierovým zákonem $$Q=-k\frac{\mathrm dT}
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Vztah
 $$Q=-k\frac{\mathrm dT}{\mathrm dx}$$
@@ -107,8 +98,6 @@ a odsud
 $$Q=k\frac{T_1-T_2}d$$
 
 ```
-
-
 
 ## Vedení tepla stěnou, nelineární materiálové vztahy
 
@@ -128,11 +117,9 @@ Na tomto příkladě jsou zajímavé tři věci.
     závislost vodivosti $k(T(x))$ na poloze a ani gradient
     teploty. Přesto se podařilo integrál vypočítat. Teplotní profil se naučíme hledat jako řešení rovnice vedení tepla.
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Stejně jako v předchozím příkladě, máme
 $$k(T)\frac{\mathrm dT}{\mathrm dx}=-Q$$
@@ -145,11 +132,7 @@ $$(T_2-T_1)\frac{k (T_1)+k (T_2)}2=-Qd$$
 a po výpočtu
 $$Q=\frac{k (T_1)+k (T_2)}{2}\frac{T_1-T_2}{d}.$$
 
-
-
-
 ```
-
 
 ## Střední hodnota funkce dané tabulkou
 
@@ -174,11 +157,9 @@ Pro výpočet na intervalu od 100 do 800 Kelvinů bychom museli integrovat na in
 
 Table: Zdroj: Cengel, Mass and heat transfer.
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Integrál vypočteme lichoběžníkovým pravidlem
 $$\int_{100}^{400}\lambda(T)\,\mathrm dT\approx
@@ -194,7 +175,6 @@ Střední hodnota je vlastně (po dosazení lichoběžníkového pravidla)
 $$\frac {482+2\times 413+2\times401+393}6$$
 a jedná se tedy o vážený průměr, kdy vnitřní body jsou započteny dvojnásobnou vahou.
 
-
 Integrál na intervalu $[100,800]$ vypočteme díky aditivitě vzhledem k
 integračnímu oboru
 $$\int_{100}^{800}\lambda(T)\,\mathrm dT=\int_{100}^{400}\lambda(T)\,\mathrm dT+\int_{400}^{800}\lambda(T)\,\mathrm dT$$
@@ -202,8 +182,6 @@ a pro každý integrál máme data v ekvidistantních krocích a můžeme
 použít přímo lichoběžníkové pravidlo.
 
 ```
-
-
 
 ## Růst populace a přežívání jedinců
 
@@ -241,7 +219,6 @@ _(Podle J. Stewart, T. Day: Biocalculus,  Calculus for Life Sciences.)_
 :class: dropdown
 :nonumber:
 
-
 Nechť výchozí stav je rok $t=0$.
 
 Bez znečištění:
@@ -263,12 +240,7 @@ kde i tento integrál se dá vypočítat přímou integrací pomocí vzorce.
 
 ```
 
-
 </div>
-
-
-
-
 
 ## Rodičovské stromy
 
@@ -298,7 +270,6 @@ for the life sciences. Příklad je použitelný pro stromy s velkými semeny, n
 :class: dropdown
 :nonumber:
 
-
 Množství semen na metr čtvereční závisí na vzdálenosti od
 stromu, je to tedy podobná úloha jako úloha s prouděním tekutiny
 potrubím v přednášce. Postupujeme analogicky, jenom místo rychlosti tekutiny
@@ -312,8 +283,5 @@ který můžeme vypočítat pomocí substituce $-r^2=t$.
 
 ```
 
-
-
 </div>
-
 

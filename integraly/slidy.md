@@ -14,7 +14,6 @@ jaké konstanty jsme tuto nulu dostali. A protože problém uchopíme
 poněkud obecněji, uvedeme si dokonce hned tři různé "protijedy" na
 derivování.
 
-
 Jeden představíme jako opak derivace (**neurčitý integrál**), druhý
 jako změnu funkce vypočtenou ze zadané rychlosti změny (**Newtonův určitý
 integrál**) a třetí jako náhradu součtu pro případ, kdy potřebujeme
@@ -26,7 +25,6 @@ Intervalem $I$ budeme rozumět otevřený interval.
 \iffalse 
 
 **Motivace:  Jak z rychlosti změny vypočítat změnu?**
-
 
 <style>
 table, th, td {
@@ -65,7 +63,6 @@ pravém sloupci. Pohledem na tyto příklady věříme, že bude fungovat i
 něco, co naopak z rychlosti zrekonstruuje původní veličinu, která se
 touto rychlostí mění.
 
-
 Závislá proměnná|Derivace podle času|
 |------------------------|------------------------|
 |veličina $x$|rychlost růstu veličiny $x$|
@@ -76,7 +73,6 @@ Závislá proměnná|Derivace podle času|
 |všeobecná cenová hladina (cca náklady na živobytí)|inflace|
 
 \fi
-
 
 <div class="shorten" data-text="Ukázka úlohy vedoucí na problém nalézt funkci, mající známou derivaci.">
 
@@ -162,7 +158,6 @@ přednášce. Otázku (ne-)jednoznačnosti řeší následující věta.
 >    intervalu $I$, existuje $c\in\mathbb R$ takové, že
 >    $$     F(x)=G(x)+c $$ na $I$.
 
-
 **Příklad.** Funkce $x^2$ má primitivní funkce například $\frac 13 x^3$, nebo $\frac 13 x^3+7$,  nebo $\frac 13 x^3+\pi$, protože derivace všech těchto tří funkcí je $x^2$. Platí $$\int x^2 \,\mathrm dx=\frac 13 x^3+c,\qquad c\in\mathbb R.$$
 
 <div style='column-count: 2;background-color:lightgray;padding-top:1ex'>
@@ -182,9 +177,6 @@ přednášce. Otázku (ne-)jednoznačnosti řeší následující věta.
 1. $\int  f(ax+b)\,\mathrm dx=\frac 1a F(ax+b)+C$, kde $F(x)=\int f(x)\,\mathrm dx$
 
 </div>
-
-
-
 
 > Věta (linearita neurčitého integrálu). Neurčitý integrál zachovává součet a násobení konstantou. Tedy pro libovolné funkce $f$, $g$ a libovolnou konstantu $c$ platí $$
 \begin{aligned}
@@ -215,7 +207,6 @@ Integrování si také můžete procvičit v následujících cvičeních.
 
 \fi
 
-
 ### Funkční předpis z rychlosti změny a výchozího stavu
 
 \iffalse
@@ -227,8 +218,6 @@ Integrování si také můžete procvičit v následujících cvičeních.
 </div>
 
 \fi
-
-
 
 *Uvažujme těleso, jehož teplota klesá známou rychlostí. Derivace teploty podle času je $\frac{\mathrm dT}{\mathrm dt}=-0.1 e^{-0.01
 t} \,{}^\circ \mathrm C/\mathrm{min}.$ Cílem je najít teplotu jako
@@ -248,9 +237,7 @@ t}\right)\,{}^\circ \mathrm C.$$
 
 **Poznámka (vlhkost dřeva elektrickou metodou).** Podobný výpočet se využívá u měření elektrického odporu dřeva pro stanovení vlhkosti. Protože elektrický odpor dřeva je velký, není vhodné pro určení elektrického odporu použít Ohmův zákon a změřený proud a napětí. Jedna z možností je měření času nutného k nabití nebo vybití kondenzátoru přes odpor. V případě nabíjení proud exponenciálně klesá (zdůvodníme později v přednášce věnované diferenciálním rovnicím) a proto (díky elektrickým vlastnostem kondenzátoru) exponenciálně klesá i rychlost, s jakou roste napětí na kondenzátoru. Toto napětí je nutné pro výpočet odporu. Pokud známe rychlost, s jakou se napětí mění, určíme napětí integrováním a znalostí napětí na začátku nabíjení.
 
-
 > Poznámka (veličina vypočtená z rychlosti své změny). Pokud se veličina $f(t)$ mění v čase rychlostí $r(t)$, platí $$f(t)=\int r(t)\,\mathrm dt,$$ přičemž pravá strana je dána jednoznačně až na aditivní konstantu. To koresponduje s pozorováním, že rychlost změn k jednoznačné identifikaci časového průběhu měnící se veličiny nestačí. Je potřeba mít zadán ještě výchozí stav.
-
 
 **Příklad.** V úvodu přednášky je popsáno, že křivka,
 která je přirozená pro nosné lano zavěšeného mostu, splňuje rovnici
@@ -319,7 +306,6 @@ Za druhou hodinu bude změna teploty
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9R1-TlStMo0VSwVdA10DNU0FJIrSjQADINDLVKgHIFRZl5JQoaQCI1vSixJFUDpFhHo0THQMfMQFMTnwozAx1DI5AaANtfHHM=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
-
 \iffalse
 
 Integrování určitým integrálem si také můžete procvičit v následujících cvičeních.
@@ -332,10 +318,7 @@ Integrování určitým integrálem si také můžete procvičit v následujíc�
 
 \fi
 
-
 > Poznámka (změna veličiny vypočtená pomocí rychlosti). Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
-
-
 
 \iffalse
 
@@ -347,9 +330,7 @@ Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v 
 
 `ww2:problems/integraly_pouziti/urcity_int_termohrnek.pg`
 
-
 \fi
-
 
 <div class="shorten" data-text="Tato ukázka demonstruje převod rychlosti změny teploty v prostoru na změnu teploty mezi dvěma místy.">
 
@@ -364,8 +345,6 @@ Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v 
 </div>
 
 \fi
-
-
 
 *Mějme ustálené proudění tepelnou izolací mezi dvěma soustřednými válcovými plochami. Délka izolace je $L$, vnitřní a vnější poloměr jsou $r$ a $R$. Teploty uvnitř a vně jsou $T_1$ a $T_2$. Izolací prostupuje teplo rychlostí $Q$, tj. každou myšlenou válcovou plochou o poloměru $x$ projde za jednotku času teplo $Q$. Cílem je najít vztah dávající uvedené veličiny do souvislosti. Odvodíme vztah, který jsme použili v přednášce o lokálních extrémech a slíbili dokázat později.*
 
@@ -394,7 +373,6 @@ Pokud sledujeme prostup tepla izolací, jejíž teplotní vodivost se mění s t
 </div>
 
 > Poznámka (změna veličiny vypočtená pomocí gradientu). Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
-
 
 ### Další motivace
 
@@ -501,7 +479,6 @@ následující přednášce.
 
 \fi
 
-
 1. Těleso pohybující se po dobu $\Delta t$ konstantní rychlostí $v$ po
    přímce urazí dráhu $$s=v\Delta t.$$
 1. Těleso pohybující se po dobu $\Delta t_1$ konstantní rychlostí
@@ -515,7 +492,6 @@ následující přednášce.
    rychlost a doba pohybu, po kterou je rychlost konstantní.
 1. Pokud se rychlost mění spojitě a $a$ a $b$ jsou počáteční a koncový
    okamžik pohybu, platí $$s=\int_a^b v(t)\,\mathrm dt.$$
-
 
 <div class="shorten" data-text="Zde je ukázáno, jak vypočítat tlak na plochu, která je rozložena přes celý interval hloubky. Na každém místě totiž působí jiný tlak a příspěvky přes všechny hodnoty hloubky je nutné posčítat integrálem.">
 
@@ -615,7 +591,6 @@ Tok je tedy formálně stejný, jako by voda tekla v celém průřezu
 rychlostí poloviční ve srovnání s maximální rychlostí ve středu
 trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost průřezu. 
 
-
 (Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 3.)
 
 </div>
@@ -695,7 +670,6 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
   tyč (pro Grand Canyon 9.1 metrů a 20 kilogramů, viz [Nik
   Wallenda](https://en.wikipedia.org/wiki/Nik_Wallenda#Canyon_walk)).
 
-
 </div>
 
 ## Shrnutí, hlavní myšlenky
@@ -707,7 +681,6 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 ![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
 
 </div>
-
 
 \fi
 

@@ -1,6 +1,5 @@
 # Derivace funkce
 
-
 ```{admonition} Motivace
 * Seznámíme se s pojmem derivace funkce. Tento pojem umožňuje u měnící se veličiny určovat, jak rychle se tato veličina mění. Zatímco v případě rovnoměrné změny je problematika rychlosti triviální a řešitelná středoškolskými prostředky, v případě změny jejíž rychlost akceleruje nebo klesá je nutné zapojit zcela nový aparát, nazývaný infinitezimální počet. Derivace je jeho prvním představitelem. S dalším, integrálem, se setkáme později.
 * Ze střední školy je student zvyklý na to, že si má osvojit dovednosti, jak se to počítá. Pro nás je však už důležité si uvědomit, že vůbec nějak dokážeme zachytit rychlost změny. Že s tím dokážeme pracovat, že například dokážeme pomocí těchto pojmů naformulovat fyzikální zákony pracující s rychlostmi změn. A věřte či ne, takové jsou skoro všechny. V podstatě celá středoškolská fyzika je postavena na studiu veličin, měnících se konstantní rychlostí. S tím se dá modelovat mnoho dějů okolo nás, ale pro hlubší poznání světa je to žalostně málo. Derivace umožní pracovat s libovolnými rychlostmi změn. Nesoustřeďte se proto na počítání, soustřeďte se na význam a využití. Soustřeďte se na rozpoznání kontextu, ve kterém problematiku studujeme. 
@@ -8,7 +7,6 @@
 ```
 
 https://youtu.be/yMcaw_J6MKE
-
 
 ## Funkce
 
@@ -160,20 +158,15 @@ Druhá mocnina je na intervalu $(5,\infty)$ rostoucí a proto odsud plyne dále 
 
 </div>
 
-
-
 ## Přípravné úvahy pro zavedení derivace
 
 https://youtu.be/e4bnDYi5nkc
 
-
 <div class="shorten" data-text="Níže si představíme nástroje, které používáme při definici derivace a vysvětlujeme si, jak je derivace zavedena. Pokud tomu nepotřebujete rozumět, nerozklikávejte tento odkaz a pokračujte na derivaci. Pokud v definici derivace něco nebude jasné a budete tomu chtít rozumět, můžete se sem vrátit.">
-
 
 \iffalse
 
 ### Různé pojetí rychlosti
-
 
 <div class='obtekat'>
 
@@ -191,7 +184,6 @@ Budeme se zajímat o to, jak rychle se mění funkční hodnoty v čase nebo př
 * Jak rychle (v tisících Kč na automobil) rostou náklady výrobce automobilů při zvyšování produkce?
 
 \fi
-
 
 ### Průměrná rychlost a okamžitá rychlost
 
@@ -227,7 +219,6 @@ kraji definičního oboru. K tomu použijeme pojem limita. Budeme se
 oproti obecnému postupu mnohé usnadní. Zejména pojem limity můžeme
 opřít o pojem spojitost, který je přece jenom intuitivnější.
 
-
 ### Spojitost
 
 manimp:Spojitost|Díky limitě a spojitosti se naučíme dělit nulou a budeme moci počítat okamžitou rychlost pomocí rychlosti průměrné.
@@ -243,7 +234,6 @@ Buď $f\colon \mathbb R\to\mathbb R$ funkce jedné proměnné.
 Definice spojitosti sice není zcela názorná, ale následující definice a věta velmi pomůže. Zhruba řečeno vysvětlují, proč si v naprosté většině prakticky využitelných případů můžeme spojitost ověřit jenom tím, že zjistíme, zda je funkce definována. 
 
 > Definice (elementární funkce). Všechny mnohočleny, goniometrické, cyklometrické,   exponenciální a logaritmické funkce a obecná mocnina se nazývají  *základní elementární funkce* Všechny funkce, které ze základních  elementárních funkcí získáme konečným počtem operací sčítání,  odečítání, násobení, dělení a skládání těchto funkcí navzájem se  nazývají *elementární funkce*.
-
 
 > Věta (spojitost elementárních funkcí). Všechny elementární funkce jsou spojité v každém vnitřním bodě svého definičního oboru.
 
@@ -291,7 +281,6 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 * Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost.
 ```
 
-
 |Část definičního vztahu|Slovní interpretace|
 |:---|:---|
 |$f(x)$|funkční hodnota v bodě|
@@ -300,7 +289,6 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 |$\displaystyle\frac{f(x+h)-f(x)}{h}$|průměrná rychlost změny funkce na intervalu $[x,x+h]$, též změna funkce po přepočtu na interval jednotkové délky|
 |$\displaystyle\lim_{h\to 0}\cdots$|limita pro redukci průměrné rychlosti na okamžitou|
 |$\displaystyle\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$|okamžitá rychlost změny funkce v bodě $x$, derivace|
-
 
 \iffalse
 
@@ -331,7 +319,6 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 > Poznámka (jednotka derivace). Jednotka derivace $\frac{\mathrm df}{\mathrm dx}$ funkce $f(x)$ je stejná, jako jednotka podílu $\frac {f(x)}x$.
 
-
 > Věta (existence derivace implikuje spojitost). Má-li funkce $f$ derivaci na intervalu $I$, je na tomto intervalu spojitá.
 
 ```{prf:theorem} Znaménko derivace implikuje monotonii.
@@ -339,7 +326,6 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 * Má-li funkce $f$ kladnou derivaci na intervalu $I$, je na tomto intervalu rostoucí.
 * Má-li funkce $f$ zápornou derivaci na intervalu $I$, je na tomto intervalu klesající.
 ```
-
 
 |Derivace funkce |Chování funkce |
 |:---|:---|
@@ -388,10 +374,7 @@ Pokud potřebujeme pracovat s poklesem, násobíme derivaci faktorem $-1$. Toto 
 
 \fi
 
-
-
 ### Zákon ochlazování
-
 
 Horké těleso o teplotě $T$ je v chladnější místnosti o teplotě $T_0$. Z
 fyziky je známo (Newtonův zákon tepelné výměny), že rychlost s jakou
@@ -412,9 +395,7 @@ funkce. Takové rovnice se naučíme řešit později.
 
 V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
-
 > Poznámka (smysl příkladu se zákonem ochlazování). Předchozí příklad je často v různých obměnách používán na modelování ochlazování kávy, což je proces, který většina lidí důvěrně zná. Nemáme pochopitelně ambice se domnívat, že bychom dokázali z této rovnice odvodit nějaké zásadní výsledky aplikovatelné při pití ranní kávy nebo při konzumaci horké polévky. Učíme se na malých věcech, abychom později mohli dělat věci velké. Na známých věcech se učíme aparát, který bude naším jediným nástrojem tam, kde intuice začne selhávat. Z tohoto příkladu je nutné si odnést, že derivace, jako rychlost změny, hraje roli při kvantitativním popisu dějů a při studia procesů, kdy se mění veličiny. Ať už doopravdy (studium pohybu nebo dějů, probíhajících v čase) nebo virtuálně (problémy spojené s mechanikou, včetně statiky, stability a deformací, často pracují s virtuálními změnami, tj. se změnami, které jsou sice z hlediska úlohy přípustné, ale příroda je z nějakého důvodu nerealizuje). Tedy naprostá většina dějů a jevů, které studujeme a chceme jim rozumět. Jakmile se v popisu fyzikálního zákona objeví slovo *rychlost*, někdy nahrazené souslovím *časová změna*, znamená to, že kvantitativní popis se děje pomocí derivací.
-
 
 \iffalse
 
@@ -427,8 +408,6 @@ V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální pop
 \fi
 
 ### Uhlík 14C a datování organických nálezů
-
-
 
 V roce 1940 byl objeven uhlík $^{14}C$. Jedná se o
 radioaktivní prvek s mnoha skvělými vlastnostmi. Jednou z nich je
@@ -466,19 +445,15 @@ mění teplota podél tyče (gradient teploty) vyjadřujeme pomocí derivace
 $$\frac{\mathrm dT}{\mathrm dx}.$$ Využívá se v posuzování izolačních
 vlastností a při sušení dřeva.
 
-
 \iffalse
 
 <div class='obtekat'>
 
 ![Řez korytem. Voda zaplňuje koryto odspodu, tj. změna v množství vody v korytě se projeví nahoře, kde je šířka koryta $B$. Zdroj: Wikipedia.](channel.png)
 
-
 ![Derivace hraje roli při odvození podmínky pro vznik hydraulického skoku. Zdroj: Jonathan Ball, https://www.flickr.com/photos/jball359](jump.jpg)
 
 </div>
-
-
 
 \fi
 
@@ -500,7 +475,6 @@ https://youtu.be/-k_roagRII0
 
 * **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme [vzorce](https://raw.githubusercontent.com/robert-marik/mat-slidy/master/cheatsheet/cheatsheet-MT.pdf) pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
 * Viz cvičení v prvním týdnu.
-
 
 \iffalse
 
@@ -527,7 +501,6 @@ Derivování si také můžete procvičit v následujících cvičeních. Se zá
 `ww2:problems/derivace_vypocet/10.pg`
 
 `ww2:problems/derivace_vypocet/derivovani_slozena_funkce.pg`
-
 
 \fi
 
@@ -585,7 +558,6 @@ Veličina $\frac{\mathrm dQ}{\mathrm dt}$ je nabíjecí proud. Ten dokážeme ur
 
 </div>
 
-
 ## Funkce více proměnných
 
 https://youtu.be/ewpboJPe-Dc
@@ -596,7 +568,6 @@ Funkce má na vstupu více proměnných, na výstupu reálné číslo. Některé
 * $f:\mathbb R^3\to\mathbb R$, $f(x,y,z)$ Geometricky můžeme chápat jako barvu přiřazenou bodu v prostoru a výsledkem je obarvený prostor.
 * $f:\mathbb R^n\to\mathbb R$, $f(x_1,x_2,\dots,x_n)$ Geometrická představa zde není možná, chápeme čistě abstraktně. 
 
-
 \iffalse
 
 ### Myšlenka na zavedení derivace funkce více proměnných
@@ -606,7 +577,6 @@ Funkce má na vstupu více proměnných, na výstupu reálné číslo. Některé
 ![Teplotní modifikace dřeva ve VCJR v Útěchově. Jak rychle uvnitř roste teplota? Jak dlouho musíme tepelně opracovávat, aby se teplota dostatečně zvýšila v celém objemu? Zdroj: J. Dömény.](termowood.jpg)
 
 </div>
-
 
 Derivace je vhodná ke studiu fyzikálních procesů na makroskopické
 úrovni těles. Pro vyjadřování procesů jako jsou rychlost změny teploty
@@ -664,14 +634,12 @@ sledujeme, jak reaguje veličina $f$ na změny jenom v jedné
 proměnné. Proměnná, přes kterou se nederivuje, má vlastně roli
 parametru, nijak se nemění.
 
-
 ## Rovnice vedení tepla  v 1D
 
 https://youtu.be/22F5frFRI60
 
 Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
 proměnných, polohy a času. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase, například  v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
-
 
 > Poznámka. Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
 model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
@@ -688,9 +656,7 @@ manim:Heat|1tbe5YUvoqg|Rovnice vedení tepla. Animace jak se chová teplo při j
 
 ![Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například okno nebo stěna domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](domek.png)
 
-
 ![Ukázka možného výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle čas, barva označuje teplotu. Dole je počáteční stav, nulová teplota podél celé tyče. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh toho, jak se od pravého konce postupně ohřívají jednotlivé části tyče, získáme řešením rovnice vedení tepla. Teplotní profily pro jednotlivé časy získáme na vodorovných řezech v obrázku. Vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.](octave.png)
-
 
 </div>
 
@@ -724,7 +690,6 @@ kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě js
   * Například pokles $-\frac{\partial q}{\partial x}=2\,\mathrm{J}/(\mathrm{min}\,\mathrm{cm})$ toku $q=10\,\mathrm{J}/\mathrm{min}$ znamená, že o centimetr dál ve směru osy $x$ proteče průřezem směrem doprava už nikoliv deset, ale pouze osm joulů za minutu. Tedy každou minutu se v jenom centimetru délky od toku "odpojí" energie o velikosti dva jouly a ta se "uloží" do materiálu. Navenek se to projeví ohřevem, přičemž hrají roli fyzikální vlastnosti materiálu.
 * Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu. Tato rovnice zachycuje matematicky to, jak funguje vedení tepla. 
 
-
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
 bilance toku tepla. Hodnota o kolik se v daném místě snižuje tok tepla
 udává, kolik tepla se v daném místě spotřebovalo. Tato spotřeba tepla
@@ -741,7 +706,6 @@ se projeví zvýšením teploty v daném bodě.
 |$\color{red}\displaystyle\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$|Upravený výraz z předchozího řádku. Rychlost s jakou klesá tok tepla podél tyče.|
 |Rovnice vedení tepla|Červené výrazy jsou si úměrné.|
 
-
 ```{prf:remark}
 :nonumber:
 Vyřešit rovnici vedení tepla je bohužel možné jenom v poměrně speciálních případech, které jsou z praktického hlediska málo významné. Existuje však řada numerických metod jak tuto rovnici vyřešit přibližnými metodami. Tato rovnice je potom "schována" například v softwarech umožňujících vizualizovat tepelné namáhání v okolí kritických prvků staveb, jako jsou okna. Všimněte si univerzálnosti této rovnice. Stejná rovnice, jakou můžeme použít pro posouzení teplotního komfortu ve stavbě, dokáže modelovat například vliv stromu na tepelnou pohodu v městském prostředí nebo prostup tepla do dřeva při jeho tepelné modifikaci.
@@ -756,7 +720,6 @@ Vyřešit rovnici vedení tepla je bohužel možné jenom v poměrně speciáln�
 ![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
 
 </div>
-
 
 \fi
 
