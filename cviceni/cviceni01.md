@@ -267,3 +267,4 @@ a výsledek je stejný jako v předchozím postupu.
 
 ```
 
+

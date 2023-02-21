@@ -145,18 +145,26 @@ je rovnice křivky?
 * Je známa rychlost, s jakou se mění veličina $f$. Jaká je rovnice
 udávající závislost veličiny $f$ na čase?
 
-> Definice (neurčitý integrál). Řekneme, že funkce $F$ je *primitivní funkcí* k funkci $f$ na intervalu $I$, jestliže platí $$F'(x)=f(x)$$ na intervalu $I$. Množina všech primitivních funkcí k funkci $f$ se nazývá *neurčitý integrál* funkce $f$ a značí $$\int f(x)\,\mathrm dx.$$
+```{prf:definition} Neurčitý integrál.
+:nonumber:
+ Řekneme, že funkce $F$ je *primitivní funkcí* k funkci $f$ na intervalu $I$, jestliže platí $$F'(x)=f(x)$$ na intervalu $I$. Množina všech primitivních funkcí k funkci $f$ se nazývá *neurčitý integrál* funkce $f$ a značí $$\int f(x)\,\mathrm dx.$$
+```
+
 
 Otázkou existence primitivní funkce se budeme zabývat na další
 přednášce. Otázku (ne-)jednoznačnosti řeší následující věta.
 
-> Věta (jednoznačnost primitivní funkce). Primitivní funkce je dána jednoznačně, až na aditivní konstantu.
->
-> * Je-li $F$ primitivní funkcí k funkci $f$ na intervalu $I$,
->    platí totéž i pro funkci $G(x)=F(x)+c$, kde $c\in\mathbb R$.
-> * Jsou-li $F$ a $G$ primitivní funkce k téže funkci $f$ na
->    intervalu $I$, existuje $c\in\mathbb R$ takové, že
->    $$     F(x)=G(x)+c $$ na $I$.
+```{prf:theorem} Jednoznačnost primitivní funkce.
+:nonumber:
+ Primitivní funkce je dána jednoznačně, až na aditivní konstantu.
+
+* Je-li $F$ primitivní funkcí k funkci $f$ na intervalu $I$,
+platí totéž i pro funkci $G(x)=F(x)+c$, kde $c\in\mathbb R$.
+* Jsou-li $F$ a $G$ primitivní funkce k téže funkci $f$ na
+intervalu $I$, existuje $c\in\mathbb R$ takové, že
+$$     F(x)=G(x)+c $$ na $I$.
+```
+
 
 **Příklad.** Funkce $x^2$ má primitivní funkce například $\frac 13 x^3$, nebo $\frac 13 x^3+7$,  nebo $\frac 13 x^3+\pi$, protože derivace všech těchto tří funkcí je $x^2$. Platí $$\int x^2 \,\mathrm dx=\frac 13 x^3+c,\qquad c\in\mathbb R.$$
 
@@ -178,12 +186,16 @@ přednášce. Otázku (ne-)jednoznačnosti řeší následující věta.
 
 </div>
 
-> Věta (linearita neurčitého integrálu). Neurčitý integrál zachovává součet a násobení konstantou. Tedy pro libovolné funkce $f$, $g$ a libovolnou konstantu $c$ platí $$
+```{prf:theorem} Linearita neurčitého integrálu.
+:nonumber:
+Neurčitý integrál zachovává součet a násobení konstantou. Tedy pro libovolné funkce $f$, $g$ a libovolnou konstantu $c$ platí $$
 \begin{aligned}
   \int f+g\,\mathrm dx&=\int f\,\mathrm dx + \int g\,\mathrm dx,\\
   \int cf\,\mathrm dx&=c\int f\,\mathrm dx.
 \end{aligned}
 $$
+```
+
 
 **Příklad.**
 
@@ -237,7 +249,11 @@ t}\right)\,{}^\circ \mathrm C.$$
 
 **Poznámka (vlhkost dřeva elektrickou metodou).** Podobný výpočet se využívá u měření elektrického odporu dřeva pro stanovení vlhkosti. Protože elektrický odpor dřeva je velký, není vhodné pro určení elektrického odporu použít Ohmův zákon a změřený proud a napětí. Jedna z možností je měření času nutného k nabití nebo vybití kondenzátoru přes odpor. V případě nabíjení proud exponenciálně klesá (zdůvodníme později v přednášce věnované diferenciálním rovnicím) a proto (díky elektrickým vlastnostem kondenzátoru) exponenciálně klesá i rychlost, s jakou roste napětí na kondenzátoru. Toto napětí je nutné pro výpočet odporu. Pokud známe rychlost, s jakou se napětí mění, určíme napětí integrováním a znalostí napětí na začátku nabíjení.
 
-> Poznámka (veličina vypočtená z rychlosti své změny). Pokud se veličina $f(t)$ mění v čase rychlostí $r(t)$, platí $$f(t)=\int r(t)\,\mathrm dt,$$ přičemž pravá strana je dána jednoznačně až na aditivní konstantu. To koresponduje s pozorováním, že rychlost změn k jednoznačné identifikaci časového průběhu měnící se veličiny nestačí. Je potřeba mít zadán ještě výchozí stav.
+```{prf:remark} Veličina vypočtená z rychlosti své změny.
+:nonumber:
+ Pokud se veličina $f(t)$ mění v čase rychlostí $r(t)$, platí $$f(t)=\int r(t)\,\mathrm dt,$$ přičemž pravá strana je dána jednoznačně až na aditivní konstantu. To koresponduje s pozorováním, že rychlost změn k jednoznačné identifikaci časového průběhu měnící se veličiny nestačí. Je potřeba mít zadán ještě výchozí stav.
+```
+
 
 **Příklad.** V úvodu přednášky je popsáno, že křivka,
 která je přirozená pro nosné lano zavěšeného mostu, splňuje rovnici
@@ -256,34 +272,46 @@ Představíme si mírnou modifikaci neurčitého integrálu. Rychlost změny
 nebudeme používat k hledání předpisu funkce, ale budeme hledat změnu
 funkce na zadaném intervalu.
 
-> Definice (Newtonův určitý integrál). Buď $f$ funkce a $F$ její
+```{prf:definition} Newtonův určitý integrál.
+:nonumber:
+ Buď $f$ funkce a $F$ její
 primitivní funkce na intervalu $I$. Buď $[a,b]\subset I$ podinterval v
 $I$. *Určitým integrálem funkce $f$ na intervalu $[a,b]$* rozumíme
 veličinu označenou a definovanou vztahem $$\int_a^b f(x)\mathrm
 dx:=F(b)-F(a).$$
+```
+
 
 **Označení.** Výraz $F(b)-F(a)$, tj. změnu funkce $F(x)$ na intervalu
 $[a,b]$, označujeme také $[F(x)]_a^b$. Tento zápis se často používá
 jako mezivýpočet při výpočtu určitého integrálu.
 $$\int_0^1 x^2 \,\mathrm dx=\left[\frac 13 x^3\right]_0^1=\frac 13 (1)^3 -\frac 13 (0)^3=\frac 13$$
 
-> Věta (linearita určitého integrálu). Určitý integrál zachovává
-> součet a násobení konstantou. Tedy pro libovolné funkce $f$, $g$ a
-> libovolnou konstantu $c$ platí $$
+```{prf:theorem} Linearita určitého integrálu.
+:nonumber:
+ Určitý integrál zachovává
+součet a násobení konstantou. Tedy pro libovolné funkce $f$, $g$ a
+libovolnou konstantu $c$ platí $$
 \begin{aligned}
   \int_a^b f+g\,\mathrm dx&=\int_a^b f\,\mathrm dx + \int_a^b g\,\mathrm dx,\\
   \int_a^b cf\,\mathrm dx&=c\int_a^b f\,\mathrm dx.
 \end{aligned}
 $$
+```
+
 
 Snadným důsledkem definice určitého integrálu je následující věta.
 
-> Věta (záměna mezí a rovnost mezí v určitém integrálu). Platí $$
+```{prf:theorem} Záměna mezí a rovnost mezí v určitém integrálu.
+:nonumber:
+ Platí $$
 \begin{aligned}
   \int _a^a f(x)\,\mathrm dx&=0,\\
   \int _a^b f(x)\,\mathrm dx&=-  \int _b^a f(x)\,\mathrm dx.
 \end{aligned}
 $$
+```
+
 
 ### Změna funkce z rychlosti změny (časová změna teploty)
 
@@ -318,7 +346,11 @@ Integrování určitým integrálem si také můžete procvičit v následujíc�
 
 \fi
 
-> Poznámka (změna veličiny vypočtená pomocí rychlosti). Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
+```{prf:remark} Změna veličiny vypočtená pomocí rychlosti.
+:nonumber:
+ Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
+```
+
 
 \iffalse
 
@@ -332,9 +364,9 @@ Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v 
 
 \fi
 
-<div class="shorten" data-text="Tato ukázka demonstruje převod rychlosti změny teploty v prostoru na změnu teploty mezi dvěma místy.">
-
 ### Změna funkce z rychlosti změny (prostorová změna teploty)
+
+<div class="shorten" data-text="Tato ukázka demonstruje převod rychlosti změny teploty v prostoru na změnu teploty mezi dvěma místy.">
 
 \iffalse
 
@@ -372,7 +404,11 @@ Pokud sledujeme prostup tepla izolací, jejíž teplotní vodivost se mění s t
 
 </div>
 
-> Poznámka (změna veličiny vypočtená pomocí gradientu). Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
+```{prf:remark} Změna veličiny vypočtená pomocí gradientu.
+:nonumber:
+ Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
+```
+
 
 ### Další motivace
 
@@ -493,9 +529,9 @@ následující přednášce.
 1. Pokud se rychlost mění spojitě a $a$ a $b$ jsou počáteční a koncový
    okamžik pohybu, platí $$s=\int_a^b v(t)\,\mathrm dt.$$
 
-<div class="shorten" data-text="Zde je ukázáno, jak vypočítat tlak na plochu, která je rozložena přes celý interval hloubky. Na každém místě totiž působí jiný tlak a příspěvky přes všechny hodnoty hloubky je nutné posčítat integrálem.">
-
 ### Nasčítání příspěvků k celkové síle na přehradu
+
+<div class="shorten" data-text="Zde je ukázáno, jak vypočítat tlak na plochu, která je rozložena přes celý interval hloubky. Na každém místě totiž působí jiný tlak a příspěvky přes všechny hodnoty hloubky je nutné posčítat integrálem.">
 
 \iffalse
 
@@ -548,9 +584,9 @@ označíme $H$.
 
 </div>
 
-<div class="shorten" data-text="Ukázka demonstruje, jak stanovit tok trubkou. Pokud by v celém průřezu byla stejná rychlost, počítal by se tok násobením. Protože v reálném proudění rychlost směrem ke stěnám trubky klesá, je nutné celkový tok určit jako příspěvky z jednotlivých míst trubky a všechno posčítat integrálem.">
-
 ### Nasčítání příspěvků k celkovému toku potrubím
+
+<div class="shorten" data-text="Ukázka demonstruje, jak stanovit tok trubkou. Pokud by v celém průřezu byla stejná rychlost, počítal by se tok násobením. Protože v reálném proudění rychlost směrem ke stěnám trubky klesá, je nutné celkový tok určit jako příspěvky z jednotlivých míst trubky a všechno posčítat integrálem.">
 
 \iffalse
 
@@ -595,9 +631,9 @@ trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost pr
 
 </div>
 
-<div class="shorten" text="Volitelná ukázka aplikace (výpočet momentu setrvačnosti pomocí integrálu)">
-
 ### Nasčítání příspěvků k celkovému momentu setrvačnosti tyče
+
+<div class="shorten" text="Volitelná ukázka aplikace (výpočet momentu setrvačnosti pomocí integrálu)">
 
 \iffalse
 
@@ -688,3 +724,4 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 * Při zadané rychlosti změny není možné bez zadání výchozího stavu určit hodnotu veličiny, která se mění. Je možné vypočítat jenom změnu této veličiny za určitý časový úsek (Newtonův určitý integrál) anebo je řešení dáno až na počáteční stav vyjádřený integrační konstantou v neurčitém integrálu.
 * Někdy potřebujeme veličinu, která nás zajímá, najít posčítáním nekonečně mnoha příspěvků. Toto je v situaci, kdy se "za běhu" mění parametry úlohy, například se během pohybu mění rychlost pohybu. V tomto případě používáme Riemannův určitý integrál, který je definovaný jinak než Newtonův, ale v prakticky zajímavých úlohách se počítá stejně.
 * Další aplikací procesu opačného k derivování je úloha, kdy jsou vlastnosti křivky popsány pomocí derivace a hledáme rovnici pro tuto křivku. Příkladem jsou úlohy ve stavitelství a studiu materiálu (ohybová čára nosníku).
+

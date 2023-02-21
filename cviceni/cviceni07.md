@@ -239,3 +239,4 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 
 ```
 
+

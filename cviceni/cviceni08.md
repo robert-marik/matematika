@@ -291,3 +291,4 @@ a tento výpočet potvrzuje, že neexistuje inverzní matice.
 
 ```
 
+

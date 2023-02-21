@@ -941,3 +941,4 @@ rychlost s jakou roste hmotnost
 v okamžiku, kdy poloměr kmene je
 $r=0{,}20\,\mathrm{m}$.
 
+

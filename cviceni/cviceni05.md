@@ -256,3 +256,4 @@ $$W=\int_0^{0.1}  1000 x\,\mathrm dx = \left[500 x^2\right]_0^{0.1}=500\times 0.
 
 </div>
 
+

@@ -633,3 +633,4 @@ formálně jednodušší než ve směrech zcela obecných.
 Udává přímo návod, jaká transformace převede fyzikální zákon vyjádřený
 pomocí maticového násobení do co nejjednoduššího tvaru.
 -->
+

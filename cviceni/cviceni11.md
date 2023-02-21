@@ -223,3 +223,4 @@ Nejzásadnější jsou první a poslední příklad.
     * Vynásobením gradientu záporným znamínkem a maticí se součinitelem tepelné vodivost určíme, jakým směrem teče teplo a jak intenzivně. Tuto informaci budeme mít pro všechny body uvažované množiny a dosazením se můžeme podívat, jestli v jednom konkrétním bodě je tok do studované množiny nebo ven.
     * Když máme tok, můžeme vypočítat divergenci a v každém bodě budeme mít informaci, zda tok v daném bodě slábne čí zesiluje a jak intenzivně. 
     * Pokud máme dodatečnou informaci, můžeme říci, na úkor čeho je zeslabování nebo zesilování toku realizováno. Pokud například nejsou zdroj a tok slábne, znamená to, že z toku se teplo "odpojuje a zůstává v materiálu" a to znamená, že v daném místě roste teplota.
+

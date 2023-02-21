@@ -10,14 +10,18 @@ V následující definici se budeme zajímat o to, jestli existuje nějaký
 vztah mezi funkční hodnotou v bodě $x$ z definičního oboru a v bodě
 opačném.
 
-> Definice (parita funkce).   Nechť funkce $f$ splňuje následující podmínku:   $x\in\mathrm{Dom}(x)\implies (-x)\in\mathrm{Dom}(f)$.
-> 
-> * Řekneme, že funkce $f$ je *sudá*
->   pokud platí $f(-x)=f(x)$.
-> * Řekneme, že funkce $f$ je *lichá*
->   pokud platí $f(-x)=-f(x)$.
-> * Řekneme, že funkce $f$ má *paritu*, je-li
->   sudá nebo lichá.
+```{prf:definition} Parita funkce.
+:nonumber:
+   Nechť funkce $f$ splňuje následující podmínku:   $x\in\mathrm{Dom}(x)\implies (-x)\in\mathrm{Dom}(f)$.
+
+* Řekneme, že funkce $f$ je *sudá*
+pokud platí $f(-x)=f(x)$.
+* Řekneme, že funkce $f$ je *lichá*
+pokud platí $f(-x)=-f(x)$.
+* Řekneme, že funkce $f$ má *paritu*, je-li
+sudá nebo lichá.
+```
+
 
 \iffalse
 
@@ -34,7 +38,11 @@ je středově souměrný podle bodu $[0,0]$.
 
 U sudé funkce stačí mít algoritmus nebo tabulky pro kladné argumenty. Například kosinus je sudá funkce a platí $$\cos(-x)=\cos(x).$$ Analogicky pro funkci sinus jako pro lichou funkci platí $$\sin(-x)=-\sin (x).$$
 
-> Poznámka (využití sudosti v materiálovém inženýrství). Funkční hodnoty sudé funkce jsou rozloženy symetricky podle osy $y$. Pokud víme, že úloha bude mít osově symetrické řešení, můžeme tuto znalost použít a hledat řešení mezi sudými funkcemi. Například při řešení prostupu tepla deskou, kdy stejný fyzikální proces probíhá na obou stranách desky, je přirozené modelovat jenom polovinu desky a uprostřed nastavit podmínku, která umožní sudé prodloužení do druhé poloviny. Většinou to bývá nulovost derivace. Proto se například při nestacionární difuzi používá v definici bezrozměrného času, který charakterizuje fyzikální proces, polovina tloušťky materiálu. Viz P. Horáček, Fyzikální a mechanické vlastnosti dřeva I nebo odpovídající [e-opora](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180).
+```{prf:remark} Využití sudosti v materiálovém inženýrství.
+:nonumber:
+ Funkční hodnoty sudé funkce jsou rozloženy symetricky podle osy $y$. Pokud víme, že úloha bude mít osově symetrické řešení, můžeme tuto znalost použít a hledat řešení mezi sudými funkcemi. Například při řešení prostupu tepla deskou, kdy stejný fyzikální proces probíhá na obou stranách desky, je přirozené modelovat jenom polovinu desky a uprostřed nastavit podmínku, která umožní sudé prodloužení do druhé poloviny. Většinou to bývá nulovost derivace. Proto se například při nestacionární difuzi používá v definici bezrozměrného času, který charakterizuje fyzikální proces, polovina tloušťky materiálu. Viz P. Horáček, Fyzikální a mechanické vlastnosti dřeva I nebo odpovídající [e-opora](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180).
+```
+
 
 Sudé a liché funkce jsou, díky svým vlastnostem, v jistém smyslu
 pěkné. V matematice se často snažíme zapsat nějaký objekt pomocí
@@ -45,8 +53,12 @@ trik, kterým později rozdělíme složitější objekt (matici) na součet
 dvou jiných a šikovnějších objektů (součet symetrické a antisymetrické
 matice).
 
-> Věta (o rozkladu funkce na součet sudé a liché funkce). Platí $$f(x)=\frac{f(x)+f(-x)}2 + \frac{f(x)-f(-x)}2.$$
+```{prf:theorem} O rozkladu funkce na součet sudé a liché funkce.
+:nonumber:
+ Platí $$f(x)=\frac{f(x)+f(-x)}2 + \frac{f(x)-f(-x)}2.$$
 Každou funkci definovanou na $(-\infty,\infty)$ je možné takto rozložit na součet sudé a liché funkce.
+```
+
 
 **Příklad.** Pro funkci $f(x)=e^x$ dostáváme
 $$e^x=\frac{e^x+e^{-x}}2+\frac{e^x-e^{-x}}2.$$ Dvě funkce na pravé
@@ -104,15 +116,22 @@ pouze na určitém intervalu, třeba i krátkém).
 
 Následující definice si všímají bodů které mají tu vlastnost, že v okolí není možné najít body buď s vyšší funkční hodnotou (potom se jedná o lokální maximum, nikde v okolí mi funkce neukáže více) nebo s nižší funkční hodnotou (analogicky, lokální minimum).
 
-> Definice (lokální extrémy). Nechť $f\colon \mathbb R\to\mathbb R$.
->
->* Řekneme, že $f$ má v bodě $x_0$ *lokální maximum*, pokud platí $$f(x)\leq f(x_0)$$ pro všechna $x$ z nějakého okolí bodu $x_0$.
->* Řekneme, že $f$ má v bodě $x_0$ *lokální minimum*, pokud platí $$f(x)\geq f(x_0)$$ pro všechna $x$ z nějakého okolí bodu $x_0$.
->* Řekneme, že $f$ má v bodě $x_0$ *lokální extrém*, pokud v tomto bodě má buď lokální maximum nebo lokální minimum.
+```{prf:definition} Lokální extrémy.
+:nonumber:
+Nechť $f\colon \mathbb R\to\mathbb R$.
+
+* Řekneme, že $f$ má v bodě $x_0$ *lokální maximum*, pokud platí $$f(x)\leq f(x_0)$$ pro všechna $x$ z nějakého okolí bodu $x_0$.
+* Řekneme, že $f$ má v bodě $x_0$ *lokální minimum*, pokud platí $$f(x)\geq f(x_0)$$ pro všechna $x$ z nějakého okolí bodu $x_0$.
+* Řekneme, že $f$ má v bodě $x_0$ *lokální extrém*, pokud v tomto bodě má buď lokální maximum nebo lokální minimum.
+```
+
 
 Přímo z definice lokálních extrémů a rostoucí a klesající funkce plyne, že funkce nemůže mít lokální extrém v bodě, kde je rostoucí nebo kde je klesající. Tuto skutečnost vyjadřuje pomocí derivací následující věta.
 
->Věta (Fermatova o lokálním extrému, nutná podmínka pro lokální extrém). Má-li funkce $f$ v bodě $x_0$ lokální extrém, potom je derivace funkce $f$ v bodě $x_0$ nulová, nebo neexistuje. 
+```{prf:theorem} Fermatova věta o lokálním extrému, nutná podmínka pro lokální extrém.
+:nonumber:
+Má-li funkce $f$ v bodě $x_0$ lokální extrém, potom je derivace funkce $f$ v bodě $x_0$ nulová, nebo neexistuje. 
+```
 
 Předchozí věta představuje *nutnou podmínku* pro lokální extrém. V bodě kde není splněna (tj. pokud je derivace v tomto bodě kladná nebo záporná) extrém nemůže nastat. Tím je eliminováno obrovské množství bodů z definičního oboru funkce. V prakticky využitelných případech nám po této eliminaci často zůstane jenom jediný bod, podobně jako v následující úloze. 
 
@@ -179,7 +198,11 @@ představuje *dostatečnou (postačující) podmínku* pro lokální
 extrém. Stačí aby tato podmínka byla splněna a můžeme s jistotou
 usoudit, že v bodě je extrém a jaký.
 
-> Věta (postačující podmínka pro lokální extrémy). Je-li $f$ spojitá v bodě $x_0$ a mění-li se v bodě $x_0$ funkce $f$ z rostoucí na klesající, má funkce $f$ v bodě $x_0$ lokální maximum. Analogicky, lokální minimum nastává při změně z klesající na rostoucí.
+```{prf:theorem} Postačující podmínka pro lokální extrémy.
+:nonumber:
+ Je-li $f$ spojitá v bodě $x_0$ a mění-li se v bodě $x_0$ funkce $f$ z rostoucí na klesající, má funkce $f$ v bodě $x_0$ lokální maximum. Analogicky, lokální minimum nastává při změně z klesající na rostoucí.
+```
+
 
 Podle této věty jsou intervaly monotonie zásadní informací pro
 nalezení lokálních extrémů. Vzhledem k souvislosti monotonie s
@@ -211,7 +234,11 @@ graf je tak komplikovaný, že se nedá nakreslit.
 Podmínka $f(a)f(b)<0$ v následující větě znamená, že funkční hodnoty
 funkce $f$ v bodech $a$ a $b$ se liší znaménkem.
 
-> Věta (Bolzanova věta). Nechť $f$ je spojitá funkce na intervalu $[a,b]$ a $f(a)f(b)<0$. Potom existuje $c$ na intervalu $(a,b)$ takové, že platí $f(c)=0.$
+```{prf:theorem} Bolzanova věta.
+:nonumber:
+ Nechť $f$ je spojitá funkce na intervalu $[a,b]$ a $f(a)f(b)<0$. Potom existuje $c$ na intervalu $(a,b)$ takové, že platí $f(c)=0.$
+```
+
 
 **Důsledek.**
 
@@ -385,12 +412,16 @@ Rozšíření myšlenky podobnosti je rozměrová analýza. Ta je založená na 
 že fyzikální zákony je možno vyjadřovat v různých jednotkách. Formální
 postup umožňuje například následující věta.
 
-> Věta (Buckinghamův Pi-teorém). Rovnici $$F_0(x_1,x_2,\dots,x_n)=0,$$ resp. $$x_1=F(x_2,\dots,x_n),$$ která vyjadřuje fyzikální zákon a obsahuje
+```{prf:theorem} Buckinghamův Pi-teorém.
+:nonumber:
+ Rovnici $$F_0(x_1,x_2,\dots,x_n)=0,$$ resp. $$x_1=F(x_2,\dots,x_n),$$ která vyjadřuje fyzikální zákon a obsahuje
 $n$ veličin (včetně fyzikálních a materiálových konstant) vyjádřených pomocí $m$ základních
 jednotek je možno zapsat jako rovnici vyjádřenou pomocí $(n-m)$
 bezrozměrných parametrů, tj. $$f_0(\pi_1,\pi_2,\dots,\pi_{n-m})=0,$$
 nebo
 $$\pi_1=f(\pi_2,\dots,\pi_{n-m}).$$
+```
+
 
 Formální tvar a metoda výběru bezrozměrných parametrů jsou v tuto
 chvíli pro nás poměrně komplikované a proto bude nejjednodušší si
@@ -475,11 +506,15 @@ $$\vec F=(P,Q,R)=P\vec i+Q\vec j+R\vec k = P\vec e_1+Q\vec e_2+R\vec e_3$$
 
 Pokud nerovnoměrnost v prostorovém rozložení skalární veličiny iniciuje nějaký děj, je nutné znát směr, ve kterém tato veličina roste nebo klesá. To jsme viděli například u rovnice vedení tepla, kde nerovnoměrnost v prostorovém rozložení teploty dává vznik toku tepla. V jednorozměrném případě byla situace jednoduchá a stačí se řídit znaménkem derivace. Ve dvourozměrném nebo trojrozměrném případě je bohužel situace složitější ale i zde máme nástroj pro detekci směrů ve kterém veličina roste nebo klesá a také intenzity tohoto růstu nebo poklesu.
 
-> Definice (gradient). Buď $f(x,y)$ funkce dvou proměnných, která má
+```{prf:definition} Gradient.
+:nonumber:
+ Buď $f(x,y)$ funkce dvou proměnných, která má
 parciální derivace. *Gradientem* funkce $f$ rozumíme
 vektor
 $$\nabla f:=\left(\frac{\partial f}{\partial
     x},\frac{\partial f}{\partial y}\right).$$
+```
+
 
 **Poznámka.** Formálně též často píšeme
 $$\left(\frac{\partial}{\partial x},\frac\partial{\partial y}\right)f,$$
@@ -488,7 +523,11 @@ $\nabla=\left(\frac{\partial}{\partial x},\frac\partial{\partial
     y}\right)$ je operátor, se kterým pracujeme jako s
 vektorem. Nazývá se *nabla* nebo *Hamiltonův operátor*. 
 
-> Poznámka (fyzikální význam gradientu). Gradient skalární veličiny $f$ je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny $f$. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat, například vedení tepla nebo difuze. V praxi nás proto většinou zajímá směr maximálního poklesu, tj. $-\nabla f$.
+```{prf:remark} Fyzikální význam gradientu.
+:nonumber:
+ Gradient skalární veličiny $f$ je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny $f$. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat, například vedení tepla nebo difuze. V praxi nás proto většinou zajímá směr maximálního poklesu, tj. $-\nabla f$.
+```
+
 
 ### Lineární aproximace rovinné transformace
 
@@ -565,3 +604,4 @@ malých deformací.
 
 * Derivace dokáže detekovat růst a klesání funkce a díky tomu dokážeme také detekovat body, kde se růst zastaví a změní na klesání nebo naopak. Tyto body nás přirozeně zajímají, protože v těchto bodech je studovaná veličina maximální nebo minimální a to má dopad při minimalizaci nákladů, maximalizaci pevnosti či zisku a jiných úlohách z praktického života.
 * Silným nástrojem dokáží být i jednodušší postupy, jako například rozměrová analýza reprezentovaná Buckinghamovým $\Pi$ teorémem.
+

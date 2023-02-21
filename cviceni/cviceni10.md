@@ -237,3 +237,4 @@ má řešení $x_1=0$ (plyne z první rovnice) a například $x_2=1$ a $x_3=2$ (
 
 ```
 
+

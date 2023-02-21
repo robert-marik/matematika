@@ -313,3 +313,4 @@ _V tomto příkladě se učíme mimo jiné derivovat i podle jiné proměnné ne
 
 </div>
 
+

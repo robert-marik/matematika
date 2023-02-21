@@ -237,3 +237,4 @@ Jiná forma zápisu je přímo pomocí druhých parciálních derivací ve tvaru
 ![Model podzemní vody mezi rovnoběžnými řekami.](mezi_rekama.png)
 
 Poslední model je model podzemní vody s konstantními piezometrickýmí hladinami podél dvou rovnoběžných stran (mohou být například dvě řeky) a s rovnoměrně rozloženými zdroji (například nad oblastí jsou rovnoměrné srážky a voda rovnoměrně zasakuje). Řešením modelu vidíme odkud teče voda do které řeky. Tím je možno například usuzovat, kde po případné kontaminaci provádět sanační práce.
+

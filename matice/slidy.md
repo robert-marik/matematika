@@ -25,13 +25,17 @@ skalární funkce. Aby se s vektory dalo rozumně pracovat, musí tvořit
 vhodnou strukturu. Například operace musí mít neutrální prvek a
 každý vektor musí mít opačný prvek.
 
-> Definice (vektory, vektorový prostor).
-> Množinu $V$ uspořádaných $n$-tic  $(a_1, a_2,\dots, a_n)$ s operacemi sčítání a násobení reálným číslem
+```{prf:definition} Vektory, vektorový prostor.
+:nonumber:
+
+Množinu $V$ uspořádaných $n$-tic  $(a_1, a_2,\dots, a_n)$ s operacemi sčítání a násobení reálným číslem
   definovanými
   $$\begin{gathered}  (a_1, a_2,\dots, a_n)+(b_1, b_2,\dots, b_n)=(a_1+b_1, a_2+b_2,\dots, a_n+b_n)\\    c\cdot (a_1, a_2,\dots, a_n)=(c\cdot a_1, c\cdot a_2,\dots,c\cdot a_n)  \end{gathered}$$
   pro všechna $c\in\mathbb R$ a $(a_1, a_2,\dots, a_n),(b_1, b_2,\dots, b_n)\in V$ nazýváme *vektorovým
     prostorem*. Prvky tohoto prostoru nazýváme *vektory*. Prvky $a_1, \dots, a_n$ nazýváme *složky vektoru* $(a_1,a_2,\dots, a_n)$. Číslo
   $n$ nazýváme *dimenze prostoru $V$*.
+```
+
 
 Vektorový prostor, jehož komponenty jsou uspořádané $n$-tice reálých čísel označujeme $\mathbb R^n$.
 
@@ -94,8 +98,10 @@ Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/P
 
 ### Lineární kombinace
 
-> Definice (lineární kombinace).
-> Nechť $\vec u_1$, $\vec u_2$, $\dots$ $\vec u_k$ je
+```{prf:definition} Lineární kombinace.
+:nonumber:
+
+Nechť $\vec u_1$, $\vec u_2$, $\dots$ $\vec u_k$ je
 konečná posloupnost vektorů z vektorového prostoru $V$. Vektor
 $\vec u$, pro který platí
 $$
@@ -104,6 +110,8 @@ $$
 kde $t_1$, $t_2$, $\dots$, $t_k$ jsou nějaká reálná čísla, se nazývá
 *lineární kombinace* vektorů $\vec u_1$, $\vec u_2$, $\dots$, $\vec u_k$.
 Čísla $t_1$, $t_2$, $\dots$, $t_k$ nazýváme *koeficienty lineární kombinace*.
+```
+
 
 \iffalse
 
@@ -222,8 +230,10 @@ rozlišení toho, zda se nulový vektor dá nebo nedá vyjádřit jako
 netriviální lineární kombinace zavedeme nové pojmy, lineární závislost
 a nezávislost.
 
-> Definice (lineární závislost a nezávislost).
->  Řekneme, že vektory $\vec u_1$, $\vec u_2$, $\dots$, $\vec u_k$ jsou
+```{prf:definition} Lineární závislost a nezávislost.
+:nonumber:
+
+Řekneme, že vektory $\vec u_1$, $\vec u_2$, $\dots$, $\vec u_k$ jsou
   *lineárně závislé*, jestliže existuje alespoň jedna
   netriviální lineární kombinace těchto vektorů, jejímž
   výsledkem je nulový vektor $\vec o$, tj. existují-li reálná čísla $t_1$,
@@ -233,6 +243,8 @@ $$
     \vec o=t_1\vec u_1+t_2\vec u_2+\cdots +t_k \vec u_k.
 $$
    V opačném případě říkáme, že vektory jsou *lineárně nezávislé*.
+```
+
 
 Platí následující.
 
@@ -283,9 +295,13 @@ https://youtu.be/DY044M_RbVs
 
 ### Matice a jejich lineární kombinace
 
-> Definice (matice). *Maticí řádu $m\times n$*  rozumíme schema $$ A= \begin{pmatrix} a_{11}& a_{12}& a_{13}& \cdots{}& a_{1n}\\a_{21}& a_{22}& a_{23}& \cdots{}& a_{2n}\\\vdots{}& \vdots{}& {}& \ddots{}& \vdots{}\\a_{m1}& a_{m2}& \cdots{}& \cdots{}& a_{mn} \end{pmatrix}$$kde $a_{ij}$ pro $i=1..m$ a $j=1..n$ jsou reálná čísla nebo funkce. Množinuvšech matic řádu $m\times n$, jejichž prvky jsou reálná čísla, označujeme symbolem $\mathbb R^{m\times n}$.Zkráceně zapisujeme též ${A=(a_{ij})}$.
+```{prf:definition} Matice.
+:nonumber:
+ *Maticí řádu $m\times n$*  rozumíme schema $$ A= \begin{pmatrix} a_{11}& a_{12}& a_{13}& \cdots{}& a_{1n}\\a_{21}& a_{22}& a_{23}& \cdots{}& a_{2n}\\\vdots{}& \vdots{}& {}& \ddots{}& \vdots{}\\a_{m1}& a_{m2}& \cdots{}& \cdots{}& a_{mn} \end{pmatrix}$$kde $a_{ij}$ pro $i=1..m$ a $j=1..n$ jsou reálná čísla nebo funkce. Množinuvšech matic řádu $m\times n$, jejichž prvky jsou reálná čísla, označujeme symbolem $\mathbb R^{m\times n}$.Zkráceně zapisujeme též ${A=(a_{ij})}$.
 >
-> Je-li $m=n$ nazývá se matice $A$ *čtvercová  matice*, jinak *obdélníková matice*. Je-li $A$ čtvercovámatice, nazýváme prvky tvaru $a_{ii}$, tj. prvky, jejichž řádkovýa sloupcový index jsou stejné, *prvky hlavní diagonály*.
+Je-li $m=n$ nazývá se matice $A$ *čtvercová  matice*, jinak *obdélníková matice*. Je-li $A$ čtvercovámatice, nazýváme prvky tvaru $a_{ii}$, tj. prvky, jejichž řádkovýa sloupcový index jsou stejné, *prvky hlavní diagonály*.
+```
+
 
 \iffalse
 
@@ -306,7 +322,9 @@ vektorů provedeme zavedením maticového součinu.
 
 ### Maticový součin
 
-> Definice (součin matic).
+```{prf:definition} Součin matic.
+:nonumber:
+
   Buďte $A=(a_{ij})$ matice řádu $m\times n$ a $B=(b_{ij})$ matice
   řádu $n\times p$. *Součinem matic* $A$ a $B$
     (v tomto pořadí) rozumíme matici $G=(g_{ij})$ řádu $m\times p$,
@@ -318,6 +336,8 @@ $$
   $i=1..m$, $j=1..p$. Zapisujeme $${G=AB}$$ (v tomto pořadí).
   >
   >Slovy: v $j$-tém sloupci matice $AB$ je lineární kombinace sloupců matice $A$, přičemž koeficienty této lineární kombinace jsou prvky z $j$-tého sloupce matice $B$.
+```
+
 
 Na maticový součin můžeme pohlížet i pomocí pojmů  známých z analytické geometrie. Prvky v součinu matic jsou skalárními součiny řádků první matice se sloupci druhé matice.
 
@@ -377,9 +397,9 @@ Je-li druhá matice v součinu sloupcový vektor $\vec u$, je výsledkem maticov
 
 https://youtu.be/4jqBoskZ9Ak
 
-<div class="shorten" data-text="Níže jsou popsány triválnější aplikace maticového součinu, jako jsou například populační model s věkovou strukturou. Odvážnější mohou přeskočit a pokračovat na to nejdůležitější, kdy matici chápeme jako zobrazení vektorů na vektory.">
-
 ### Derivace diskrétní funkce
+
+<!-- <div class="shorten" data-text="Níže jsou popsány triválnější aplikace maticového součinu, jako jsou například populační model s věkovou strukturou. Odvážnější mohou přeskočit a pokračovat na to nejdůležitější, kdy matici chápeme jako zobrazení vektorů na vektory."> -->
 
 V metodě konečných diferencí jsme si ukázali a v předcházejícím textu připomněli, že derivace umíme aproximovat výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Toto je možné vyjádřit pomocí maticového součinu. Pro konkrétnost, pro druhou derivaci aproximujeme pomocí tří po sobě jdoucích hodnot v ekvidistantních krocích vzorcem 
 $$ f''(x)\approx\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
@@ -510,7 +530,7 @@ kde derivaci  vektoru chápeme po složkách jako vektor sestavený z derivací 
 
 Reálné sítě mají tisíce uzlů a tisíce vztahů mezi nimi a není možné je studovat jinak, než matematickými metodami. Například [model *Escherichia Coli*](http://bigg.ucsd.edu/models/iJO1366), hojně studované bakerie, obsahuje 1805 metabolitů, 2583 reakcí a 1367 genů. Matice umožňují studovat nejenom vztahy ale i intenzitu toku mezi jednotlivými metabolity a umožní studovat vliv vnějších zásahů, například knokautování některých genů nebo umístění bakerie do anaerobního prostředí. V příkladě s potravním řetězcem například můžeme (po dodání dalších informací do modelu) určit, jakým procentem se jednotlivé složky potravy podílí na celkovém jídelníčku a jak se toto složení změní při odstranění nějaké složky potravy. 
 
-</div>
+<!-- </div> -->
 
 ## Aplikace maticového součinu 3/3: matice jako zobrazení, tenzory
 
@@ -572,7 +592,11 @@ Výše popsané chování pozorujeme i u proudění podzemní vody, kde hnací s
 
 **Matematický prostředek, který umožňuje snadno vektoru změnit velikost nebo i směr je právě tenzor (matice) a maticový součin.**
 
-> Poznámka (tenzor). Pod pojmem *tenzor* si můžeme představit veličinu, která figuruje v nějakém fyzikálním zákoně spojujícím dvě vektorové veličiny (podnět a odezvu na podnět) a násobení tenzorem definuje vztah mezi nimi. Pokud jsou podnětem a odezvou vektory, které mají stejný směr, stačí toto násobení provést pomocí skalární veličiny. Pokud však směr vektoru udávajícího odezvu není stejný jako směr vektoru udávajícího podnět, je nutné použít postup, který si s jiným směrem vektoru na vstupu a na výstupu poradí. A tímto postupem je právě maticový součin. Zatímco tedy například tok tepla v izotropních materiálech můžeme studovat pomocí skalárních materiálových charakteristik, tok tepla v anizotropních materiálech už musíme popisovat pomocí tenzorových materiálových charakteristik. Proto například u vedení tepla ve dřevě udáváme součinitele vedení tepla $\lambda_L$, $\lambda_R$ a $\lambda_T$ pro každý anatomický směr samostatně a z těchto veličin poté sestavujeme tenzor tepelné vodivosti $$\begin{pmatrix}\lambda_L &0&0 \cr 0&\lambda_R&0\cr 0&0&\lambda_T\end{pmatrix}.$$ 
+```{prf:remark} Tenzor.
+:nonumber:
+ Pod pojmem *tenzor* si můžeme představit veličinu, která figuruje v nějakém fyzikálním zákoně spojujícím dvě vektorové veličiny (podnět a odezvu na podnět) a násobení tenzorem definuje vztah mezi nimi. Pokud jsou podnětem a odezvou vektory, které mají stejný směr, stačí toto násobení provést pomocí skalární veličiny. Pokud však směr vektoru udávajícího odezvu není stejný jako směr vektoru udávajícího podnět, je nutné použít postup, který si s jiným směrem vektoru na vstupu a na výstupu poradí. A tímto postupem je právě maticový součin. Zatímco tedy například tok tepla v izotropních materiálech můžeme studovat pomocí skalárních materiálových charakteristik, tok tepla v anizotropních materiálech už musíme popisovat pomocí tenzorových materiálových charakteristik. Proto například u vedení tepla ve dřevě udáváme součinitele vedení tepla $\lambda_L$, $\lambda_R$ a $\lambda_T$ pro každý anatomický směr samostatně a z těchto veličin poté sestavujeme tenzor tepelné vodivosti $$\begin{pmatrix}\lambda_L &0&0 \cr 0&\lambda_R&0\cr 0&0&\lambda_T\end{pmatrix}.$$ 
+```
+
 
 ## Vlastní čísla a vlastní vektory
 
@@ -580,15 +604,23 @@ https://youtu.be/-vYq_TzC6jo
 
 U zobrazování vektorů pomocí maticového násobení nás velice zajímá, které směry se zachovávají, tj. kdy bude obrazem vektoru jeho násobek.
 
-> Definice (vlastní vektor a vlastní hodnota matice). Řekneme, že nenulový vektor $\vec u$ je *vlastním vektorem* matice $A$ příslušným *vlastní hodnotě* $\lambda$, jestliže platí $$A \vec u=\lambda \vec u.$$
+```{prf:definition} Vlastní vektor a vlastní hodnota matice.
+:nonumber:
+ Řekneme, že nenulový vektor $\vec u$ je *vlastním vektorem* matice $A$ příslušným *vlastní hodnotě* $\lambda$, jestliže platí $$A \vec u=\lambda \vec u.$$
+```
+
 
 Vlastní čísla se nazývají též vlastní hodnoty matice. Každý nenulový
 vlastní násobek vlastního vektoru je vlastní vektor příslušný téže
 vlastní hodnotě.
 
-> Poznámka (vlastní vektory a materiálové inženýrství). Vlastní vektory jsou nesmírně důležité, protože definují směry, podél nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to, jak se působení vnější síly na těleso projeví na deformaci tohoto tělesa nebo jak se gradient teploty nebo vlhkosti projeví na proudění tepla či vody ve dřevě, půdě nebo jiném materiálu. Často se v aplikacích maticové zobrazení objevuje v *konstitučních vztazích*, vztazích mezi podnětem a materiálovou odezvou. Vlastní směry jsou tedy směry, ve kterých má odezva stejný směr jako podnět.  
+```{prf:remark} Vlastní vektory a materiálové inženýrství.
+:nonumber:
+ Vlastní vektory jsou nesmírně důležité, protože definují směry, podél nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to, jak se působení vnější síly na těleso projeví na deformaci tohoto tělesa nebo jak se gradient teploty nebo vlhkosti projeví na proudění tepla či vody ve dřevě, půdě nebo jiném materiálu. Často se v aplikacích maticové zobrazení objevuje v *konstitučních vztazích*, vztazích mezi podnětem a materiálovou odezvou. Vlastní směry jsou tedy směry, ve kterých má odezva stejný směr jako podnět.  
 >
-> Pro pravidelně rostlé dřevo je snadné tyto směry určit, jsou to anatomické směry dřeva. Pro zkroucené dřevo nebo při studiu proudění vody, vzduchu či ropy v půdě to již tak snadné není a je nutné tyto směry vypočítat. To se naučíme později.
+Pro pravidelně rostlé dřevo je snadné tyto směry určit, jsou to anatomické směry dřeva. Pro zkroucené dřevo nebo při studiu proudění vody, vzduchu či ropy v půdě to již tak snadné není a je nutné tyto směry vypočítat. To se naučíme později.
+```
+
 
 \iffalse
 
@@ -653,12 +685,16 @@ matice vlastní vektory vždy existují. Co se přesně myslí pod pojmem
 
 https://youtu.be/Toqwz-Oxg-4
 
-> Definice (transponovaná matice).  Buď $A=(a_{ij})\in\mathbb R^{m\times n}$ matice. Matice, která vznikne
+```{prf:definition} Transponovaná matice.
+:nonumber:
+  Buď $A=(a_{ij})\in\mathbb R^{m\times n}$ matice. Matice, která vznikne
   záměnou řádků matice $A$ za sloupce se nazývá *matice     transponovaná k\ matici $A$*. Matici
   transponovanou označujeme symbolem $A^T$. Platí tedy
   $A^T\in\mathbb R^{n\times m}$ a
   $$     A^T=(a_{ji}), $$
   kde $a_{ij}$  jsou prvky matice $A$.
+```
+
 
 **Příklad.** Matice transponovaná k matici $A=
 \begin{pmatrix}
@@ -681,7 +717,11 @@ má tento rozklad ve tvaru
 $$A=\begin{pmatrix}  -4 & 3 \\ 3 & 2\end{pmatrix}+\begin{pmatrix}  0 & 4 \\ -4 & 0\end{pmatrix}.$$
 Tento trik použijeme pro odvození tvaru tenzoru malých deformací, ze zobrazení takto totiž dokážeme odfiltrovat část související s pootočením a část, která s pootočením nesouvisí. Ta druhá nás zajímá, protože popisuje deformaci.
 
-> Věta (souvislost transponování matice a maticového součinu). Pro čtvercové matice platí $$(AB)^T=B^T A^T.$$
+```{prf:theorem} Souvislost transponování matice a maticového součinu.
+:nonumber:
+ Pro čtvercové matice platí $$(AB)^T=B^T A^T.$$
+```
+
 
 **Příklad.** Pro Markovův řetězec s maticí a sloupcovými vektory $\vec q$ dostaneme transponováním vztahu
 $$\vec q_{k+1}=A\vec q_k$$
@@ -828,7 +868,11 @@ později například naučíme chytře využít toho, že každý řádek má v
 hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 řádku.
 
-> Poznámka (iterační metoda). Soustavu (1) je možno vyřešit iterační metodou. Je možno postupovat intuitivně. Vyjdeme z libovolného odhadu řešení a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jacobiho metoda).
+```{prf:remark} Iterační metoda.
+:nonumber:
+ Soustavu (1) je možno vyřešit iterační metodou. Je možno postupovat intuitivně. Vyjdeme z libovolného odhadu řešení a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jacobiho metoda).
+```
+
 
 [Online výpočet maticově.](https://sagecell.sagemath.org/?z=eJxljcEKgzAMhu-C75Cb6Ra2WMsGAw_6FAXx0IPbPGhHlS2PvzoYIoaEhD__l1Tl4ObQCzYNU06xWmp-nThOe61VaVKvUMF0YboymWV1moMbp5efOoy2twuYSQ6iQQoQk0XNrqjkJJqkIDE7dHr6DyBWB3us1dlsQc30zx149wF66EeI4qMD1KxuaQIxbDluDi4v0KovMJNFkw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
@@ -852,4 +896,5 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 * Seznámili jsme se s maticemi, s objekty, které umožní pracovat se zobrazením vektorů na vektory, kdy směr vzoru a obrazu nemusí být (na rozdíl od násobení reálným číslem) stejný. Díky tomu dokážeme popsat reakci materiálu na podněty v případě, kdy má materiál v různých směrech různé vlastnosti. 
 * Matice umožňují kompaktní zápis soustavy libovolného počtu lineárních rovnic jedinou rovnicí $$AX=B.$$
 * V materiálovém inženýrství pomocí matic (přesněji pomocí tenzorů) umíme popsat materiály, mající v různých směrech různé vlastnosti. V takových materiálech je různý směr vnějšího podnětu a odezvy na vnější podnět a bez matic jenom s použitím skalárních veličin není možné se závislostmi takového typu pracovat. Pokud chceme zobrazení, které mění směr vektorů (a má některé další rozumné vlastnosti), používáme matice. Přesněji, používáme tenzory, které mají v souřadnicích podobu matic.
+
 

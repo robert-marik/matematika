@@ -90,3 +90,4 @@ Viz video ke cvičení a text k přednášce.
 
 Viz video ke cvičení a text k přednášce.
 
+

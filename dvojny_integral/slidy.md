@@ -125,10 +125,18 @@ veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
 funkcí, nebo integračních oborů) a s násobení integrované funkce
 konstantou. Přesněji, platí následující věty.
 
-> Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí
+```{prf:theorem} Linearita dvojného integrálu.
+:nonumber:
+   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí
 \dm$$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
+```
 
-> Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
+
+```{prf:theorem} Aditivita vzhledem k oboru integrace.
+:nonumber:
+  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
+```
+
 
 ## Výpočet
 
@@ -145,16 +153,20 @@ můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
 věty udávají, jak je možno dvojný integrál přepsat jako dvojnásobný
 integrál. Mají název **Fubiniovy věty**.
 
-> Věta (Fubiniova věta). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
-> $$  
->   \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq x\leq b}\text{ a }
->   {\varphi (x)\leq y\leq \psi (x)}\}.$$ 
-> Potom 
-> $$
->   \iint_{\Omega}f(x,y)\mathrm{d}x \mathrm{d}y ={\int_{a}^{b}}
->   \Bigl[ \int_{\varphi (x)}^{\psi(x)}   
->   f(x,y){\mathrm{d}y }\Bigr]{\mathrm{d}x }.
-> $$
+```{prf:theorem} Fubiniova věta.
+:nonumber:
+ Nechť $f$ je funkce spojitá v\ uzavřené oblasti
+$$  
+\Omega=\{(x,y)\in\mathbb{R}^2:{a\leq x\leq b}\text{ a }
+{\varphi (x)\leq y\leq \psi (x)}\}.$$ 
+Potom 
+$$
+\iint_{\Omega}f(x,y)\mathrm{d}x \mathrm{d}y ={\int_{a}^{b}}
+\Bigl[ \int_{\varphi (x)}^{\psi(x)}   
+f(x,y){\mathrm{d}y }\Bigr]{\mathrm{d}x }.
+$$
+```
+
 
 ### Výpočet pro oblast mezi funkcemi proměnné $y$
 
@@ -163,18 +175,22 @@ integrál. Mají název **Fubiniovy věty**.
 
 </div>
 
-> Věta (Fubiniova věta pro jiné pořadí integrace). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
-> $$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
->   {\varphi (y)\leq x\leq
->   \psi (y)}\}.
-> $$
-> Potom 
-> $$
->   \iint_{\Omega}f(x,y)\mathrm{d}x \mathrm{d}y ={\int_a^b}\Bigl[ 
->   {\int_{\varphi (y)}^{\psi(y)}}
->   f(x,y){\mathrm{d}x }\Bigr]{\mathrm{d}y }.
-> $$
-> 
+```{prf:theorem} Fubiniova věta pro jiné pořadí integrace.
+:nonumber:
+ Nechť $f$ je funkce spojitá v\ uzavřené oblasti
+$$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
+{\varphi (y)\leq x\leq
+\psi (y)}\}.
+$$
+Potom 
+$$
+\iint_{\Omega}f(x,y)\mathrm{d}x \mathrm{d}y ={\int_a^b}\Bigl[ 
+{\int_{\varphi (y)}^{\psi(y)}}
+f(x,y){\mathrm{d}x }\Bigr]{\mathrm{d}y }.
+$$
+
+```
+
 
 <div class='obtekat'>
 
@@ -221,20 +237,24 @@ Výše uvedené problémy se stanovením a případným přepočítáváním mez
 při záměně pořadí integrace se nevyskytují při integrování přes
 obdélníkovou oblast.
 
->   Věta (Fubiniova věta na obdélníku). Nechť $R=[a,b]\times[c,d]$ je uzavřený obdélník v $\mathbb{R}^2$ a
->   $f$ funkce definovaná a spojitá na $R$. Pak platí
->   $$    \begin{aligned}\iint_R f(x,y)\mathrm{d}x \mathrm{d}y 
->     &=
->     \int_a^b\Bigl[\int_c^d f(x,y)\mathrm{d}y \Bigr]\mathrm{d}x 
->     \\&=
->     \int_c^d\Bigl[\int_a^b f(x,y)\mathrm{d}x \Bigr]\mathrm{d}y .\end{aligned}
->   $$
-> 
->   Platí-li dokonce rovnost $f(x,y)=g(x)h(y)$, pak
->   $$
->         \iint_R f(x,y)\mathrm{d}x \mathrm{d}y  =     \int_a^b g(x) \mathrm{d}x  \int_c^d h(y)\mathrm{d}y .
->   $$
-> 
+```{prf:theorem} Fubiniova věta na obdélníku.
+:nonumber:
+ Nechť $R=[a,b]\times[c,d]$ je uzavřený obdélník v $\mathbb{R}^2$ a
+$f$ funkce definovaná a spojitá na $R$. Pak platí
+$$    \begin{aligned}\iint_R f(x,y)\mathrm{d}x \mathrm{d}y 
+&=
+\int_a^b\Bigl[\int_c^d f(x,y)\mathrm{d}y \Bigr]\mathrm{d}x 
+\\&=
+\int_c^d\Bigl[\int_a^b f(x,y)\mathrm{d}x \Bigr]\mathrm{d}y .\end{aligned}
+$$
+
+Platí-li dokonce rovnost $f(x,y)=g(x)h(y)$, pak
+$$
+\iint_R f(x,y)\mathrm{d}x \mathrm{d}y  =     \int_a^b g(x) \mathrm{d}x  \int_c^d h(y)\mathrm{d}y .
+$$
+
+```
+
 
 ## Aplikace dvojného integrálu
 
@@ -569,4 +589,5 @@ $y$-ové polohy těžiště $y_0$.
 * Vidíte dvojný integrál a potřebujete promyslet, co vyjadřuje? Představte si, že integrovaná veličina je konstantní. Potom se integrál redukuje na součin a ten už zpravidla je snadné vyjádřit slovně. Například dvojný integrál hloubky jezera vypočítaný přes celé jezero. Pro konstantní hloubku se tato veličina redukuje na součin hloubky a obsahu hladiny. To je ale objem jezera. Proto dvojný integrál hloubky jezera vyjadřuje objem vody v jezeře.
 * Dvojný integrál počítáme převodem na dvojnásobný integrál, tj. dva integrály, z nichž jeden je uvnitř druhého. V některých situacích (integrál funkce sestavené jako součin funkcí jedné proměnné a počítaný přes obdélník) se dokonce může situace redukovat na součin dvou integrálů funkce jedné proměnné.
 * Dvojný integrál je také odpověď na problém, jak sesčítat veličinu rozloženou v ploše (kvadratický moment obrazce, veličina důležitá pro posuzování tuhosti a pevnosti nosníků) nebo jak ji zprůměrovat (integrální střední hodnota funkce dvou proměnných).
+
 

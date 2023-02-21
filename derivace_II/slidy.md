@@ -32,9 +32,13 @@ vstupních datech na změnu funkční hodnoty funkce. Pokud změna ve
 vstupních datech není jednotková ale násobek jednotkové změny, je i
 odezva násobná.
 
-> Poznámka (derivace jako měřítko citlivosti funkce na změnu vstupních dat).
+```{prf:remark} Derivace jako měřítko citlivosti funkce na změnu vstupních dat.
+:nonumber:
+
 Buď $f:\mathbb R\to\mathbb R$ funkce taková, že má derivaci. Pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$, tj. $$\Delta f\approx f'(x_0)\Delta x$$ neboli
 $$\Delta f\approx \frac{\mathrm df(x_0)}{\mathrm dx}\Delta x.$$ Tato aproximace je použitelná pro malé hodnoty $\Delta x$. 
+```
+
 
 Co se rozumí malou hodnotou $\Delta x$ závisí na více faktorech,
 například i na tom, jak se funkce "vzpírá" tomu, být aproximována
@@ -59,7 +63,9 @@ h=18-20=-2\,\mathrm{cm}$$ a tomu odpovídá změna průhybu $$\Delta
 s=-\frac{3\times 80\,000}{(20)^4}(-2)=3\,\mathrm{cm}.$$ Průhyb se tedy
 zvětší o $3\,\mathrm{cm}$.
 
-> Poznámka (smysl předchozího příkladu). Proč nepočítáme přesně? Stačila by selská logika a změna
+```{prf:remark} Smysl předchozího příkladu.
+:nonumber:
+ Proč nepočítáme přesně? Stačila by selská logika a změna
 funkce $s=\frac k{h^3}$ by byla
 $$\Delta s=\frac k{(h+\Delta h)^3}-\frac k{h^3}.\tag{2}$$ Odpověď je
 překvapivá: pomocí derivací je vyjádření změny v naprosté většině
@@ -69,6 +75,8 @@ mnohem příjemnější výraz, než rozdíl dvou zlomků (2). Skutečnost, že 
 pouze pro malé $\Delta h$ nás nijak neomezuje. Většinou se tento
 aparát používá tam, kde se chyba limitním přechodem "stáhne na
 nulu". Navíc, ukazujeme koncept. *Důležité je si z příkladu odnést, že derivace umožní analyzovat, jak vypočítané veličiny reagují na změny ve vstupních datech. Výsledkem může být například maximální teoretická přesnost se kterou je možné vypočítat výslednou veličinu při vstupních datech zatížených chybou nebo nějakým způsobem nejistých (zákon šíření chyb).*
+```
+
 
 ## Lineární aproximace 
 
@@ -84,23 +92,35 @@ principem lineární aproximace, neuvěřitelně jednoduché a přitom velice
 mocné techniky používané inženýry k tomu, aby se popis problémů a
 řešení úloh vůbec daly efektivně zvládnout.
 
-> Věta (lineární aproximace).
+```{prf:theorem} Lineární aproximace.
+:nonumber:
+
 Buď $f:\mathbb R\to\mathbb R$ funkce, která má derivaci. V okolí bodu $x_0$ platí přibližný vzorec $$f(x)\approx f(x_0)+ f'(x_0)(x-x_0)$$ neboli
 $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
+```
 
-> Poznámka (slovní interpretace vzorce pro lineární aproximaci). Výše uvedený vzorec není těžké rozšifrovat.
->
->* Veličina $f(x)$ je funkční hodnota v bodě $x$, tu chceme odhadnout.
->* Veličina $f(x_0)$ je známá funkční hodnota v bodě $x_0$, to je
->  výchozí bod pro odhad.
->* Veličina $f'(x_0)$ je odhad změny veličiny $f$ způsobený jednotkovou změnou vstupních dat (zvýšení hodnoty $x_0$ o jednotku). Tento faktor ještě v dalším kroku musíme přizpůsobit tomu, že změna vstupních dat není jednotková, což uděláme s využitím přímé úměrnosti.
->* Veličina $f'(x_0)(x-x_0)$ je odhad změny veličiny $f$ vyvolané
->  změnou veličiny $x$ z $x_0$ o $\Delta x=x-x_0$ tak, jak jsme jej
->  používali v minulé přednášce.
 
-> Poznámka (alternativní vzorec pro lineární aproximaci). Vzorec pro lineární aproximaci se často píše v ekvivalentním tvaru
+```{prf:remark} Slovní interpretace vzorce pro lineární aproximaci.
+:nonumber:
+ Výše uvedený vzorec není těžké rozšifrovat.
+
+* Veličina $f(x)$ je funkční hodnota v bodě $x$, tu chceme odhadnout.
+* Veličina $f(x_0)$ je známá funkční hodnota v bodě $x_0$, to je
+ýchozí bod pro odhad.
+* Veličina $f'(x_0)$ je odhad změny veličiny $f$ způsobený jednotkovou změnou vstupních dat (zvýšení hodnoty $x_0$ o jednotku). Tento faktor ještě v dalším kroku musíme přizpůsobit tomu, že změna vstupních dat není jednotková, což uděláme s využitím přímé úměrnosti.
+* Veličina $f'(x_0)(x-x_0)$ je odhad změny veličiny $f$ vyvolané
+změnou veličiny $x$ z $x_0$ o $\Delta x=x-x_0$ tak, jak jsme jej
+používali v minulé přednášce.
+```
+
+
+```{prf:remark} Alternativní vzorec pro lineární aproximaci.
+:nonumber:
+ Vzorec pro lineární aproximaci se často píše v ekvivalentním tvaru
 $$f(x+h)\approx f(x)+f'(x)h,$$
 což získáme dosazením $x+h$ za $x$ a $x$ za $x_0$.
+```
+
 
 **Příklad (růst stromu).** Strom má v roce 2019 výšku 3 metry a roste
   rychlostí 0.5 metru za rok. V roce $x$ je jeho výška dána vzorcem
@@ -203,7 +223,11 @@ derivace tečnu dokonce definovat. Z geometrického pohledu je tečna přímka
 bodem $[x_0,f(x_0)]$, která má směrnici $f'(x_0)$. Proto se o derivaci
 často mluví jako o směrnici tečny.
 
-> Definice (tečna). Nechť $f$ je funkce, která má v bodě $x_0$ derivaci $f(x_0)$. Přímka $$y=f(x_0)+f'(x_0)(x-x_0)$$ se nazývá *tečna ke grafu funkce* $f$ v bodě $x_0$.
+```{prf:definition} Tečna.
+:nonumber:
+ Nechť $f$ je funkce, která má v bodě $x_0$ derivaci $f(x_0)$. Přímka $$y=f(x_0)+f'(x_0)(x-x_0)$$ se nazývá *tečna ke grafu funkce* $f$ v bodě $x_0$.
+```
+
 
 Díky souvislosti derivace s tečnou je derivace jedinečným nástrojem při popisu vlastností křivek. Příslušná oblast se nazývá diferenciální geometrie a je to jakási oblast mezi geometrií a diferenciálním počtem.
 
@@ -241,17 +265,20 @@ případech.
 
 ### Derivace vyšších řádů
 
-> Definice (druhá a další vyšší derivace).
->
->* *Druhou derivací* rozumíme derivaci derivace. Označujeme $f''(x)$ nebo $\frac{\mathrm d^2 f}{\mathrm dx^2}$. 
->* Podobně *$k$-tou derivací* rozumíme derivaci $(k-1)$-ní derivace. Označujeme $f^{(k)}(x)$ nebo $\frac{\mathrm d^k f}{\mathrm dx^k}$. 
->
->Platí tedy $$\frac {\mathrm d^2 f}{\mathrm dx^2}:=\frac {\mathrm d}{\mathrm dx} \left(\frac {\mathrm d f}{\mathrm dx}\right),\quad  
+```{prf:definition} Druhá a další vyšší derivace.
+:nonumber:
+
+* *Druhou derivací* rozumíme derivaci derivace. Označujeme $f''(x)$ nebo $\frac{\mathrm d^2 f}{\mathrm dx^2}$. 
+* Podobně *$k$-tou derivací* rozumíme derivaci $(k-1)$-ní derivace. Označujeme $f^{(k)}(x)$ nebo $\frac{\mathrm d^k f}{\mathrm dx^k}$. 
+
+Platí tedy $$\frac {\mathrm d^2 f}{\mathrm dx^2}:=\frac {\mathrm d}{\mathrm dx} \left(\frac {\mathrm d f}{\mathrm dx}\right),\quad  
 \frac {\mathrm d^kf}{\mathrm dx^k}:=\frac {\mathrm d}{\mathrm dx}
 \left(\frac {\mathrm d^{k-1}f}{\mathrm dx^{k-1}}\right)  $$
 aneb
 $$f'':=(f')', 
 \quad f'''=(f'')', \quad f^{(k)}={(f^{(k-1)})'}.$$
+```
+
 
 Označení derivací pomocí čárek se nazývá Lagrangeova notace, označení
 pomocí podílu diferenciálů Leibnizova notace. Ještě se někdy používá i
@@ -307,11 +334,15 @@ Někdy je vhodné mít moment $M(x)$ síly deformující nosník mít vyjádřen
 
 ### Taylorův polynom a polynomiální aproximace v 1D
 
-> Definice (Taylorův polynom).
-> *Taylorův polynom* stupně $n$ pro funkci $f$ v bodě $x_0$ je polynom 
+```{prf:definition} Taylorův polynom.
+:nonumber:
+
+*Taylorův polynom* stupně $n$ pro funkci $f$ v bodě $x_0$ je polynom 
 \dm$$T(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{1}{2!}f''(x_0)(x-x_0)^2+\cdots +\frac{1}{n!}f^{(n)}(x_0)(x-x_0)^n,$$ 
 tj.
 \dm$$T(x)=f(x_0)+\frac {\mathrm df(x_0)}{\mathrm dx}(x-x_0)+\frac{1}{2!} \frac {\mathrm d^2f(x_0)}{\mathrm dx^2} (x-x_0)^2+\cdots +\frac{1}{n!}\frac {\mathrm d^nf(x_0)}{\mathrm dx^n}(x-x_0)^n.$$
+```
+
 
 Taylorův polynom je nejlepší aproximace funkce $f$ polynomem. Je možné
 ukázat, že rozdíl $$f(x)-T(x)$$ je blízký k nule, pokud je $n$
@@ -324,7 +355,10 @@ vyjádřen člen, který je pro $x$ blízká k $x_0$ v absolutní hodnotě
 menší než násobek funkce $(x-x_0)^{n+1}$, tj. v bodě $x_0$ konverguje k nule
 stejně rychle nebo rychleji jako mocninná funkce s exponentem $n+1$.
 
-> Věta (Taylorova aproximace v okolí nuly) Platí
+```{prf:theorem} Taylorova aproximace v okolí nuly.
+:nonumber:
+
+Platí
 \dm$$f(x)=T(x)+O((x-x_0)^{n+1}),$$
 resp. pro $x=x_0+h$
 \dm$$f(x_0+h)=f(x_0)+f'(x_0)h+\frac{1}{2!}f''(x_0)h^2+\cdots +\frac{1}{n!}f^{(n)}(x_0)h^n+O(h^{n+1}),$$
@@ -332,6 +366,7 @@ pokud existují spojité derivace funkce $f$ do řádu $n+1$.
 
 Často používáme aproximaci v nule. Potom dostáváme pro aproximaci v okolí nuly
 \dm$$f(x)=f(0)+f'(0)x+\frac{1}{2!}f''(0)x^2+\cdots +\frac{1}{n!}f^{(n)}(0)x^n+O(x^{n+1}).$$
+```
 
 **Příklad.** $$
 \begin{aligned}
@@ -442,14 +477,22 @@ funkci $f$ a hodnotu $y_0$ rovnici $$f(x)=y_0.$$ Řešení této rovnice,
 pokud existuje, nemusí být určeno jednoznačně. Pro funkce, pro které
 je určeno jednoznačně, zavádíme následující pojem.
 
-> Definice (prostá funkce).
+```{prf:definition} Prostá funkce.
+:nonumber:
+
   Nechť $f$ je funkce a $M\subseteq \mathrm{Dom}(f)$ podmnožina definičního oboru funkce $f$.   Řekneme, že funkce $f$ je *prostá*,
   jestliže každý obraz má jen jediný vzor, tj. pro každé $y_0\in f(M)$
   existuje jediné $x\in M$ s vlastností $f(x)=y_0$.
   Nespecifikujeme-li množinu $M$, máme na mysli, že uvedená vlastnost
   platí na celém definičním oboru funkce $f$.
+```
 
-> Věta (rovnice s prostou funkcí). Pokud je $f$ prostá funkce a platí $$f(x)=f(a),$$ potom platí $x=a.$
+
+```{prf:theorem} Rovnice s prostou funkcí.
+:nonumber:
+ Pokud je $f$ prostá funkce a platí $$f(x)=f(a),$$ potom platí $x=a.$
+```
+
 
 **Příklad.** Vlastnost být či nebýt prostá je zásadní pro vyslovení odpovědi na  otázku, zda rovnice má jediné řešení, či zda řešení může být více. 
 
@@ -463,10 +506,18 @@ Inverzní úloha je tak trošku jako reverzní inženýrství. Máme výsledek
 a potřebujeme znát vstupní data. U funkcí to je supersnadné, u
 konstrukcí supersložité. Užitečné je ale obojí.
 
-> Definice (inverzní funkce).   Nechť funkce $f: A\to B$ je prostá. Pravidlo, které každému $x$   z množiny $f(A)$ přiřadí to (jediné) $y$, pro které platí $f(y)=x$ se nazývá *inverzní funkce* k funkci $f$, označujeme   $f^{-1}$.
+```{prf:definition} Inverzní funkce.
+:nonumber:
+   Nechť funkce $f: A\to B$ je prostá. Pravidlo, které každému $x$   z množiny $f(A)$ přiřadí to (jediné) $y$, pro které platí $f(y)=x$ se nazývá *inverzní funkce* k funkci $f$, označujeme   $f^{-1}$.
+```
 
-> Poznámka (inverzní funkce pří řešení rovnic). Jinak zapsáno, je-li $$f(y)=x$$ a $f$ má inverzní funkci, platí
+
+```{prf:remark} Inverzní funkce pří řešení rovnic.
+:nonumber:
+ Jinak zapsáno, je-li $$f(y)=x$$ a $f$ má inverzní funkci, platí
 $$y=f^{-1}(x).$$ Jedná se o zobecnění pouček jak "převádět výrazy na druhou stranu rovnice".
+```
+
 
 Symbol $f^{-1}(x)$ lze tedy chápat buď jako hodnotu inverzní funkce
   k funkci $f$ v bodě $x$, nebo jako převrácenou hodnotu k číslu
@@ -532,9 +583,13 @@ mnoho výpočtů a rychlost konvergence je zásadní.
 
 <div class="shorten" data-text="Někdy je možné použít místo Newtonova iteračního vzorce i jednodušší iterace, které například nemusí tak rychle konvergovat, ale zase není nutné znát derivace funkce.">
 
-> Poznámka (ad hoc iterace).
+```{prf:remark} Ad hoc iterace.
+:nonumber:
+
 Newtonovu metodu je možné chápat také tak, že rovnici $$f(x)=0$$ přepíšeme do ekvivalentního tvaru $$x = x - \frac{f(x)}{f'(x)} \tag{*}$$ a poté hledáme iteracemi 
 $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$ takové $x$, kdy se levá strana rovná pravé. Někdy je možné použít analogickou iterační techniku, kdy však zadanou rovnici převedeme do jiného tvaru, než (*). Zpravidla snížíme šance, že proces konverguje a snížíme rychlost konvergence, ale i tak to může být výhodné, protože nemusíme počítat derivaci funkce. Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy lineárních rovnic.
+```
+
 
 **Příklad (ad hoc iterace).** Například rovnici $$x^4+7x-7=0$$ můžeme přepsat do tvaru $$x=\frac 17 (7-x^4)$$ a iterační vzorec
 $$x_{n+1}=\frac 17 (7-x_n^4)$$ s počátečním odhadem $x=1$ dává po deseti iteracích [tři desetinná místa shodná](https://sagecell.sagemath.org/?z=eJxTVqiIM9E2r9A1tzXg5VJWqLA11DdX0DDXBQpr8nLxcgEFeLnS8osUMhUy8xSKEvPSUzVMDTSteLkUgKDCNk8DqEELqkETIlpQlJlXoqCRqVOhCQAgthZa&lang=sage&interacts=eJyLjgUAARUAuQ==).
@@ -579,3 +634,4 @@ Vidíme konvergenci a iterační vzorec jsme našli s minimálním úsilím. Ryc
 * Derivace udává trend ve změnách veličin a díky tomu umožňuje za určitých okolností nahrazovat komplikované funkční vztahy pomocí vztahů lineárních. Toto nazýváme lineární aproximace a je to jedna za zásadních metod, jak si inženýři zjednodušují úlohy, které by byly jinak neřešitelné.
 * Derivace dokáže detekovat růst a klesání funkce a díky tomu dokážeme také detekovat body, kde se růst zastaví a změní na klesání nebo naopak. Tyto body nás přirozeně zajímají, protože v těchto bodech je studovaná veličina maximální nebo minimální a to má dopad při minimalizaci nákladů, maximalizaci pevnosti či zisku a jiných úlohách z praktického života.
 * Pokud trend (rychlost změny, derivace) nestačí k podchycení zásadních vlastností veličiny (nastává v lokálním extrému nebo v případě, že potřebujeme lepší aproximaci, než je aproximace lineární), máme k dispozici nástroje i v tomto případě: derivace vyšších řádů a Taylorův polynom.
+

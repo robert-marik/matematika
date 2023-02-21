@@ -23,9 +23,10 @@ definování funkcí, které nejsou elementární.
 Nejprve si připomeneme jednu ze základních aplikací integrálu:
 nasčítání příspěvků od spojitě se měnící veličiny.
 
-<div class="shorten" data/text="Ukázka vysvětluje, proč trubky praskají podélně. Demonstruje integrál jako nástroj k sečtení nekonečně mnoha příspěvků, protože celkovou sílu je potřeba určit jako součet sil v každém bodě trubky. Protože z různých bodech je síla různá (má jiný směr), nedá se celková síla určit násobením tlaku a obsahu. ">
 
 ## Příklad: proč trubky praskají podélně?
+
+<div class="shorten" data/text="Ukázka vysvětluje, proč trubky praskají podélně. Demonstruje integrál jako nástroj k sečtení nekonečně mnoha příspěvků, protože celkovou sílu je potřeba určit jako součet sil v každém bodě trubky. Protože z různých bodech je síla různá (má jiný směr), nedá se celková síla určit násobením tlaku a obsahu. ">
 
 <div class='obtekat'>
 
@@ -86,14 +87,22 @@ zřejmá fakta.
 Je však důležité vědět, že tyto myšlenky platí pro libovolné
 integrovatelné funkce a proto zformulujeme následující věty.
 
-> Věta (monotonie vzhledem k funkci). Je-li $f(x)\geq g(x)$ na
+```{prf:theorem} Monotonie vzhledem k funkci.
+:nonumber:
+ Je-li $f(x)\geq g(x)$ na
   intervalu $[a,b]$, platí $$\int_a^b f(x)\,\mathrm dx\geq \int_a^b
   g(x)\,\mathrm dx.$$
+```
+
 
 > Důsledek. Integrál nezáporné funkce je nezáporný. Přesněji, je-li $a<b$ a $f(x)\geq 0$ na $[a,b]$, platí $$\int _a^b f(x)\,\mathrm dx \geq 0.$$
 
-> Věta (aditivita vzhledem k integračnímu oboru).
+```{prf:theorem} Aditivita vzhledem k integračnímu oboru.
+:nonumber:
+
 Platí $$\int_a^b f(x)\,\mathrm dx= \int_a^c f(x)\,\mathrm dx + \int_c^b f(x)\,\mathrm dx.$$
+```
+
 
 Věta o aditivitě vzhledem k integračnímu oboru je například pro
 Newtonovu definici integrálu důsledkem zřejmého vztahu
@@ -131,10 +140,14 @@ zadaném intervalu.
 Definice střední hodnoty je snadným důsledkem toho, že hledáme hodnotu
 $\mu$ s vlastností $$\int_a^b f(x)\,\mathrm dx=\int_a^b \mu\,\mathrm dx=\mu \int_a^b \mathrm dx=\mu(b-a).$$
 
-> Definice (střední hodnota). Nechť $f$ je funkce definovaná a
+```{prf:definition} Střední hodnota.
+:nonumber:
+ Nechť $f$ je funkce definovaná a
   integrovatelná na uzavřeném intervalu $[a,b]$. Číslo $\mu$
   definované vztahem $$\mu=\frac 1{b-a}\int_a^b f(x)\,\mathrm dx$$ se
   nazývá *střední hodnota* funkce $f$ na intervalu $[a,b]$.
+```
+
 
 <div class='obtekat'>
 
@@ -150,7 +163,11 @@ výšce $b-a$. Tedy $$\int_a^b f(x)\,\mathrm dx=(b-a)\frac{f(a)+f(b)}2$$
 a střední hodnota lineární funkce je tedy průměrem hodnoty na začátku
 a na konci intervalu.
 
-> Poznámka (střední hodnota materiálové konstanty). Tepelná vodivost materiálu podobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce $k(T)$, je střední hodnota tepelné vodivosti v tepelném rozsahu od $T_1$ do $T_2$ dána vztahem (viz Cengel, Ghajar: Heat and Mass Transfer) $$k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT$$ V praxi nemáme analytický předpis pro funkci $k(T)$, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.
+```{prf:remark} Střední hodnota materiálové konstanty.
+:nonumber:
+ Tepelná vodivost materiálu podobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce $k(T)$, je střední hodnota tepelné vodivosti v tepelném rozsahu od $T_1$ do $T_2$ dána vztahem (viz Cengel, Ghajar: Heat and Mass Transfer) $$k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT$$ V praxi nemáme analytický předpis pro funkci $k(T)$, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.
+```
+
 
 **Příklad.** Střední hodnota funkce $y=2x^2-1$ na intervalu $[0,2]$ je
 $$\frac 12 \int_0^2 2x^2-1 \,\mathrm dx=\frac 12 \left[\frac 23 x^3-x\right]_0^2=\frac 12 \left[\frac 23 8-2 - 0\right]=\frac 53.$$
@@ -204,9 +221,9 @@ tomuto příkladu vrátíme.
 
 https://youtu.be/Z8wDZxap794
 
-<div class="shorten" data-text="Práci určujeme jako součin síly a posunutí. Co když se ale síla během konání práce snižuje? Například při vytahování řetězu na střechu visí dolů stále menší část řetězu a síla je stále menší. Potom se místo součinu dá použít integrál. ">
+### Příklad: práce při vytahování řetězu
 
-## Příklad: práce při vytahování řetězu
+<div class="shorten" data-text="Práci určujeme jako součin síly a posunutí. Co když se ale síla během konání práce snižuje? Například při vytahování řetězu na střechu visí dolů stále menší část řetězu a síla je stále menší. Potom se místo součinu dá použít integrál. ">
 
 \iffalse
 
@@ -257,11 +274,16 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 </div>
 
-> Poznámka (práce konaná silou proměnné velikosti). Práce vykonaná silou $F(x)$ při přemístění tělesa z polohy $x=a$ do polohy $x=b$ je $$W=\int_a^b F(x)\,\mathrm dx.$$ Jako speciální případ dostáváme pro konstantní sélu $F$ středoškolský vzorec $$W=Fs,$$ kde $s=b-a$ je posunutí.
+```{prf:remark} Práce konaná silou proměnné velikosti.
+:nonumber:
+ Práce vykonaná silou $F(x)$ při přemístění tělesa z polohy $x=a$ do polohy $x=b$ je $$W=\int_a^b F(x)\,\mathrm dx.$$ Jako speciální případ dostáváme pro konstantní sélu $F$ středoškolský vzorec $$W=Fs,$$ kde $s=b-a$ je posunutí.
+```
+
+
+
+### Příklad: práce při čerpání vody
 
 <div class="shorten" data-text="Příklad konání práce konstantní silou ale po různých drahách je vyčerpávání nádrže. Litr vody u hladiny se při čerpání musí přmístit o jinou výšku než litr vody u dna a proto se práce nedá vypočítat jako součin síly a posunutí. Dá se však vypočítat integrálem.">
-
-## Příklad: práce při čerpání vody
 
 \iffalse
 
@@ -388,7 +410,9 @@ Odhadneme celkovou vykonanou práci.
   se hodnoty funkce v dolní a horní mezi objeví jednou a ostatní
   dvakrát. To v obecném případě vede k následujícímu vzorci.
 
-> Věta (lichoběžníkové pravidlo). Nechť je funkce $f$  spojitá na
+```{prf:theorem} Lichoběžníkové pravidlo.
+:nonumber:
+ Nechť je funkce $f$  spojitá na
   intervalu $[a,b]$. Rozdělme interval $[a,b]$ na $n$ intervalů
   stejné délky $h$, tj. platí $h=\frac{b-a}n$. Krajní body
   těchto intervalů označme po řadě $x_0$, $x_1$, ..., $x_n$ a jim
@@ -398,8 +422,14 @@ Odhadneme celkovou vykonanou práci.
     \int_a^bf(x)\,\mathrm dx\approx \frac h2\Bigl(
     {y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}\Bigr).
   $$  
+```
 
-> Poznámka (slovní interpretace lichoběžníkového pravidla). Pokud ve vzorci pro lichoběžníkové pravidlo dosadíme za hodnotu $h$ odpovídající délku intervalu $\frac{ b-a}n$ a přeuspořádáme členy, dostaneme   $$ \int_a^bf(x)\,\mathrm dx\approx (b-a)\frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n} $$  a $$ \frac 1{b-a}\int_a^bf(x)\,\mathrm dx\approx \frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n}. $$ Toto je odhad pro veličinu, kterou jsme výše nazvali střední hodnotou. Lichoběžníkové pravidlo je tedy možné chápat tak, že vezmeme funkční hodnoty v pravidelných intervalech a vypočteme vážený průměr těchto hodnot, kdy všechny funkční hodnoty ve vnitřních bodech se berou s dvojnásobnou vahou než funkční hodnoty v krajních bodech. To je odhad střední hodnoty, který stačí vynásobit délkou intervalu a dostaneme odhad integrálu.
+
+```{prf:remark} Slovní interpretace lichoběžníkového pravidla.
+:nonumber:
+ Pokud ve vzorci pro lichoběžníkové pravidlo dosadíme za hodnotu $h$ odpovídající délku intervalu $\frac{ b-a}n$ a přeuspořádáme členy, dostaneme   $$ \int_a^bf(x)\,\mathrm dx\approx (b-a)\frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n} $$  a $$ \frac 1{b-a}\int_a^bf(x)\,\mathrm dx\approx \frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n}. $$ Toto je odhad pro veličinu, kterou jsme výše nazvali střední hodnotou. Lichoběžníkové pravidlo je tedy možné chápat tak, že vezmeme funkční hodnoty v pravidelných intervalech a vypočteme vážený průměr těchto hodnot, kdy všechny funkční hodnoty ve vnitřních bodech se berou s dvojnásobnou vahou než funkční hodnoty v krajních bodech. To je odhad střední hodnoty, který stačí vynásobit délkou intervalu a dostaneme odhad integrálu.
+```
+
 
 \iffalse
 
@@ -421,13 +451,17 @@ je
 $$uv'=(uv)'-u'v.$$
 Integrací tohoto vztahu dostáváme následující tvrzení.
 
-> Věta (metoda per partés pro neurčitý a určitý integrál). Nechť $u$ a
-> $v$ jsou funkce proměnné $x$, mající spojité derivace $u'$ a
-> $v'$. Platí
-> $$\int uv' \,\mathrm dx=uv-\int u'v\,\mathrm dx$$
-> pro neurčitý integrál a
-> $$\int_a^b uv' \,\mathrm dx=[uv]_a^b-\int_a^b u'v\,\mathrm dx$$
-> pro integrál určitý.
+```{prf:theorem} Metoda per partés pro neurčitý a určitý integrál.
+:nonumber:
+ Nechť $u$ a
+$v$ jsou funkce proměnné $x$, mající spojité derivace $u'$ a
+$v'$. Platí
+$$\int uv' \,\mathrm dx=uv-\int u'v\,\mathrm dx$$
+pro neurčitý integrál a
+$$\int_a^b uv' \,\mathrm dx=[uv]_a^b-\int_a^b u'v\,\mathrm dx$$
+pro integrál určitý.
+```
+
 
 Použití této metody má smysl, pokud je integrál $\int u'v\,\mathrm dx$
 jednodušší pro výpočet ve srovnání s integrálem $\int uv'\,\mathrm
@@ -465,9 +499,13 @@ dále $v(x)=t$, platí $$u(v(x))=u(t)=\int f(t)\,\mathrm dt.$$ Přeznačme
 ještě $v(x)$ na $\varphi(x)$. Potom má (1) po záměně levé a pravé
 strany tvar uvedený v následující větě.
 
-> Věta (substituční metoda pro neurčitý integrál). Platí
+```{prf:theorem} Substituční metoda pro neurčitý integrál.
+:nonumber:
+ Platí
 $$\int f(\varphi (x))\varphi'(x)\,\mathrm dx=\int f(t)\,\mathrm
 dt,\tag{2}$$ kde po výpočtu integrálu napravo dosazujeme $t=\varphi (x).$
+```
+
 
 Formálně výraz napravo ve (2) přejde ve výraz nalevo a naopak
 dosazením rovností
@@ -496,8 +534,12 @@ v jiných jednotkách) se s integrovanou funkcí se mění i meze. Obecný
 vzorec pro integrování určitého integrálu substituční metodou je v
 následující větě.
 
-> Věta (substituční metoda pro určitý integrál). Platí $$\int_a^b f(\varphi (x))\varphi'(x)\,\mathrm dx=\int_{\varphi
+```{prf:theorem} Substituční metoda pro určitý integrál.
+:nonumber:
+ Platí $$\int_a^b f(\varphi (x))\varphi'(x)\,\mathrm dx=\int_{\varphi
   (a)}^{\varphi(b)} f(t)\,\mathrm dt.$$
+```
+
 
 Meze tedy podléhají stejné transformaci, jako integrovaná
 proměnná. Pokud používáme substituci $t=\varphi(x)$, potom v dolní
@@ -514,12 +556,16 @@ Integrál může být součástí definice funkce. Tím se můžeme dostat mimo
 množinu elementárních funkcí a značně tak rozšířit třídu funkcí, se
 kterými umíme pracovat.
 
-> Věta (integrál jako funkce horní meze). Buď $f$ spojitá funkce na intervalu $I$ a $a\in I$. Funkce
+```{prf:theorem} Integrál jako funkce horní meze.
+:nonumber:
+ Buď $f$ spojitá funkce na intervalu $I$ a $a\in I$. Funkce
 $F(x)$ definovaná vztahem
 $$
     F(x):=\int_a^x f(t)\,\mathrm dt
 $$
   má na intervalu $I$ derivaci a platí $F'(x)=f(x)$, tj. $F(x)$ je primitivní funkcí k funkci $f(x)$. 
+```
+
 
 **Příklad.**  Pro funkci $f(x)=x^2$ platí $$\int_0^x t^2\,\mathrm dt=\left[\frac
     {t^3}{3}\right]_0^{x}=\frac{x^3}{3}$$ což je skutečně jedna
@@ -530,8 +576,12 @@ Věta o integrálu jako funkci horní meze dokonce udává tvar primitivní
 funkce pro libovolnou spojitou funkci. Tím dostáváme okamžitě
 následující tvrzení.
 
-> Důsledek (postačující podmínka existence primitivní funkce).
+```{prf:corollary} Postačující podmínka existence primitivní funkce.
+:nonumber:
+
   Ke každé  spojité funkci existuje neurčitý integrál. 
+```
+
 
 Bohužel, ne vždy neurčitý integrál dokážeme efektivně najít. Zatímco
 problém nalezení derivace funkce složené z funkcí, které umíme
@@ -549,9 +599,9 @@ Následující ukázka demonstruje, že i s funkcí definovanou pomocí
 integrálu je možné jistým způsobem pracovat, aniž bychom měli k
 dispozici analytické vyjádření této funkce.
 
-<div class="shorten" data-text="Ukázka demonstruje, že funkce se dají v matematice definovat pomocí integrálu. Vlasntosti funkcí se dají odvodit z vlastností odvozených pomocí metod práce s integrály.">
-
 ## Ukázka funkce definované pomocí integrálu
+
+<div class="shorten" data-text="Ukázka demonstruje, že funkce se dají v matematice definovat pomocí integrálu. Vlasntosti funkcí se dají odvodit z vlastností odvozených pomocí metod práce s integrály.">
 
 \iffalse
 
@@ -669,9 +719,9 @@ kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 
 -->
 
-<div class="shorten" data-text="Ukázka se vrací k jednomu z předchozích příkladů, k vytahování řetězu. Úlohu je možno vyřešit pomocí potenciální energie. Ale protože každá část řetězu je v jiné výšce, není možné použít klasický vzorec pro potenciální energii. Přípěvky k celkové potenciální energii můžeme nasčítat integrálem.">
-
 ## Příklad: řetěz jinak (pomocí změny potenciální energie)
+
+<div class="shorten" data-text="Ukázka se vrací k jednomu z předchozích příkladů, k vytahování řetězu. Úlohu je možno vyřešit pomocí potenciální energie. Ale protože každá část řetězu je v jiné výšce, není možné použít klasický vzorec pro potenciální energii. Přípěvky k celkové potenciální energii můžeme nasčítat integrálem.">
 
 Vypočítáme příklad z prací při vytahování řetězu tak, že určíme změnu potenciální energie
 řetězu. Práci $W$ vykonanou při vyzvednutí tělesa o hmotnosti $m$ o výšku
@@ -739,3 +789,4 @@ soustavou proplouvaly celý den.
 * Naučili jsme se některé triky pro integrály: určitý integrál se dá numericky aproximovat a neurčitý integrál se dá převést metodou per-partés nebo substitucí na jiný integrál, v optimálním případě na integrál vhodný pro aplikaci vzorců.
 * Integrál, resp. střední hodnota funkce,  slouží jako náhrada aritmetického průměru v situacích, kdy počítáme průměr z nekonečně mnoha veličin a vzorec pro klasický aritmetický průměr selhává.
 * Integrál je také nástrojem, který nás dokáže vymanit ze světa elementárních funkcí a můžeme pomocí tohoto integrálu definovat funkce, které nejsou elementární. Základním prostředkem je integrál jako funkce horní meze. Toto se využívá například ve statistice. Vedlejším produktem je věta zaručující existenci primitivní funkce pro libovolnou spojitou funkci.
+
