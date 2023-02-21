@@ -229,7 +229,7 @@ Poté zopakujte předchozí úlohu pro maximum veličin $bh^2$ a $bh^3$, kde $h$
 je výška a $b$ šířka průřezu trámu. V prvním případě maximalizujeme
 nosnost a ve druhém tuhost nosníku. Použijte stejný postup jako v minulé úloze, ale už nebude stačit najít vrchol paraboly. (Poznámka: Jedna z těchto funkcí se maximalizovala na přednášce a proto tento případ nemusíte dopočítávat.)
 
-\textit{Tento příklad je zajímavý spíše z aplikačního hlediska: nejvíce dřeva neznamená největší nosnost a nosník, který nejvíce unese, vychází jinak, než nosník, který se nejméně prohýbá.}
+_Tento příklad je zajímavý spíše z aplikačního hlediska: nejvíce dřeva neznamená největší nosnost a nosník, který nejvíce unese, vychází jinak, než nosník, který se nejméně prohýbá._
 
 ```{prf:example} Řešení
 :class: dropdown

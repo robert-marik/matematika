@@ -457,7 +457,7 @@ V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i�
 </div>
 
 
-Rovnici kontinuity můžeme použít pro popis vody v korytě. Úloha je jednodimenzionální a tok $Q$ je skalární veličina. Divergence toku se díky jednodimenzionálnosti redukuje na derivaci podle prostorové proměnné $\frac{\partial Q}{\partial x}$. Zachovávající se veličinou je množství vody. Hustota zachovávající se veličiny je množství vody na metr délky toku, tj. \textit{průtočný průřez} $A$ (obsah průřezu říčního toku  v daném místě). Zdroje zpravidla neuvažujeme, tj. $\sigma=0$. Rovnice kontinuity má potom tvar 
+Rovnici kontinuity můžeme použít pro popis vody v korytě. Úloha je jednodimenzionální a tok $Q$ je skalární veličina. Divergence toku se díky jednodimenzionálnosti redukuje na derivaci podle prostorové proměnné $\frac{\partial Q}{\partial x}$. Zachovávající se veličinou je množství vody. Hustota zachovávající se veličiny je množství vody na metr délky toku, tj. _průtočný průřez_ $A$ (obsah průřezu říčního toku  v daném místě). Zdroje zpravidla neuvažujeme, tj. $\sigma=0$. Rovnice kontinuity má potom tvar 
 $$
       {\frac{\partial A}{\partial t}= - {\frac{\partial Q}{\partial x}}}
 $$
