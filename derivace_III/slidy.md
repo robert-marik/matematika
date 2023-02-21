@@ -294,11 +294,16 @@ dva vzorce, které dodá fyzika, poté již budeme pracovat čistě
 matematicky.
 
 Teplo $Q$, které projde za jednotku času při ustáleném vedení tepla povrchem trubky délky $L$ o vnitřním poloměru $r$, vnějším poloměru $R$ je dáno vztahem 
-$$\frac Q{2\pi Lk} \ln \frac{R}{r}=T_1-T_2,\tag{*}$$ kde $T_1$ je teplota uvnitř, $T_2$ teplota na vnějším okraji a $k$ je tepelná vodivost materiálu. Tento vzorec odvodíme později v přednášce o integrálu. 
+
+$$\frac Q{2\pi Lk} \ln \frac{R}{r}=T_1-T_2,$$(3.1) 
+
+kde $T_1$ je teplota uvnitř, $T_2$ teplota na vnějším okraji a $k$ je tepelná vodivost materiálu. Tento vzorec odvodíme později v přednášce o integrálu. 
 
 Teplo $Q$, které za jednotku času vyzáří plocha trubky o poloměru $R$ a teplotě $T_2$ do okolí o teplotě $T_\infty$, vztažené na jednotku povrchu trubky, je přímo úměrné rozdílu teplot a povrchu, tj. platí $$\frac{Q}{2\pi  R L}=h (T_2-T_\infty).$$ Odsud
-$$\frac Q{h 2\pi RL}= T_2-T_\infty.\tag{**}$$
-Sečtením ohvězdičkovaných vztahů dostaneme 
+
+$$\frac Q{h 2\pi RL}= T_2-T_\infty.$$ (3.2)
+
+Sečtením {eq}`3.1` a {eq}`3.2` dostaneme 
 $$ \frac{Q}{2\pi L}\left(\frac 1k \ln \frac{R}{r}+\frac 1{h R}\right) = T_1-T_\infty.$$
 Tento vzorec popisuje tepelné ztráty při izolaci trubky o vnitřním poloměru $r$ a teplotě $T_1$ izolací o vnějším poloměru $R$ ve vnější teplotě $T_\infty$. Parametry izolace jsou tepelná vodivost $k$ a s koeficient prostupu tepla $h$. Budeme sledovat, jak se chová veličina $Q$ (tepelné ztráty) jako funkce proměnné $R$. 
 $$Q(R)=2\pi L\frac {T_1-T\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}$$

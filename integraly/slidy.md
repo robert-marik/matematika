@@ -26,38 +26,6 @@ Intervalem $I$ budeme rozumět otevřený interval.
 
 **Motivace:  Jak z rychlosti změny vypočítat změnu?**
 
-<style>
-table, th, td {
-   border: 2px solid green;
-} 
-table {width:97%;}
-td {padding:10px}
-tr td:first-child {color:green; background: #E9E9E9;}
-table {
-    border-collapse: collapse;
-}
-</style>
-
-<style>
-table, th, td {
-   border: 2px solid green;
-} 
-table {width:97%;}
-td {padding:10px}
-tr td:first-child {color:green; background: #E9E9E9;}
-table {
-    border-collapse: collapse;
-}
-
-th {
-    background-color: green;
-    color: white;
-    border-color: gray;
-}
-
-th {text-align: center;}
-</style>
-
 Derivace umožní z veličiny v prvním sloupci získat veličinu v
 pravém sloupci. Pohledem na tyto příklady věříme, že bude fungovat i
 něco, co naopak z rychlosti zrekonstruuje původní veličinu, která se
@@ -415,24 +383,34 @@ Pokud sledujeme prostup tepla izolací, jejíž teplotní vodivost se mění s t
 Ze středoškolské fyziky dobře známe vzorce pro dráhu, práci a tlakovou
 sílu. Ovšem jenom v extrémně pěkných případech.
 
-* Dráha rovnoměrného pohybu je určena vzorcem $$s=vt.\tag{1}$$ Tento
+* Dráha rovnoměrného pohybu je určena vzorcem 
+ 
+  $$s=vt.$$ (1) 
+  
+  Tento
   vzorec není použitelný pro pohyb proměnnou rychlostí. Z kapitoly o
-  neurčitém integrálu víme, že obecný vzorec je $$s=\int v\,\mathrm
-  dt.\tag{2}$$ Pokud je $v$ konstantní, vzorec (1) je důsledkem vzorce
-  (2).
+  neurčitém integrálu víme, že obecný vzorec je 
+  
+  $$s=\int v\,\mathrm dt.$$ (2)
+  
+  Pokud je $v$ konstantní, vzorec {eq}`1` je důsledkem vzorce
+  {eq}`2`.
 * Hydrostatická tlaková síla $F$ působící ve vodě v hloubce $h$ na
   plochu o velikosti $S$ se určí podle vztahu $$F=Sh\rho g,$$ kde
   $\rho$ je hustota vody a $g$ tíhové zrychlení. Tento vzorec však
   není možné použít, pokud různé části plochy jsou v různých
   hloubkách. Například není možné pomocí tohoto vzorce určit celkovou
   sílu na svislou stěnu reprezentující hráz přehrady.
-* Práce vykonaná konstantní silou $F$ po dráze $s$ je $$W=Fs.\tag{3}$$
+* Práce vykonaná konstantní silou $F$ po dráze $s$ je 
+
+  $$W=Fs.$$ (3)
+
   Co když se ale síla nebo dráha mění? Pokud nás zajímá práce nutná k
   navinutí visícího řetězu na rumpál, síla se během namotávání plynule
   zmenšuje, protože visící kus řetězu se při namotávání
   zkracuje. Pokud nás zajímá práce nutná k vyčerpání vodní nádrže,
   musíme každý litr vody, který je na dně, "tahat" po delší dráze než
-  každý litr vody, který je na hladině a proto se mění dráha. Vzorec (3) selhává v obou případech. Jednou kvůli nekonstantní síle,
+  každý litr vody, který je na hladině a proto se mění dráha. Vzorec {eq}`3` selhává v obou případech. Jednou kvůli nekonstantní síle,
   podruhé kvůli dráze.
 
 \iffalse

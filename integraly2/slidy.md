@@ -492,22 +492,26 @@ https://youtu.be/tdK-zog1cv0
 Substituční metoda je metoda odvozená z derivace složené funkce
 $$[u(v(x))]'=u'(v(x))v'(x),$$
 což dává
-$$u(v(x))=\int u'(v(x))v'(x)\,\mathrm dx.\tag{1}$$
+
+$$u(v(x))=\int u'(v(x))v'(x)\,\mathrm dx.$$ (1)
 
 Označme $u'(x)=f(x)$, tj. $u(x)=\int f(x)\,\mathrm dx$. Označíme-li
 dále $v(x)=t$, platí $$u(v(x))=u(t)=\int f(t)\,\mathrm dt.$$ Přeznačme
-ještě $v(x)$ na $\varphi(x)$. Potom má (1) po záměně levé a pravé
+ještě $v(x)$ na $\varphi(x)$. Potom má {eq}`1` po záměně levé a pravé
 strany tvar uvedený v následující větě.
 
 ```{prf:theorem} Substituční metoda pro neurčitý integrál.
 :nonumber:
  Platí
+ 
 $$\int f(\varphi (x))\varphi'(x)\,\mathrm dx=\int f(t)\,\mathrm
-dt,\tag{2}$$ kde po výpočtu integrálu napravo dosazujeme $t=\varphi (x).$
+dt,$$ (2)
+
+kde po výpočtu integrálu napravo dosazujeme $t=\varphi (x).$
 ```
 
 
-Formálně výraz napravo ve (2) přejde ve výraz nalevo a naopak
+Formálně výraz napravo ve {eq}`2` přejde ve výraz nalevo a naopak
 dosazením rovností
 $$\varphi(x)=t,\qquad \varphi'(x)\,\mathrm dx=\mathrm dt.$$ Toto je
 současně i návod, jak substituční metodu použít prakticky.
@@ -525,7 +529,7 @@ tvaru $a\,\mathrm dx=\mathrm dt$. Odsud je možné odvodit vzorec, který
 již známe pro integrál funkce s lineární vnitřní složkou. Vskutku, platí
 $$\int  f(ax+b)\,\mathrm dx= \int  \frac 1af(t)\,\mathrm dt= \frac 1a F(t)= \frac 1a F(ax+b)+C,$$ kde $F(x)=\int f(x)\,\mathrm dx.$
 
-Vztah (2) je základní vztah pro substituci v neurčitém
+Vztah {eq}`2` je základní vztah pro substituci v neurčitém
 integrálu. Používáme jej ve vhodných případech zprava doleva i zleva
 doprava. Variantu pro určitý integrál jsme viděli ve speciálním
 případě ve cvičení, kdy vnitřní funkce reprezentovala konstantní
@@ -614,21 +618,27 @@ dispozici analytické vyjádření této funkce.
 
 \fi
 
-Uvažujme funkci definovanou vztahem $$f(x)=\int_1^x\frac 1t\,\mathrm dt.\tag{*}$$ Ukážeme si, že tento tvar umožňuje odvodit některé vlastnosti funkce $f$. Dokážeme například, že funkce $f$ mění násobení na sčítání, tj. že platí $$f(ab)=f(a)+f(b).$$
+Uvažujme funkci definovanou vztahem 
+
+$$f(x)=\int_1^x\frac 1t\,\mathrm dt.$$  (i*)
+
+Ukážeme si, že tento tvar umožňuje odvodit některé vlastnosti funkce $f$. Dokážeme například, že funkce $f$ mění násobení na sčítání, tj. že platí $$f(ab)=f(a)+f(b).$$
 Podle definice je
 $$f(ab)=\int_1^{ab}\frac 1t \,\mathrm dt.$$
 Podle aditivity vzhledem k integračnímu oboru platí
-$$f(ab)=\int_1^{a}\frac 1t \,\mathrm dt+\int_a^{ab}\frac 1t \,\mathrm dt =f(a)+\int_a^{ab}\frac 1t \,\mathrm dt.\tag{**}$$
+
+$$f(ab)=\int_1^{a}\frac 1t \,\mathrm dt+\int_a^{ab}\frac 1t \,\mathrm dt =f(a)+\int_a^{ab}\frac 1t \,\mathrm dt.$$ (i**)
+
 Ve druhém integrálu bychom potřebovali dostat jedničku v dolní mezi,
 abychom dostali integrál stejný jako v definici funkce $f$. Proto
 zavedeme substituci $\frac ta=s$, $t=sa$, $\mathrm dt=a\mathrm ds$. S
-použitím této substituce se (**) transformuje na
+použitím této substituce se {eq}`i**` transformuje na
 $$f(ab)
 =f(a)+\int_1^{b}\frac 1{sa} a\,\mathrm ds
 =f(a)+\int_1^{b}\frac 1{s} \,\mathrm ds
 =f(a)+f(b).$$
 
-Pokud si všimneme, že integrál (*) v definici funkce $f$ je možné
+Pokud si všimneme, že integrál {eq}`i*` v definici funkce $f$ je možné
 vypočítat a že funkce $f$ je vlastně funkce $\ln x$, není vlastnost,
 že funkce mění násobení na sčítání nijak překvapivá. Pro nás však bylo
 důležité, že v důkaze jsme použili jenom definici funkce $f$ pomocí

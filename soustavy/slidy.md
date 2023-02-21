@@ -26,7 +26,11 @@ kombinaci a jednou matice a maticový součin!
 
 ```{prf:definition} Soustava lineárních rovnic.
 :nonumber:
- *Soustavou $m$ lineárních rovnic  o $n$ neznámých* nazýváme soustavu rovnic $$  \begin{gathered}   a_{11}x_1+a_{12}x_2+a_{13}x_3+\cdots+a_{1n}x_n=b_1 \\   a_{21}x_1+a_{22}x_2+a_{23}x_3+\cdots+a_{2n}x_n=b_2 \\   a_{31}x_1+a_{32}x_2+a_{33}x_3+\cdots+a_{3n}x_n=b_3 \\   \vdots \\   a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\cdots+a_{mn}x_n=b_m \end{gathered}\tag{1} $$  Proměnné $x_1$, $x_2$, ..., $x_n$ nazýváme *neznámé*. Reálná čísla $a_{ij}$ nazýváme *koeficienty levých stran*, reálná čísla $b_j$ *koeficienty pravých stran* soustavy rovnic. *Řešením soustavy rovnic* rozumíme uspořádanou $n$-tici reálných čísel $[t_1, t_2, \ldots, t_n]$ po jejichž dosazení za neznámé (v tomto pořadí) do soustavy dostaneme ve všech rovnicích identity.
+ *Soustavou $m$ lineárních rovnic  o $n$ neznámých* nazýváme soustavu rovnic 
+ 
+ $$  \begin{gathered}   a_{11}x_1+a_{12}x_2+a_{13}x_3+\cdots+a_{1n}x_n=b_1 \\   a_{21}x_1+a_{22}x_2+a_{23}x_3+\cdots+a_{2n}x_n=b_2 \\   a_{31}x_1+a_{32}x_2+a_{33}x_3+\cdots+a_{3n}x_n=b_3 \\   \vdots \\   a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\cdots+a_{mn}x_n=b_m \end{gathered} $$ (soustava1)
+ 
+ Proměnné $x_1$, $x_2$, ..., $x_n$ nazýváme *neznámé*. Reálná čísla $a_{ij}$ nazýváme *koeficienty levých stran*, reálná čísla $b_j$ *koeficienty pravých stran* soustavy rovnic. *Řešením soustavy rovnic* rozumíme uspořádanou $n$-tici reálných čísel $[t_1, t_2, \ldots, t_n]$ po jejichž dosazení za neznámé (v tomto pořadí) do soustavy dostaneme ve všech rovnicích identity.
 ```
 
 
@@ -42,7 +46,7 @@ kombinaci a jednou matice a maticový součin!
       a_{m1}& a_{m2}& a_{m3}& \cdots{}& a_{mn}\\      
     \end{matrix}\right)
   $$
-nazýváme *maticí soustavy* (1).
+nazýváme *maticí soustavy* {eq}`soustava1`.
 Matici $$
 A_r=\left(
   \begin{array}{ccccc|c}
@@ -53,13 +57,13 @@ A_r=\left(
   \end{array}
 \right)
 $$
-nazýváme *rozšířenou maticí soustavy* (1).
+nazýváme *rozšířenou maticí soustavy* {eq}`soustava1`.
 ```
 
 
 ## Vektorový zápis soustavy lineárních rovnic
 
-  Soustavu (1) lze ekvivalentně přepsat do vektorového
+  Soustavu {eq}`soustava1` lze ekvivalentně přepsat do vektorového
   tvaru
 $$    \begin{pmatrix}
       a_{11}\\a_{21}\\\vdots\\a_{m1}
@@ -88,7 +92,7 @@ $$    \begin{pmatrix}
 
 ## Maticový zápis soustavy lineárních rovnic
 
-Soustavu (1) lze ekvivalentně přepsat do maticového
+Soustavu {eq}`soustava1` lze ekvivalentně přepsat do maticového
 tvaru pomocí  maticového součinu
 $$
 \left(
@@ -170,7 +174,9 @@ V úvodní přednášce z lineární algebry jsme modelovali rozložení teploty
 desce pomocí soustavy rovnic
 $$\begin{pmatrix} \phantom{-}4&-1& \phantom{-}0&-1\\ -1& \phantom{-}4&-1& \phantom{-}0\\ \phantom{-}0 &-1& \phantom{-}4&-1\\ -1& \phantom{-}0&-1& \phantom{-}4\end{pmatrix}\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix}=\begin{pmatrix}  30\\60\\70\\40\end{pmatrix}.$$
 Pro
-$$A=\begin{pmatrix} \phantom{-}4&-1& \phantom{-}0&-1\\ -1& \phantom{-}4&-1& \phantom{-}0\\ \phantom{-}0 &-1& \phantom{-}4&-1\\ -1& \phantom{-}0&-1& \phantom{-}4\end{pmatrix}, \quad X=\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix},\quad B=\begin{pmatrix}  30\\60\\70\\40\end{pmatrix}$$ tedy $$AX=B.\tag{1}$$
+$$A=\begin{pmatrix} \phantom{-}4&-1& \phantom{-}0&-1\\ -1& \phantom{-}4&-1& \phantom{-}0\\ \phantom{-}0 &-1& \phantom{-}4&-1\\ -1& \phantom{-}0&-1& \phantom{-}4\end{pmatrix}, \quad X=\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix},\quad B=\begin{pmatrix}  30\\60\\70\\40\end{pmatrix}$$ tedy 
+
+$$AX=B.$$ (soustava1b)
 
 Rozdělíme matici $A$ na součet diagonální matice a matice s nulami v hlavní diagonále, tj. na součet matic
 $$D=\begin{pmatrix} 4&0&0&0\\ 0& 4&0&0\\0 &0& 4&0\\ 0&0&0& 4\end{pmatrix}\quad \text{a}\quad T=\begin{pmatrix} \phantom{-}0&-1& \phantom{-}0&-1\\ -1& \phantom{-}0&-1& \phantom{-}0\\ \phantom{-}0 &-1& \phantom{-}0&-1\\ -1& \phantom{-}0&-1& \phantom{-}0\end{pmatrix}$$
@@ -178,13 +184,17 @@ Potom můžeme psát rovnici ve tvaru
 $$(D+T)X=B$$
 a odsud
 $$\begin{aligned}DX+TX&=B\\ DX&=B-TX\end{aligned}$$ a využitím inverzní matice
-$$X=D^{-1}(B-TX).\tag{2}$$
+
+$$X=D^{-1}(B-TX).$$ (soustava2b)
+
 Definujme nyní iterační vzorec
-$$X_{k+1}=D^{-1}(B-TX_k).\tag{3}$$
+
+$$X_{k+1}=D^{-1}(B-TX_k).$$ (soustava3b)
+
 Podobně jako u Markovových řetězců můžeme najít postupnými iteracemi z
 vhodného (nebo libovolného) počátečního stavu stacionární stav, kdy se
-$X_k$ dalšími iteracemi nemění a tím dostaneme řešení rovnice (2),
-která je ekvivalentní rovnici (1). Protože inverzní matici počítáme
+$X_k$ dalšími iteracemi nemění a tím dostaneme řešení rovnice {eq}`soustava2b`,
+která je ekvivalentní rovnici {eq}`soustava1b`. Protože inverzní matici počítáme
 pro matici diagonální, je tento výpočet velice rychlý a levný. Vlastně
 není vůbec nutné mít k dispozici maticový počet. Iterace dostaneme
 tak, že z první rovnice osamostatníme $x_1$, z druhé rovnice $x_2$
@@ -193,7 +203,7 @@ odhad. Postup opakujeme, dokud nejsou dvě následující iterae
 dostatečně blízké.
 
 **Poznámka.** Předchozí postup je možné použít jenom v případě, že
-iterační proces (3) konverguje. Pokud by nekonvergoval, není možné o
+iterační proces {eq}`soustava13b` konverguje. Pokud by nekonvergoval, není možné o
 řešení rovnice nic říct, pouze to, že Jacobiho metoda
 nefunguje. Postačující podmínka, kdy Jacobiho metoda konverguje, je
 aby každý řádek měl v hlavní diagonále číslo, které je v absolutní

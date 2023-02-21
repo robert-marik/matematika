@@ -831,7 +831,9 @@ bodě je díky tepelné vodivosti desky ovlivněna sousedními uzlovými
 body. Každý sousední bod má stejný vliv, proto teplota v uzlovém bodě
 bude přibližně rovna aritmetickému průměru teplot v sousedních
 bodech. Kvantitativně zformulováno, platí 
-$$\begin{aligned}  x_1&=\frac 14(10+20+x_2+x_4)\\  x_2&=\frac 14(20+40+x_1+x_3)\\  x_3&=\frac 14(30+40+x_2+x_4)\\  x_4&=\frac 14(10+30+x_1+x_3)\end{aligned}\tag{1}$$
+
+$$\begin{aligned}  x_1&=\frac 14(10+20+x_2+x_4)\\  x_2&=\frac 14(20+40+x_1+x_3)\\  x_3&=\frac 14(30+40+x_2+x_4)\\  x_4&=\frac 14(10+30+x_1+x_3)\end{aligned}$$ (s1)
+
 anebo po úpravě
 $$
 \begin{aligned}
@@ -870,7 +872,7 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 
 ```{prf:remark} Iterační metoda.
 :nonumber:
- Soustavu (1) je možno vyřešit iterační metodou. Je možno postupovat intuitivně. Vyjdeme z libovolného odhadu řešení a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jacobiho metoda).
+ Soustavu {eq}`s1` je možno vyřešit iterační metodou. Je možno postupovat intuitivně. Vyjdeme z libovolného odhadu řešení a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jacobiho metoda).
 ```
 
 

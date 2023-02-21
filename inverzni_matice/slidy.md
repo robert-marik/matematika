@@ -588,7 +588,11 @@ $$\begin{pmatrix}
 
 </div>
 
-Toto můžeme zapsat symbolicky $$\varepsilon_{ij}=\frac 12\left(\frac{\partial u_{i}}{\partial x_{j}}+\frac{\partial u_{j}}{\partial x_{i}}\right).\tag{*}$$ Pro deformaci v prostoru máme nikoliv dvě, ale tři souřadnice a tenzor deformací je tedy $3\times 3$ symetrická matice, tj. matice, která má šest nezávislých komponent. (Zbylé tři komponenty dostaneme ze symetrie.) Tyto komponenty dostaneme postupnou volbou indexů ve vzorci (*) a můžeme je sestavit do sloupcového vektoru $$(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\varepsilon_{23},\varepsilon_{13},\varepsilon_{12})^T$$ Podobně, působící sílu můžeme rozdělit podle působení v jednotlivých směrech a tím dostaneme tenzor napětí, šest veličin charakterizujících napětí. (Zbylé tři jsou dány podmínkou, že se deformované těleso nepohybuje.)
+Toto můžeme zapsat symbolicky 
+
+$$\varepsilon_{ij}=\frac 12\left(\frac{\partial u_{i}}{\partial x_{j}}+\frac{\partial u_{j}}{\partial x_{i}}\right).$$ (im*)
+
+Pro deformaci v prostoru máme nikoliv dvě, ale tři souřadnice a tenzor deformací je tedy $3\times 3$ symetrická matice, tj. matice, která má šest nezávislých komponent. (Zbylé tři komponenty dostaneme ze symetrie.) Tyto komponenty dostaneme postupnou volbou indexů ve vzorci {eq}`im*` a můžeme je sestavit do sloupcového vektoru $$(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\varepsilon_{23},\varepsilon_{13},\varepsilon_{12})^T$$ Podobně, působící sílu můžeme rozdělit podle působení v jednotlivých směrech a tím dostaneme tenzor napětí, šest veličin charakterizujících napětí. (Zbylé tři jsou dány podmínkou, že se deformované těleso nepohybuje.)
 Pro další úvahy složky tenzoru napětí uspořádáme do sloupcového vektoru
 $$(\sigma_{11},\sigma_{22},\sigma_{33},\sigma_{23},\sigma_{13},\sigma_{12})^T.$$
 

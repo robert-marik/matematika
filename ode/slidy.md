@@ -63,14 +63,17 @@ modelovaného děje.
 :nonumber:
  *Obyčejnou diferenciální rovnicí prvního řádu rozřešenou vzhledem
 k derivaci* (stručněji též diferenciální rovnicí, DR) s neznámou $y$
-rozumíme rovnici tvaru $$ \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y) \tag{1}$$ kde $\varphi$ je funkce
-dvou proměnných.
+rozumíme rovnici tvaru 
+
+$$ \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y)$$ (r1)
+
+kde $\varphi$ je funkce dvou proměnných.
 ```
 
 
 (anglicky ordinary differential equation, ODE)
 
-**Další formy zápisu** rovnice (1) jsou
+**Další formy zápisu** rovnice {eq}`r1` jsou
   $$y'=\varphi(x,y),$$
   $${\mathrm{d}y}=\varphi(x,y)\mathrm{d}x,$$
   $${\mathrm{d}y}-\varphi(x,y)\mathrm{d}x=0.$$
@@ -88,10 +91,11 @@ následující definici.
 ```{prf:definition} Počáteční podmínka, Cauchyova úloha.
 :nonumber:
  Nechť $x_0$, $y_0$ jsou reálná čísla. Úloha najít
-řešení rovnice  
-$$  \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y), \tag{1}$$
-které splňuje zadanou *počáteční podmínku*
-$$  y(x_0)=y_0 \tag{2}$$
+řešení rovnice {eq}`r1` 
+$$  \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y), $$ které splňuje zadanou *počáteční podmínku*
+
+$$  y(x_0)=y_0 $$ (r2)
+
 se nazývá *počáteční* (též *Cauchyova*) *úloha*. 
 
 Řešení Cauchyovy úlohy nazýváme též *partikulárním řešením
@@ -112,14 +116,22 @@ křivka*.
 
 ```{prf:theorem} Eexistence a jednoznačnost řešení Cauchyovy úlohy.
 :nonumber:
- Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha (1)-(2) právě jedno řešení definované v nějakém okolí počáteční podmínky.
+ Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha {eq}`r1`-{eq}`r2` právě jedno řešení definované v nějakém okolí počáteční podmínky.
 ```
 
 
-**Příklad.** Rovnice $$y'=y\tag{3}$$ má řešení $y=e^x$, což nahlédneme
-  snadno, protože exponenciální funkce se nemění derivováním. Dosazením je možné ukázat, že má dokonce řešení $$y=Ce^x,\tag{4}$$ kde $C$ je libovolné číslo.
+**Příklad.** Rovnice 
 
-**Příklad.** Řešení počáteční úlohy $$y'=y, \quad y(x_0)=y_0$$ najdeme tak, že využijeme řešení (4) a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je $$y=  (y_0 e^{-x_0}) e^x.$$ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec (4) popisuje dokonce **všechna** řešení rovnice (3).
+$$y'=y$$ (rovnice3)
+
+má řešení $y=e^x$, což nahlédneme
+  snadno, protože exponenciální funkce se nemění derivováním. Dosazením je možné ukázat, že má dokonce řešení 
+  
+  $$y=Ce^x,$$ (rovnice4)
+  
+  kde $C$ je libovolné číslo.
+
+**Příklad.** Řešení počáteční úlohy $$y'=y, \quad y(x_0)=y_0$$ najdeme tak, že využijeme řešení {eq}`rovnice4` a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je $$y=  (y_0 e^{-x_0}) e^x.$$ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec {eq}`rovnice4` popisuje dokonce **všechna** řešení rovnice {eq}`rovnice3`.
 
 ### Obecné a partikulární řešení
 
@@ -413,7 +425,7 @@ https://youtu.be/OgzYhnGj34I
 manimp:Slope_field|Směrové pole diferenciální rovnice dává představu o chování řešení této rovnice.
 
 Protože derivace funkce v bodě udává směrnici tečny ke grafu funkce
-v tomto bodě, lze rovnici $$\frac{\mathrm dy}{\mathrm dx}=\varphi(x,y)\tag{1}$$ chápat jako předpis, který
+v tomto bodě, lze rovnici {eq}`r1` $$\frac{\mathrm dy}{\mathrm dx}=\varphi(x,y)$$ chápat jako předpis, který
 každému bodu v rovině přiřadí směrnici tečny k integrální křivce,
 která tímto bodem prochází.  Sestrojíme-li v dostatečném počtu
 (například i náhodně zvolených) bodů $[x,y]$ v rovině vektory
@@ -525,19 +537,25 @@ Výše uvedené výpočty je možno shrnout do pravidla v následující poznám
 
 Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky. Proto máme Leibnizův tvar zápisu derivací $\frac{\mathrm   dy}{\mathrm dx}$ při studiu diferenciálních rovnic více v oblibě, než zápis Lagrangeův, $y'$.
 
-**Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
+**Příklad.** Diferenciální rovnice tepelné výměny 
+
+$$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0$$ (NZ*)
+
+obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
 vydělit konstantou $k$
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{k\mathrm dt}=-\frac{T-T_\infty}{T_0-T_\infty}$$
 a přeškálovat pomocí konstanty $k$ čas
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm d(kt)}=-\frac{T-T_\infty}{T_0-T_\infty}.$$
 Po substituci $y=\frac{T-T_\infty}{T_0-T_\infty}$, $x=kt$ má úloha tvar
-$$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1. \tag{**}$$
-Nová rovnice (**) *neobsahuje žádné parametry* a proto je pro studium
+
+$$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1.$$ (NZ**)
+
+Nová rovnice {eq}`NZ**` *neobsahuje žádné parametry* a proto je pro studium
 jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
-rovnici (*). Tuto informaci je však nutno interpretovat v kontextu
-definice nových proměnných. Například to, že všechna řešení rovnice (**) konvergují k nule
-znamená, že všechna řešení rovnice (*) konvergují k $T_0$. To, že řešení rovnice (**) klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice (*) od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
+rovnici {eq}`NZ**`. Tuto informaci je však nutno interpretovat v kontextu
+definice nových proměnných. Například to, že všechna řešení rovnice {eq}`NZ**` konvergují k nule
+znamená, že všechna řešení rovnice {eq}`NZ*` konvergují k $T_0$. To, že řešení rovnice {eq}`NZ**` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`NZ*` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
 
 \iffalse
 
@@ -624,17 +642,20 @@ https://youtu.be/SVDLZMIfW8Y
 
 manim:Stabilita|Siu5ZgEA59s|Stabilitu autonomní diferenciální rovnice můžeme posoudit ze znaménka pravé strany. S minimem informací dokážeme poznat, jak se bude řešení chovat z hlediska konvergence ke stacionárnímu stavu.
 
-Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ se nazývá
-*autonomní*, nebo též nezávislá na čase. Je speciálním případem rovnice
-se separovanými proměnnými, která je uvedena na dalším slidu a naučíme
-se ji řešit analytickou cestou. Proto se nyní nebudeme zaměřovat na
-hledání obecného řešení, ale pokusíme se popsat chování řešení, aniž
-bychom tato řešení znali. Pokusíme se s co nejmenší námahou říct, jak
-se budou řešení chovat.
+Rovnice 
+
+$$\frac{\mathrm dy}{\mathrm dx}=f(y)$$ (autonomni)
+
+se nazývá *autonomní*, nebo též nezávislá na čase. Je speciálním
+případem rovnice se separovanými proměnnými, která je uvedena na
+dalším slidu a naučíme se ji řešit analytickou cestou. Proto se nyní
+nebudeme zaměřovat na hledání obecného řešení, ale pokusíme se popsat
+chování řešení, aniž bychom tato řešení znali. Pokusíme se s co
+nejmenší námahou říct, jak se budou řešení chovat.
 
 * Je-li $f(y_0)=0$, je konstantní funkce $y(x)=y_0$ řešením rovnice
-  (♣). Protože derivace konstantní funkce je nula, vidíme, že řešením
-  rovnice $$f(y)=0$$ obdržíme všechna konstantní řešení rovnice (♣). Tato konstantní řešení se nazývají *stacionární body*.
+  {eq}`autonomni`. Protože derivace konstantní funkce je nula, vidíme, že řešením
+  rovnice $$f(y)=0$$ obdržíme všechna konstantní řešení rovnice {eq}`autonomni`. Tato konstantní řešení se nazývají *stacionární body*.
 * Stacionární body a jim odpovídající konstantní řešení představují
   rovnovážný stav. Často nás zajímá, jestli při vychýlení z tohoto
   rovnovážného stavu má systém tendenci se vrátit do původního stavu,
@@ -802,7 +823,9 @@ https://youtu.be/NNQADiRyTEA
 ```{prf:definition} ODE se separovanými proměnnými.
 :nonumber:
  Diferenciální rovnice tvaru
-$$    \frac{\mathrm dy}{\mathrm dx}=f(x)g(y) \tag{S}$$
+
+$$    \frac{\mathrm dy}{\mathrm dx}=f(x)g(y) $$ (ODE-S)
+
 kde $f$ a $g$ jsou funkce spojité na (nějakých) otevřených intervalech
 se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
 ```

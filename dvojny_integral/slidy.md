@@ -501,7 +501,9 @@ $$F=\rho g\iint _M y \,\mathrm d x\mathrm dy.$$
 Využijeme-li vzorec pro $y$-ovou souřadnici těžiště, má výsledný vztah tvar
 $$F=\rho g y_0 S,$$
 kde $S$ je obsah hráze. Formálně tento vztah odpovídá vzorci
-$$F=p_0 S,\tag{H1}\label{H1}$$
+
+$$F=p_0 S,$$ (H1)
+
 kde $p_0=\rho g y_0$ je tlak v těžišti. *Proto v praxi stačí znát těžiště
 hráze a pro výpočet síly na hráz použít celkovou plochu hráze a tlak
 v těžišti.* Protože jsme pracovali s obecnou množinou $M$, není tento
@@ -514,7 +516,7 @@ i s kartézskými souřadnicemi pootočíme okolo osy procházející
 hladinou, hloubka všech bodů se sníží faktorem $\sin \alpha$, kde
 $\alpha$ je úhel mezi vodorovnou hladinou a rovinou hráze. Formálně
 tato operace dopadne stejně, jako kdybychom tekutinu nahradili tekutinou
-s hustotou $\sin\alpha$-krát nižší. Protože však vztah $\eqref{H1}$
+s hustotou $\sin\alpha$-krát nižší. Protože však vztah {eq}`H1`
 nezávisí na hustotě, nic se na něm nezmění. Také zobecnění na několik rovin
 je snadné. Zobecnění na zakřivenou plochu je náročnější a vyžaduje
 jiný typ integrálu.
@@ -550,7 +552,9 @@ $$\iint_M (y_c-y)y\,\mathrm dx\mathrm dy=0$$
 a po roznásobení závorky, rozdělení integrálu na dva a vytknutí konstanty
 $$y_c\iint_M y\,\mathrm dx\mathrm dy = \iint_M y^2\,\mathrm dx\mathrm dy.$$
 Nyní již snadno dostaneme výsledný vztah
-$$y_c=\frac{\iint_M y^2\,\mathrm dx\mathrm dy}{\iint_M y\,\mathrm dx\mathrm dy}.\tag{H2}\label{H2}$$
+
+$$y_c=\frac{\iint_M y^2\,\mathrm dx\mathrm dy}{\iint_M y\,\mathrm dx\mathrm dy}.$$ (H2)
+
 Pokud je množina $M$ obdélník, je možné ji (po vhodné změně jednotek) brát jako jednotkový čtverec. Protože platí
 $$\iint_{[0,1]\times [0,1]}y\,\mathrm dx\mathrm dy=\frac 12, \quad
 \iint_{[0,1]\times [0,1]}y^2\,\mathrm dx\mathrm dy=\frac 13,
@@ -563,7 +567,7 @@ hustotou $y$. Na tomto pozorování a na skutečnosti, že u pravidelných
 množin umíme těžiště najít geometricky, je založena metoda nalezení
 působiště tlakové síly pomocí [zatěžovacího obrazce](https://en.wikipedia.org/wiki/Pressure_prism).
 
-Kvadratický moment v čitateli zlomku $\eqref{H2}$ vyjadřujícího $y_c$ je často
+Kvadratický moment v čitateli zlomku {eq}`H2` vyjadřujícího $y_c$ je často
 výhodnější rozepsat pomocí Steinerovy věty. Ve jmenovateli je součin
 obsahu $S$ a $y$-ové souřadnice těžiště $y_0$. Tím dostaneme
 $$y_c=\frac{I_{x0}+Sy_0^2}{Sy_0}=\frac{I_{x0}}{Sy_0}+y_0,$$

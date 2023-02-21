@@ -1,10 +1,11 @@
 # Derivace a lineární aproximace
 
+
 \iffalse
 
-**Připomenutí derivací z ptačí perspektivy**
-
 https://youtu.be/9N2Z02S2tAw
+
+```{admonition} Připomenutí derivací z ptačí perspektivy
 
 <div class='obtekat'>
 
@@ -18,6 +19,7 @@ S využitím aparátu derivací jsme v minulé přednášce poznali a naučili
 1. *Ze zadaného vztahu mezi dvěma veličinami najdi vztah mezi rychlostmi změn těchto veličin.* Jako vedlejší produkt mimo jiné využíváme dovednosti derivování z předchozího bodu a vždy derivujeme složenou funkci: vzorec vyjadřující jednu veličinu pomocí druhé je vnější složka a druhá veličina, resp. její závislost na čase, je složka vnitřní. Vstupem je vztah mezi veličinami a rychlost, s jakou se jedna z veličin mění, výstupem je rychlost, s jakou se mění veličina druhá.
 1. *Ze zadaného slovního popisu nějakého děje sestav matematický model.* Ve slovním modelu je zmíněna rychlost, tu matematicky přepisujeme jako derivaci a tato rychlost je v nějaké relaci s ostatními veličinami. Odsud sestavujeme rovnici. Vstupem je mechanismus popisující vývoj systému, výstupem matematický model ve formě rovnice obsahující neznámou funkci popisující stav systému a její derivaci. V průběhu semestru se takovéto rovnice naučíme řešit, nejprve se však detailněji koukneme na to, abychom poznali i další role derivace.
 
+```
 \fi
 
 ## Aplikace derivací 3: Jak citlivě? (reakce na změnu)
@@ -47,7 +49,10 @@ probrání Taylorova polynomu, kdy se použije o něco obecnější postup.
 
 **Příklad.** Nosník výšky $h$, šířky $a$ a délky $L$ je uprostřed
   zatížený silou $F$. Průhyb $s$ uprostřed nosníku je dán vztahem
-  $$s=\frac {F L^3}{4Eah^3},\tag{1}$$ kde $E$ je materiálová
+  
+  $$s=\frac {F L^3}{4Eah^3},$$  (1)
+  
+  kde $E$ je materiálová
   konstanta. Pro $h=20\,\mathrm{cm}$ je průhyb
   $s=10\,\mathrm{cm}$. Zjistěte, jak se průhyb mění při změnách výšky nosníku. Odhadněte, jak se průhyb změní, pokud se $h$ sníží na
   $18\,\mathrm{cm}$?
@@ -55,7 +60,7 @@ probrání Taylorova polynomu, kdy se použije o něco obecnější postup.
 **Řešení.** Relevantními veličinami jsou $s$ a $h$ a vzorec je tedy
 možno shrnout do tvaru $$s=\frac k{h^3},$$ kde $k$ je konstanta
 charakterizující danou situaci. Pro zadané hodnoty výšky a průhybu
-vychází konstanta $$k=s h^3=10\times 20^3=80\,000.$$ Vzorec (1) tedy
+vychází konstanta $$k=s h^3=10\times 20^3=80\,000.$$ Vzorec {eq}`1` tedy
 redukujeme na $$s={80\,000}{h^{-3}}.$$ Derivováním obdržíme
 $$\frac{\mathrm ds}{\mathrm dh}=80\,000\times(-3)
 h^{-4}=-\frac{3\times 80\,000}{h^4}.$$ Změna výšky nosníku je $$\Delta
@@ -67,11 +72,14 @@ zvětší o $3\,\mathrm{cm}$.
 :nonumber:
  Proč nepočítáme přesně? Stačila by selská logika a změna
 funkce $s=\frac k{h^3}$ by byla
-$$\Delta s=\frac k{(h+\Delta h)^3}-\frac k{h^3}.\tag{2}$$ Odpověď je
+
+$$\Delta s=\frac k{(h+\Delta h)^3}-\frac k{h^3}.$$  (2)
+
+Odpověď je
 překvapivá: pomocí derivací je vyjádření změny v naprosté většině
 případů jednodušší. V tomto našem případě máme
 $$\Delta s\approx -\frac{3k}{h^4}\Delta h,$$ což je na další práci
-mnohem příjemnější výraz, než rozdíl dvou zlomků (2). Skutečnost, že platí
+mnohem příjemnější výraz, než rozdíl dvou zlomků {eq}`2`. Skutečnost, že platí
 pouze pro malé $\Delta h$ nás nijak neomezuje. Většinou se tento
 aparát používá tam, kde se chyba limitním přechodem "stáhne na
 nulu". Navíc, ukazujeme koncept. *Důležité je si z příkladu odnést, že derivace umožní analyzovat, jak vypočítané veličiny reagují na změny ve vstupních datech. Výsledkem může být například maximální teoretická přesnost se kterou je možné vypočítat výslednou veličinu při vstupních datech zatížených chybou nebo nějakým způsobem nejistých (zákon šíření chyb).*
@@ -586,8 +594,12 @@ mnoho výpočtů a rychlost konvergence je zásadní.
 ```{prf:remark} Ad hoc iterace.
 :nonumber:
 
-Newtonovu metodu je možné chápat také tak, že rovnici $$f(x)=0$$ přepíšeme do ekvivalentního tvaru $$x = x - \frac{f(x)}{f'(x)} \tag{*}$$ a poté hledáme iteracemi 
-$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$ takové $x$, kdy se levá strana rovná pravé. Někdy je možné použít analogickou iterační techniku, kdy však zadanou rovnici převedeme do jiného tvaru, než (*). Zpravidla snížíme šance, že proces konverguje a snížíme rychlost konvergence, ale i tak to může být výhodné, protože nemusíme počítat derivaci funkce. Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy lineárních rovnic.
+Newtonovu metodu je možné chápat také tak, že rovnici $$f(x)=0$$ přepíšeme do ekvivalentního tvaru 
+
+$$x = x - \frac{f(x)}{f'(x)}$$ (newton*)
+
+a poté hledáme iteracemi 
+$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$ takové $x$, kdy se levá strana rovná pravé. Někdy je možné použít analogickou iterační techniku, kdy však zadanou rovnici převedeme do jiného tvaru, než {eq}`newton*`. Zpravidla snížíme šance, že proces konverguje a snížíme rychlost konvergence, ale i tak to může být výhodné, protože nemusíme počítat derivaci funkce. Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy lineárních rovnic.
 ```
 
 

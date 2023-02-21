@@ -255,15 +255,17 @@ Definice spojitosti sice není zcela názorná, ale následující definice a v�
 
 Podobně jako spojitost funkce jedné proměnné je definována spojitost funkcí více proměnných. Zůstane dokonce v platnosti předchozí věta. V naprosté většině základních praktických aplikací vystačíme s popisem pomocí elementárních funkcí a proto jsou funkce, se kterými pracujeme, zpravidla automaticky spojité. Opatrnost je nutné pouze tam, kde bychom se od elementárních funkcí odchýlili, například při použití nekonečných řad.
 
-> Poznámka. Body, v jejichž okolí je funkce ohraničená, ale je zde porušena spojitost, jsou například následující.
-> 
+```{prf:remark} Body nespojitosti
+Body, v jejichž okolí je funkce ohraničená, ale je zde porušena spojitost, jsou například následující.
+ 
 **skok**
 : Na jeho odhalení stačí zvolit toleranci v definici spojitosti menší, než je výška skoku. Například $f(x)=\frac{|x|+x}{2x}$ je jednotkový skok v nule.
->
+
 **odstranitelná nespojitost**
 : Tato nespojitost nás zajímá nejvíce. Je to nespojitost, která zmizí pokud vhodně dodefinujeme funkční hodnotu v bodě nespojitosti. Například funkce $$f(x)= \begin{cases}   \frac {\sin x}{x}& x\neq 0\\   1& x=0 \end{cases} $$ je spojitá funkce. Vznikla doplněním jedné funkční hodnoty do definice funkce $\frac{\sin x}x$, která má odstranitelnou nespojitost v bodě $x=0$.
->
-> [Grafy.](https://sagecell.sagemath.org/?z=eJxL06jQtNWo0NZITCoGMjU19TWMtCo0ebnSQRLFmXlASr-ClyvA0DZNryAnv0RDo0JH11THVBOoJsDINh1VUEchOT8nv8hWvSg1RR2kwlA7wAgAMsAaHQ==&lang=sage)
+
+ [Grafy.](https://sagecell.sagemath.org/?z=eJxL06jQtNWo0NZITCoGMjU19TWMtCo0ebnSQRLFmXlASr-ClyvA0DZNryAnv0RDo0JH11THVBOoJsDINh1VUEchOT8nv8hWvSg1RR2kwlA7wAgAMsAaHQ==&lang=sage)
+```
 
 ### Limita
 
@@ -369,15 +371,6 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 |Derivace je konstantní.|Funkce je lineární. Klesá nebo roste pořád stejně rychle. Pokud vstup roste aritmetickou řadou (po stejných skocích), sledovaná veličina roste nebo klesá také aritmetickou řadou.|
 |Derivace roste.|Funkce je nelineární a roste stále rychleji. Pokud je funkce kladná, rostoucí derivace znamená, že růst se stále zrychluje.|
 |Derivace klesá k nule.|Funkce je nelineární a přibližuje se k vodorovné asymptotě. Pokud je funkce kladná, k nule klesající derivace znamená, že růst se stále zpomaluje a zastaví se.|
-
-<style>
-
-td {padding:10px; text-align: center;}
-tr:nth-child(even) {color:green; background: #E9E9E9;}
-table {border-collapse: collapse; width:80%; margin:auto; margin-top:20px; margin-bottom:20px;}
-th {color:white; background: #555;}
-
-</style>
 
 ## Aplikace derivací 1: Jak rychle? (změna v čase)
 
@@ -684,12 +677,15 @@ https://youtu.be/22F5frFRI60
 Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
 proměnných, polohy a času. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase, například  v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
 
-> Poznámka. Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
+```{prf:remark} Poznámka
+:nonumber:
+Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
 model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
->
+
 * Rozdílem teplot je způsoben tok tepla. Velikost toku tepla je úměrná
 teplotnímu rozdílu a teplo teče z místa v větší teplotou do místa s menší teplotou.
 * Teplota se zvyšuje dodáním tepla. Změna teploty je úměrná dodanému teplu.
+```
 
 manim:Heat|1tbe5YUvoqg|Rovnice vedení tepla. Animace jak se chová teplo při jednorozměrném transportu a odvození rovnice vedení tepla.
 
