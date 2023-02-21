@@ -24,23 +24,7 @@ kombinaci a jednou matice a maticový součin!
 
 ## Soustava lineárních rovnic
 
-> Definice (soustava lineárních rovnic).
-*Soustavou $m$ lineárních rovnic  o $n$ neznámých* nazýváme
-soustavu rovnic $$ \tag{1}
-\begin{gathered}
-  a_{11}x_1+a_{12}x_2+a_{13}x_3+\cdots+a_{1n}x_n=b_1 \\
-  a_{21}x_1+a_{22}x_2+a_{23}x_3+\cdots+a_{2n}x_n=b_2 \\
-  a_{31}x_1+a_{32}x_2+a_{33}x_3+\cdots+a_{3n}x_n=b_3 \\
-  \vdots \\
-  a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\cdots+a_{mn}x_n=b_m 
-\end{gathered} $$
-Proměnné $x_1$, $x_2$, \dots, $x_n$ nazýváme *neznámé*. Reálná
-čísla $a_{ij}$ nazýváme *koeficienty levých stran*, reálná
-čísla $b_j$ *koeficienty pravých stran* soustavy rovnic.
-*Řešením soustavy rovnic* rozumíme uspořádanou $n$-tici
-reálných čísel $[t_1, t_2, \ldots, t_n]$ po jejichž dosazení za
-neznámé (v\ tomto pořadí) do soustavy dostaneme ve všech rovnicích
-identity.
+> Definice (soustava lineárních rovnic). *Soustavou $m$ lineárních rovnic  o $n$ neznámých* nazýváme soustavu rovnic $$  \begin{gathered}   a_{11}x_1+a_{12}x_2+a_{13}x_3+\cdots+a_{1n}x_n=b_1 \\   a_{21}x_1+a_{22}x_2+a_{23}x_3+\cdots+a_{2n}x_n=b_2 \\   a_{31}x_1+a_{32}x_2+a_{33}x_3+\cdots+a_{3n}x_n=b_3 \\   \vdots \\   a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\cdots+a_{mn}x_n=b_m \end{gathered}\tag{1} $$  Proměnné $x_1$, $x_2$, ..., $x_n$ nazýváme *neznámé*. Reálná čísla $a_{ij}$ nazýváme *koeficienty levých stran*, reálná čísla $b_j$ *koeficienty pravých stran* soustavy rovnic. *Řešením soustavy rovnic* rozumíme uspořádanou $n$-tici reálných čísel $[t_1, t_2, \ldots, t_n]$ po jejichž dosazení za neznámé (v tomto pořadí) do soustavy dostaneme ve všech rovnicích identity.
 
 
 
@@ -94,8 +78,8 @@ $$    \begin{pmatrix}
       b_{1}\\b_{2}\\\vdots\\b_{m}
     \end{pmatrix}.
  $$
-  Vidíme tedy, že se vlastně jedná o\ problém, vyjádřit vektor složený
-  z\ čísel na pravé straně soustavy rovnic jako  lineární
+  Vidíme tedy, že se vlastně jedná o problém, vyjádřit vektor složený
+  z čísel na pravé straně soustavy rovnic jako  lineární
   kombinaci vektorů, které tvoří sloupce  matice
   soustavy.
 
@@ -120,7 +104,7 @@ $$
   \end{matrix}
 \right).
 $$
-  Tento tvar se používá často v\ inženýrských výpočtech pro
+  Tento tvar se používá často v inženýrských výpočtech pro
   úspornost. Symbolicky zpravidla píšeme soustavu lineárních rovnic ve
   tvaru 
 $$
@@ -168,60 +152,13 @@ diagonále) se vzhledem k násobení chovají velice hezky: součinem je
 taková matice, která je diagonální a na hlavní diagonále má prvky
 vytvořené jako součin odpovídajících prvků násobených matic.
 
-$$
-\begin{pmatrix}
-  2&0&0 \\
-  0&3&0 \\
-  0&0&12  
-\end{pmatrix}
-\begin{pmatrix}
-  5&0&0 \\
-  0&7&0 \\
-  0&0&1  
-\end{pmatrix}
-=
-\begin{pmatrix}
-  10&0&0 \\
-  0&21&0 \\
-  0&0&12  
-\end{pmatrix}
-$$
+$$\begin{pmatrix}  2&0&0 \\  0&3&0 \\  0&0&12  \end{pmatrix}\begin{pmatrix}  5&0&0 \\  0&7&0 \\  0&0&1  \end{pmatrix}=\begin{pmatrix}  10&0&0 \\  0&21&0 \\  0&0&12  \end{pmatrix}$$
 
 Proto je snadné zařídit, aby v hlavní diagonále vyšly jedničky. Stačí
 uvažovat podobně jako v následujícím příkladě.
-$$
-\begin{pmatrix}
-  2&0&0 \\
-  0&3&0 \\
-  0&0&12  
-\end{pmatrix}
-\begin{pmatrix}
-  \frac 12&0&0 \\
-  0&\frac 13&0 \\
-  0&0&\frac1{12}  
-\end{pmatrix}
-=
-\begin{pmatrix}
-  1&0&0 \\
-  0&1&0 \\
-  0&0&1  
-\end{pmatrix}
-$$
+$$\begin{pmatrix}  2&0&0 \\  0&3&0 \\  0&0&12  \end{pmatrix}\begin{pmatrix}  \frac 12&0&0 \\  0&\frac 13&0 \\  0&0&\frac1{12}  \end{pmatrix}=\begin{pmatrix}  1&0&0 \\  0&1&0 \\  0&0&1  \end{pmatrix}$$
 a tedy
-$$
-\begin{pmatrix}
-  2&0&0 \\
-  0&3&0 \\
-  0&0&12  
-\end{pmatrix}^{-1}
-=
-\begin{pmatrix}
-  \frac 12&0&0 \\
-  0&\frac 13&0 \\
-  0&0&\frac1{12}  
-\end{pmatrix}.
-$$
-
+$$\begin{pmatrix}  2&0&0 \\  0&3&0 \\  0&0&12  \end{pmatrix}^{-1}=\begin{pmatrix}  \frac 12&0&0 \\  0&\frac 13&0 \\  0&0&\frac1{12}  \end{pmatrix}.$$
 
 
 
@@ -233,62 +170,16 @@ lineárních rovnic iterační metodou. Představíme si nejednodušší, přest
 
 V úvodní přednášce z lineární algebry jsme modelovali rozložení teploty ve dvourozměrné
 desce pomocí soustavy rovnic
-$$
-\begin{pmatrix}
- \phantom{-}4&-1& \phantom{-}0&-1\\
- -1& \phantom{-}4&-1& \phantom{-}0\\
- \phantom{-}0 &-1& \phantom{-}4&-1\\
- -1& \phantom{-}0&-1& \phantom{-}4
-\end{pmatrix}
-\begin{pmatrix}
-  x_1\\x_2\\x_3\\x_4
-\end{pmatrix}
-=
-\begin{pmatrix}
-  30\\60\\70\\40
-\end{pmatrix}.
-$$
+$$\begin{pmatrix} \phantom{-}4&-1& \phantom{-}0&-1\\ -1& \phantom{-}4&-1& \phantom{-}0\\ \phantom{-}0 &-1& \phantom{-}4&-1\\ -1& \phantom{-}0&-1& \phantom{-}4\end{pmatrix}\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix}=\begin{pmatrix}  30\\60\\70\\40\end{pmatrix}.$$
 Pro
-$$A=\begin{pmatrix}
- \phantom{-}4&-1& \phantom{-}0&-1\\
- -1& \phantom{-}4&-1& \phantom{-}0\\
- \phantom{-}0 &-1& \phantom{-}4&-1\\
- -1& \phantom{-}0&-1& \phantom{-}4
-\end{pmatrix}, \quad
-X=\begin{pmatrix}
-  x_1\\x_2\\x_3\\x_4
-\end{pmatrix}
-,\quad
-B=\begin{pmatrix}
-  30\\60\\70\\40
-\end{pmatrix}
-$$
-tedy $$AX=B.\tag{1}$$
+$$A=\begin{pmatrix} \phantom{-}4&-1& \phantom{-}0&-1\\ -1& \phantom{-}4&-1& \phantom{-}0\\ \phantom{-}0 &-1& \phantom{-}4&-1\\ -1& \phantom{-}0&-1& \phantom{-}4\end{pmatrix}, \quad X=\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix},\quad B=\begin{pmatrix}  30\\60\\70\\40\end{pmatrix}$$ tedy $$AX=B.\tag{1}$$
 
 Rozdělíme matici $A$ na součet diagonální matice a matice s nulami v hlavní diagonále, tj. na součet matic
-$$D=
-\begin{pmatrix}
- 4&0&0&0\\
- 0& 4&0&0\\
-0 &0& 4&0\\
- 0&0&0& 4
-\end{pmatrix}
-\quad \text{a}\quad
-T=
-\begin{pmatrix}
- \phantom{-}0&-1& \phantom{-}0&-1\\
- -1& \phantom{-}0&-1& \phantom{-}0\\
- \phantom{-}0 &-1& \phantom{-}0&-1\\
- -1& \phantom{-}0&-1& \phantom{-}0
-\end{pmatrix}
-$$
+$$D=\begin{pmatrix} 4&0&0&0\\ 0& 4&0&0\\0 &0& 4&0\\ 0&0&0& 4\end{pmatrix}\quad \text{a}\quad T=\begin{pmatrix} \phantom{-}0&-1& \phantom{-}0&-1\\ -1& \phantom{-}0&-1& \phantom{-}0\\ \phantom{-}0 &-1& \phantom{-}0&-1\\ -1& \phantom{-}0&-1& \phantom{-}0\end{pmatrix}$$
 Potom můžeme psát rovnici ve tvaru
 $$(D+T)X=B$$
 a odsud
-$$\begin{aligned}DX+TX&=B\\
-DX&=B-TX
-\end{aligned}$$
-a využitím inverzní matice
+$$\begin{aligned}DX+TX&=B\\ DX&=B-TX\end{aligned}$$ a využitím inverzní matice
 $$X=D^{-1}(B-TX).\tag{2}$$
 Definujme nyní iterační vzorec
 $$X_{k+1}=D^{-1}(B-TX_k).\tag{3}$$
@@ -337,10 +228,10 @@ https://youtu.be/HF-RDBZUenY
 Iterační metoda funguje pro soustavy s jediným řešením. Pokud však hledáme vlastní vektory, musíme být schopni umět řešit i soustavy s nekonečně mnoha řešeními.
 
 Matice řádu $m\times n$ obsahuje celkem $m\cdot n$ čísel. Jedná se tedy
-o\ relativně komplikovaný objekt. V\ matematice se často snažíme
+o relativně komplikovaný objekt. V matematice se často snažíme
 složitější objekty nějakým způsobem charakterizovat pomocí objektů
 jednodušších, např. pomocí čísel. Jedno už známe, determinant. Dalším 
-z\ těchto čísel je hodnost matice, kterou si nadefinujeme nyní.
+z těchto čísel je hodnost matice, kterou si nadefinujeme nyní.
 
 > Definice (hodnost matice).
   Buď $A$ matice. *Hodností matice* rozumíme
@@ -375,12 +266,12 @@ Výpočet hodnosti se provádí postupným nahrazením zadané matice maticí, k
 >  Následující operace nemění hodnost matice:
 >
 >  1. vynechání řádku složeného ze samých nul, nebo vynechání řádku,
-    který je totožný s\ jiným řádkem, nebo vynechání řádku, který je
+    který je totožný s jiným řádkem, nebo vynechání řádku, který je
     násobkem jiného řádku,
  1. vynásobení nebo vydělení libovolného řádku nenulovým číslem,
  1. záměna pořadí řádků,
  1. ponechání jednoho řádku beze změny a opakované přičtení
-    libovolných násobků tohoto řádku k\ nenulovým násobkům ostatních
+    libovolných násobků tohoto řádku k nenulovým násobkům ostatních
     řádků matice.
 >
 >  Libovolnou matici lze konečným počtem těchto úprav převést do schodovitého tvaru.
@@ -505,24 +396,7 @@ $$
 \end{aligned}
 $$
 Řešení je $x_1=2+t$, $x_2=-t$, $x_3=-1$, $x_4=t$, kde $t$ je libovolné reálné číslo. Vektorově (maticově) máme řešení ve tvaru
-$$
-\begin{pmatrix}
-  x_1\\x_2\\x_3\\x_4
-\end{pmatrix}
-=
-\begin{pmatrix}
-  2+t\\-t\\-1\\t
-\end{pmatrix}
-=
-\begin{pmatrix}
-  2\\0\\-1\\0
-\end{pmatrix}
-+t
-\begin{pmatrix}
-  1\\-1\\0\\1
-\end{pmatrix}
-.
-$$
+$$\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix} = \begin{pmatrix}  2+t\\-t\\-1\\t\end{pmatrix}=\begin{pmatrix}  2\\0\\-1\\0\end{pmatrix}+t\begin{pmatrix}  1\\-1\\0\\1\end{pmatrix}.$$
 
 
 ## Gaussova-Seidelova iterační metoda
