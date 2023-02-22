@@ -33,13 +33,15 @@ body {
 
 img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; display:block;}
 
-.obtekat {max-width:40%; vertical-align:top; float: right;}
+.obtekat {max-width:45%; vertical-align:top; float: right;}
 
+.obtekat img {max-width:95%;}
 
 .reseni {background-color:lightgray;}
 
+section {clear:both;}
+h2 {clear:both;}
 
-.bd-toc {display: none;}
 
 @media (min-width: 10px)
 {
@@ -52,3 +54,61 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
 .cviceni p img {max-width:50%; float:right; padding-left:10px;}
 .cviceni h2 {clear:both;}
 .admonition {clear:both !important;}
+
+
+.WWotazka {
+    margin-left:auto;
+    margin-right: 0px;
+    font-weight:bold;
+    color:white !important;
+    background-color:#006131;
+    padding:3px;
+    padding-left:8px;
+    padding-right:8px;
+    text-decoration:none;
+    margin-top:2px;
+    margin-bottom:2px;
+    display:inline-block;
+}
+
+
+.WWotazka:visited {
+    text-decoration:none;
+}
+
+.Ycontainer {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  border-color:#006131;
+  border-style:solid;
+  border-width:thick;
+  margin:auto;
+  margin-bottom:20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.but-prez, .but-video {background-color: #006131; color: #eeeeee; margin:3px; text-decoration: none; font-weight: bold;
+    border: none;
+    padding: 1px 3px;
+    text-align: center;
+    display: block;
+}
+
+.but-video {background-color: #a50a0a;}
+
+figcaption {font-size: 60%;}
+
+#bd-toc-nav {background-color: #f4f4f4;} */

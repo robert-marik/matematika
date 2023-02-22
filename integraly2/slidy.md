@@ -94,8 +94,10 @@ integrovatelné funkce a proto zformulujeme následující věty.
   g(x)\,\mathrm dx.$$
 ```
 
-
-> Důsledek. Integrál nezáporné funkce je nezáporný. Přesněji, je-li $a<b$ a $f(x)\geq 0$ na $[a,b]$, platí $$\int _a^b f(x)\,\mathrm dx \geq 0.$$
+```{prf:theorem} Integrál nezáporné funkce je nezáporný
+:nonumber:
+Integrál nezáporné funkce je nezáporný. Přesněji, je-li $a<b$ a $f(x)\geq 0$ na $[a,b]$, platí $$\int _a^b f(x)\,\mathrm dx \geq 0.$$
+```
 
 ```{prf:theorem} Aditivita vzhledem k integračnímu oboru
 :nonumber:
@@ -367,35 +369,6 @@ různých druzích povrchu po cestě se síla měnila. Pracovníkovi se
 podařilo odhadnout sílu během pohybu. Závislost síly na dráze
 zachycuje následující tabulka.
 
-<style>
-table, th, td {
-   border: 2px solid green;
-} 
-td {padding:10px}
-tr td:first-child {color:green; background: #E9E9E9;}
-table {
-    border-collapse: collapse;
-}
-</style>
-
-<style>
-table, th, td {
-   border: 2px solid green;
-} 
-td {padding:10px}
-tr td:first-child {color:green; background: #E9E9E9;}
-table {
-    border-collapse: collapse;
-}
-
-th {
-    background-color: green;
-    color: white;
-    border-color: gray;
-}
-
-th {text-align: center;}
-</style>
 
 |$s$/m|0|5|10|15|20|
 |-|-|-|-|-|-|
