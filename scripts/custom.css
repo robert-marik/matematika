@@ -96,7 +96,12 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
   height: 100%;
 }
 
-.but-prez, .but-video {background-color: #006131; color: #eeeeee; margin:3px; text-decoration: none; font-weight: bold;
+.but-prez, .but-video {
+    background-color: #006131;
+    color: #eeeeee !important;
+    margin:3px;
+    text-decoration: none;
+    font-weight: bold;
     border: none;
     padding: 1px 3px;
     text-align: center;
@@ -108,3 +113,5 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
 figcaption {font-size: 60%;}
 
 #bd-toc-nav {background-color: #f4f4f4;} */
+
+					 
