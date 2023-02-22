@@ -46,3 +46,4 @@ sed -i 's/<body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>
 # Copy custom css file
 cp custom.css $directory/_static/styles/
 cp custom.css $directory/_static/
+cp custom.js $directory/_static/
