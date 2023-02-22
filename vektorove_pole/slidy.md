@@ -702,11 +702,12 @@ https://youtu.be/5hy6lB1O4KQ
 \fi
 
 Uvažujme rovnici vedení tepla ve dvou rozměrech a v prostředí bez zdrojů.
-$$\rho c\frac{\partial T}{\partial t}=\nabla\cdot (D\nabla T)\tag{***}$$
+
+$$\rho c\frac{\partial T}{\partial t}=\nabla\cdot (D\nabla T)$$ (VP3)
 
 ### Stacionární stav
 
-Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice (***) se redukuje na 
+Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice {eq}`VP3` se redukuje na 
 $$\nabla\cdot (D\nabla T)=0.$$
 
 ### Homogenní izotropní materiál a lineární materiálové vztahy
@@ -714,7 +715,7 @@ $$\nabla\cdot (D\nabla T)=0.$$
 Materiál má ve všech místech (homogenní) a ve všech směrech (izotropní) stejné vlastnosti.
 Veličina $D$ je reálná skalární veličina (konstanta).
 
-Podle pravidla derivace konstantního násobku se rovnice (***) redukuje na  
+Podle pravidla derivace konstantního násobku se rovnice {eq}`VP3` redukuje na  
 $$\rho c\frac{\partial T}{\partial t}=D\nabla\cdot (\nabla T)$$
 a ve složkách
 $$\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).$$
@@ -727,14 +728,14 @@ Materiál má dva charakteristické směry související s rovinami
 symetrie. Zvolíme soustavu souřadnic tak, aby osy byly orientovány ve
 směru vlastních vektorů.
 
-Veličina $D$ je diagonální matice. Pro $$D=\begin{pmatrix}D_x & 0\\ 0& D_y\end{pmatrix}$$ je tvar rovnice (***) ve složkách
+Veličina $D$ je diagonální matice. Pro $$D=\begin{pmatrix}D_x & 0\\ 0& D_y\end{pmatrix}$$ je tvar rovnice {eq}`VP3` ve složkách
 $$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial T}{\partial x}\right)
 +\frac{\partial }{\partial y}\left(D_y\frac{\partial T}{\partial y}\right).$$
 
 ### Homogenní ortotropní materiál a lineární materiálové vztahy
 
 Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné a nezávislá na $T$.
-Stejné jako předchozí případ, ale $D_x$ a $D_y$ jsou konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
+Stejné jako předchozí případ, ale $D_x$ a $D_y$ jsou konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice {eq}`VP3` redukuje na 
 $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.$$
 
 ## Umění identifikace předpokladů z tvaru difuzní rovnice
@@ -793,12 +794,17 @@ $$
 * Pro konkrétní výpočet je často nutné rovnici zapsat v souřadnicích. Například pokud máme dvojrozměrný model a směr souřadných os zvolíme ve vlastních směrech matice $D$ (potom matice $D$ bude diagonální s diagonálními prvky například $D_x$ a $D_y$), má difuzní rovnice tvar 
 $$ \frac {\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right ) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right ). $$
 * Pokud je materiál homogení a má lineární materiálovou odezvu, je dokonce možné rovnici dále zjednodušit na 
-$$ \frac {\partial u}{\partial t}=\sigma + D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } . \tag{N}
-$$
+
+$$ \frac {\partial u}{\partial t}=\sigma + D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } .
+$$ (VP-N)
+
 Tato formulace je jednodušší než předešlá, protože obsahuje druhé derivace místo kvaziderivací.
-* Pokud je rovnice například stacionární (stavová veličina nezávisí na čase, derivace podle času je nulová), bezzdrojová (neobsahuje zdroje ani spotřebiče, veličina $\sigma$ je nulová), z homogenního a lineárního materiálu (viz předchozí bod) redukuje se rovnice (N) na  
-$$ 0= D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } . \tag{S}
-$$ Tato rovnice je jednodušší než "plná rovnice" (N) a proto ji dokážeme řešit i ve složitějších podmínkách. Někdy například umíme vyřešit nestacionární rovnici (N) a máme dynamiku jak rychle roste stavová veličina, například jak rychle roste teplota v materiálu. To je nejlepší scénář, někdy však může být nerealizovatelný. Někdy ale umíme vyřešit jenom stacionární rovnici (S) a najdeme jenom rozložení stavové veličiny po dosažení rovnovážného stavu. To je také dobrá a užitečná informace sama o sobě. Navíc může sloužit jako odrazový můstek k řešení nestacionární rovnice (N) tak, že od stacionárního řešení postupujeme zpětně v čase.
+* Pokud je rovnice například stacionární (stavová veličina nezávisí na čase, derivace podle času je nulová), bezzdrojová (neobsahuje zdroje ani spotřebiče, veličina $\sigma$ je nulová), z homogenního a lineárního materiálu (viz předchozí bod) redukuje se rovnice {eq}`VP-N` na  
+
+$$ 0= D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } . 
+$$ (S)
+
+Tato rovnice je jednodušší než "plná rovnice" {eq}`N` a proto ji dokážeme řešit i ve složitějších podmínkách. Někdy například umíme vyřešit nestacionární rovnici {eq}`N` a máme dynamiku jak rychle roste stavová veličina, například jak rychle roste teplota v materiálu. To je nejlepší scénář, někdy však může být nerealizovatelný. Někdy ale umíme vyřešit jenom stacionární rovnici {eq}`S` a najdeme jenom rozložení stavové veličiny po dosažení rovnovážného stavu. To je také dobrá a užitečná informace sama o sobě. Navíc může sloužit jako odrazový můstek k řešení nestacionární rovnice {eq}`N` tak, že od stacionárního řešení postupujeme zpětně v čase.
 * Pokud je materiál z předchozího bodu ještě navíc izotropní, tj.  pokud má stejné vlastnosti ve všech směrech, je $D_x=D_y$ a rovnici je možno vydělit do tvaru $$ 0= \frac{\partial^2 u }{\partial x^2 } + \frac{\partial^2 u }{\partial y^2 } .$$ O této rovnici si ukážeme (v roce 2021 jsme si ukázali už na minulé přednášce) že zapojením druhých diferencí pro numerickou aproximaci druhé derivace (viz [přednáška číslo 2](https://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#kone%C4%8Dn%C3%A9-diference-a-numerick%C3%A1-aproximace-derivace)) se model redukuje na soustavu lineárních rovnic, jak jsme ji poněkud naivní metodou odvodili v [přednášce číslo 7](https://user.mendelu.cz/marik/mtk/mat-slidy/matice/#rozlo%C5%BEen%C3%AD-teploty-na-tepeln%C4%9B-vodiv%C3%A9-desce).
 
 ## Praktická aplikace (zajímavost z jiné oblasti než nauky o materiálu)
