@@ -39,10 +39,6 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
 
 .reseni {background-color:lightgray;}
 
-section {clear:both;}
-h2 {clear:both;}
-
-
 @media (min-width: 10px)
 {
 #main-content {
@@ -50,10 +46,10 @@ h2 {clear:both;}
 }
 }
 
-
 .cviceni p img {max-width:50%; float:right; padding-left:10px;}
 .cviceni h2 {clear:both;}
 .admonition {clear:both !important;}
+.obtekat {clear:both !important;}
 
 
 .WWotazka {

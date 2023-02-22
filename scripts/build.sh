@@ -40,8 +40,7 @@ sed -i 's/<p><img alt="\(.*\)" src="\(.*\)" \/><\/p>/<p><img src="\2" \/><figcap
 
 sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/*/slidy.html
 sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
-
-
+sed -i 's/<body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
 
 
 # Copy custom css file
