@@ -7,19 +7,19 @@ parts:
   - caption: Přednášky
     numbered: true
     chapters:
-    - file: derivace_I/slidy.md
-    - file: derivace_II/slidy.md
-    - file: derivace_III/slidy.md
-    - file: integraly/slidy.md
-    - file: integraly2/slidy.md
-    - file: ode/slidy.md
-    - file: matice/slidy.md
-    - file: inverzni_matice/slidy.md
-    - file: soustavy/slidy.md
-    - file: vektorove_pole/slidy.md
-    - file: dvojny_integral/slidy.md
-    - file: numerika/slidy.md
-    - file: shrnuti/slidy.md
+    - file: derivace_I/index.md
+    - file: derivace_II/index.md
+    - file: derivace_III/index.md
+    - file: integraly/index.md
+    - file: integraly2/index.md
+    - file: ode/index.md
+    - file: matice/index.md
+    - file: inverzni_matice/index.md
+    - file: soustavy/index.md
+    - file: vektorove_pole/index.md
+    - file: dvojny_integral/index.md
+    - file: numerika/index.md
+    - file: shrnuti/index.md
   - caption: Cvičení
     numbered: true
     chapters:
