@@ -50,8 +50,7 @@ Závislá proměnná|Derivace podle času|
 
 <div class='obtekat'>
 
-![Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability
- Zdroj: nzwood.co.nz](zaveseny_most.jpg)
+![Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability Zdroj: nzwood.co.nz](zaveseny_most.jpg)
 
 ![Schema poloviny mostu se silamu působícími na část lana.](5.png)
 
@@ -515,13 +514,9 @@ následující přednášce.
 
 <div class='obtekat'>
 
-![Celkovou sílu působící na jednu stěnu Mojžíšova mostu podle obrázku
- není možné určit středoškolským vzorcem, protože tlak není podél celé
- stěny konstantní, ale mění se s hloubkou. Zdroj:
- https://www.flickr.com/photos/huphtur](mojzisuv_most.jpg)
+![Celkovou sílu působící na jednu stěnu Mojžíšova mostu podle obrázku  není možné určit středoškolským vzorcem, protože tlak není podél celé  stěny konstantní, ale mění se s hloubkou. Zdroj:  https://www.flickr.com/photos/huphtur](mojzisuv_most.jpg)
 
-![Celkovou sílu působící na jednu stěnu mostu získáme jako součet sil
- na myšlené vodorovné pásy dělící tuto stěnu.](prehrada.png)
+![Celkovou sílu působící na jednu stěnu mostu získáme jako součet sil  na myšlené vodorovné pásy dělící tuto stěnu.](prehrada.png)
 
 </div>
 
@@ -617,10 +612,7 @@ trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost pr
 
 <div class='obtekat'>
 
-![Při posuzování stability rozhledny hraje moment setrvačnosti
-ústřední roli. Moment setrvačnosti rozhledny je možné získat součtem momentů
-setrvačnosti jednotlivých trámů. Rozhledna Bohdanka. Zdroj:
-http://tvstav.cz](bohdanka.jpg)
+![Při posuzování stability rozhledny hraje moment setrvačnosti ústřední roli. Moment setrvačnosti rozhledny je možné získat součtem momentů setrvačnosti jednotlivých trámů. Rozhledna Bohdanka. Zdroj: http://tvstav.cz](bohdanka.jpg)
 
 ![Tyč rotující okolo kolmé osy.](4.png)
 
@@ -664,8 +656,7 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
 <div class='obtekat'>
 
-![Provazochodec při přechodu přes Grand Canyon. Zdroj:
- cbsnews.com](wallenda.jpg)
+![Provazochodec při přechodu přes Grand Canyon. Zdroj:  cbsnews.com](wallenda.jpg)
 
 </div>
 

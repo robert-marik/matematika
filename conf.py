@@ -48,3 +48,4 @@ latex_elements = {
 html_js_files = [
     'custom.js',
 ]
+latex_table_style = ['booktabs','colorrows']

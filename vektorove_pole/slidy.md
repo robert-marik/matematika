@@ -392,8 +392,7 @@ https://youtu.be/_iHeE-9DJrA
 
 <div class='obtekat'>
 
-![Rovnice kontinuity je vlastně bilance zisků a ztrát pro danou
- stavovou veličinu v libovolném bodě. Zdroj: pixabay.com](ucto.jpg)
+![Rovnice kontinuity je vlastně bilance zisků a ztrát pro danou stavovou veličinu v libovolném bodě. Zdroj: pixabay.com](ucto.jpg)
 
 </div>
 

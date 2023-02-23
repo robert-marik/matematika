@@ -19,10 +19,12 @@ sed -z -i 's/\\sphinxAtStartPar\n\\textbackslash{}fi/\\fi/g' python.tex
 sed -z -i 's/\\sphinxAtStartPar\nhttps:\/\/youtu.be/%%% /g' python.tex
 
 sed -z -i s'/\\sphinxAtStartPar\n\\sphinxcode{\\sphinxupquote{ww2:/%/g' python.tex
+sed -z -i s'/\\sphinxAtStartPar\nmanim[^\n]*\n//g' python.tex
+sed -z -i s'/\\sphinxAtStartPar\n\\egroup/\\egroup/g' python.tex
 
 sed -i 's/\\part{Cvičení}/\\part{Cvičení}\\input cviceni_definice.tex/' python.tsed -i 's/\\part{Přednášky}/\\part{Přednášky}\\input prednasky_definice.tex/' python.tex
 
-sed -i 's/\\textbackslash{}/\\/' python.tex
+sed -i 's/\\textbackslash{}/\\/g' python.tex
 sed -i 's/\\dm */\\dm/' python.tex
 sed -i 's/\\begin{equation\*}/\\[/' python.tex
 sed -i 's/\\end{equation\*}/\\]/' python.tex

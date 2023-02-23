@@ -148,9 +148,7 @@ rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na
 
 <div class='obtekat'>
 
-![Vrcholek hory Chimborazo je místo nejvzdálenější od středu
- Země. Roli hraje nadmořská výška a zploštění Země. Gravitační
- zrychlení zde je nejmenší.  Zdroj: pixabay.com](chimborazo.jpg)
+![Vrcholek hory Chimborazo je místo nejvzdálenější od středu  Země. Roli hraje nadmořská výška a zploštění Země. Gravitační  zrychlení zde je nejmenší.  Zdroj: pixabay.com](chimborazo.jpg)
 
 </div>
 

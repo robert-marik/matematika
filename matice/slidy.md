@@ -463,11 +463,7 @@ ale pozor: někdy se místo zde představeného zápisu používá zápis s
 
 <div class='obtekat'>
 
-![Patrick Holt Leslie (1900-1972) roku 1945 publikoval v časopisu
-Biometrika On the use of matrices in certain population mathematics. V
-něm sestavil a analyzoval model růstu počtu samic v populaci potkanů
-(Rattus norvegicus); jeho model ovšem může být stejně dobře použit pro
-lidskou nebo jinou populaci. Zdroj: pixabay.com](potkan.jpg)
+![Patrick Holt Leslie (1900-1972) roku 1945 publikoval v časopisu Biometrika On the use of matrices in certain population mathematics. V něm sestavil a analyzoval model růstu počtu samic v populaci potkanů (Rattus norvegicus); jeho model ovšem může být stejně dobře použit pro lidskou nebo jinou populaci. Zdroj: pixabay.com](potkan.jpg)
 
 </div>
 

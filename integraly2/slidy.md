@@ -229,8 +229,7 @@ https://youtu.be/Z8wDZxap794
 
 <div class='obtekat'>
 
-![Visící řetěz. Při vytahování na střechu se zmenšuje síla, kterou je nutno překonávat.
- Zdroj: pixabay.com](chain.jpg)
+![Visící řetěz. Při vytahování na střechu se zmenšuje síla, kterou je nutno překonávat.  Zdroj: pixabay.com](chain.jpg)
 
 </div>
 
@@ -287,10 +286,7 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 <div class='obtekat'>
 
-![Mojžíšův most je z obou stran chráněný přehradou umožňující regulací
- výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku
- však není překvapení, že může být i zatopený. Zdroj:
- http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
+![Mojžíšův most je z obou stran chráněný přehradou umožňující regulací  výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku  však není překvapení, že může být i zatopený. Zdroj:  http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
 
 </div>
 
@@ -580,8 +576,7 @@ dispozici analytické vyjádření této funkce.
 
 <div class='obtekat'>
 
-![Součin se na součet mění například u logaritmického pravítka.
- Zdroj: pixabay.com](slide-rule.jpg)
+![Součin se na součet mění například u logaritmického pravítka.  Zdroj: pixabay.com](slide-rule.jpg)
 
 </div>
 

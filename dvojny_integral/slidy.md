@@ -18,9 +18,7 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 
 <div class='obtekat'>
 
-![Deska s nekonstantní plošnou hustotou,
- https://www.flickr.com/photos/svacher, licence CC BY-NC-ND
- 2.0](table.jpg)
+![Deska s nekonstantní plošnou hustotou,  https://www.flickr.com/photos/svacher, licence CC BY-NC-ND  2.0](table.jpg)
 
 </div>
 
@@ -62,8 +60,7 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 
 <div class='obtekat'>
 
-![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji
- než ve středu, potrubí na Aljašce, https://www.pixabay.com](pipe.jpg)
+![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji než ve středu, potrubí na Aljašce, https://www.pixabay.com](pipe.jpg)
 
 </div>
 
@@ -108,7 +105,6 @@ $$ \iint_\Omega f(x,y)\mathrm{d}A$$
 nebo 
 $$ \iint_\Omega f(x,y)\mathrm{d}S.$$ 
 
-\def\maxfactor{0.3}
 
 \iffalse
 
