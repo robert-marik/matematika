@@ -1,5 +1,9 @@
 # Shrnutí za předmět Matematika
 
+(Tato kapitola není k dispozici v PDF formátu.)
+
+\iffalse
+
 Stránka obsahuje dva způsoby shrnutí. Jednak z hlediska aplikací a jednak z hlediska matematického aparátu.
 
 <style>
@@ -634,3 +638,4 @@ Udává přímo návod, jaká transformace převede fyzikální zákon vyjádře
 pomocí maticového násobení do co nejjednoduššího tvaru.
 -->
 
+\fi

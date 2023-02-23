@@ -12,7 +12,7 @@ opačném.
 
 ```{prf:definition} Parita funkce
 :nonumber:
-   Nechť funkce $f$ splňuje následující podmínku:   $x\in\mathrm{Dom}(x)\implies (-x)\in\mathrm{Dom}(f)$.
+   Nechť je pro funkci $f$ a libovolný bod $x$ definičního oboru definována kromě $f(x)$ i hodnota $f(-x)$.
 
 * Řekneme, že funkce $f$ je *sudá*
 pokud platí $f(-x)=f(x)$.

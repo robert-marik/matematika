@@ -73,7 +73,11 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 
 ## Růst ryby
 
+\iffalse 
+
 ![wikimedia.org](ryba.png)
+
+\fi
 
 Biologové navrhli funkci
 $$
@@ -102,7 +106,11 @@ Zadaná funkce vyjadřující závislost délky na čase je polynom. Použitím 
 
 ## Bazální metabolismus
 
+\iffalse
+
 ![pixabay.com](kolibrik.jpg)
+
+\fi
 
 Bazální metabolismus $M$ (ve wattech) souvisí s hmotností $W$ vztahem
 $$M=AW^n,$$ kde $n$ je pro mnoho živočišných druhů blízké číslu $0.75$ a
@@ -121,7 +129,12 @@ Pro výpočet si stačí uvědomit, že funkce je konstantním násobkem mocninn
 
 ## Mezní náklady (marginal cost)
 
+\iffalse 
+
+
 ![wikimedia.org](airbus.jpg)
+
+\fi
 
 Náklady na produkci $x$ letadel za rok jsou (v milionech
 Euro) dány funkcí
@@ -150,7 +163,11 @@ $$C'(x)=\frac{2}{\sqrt{4x+4}}.$$ Ve druhém případě máme zlomek s konstantn�
 
 ## Vzdálenost k horizontu
 
+\iffalse 
+
 ![pixabay.com](horizont.jpg)
+
+\fi 
 
 Vzdálenost k horizontu pro pozorovatele ve výšce $h$ nad Zemí je dána funkcí $H=\sqrt {2Rh},$ kde $R=6.371\times 10^6\,\mathrm m$ je poloměr Země ([viz zde](https://aty.sdsu.edu/explain/atmos_refr/horizon.html)). Po dosazení a vydělení faktorem 1000, aby $H$ vycházelo v kilometrech, dostáváme vzorec $$H=3.57\sqrt{h},$$ kde $h$ je v metrech a $H$ v kilometrech. Určete hodnotu této derivace $\frac{\mathrm d H}{\mathrm dh}$ pro $h=5\,\mathrm{m}$ (včetně jednotky) a slovní interpretaci této derivace.
 
@@ -170,7 +187,11 @@ $$\frac{\mathrm dH}{\mathrm dh}(5)=0.7983 \times \frac {1000\, \mathrm{m}}{\math
 
 ## Rychlost s jakou roste obsah kruhu
 
+\iffalse 
+
 ![J. Kameníček, brnensky.denik.cz](vate_pisky.jpg)
+
+\fi
 
 Váté písky je bezlesý
 pruh podél železniční trati nedaleko Bzence, kde je extrémní sucho
@@ -202,7 +223,11 @@ $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathr
 
 ## Sůl nad zlato
 
+\iffalse 
+
 ![Že je u koule objem úměrný třetí mocnině poloměru vidíme přímo ze vzorce. Nejinak to je u těles, které si zachovávají proporce, tj. vzniknou zvětšením či zmenšením z jediného vzoru. Typickým příkladem je kromě koule i kužel s pevně zadaným vrcholovým úhlem. Tento tvar zachovávají volně sypané materiály. Obrázek: pixabay.com](kopec_soli.jpg)
+
+\fi 
 
 V pohádce _Sůl nad zlato_ sype Maruška z bezedné slánky sůl na hromadu soli ve tvaru kužele, který roste tak, že objem je v každém okamžiku svázán s výškou vzorcem $$V=\frac 14h^3.$$ Výška je $0.5$ metru a vydatnost solničky $10$ litrů (tj. $0.01$ krychlových metrů) soli za minutu. Určete, jak rychle roste hromada soli do výšky.
 
@@ -223,10 +248,14 @@ Hromada roste do výšky rychlostí 5.3 centimetru za minutu.
 <a href="https://sagecell.sagemath.org/?z=eJx9kk2P0zAQhu-R8h9Gu4dNUFRaAUff9sANxKEHqoLceLp2k9iV7RjFvx7HH0u3AnLKfD3zzowtcVQ3T_aphbvvEb5qNaGUFGwHPTV1xcl5lr0VSjYP_KGTVL8Ysmtj8n4xA4ULHRSEpKFHuCCTCNcEwbra31Tv76q_nC44_bdaKydFj2Tf2JaQ3fuP8A4aHoz2x4ci-FvKgQm9ABWRFFwQpuZb9iTWcea6Mlz9albgX4b_rk6aejFFDTAoabUaZ_CUUbmA80pjH0Nrm7qqq0f4rJhUdolepgz1KEX4gSy9roqTHHicYrv5tO2YOJ-jiC65trtjVlbS24R_Ri0cDeNlHlwVGzGPwnKQRFzOCMSCyuGM2i8azaquoJznI7KwrwFyqgD-pkEqIEaNDl9x3SG240n98R_0DrJ9mhmCQS_p1IFHGCxq5Aqm2ayLDpfCEQerHLWwgq6aunA6YzWVc7DcjWJfSHMXOUt4MbnPlIdOVhDF-E9mSTIP2-NGc9O8bmaNlQ2HhbNVSThaGTFdHIGn44ZFLD0flbEkVm7MfDL3l_rzdpy3lKf3WOomUeRlR_sb5Qknag==&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a> (v tomto jednoduchém případě spíše jako ukázka zápisu, než jako nástroj pro urychlení výpočtu)
 
 ```
-
+	
 ## Rychlost s jakou roste obsah kruhu II
 
+\iffalse 
+
 ![http://mp.mestokyjov.cz/](kyjov.jpg)
+
+\fi
 
 Město má přibližně tvar kruhu o poloměru $10\,\mathrm{km}$ a žije v něm $300\,000$ obyvatel. Jak rychle musí růst poloměr kruhu (velikost
 města), pokud počet obyvatel roste rychlostí $10\,000$ obyvatel za rok
