@@ -27,7 +27,9 @@ sudá nebo lichá.
 
 <div class='obtekat'>
 
-![Tepelná modifikace dřeva ve VCJR Útěchov. Úloha je symetrická, teplo prostupuje do dřeva stejným způsobem shora jako zespoda. Díky tomu je složitost úlohy poloviční. Zdroj: J. Dömény.](teplotni_modifikace.jpg)
+```{figure} teplotni_modifikace.jpg
+Tepelná modifikace dřeva ve VCJR Útěchov. Úloha je symetrická, teplo prostupuje do dřeva stejným způsobem shora jako zespoda. Díky tomu je složitost úlohy poloviční. Zdroj: J. Dömény.
+```
 
 </div>
 
@@ -71,11 +73,17 @@ $\cosh x$, a hyperbolický sinus, $\sinh x$.
 
 <div class='obtekat'>
 
-![Tříbodový ohyb nosníku. Sleduje se veličina symetricky rozložená vzhledem ke středu (napětí ve směru nosníku).](nosnik_3bodovy.png)
+```{figure} nosnik_3bodovy.png
+Tříbodový ohyb nosníku. Sleduje se veličina symetricky rozložená vzhledem ke středu (napětí ve směru nosníku).
+```
 
-![Tříbodový ohyb nosníku s využitím symetrie. Počítá se jenom čtvrtina tělesa.](nosnik_ctvrtina.png)
+```{figure} nosnik_ctvrtina.png
+Tříbodový ohyb nosníku s využitím symetrie. Počítá se jenom čtvrtina tělesa.
+```
 
-![Tříbodový ohyb nosníku. Sledovaná veličina (smykové napětí v rovnině boční stěny) je symetrická, ale vlevo i vpravo se liší znaménkem.](beam_smyk.png)
+```{figure} beam_smyk.png
+Tříbodový ohyb nosníku. Sledovaná veličina (smykové napětí v rovnině boční stěny) je symetrická, ale vlevo i vpravo se liší znaménkem.
+```
 
 </div>
 
@@ -97,7 +105,9 @@ https://youtu.be/E1XxOQDtto0
 
 <div class='obtekat'>
 
-![Znalost minima potenciální energie je často zásadní pro nalezení stabilní konfigurace systému. Od molekul po soustavy těles. Musíme mít univerzální postup, jak tato minima hledat.](taylor.png)
+```{figure} taylor.png
+Znalost minima potenciální energie je často zásadní pro nalezení stabilní konfigurace systému. Od molekul po soustavy těles. Musíme mít univerzální postup, jak tato minima hledat.
+```
 
 </div>
 
@@ -141,11 +151,17 @@ Předchozí věta představuje *nutnou podmínku* pro lokální extrém. V bodě
 
 <div class='obtekat'>
 
-![Ukázka zpracování kulatiny na trám ve VCJR v Útěchově. Zdroj: J. Dömény.](vyrezavani_tramu.jpg)
+```{figure} vyrezavani_tramu.jpg
+Ukázka zpracování kulatiny na trám ve VCJR v Útěchově. Zdroj: J. Dömény.
+```
 
-![Ukázka zpracování kulatiny na trám sekerou. Zdroj: https://www.bladeforums.com](hewing.jpg)
+```{figure} hewing.jpg
+Ukázka zpracování kulatiny na trám sekerou. Zdroj: https://www.bladeforums.com
+```
 
-![K problému vyřezání co nejtužšího nosníku. Budeme předpokládat krásný kmen, dokonalý válec bez vad, které by nás limitovaly při plánování, jak má výsledný trám vypadat.](nosnik.png)
+```{figure} nosnik.png
+K problému vyřezání co nejtužšího nosníku. Budeme předpokládat krásný kmen, dokonalý válec bez vad, které by nás limitovaly při plánování, jak má výsledný trám vypadat.
+```
 
 </div>
 
@@ -213,7 +229,9 @@ kladnou derivaci a intervalů, kde má funkce zápornou derivaci.
 
 <div class='obtekat'>
 
-![Bolzanova věta je jedna z těch, které člověka nepřekvapí. Pokud se má funkce spojitě přehoupnout z jedné strany osy na druhou, musí tuto osu někde protnout.](bolzano.png)
+```{figure} bolzano.png
+Bolzanova věta je jedna z těch, které člověka nepřekvapí. Pokud se má funkce spojitě přehoupnout z jedné strany osy na druhou, musí tuto osu někde protnout.
+```
 
 </div>
 
@@ -267,7 +285,9 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 <div class='obtekat'>
 
-![Na rozdíl od tepelné izolace rovné stěny, u trubek neplatí za každé situace že více izolace vede k menším ztrátám. Zdroj: pixabay.com](kotelna_trubky.jpg)
+```{figure} kotelna_trubky.jpg
+Na rozdíl od tepelné izolace rovné stěny, u trubek neplatí za každé situace že více izolace vede k menším ztrátám. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -324,7 +344,9 @@ přidávání další izolace paradoxně zvyšuje tepelné ztráty. Nazývá se 
 
 <div class='obtekat'>
 
-![Elektrikáři vidí problém tepla poněkud jinak, než topenáři. Potřebují se tepla naopak zbavovat. Zdroj: pixabay.com](izolovane_draty.jpg)
+```{figure} izolovane_draty.jpg
+Elektrikáři vidí problém tepla poněkud jinak, než topenáři. Potřebují se tepla naopak zbavovat. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -389,7 +411,9 @@ https://youtu.be/C4_3IbbLpiI
 
 <div class='obtekat'>
 
-![Nejslavnější aplikace rozměrové analýzy a Buckinghamova $\Pi$-teorému je odhad energie atomové bomby Trinity. Energie (20kt TNT) byla přísně tajná, ale pomocí rozměrové analýzy a veřejně publikované fotky v časopise Life ji G. I. Taylor odhadl na 22kt TNT bez složitých výpočtů. Zdroj: http://chalkdustmagazine.com/features/the-buckingham-pi-theorem-and-the-atomic-bomb/](trinity.jpg)
+```{figure} trinity.jpg
+Nejslavnější aplikace rozměrové analýzy a Buckinghamova $\Pi$-teorému je odhad energie atomové bomby Trinity. Energie (20kt TNT) byla přísně tajná, ale pomocí rozměrové analýzy a veřejně publikované fotky v časopise Life ji G. I. Taylor odhadl na 22kt TNT bez složitých výpočtů. Zdroj: http://chalkdustmagazine.com/features/the-buckingham-pi-theorem-and-the-atomic-bomb/
+```
 
 </div>
 
@@ -457,9 +481,13 @@ alternativní postup nemáme k dispozici.
 
 <div class='obtekat'>
 
-![Vánoční strom pro Prahu v prosinci 2019. Ořezání průměru kmene na polovinu sníží tuhost kmene cca 16-krát (za předpokladu homogenity, ve skutečnosti je to ještě výraznější). Vánoční strom v Praze proto musí držet ocelová lana. Zdroj: Pražský deník](strom_praha_2019.jpg)
+```{figure} strom_praha_2019.jpg
+Vánoční strom pro Prahu v prosinci 2019. Ořezání průměru kmene na polovinu sníží tuhost kmene cca 16-krát (za předpokladu homogenity, ve skutečnosti je to ještě výraznější). Vánoční strom v Praze proto musí držet ocelová lana. Zdroj: Pražský deník
+```
 
-![Nosníky obdélníkového průřezu. Trojnásobný nosník má devětkrát vetší tuhost než nosníky tři. Slepením tří nosníků k sobě zvýšíme tuhost devětkrát ve srovnání s případem, kdy bychom je na sebe volně položili.](nosniky_unod.jpg)
+```{figure} nosniky_unod.jpg
+Nosníky obdélníkového průřezu. Trojnásobný nosník má devětkrát vetší tuhost než nosníky tři. Slepením tří nosníků k sobě zvýšíme tuhost devětkrát ve srovnání s případem, kdy bychom je na sebe volně položili.
+```
 
 </div>
 
@@ -542,7 +570,9 @@ začneme věnovat na další přednášce.
 
 <div class='obtekat'>
 
-![Působením síly se element materiálu může posunout, rotovat, deformovat. Tuto změnu potřebujeme zachytit. Zdroj: https://physics.stackexchange.com/questions/311716/geometric-derivation-of-the-infinitesimal-strain-tensor/311744](deformace.png)
+```{figure} deformace.png
+Působením síly se element materiálu může posunout, rotovat, deformovat. Tuto změnu potřebujeme zachytit. Zdroj: https://physics.stackexchange.com/questions/311716/geometric-derivation-of-the-infinitesimal-strain-tensor/311744
+```
 
 </div>
 
@@ -600,7 +630,9 @@ malých deformací.
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

@@ -18,7 +18,9 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 
 <div class='obtekat'>
 
-![Deska s nekonstantní plošnou hustotou,  https://www.flickr.com/photos/svacher, licence CC BY-NC-ND  2.0](table.jpg)
+```{figure} table.jpg
+Deska s nekonstantní plošnou hustotou,  https://www.flickr.com/photos/svacher, licence CC BY-NC-ND  2.0
+```
 
 </div>
 
@@ -40,7 +42,9 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 
 <div class='obtekat'>
 
-![Nádrž s proměnnou hloubkou, https://www.pixabay.com](lake.jpg)
+```{figure} lake.jpg
+Nádrž s proměnnou hloubkou, https://www.pixabay.com
+```
 
 </div>
 
@@ -60,7 +64,9 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 
 <div class='obtekat'>
 
-![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji než ve středu, potrubí na Aljašce, https://www.pixabay.com](pipe.jpg)
+```{figure} pipe.jpg
+Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji než ve středu, potrubí na Aljašce, https://www.pixabay.com
+```
 
 </div>
 
@@ -108,7 +114,9 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 
 \iffalse
 
-![](dvojny_integral.png)
+```{figure} dvojny_integral.png
+
+```
 
 \fi
 
@@ -140,7 +148,9 @@ konstantou. Přesněji, platí následující věty.
 
 <div class='obtekat'>
 
-![Oblast mezi funkcemi proměnné $x$.](fub_1.png)
+```{figure} fub_1.png
+Oblast mezi funkcemi proměnné $x$.
+```
 
 </div>
 
@@ -167,7 +177,9 @@ $$
 ### Výpočet pro oblast mezi funkcemi proměnné $y$
 
 <div class='obtekat'>
-![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
+```{figure} fub_2.png
+Oblast mezi funkcemi proměnné $y$.
+```
 
 </div>
 
@@ -190,7 +202,9 @@ $$
 
 <div class='obtekat'>
 
-![Oblast, pro kterou jsou možná obě pořadí integrace.](fub_4.png)
+```{figure} fub_4.png
+Oblast, pro kterou jsou možná obě pořadí integrace.
+```
 
 </div>
 
@@ -225,7 +239,9 @@ snazší.
 ### Výpočet pro obdélníkovou oblast
 
 <div class='obtekat'>
-![Integrál přes obdélník.](fub_3.png)
+```{figure} fub_3.png
+Integrál přes obdélník.
+```
 
 </div>
 
@@ -268,7 +284,9 @@ $$
 
 <div class='obtekat'>
 
-![Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic.](fuji.jpg)
+```{figure} fuji.jpg
+Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic.
+```
 
 </div>
 
@@ -307,7 +325,9 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 <div class='obtekat'>
 
-![Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR [realizována 2011](https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico). Zdroj: https://www.taus.eu](I-nosniky.jpg)
+```{figure} I-nosniky.jpg
+Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR [realizována 2011](https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico). Zdroj: https://www.taus.eu
+```
 
 </div>
 
@@ -339,9 +359,13 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 <div class='obtekat'>
 
-![Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com](beam.jpg)
+```{figure} beam.jpg
+Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com
+```
 
-![Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník](vanocni_strom.jpg)
+```{figure} vanocni_strom.jpg
+Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník
+```
 
 </div>
 
@@ -462,7 +486,9 @@ v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k
 
 <div class='obtekat'>
 
-![Bobři v ZOO v Brně jsou za skleněnou stěnou obdélníkového tvaru.](bobri.jpeg)
+```{figure} bobri.jpeg
+Bobři v ZOO v Brně jsou za skleněnou stěnou obdélníkového tvaru.
+```
 
 </div>
 
@@ -573,7 +599,9 @@ $y$-ové polohy těžiště $y_0$.
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

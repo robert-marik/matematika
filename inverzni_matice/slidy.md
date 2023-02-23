@@ -46,7 +46,9 @@ Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních ma
 
 <div class='obtekat'>
 
-![Klasickým permutačním hlavolamem je Rubikova kostka. Na něm si můžeme vyzkoušet některé vlastnosti maticového součinu jako nekomutativita nebo nutnost změny pořadí při invertování maticového součinu. Zdroj: congerdesign, pixabay.com.](rubik.jpg)
+```{figure} rubik.jpg
+Klasickým permutačním hlavolamem je Rubikova kostka. Na něm si můžeme vyzkoušet některé vlastnosti maticového součinu jako nekomutativita nebo nutnost změny pořadí při invertování maticového součinu. Zdroj: congerdesign, pixabay.com.
+```
 
 </div>
 
@@ -91,7 +93,9 @@ manimp:MatrixMultiplication|Pomocí maticového násobení můžeme snadno přec
 
 <div class='obtekat'>
 
-![Matice rotace a maticové násobení umožňuje vyjáření souřadnic v různých vzájemně pootočených souřadných soustavách.](souradnice.png)
+```{figure} souradnice.png
+Matice rotace a maticové násobení umožňuje vyjáření souřadnic v různých vzájemně pootočených souřadných soustavách.
+```
 
 </div>
 
@@ -198,11 +202,17 @@ https://youtu.be/7Oi3ruVNUzI
 
 <div class='obtekat'>
 
-![Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: A. Požgaj a kol., Štruktúra a vlastnosti drevá. ](pozgaj.jpg)
+```{figure} pozgaj.jpg
+Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: A. Požgaj a kol., Štruktúra a vlastnosti drevá. 
+```
 
-![Stejná úloha jako výše (leta ve dřevě jdou pod úhlem 30 stupňů a transformujeme do tohoto směru) méně inženýrským přístupem.](kytara_leta.png)
+```{figure} kytara_leta.png
+Stejná úloha jako výše (leta ve dřevě jdou pod úhlem 30 stupňů a transformujeme do tohoto směru) méně inženýrským přístupem.
+```
 
-![U šikmého lepeného spoje se používá transformace do roviny spoje k posouzení únosnosti tohoto spoje. Lepidlo má definovanou pevnost spoje při normálovém a smykovém namáhání a transformace nám prozradí, jak se předpokládané namáhání projeví v těchto směrech a zda lepidlo spoj udrží.](spoj_drevo_sikmy.jpg)
+```{figure} spoj_drevo_sikmy.jpg
+U šikmého lepeného spoje se používá transformace do roviny spoje k posouzení únosnosti tohoto spoje. Lepidlo má definovanou pevnost spoje při normálovém a smykovém namáhání a transformace nám prozradí, jak se předpokládané namáhání projeví v těchto směrech a zda lepidlo spoj udrží.
+```
 
 </div>
 
@@ -228,7 +238,9 @@ Stejný výpočet používáme, pokud se snažíme transformovat působící nap
 
 <div class='obtekat'>
 
-![Schopnost transformovat tenzory napětí nebo deformace  je důležitá u studia vrstvených materiálů. Ty umožní anizotropii potlačit (překližka) nebo zvýraznit (lyže, luk). Někdy vrstvíme jen tak, pro krásu. Na obrázku Jatawood, pro výrobu rukojetí nožů. Zdroj: jatagan.eu](jatawood.jpg)
+```{figure} jatawood.jpg
+Schopnost transformovat tenzory napětí nebo deformace  je důležitá u studia vrstvených materiálů. Ty umožní anizotropii potlačit (překližka) nebo zvýraznit (lyže, luk). Někdy vrstvíme jen tak, pro krásu. Na obrázku Jatawood, pro výrobu rukojetí nožů. Zdroj: jatagan.eu
+```
 
 </div>
 
@@ -298,7 +310,9 @@ https://youtu.be/yqjaeqQu0bE
 
 <div class='obtekat'>
 
-![Eigenvectors (red) do not change direction when a linear transformation (e.g. scaling) is applied to them. Other vectors (yellow) do. Zdroj: http://www.visiondummy.com. ](eigenvectors.png)
+```{figure} eigenvectors.png
+Eigenvectors (red) do not change direction when a linear transformation (e.g. scaling) is applied to them. Other vectors (yellow) do. Zdroj: http://www.visiondummy.com. 
+```
 
 </div>
 
@@ -348,7 +362,9 @@ Nechť má symetrická čtvercová matice $A$ řádu $n$ celkem $n$ reálných r
 
 <div class='obtekat'>
 
-![Pokud je tenzor spojený s materiálovou charakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležitostech, například při skládání Rubikovy kostky pomocí metody [Human Thistlethwaite Algorithm](https://www.speedsolving.com/wiki/index.php/Human_Thistlethwaite_Algorithm). V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé).](rubik.svg)
+```{figure} rubik.svg
+Pokud je tenzor spojený s materiálovou charakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležitostech, například při skládání Rubikovy kostky pomocí metody [Human Thistlethwaite Algorithm](https://www.speedsolving.com/wiki/index.php/Human_Thistlethwaite_Algorithm). V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé).
+```
 
 </div>
 
@@ -579,7 +595,9 @@ $$\begin{pmatrix}
 
 <div class='obtekat'>
 
-![Složky tenzoru napětí charakterizují sílu způsobující deformaci. Zdroj: Wikiepdie.](napeti.png)
+```{figure} napeti.png
+Složky tenzoru napětí charakterizují sílu způsobující deformaci. Zdroj: Wikiepdie.
+```
 
 </div>
 
@@ -605,7 +623,9 @@ $$ \begin{pmatrix}\varepsilon_{11}\\\varepsilon_{22}\\\varepsilon_{33}\\\varepsi
 
 <div class='obtekat'>
 
-![Ortotropie dřeva. Zdroj: researchgate.net, Mathew Legg.](wood.jpg)
+```{figure} wood.jpg
+Ortotropie dřeva. Zdroj: researchgate.net, Mathew Legg.
+```
 
 </div>
 
@@ -672,7 +692,9 @@ vlastním číslem $\frac 1\lambda.$
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

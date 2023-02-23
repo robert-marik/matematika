@@ -12,9 +12,13 @@ https://youtu.be/gU6ClJwLFs0
 
 <div class='obtekat'>
 
-![Planeta Neptun. Její existence byla matematicky předpovězena na základě jinak nevysvětlitelných poruch v dráze planety Uran. Ještě týž den byl Neptun nalezen na obloze a následující den bylo potvrzeno, že se jedná o planetu. www.publicdomainpictures.net](planet-neptune.jpg)
+```{figure} planet-neptune.jpg
+Planeta Neptun. Její existence byla matematicky předpovězena na základě jinak nevysvětlitelných poruch v dráze planety Uran. Ještě týž den byl Neptun nalezen na obloze a následující den bylo potvrzeno, že se jedná o planetu. www.publicdomainpictures.net
+```
 
-![Analogové počítače využívaly toho, že různé děje mohou být popisovány stejnými diferenciálními rovnicemi. V SSSR se používaly do 80-tých let vzhledem k nedostatku polovodičů a politické definici kybernetiky jako buržoazní pavědy. https://un-sci.com/ru/2020/01/10/vodyanoj-kompyuter-gidrointegrator-lukyanova/](vodyanoj-kompyuterfoto7.webp)
+```{figure} vodyanoj-kompyuterfoto7.webp
+Analogové počítače využívaly toho, že různé děje mohou být popisovány stejnými diferenciálními rovnicemi. V SSSR se používaly do 80-tých let vzhledem k nedostatku polovodičů a politické definici kybernetiky jako buržoazní pavědy. https://un-sci.com/ru/2020/01/10/vodyanoj-kompyuter-gidrointegrator-lukyanova/
+```
 
 </div>
 
@@ -169,7 +173,9 @@ https://youtu.be/UaSCLmV_g4o
 
 <div class='obtekat'>
 
-![Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot, https://pixabay.com](hot.jpg)
+```{figure} hot.jpg
+Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot, https://pixabay.com
+```
 
 </div>
 
@@ -201,7 +207,9 @@ https://youtu.be/UaSCLmV_g4o
 
 <div class='obtekat'>
 
-![Rovnice konstantního růstu nebo úbytku je základem datování pomocí uhlíku, https://www.flickr.com/photos/capturetheuncapturable, licence CC BY 2.0](archeology.jpg)
+```{figure} archeology.jpg
+Rovnice konstantního růstu nebo úbytku je základem datování pomocí uhlíku, https://www.flickr.com/photos/capturetheuncapturable, licence CC BY 2.0
+```
 
 </div>
 
@@ -240,7 +248,9 @@ https://youtu.be/UaSCLmV_g4o
 
 <div class='obtekat'>
 
-![Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,  se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot je úměrná míře znečištění.  https://pixabay.com](voda.jpg)
+```{figure} voda.jpg
+Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,  se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot je úměrná míře znečištění.  https://pixabay.com
+```
 
 </div>
 
@@ -283,7 +293,9 @@ https://youtu.be/UaSCLmV_g4o
 
 <div class='obtekat'>
 
-![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: https://pixabay.com](chirurg.jpg)
+```{figure} chirurg.jpg
+Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: https://pixabay.com
+```
 
 </div>
 
@@ -326,9 +338,13 @@ https://youtu.be/UaSCLmV_g4o
 
 <div class='obtekat'>
 
-![RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$  Zdroj: Wikipedia](RC_circuit.png)
+```{figure} RC_circuit.png
+RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$  Zdroj: Wikipedia
+```
 
-![Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby.   Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term Wood Moisture Monitoring Based on Electrical Methods (2019)](RC_circuit_drevostavba.jpg)
+```{figure} RC_circuit_drevostavba.jpg
+Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby.   Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term Wood Moisture Monitoring Based on Electrical Methods (2019)
+```
 
 </div>
 
@@ -350,7 +366,9 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 <div class='obtekat'>
 
-![Při intenzivním lovu může dojít ke zničení populace https://pixabay.com](kralik.jpg)
+```{figure} kralik.jpg
+Při intenzivním lovu může dojít ke zničení populace https://pixabay.com
+```
 
 </div>
 
@@ -381,7 +399,9 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 <div class='obtekat'>
 
-![Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/](benesov.jpeg)
+```{figure} benesov.jpeg
+Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/
+```
 
 </div>
 
@@ -434,9 +454,13 @@ neprotínají*.
 
 <div class='obtekat'>
 
-![Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.](euler.png)
+```{figure} euler.png
+Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.
+```
 
-![Metoda Runge Kutta s velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.](rk.png)
+```{figure} rk.png
+Metoda Runge Kutta s velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.
+```
 
 </div>
 
@@ -486,11 +510,17 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 <div class='obtekat'>
 
-![Letecký snímek údolí Vajont krátce po katastrofě. [Video](https://youtu.be/BK5uwnVCeCw?t=2185) ukazuje, že při modelování procesu ve zmenšeném měřítku je nutné transformovat ostatní veličiny, například čas. Pro nás klíčová slova v čase 37:06 dokumentu jsou "tým techniků odhaduje nejvyšší možnou reálnou rychlost sesuvu půdy na jednu minutu, kterou pro simulaci přepočítají na čtyři sekundy". Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v reálném ději. Foto: Wikipedia.](Vajont.jpg)
+```{figure} Vajont.jpg
+Letecký snímek údolí Vajont krátce po katastrofě. [Video](https://youtu.be/BK5uwnVCeCw?t=2185) ukazuje, že při modelování procesu ve zmenšeném měřítku je nutné transformovat ostatní veličiny, například čas. Pro nás klíčová slova v čase 37:06 dokumentu jsou "tým techniků odhaduje nejvyšší možnou reálnou rychlost sesuvu půdy na jednu minutu, kterou pro simulaci přepočítají na čtyři sekundy". Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v reálném ději. Foto: Wikipedia.
+```
 
-![Model přehrady v údolí Vajont. Byl zdařilý, ale jeho použití s nesprávnými vstupními daty (podcenění odhadu rychlosti sesuvu hory) vedlo k tomu, že závěry nebyly relevantní. Vpravo tři postavy sledující pokus pomůžou s odhadem rozměrů. Zdroj: záběr z dokumentu Tsunami v horách a z filmu Vajont - šílenství mužů.](vajont_model.png)
+```{figure} vajont_model.png
+Model přehrady v údolí Vajont. Byl zdařilý, ale jeho použití s nesprávnými vstupními daty (podcenění odhadu rychlosti sesuvu hory) vedlo k tomu, že závěry nebyly relevantní. Vpravo tři postavy sledující pokus pomůžou s odhadem rozměrů. Zdroj: záběr z dokumentu Tsunami v horách a z filmu Vajont - šílenství mužů.
+```
 
-![Model [Janáčkovy koncertní síně](https://www.irozhlas.cz/kultura/desetkrat-mensi-akusticky-dokonaly-model-janackovo-centrum_2107300010_btk) pro Brno. Desetkrát menší a proto s desetkrát většími frekvencemi. Zdroj: Tomáš Kemr, Český rozhlas.](janackova_sin.jpg)
+```{figure} janackova_sin.jpg
+Model [Janáčkovy koncertní síně](https://www.irozhlas.cz/kultura/desetkrat-mensi-akusticky-dokonaly-model-janackovo-centrum_2107300010_btk) pro Brno. Desetkrát menší a proto s desetkrát většími frekvencemi. Zdroj: Tomáš Kemr, Český rozhlas.
+```
 
 </div>
 
@@ -580,7 +610,9 @@ $$\frac{\mathrm dX}{\mathrm dT}=X\left(1-X\right)-H.$$ Jinými slovy, chování 
 
 <div class='obtekat'>
 
-![Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.](patriot.jpg)
+```{figure} patriot.jpg
+Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.
+```
 
 </div>
 
@@ -733,7 +765,9 @@ manim:Logistic|NyLkjOTYzVQ|U logistické rovnice s lovem dochází v závislosti
 
 <div class='obtekat'>
 
-![Funkce z pravé strany rovnice pro teplotní bilanci Země](img_earth_balance_2.png)
+```{figure} img_earth_balance_2.png
+Funkce z pravé strany rovnice pro teplotní bilanci Země
+```
 
 </div>
 
@@ -760,7 +794,9 @@ $$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\t
 
 <div class='obtekat'>
 
-![Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.](trolejbus.jpg)
+```{figure} trolejbus.jpg
+Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.
+```
 
 </div>
 
@@ -872,7 +908,9 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 
 <div class='obtekat'>
 
-![Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.](london.jpg)
+```{figure} london.jpg
+Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.
+```
 
 </div>
 
@@ -926,7 +964,9 @@ https://youtu.be/ahkeA6fopaQ
 
 <div class='obtekat'>
 
-![Téměř veškerá klasická mechanika a dynamika pohybů se redukuje na studium diferenciálních rovnic druhého řádu. Ve vesmíru i na Zemi. Zdroj: pixabay.com.](satelit.jpg)
+```{figure} satelit.jpg
+Téměř veškerá klasická mechanika a dynamika pohybů se redukuje na studium diferenciálních rovnic druhého řádu. Ve vesmíru i na Zemi. Zdroj: pixabay.com.
+```
 
 </div>
 
@@ -988,7 +1028,9 @@ Využijeme tuto informaci k ukázce použití na příkladu nosníku s kombinova
 
 <div class='obtekat'>
 
-![Příhradový nosník. Vzpěry jsou namáhány v ose. Teorii vybudoval v 18. století L. Euler, ale začala se dále rozvíjet a využívat až po [sérii pádů](https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures) příhradových železničních mostů v 19. století. Zdroj: www.ceskestavby.cz.](nosnik.jpg)
+```{figure} nosnik.jpg
+Příhradový nosník. Vzpěry jsou namáhány v ose. Teorii vybudoval v 18. století L. Euler, ale začala se dále rozvíjet a využívat až po [sérii pádů](https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures) příhradových železničních mostů v 19. století. Zdroj: www.ceskestavby.cz.
+```
 
 </div>
 
@@ -1027,7 +1069,9 @@ též A. Požgaj, Štruktúra a vlastnosti dreva str. 359.
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

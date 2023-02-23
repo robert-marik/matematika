@@ -16,7 +16,9 @@ h2 {clear:both;}
 
 <div class='obtekat'>
 
-![Tříbodový ohyb dřevěného nosníku. Barevně je znáronběno napětí podél nosníku, tj. v podélném směru dřeva. Jdou vidět části s tlakovým a tahovým namáháním v tomto směru. Výstup z programu ANSYS, autor modelu J. Milch, LDF MENDELU.](beam.png)
+```{figure} beam.png
+Tříbodový ohyb dřevěného nosníku. Barevně je znáronběno napětí podél nosníku, tj. v podélném směru dřeva. Jdou vidět části s tlakovým a tahovým namáháním v tomto směru. Výstup z programu ANSYS, autor modelu J. Milch, LDF MENDELU.
+```
 
 </div>
 
@@ -32,7 +34,9 @@ Napětí $\sigma$ v materiálu při mechanickém namáhání relativní deformac
 
 <div class='obtekat'>
 
-![Hydraulická hladina v hornaté oblasti. Zdroj: http://geologylearn.blogspot.com/2015/12/groundwater-flow.html](darcy.jpg)
+```{figure} darcy.jpg
+Hydraulická hladina v hornaté oblasti. Zdroj: http://geologylearn.blogspot.com/2015/12/groundwater-flow.html
+```
 
 </div>
 
@@ -44,7 +48,9 @@ Jako všechny materiálové vztahy, je analogický Hookovu zákonu. Často se vy
 
 <div class='obtekat'>
 
-![Ukázka sendvičové konstrukce, Tepelný odpor se počítá stejně jako v elektrotechnice elekrický odpor. Vidíme analogii sériového (materiály 1, 6, ...) i paralelního (materiál 2 nebo 4 a k nim  paralelně dřevo nad a pod) zapojení. Zdroj: https://www.rdrymarov.cz/](panel.jpg)
+```{figure} panel.jpg
+Ukázka sendvičové konstrukce, Tepelný odpor se počítá stejně jako v elektrotechnice elekrický odpor. Vidíme analogii sériového (materiály 1, 6, ...) i paralelního (materiál 2 nebo 4 a k nim  paralelně dřevo nad a pod) zapojení. Zdroj: https://www.rdrymarov.cz/
+```
 
 </div>
 
@@ -67,7 +73,9 @@ Rozšíření rovnice vedení tepla pro vícerozměrný případ. Umožňuje zma
 
 <div class='obtekat'>
 
-![Anatomické směry dřeva výrazně determinují vlastnosti v jednotlivých směrech. V podélném směru je podstatně vyšší pevnost (modul pružnosti), ale i součinitel tepelné vodivosti a difuzní koeficient. V příčných směrech je vyšší například koeficient bobtnání. Zdroj: https://en.wikipedia.org/wiki/File:Wood_growth_ill.jpg](wood_growth.jpg)
+```{figure} wood_growth.jpg
+Anatomické směry dřeva výrazně determinují vlastnosti v jednotlivých směrech. V podélném směru je podstatně vyšší pevnost (modul pružnosti), ale i součinitel tepelné vodivosti a difuzní koeficient. V příčných směrech je vyšší například koeficient bobtnání. Zdroj: https://en.wikipedia.org/wiki/File:Wood_growth_ill.jpg
+```
 
 </div>
 
@@ -81,7 +89,9 @@ Rozšíření rovnice vedení tepla pro vícerozměrný případ. Umožňuje zma
 
 <div class='obtekat'>
 
-![Příklad konvergence ke stacionárnímu stavu rychlostí úměrnou vzdálenosti od tohoto stacionárního stavu. Právě zalité kafe se ochladí o prvních pět stupňů rychle, protože je velký rozdíl mezi teplotou nápoje a okolí. Tepelná výměna je proto intenzivní. Jak se teploty slibžují, rychlost klesá.](kava.jpg)
+```{figure} kava.jpg
+Příklad konvergence ke stacionárnímu stavu rychlostí úměrnou vzdálenosti od tohoto stacionárního stavu. Právě zalité kafe se ochladí o prvních pět stupňů rychle, protože je velký rozdíl mezi teplotou nápoje a okolí. Tepelná výměna je proto intenzivní. Jak se teploty slibžují, rychlost klesá.
+```
 
 </div>
 
@@ -93,7 +103,9 @@ Naopak růst úměrný množství je, na rozdíl od předešlého, prudký a st�
 
 <div class='obtekat'>
 
-![Třecí brzda jako spouštěcí buben. Dostatečné obtočení lana okolo tyče způsobí, že s malou námahou udržíme obrovskou sílu.  Zdroj: https://www.skyman.cz/nabidka/arboristika/spousteni-bremen/bubny-a-kotvy/spousteci-buben-tu100-2-popruhy-2958.html](buben.jpg)
+```{figure} buben.jpg
+Třecí brzda jako spouštěcí buben. Dostatečné obtočení lana okolo tyče způsobí, že s malou námahou udržíme obrovskou sílu.  Zdroj: https://www.skyman.cz/nabidka/arboristika/spousteni-bremen/bubny-a-kotvy/spousteci-buben-tu100-2-popruhy-2958.html
+```
 
 </div>
 
@@ -129,7 +141,9 @@ Bude doplněno.
 
 <div class='obtekat'>
 
-![Model Janáčkova kulturního centra v měřítku 1:10. Zdroj: https://ct24.ceskatelevize.cz/regiony/](hala.jpeg)
+```{figure} hala.jpeg
+Model Janáčkova kulturního centra v měřítku 1:10. Zdroj: https://ct24.ceskatelevize.cz/regiony/
+```
 
 </div>
 
@@ -152,7 +166,9 @@ Rovnice vedení tepla, difuzní rovnice nebo rovnice popisující reakci na mech
 
 <div class='obtekat'>
 
-![Optimální pohyb běžce je takový, aby nedocházelo k výkyvům v poloze těžiště. Těžište hledáme tak, že zprůměrujeme souřadnice všech bodů. Protože však tělo má spojitě rozloženou hmotnost a bodů je nekonečně mnoho, musíme tento průměr chápat ve smyslu integrální střední hodnoty. Zdroj: pixabay.com, autor RoonZ-nl](beh.jpg)
+```{figure} beh.jpg
+Optimální pohyb běžce je takový, aby nedocházelo k výkyvům v poloze těžiště. Těžište hledáme tak, že zprůměrujeme souřadnice všech bodů. Protože však tělo má spojitě rozloženou hmotnost a bodů je nekonečně mnoho, musíme tento průměr chápat ve smyslu integrální střední hodnoty. Zdroj: pixabay.com, autor RoonZ-nl
+```
 
 </div>
 
@@ -180,7 +196,9 @@ Protože je úloha prakticky zajímavá a často se věnujeme jenom jejím speci
 
 <div class='obtekat'>
 
-![Vzájemné souvislosti derivace a dvou integrálů.](blok.png)
+```{figure} blok.png
+Vzájemné souvislosti derivace a dvou integrálů.
+```
 
 </div>
 

@@ -50,7 +50,9 @@ $$\vec u +\vec o=\vec u$$
 
 <div class='obtekat'>
 
-![Modrý vektor je součtem ostatních tří vektorů. U černého vektoru je pravoúhlý trojúhelník pro výpočet délky pomocí Pythagorovy věty. Zdroj: Wikiepdie.](vektor.png)
+```{figure} vektor.png
+Modrý vektor je součtem ostatních tří vektorů. U černého vektoru je pravoúhlý trojúhelník pro výpočet délky pomocí Pythagorovy věty. Zdroj: Wikiepdie.
+```
 
 </div>
 
@@ -73,7 +75,9 @@ otočení směru.
 
 <div class='obtekat'>
 
-![Pouštní mravenec umí skvěle sčítat vektory. Bez této schopnosti by nenašel cestu domů. Zdroj: pixabay.com](mravenec.jpg)
+```{figure} mravenec.jpg
+Pouštní mravenec umí skvěle sčítat vektory. Bez této schopnosti by nenašel cestu domů. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -123,7 +127,9 @@ Výpočet lineární kombinace si můžete vyzkoušet online.
 
 <div class='obtekat'>
 
-![Stejný modrý vektor vyjádřený ve dvou různých bázích ve 3D, v červené a fialové bázi. Bázové vektory volíme zpravidla jednotkové délky, na obrázku už jsou vynásobeny vhodnými konstantami tak, abychom jako lineární kombinaci obdrželi požadovaný vektor. Zdroj: Wikipedia.](baze.png)
+```{figure} baze.png
+Stejný modrý vektor vyjádřený ve dvou různých bázích ve 3D, v červené a fialové bázi. Bázové vektory volíme zpravidla jednotkové délky, na obrázku už jsou vynásobeny vhodnými konstantami tak, abychom jako lineární kombinaci obdrželi požadovaný vektor. Zdroj: Wikipedia.
+```
 
 </div>
 
@@ -145,7 +151,9 @@ a pro druhou derivaci
 
 <div class='obtekat'>
 
-![Markovovy řetězce umožňují modelování situací, ve kterých dochází k přepínání stavů. Například migrace mezi městem a venkovem. Zdroj: pixabay.com](city.jpg)
+```{figure} city.jpg
+Markovovy řetězce umožňují modelování situací, ve kterých dochází k přepínání stavů. Například migrace mezi městem a venkovem. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -260,7 +268,9 @@ https://youtu.be/7vyBwmZZ3Pg
 
 <div class='obtekat'>
 
-![Jednotkové vektory ve směru os pootočíme o úhel $\theta$ a výsledek vyjádříme jako lineární kombinaci původních vektorů.](otoceni.png)
+```{figure} otoceni.png
+Jednotkové vektory ve směru os pootočíme o úhel $\theta$ a výsledek vyjádříme jako lineární kombinaci původních vektorů.
+```
 
 </div>
 
@@ -419,7 +429,9 @@ Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, kte
 
 <div class='obtekat'>
 
-![Markovovy řetězce umožňují modelování situací, ve kterých dochází k přepínání stavů. Například migrace mezi městem a venkovem. Zdroj: pixabay.com](city.jpg)
+```{figure} city.jpg
+Markovovy řetězce umožňují modelování situací, ve kterých dochází k přepínání stavů. Například migrace mezi městem a venkovem. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -463,7 +475,9 @@ ale pozor: někdy se místo zde představeného zápisu používá zápis s
 
 <div class='obtekat'>
 
-![Patrick Holt Leslie (1900-1972) roku 1945 publikoval v časopisu Biometrika On the use of matrices in certain population mathematics. V něm sestavil a analyzoval model růstu počtu samic v populaci potkanů (Rattus norvegicus); jeho model ovšem může být stejně dobře použit pro lidskou nebo jinou populaci. Zdroj: pixabay.com](potkan.jpg)
+```{figure} potkan.jpg
+Patrick Holt Leslie (1900-1972) roku 1945 publikoval v časopisu Biometrika On the use of matrices in certain population mathematics. V něm sestavil a analyzoval model růstu počtu samic v populaci potkanů (Rattus norvegicus); jeho model ovšem může být stejně dobře použit pro lidskou nebo jinou populaci. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -496,7 +510,9 @@ Další informace:
 
 <div class='obtekat'>
 
-![Jednoduchý potravní řetezec. Zdroj: https://linearalgebraapplications19.wordpress.com/2019/04/29/food-webs/](food-web.png)
+```{figure} food-web.png
+Jednoduchý potravní řetezec. Zdroj: https://linearalgebraapplications19.wordpress.com/2019/04/29/food-webs/
+```
 
 </div>
 
@@ -532,17 +548,16 @@ Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima 
 
 manimp:MatrixMultiplication|Nejdůležitější rolí matic v materiálovém inženýrství je jejich schopnost jistým způsobem transformovat vektory (body) prostoru. Přesněji, zobrazení zachovává rovnoběžnost a dělící poměr. Rovnoměrně rozmístěná mřížka se zobrazí zase na rovnoměrně rozmístěnou mřížku. (První část prezentace).
 
-<div class='obtekat'>
 
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>0.5\linewidth 0.5\linewidth\else\Gin@nat@width\fi}
-\makeatother
+```{figure} transformace.png
 
-![Příklad transformace dané maticí. Zachovává se například rovnoběžnost a středy úseček. Přímky se zobrazují na přímky.](transformace.png)
+Příklad transformace dané maticí. Zachovává se například rovnoběžnost a středy úseček. Přímky se zobrazují na přímky.
+```
 
-![Transformace 3D objektu do roviny pomocí matice. Koeficienty matice můžou realizovat libovolné natočení.](domecek.png)
+```{figure} domecek.png
 
-</div>
+Transformace 3D objektu do roviny pomocí matice. Koeficienty matice můžou realizovat libovolné natočení.
+```
 
 Je-li $A$ čtvercová matice, můžeme každému vektoru $\vec q$ přiřadit vektor
 $Y=A\vec q$ a tím definovat zobrazení $n$-rozměrného prostoru do sebe. Dá
@@ -568,7 +583,9 @@ Tuto matici budeme potřebovat při studiu deformace při odvození matematické
 
 <div class='obtekat'>
 
-![Na poli voda teče v podstatě z kopce, ale brázdy tvořící strukturu pole můžou směr stáčet a případně tok zpomalovat. Totéž se může dít a děje v řadě porézních materiálů. Zdroj: pixino.com](pole.jpg)
+```{figure} pole.jpg
+Na poli voda teče v podstatě z kopce, ale brázdy tvořící strukturu pole můžou směr stáčet a případně tok zpomalovat. Totéž se může dít a děje v řadě porézních materiálů. Zdroj: pixino.com
+```
 
 </div>
 
@@ -616,7 +633,9 @@ Pro pravidelně rostlé dřevo je snadné tyto směry určit, jsou to anatomick�
 
 <div class='obtekat'>
 
-![Dřevo není izotropní materiál a nemá stejné vlastnosti v každém směru. Existují ale tři výrazné směry, vzhledem k nimž se dají mechanické a fyzikální vlastnosti popsat snadněji, než vhledem ke směrům ostatním. Matematicky se jedná o vlastní vektory příslušných maticových fyzikálních veličin. Zdroj: http://woodpoint.sk](drevo.png)
+```{figure} drevo.png
+Dřevo není izotropní materiál a nemá stejné vlastnosti v každém směru. Existují ale tři výrazné směry, vzhledem k nimž se dají mechanické a fyzikální vlastnosti popsat snadněji, než vhledem ke směrům ostatním. Matematicky se jedná o vlastní vektory příslušných maticových fyzikálních veličin. Zdroj: http://woodpoint.sk
+```
 
 </div>
 
@@ -726,7 +745,9 @@ https://youtu.be/5AMXMQyx3jw
 
 <div class='obtekat'>
 
-![Metodami lineární algebry kombinovanými s diferenciálním počtem dokážeme ve zobrazení identifikovat tenzor malých deformací, složku související jenom se změnou tvaru. Odfiltrujeme tak posun či rotaci, které se změnou tvaru nesouvisí. Zdroj: pixabay.com](deformace.jpg)
+```{figure} deformace.jpg
+Metodami lineární algebry kombinovanými s diferenciálním počtem dokážeme ve zobrazení identifikovat tenzor malých deformací, složku související jenom se změnou tvaru. Odfiltrujeme tak posun či rotaci, které se změnou tvaru nesouvisí. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -806,7 +827,9 @@ Na závěr si ukážeme, že pomocí lineární algebry a maticového počtu je 
 
 <div class='obtekat'>
 
-![Rozložení teploty na tepelně vodivé desce je možné přibližně zkoumat metodami lineární algebry. A až na některé triviální případy jinou možnost vlastně nemáme, protože přesné řešení rovnice vedení tepla je v prakticky zajímavých případech nereálné. Podobně to je s mechanickým namáháním nebo transportem látek porézním prostředím.](deska.png)
+```{figure} deska.png
+Rozložení teploty na tepelně vodivé desce je možné přibližně zkoumat metodami lineární algebry. A až na některé triviální případy jinou možnost vlastně nemáme, protože přesné řešení rovnice vedení tepla je v prakticky zajímavých případech nereálné. Podobně to je s mechanickým namáháním nebo transportem látek porézním prostředím.
+```
 
 </div>
 
@@ -877,7 +900,9 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

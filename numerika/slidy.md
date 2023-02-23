@@ -170,7 +170,9 @@ lineárních rovnic.
 
 <div class='obtekat'>
 
-![Obrázek z demonstračního souboru programu FlexPDE (Lite verze zdarma) řeší rovnici pro podzemní vodu ve stacionárním stavu (div(k*grad(h)) + s = 0) za přítomnosti dvou studní a jednoho zasakovacího vrtu v nehomogenním prostředí.](water_05.png)
+```{figure} water_05.png
+Obrázek z demonstračního souboru programu FlexPDE (Lite verze zdarma) řeší rovnici pro podzemní vodu ve stacionárním stavu (div(k*grad(h)) + s = 0) za přítomnosti dvou studní a jednoho zasakovacího vrtu v nehomogenním prostředí.
+```
 
 </div>
 
@@ -225,11 +227,17 @@ Rovnice je v popisu modelu zadána jako divergence gradientu, což v kartézský
 $$\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}=0.$$
 Jiná forma zápisu je přímo pomocí druhých parciálních derivací ve tvaru `DXX(T)+DYY(T)=0`.
 
-![Teplota znázorněná pomocí izoterm.](ctvercova_deska_01_001.png)
+```{figure} ctvercova_deska_01_001.png
+Teplota znázorněná pomocí izoterm.
+```
 
-![Teplota znázorněná pomocí barev a 3D grafu.](ctvercova_deska_02_001.png)
+```{figure} ctvercova_deska_02_001.png
+Teplota znázorněná pomocí barev a 3D grafu.
+```
 
-![Model podzemní vody mezi rovnoběžnými řekami.](mezi_rekama.png)
+```{figure} mezi_rekama.png
+Model podzemní vody mezi rovnoběžnými řekami.
+```
 
 Poslední model je model podzemní vody s konstantními piezometrickýmí hladinami podél dvou rovnoběžných stran (mohou být například dvě řeky) a s rovnoměrně rozloženými zdroji (například nad oblastí jsou rovnoměrné srážky a voda rovnoměrně zasakuje). Řešením modelu vidíme odkud teče voda do které řeky. Tím je možno například usuzovat, kde po případné kontaminaci provádět sanační práce.
 

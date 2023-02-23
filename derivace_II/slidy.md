@@ -6,10 +6,13 @@
 https://youtu.be/9N2Z02S2tAw
 
 ```{admonition} Připomenutí derivací z ptačí perspektivy
+```
 
 <div class='obtekat'>
 
-![Derivace je důležitým kolečkem v mechanismu, jakým popisujeme svět okolo nás. Umí zachytit a popsat změnu a rychlost. Je však nutné ji zasadit do patřičného kontextu. Zdroj: pixabay.com](stroj.jpg)
+```{figure} stroj.jpg
+Derivace je důležitým kolečkem v mechanismu, jakým popisujeme svět okolo nás. Umí zachytit a popsat změnu a rychlost. Je však nutné ji zasadit do patřičného kontextu. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -19,7 +22,8 @@ S využitím aparátu derivací jsme v minulé přednášce poznali a naučili
 1. *Ze zadaného vztahu mezi dvěma veličinami najdi vztah mezi rychlostmi změn těchto veličin.* Jako vedlejší produkt mimo jiné využíváme dovednosti derivování z předchozího bodu a vždy derivujeme složenou funkci: vzorec vyjadřující jednu veličinu pomocí druhé je vnější složka a druhá veličina, resp. její závislost na čase, je složka vnitřní. Vstupem je vztah mezi veličinami a rychlost, s jakou se jedna z veličin mění, výstupem je rychlost, s jakou se mění veličina druhá.
 1. *Ze zadaného slovního popisu nějakého děje sestav matematický model.* Ve slovním modelu je zmíněna rychlost, tu matematicky přepisujeme jako derivaci a tato rychlost je v nějaké relaci s ostatními veličinami. Odsud sestavujeme rovnici. Vstupem je mechanismus popisující vývoj systému, výstupem matematický model ve formě rovnice obsahující neznámou funkci popisující stav systému a její derivaci. V průběhu semestru se takovéto rovnice naučíme řešit, nejprve se však detailněji koukneme na to, abychom poznali i další role derivace.
 
-```
+
+
 \fi
 
 ## Aplikace derivací 3: Jak citlivě? (reakce na změnu)
@@ -148,7 +152,9 @@ rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na
 
 <div class='obtekat'>
 
-![Vrcholek hory Chimborazo je místo nejvzdálenější od středu  Země. Roli hraje nadmořská výška a zploštění Země. Gravitační  zrychlení zde je nejmenší.  Zdroj: pixabay.com](chimborazo.jpg)
+```{figure} chimborazo.jpg
+Vrcholek hory Chimborazo je místo nejvzdálenější od středu  Země. Roli hraje nadmořská výška a zploštění Země. Gravitační  zrychlení zde je nejmenší.  Zdroj: pixabay.com
+```
 
 </div>
 
@@ -204,7 +210,9 @@ https://youtu.be/yX6azlYcEs0
 
 <div class='obtekat'>
 
-![Podnět a materiálová odezva v případě mechanického namáhání oceli s malým obsahem uhlíku. Pěkně vidíme lineární závislost v okolí počátku a odklon od lineární závislosti pro velké namáhání. Zdroj: https://en.wikipedia.org, Breakeydown](Stress_Strain_Ductile_Material.jpg)
+```{figure} Stress_Strain_Ductile_Material.jpg
+Podnět a materiálová odezva v případě mechanického namáhání oceli s malým obsahem uhlíku. Pěkně vidíme lineární závislost v okolí počátku a odklon od lineární závislosti pro velké namáhání. Zdroj: https://en.wikipedia.org, Breakeydown
+```
 
 </div>
 
@@ -247,7 +255,9 @@ https://youtu.be/PyZcNSio8J0
 
 <div class='obtekat'>
 
-![Teorie založené na lineárních aproximacích vyřešily mnoho důležitých úloh, ale pokud by příroda fungovala lineárně jako celek, nemohli bychom sestrojit například laser. Ten je založený na nelineární optice a materiálech s nelineární materiálovou odezvou. Neměli bychom řezací stroje, ale ani laserová ukazovátka. Zdroj: pixabay.com](laser.jpg)
+```{figure} laser.jpg
+Teorie založené na lineárních aproximacích vyřešily mnoho důležitých úloh, ale pokud by příroda fungovala lineárně jako celek, nemohli bychom sestrojit například laser. Ten je založený na nelineární optice a materiálech s nelineární materiálovou odezvou. Neměli bychom řezací stroje, ale ani laserová ukazovátka. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -313,7 +323,9 @@ $$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(
 
 <div class='obtekat'>
 
-![Druhé derivace nám umožňují popsat tak zásadní věc, jako je chování nosníků při zátěži. Zdroj: pixabay.com](nosniky.jpg)
+```{figure} nosniky.jpg
+Druhé derivace nám umožňují popsat tak zásadní věc, jako je chování nosníků při zátěži. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -391,9 +403,13 @@ https://youtu.be/U93Q3XaDnDA
 
 <div class='obtekat'>
 
-![V praxi často pracujeme s daty získanými po skocích. Místo spojité funkce (křivky) tedy máme funkci definovanou v bodech (diskrétní funkce). I zde je nutné mít možnost měření rychlosti změny, která je co nejvíce kompatibilní s derivací.](diference.png)
+```{figure} diference.png
+V praxi často pracujeme s daty získanými po skocích. Místo spojité funkce (křivky) tedy máme funkci definovanou v bodech (diskrétní funkce). I zde je nutné mít možnost měření rychlosti změny, která je co nejvíce kompatibilní s derivací.
+```
 
-![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v dřevěných konstrukcích a to i v případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: vlastní.](pisarky.jpg)
+```{figure} pisarky.jpg
+Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v dřevěných konstrukcích a to i v případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: vlastní.
+```
 
 </div>
 
@@ -431,7 +447,9 @@ $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h
 
 <div class='obtekat'>
 
-![Stůl z kompozitního materiálu. U řady materiálů je možné ze struktury vypočítat fyzikální vlastnosti ještě dříve, než tyto materiály vůbec vyrobíme. Zdroj: http://seiboncarbon.com.au](table-detail.jpg)
+```{figure} table-detail.jpg
+Stůl z kompozitního materiálu. U řady materiálů je možné ze struktury vypočítat fyzikální vlastnosti ještě dříve, než tyto materiály vůbec vyrobíme. Zdroj: http://seiboncarbon.com.au
+```
 
 </div>
 
@@ -635,7 +653,9 @@ Vidíme konvergenci a iterační vzorec jsme našli s minimálním úsilím. Ryc
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

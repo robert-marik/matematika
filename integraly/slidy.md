@@ -50,9 +50,13 @@ Závislá proměnná|Derivace podle času|
 
 <div class='obtekat'>
 
-![Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability Zdroj: nzwood.co.nz](zaveseny_most.jpg)
+```{figure} zaveseny_most.jpg
+Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability Zdroj: nzwood.co.nz
+```
 
-![Schema poloviny mostu se silamu působícími na část lana.](5.png)
+```{figure} 5.png
+Schema poloviny mostu se silamu působícími na část lana.
+```
 
 </div>
 
@@ -192,7 +196,9 @@ Integrování si také můžete procvičit v následujících cvičeních.
 
 <div class='obtekat'>
 
-![Napětí na kondenzátoru při měření elektrického odporu RC členem se mění exponenciální rychlostí. Úloha najít vývoj napětí v čase je formálně stejná, jako tato úloha s exponenciálně klesající teplotou. Zdroj: https://www.handymantips.org/](how-to-measure-wood-moisture-content.jpg)
+```{figure} how-to-measure-wood-moisture-content.jpg
+Napětí na kondenzátoru při měření elektrického odporu RC členem se mění exponenciální rychlostí. Úloha najít vývoj napětí v čase je formálně stejná, jako tato úloha s exponenciálně klesající teplotou. Zdroj: https://www.handymantips.org/
+```
 
 </div>
 
@@ -339,7 +345,9 @@ Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v 
 
 <div class='obtekat'>
 
-![Nákres pro nalezení vzorce pro tok tepla válcovou izolací.](izolace_schema.jpg)
+```{figure} izolace_schema.jpg
+Nákres pro nalezení vzorce pro tok tepla válcovou izolací.
+```
 
 </div>
 
@@ -416,7 +424,9 @@ sílu. Ovšem jenom v extrémně pěkných případech.
 
 <div class='obtekat'>
 
-![Obsah pod konstantní funkcí.](1.png)
+```{figure} 1.png
+Obsah pod konstantní funkcí.
+```
 
 </div>
 
@@ -439,11 +449,17 @@ manimp:UrcityIntegral|Určitý integrál dokáže nahradit součin v případě,
 
 <div class='obtekat'>
 
-![Obsah pod konstantní funkcí.](1.png)
+```{figure} 1.png
+Obsah pod konstantní funkcí.
+```
 
-![Obsah pod funkcí po částech konstantní.](2.png)
+```{figure} 2.png
+Obsah pod funkcí po částech konstantní.
+```
 
-![Obsah pod obecnou funkcí je $\int_a^b f(x)\,\mathrm dx$.](3.png)
+```{figure} 3.png
+Obsah pod obecnou funkcí je $\int_a^b f(x)\,\mathrm dx$.
+```
 
 </div>
 
@@ -486,7 +502,9 @@ následující přednášce.
 
 <div class='obtekat'>
 
-![Při pohybu proměnnou rychlostí je dráha integrálem rychlosti. Zdroj: pixabay.com](parasutista.jpg)
+```{figure} parasutista.jpg
+Při pohybu proměnnou rychlostí je dráha integrálem rychlosti. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -514,9 +532,13 @@ následující přednášce.
 
 <div class='obtekat'>
 
-![Celkovou sílu působící na jednu stěnu Mojžíšova mostu podle obrázku  není možné určit středoškolským vzorcem, protože tlak není podél celé  stěny konstantní, ale mění se s hloubkou. Zdroj:  https://www.flickr.com/photos/huphtur](mojzisuv_most.jpg)
+```{figure} mojzisuv_most.jpg
+Celkovou sílu působící na jednu stěnu Mojžíšova mostu podle obrázku  není možné určit středoškolským vzorcem, protože tlak není podél celé  stěny konstantní, ale mění se s hloubkou. Zdroj:  https://www.flickr.com/photos/huphtur
+```
 
-![Celkovou sílu působící na jednu stěnu mostu získáme jako součet sil  na myšlené vodorovné pásy dělící tuto stěnu.](prehrada.png)
+```{figure} prehrada.png
+Celkovou sílu působící na jednu stěnu mostu získáme jako součet sil  na myšlené vodorovné pásy dělící tuto stěnu.
+```
 
 </div>
 
@@ -565,7 +587,9 @@ označíme $H$.
 
 <div class='obtekat'>
 
-![Parabolické rozložení rychlosti v toku je nejen v potrubí, ale můžeme někdy pozorovat přímo v přírodě. Zdroj: pixabay.com (Anders Sandberg).](flow.jpg)
+```{figure} flow.jpg
+Parabolické rozložení rychlosti v toku je nejen v potrubí, ale můžeme někdy pozorovat přímo v přírodě. Zdroj: pixabay.com (Anders Sandberg).
+```
 
 </div>
 
@@ -612,9 +636,13 @@ trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost pr
 
 <div class='obtekat'>
 
-![Při posuzování stability rozhledny hraje moment setrvačnosti ústřední roli. Moment setrvačnosti rozhledny je možné získat součtem momentů setrvačnosti jednotlivých trámů. Rozhledna Bohdanka. Zdroj: http://tvstav.cz](bohdanka.jpg)
+```{figure} bohdanka.jpg
+Při posuzování stability rozhledny hraje moment setrvačnosti ústřední roli. Moment setrvačnosti rozhledny je možné získat součtem momentů setrvačnosti jednotlivých trámů. Rozhledna Bohdanka. Zdroj: http://tvstav.cz
+```
 
-![Tyč rotující okolo kolmé osy.](4.png)
+```{figure} 4.png
+Tyč rotující okolo kolmé osy.
+```
 
 </div>
 
@@ -656,7 +684,9 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
 <div class='obtekat'>
 
-![Provazochodec při přechodu přes Grand Canyon. Zdroj:  cbsnews.com](wallenda.jpg)
+```{figure} wallenda.jpg
+Provazochodec při přechodu přes Grand Canyon. Zdroj:  cbsnews.com
+```
 
 </div>
 
@@ -682,7 +712,9 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

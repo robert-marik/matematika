@@ -16,7 +16,9 @@ https://youtu.be/eNOiuvZ8sas
 
 <div class='obtekat'>
 
-![Strom je z mechanického hlediska také nosník. Svislý a velmi komplikovaný. Zdroj: pixabay.com](strom_vitr.jpg)
+```{figure} strom_vitr.jpg
+Strom je z mechanického hlediska také nosník. Svislý a velmi komplikovaný. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -74,7 +76,9 @@ Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x\text{ nebo }y\p
 
 <div class='obtekat'>
 
-![Některé stromy se při pohybu chovají spíše jako kyvadlo, jiné spíše jako nosník. Poznáme to podle toho, jaká veličina je ve vztahu úměrnosti s frekvencí vlastních kmitů (obecněji a více odborně mluvíme o korelaci veličin). Porozumění dynamické odezvě stromů umožní například lépe posuzovat bezpečnost stromů v městském prostředí. Zdroj: pixabay.com, Jan-Mallander.](strom_vitr2.jpg)
+```{figure} strom_vitr2.jpg
+Některé stromy se při pohybu chovají spíše jako kyvadlo, jiné spíše jako nosník. Poznáme to podle toho, jaká veličina je ve vztahu úměrnosti s frekvencí vlastních kmitů (obecněji a více odborně mluvíme o korelaci veličin). Porozumění dynamické odezvě stromů umožní například lépe posuzovat bezpečnost stromů v městském prostředí. Zdroj: pixabay.com, Jan-Mallander.
+```
 
 </div>
 
@@ -170,7 +174,9 @@ https://youtu.be/e4bnDYi5nkc
 
 <div class='obtekat'>
 
-![Rychlost chápeme v různých kontextech. Podle kontextu se mění i jednotky, ve kterých rychlost určujeme.  Zdroj: pixabay.com](rychlost.jpg)
+```{figure} rychlost.jpg
+Rychlost chápeme v různých kontextech. Podle kontextu se mění i jednotky, ve kterých rychlost určujeme.  Zdroj: pixabay.com
+```
 
 </div>
 
@@ -191,7 +197,9 @@ Budeme se zajímat o to, jak rychle se mění funkční hodnoty v čase nebo př
 
 <div class='obtekat'>
 
-![Určování rychlosti na stále kratším intervalu je jako bychom se dívali na funkci stále lepším mikroskopem. Matematika se umí podívat dokonce "mikroskopem s nekonečně velkým rozlišením".  Zdroj: pixabay.com](mikroskop.jpg)
+```{figure} mikroskop.jpg
+Určování rychlosti na stále kratším intervalu je jako bychom se dívali na funkci stále lepším mikroskopem. Matematika se umí podívat dokonce "mikroskopem s nekonečně velkým rozlišením".  Zdroj: pixabay.com
+```
 
 </div>
 
@@ -324,7 +332,9 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 
 <div class='obtekat'>
 
-![Souvislost mezi chováním funkce a derivací této funkce](derivace.png)
+```{figure} derivace.png
+Souvislost mezi chováním funkce a derivací této funkce
+```
 
 </div>
 
@@ -393,7 +403,9 @@ Pokud potřebujeme pracovat s poklesem, násobíme derivaci faktorem $-1$. Toto 
 
 <div class='obtekat'>
 
-![Rychlost ochlazování není konstantní, ale závisí na rozdílu teplot, který se během ochlazování stírá. Proces se v čase zpomaluje. Zdroj: Iva Balk, pixabay.com](polivka.jpg)
+```{figure} polivka.jpg
+Rychlost ochlazování není konstantní, ale závisí na rozdílu teplot, který se během ochlazování stírá. Proces se v čase zpomaluje. Zdroj: Iva Balk, pixabay.com
+```
 
 </div>
 
@@ -430,7 +442,9 @@ V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální pop
 
 <div class='obtekat'>
 
-![Při datování pomocí radioaktivního uhlíku využíváme toho, že rychlost procesu souvisí s tím, jak dlouho proces probíhá. Podobně jako u ochlazování. Zdroj: http://geologylearn.blogspot.com/.](uhlik.jpg)
+```{figure} uhlik.jpg
+Při datování pomocí radioaktivního uhlíku využíváme toho, že rychlost procesu souvisí s tím, jak dlouho proces probíhá. Podobně jako u ochlazování. Zdroj: http://geologylearn.blogspot.com/.
+```
 
 </div>
 
@@ -478,9 +492,13 @@ vlastností a při sušení dřeva.
 
 <div class='obtekat'>
 
-![Řez korytem. Voda zaplňuje koryto odspodu, tj. změna v množství vody v korytě se projeví nahoře, kde je šířka koryta $B$. Zdroj: Wikipedia.](channel.png)
+```{figure} channel.png
+Řez korytem. Voda zaplňuje koryto odspodu, tj. změna v množství vody v korytě se projeví nahoře, kde je šířka koryta $B$. Zdroj: Wikipedia.
+```
 
-![Derivace hraje roli při odvození podmínky pro vznik hydraulického skoku. Zdroj: Jonathan Ball, https://www.flickr.com/photos/jball359](jump.jpg)
+```{figure} jump.jpg
+Derivace hraje roli při odvození podmínky pro vznik hydraulického skoku. Zdroj: Jonathan Ball, https://www.flickr.com/photos/jball359
+```
 
 </div>
 
@@ -542,7 +560,9 @@ Derivování si také můžete procvičit v následujících cvičeních. Se zá
 
 <div class='obtekat'>
 
-![Matematické kyvadlo je hmotný bod na nehmotném závěsu. Aproximací je relativně těžký objekt relativně malého objemu na lehkém závěsu. Přírodní méně přesnou aproximací kyvadla vzhůru nohama je strom s dlouhým kmenem a větvemi v horní části. Zdroj: pixabay.com, geralt.](kyvadlo_hodinky.jpg)
+```{figure} kyvadlo_hodinky.jpg
+Matematické kyvadlo je hmotný bod na nehmotném závěsu. Aproximací je relativně těžký objekt relativně malého objemu na lehkém závěsu. Přírodní méně přesnou aproximací kyvadla vzhůru nohama je strom s dlouhým kmenem a větvemi v horní části. Zdroj: pixabay.com, geralt.
+```
 
 </div>
 
@@ -578,7 +598,9 @@ Perioda kyvadla se prodlužuje rychlostí $0.35$ milisekundy za sekundu.
 
 <div class='obtekat'>
 
-![Napětí na kondenzátoru při měření elektrického odporu RC členem se mění exponenciální rychlostí. Úloha najít vývoj napětí v čase má několik fází. První z nich je ze znalosti vztahu mezi napětím a nábojem najít souvislost mezi změnami těchto veličin. Zdroj: https://www.handymantips.org/](how-to-measure-wood-moisture-content.jpg)
+```{figure} how-to-measure-wood-moisture-content.jpg
+Napětí na kondenzátoru při měření elektrického odporu RC členem se mění exponenciální rychlostí. Úloha najít vývoj napětí v čase má několik fází. První z nich je ze znalosti vztahu mezi napětím a nábojem najít souvislost mezi změnami těchto veličin. Zdroj: https://www.handymantips.org/
+```
 
 </div>
 
@@ -606,7 +628,9 @@ Funkce má na vstupu více proměnných, na výstupu reálné číslo. Některé
 
 <div class='obtekat'>
 
-![Teplotní modifikace dřeva ve VCJR v Útěchově. Jak rychle uvnitř roste teplota? Jak dlouho musíme tepelně opracovávat, aby se teplota dostatečně zvýšila v celém objemu? Zdroj: J. Dömény.](termowood.jpg)
+```{figure} termowood.jpg
+Teplotní modifikace dřeva ve VCJR v Útěchově. Jak rychle uvnitř roste teplota? Jak dlouho musíme tepelně opracovávat, aby se teplota dostatečně zvýšila v celém objemu? Zdroj: J. Dömény.
+```
 
 </div>
 
@@ -693,9 +717,13 @@ manim:Heat|1tbe5YUvoqg|Rovnice vedení tepla. Animace jak se chová teplo při j
 
 <div class='obtekat'>
 
-![Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například okno nebo stěna domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](domek.png)
+```{figure} domek.png
+Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například okno nebo stěna domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.
+```
 
-![Ukázka možného výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle čas, barva označuje teplotu. Dole je počáteční stav, nulová teplota podél celé tyče. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh toho, jak se od pravého konce postupně ohřívají jednotlivé části tyče, získáme řešením rovnice vedení tepla. Teplotní profily pro jednotlivé časy získáme na vodorovných řezech v obrázku. Vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.](octave.png)
+```{figure} octave.png
+Ukázka možného výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle čas, barva označuje teplotu. Dole je počáteční stav, nulová teplota podél celé tyče. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh toho, jak se od pravého konce postupně ohřívají jednotlivé části tyče, získáme řešením rovnice vedení tepla. Teplotní profily pro jednotlivé časy získáme na vodorovných řezech v obrázku. Vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.
+```
 
 </div>
 
@@ -754,7 +782,9 @@ Vyřešit rovnici vedení tepla je bohužel možné jenom v poměrně speciáln�
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

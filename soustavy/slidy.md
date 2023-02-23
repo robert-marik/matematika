@@ -127,7 +127,9 @@ https://youtu.be/YpbOWJ_6ZS4
 
 <div class='obtekat'>
 
-![Inverzní matice umožní zapsat elegantně řešení i neuvěřitelně komplexní a složité soustavy rovnic. Pro praktické počítání se však tato metoda moc nehodí a budeme ji muset ještě o něco vylepšit na iterační metodu. Zdroj: pixabay.com.](matrix.jpg)
+```{figure} matrix.jpg
+Inverzní matice umožní zapsat elegantně řešení i neuvěřitelně komplexní a složité soustavy rovnic. Pro praktické počítání se však tato metoda moc nehodí a budeme ji muset ještě o něco vylepšit na iterační metodu. Zdroj: pixabay.com.
+```
 
 </div>
 
@@ -484,7 +486,9 @@ https://youtu.be/aeUs2y2QrRw
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

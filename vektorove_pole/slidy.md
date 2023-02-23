@@ -33,7 +33,9 @@ https://youtu.be/ULoUeHincbM
 
 <div class='obtekat'>
 
-![Pro popis proudění je vhodné vektorové pole. Zde je ve 3D a vykreslené v náhodných bodech v prostoru.](3d_pole.png)
+```{figure} 3d_pole.png
+Pro popis proudění je vhodné vektorové pole. Zde je ve 3D a vykreslené v náhodných bodech v prostoru.
+```
 
 </div>
 
@@ -95,7 +97,9 @@ zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látk
 
 <div class='obtekat'>
 
-![Tok si snadno představíme mechanickým modelem. Například větru nebo vody. Zdroj: pixabay.com](vitr.jpg)
+```{figure} vitr.jpg
+Tok si snadno představíme mechanickým modelem. Například větru nebo vody. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -156,7 +160,9 @@ Difuzí se například dřevo zbavuje vlhkosti při vysoušení.
 
 <div class='obtekat'>
 
-![Vodárna [Káraný](http://www.vodarnakarany.cz/) infiltruje vodu do podzemí. Znalost, co se tam s vodou děje a kudy a jak teče je nezbytná. Základním zákonem pro popis tohoto děje je Darcyho zákon. Zdroj: nase-voda.cz, Nina Havlová](karany.jpg)
+```{figure} karany.jpg
+Vodárna [Káraný](http://www.vodarnakarany.cz/) infiltruje vodu do podzemí. Znalost, co se tam s vodou děje a kudy a jak teče je nezbytná. Základním zákonem pro popis tohoto děje je Darcyho zákon. Zdroj: nase-voda.cz, Nina Havlová
+```
 
 </div>
 
@@ -191,7 +197,9 @@ kinetickou energii nebo osmózu a kapilární jevy.
 
 <div class='obtekat'>
 
-![Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rozhrani.png)
+```{figure} rozhrani.png
+Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.
+```
 
 </div>
 
@@ -225,7 +233,9 @@ Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k tran
 
 <div class='obtekat'>
 
-![Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rezistory.png)
+```{figure} rezistory.png
+Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.
+```
 
 </div>
 
@@ -245,7 +255,9 @@ Komponenty vektoru $\vec j=(j_x, j_y, j_z)^T$ jsou $$\begin{aligned}  j_x&=-k_{1
 
 <div class='obtekat'>
 
-![Ortotropní materiál je typicky materiál z jednotlivých vrstev. Typicky dřevo, půda z různých vrstev, lepenka. Zdroj: pixabay.com](lepenka.jpg)
+```{figure} lepenka.jpg
+Ortotropní materiál je typicky materiál z jednotlivých vrstev. Typicky dřevo, půda z různých vrstev, lepenka. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -299,7 +311,9 @@ https://youtu.be/wrYpaPerg3M
 
 <div class='obtekat'>
 
-![Divergence a tok pole $\vec q=(0,Q, R)$ tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence.png)
+```{figure} divergence.png
+Divergence a tok pole $\vec q=(0,Q, R)$ tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.
+```
 
 </div>
 
@@ -392,7 +406,9 @@ https://youtu.be/_iHeE-9DJrA
 
 <div class='obtekat'>
 
-![Rovnice kontinuity je vlastně bilance zisků a ztrát pro danou stavovou veličinu v libovolném bodě. Zdroj: pixabay.com](ucto.jpg)
+```{figure} ucto.jpg
+Rovnice kontinuity je vlastně bilance zisků a ztrát pro danou stavovou veličinu v libovolném bodě. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -455,7 +471,9 @@ V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i�
 
 \iffalse 
 
-![Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.](ricka.jpg)
+```{figure} ricka.jpg
+Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.
+```
 
 \fi
 
@@ -482,7 +500,9 @@ tvarem koryta.
 
 <div class='obtekat'>
 
-![Rovnice mechaniky kontinua dokáží popsat i děje, které se odehrávají v tekutinách tekoucích jinak, než voda nebo ideální tekutina. Běžným příkladem je med, technicky významným například beton. Kromě rovnice kontinuity je nutné dodat ještě další fyzikální vztahy. Zdroj: pixabay.com.](med.jpg)
+```{figure} med.jpg
+Rovnice mechaniky kontinua dokáží popsat i děje, které se odehrávají v tekutinách tekoucích jinak, než voda nebo ideální tekutina. Běžným příkladem je med, technicky významným například beton. Kromě rovnice kontinuity je nutné dodat ještě další fyzikální vztahy. Zdroj: pixabay.com.
+```
 
 </div>
 
@@ -542,7 +562,9 @@ který se nazývá *difuzní rovnice*.
 
 <div class='obtekat'>
 
-![Stromy umí ochlazovat své okolí. Ulice v Melbourne vyfocená termokamerou to dokazuje. A difuzní rovnice toto dokáže modelovat. Photograph: City of Melbourne. Zdroj: theguardian.com.](teplo.jpg)
+```{figure} teplo.jpg
+Stromy umí ochlazovat své okolí. Ulice v Melbourne vyfocená termokamerou to dokazuje. A difuzní rovnice toto dokáže modelovat. Photograph: City of Melbourne. Zdroj: theguardian.com.
+```
 
 </div>
 
@@ -573,7 +595,9 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 
 <div class='obtekat'>
 
-![Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](vrstvy.png)
+```{figure} vrstvy.png
+Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.
+```
 
 </div>
 
@@ -604,7 +628,9 @@ elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká
 
 <div class='obtekat'>
 
-![Difuzní rovnice se používá k modelování sušení dřeva. Zdroj: pixabay.com.](drevo.jpg)
+```{figure} drevo.jpg
+Difuzní rovnice se používá k modelování sušení dřeva. Zdroj: pixabay.com.
+```
 
 </div>
 
@@ -639,7 +665,9 @@ i na $x$.
 
 <div class='obtekat'>
 
-![Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.](voda.jpg)
+```{figure} voda.jpg
+Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.
+```
 
 </div>
 
@@ -688,11 +716,17 @@ https://youtu.be/5hy6lB1O4KQ
 
 <div class='obtekat'>
 
-![Teplotní modifikace dřeva ve VCJR v Útěchově. Díky jednoduché geometrii vzorků je možno provést i přesný analytický výpočet teplotního pole. Výřez ukazuje detail čtyř vzorků. Jeden z nich je nařezán šikmo. V takovém případě je výpočet mnohem obtížnější než u vzorků, jejichž tvar respektuje anatomické směry ve dřevě. Zdroj: J. Dömény.](VCJR_modifikace_pravidelne.jpg)
+```{figure} VCJR_modifikace_pravidelne.jpg
+Teplotní modifikace dřeva ve VCJR v Útěchově. Díky jednoduché geometrii vzorků je možno provést i přesný analytický výpočet teplotního pole. Výřez ukazuje detail čtyř vzorků. Jeden z nich je nařezán šikmo. V takovém případě je výpočet mnohem obtížnější než u vzorků, jejichž tvar respektuje anatomické směry ve dřevě. Zdroj: J. Dömény.
+```
 
-![Teplotní modifikace šindele ve VCJR v Útěchově. Řídí se stejnou rovnicí jako hranoly na obrázku výše. Vinou komplikovaného tvaru je však matematické modelování teplotního pole možné jenom numerickou cestou. Skutečně, v podobných úlohách hraje geometrie úlohy důležitou roli a netriviální geometrie zpravidla znemožní efektivní řešení analytickou cestou. Zdroj: J. Dömény.](VCJR_sindel.jpg)
+```{figure} VCJR_sindel.jpg
+Teplotní modifikace šindele ve VCJR v Útěchově. Řídí se stejnou rovnicí jako hranoly na obrázku výše. Vinou komplikovaného tvaru je však matematické modelování teplotního pole možné jenom numerickou cestou. Skutečně, v podobných úlohách hraje geometrie úlohy důležitou roli a netriviální geometrie zpravidla znemožní efektivní řešení analytickou cestou. Zdroj: J. Dömény.
+```
 
-![Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.](rtb.png)
+```{figure} rtb.png
+Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.
+```
 
 </div>
 
@@ -765,7 +799,9 @@ https://youtu.be/TjyB3kP2uXE
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 

@@ -30,13 +30,19 @@ nasčítání příspěvků od spojitě se měnící veličiny.
 
 <div class='obtekat'>
 
-![Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.](hoop_stress.png)
+```{figure} hoop_stress.png
+Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.
+```
 
 \iffalse 
 
-![Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových  nádob. Zdroj: J. Dömény.](impregnacni_komora.jpg)
+```{figure} impregnacni_komora.jpg
+Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových  nádob. Zdroj: J. Dömény.
+```
 
-![Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.](popraskane_trubky.jpg)
+```{figure} popraskane_trubky.jpg
+Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.
+```
 
 \fi
 
@@ -67,7 +73,9 @@ https://youtu.be/uyiQAbYZVRU
 
 <div class='obtekat'>
 
-![Monotonie a aditivia vzhledem k mezi pro určitý integrál.](int_vlastnosti.png)
+```{figure} int_vlastnosti.png
+Monotonie a aditivia vzhledem k mezi pro určitý integrál.
+```
 
 </div>
 
@@ -119,7 +127,9 @@ https://youtu.be/8Qc0RI4T5LI
 
 <div class='obtekat'>
 
-![Když materiálová konstanta není konstantní a chceme ji zprůměrovat, použijeme integrální střední hodnotu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](tepelna_vodivost.png)
+```{figure} tepelna_vodivost.png
+Když materiálová konstanta není konstantní a chceme ji zprůměrovat, použijeme integrální střední hodnotu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.
+```
 
 </div>
 
@@ -151,7 +161,9 @@ $\mu$ s vlastností $$\int_a^b f(x)\,\mathrm dx=\int_a^b \mu\,\mathrm dx=\mu \in
 
 <div class='obtekat'>
 
-![Střední hodnota lineární a obecné funkce.](mean.png)
+```{figure} mean.png
+Střední hodnota lineární a obecné funkce.
+```
 
 </div>
 
@@ -190,7 +202,9 @@ Výpočet střední hodnoty si také můžete procvičit v následujících cvi�
 
 <div class='obtekat'>
 
-![Graf počtu nemocných chřipkou. Čárkovaně je dlouhodobý trend, okolo kterého počet nemocných osciluje s krátkou periodou. Zelená plná křivka je pětiletý průměr začínající v daném roce. Minimum této křivky je vhodný okamžik pro začátek plošné vakcinace.](graf.png)
+```{figure} graf.png
+Graf počtu nemocných chřipkou. Čárkovaně je dlouhodobý trend, okolo kterého počet nemocných osciluje s krátkou periodou. Zelená plná křivka je pětiletý průměr začínající v daném roce. Minimum této křivky je vhodný okamžik pro začátek plošné vakcinace.
+```
 
 </div>
 
@@ -229,7 +243,9 @@ https://youtu.be/Z8wDZxap794
 
 <div class='obtekat'>
 
-![Visící řetěz. Při vytahování na střechu se zmenšuje síla, kterou je nutno překonávat.  Zdroj: pixabay.com](chain.jpg)
+```{figure} chain.jpg
+Visící řetěz. Při vytahování na střechu se zmenšuje síla, kterou je nutno překonávat.  Zdroj: pixabay.com
+```
 
 </div>
 
@@ -286,7 +302,9 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 <div class='obtekat'>
 
-![Mojžíšův most je z obou stran chráněný přehradou umožňující regulací  výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku  však není překvapení, že může být i zatopený. Zdroj:  http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
+```{figure} mojzisuv_most_pod_vodou.jpg
+Mojžíšův most je z obou stran chráněný přehradou umožňující regulací  výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku  však není překvapení, že může být i zatopený. Zdroj:  http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/
+```
 
 </div>
 
@@ -576,7 +594,9 @@ dispozici analytické vyjádření této funkce.
 
 <div class='obtekat'>
 
-![Součin se na součet mění například u logaritmického pravítka.  Zdroj: pixabay.com](slide-rule.jpg)
+```{figure} slide-rule.jpg
+Součin se na součet mění například u logaritmického pravítka.  Zdroj: pixabay.com
+```
 
 </div>
 
@@ -712,7 +732,9 @@ kdybychom řetěz nepřetáčeli, jenom odpojili dolních 10 metrů a tuto
 
 <div class='obtekat'>
 
-![Lodní výtah Falkrik Wheel. Zdroj: Wikipedie.](zdymadlo.jpg)
+```{figure} zdymadlo.jpg
+Lodní výtah Falkrik Wheel. Zdroj: Wikipedie.
+```
 
 </div>
 
@@ -739,7 +761,9 @@ soustavou proplouvaly celý den.
 
 <div class='obtekat'>
 
-![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+```{figure} ../message.jpg
+A jaká je hlavní message? Zdroj: pixabay.com
+```
 
 </div>
 
