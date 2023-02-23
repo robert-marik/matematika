@@ -589,9 +589,6 @@ $$\begin{pmatrix}
         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}
       \end{pmatrix}$$
 
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>0.5\linewidth 0.5\linewidth\else\Gin@nat@width\fi}
-\makeatother
 
 <div class='obtekat'>
 

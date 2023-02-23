@@ -829,16 +829,16 @@ $$ \frac {\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x}\left(D_x
 * Pokud je materiál homogení a má lineární materiálovou odezvu, je dokonce možné rovnici dále zjednodušit na 
 
 $$ \frac {\partial u}{\partial t}=\sigma + D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } .
-$$ (VP-N)
+$$ (N)
 
 Tato formulace je jednodušší než předešlá, protože obsahuje druhé derivace místo kvaziderivací.
-* Pokud je rovnice například stacionární (stavová veličina nezávisí na čase, derivace podle času je nulová), bezzdrojová (neobsahuje zdroje ani spotřebiče, veličina $\sigma$ je nulová), z homogenního a lineárního materiálu (viz předchozí bod) redukuje se rovnice {eq}`VP-N` na  
+* Pokud je rovnice například stacionární (stavová veličina nezávisí na čase, derivace podle času je nulová), bezzdrojová (neobsahuje zdroje ani spotřebiče, veličina $\sigma$ je nulová), z homogenního a lineárního materiálu (viz předchozí bod) redukuje se rovnice {eq}`N` na  
 
 $$ 0= D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } . 
 $$ (S)
 
 Tato rovnice je jednodušší než "plná rovnice" {eq}`N` a proto ji dokážeme řešit i ve složitějších podmínkách. Někdy například umíme vyřešit nestacionární rovnici {eq}`N` a máme dynamiku jak rychle roste stavová veličina, například jak rychle roste teplota v materiálu. To je nejlepší scénář, někdy však může být nerealizovatelný. Někdy ale umíme vyřešit jenom stacionární rovnici {eq}`S` a najdeme jenom rozložení stavové veličiny po dosažení rovnovážného stavu. To je také dobrá a užitečná informace sama o sobě. Navíc může sloužit jako odrazový můstek k řešení nestacionární rovnice {eq}`N` tak, že od stacionárního řešení postupujeme zpětně v čase.
-* Pokud je materiál z předchozího bodu ještě navíc izotropní, tj.  pokud má stejné vlastnosti ve všech směrech, je $D_x=D_y$ a rovnici je možno vydělit do tvaru $$ 0= \frac{\partial^2 u }{\partial x^2 } + \frac{\partial^2 u }{\partial y^2 } .$$ O této rovnici si ukážeme (v roce 2021 jsme si ukázali už na minulé přednášce) že zapojením druhých diferencí pro numerickou aproximaci druhé derivace (viz [přednáška číslo 2](https://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#kone%C4%8Dn%C3%A9-diference-a-numerick%C3%A1-aproximace-derivace)) se model redukuje na soustavu lineárních rovnic, jak jsme ji poněkud naivní metodou odvodili v [přednášce číslo 7](https://user.mendelu.cz/marik/mtk/mat-slidy/matice/#rozlo%C5%BEen%C3%AD-teploty-na-tepeln%C4%9B-vodiv%C3%A9-desce).
+* Pokud je materiál z předchozího bodu ještě navíc izotropní, tj.  pokud má stejné vlastnosti ve všech směrech, je $D_x=D_y$ a rovnici je možno vydělit do tvaru $$ 0= \frac{\partial^2 u }{\partial x^2 } + \frac{\partial^2 u }{\partial y^2 } .$$ O této rovnici si ukážeme, že zapojením druhých diferencí pro numerickou aproximaci druhé derivace se model redukuje na soustavu lineárních rovnic.
 
 ## Praktická aplikace (zajímavost z jiné oblasti než nauky o materiálu)
 

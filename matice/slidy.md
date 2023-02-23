@@ -548,6 +548,7 @@ Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima 
 
 manimp:MatrixMultiplication|Nejdůležitější rolí matic v materiálovém inženýrství je jejich schopnost jistým způsobem transformovat vektory (body) prostoru. Přesněji, zobrazení zachovává rovnoběžnost a dělící poměr. Rovnoměrně rozmístěná mřížka se zobrazí zase na rovnoměrně rozmístěnou mřížku. (První část prezentace).
 
+<div class='obtekat'>
 
 ```{figure} transformace.png
 
@@ -558,6 +559,8 @@ Příklad transformace dané maticí. Zachovává se například rovnoběžnost 
 
 Transformace 3D objektu do roviny pomocí matice. Koeficienty matice můžou realizovat libovolné natočení.
 ```
+
+</div>
 
 Je-li $A$ čtvercová matice, můžeme každému vektoru $\vec q$ přiřadit vektor
 $Y=A\vec q$ a tím definovat zobrazení $n$-rozměrného prostoru do sebe. Dá

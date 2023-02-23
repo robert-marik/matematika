@@ -45,6 +45,7 @@ sed -i 's/begin{sphinxadmonition}{note}{Příklad (Řešení)}/begin{sphinxadmon
 
 xelatex python
 xelatex python
+xelatex python
 
 cd -
 cp $directory/python.pdf Matematika.pdf
