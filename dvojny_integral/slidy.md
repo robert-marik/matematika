@@ -242,10 +242,8 @@ obdélníkovou oblast.
  Nechť $R=[a,b]\times[c,d]$ je uzavřený obdélník v $\mathbb{R}^2$ a
 $f$ funkce definovaná a spojitá na $R$. Pak platí
 $$    \begin{aligned}\iint_R f(x,y)\mathrm{d}x \mathrm{d}y 
-&=
-\int_a^b\Bigl[\int_c^d f(x,y)\mathrm{d}y \Bigr]\mathrm{d}x 
-\\&=
-\int_c^d\Bigl[\int_a^b f(x,y)\mathrm{d}x \Bigr]\mathrm{d}y .\end{aligned}
+&= \int_a^b\Bigl[\int_c^d f(x,y)\mathrm{d}y \Bigr]\mathrm{d}x 
+\\&= \int_c^d\Bigl[\int_a^b f(x,y)\mathrm{d}x \Bigr]\mathrm{d}y .\end{aligned}
 $$
 
 Platí-li dokonce rovnost $f(x,y)=g(x)h(y)$, pak
@@ -356,13 +354,9 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 Tuhost (odolnost vůči deformaci) pro nosník obdélníkového průřezu o výšce $b$ a
 šířce $a$ je dána kvadratickým momentem obdélníkového průřezu vzhledem
 k vodorovné ose procházející těžištěm. 
-$$\begin{aligned}I_x&=
-\iint_{\left[-\frac a2,\frac a2\right]\times \left[-\frac b2,\frac b2\right]} y^2\,\mathrm dx\mathrm dy\\
-&=
-\int_{-\frac a2}^{\frac a2} \,\mathrm dx\int_{-\frac b2}^{\frac b2}
-y^2 \,\mathrm dy=
-a\left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2}
-=\frac 1{12}ab^3
+$$\begin{aligned}I_x&= \iint_{\left[-\frac a2,\frac a2\right]\times \left[-\frac b2,\frac b2\right]} y^2\,\mathrm dx\mathrm dy\\
+&= \int_{-\frac a2}^{\frac a2} \,\mathrm dx\int_{-\frac b2}^{\frac b2}
+y^2 \,\mathrm dy= a\left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2} =\frac 1{12}ab^3
 \end{aligned}
 $$
 Odsud máme okamžitě několik pozorování

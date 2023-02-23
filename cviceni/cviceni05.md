@@ -32,7 +32,7 @@ Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\ma
 
 1.   $\int x^2+2x\,\mathrm dx=\frac 13 x^3 + 2\frac 12 x^2 = \frac 13 x^3+x^2+c$
 1.  $\int \sqrt x(x+\sqrt x)\,\mathrm dx=\int x\sqrt x+\sqrt x\sqrt x\,\mathrm dx=\int x^{\frac 32}+x\,\mathrm dx=\frac 25 x^{\frac 52}+\frac 12 x^2+c$
-1.  $\int \frac 1{\sqrt x}+\sqrt x \,\mathrm dx=\int x^{-\frac 12}+x^{\frac 12}\,\mathrm dx=2x^\frac 12+\frac 23 x^{\frac 32}+c$
+1.  $\int \frac 1{\sqrt x}+\sqrt x \,\mathrm dx=\int x^{-\frac 12}+x^{\frac 12}\,\mathrm dx=2x^{\frac 12}+\frac 23 x^{\frac 32}+c$
 1. $\int \frac{x^2-1}{x}\,\mathrm dx=\int x-\frac 1x \,\mathrm dx=\frac {x^2}{2} - \ln|x|+C$
 1. $\int e^x+e^{2x}\,\mathrm dx=e^x+\frac 12 e^{2x}+c$
 1. $\int \sin\left(x+\frac\pi 3\right)=-\cos\left(x+\frac \pi3\right)+C$
@@ -71,8 +71,7 @@ _Toto a další příklady jsou klasické aplikace integrálu, kdy integrálem r
 
 Integrál udává objem oleje, který vyteče za prvních 10 hodin. Pro zadanou funkci dostáváme
 $$
-    \int_0^{10}r(t)\mathrm{d}t= \int_0^{10}(200-4t)\mathrm{d}t=
-    \left[200t-2t^2\right]_0^{10}= 2000-200-(0-0)=1800.
+    \int_0^{10}r(t)\mathrm{d}t= \int_0^{10}(200-4t)\mathrm{d}t=     \left[200t-2t^2\right]_0^{10}= 2000-200-(0-0)=1800.
   $$
   Za 10 hodin vyteče 1800 litrů oleje.
 
@@ -179,8 +178,7 @@ $$
 
 Jiné řešení je pomocí určitého integrálu najít změnu a poté přičíst k počáteční hodnotě. Aby nedošlo ke kolizi mezi označením integrační proměnné $t$ a mezi koncem časového intervalu, budeme tento konec časového intervalu označovat $T$. Tedy platí
 $$
-  w(T)=w(0)+\int_0^T w'(t)\,\mathrm dt=
-  0+ \int_0^T \frac{4t}{100}-3\left (\frac  t{100}\right)^2 \,\mathrm dt  =\frac {2T^2}{100}-\frac{T^3}{10000}.
+  w(T)=w(0)+\int_0^T w'(t)\,\mathrm dt=   0+ \int_0^T \frac{4t}{100}-3\left (\frac  t{100}\right)^2 \,\mathrm dt  =\frac {2T^2}{100}-\frac{T^3}{10000}.
 $$
 Tedy
 $$

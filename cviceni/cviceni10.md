@@ -49,8 +49,7 @@ Protože platí $$A-2 I=\begin{pmatrix}  -2 & 2\\2&1\end{pmatrix}-\begin{pmatrix
 řešíme soustavu 
 $$\begin{pmatrix}-4 & 2\\ 2 &-1\end{pmatrix}\begin{pmatrix}  x_1\\x_2\end{pmatrix}=\begin{pmatrix}  0\\0\end{pmatrix},$$
 která má nekonečně mnoho řešení. Musíme najít alespoň jendo nenulové řešení. Pokud zapíšeme jako soustavu rovnic, dostáváme druhou rovnici ve tvaru
-$$2x_1-x_2=0$$ a první rovnice je jejím násobkem. Volbou $x_1=1$ dostáváme $x_2=2x_1=2$ a vlastní vektor příslušný vlastnímu číslu $\lambda_1=2$ je $\vec e_1=
-\begin{pmatrix}
+$$2x_1-x_2=0$$ a první rovnice je jejím násobkem. Volbou $x_1=1$ dostáváme $x_2=2x_1=2$ a vlastní vektor příslušný vlastnímu číslu $\lambda_1=2$ je $\vec e_1= \begin{pmatrix}
   1\\2
 \end{pmatrix}.$ Tento vektor je dán jednoznačně až na nenulový konstantní násobek.
 

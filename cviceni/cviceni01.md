@@ -191,10 +191,8 @@ Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe je
 Ze zadání známe poloměr $r=50\,\mathrm{m}$ a rychlost růstu poloměru $\frac {\mathrm dr}{\mathrm dt}=1.5\,\text{m}\,\text{min}^{-1}$. Zajímá nás rychlost růstu obsahu $\frac{\mathrm dS}{\mathrm dt}$.
 
 Derivováním vztahu $$S=\pi r^2$$ podle $r$ získáváme $$\frac {\mathrm dS}{\mathrm dr}=2\pi r.$$ Derivováním podle $t$ dostaneme
-$$\frac{\mathrm dS}{\mathrm dt} =
-\frac{\mathrm dS}{\mathrm dr}
-\frac{\mathrm dr}{\mathrm dt}=
-2\pi r \frac{\mathrm dr}{\mathrm dt}$$
+$$\frac{\mathrm dS}{\mathrm dt} = \frac{\mathrm dS}{\mathrm dr}
+\frac{\mathrm dr}{\mathrm dt}= 2\pi r \frac{\mathrm dr}{\mathrm dt}$$
 a numericky
 $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathrm{m}^2\,\text{min}^{-1}.$$
 
@@ -242,8 +240,7 @@ _Toto je mírná modifikace příkladu s požárem. Protože město má konstant
 
 Ze zadání: $r=10\,\mathrm{km}$, $N=300\,000$, $\sigma=\frac{N}{\pi r^2}$ je hustota osídlení a ta je konstantní, $\frac {\mathrm dN}{\mathrm dt}=10\,000 \,\text{rok}^{-1}$. Zajímá nás $\frac{\mathrm dr}{\mathrm dt}$.
 
-Výpočet: Pro počet obyvatel platí $N=\sigma \pi r^2$ a derivováním $$\frac{\mathrm dN}{\mathrm dt}
-=\frac{\mathrm dN}{\mathrm dr}\frac{\mathrm dr}{\mathrm dt}=\sigma \pi 2r\frac{\mathrm dr}{\mathrm dt}.$$ Odsud
+Výpočet: Pro počet obyvatel platí $N=\sigma \pi r^2$ a derivováním $$\frac{\mathrm dN}{\mathrm dt} = \frac{\mathrm dN}{\mathrm dr}\frac{\mathrm dr}{\mathrm dt}=\sigma \pi 2r\frac{\mathrm dr}{\mathrm dt}.$$ Odsud
 $$
 \frac{\mathrm dr}{\mathrm dt}=\frac 1{2\pi r\sigma}\frac{\mathrm dN}{\mathrm dt}
 $$

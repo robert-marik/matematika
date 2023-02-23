@@ -152,17 +152,14 @@ slidu již rovnou zvolíme vhodnou bázi a matice, která bude sice
 impozantních rozměrů $6\times 6$, bude plná nul a proto relativně pěkná. 
 
 **Příklad.**
-Pro matice $A=
-\begin{pmatrix}
+Pro matice $A= \begin{pmatrix}
   1 & 0 \\ 1 &2
 \end{pmatrix}$
-a $P=
-\begin{pmatrix}
+a $P= \begin{pmatrix}
   0& -1 \\ 1 &1
 \end{pmatrix}$
 platí (po chvilce počítání)
-$$  P^{-1}AP=
-\begin{pmatrix}
+$$  P^{-1}AP= \begin{pmatrix}
   2& 0 \\ 0 & 1
 \end{pmatrix}.
 $$
@@ -197,6 +194,8 @@ Stejným způsobem se transformují i fyzikální veličiny veličiny popisovan�
 
 https://youtu.be/7Oi3ruVNUzI
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: A. Požgaj a kol., Štruktúra a vlastnosti drevá. ](pozgaj.jpg)
@@ -206,6 +205,8 @@ https://youtu.be/7Oi3ruVNUzI
 ![U šikmého lepeného spoje se používá transformace do roviny spoje k posouzení únosnosti tohoto spoje. Lepidlo má definovanou pevnost spoje při normálovém a smykovém namáhání a transformace nám prozradí, jak se předpokládané namáhání projeví v těchto směrech a zda lepidlo spoj udrží.](spoj_drevo_sikmy.jpg)
 
 </div>
+
+\fi
 
 V knize A. Požgaj a kol., Štruktúra a vlastnosti drevá, je následující
 úloha (str. 322, vydání 1997, ISBN 80-07-00960-4). Dřevo v konfiguraci podle obrázku je namáháno pouze tahovou
@@ -269,10 +270,8 @@ a analogicky
 $\frac{\mathrm d}{\mathrm d\theta}S^2=2SC$, $\frac{\mathrm d}{\mathrm d\theta}CS=-S^2+C^2$ derivace 
 $$
 \begin{aligned}
-  \frac{\mathrm d a'_{11}}{\mathrm d\theta}&=
-  -2CSa_{11}+2SCa_{22}+2(C^2-S^2)a_{12}=2a'_{12},\\
-  \frac{\mathrm d a'_{22}}{\mathrm d\theta}&=
-  2SCa_{11}-2CSa_{22}+2(S^2-C^2)a_{12}=-2a'_{12}.\\
+  \frac{\mathrm d a'_{11}}{\mathrm d\theta}&=   -2CSa_{11}+2SCa_{22}+2(C^2-S^2)a_{12}=2a'_{12},\\
+  \frac{\mathrm d a'_{22}}{\mathrm d\theta}&=   2SCa_{11}-2CSa_{22}+2(S^2-C^2)a_{12}=-2a'_{12}.\\
 \end{aligned}
 $$
 To znamená, že lokální extrémy diagonálních prvků nastávají v
@@ -424,8 +423,7 @@ s absolutní hodnotou může dojít jedině v případě, že matice $A$ je
 $$
     \begin{vmatrix}
       a &b\\ c& d
-    \end{vmatrix}
-=ad-bc
+    \end{vmatrix} =ad-bc
 $$
 
 Tento determinant je roven nule právě tehdy, když je jeden řádek
@@ -519,8 +517,7 @@ Ukážeme si postup na jednoduchém příkladě. Pro srovnání je možno postup
 
 **Příklad.**
 Odvodíme diagonální tvar tenzoru napětí
-$$A=
-\begin{pmatrix}
+$$A= \begin{pmatrix}
   20 & 30 \\ 30 & -10
 \end{pmatrix}.
 $$
@@ -540,8 +537,7 @@ A-\lambda_1 I\approx
 \end{pmatrix}
 $$
 a nulami vpravo.
-Přibližným řešením je vektor $\vec u_1=
-\begin{pmatrix}
+Přibližným řešením je vektor $\vec u_1= \begin{pmatrix}
   30 \\ 18.54
 \end{pmatrix}$. (Toto plyne z první rovnice, druhá rovnice musí být splněna automaticky, protože jsme použili vlastní hodnotu a soustava musí mít nenulové řešení. Nicméně výpočet je zatížen zaokrouhlovací chybou.) Po vydělení normou vektoru dostáváme
 $\begin{pmatrix}
@@ -550,8 +546,7 @@ $\begin{pmatrix}
 Druhý vlastní vektor je kolmý, tj. $\begin{pmatrix}
   -0.526 \\ 0.851 
 \end{pmatrix}$.
-Po transformaci maticí $P=
-\begin{pmatrix}
+Po transformaci maticí $P= \begin{pmatrix}
   0.851 & -0.526 \\ 0.526 & 0.851
 \end{pmatrix}$ [dostáváme (na dvě desetiná místa)](https://sagecell.sagemath.org/?z=eJxtkF1rgzAUhu8F_0OgN4n4kVg2ykCG7A94tV6IjEyzmlkTSeLR_vtZXUthg8DJ4bzvcz52qHVusC9JMk1TfNGjGz9FXOs-mbir21fI5mZ-H94OT8-99b0867kzcsZlmdJwT6uw3NMwYrSqCEI7tFRlLXzvmOWxkCehQNROG_th5Kl1mPgesEzhY8mq66ObazCgJIIzt-4aRbdYViWwBFistOnxIlyVAnSDFEffolHadRr0iBpx7sbFkK5o-ohuzNhe_qLTLII0gfTO_hd9Jxf3tYGFkFYkdoYrO2grNvOafi0sXi9tblewrZ5wQX4_CnMrFY6KbUISsANNBkludYSLRywJ8qBA5Ac7KIR8&lang=sage&interacts=eJyLjgUAARUAuQ==)
 $$P^{T}\begin{pmatrix}
@@ -623,8 +618,7 @@ umístit do soustavy souřadnic tak, aby byl invariantní vůči symetrii
 podle jednotlivých průměten. Poté je [možné
 odvodit](https://en.wikipedia.org/wiki/Orthotropic_material#Stiffness_and_compliance_matrices_in_orthotropic_elasticity),
 že nejobecnější možný tvar matice $S$ je
-$$ S=
-   \begin{pmatrix}
+$$ S=    \begin{pmatrix}
   S_{11} & S_{12} & S_{13} & 0 & 0 & 0 \\
 S_{12} & S_{22} & S_{23} & 0 & 0 & 0  \\
 S_{13} & S_{23} & S_{33} & 0 & 0 & 0 \\

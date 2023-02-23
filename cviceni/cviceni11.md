@@ -19,8 +19,7 @@ Okomentujte, jak předpoklady o vlastnostech materiálu a o modelovaném procesu
 :nonumber:
 
 Difuzní rovnice ve 2D v kartézských souřadnicích má tvar
-$$\frac{\partial u}{\partial t}
-=\sigma +
+$$\frac{\partial u}{\partial t} = \sigma +
 \frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right)
 +
 \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right)
@@ -164,8 +163,7 @@ $$T(x,y)=2y^2+x^3.$$
 Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která rozměr opraví tak, aby výsledek opravdu vycházel ve stupních Celsia. Pro jednoduchost tuto komplikaci vynecháme.)
 
 1. Vypočtěte gradient $\nabla T$  a tok tepla $-\lambda \cdot \nabla T.$
-Součinitel tepelné vodivosti (pro jednoduchost s celými čísly a bez jednotky) je $\lambda=
-  \begin{pmatrix}
+Součinitel tepelné vodivosti (pro jednoduchost s celými čísly a bez jednotky) je $\lambda=   \begin{pmatrix}
     5 & 1\\1&2
   \end{pmatrix}.$ 
 1. Určete, zda na levém okraji desky ($x=0$) teče teplo dovnitř desky nebo z desky ven.
@@ -183,27 +181,12 @@ $$
   \frac{\partial T}{\partial y}&=4y.\\
 \end{aligned}
 $$
-Odsud dostáváme gradient $$\nabla T=
-\begin{pmatrix}
+Odsud dostáváme gradient $$\nabla T= \begin{pmatrix}
   3x^2 \\ 4y
 \end{pmatrix}
 $$
 a tok	 tepla
-$$
-\vec q=-\lambda \nabla T=-(3x^2)
-\begin{pmatrix}
-  5 \\ 1
-\end{pmatrix}
--4y
-\begin{pmatrix}
-1\\2  
-\end{pmatrix}
-=
-\begin{pmatrix}
-  -15 x^2 -4y\\-3x^2-8y
-\end{pmatrix}
-.
-$$
+$$ \vec q=-\lambda \nabla T=-(3x^2) \begin{pmatrix}   5 \\ 1 \end{pmatrix} -4y \begin{pmatrix} 1\\2   \end{pmatrix} =  \begin{pmatrix}   -15 x^2 -4y\\-3x^2-8y \end{pmatrix} . $$
 1. Pro $x=0$  a $y>0$ je první komponenta toku záporná a teplo teče doleva, tj. ven z desky.
 1. Divergence je
 $$\nabla \cdot\vec q=\frac{ \partial}{\partial x} (-15x^2-4y)+\frac{\partial }{\partial y}(-3x^2-8y) = -30x-8.$$

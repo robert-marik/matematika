@@ -40,9 +40,7 @@ $$
 \end{pmatrix}
 \begin{pmatrix}
   x_1\\x_2\\x_3
-\end{pmatrix}
-=
-\begin{pmatrix}
+\end{pmatrix} =  \begin{pmatrix}
   3\\1\\-1
 \end{pmatrix}
 $$
@@ -62,9 +60,7 @@ $$
 \end{pmatrix}
 \begin{pmatrix}
   x_1 \\ x_2 \\x_3\\x_4
-\end{pmatrix}
-=
-\begin{pmatrix}
+\end{pmatrix} =  \begin{pmatrix}
   0 \\ 0 \\0\\0
 \end{pmatrix}
 $$

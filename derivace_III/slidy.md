@@ -311,8 +311,7 @@ Pokud chceme minimalizovat tepelné ztráty $Q$, musíme maximalizovat jmenovate
 $$f(R)=\frac 1k \ln \frac{R}{r}+\frac 1{h R}=\frac 1k \ln R -\frac 1k \ln r+\frac 1{h} R^{-1}.$$
 Ostatní veličiny jsou totiž konstantní. 
 Platí 
-$$\frac {\mathrm d f}{\mathrm dR}=\frac 1k \frac 1R+\frac 1h (-1)R^{-2}
-=\frac {Rh-k}{khR^2}.$$
+$$\frac {\mathrm d f}{\mathrm dR}=\frac 1k \frac 1R+\frac 1h (-1)R^{-2} =\frac {Rh-k}{khR^2}.$$
 Derivace je nulová pro $$R=\frac kh$$ a v okolí tohoto bodu mění
 znaménko ze záporného na kladné. Proto má funkce $f(R)$ v tomto bodě
 minimum. To odpovídá maximu funkce $Q$. Hodnota $R=\frac kh$ tedy

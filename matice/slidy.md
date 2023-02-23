@@ -173,23 +173,18 @@ do města.
 
 **Matematický model:**
 Procentuální složení zaznamenáváme ve formě
-vektoru. Na počátku bude $$ \vec q_0=
-\begin{pmatrix}
+vektoru. Na počátku bude $$ \vec q_0= \begin{pmatrix}
   0.6 \\ 0.4
 \end{pmatrix}.
 $$
 Po jednom roce je rozložení populace dáno vektorem
-$$ \vec q_1=
-\begin{pmatrix}
+$$ \vec q_1= \begin{pmatrix}
   0.95 \\ 0.05 
 \end{pmatrix}
-0.6
-+
-\begin{pmatrix}
+0.6 + \begin{pmatrix}
   0.03 \\ 0.97
 \end{pmatrix}
-0.4
-.
+0.4 .
 $$
 Intenzita migrace jednotlivými směry je ve sloupcových vektorech na
 pravých stranách. Koeficienty v této lineární kombinaci jsou
@@ -363,8 +358,7 @@ diagonálu. Tato matice se nazývá *jednotková matice* a označuje
 $I$. Mají-li čtvercové matice $A$ a $I$ stejný počet řádků a sloupců,
 platí $$AI=IA=A.$$ 
 
-Například pro matice $3\times 3$ je jednotková matice $$ I=
-\begin{pmatrix} 1&0&0\\ 0&1&0\\ 0&0&1 \end{pmatrix} .$$ Je-li $A$
+Například pro matice $3\times 3$ je jednotková matice $$ I= \begin{pmatrix} 1&0&0\\ 0&1&0\\ 0&0&1 \end{pmatrix} .$$ Je-li $A$
 matice $3\times 3$, kterou násobíme zprava maticí $I$, výsledná matice
 $AI$ bude mít tři sloupce (matice $I$ má tři sloupce), v prvním
 sloupci bude první sloupec matice $A$ (lineární kombinace sloupců
@@ -696,8 +690,7 @@ https://youtu.be/Toqwz-Oxg-4
 ```
 
 
-**Příklad.** Matice transponovaná k matici $A=
-\begin{pmatrix}
+**Příklad.** Matice transponovaná k matici $A= \begin{pmatrix}
   1& -2& 3\\
   0& 1 &3\\
   2& 1 &9

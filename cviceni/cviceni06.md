@@ -90,8 +90,7 @@ $$Q=-k\frac{\mathrm dT}{\mathrm dx}$$
 udává derivaci teploty podle polohy ve tvaru
 $$\frac{\mathrm dT}{\mathrm dx}=-\frac Qk$$
 a integrací na intervalu $x\in [0,d]$ dostáváme
-$$T(d)-T(0)=\int _0^d -\frac Qk\,\mathrm dx=-\frac Qk\int _0^d \mathrm dx=
--\frac Qk d.$$
+$$T(d)-T(0)=\int _0^d -\frac Qk\,\mathrm dx=-\frac Qk\int _0^d \mathrm dx= -\frac Qk d.$$
 Pro $T(0)=T_1$ a $T(d)=T_2$ dostáváme
 $$T_2-T_1=-\frac Qk d$$
 a odsud
@@ -223,17 +222,14 @@ Nechť výchozí stav je rok $t=0$.
 
 Bez znečištění:
 Pokud je $N(t)$ počet jedinců po roce $t$, platí
-$$N(10)=N(0)+\int_0^{10} R(t)\,\mathrm dt=5600+\int_0^{10} 720 e^{0.1 t}\,\mathrm dt=
-5600+\left[7200 e^{0.1t}\right]_0^{10}\approx 18000,
+$$N(10)=N(0)+\int_0^{10} R(t)\,\mathrm dt=5600+\int_0^{10} 720 e^{0.1 t}\,\mathrm dt= 5600+\left[7200 e^{0.1t}\right]_0^{10}\approx 18000,
 $$
 kde integrál se dá vypočítat přímou integrací pomocí vzorce.
 
 Se znečištěním: Jedinci, kteří jsou v populaci na začátku, musí přežít 10 let, to znamená, že se jejich počet sníží na $S(10)$-násobek. Jedinci, kteří se narodí v roce $t$ musí přežít $10-t$ let a to znamená, že jejich počet se sníží na $S(10-t)$-násobek. Toto snížení musíme započítat do předchozího modelu bez znečištění a dostaneme
 $$
 \begin{aligned}
-N(10)&=N(0)S(10)+\int_0^{10} R(t)S(10-t)\,\mathrm dt=\\&=5600 e^{-2}+\int_0^{10} 720 e^{0.1 t}e^{-0.2(10-t)}\,\mathrm dt\\&=
-5600 e^{-2}+720 e^{-2} \int_0^{10}  e^{0.3 t}\,\mathrm dt=
-\cdots =7000,
+N(10)&=N(0)S(10)+\int_0^{10} R(t)S(10-t)\,\mathrm dt=\\&=5600 e^{-2}+\int_0^{10} 720 e^{0.1 t}e^{-0.2(10-t)}\,\mathrm dt\\&= 5600 e^{-2}+720 e^{-2} \int_0^{10}  e^{0.3 t}\,\mathrm dt= \cdots =7000,
 \end{aligned}
 $$
 kde i tento integrál se dá vypočítat přímou integrací pomocí vzorce.

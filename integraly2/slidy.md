@@ -51,13 +51,11 @@ Směrem radiálně od osy se tlaková síla rozkládá na celou plochu pláště
 Vypočteme poslední složku přispívající k namáhání pláště válce, obvodové napětí. K tomu musíme vypočítat sílu, která působí po obvodě válce, tj. která se snaží válec roztrhnout v řezu B. Tento řez má obsah (červeně vyznačeno) $2Lt$. Nejtěžší bude najít celkovou sílu, která od sebe oddaluje dvě poloviny pláště. To je místo, kde zapojíme integrál. 
 
 Kousek pláště válce odpovídající úhlu $\Delta \alpha$ má obsah $rL\Delta \alpha$ a tlaková síla na tento kousek je součin tlaku a obsahu, tj. $$\Delta F=pS=p Lr\Delta \alpha .$$ Směr je kolmý k plášti válce a s vodorovnou osou svírá úhel $\alpha$.  Průmět této síly do vodorovného směru je $$\Delta F_x=pLr\Delta \alpha \cos \alpha$$ a tyto příspěvky musíme posčítat na intervalu $\alpha \in \left[-\frac\pi 2,\frac \pi 2\right]$. Celková síla, která se snaží nádobu roztrhnout podélně je 
-\dm$$F_x=\int_{-\frac \pi2}^{\frac \pi 2} prL \cos \alpha \,\mathrm d \alpha 
-=prL [\sin \alpha]_{-\frac \pi 2}^{\frac \pi 2}=prL \left[\sin\frac \pi 2 -\sin\left(-\frac \pi2 \right)\right]=2p rL.$$ Povrch na který tato síla působí odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah $2Lt$ a napětí je tedy 
+\dm$$F_x=\int_{-\frac \pi2}^{\frac \pi 2} prL \cos \alpha \,\mathrm d \alpha  =prL [\sin \alpha]_{-\frac \pi 2}^{\frac \pi 2}=prL \left[\sin\frac \pi 2 -\sin\left(-\frac \pi2 \right)\right]=2p rL.$$ Povrch na který tato síla působí odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah $2Lt$ a napětí je tedy 
 $$\sigma_{h}=\frac{2pLr}{2Lt}=\frac{pr}t=2\sigma_p.$$ Vidíme, že toto napětí je dvojnásobkem napětí v podélné ose. 
 
 Ještě je vhodné ověřit, že svislý průmět, tj . $$\Delta F_y=pLr\Delta \alpha \sin \alpha$$ k namáhání nepřispívá, protože 
-\dm$$F_y=\int_{-\frac \pi2}^{\frac \pi 2} prL \sin \alpha \,\mathrm d \alpha 
-=0.$$ To však je možné očekávat i ze symetrie.
+\dm$$F_y=\int_{-\frac \pi2}^{\frac \pi 2} prL \sin \alpha \,\mathrm d \alpha  =0.$$ To však je možné očekávat i ze symetrie.
 
 Pokud se chcete dozvědět více, zkuste Google a heslo "hoop stress".
 
@@ -256,9 +254,7 @@ W=F|\Delta h|=-h\tau g \Delta h.$$
 
 Při povytažení o 10 metrů řetěz vytahujeme spojitě od $h_1=30$ po
 $h_2=20$. Celková práce je
-$$\begin{aligned}W&=\int_{h_1}^{h_2}-h\tau g\,\mathrm dh=\tau g\int_{h_2}^{h_1}h\,\mathrm dh
-=\tau g\left[\frac 12 h^2\right]_{h_2}^{h_1}\\&
-=\tau g\left[\frac 12 h_1^2 - \frac 12 h_2^2\right]=\frac 12 \tau g (h_1^2-h_2^2)
+$$\begin{aligned}W&=\int_{h_1}^{h_2}-h\tau g\,\mathrm dh=\tau g\int_{h_2}^{h_1}h\,\mathrm dh =\tau g\left[\frac 12 h^2\right]_{h_2}^{h_1}\\& =\tau g\left[\frac 12 h_1^2 - \frac 12 h_2^2\right]=\frac 12 \tau g (h_1^2-h_2^2)
 \\&=\frac 12 \tau g (h_1-h_2)(h_1+h_2).
 \end{aligned}
 $$
@@ -606,10 +602,7 @@ Ve druhém integrálu bychom potřebovali dostat jedničku v dolní mezi,
 abychom dostali integrál stejný jako v definici funkce $f$. Proto
 zavedeme substituci $\frac ta=s$, $t=sa$, $\mathrm dt=a\mathrm ds$. S
 použitím této substituce se {eq}`i**` transformuje na
-$$f(ab)
-=f(a)+\int_1^{b}\frac 1{sa} a\,\mathrm ds
-=f(a)+\int_1^{b}\frac 1{s} \,\mathrm ds
-=f(a)+f(b).$$
+$$f(ab) =f(a)+\int_1^{b}\frac 1{sa} a\,\mathrm ds =f(a)+\int_1^{b}\frac 1{s} \,\mathrm ds =f(a)+f(b).$$
 
 Pokud si všimneme, že integrál {eq}`i*` v definici funkce $f$ je možné
 vypočítat a že funkce $f$ je vlastně funkce $\ln x$, není vlastnost,
@@ -636,11 +629,9 @@ Protože jsme se zabývali připadem, kdy je proměnná jenom v horní mezi a na
 integrálu vzhledem k mezi a psát
 $$
 \begin{aligned}
-\overline I(t_0)&=
-\frac 1{12\times 5}\int_{t_0}^{0} I(t)\,\mathrm dt +
+\overline I(t_0)&= \frac 1{12\times 5}\int_{t_0}^{0} I(t)\,\mathrm dt +
 \frac 1{12\times 5}\int_{0}^{t_0+12\times 5} I(t)\,\mathrm dt
-\\&=
--\frac 1{60}\int_{0}^{t_0} I(t)\,\mathrm dt +
+\\&= -\frac 1{60}\int_{0}^{t_0} I(t)\,\mathrm dt +
 \frac 1{60}\int_{0}^{t_0+60} I(t)\,\mathrm dt
 .
 \end{aligned}
@@ -662,29 +653,19 @@ $t_0=90+120k$, kde $k$ je libovolné celé číslo.
 \dm $$ \cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right)+2 = \cos\left(\frac \pi 6 (t+60)\right)+\cos\left(\frac \pi {120} (t+60)\right)+2 $$
 tj. (následující výpočty jsou sice dlouhé, ale jedná se běžnou středoškolskou matematiku a práci s goniometrickými funkcemi)
 $$
-\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right)
-=
-\cos\left(\frac \pi 6 t+ 10\pi\right)+\cos\left(\frac \pi {120} t+\frac 12\pi\right)
+\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right) = \cos\left(\frac \pi 6 t+ 10\pi\right)+\cos\left(\frac \pi {120} t+\frac 12\pi\right)
 $$
 $$
-\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right)
-=
-\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t+\frac 12\pi\right)
+\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right) = \cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t+\frac 12\pi\right)
 $$
 $$
-\cos\left(\frac \pi {120} t\right)
-=
-\cos\left(\frac \pi {120} t+\frac 12\pi\right)
+\cos\left(\frac \pi {120} t\right) = \cos\left(\frac \pi {120} t+\frac 12\pi\right)
 $$
 $$
-\cos\left(\frac \pi {120} t\right)
-=
--\sin\left(\frac \pi {120} t\right)
+\cos\left(\frac \pi {120} t\right) = -\sin\left(\frac \pi {120} t\right)
 $$
 $$
-\tan\left(\frac \pi {120} t\right)
-=
--1
+\tan\left(\frac \pi {120} t\right) = -1
 $$
 Tato rovnice má řešení $\frac \pi {120} t=\frac 34\pi +k\pi$ tj.
 $t=90+120k$.

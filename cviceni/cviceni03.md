@@ -83,9 +83,7 @@ získané lineární aproximace nazývá *invazní parametr*._
 \left(1-\frac xK\right)$,
 $x_0=0$, $f(0)=r0
 \left(1-\frac 0K\right)=0$,
-$f'(x)=
-\left(rx-r\frac 1K x^2\right)'
-=r-\frac{2r}K x$, $f'(0)=r-\frac{2r}{K} \cdot 0=r$
+$f'(x)= \left(rx-r\frac 1K x^2\right)' = r-\frac{2r}K x$, $f'(0)=r-\frac{2r}{K} \cdot 0=r$
   $$rx\left(1-\frac xK\right)\approx 0+r(x-0)=rx$$
 1. $f(x)=rx\left(1-\frac xK\right)$, $x_0=K$, $f(K)=rK\left(1-\frac KK\right)=rK(1-1)=0$, $f'(x)=\left(rx-r\frac 1K x^2\right)'=r-\frac{2r}K x$, $f'(K)=r-\frac{2r}{K} \cdot K=r-2r=-r$
   $$rx\left(1-\frac xK\right)\approx 0-r(x-K)=-r(x-K)=r(K-x)$$
@@ -136,8 +134,9 @@ kde v hranaté závorce je lineární aproximace funkce $g$ a tato aproximace je
 
 Situace je jednoduchá zejména v případě, kdy funkce $g$ je lineární a
 je sama svojí lineární aproximací. Ukažte, že s uvedenou výbavou je možno
-napsat lineární aproximace prvních tří funkcí z příkladu
-\ref{aproximace} přímo a bez výpočtu. Ukažte, že výpočet není nutný a výsledek se dá kvalifikovaně odhadnout i v
+napsat lineární aproximace prvních funkcí $y=xe^x$ v okolí bodu $x=0$
+a $y=rx\left(1-\frac xK\right)$ v okolí bodů $x=0$ a $x=K$ (jeden z předchozích příkladů)
+  přímo a bez výpočtu. Ukažte, že výpočet není nutný a výsledek se dá kvalifikovaně odhadnout i v
 předchozím příkladě s kinetikou Michaelise a Mentenové. Pro tyto účely použijte triviální identitu
 $$
   \frac {ax}{b+x}=x\cdot\frac {a}{b+x}.

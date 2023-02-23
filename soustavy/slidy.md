@@ -81,8 +81,7 @@ $$    \begin{pmatrix}
     \begin{pmatrix}
       a_{1n}\\a_{2n}\\\vdots\\a_{mn}
     \end{pmatrix}
-    x_n=
-    \begin{pmatrix}
+    x_n=     \begin{pmatrix}
       b_{1}\\b_{2}\\\vdots\\b_{m}
     \end{pmatrix}.
  $$

@@ -134,8 +134,7 @@ popisující úbytek hladiny vody v nádrži tvaru kvádru, ze které vypouští
 
 1. Zkontrolujte, že pro $h>0$ má každá počáteční úloha jediné řešení. Interpretujte tento výsledek prakticky.
 1. Pro $h=0$ by řešení nemuselo být určeno jednoznačně. A opravdu
-  není. Řešením je například $h(t)=0$ nebo $$h(t)=
-  \begin{cases}
+  není. Řešením je například $h(t)=0$ nebo $$h(t)=   \begin{cases}
     \frac 14 k^2 t^2 & t<0\\
     0 & t\geq 0.
   \end{cases}$$
@@ -163,8 +162,7 @@ Pokud je tedy v nádrži nějaká voda, je jednoznačně dáno, jak bude vytéka
 Ad 2: Pro $h=\frac 14 k^2 t^2$ a $t<0$ dostáváme
     $$\begin{aligned}
       \frac{\mathrm dh}{\mathrm dt}&=\frac 14 k^2 \cdot 2t = \frac 12 k^2 t\\
-      -k\sqrt h&=-k\sqrt{\frac 14 k^2 t^2} = - k \frac 12 |k| \cdot |t| =
-      - k \frac 12 k (-t) = \frac 12 k^2 t
+      -k\sqrt h&=-k\sqrt{\frac 14 k^2 t^2} = - k \frac 12 |k| \cdot |t| =       - k \frac 12 k (-t) = \frac 12 k^2 t
     \end{aligned}  $$
     a obě strany rovnice jsou stejné. Pro $h=0$ je dosazení triviální.
 

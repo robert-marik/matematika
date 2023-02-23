@@ -154,8 +154,7 @@ nadmořská výška klesá s časem (vozidlo jede z kopce).
 Pomocí derivace složené funkce platí
 $$\frac{\mathrm dp}{\mathrm dt}=\frac{\mathrm dp}{\mathrm du} \cdot \frac{\mathrm du}{\mathrm dt}=-0.12
 \,\mathrm{g}\,\mathrm{cm}^{-2}\mathrm{m}^{-1}\times
-(-3\,\mathrm{m}\,\mathrm{s}^{-1})
-=0.36 \,\mathrm{g}\,\mathrm{cm}^{-2}\mathrm{s}^{-1}.
+(-3\,\mathrm{m}\,\mathrm{s}^{-1}) = 0.36 \,\mathrm{g}\,\mathrm{cm}^{-2}\mathrm{s}^{-1}.
 $$
 Tlak roste rychlostí $0.36$ gramů na centimetr čtvereční za sekundu.
 ```
@@ -189,8 +188,7 @@ Tyto derivace vyjadřují změnu objemu a povrchu pláště kužele, pokud se ku
 
 Z rovnice pro objem dostáváme
 $$r=\left(\frac {9}{4\pi}\right)^{1/3}V^{1/3}$$ a po dosazení
-$$S=\frac 53 \pi r^2 = \frac 53 \pi \left(\frac {9}{4\pi}\right)^{2/3}V^{2/3}
-=5\pi^{1/3}\left (\frac 3{16}\right)^{1/3} V^{2/3}$$
+$$S=\frac 53 \pi r^2 = \frac 53 \pi \left(\frac {9}{4\pi}\right)^{2/3}V^{2/3} = 5\pi^{1/3}\left (\frac 3{16}\right)^{1/3} V^{2/3}$$
 
 ```
 
@@ -250,8 +248,7 @@ $$
 a posečítat integrálem od země po výšku vysílače $H=340$.
 $$
   \begin{aligned}
-  m&=\int _0^{H}S\rho \,\mathrm d h \\&= \int_0^{H}S\rho_0 e^{-\frac {\rho _0 gh}{p_0}}\,\mathrm dh\\&=
-   S\rho_0\left[-\frac {p_0}{\rho _0 g} e^{-\frac {\rho _0 gh}{p_0}}\right]_0^{H}
+  m&=\int _0^{H}S\rho \,\mathrm d h \\&= \int_0^{H}S\rho_0 e^{-\frac {\rho _0 gh}{p_0}}\,\mathrm dh\\&=    S\rho_0\left[-\frac {p_0}{\rho _0 g} e^{-\frac {\rho _0 gh}{p_0}}\right]_0^{H}
  \\&=  S\rho_0\left[-\frac {p_0}{\rho _0 g} e^{-\frac {\rho _0 g H}{p_0}}+\frac {p_0}{\rho _0 g}\right]
  \\&=  \frac { Sp_0}{ g}\left[1- e^{-\frac {\rho _0 g H}{p_0}}\right]
 \end{aligned}
@@ -374,11 +371,9 @@ $C$ je přibližně po dvou letech.
 :class: dropdown
 :nonumber:
 
-$$C=e^{-0.25 T}\left[-\frac{0.32}{0.64}e^{-0.64 t}\right]_0^T=\cdots
-=\frac 12 e^{-0.25T}-\frac 12 e^{-0.89T}$$
+$$C=e^{-0.25 T}\left[-\frac{0.32}{0.64}e^{-0.64 t}\right]_0^T=\cdots = \frac 12 e^{-0.25T}-\frac 12 e^{-0.89T}$$
 Odsud
-$$\frac{\mathrm dC}{\mathrm dT}=
-\frac 12(-0.25) e^{-0.25T}-\frac 12 (-0.89) e^{-0.89T}$$
+$$\frac{\mathrm dC}{\mathrm dT}= \frac 12(-0.25) e^{-0.25T}-\frac 12 (-0.89) e^{-0.89T}$$
 a maximum je pokud je derivace nulová, tj. pokud
 $$
 \frac 12(-0.25) e^{-0.25T}-\frac 12 (-0.89) e^{-0.89T}=0.$$
@@ -419,8 +414,7 @@ $$
 \begin{aligned}
   \text{příjem}&=k_1S=\alpha r^2,\\
   \text{výdej}&=k_2V=\beta r^3,\\
-  \text{rychlost růstu objemu}&=k_3(  \text{příjem}-  \text{výdej}) =
-  k_3(  \alpha r^2 -\beta r^3) =r^2 (A-Br),
+  \text{rychlost růstu objemu}&=k_3(  \text{příjem}-  \text{výdej}) =   k_3(  \alpha r^2 -\beta r^3) =r^2 (A-Br),
 \end{aligned}
 $$
 kde $A=k_3\alpha$, $B=k_3\beta$, $\alpha=4\pi k_1$, \dots jsou konstanty.
@@ -839,9 +833,7 @@ $$\int_0^1 x^n\,\mathrm dx \qquad \text{a} \qquad \int_0^1
 zapojení teorie nekonečných řad, která ospravedlní integrování člen po
 členu a to, že v horní mezi je $x=1$, přestože řada pro $x=1$ nekonverguje) dává
 $$
-\int_0^1 \frac{1}{1+x^2}\,\mathrm dx
-=
-\int_0^1 1\,\mathrm dx
+\int_0^1 \frac{1}{1+x^2}\,\mathrm dx =  \int_0^1 1\,\mathrm dx
 -
 \int_0^1 x^2\,\mathrm dx
 +

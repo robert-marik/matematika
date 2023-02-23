@@ -253,8 +253,7 @@ Komponenty vektoru $\vec j=(j_x, j_y, j_z)^T$ jsou $$\begin{aligned}  j_x&=-k_{1
 
 V obecném případě je zpravidla možné transformovat soustavu souřadnic tak, aby tenzor $K$ byl diagonální. Pro praktické výpočty se toto však často nevyplatí. Pokud však je studovaný problém ortotropní, má charakteristické směry (přesněji, má tři roviny symetrie materiálových vlastností), je možné zvolit souřadnice v souladu s těmito směry a matice $K$ je diagonální. 
 
-$$K=
-\begin{pmatrix}
+$$K= \begin{pmatrix}
   k_{11}& 0 & 0\\
  0& k_{22} & 0\\
   0& 0 & k_{33}
@@ -327,8 +326,7 @@ Celkový tok $\vec q=(0,q_y,q_z)$ do krychle na obrázku je součtem toků levou
 $$Q_{in}=-q _y\Delta x \Delta z - q _z\Delta x \Delta y.$$
 Podobně tok ven z krychle je  $$Q_{out}=\left(q_z+\frac {\partial q_z}{\partial z}\Delta z\right)\Delta x\Delta y + \left(q_y+\frac {\partial q_y}{\partial y}\Delta y\right)\Delta x\Delta z$$
 a celková bilance je 
-$$Q_{in}+Q_{out}=
-\left(\frac {\partial q_y}{\partial y}+\frac {\partial q_z}{\partial z}\right)\Delta x\Delta y\Delta z.
+$$Q_{in}+Q_{out}= \left(\frac {\partial q_y}{\partial y}+\frac {\partial q_z}{\partial z}\right)\Delta x\Delta y\Delta z.
 $$
 V případě proudění i v ose $x$ bude přítomen ještě další analogický člen charakterizující tuto dodatečnou položku. 
 

@@ -647,8 +647,7 @@ Budeme studovat rotaci tyče o hmotnosti $m$ a délce $L$ okolo osy
 kolmé k tyči. Nechť je tyč položena podél osy $x$ a rotuje okolo osy
 $y$. Kousek tyče o délce $\Delta x$ má hmotnost $\frac{\Delta x}{L}m$
 a pokud je jeho vzdálenost od osy $y$ rovna $x$, příspěvek k celkovému
-momentu setrvačnosti je $$\Delta J= \frac{\Delta x}{L}m x^2
-=\frac{m}{L} x^2\Delta x.$$ Celkový moment setrvačnosti je dán
+momentu setrvačnosti je $$\Delta J= \frac{\Delta x}{L}m x^2 =\frac{m}{L} x^2\Delta x.$$ Celkový moment setrvačnosti je dán
 integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
 1. Pro tyč umístěnou levým koncem v počátku dostáváme moment vzhledem

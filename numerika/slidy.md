@@ -150,19 +150,14 @@ této sítě, tj. v rozích jednotlivých čtverců, na které je deska
 čtvercovou sítí rozdělena.
 
 Z přednášky o derivacích a aproximaci víme, že funkci můžeme aproximovat v okolí námi zvoleného bodu Taylorovým polynomem a v kapitole o diferenciálních rovnicích jsme tuto aproximaci použili pro aproximaci druhé derivace konečnými diferencemi ve tvaru $$f''(x)\approx \frac{1}{h^2}[f(x+h)-2f(x)+f(x-h)].$$ Podobně pro parciální derivace funkce dvou proměnných $f(x,y)$ dostáváme
-
 $$\begin{aligned}
 \frac {\partial ^2 f}{\partial x^2}&\approx \frac{1}{h^2}[f(x+h,y)-2f(x,y)+f(x-h,y)]\\
 \frac {\partial ^2 f}{\partial y^2}&\approx \frac{1}{h^2}[f(x,y+h)-2f(x,y)+f(x,y-h)]
 \end{aligned}
 $$
 a odsud
-\dm$$ \frac {\partial ^2 f}{\partial x^2} + \frac {\partial ^2 f}{\partial y^2} \approx \frac{1}{h^2}[f(x+h,y)+f(x-h,y)+f(x,y+h)+f(x,y-h)-4f(x,y)]. $$
-Z rovnice $$\frac {\partial ^2 f}{\partial x^2}
-+ \frac {\partial ^2 f}{\partial y^2}
-=0,$$
-popisující rozložení teploty vyplývá, že výraz v hranaté závorce musí být nulový, tj.
-$$f(x,y)=\frac 14 [f(x+h,y)+f(x-h,y)+f(x,y+h)+f(x,y-h)].$$
+\dm$$ \frac {\partial ^2 f}{\partial x^2} + \frac {\partial ^2 f}{\partial y^2} \approx \frac{1}{h^2}[f(x+h,y)+f(x-h,y)+f(x,y+h)+f(x,y-h)-4f(x,y)].$$
+Z rovnice $$\frac {\partial ^2 f}{\partial x^2} + \frac {\partial ^2 f}{\partial y^2} =0,$$ popisující rozložení teploty vyplývá, že výraz v hranaté závorce musí být nulový, tj. \dm$$f(x,y)=\frac 14 [f(x+h,y)+f(x-h,y)+f(x,y+h)+f(x,y-h)].$$
 To však znamená, že teplota v každém uzlovém bodě je průměrem teplot v
 okolních uzlových bodech. Přesně, jak jsme se (možná poněkud naivně)
 domnívali při představení úlohy v přednášce z lineární algebry. Nyní
