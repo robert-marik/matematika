@@ -66,25 +66,7 @@ nazýváme *rozšířenou maticí soustavy* {eq}`soustava1`.
 
   Soustavu {eq}`soustava1` lze ekvivalentně přepsat do vektorového
   tvaru
-$$    \begin{pmatrix}
-      a_{11}\\a_{21}\\\vdots\\a_{m1}
-    \end{pmatrix}
-    x_1+
-    \begin{pmatrix}
-      a_{12}\\a_{22}\\\vdots\\a_{m2}
-    \end{pmatrix}
-    x_2+
-    \begin{pmatrix}
-      a_{13}\\a_{23}\\\vdots\\a_{m3}
-    \end{pmatrix}
-    x_3+\cdots+
-    \begin{pmatrix}
-      a_{1n}\\a_{2n}\\\vdots\\a_{mn}
-    \end{pmatrix}
-    x_n=     \begin{pmatrix}
-      b_{1}\\b_{2}\\\vdots\\b_{m}
-    \end{pmatrix}.
- $$
+\dm $$    \begin{pmatrix}      a_{11}\\a_{21}\\\vdots\\a_{m1}    \end{pmatrix}    x_1+    \begin{pmatrix}      a_{12}\\a_{22}\\\vdots\\a_{m2}    \end{pmatrix}    x_2+    \begin{pmatrix}      a_{13}\\a_{23}\\\vdots\\a_{m3}    \end{pmatrix}    x_3+\cdots+    \begin{pmatrix}      a_{1n}\\a_{2n}\\\vdots\\a_{mn}    \end{pmatrix}    x_n=     \begin{pmatrix}      b_{1}\\b_{2}\\\vdots\\b_{m}    \end{pmatrix}. $$
   Vidíme tedy, že se vlastně jedná o problém, vyjádřit vektor složený
   z čísel na pravé straně soustavy rovnic jako  lineární
   kombinaci vektorů, které tvoří sloupce  matice
