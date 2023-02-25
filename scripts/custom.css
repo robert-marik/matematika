@@ -55,9 +55,9 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
 .WWotazka {
     margin-left:auto;
     margin-right: 0px;
-    font-weight:bold;
-    color:white !important;
-    background-color:#006131;
+    /*font-weight:bold; */
+    color:black !important; 
+    background-color:var(--hint-title-color);
     padding:3px;
     padding-left:8px;
     padding-right:8px;
@@ -65,6 +65,7 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
     margin-top:2px;
     margin-bottom:2px;
     display:inline-block;
+    cursor: pointer;
 }
 
 
@@ -112,6 +113,14 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
 
 figcaption {font-size: 60%;}
 
-#bd-toc-nav {background-color: #f4f4f4;} */
+#bd-toc-nav {background-color: #f4f4f4;}
 
-					 
+.admonition figure {max-width:50%; float:right;}
+.cviceni figure {max-width:50%; float:right;}
+
+.toggle-hidden figure {display:none;}
+
+.table img {max-width:200px;}
+
+.announcement {background-color: #C00 !important;}
+.announcement a {color:white !important;}
