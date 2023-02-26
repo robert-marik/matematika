@@ -15,6 +15,8 @@ sphinx-build -Ea ../ $directory -b html
 
 sed -i 's/<p>\\iffalse<\/p>//' $directory/*/*.html
 sed -i 's/<p>\\fi<\/p>//' $directory/*/*.html
+sed -i 's/<p>\\iffalse<\/p>//' $directory/*.html
+sed -i 's/<p>\\fi<\/p>//' $directory/*.html
 sed -i 's/<span>Example <\/span> (Řešení)/Řešení/' $directory/cviceni/cviceni*.html
 sed -i 's/<body /<body class="cviceni" /' $directory/cviceni/cviceni*.html
 
