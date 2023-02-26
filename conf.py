@@ -82,7 +82,7 @@ latex_elements = {
 
 html_js_files = [
     'custom.js',
-    'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js'
+#    'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js'
 ]
 latex_table_style = ['booktabs','colorrows']
 

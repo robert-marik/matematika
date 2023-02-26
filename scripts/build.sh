@@ -37,9 +37,9 @@ sed -i 's/<p>manim:\(.*\)|\(.*\)|\(.*\)<\/p>/<div class="obtekat"><figure><a hre
 
 sed -i 's/<p><img alt="\(.*\)" src="\(.*\)" \/><\/p>/<p><img src="\2" \/><figcaption>\1<\/figcaption><\/p>/' $directory/*/index.html
 
-sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/*/index.html
-sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
-sed -i 's/<body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
+#sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/*/index.html
+#sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
+#sed -i 's/<body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
 
 
 # Copy custom css file
