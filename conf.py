@@ -17,7 +17,15 @@ author = 'Robert Mařík'
 bibtex_bibfiles = []
 comments_config = {'hypothesis': False, 'utterances': False}
 copyright = '2022, 2023'
-exclude_patterns = ['**.ipynb_checkpoints', '.DS_Store', 'Thumbs.db','_build', 'reseni*', 'cviceni/cviceni14.md']
+exclude_patterns = [
+    '**.ipynb_checkpoints', 
+    '.DS_Store', 
+    'Thumbs.db',
+    '_build', 
+    'reseni*', 
+    'cviceni/cviceni14.md', 
+    'README.md'
+    ]
 execution_allow_errors = False
 execution_excludepatterns = []
 execution_in_temp = False
