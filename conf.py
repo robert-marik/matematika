@@ -37,8 +37,9 @@ extensions = [
     #'sphinx_jupyterbook_latex'
 ]
 oznameni = """
-Toto jsou webové stránky předmětu Matematika převedené do nové šablony. Stará verze je po nějaký čas k dispozici na  <a href="https://robert-marik.github.io/matematika-old">https://robert-marik.github.io/matematika-old</a> a nebude již udržována.
+Toto jsou učební texty předmětu Matematika převedené do nové šablony. Stará verze je po nějaký čas k dispozici na  <a href="https://robert-marik.github.io/matematika-old">https://robert-marik.github.io/matematika-old</a> a nebude již udržována.
 """
+extra_navbar = '<a href="https://user.mendelu.cz/marik/Matematika.pdf">Offline verze v PDF</a>'
 external_toc_exclude_missing = False
 external_toc_path = '_toc.yml'
 html_baseurl = ''
@@ -47,7 +48,7 @@ html_logo = ''
 html_show_copyright = False
 html_sourcelink_suffix = ''
 html_theme = 'sphinx_book_theme'
-html_theme_options = {'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n','announcement':'Toto je rozpracovaná verze učebního textu.','search_bar_text': 'Hledat v textu...', 'path_to_docs': '', 'repository_url': 'https://github.com/robert-marik/matematika', 'repository_branch': 'main', 'google_analytics_id': '', 'extra_navbar': 'Powered by <a href="https://jupyterbook.org">Jupyter Book</a>', 'home_page_in_toc': False, 'use_repository_button': False, 'use_edit_page_button': False, 'use_issues_button': False, 'announcement': oznameni}
+html_theme_options = {'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n','announcement':'Toto je rozpracovaná verze učebního textu.','search_bar_text': 'Hledat v textu...', 'path_to_docs': '', 'repository_url': 'https://github.com/robert-marik/matematika', 'repository_branch': 'main', 'google_analytics_id': '', 'extra_navbar': extra_navbar, 'home_page_in_toc': False, 'use_repository_button': False, 'use_edit_page_button': False, 'use_issues_button': False, 'announcement': oznameni}
 html_title = 'Matematika'
 jupyter_cache = ''
 jupyter_execute_notebooks = 'auto'
