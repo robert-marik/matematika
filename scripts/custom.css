@@ -110,3 +110,6 @@ figcaption {font-size: 60%;}
 .bd-header-announcement {background-color: #C00 !important;}
 .bd-header-announcement a {color:white !important;}
 
+.bd-sidebar-secondary {display: none;}
+.bd-main .bd-content .bd-article-container {max-width: 100%;}
+.secondary-toggle {display:none;}
