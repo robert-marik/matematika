@@ -556,7 +556,7 @@ Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky
 
 **Příklad.** Diferenciální rovnice tepelné výměny 
 
-$$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0$$ (NZ*)
+$$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0$$ (NZ-I)
 
 obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
@@ -566,13 +566,13 @@ a přeškálovat pomocí konstanty $k$ čas
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm d(kt)}=-\frac{T-T_\infty}{T_0-T_\infty}.$$
 Po substituci $y=\frac{T-T_\infty}{T_0-T_\infty}$, $x=kt$ má úloha tvar
 
-$$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1.$$ (NZ**)
+$$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1.$$ (NZ-II)
 
-Nová rovnice {eq}`NZ**` *neobsahuje žádné parametry* a proto je pro studium
+Nová rovnice {eq}`NZ-II` *neobsahuje žádné parametry* a proto je pro studium
 jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
-rovnici {eq}`NZ**`. Tuto informaci je však nutno interpretovat v kontextu
-definice nových proměnných. Například to, že všechna řešení rovnice {eq}`NZ**` konvergují k nule
-znamená, že všechna řešení rovnice {eq}`NZ*` konvergují k $T_0$. To, že řešení rovnice {eq}`NZ**` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`NZ*` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
+rovnici {eq}`NZ-II`. Tuto informaci je však nutno interpretovat v kontextu
+definice nových proměnných. Například to, že všechna řešení rovnice {eq}`NZ-II` konvergují k nule
+znamená, že všechna řešení rovnice {eq}`NZ-I` konvergují k $T_0$. To, že řešení rovnice {eq}`NZ-II` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`NZ-I` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
 
 \iffalse
 

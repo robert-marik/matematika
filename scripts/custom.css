@@ -20,17 +20,6 @@ body {
   line-height: 1.4;
 }
 
-.margin p {
-  color: gray; 
-  font-size: 80%;
-  line-height: 100%;
-}
-
-
-.sidebar-title {padding-top: 5px; padding-bottom: 5px; color:black !important;}
-
-.sidebar {background-color: var(--hint-title-color) !important; margin-top:10px !important;}
-
 img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; display:block;}
 
 .obtekat {max-width:45%; vertical-align:top; float: right;}
@@ -38,13 +27,6 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
 .obtekat img {max-width:95%;}
 
 .reseni {background-color:lightgray;}
-
-@media (min-width: 10px)
-{
-#main-content {
-  max-width: 100%; 
-}
-}
 
 .cviceni p img {max-width:50%; float:right; padding-left:10px;}
 .cviceni h2 {clear:both;}
@@ -56,7 +38,7 @@ img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; disp
     margin-left:auto;
     margin-right: 0px;
     /*font-weight:bold; */
-    color:black !important; 
+    color:#555 !important; 
     background-color:var(--hint-title-color);
     padding:3px;
     padding-left:8px;
@@ -125,4 +107,6 @@ figcaption {font-size: 60%;}
 .announcement {background-color: #C00 !important;}
 .announcement a {color:white !important;}
 
-.bd-toc {display:none !important;}
+.bd-header-announcement {background-color: #C00 !important;}
+.bd-header-announcement a {color:white !important;}
+

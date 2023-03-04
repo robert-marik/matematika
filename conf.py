@@ -26,10 +26,10 @@ exclude_patterns = [
     'cviceni/cviceni14.md', 
     'README.md'
     ]
-execution_allow_errors = False
-execution_excludepatterns = []
-execution_in_temp = False
-execution_timeout = 30
+#execution_allow_errors = False
+#execution_excludepatterns = []
+#execution_in_temp = False
+#execution_timeout = 30
 extensions = [
     'sphinx_togglebutton',
     'sphinx_copybutton',
@@ -56,10 +56,33 @@ html_logo = ''
 html_show_copyright = False
 html_sourcelink_suffix = ''
 html_theme = 'sphinx_book_theme'
-html_theme_options = {'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n','announcement':'Toto je rozpracovaná verze učebního textu.','search_bar_text': 'Hledat v textu...', 'path_to_docs': '', 'repository_url': 'https://github.com/robert-marik/matematika', 'repository_branch': 'main', 'google_analytics_id': '', 'extra_navbar': extra_navbar, 'home_page_in_toc': False, 'use_repository_button': False, 'use_edit_page_button': False, 'use_issues_button': False, 'announcement': oznameni}
+html_theme_options = {
+    'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n',
+    'search_bar_text': 'Hledat v textu...',
+    'path_to_docs': '',
+    'repository_url': 'https://github.com/robert-marik/matematika',
+    'repository_branch': 'main',
+    'home_page_in_toc': False,
+    'use_repository_button': False,
+    'use_edit_page_button': False,
+    'use_issues_button': False,
+    'use_download_button': False,
+    'use_fullscreen_button': False,
+    'announcement': oznameni,
+    #"collapse_navigation": True,
+    "navigation_with_keys": False,
+}
 html_title = 'Matematika'
-jupyter_cache = ''
-jupyter_execute_notebooks = 'auto'
+html_sidebars = {
+    "**": [
+        "navbar-logo.html",
+#        "offline-version.html",
+#        "search-field.html",
+        "sbt-sidebar-nav.html",
+    ]
+}
+#jupyter_cache = ''
+#jupyter_execute_notebooks = 'auto'
 latex_engine = 'xelatex'
 myst_enable_extensions = ['amsmath', 'dollarmath']
 myst_url_schemes = ['mailto', 'http', 'https']
@@ -84,7 +107,7 @@ html_js_files = [
     'custom.js',
 #    'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js'
 ]
-latex_table_style = ['booktabs','colorrows']
+latex_table_style = ['booktabs']
 
 notfound_urls_prefix = '/matematika/'
 latex_toplevel_sectioning = 'chapter'

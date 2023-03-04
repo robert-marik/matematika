@@ -604,22 +604,22 @@ Součin se na součet mění například u logaritmického pravítka.  Zdroj: pi
 
 Uvažujme funkci definovanou vztahem 
 
-$$f(x)=\int_1^x\frac 1t\,\mathrm dt.$$  (i*)
+$$f(x)=\int_1^x\frac 1t\,\mathrm dt.$$  (i-I)
 
 Ukážeme si, že tento tvar umožňuje odvodit některé vlastnosti funkce $f$. Dokážeme například, že funkce $f$ mění násobení na sčítání, tj. že platí $$f(ab)=f(a)+f(b).$$
 Podle definice je
 $$f(ab)=\int_1^{ab}\frac 1t \,\mathrm dt.$$
 Podle aditivity vzhledem k integračnímu oboru platí
 
-$$f(ab)=\int_1^{a}\frac 1t \,\mathrm dt+\int_a^{ab}\frac 1t \,\mathrm dt =f(a)+\int_a^{ab}\frac 1t \,\mathrm dt.$$ (i**)
+$$f(ab)=\int_1^{a}\frac 1t \,\mathrm dt+\int_a^{ab}\frac 1t \,\mathrm dt =f(a)+\int_a^{ab}\frac 1t \,\mathrm dt.$$ (i-II)
 
 Ve druhém integrálu bychom potřebovali dostat jedničku v dolní mezi,
 abychom dostali integrál stejný jako v definici funkce $f$. Proto
 zavedeme substituci $\frac ta=s$, $t=sa$, $\mathrm dt=a\mathrm ds$. S
-použitím této substituce se {eq}`i**` transformuje na
+použitím této substituce se {eq}`i-II` transformuje na
 $$f(ab) =f(a)+\int_1^{b}\frac 1{sa} a\,\mathrm ds =f(a)+\int_1^{b}\frac 1{s} \,\mathrm ds =f(a)+f(b).$$
 
-Pokud si všimneme, že integrál {eq}`i*` v definici funkce $f$ je možné
+Pokud si všimneme, že integrál {eq}`i-I` v definici funkce $f$ je možné
 vypočítat a že funkce $f$ je vlastně funkce $\ln x$, není vlastnost,
 že funkce mění násobení na sčítání nijak překvapivá. Pro nás však bylo
 důležité, že v důkaze jsme použili jenom definici funkce $f$ pomocí

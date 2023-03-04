@@ -340,10 +340,15 @@ Souvislost mezi chováním funkce a derivací této funkce
 
 manimp:PrubehFunkce|Derivace je ideální nástroj pro popis toho, jak rychle rostou nebo klesají funkční hodnoty funkce.
 
-Interpretace derivace v nematematických disciplínách je okamžitá
-rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
-studujeme veličiny závislé na čase s v tomto případě jde tedy o
-rychlost, s jakou se veličina mění v čase. Další možnosti a obraty používané pro slovní vyjádření derivace jsou zmíněny níže v podkapitole věnované derivaci podle času. Analogickou terminologii (rychlost růstu, rychlost změny) zpravidla přenášíme i na případy, kdy nezávislou proměnnou není čas. Rychlost potom chápeme v abstraktním slova smyslu.
+Interpretace derivace $\frac{\mathrm df}{\mathrm dx}$ v
+nematematických disciplínách je okamžitá rychlost s jakou veličina $f$
+reaguje na změny veličiny $x$. Často studujeme veličiny závislé na
+čase s v tomto případě jde tedy o rychlost, s jakou se veličina mění v
+čase. Další možnosti a obraty používané pro slovní vyjádření derivace
+jsou zmíněny níže v podkapitole věnované derivaci podle
+času. Analogickou terminologii (rychlost růstu, rychlost změny)
+zpravidla přenášíme i na případy, kdy nezávislou proměnnou není
+čas. Rychlost potom chápeme v abstraktním slova smyslu.
 
 Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivace $f'(x)$ často slovně interpretuje jako změna veličiny $f$, odpovídající změně veličiny $x$ o jednotku. Je to podobné, jako údaj o rychlosti na tachometru v automobilu. Ten udává, kolik kilometrů ujedeme za hodinu. Od skutečně uražené dráhy se tento údaj může lišit, protože pohyb může trvat třeba jenom deset minut. A kdyby jízda opravdu trvala hodinu, mohlo vlivem jízdy v zácpě dojít k podstatnému nesouladu se skutečně uraženou dráhou. Přesto je okamžitá rychlost ukazovaná na tachometru při jízdě automobilem užitečná veličina a nemáme problémy s jejím chápáním. Stejně tak pohlížejme na derivaci.
 
