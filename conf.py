@@ -43,6 +43,7 @@ extensions = [
     'sphinx_book_theme',
     'sphinx_proof',
     #'sphinx_jupyterbook_latex'
+    'sphinx_last_updated_by_git',
 ]
 oznameni = """
 Toto jsou učební texty předmětu Matematika převedené do nové šablony. Stará verze je po nějaký čas k dispozici na  <a href="https://robert-marik.github.io/matematika-old">https://robert-marik.github.io/matematika-old</a> a nebude již udržována.
