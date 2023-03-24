@@ -25,6 +25,8 @@ sed -i 's/Theorem/Věta/' $directory/*/index.html
 sed -i 's/Remark/Poznámka/' $directory/*/index.html
 sed -i 's/Definition/Definice/' $directory/*/index.html
 sed -i 's/Example/Příklad/' $directory/*/index.html
+sed -i 's/Podle Robert/Autor Robert/' $directory/*/*.html
+sed -i 's/Podle Robert/Autor Robert/' $directory/*.html
 sed -i 's/\\dm//' $directory/*/index.html
 sed -i 's/\\(/\\(\\displaystyle /g' $directory/*/index.html
 sed -i 's/\\(/\\(\\displaystyle /g' $directory/*/cviceni*.html
