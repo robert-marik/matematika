@@ -339,8 +339,8 @@ $$
 $$
   pro všechna
   $i=1..m$, $j=1..p$. Zapisujeme $${G=AB}$$ (v tomto pořadí).
-  >
-  >Slovy: v $j$-tém sloupci matice $AB$ je lineární kombinace sloupců matice $A$, přičemž koeficienty této lineární kombinace jsou prvky z $j$-tého sloupce matice $B$.
+  
+  Slovy: v $j$-tém sloupci matice $AB$ je lineární kombinace sloupců matice $A$, přičemž koeficienty této lineární kombinace jsou prvky z $j$-tého sloupce matice $B$.
 ```
 
 
