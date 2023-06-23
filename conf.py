@@ -45,9 +45,9 @@ extensions = [
     #'sphinx_jupyterbook_latex'
     'sphinx_last_updated_by_git',
 ]
-oznameni = """
-Toto jsou učební texty předmětu Matematika převedené do nové šablony. Stará verze je po nějaký čas k dispozici na  <a href="https://robert-marik.github.io/matematika-old">https://robert-marik.github.io/matematika-old</a> a nebude již udržována.
-"""
+#oznameni = """
+#Toto jsou učební texty předmětu Matematika převedené do nové šablony. Stará verze je po nějaký čas k dispozici na  <a href="https://robert-marik.github.io/matematika-old">https://robert-marik.github.io/matematika-old</a> a nebude již udržována.
+#"""
 extra_navbar = '<a href="https://user.mendelu.cz/marik/Matematika.pdf">Offline verze v PDF</a>'
 external_toc_exclude_missing = False
 external_toc_path = '_toc.yml'
@@ -69,7 +69,7 @@ html_theme_options = {
     'use_issues_button': False,
     'use_download_button': False,
     'use_fullscreen_button': False,
-    'announcement': oznameni,
+    #'announcement': oznameni,
     #"collapse_navigation": True,
     "navigation_with_keys": False,
 }
