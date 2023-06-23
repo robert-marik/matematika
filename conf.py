@@ -95,7 +95,7 @@ use_jupyterbook_latex = True
 use_multitoc_numbering = True
 myst_dmath_double_inline = True
 
-html_css_files = ['custom.css']
+html_css_files = ['custom.css?1']
 language = 'cs'
 myst_footnote_transition = False
 latex_elements = {

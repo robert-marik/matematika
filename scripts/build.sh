@@ -33,7 +33,9 @@ sed -i 's/\\(/\\(\\displaystyle /g' $directory/*/cviceni*.html
 
 sed -i 's/<p><code class="docutils literal notranslate"><span class="pre">ww2:\(.*\)<\/span><\/code><\/p>/<a onclick=otevrit("\1"); target="_blank" class="WWotazka">Testová otázka<\/a>/' $directory/*/index.html
 
-sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ycontainer"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' $directory/*/index.html
+# sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ycontainer"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' $directory/*/index.html
+
+sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ylink">  <a href="https:\/\/www.youtu.be\/\1">Minivideo<\/a> <\/div>/' $directory/*/index.html
 
 sed -i 's/<p>manimp:\(.*\)|\(.*\)<\/p>/<div class="obtekat"><figure><a href="https:\/\/user.mendelu.cz\/marik\/manim\/\1" target=_blank><img src="https:\/\/user.mendelu.cz\/marik\/manim\/thumbs\/\1.jpg"><\/a><figcaption>\2 <a href="\/marik\/manim\/\1" class=but-prez target=_blank>Otevřít prezentaci<\/a><\/figcaption><\/figure><\/div>/' $directory/*/index.html
 
