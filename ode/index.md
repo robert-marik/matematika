@@ -2,7 +2,7 @@
 
 https://youtu.be/gU6ClJwLFs0
 
-> V této přednášce se seznámíme s diferenciálními rovnicemi. To není nic jiného, než správný název pro to, čemu jsme dříve říkali matematické modely formulované pomocí derivace. Viděli jsme že tyto modely jsou v některých případech přirozeným matematickým aparátem pro popis reálně probíhajících dějů v přírodě. V přednášce se seznámíme se základním názvoslovím spojeným s touto problematikou, seznámíme se s metodami identifikace některých kvalitativních vlastností a u rovnic se separovanými proměnnými se naučíme hledat i analytické řešení. Protože se často setkáváme s modely nezávislými na čase, budeme se problematice těchto modelů věnovat podrobněji. Tyto modely mají tu vlastnost, že se ohraničená řešení po čase ustálí okolo stabilní hodnoty. Naučíme se hledat hodnoty odpovídající ustáleným řešením a z nich vybrat ty stabilní, k nimž systém může konvergovat, nebo nestabilní, které oddělují oblasti, ze kterých systém dospívá k jednotlivým stabilním stavům.
+> V této přednášce se seznámíme s diferenciálními rovnicemi. To není nic jiného, než správný název pro to, čemu jsme dříve říkali matematické modely formulované pomocí derivace. Viděli jsme že tyto modely jsou v některých případech přirozeným matematickým aparátem pro popis reálně probíhajících dějů v přírodě. V přednášce se seznámíme se základním názvoslovím spojeným s touto problematikou, seznámíme se s metodami p5 některých kvalitativních vlastností a u rovnic se separovanými proměnnými se naučíme hledat i analytické řešení. Protože se často setkáváme s modely nezávislými na čase, budeme se problematice těchto modelů věnovat podrobněji. Tyto modely mají tu vlastnost, že se ohraničená řešení po čase ustálí okolo stabilní hodnoty. Naučíme se hledat hodnoty odpovídající ustáleným řešením a z nich vybrat ty stabilní, k nimž systém může konvergovat, nebo nestabilní, které oddělují oblasti, ze kterých systém dospívá k jednotlivým stabilním stavům.
 
 ## Motivace
 
@@ -1029,7 +1029,7 @@ Využijeme tuto informaci k ukázce použití na příkladu nosníku s kombinova
 <div class='obtekat'>
 
 ```{figure} nosnik.jpg
-Příhradový nosník. Vzpěry jsou namáhány v ose. Teorii vybudoval v 18. století L. Euler, ale začala se dále rozvíjet a využívat až po [sérii pádů](https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures) příhradových železničních mostů v 19. století. Zdroj: www.ceskestavby.cz.
+Příhradový nosník. Vzpěry jsou namáhány v ose. Teorii vybudoval v 18. století L. Euler, ale začala se dále rozvíjet a využívat až po [sérii pádů](https://en.wikipedia.org/wiki/Cast_iron#Cast-iron_bridges) příhradových železničních mostů v 19. století. Zdroj: www.ceskestavby.cz.
 ```
 
 </div>
