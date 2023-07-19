@@ -283,8 +283,21 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 ### Příklad: kritická tloušťka izolace trubky
 
-<div class="shorten" data-text="Využití derivace hledání lokálního extrému funkce.">
+\iffalse
 
+<div class='obtekat'>
+
+```{figure} kotelna_trubky.jpg
+Na rozdíl od tepelné izolace rovné stěny, u trubek neplatí za každé situace že více izolace vede k menším ztrátám. Zdroj: pixabay.com
+```
+
+```{figure} izolovane_draty.jpg
+Elektrikáři vidí problém tepla poněkud jinak, než topenáři. Potřebují se tepla naopak zbavovat. Zdroj: pixabay.com
+```
+
+</div>
+
+\fi
 
 Následující příklad je poněkud překvapivý. Představme si, že
 potřebujeme obalit horkou trubku izolací, abychom snížili tepelné
@@ -333,17 +346,6 @@ přidávání další izolace paradoxně zvyšuje tepelné ztráty. Nazývá se 
 
 [Online graf funkce](https://sagecell.sagemath.org/?z=eJw1jkuOgzAQRPdI3KGlLGIzngDZc4JkM4h91CGOaOzYlmMswemnmc-upH6vqg8w6KCt07CliGmFEAlo89ZndAQpLnezwozGw3NxZtSQnZ7fNHkIDL10XH5wHPWpLA5wyWgpYaLMdmBbTwoccqux-ICkg_UJYdbAqnYIma9vfx9pnCD67UF2gb3ol1z_P0DwxlvijbIYbq0abuSeae1a1ZRFVFcObVkYNXXnPWSM4tgfZVl8iV525ypQda0Em59_pqxFW5vKOtHXUX60tZiqXrKwz4rdUqJXzYnrGqnWF7mukd96J18r&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
-\iffalse
-
-<div class='obtekat'>
-
-```{figure} izolovane_draty.jpg
-Elektrikáři vidí problém tepla poněkud jinak, než topenáři. Potřebují se tepla naopak zbavovat. Zdroj: pixabay.com
-```
-
-</div>
-
-\fi
 
 Při použití běžných materiálů pro izolaci vodovodních a topenářských
 trubek je kritický poloměr tak malý, že při praktické realizaci s
@@ -354,8 +356,6 @@ Inženýr, který má navrhnout izolaci elektrického vodiče ovšem vidí
 problém trochu jinak. Potřebuje naopak tepelné ztráty maximalizovat
 aby se vodič zbavoval tepla vytvořeného průchodem elektrického
 proudu. Proto by izolace neměla překročit kritický poloměr.
-
-</div>
 
 ````
 
