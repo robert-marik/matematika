@@ -14,6 +14,7 @@ sphinx-build -Ea ../ $directory -b html
 # sed -i 's/colab.research.google.com\/github\/robert-marik\/dmp\/blob\/main\/intro\.md/colab.research.google.com\/github\/robert-marik\/dmp\/blob\/gh-pages\/_sources\/intro.ipynb/' $directory/intro.html
 
 sed -i 's/<p>\\iffalse<\/p>//' $directory/*/*.html
+sed -i 's/Algorithm/Volitelný obsah/' $directory/*/*.html
 sed -i 's/\\bgroup//' $directory/*/*.html
 sed -i 's/\\scriptsize//' $directory/*/*.html
 sed -i 's/\\egroup//' $directory/*/*.html
