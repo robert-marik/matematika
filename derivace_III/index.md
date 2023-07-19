@@ -285,17 +285,6 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 <div class="shorten" data-text="Využití derivace hledání lokálního extrému funkce.">
 
-\iffalse
-
-<div class='obtekat'>
-
-```{figure} kotelna_trubky.jpg
-Na rozdíl od tepelné izolace rovné stěny, u trubek neplatí za každé situace že více izolace vede k menším ztrátám. Zdroj: pixabay.com
-```
-
-</div>
-
-\fi
 
 Následující příklad je poněkud překvapivý. Představme si, že
 potřebujeme obalit horkou trubku izolací, abychom snížili tepelné
