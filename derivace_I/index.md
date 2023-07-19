@@ -90,7 +90,18 @@ Některé stromy se při pohybu chovají spíše jako kyvadlo, jiné spíše jak
 * Při pohybu po předem stanovené dráze $s$ je čas nepřímo úměrný rychlosti $v$. Platí $t=\frac sv$. Konstantou úměrnosti je dráha $s$. Pro $v=1$ je čas přímo roven dráze. Proto je možno konstantu úměrnosti slovně vyjádřit tak, že udává čas, který je nutný pro projetí příslušné dráhy jednotkovou rychlostí.
 * Při periodickém pohybu je frekvence $f$ nepřímo úměrná periodě $T$. Příslušnou konstantou úměrnosti je jednička, tj. $f=\frac 1T$.
 * Objem $V$ koule o poloměru $r$ je přímo úměrný třetí mocnině poloměru. Existuje tedy konstanta $k$ taková, že platí $V=k r^3$. Pro $r=1$ je objem $V$ přímo roven konstantě $k$. Konstanta proto $k$ vyjadřuje objem koule jednotkového poloměru. Protože objem koule jednotkového poloměru je $\frac 43 \pi$ učí se žáci v matematice rovnou vzorec $V=\frac 43 \pi r^3$.
-* Dynamická odezva stromů ve větru je častým námětem mnoha vědeckých prací. Souhrnná studie [Jackson, T. et al (2021) The motion of trees in the wind: a data synthesis. Biogeosciences.](https://bg.copernicus.org/preprints/bg-2020-427/) tvrdí, že v některých případech (zpravidla listnáče v lese) je základní frekvence vlastních kmitů stromů nepřímo úměrná odmocnině výšky, což je vztah známý pro kyvadlo. $$f=\frac 1T \sim \frac 1{\sqrt H}.$$ U jiných stromů (zpravidla jehličnaté stromy) je základní frekvence přímo úměrná průměru $d$ a nepřímo úměrná druhé mocnině výšky $H$, tj. $$f=\frac 1T\sim \frac{d}{H^2}.$$ Tento vztah je znám pro nosníky. To ukazuje, že pro některé stromy je pro dynamické vlastnosti dominantní hmota v koruně, pro jiné stromy hmota podél kmene.
+* Dynamická odezva stromů ve větru je častým námětem mnoha vědeckých prací.
+  Souhrnná studie [Jackson, T. et al (2021) The motion of trees in the wind: a
+  data synthesis.
+  Biogeosciences.](https://bg.copernicus.org/preprints/bg-2020-427/) tvrdí, že v
+  některých případech (zpravidla listnáče v lese) je základní frekvence
+  vlastních kmitů stromů nepřímo úměrná odmocnině výšky, což je vztah známý pro
+  kyvadlo. $$f=\frac 1T \sim \frac 1{\sqrt H}.$$ U jiných stromů (zpravidla
+  jehličnaté stromy) je základní frekvence přímo úměrná průměru $d$ a nepřímo
+  úměrná druhé mocnině výšky $H$, tj. $$f=\frac 1T\sim \frac{d}{H^2}.$$ Tento
+  vztah je znám pro nosníky. Existence dvou různých vztahů ukazuje, že pro některé stromy je pro
+  dynamické vlastnosti dominantní hmota v koruně, pro jiné stromy hmota podél
+  kmene.
 * Síla působící na těleso ve vzdálenosti $r$ od planety je dána vztahem $F=\frac{k}{r^2}$, kde $k$ je konstanta úměrnosti (závislá na hmotnosti planety i tělesa). Toto můžeme slovně vyjádřit tak, že síla je nepřímo úměrná druhé mocnině vzdálenosti. Pro $r$ rovno jedné je síla $F$ přímo rovna konstantě $k$. Konstanta úměrnosti $k$ proto udává sílu působící na těleso v jednotkové vzdálenosti od planety.
 
 \iffalse
