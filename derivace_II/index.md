@@ -102,7 +102,6 @@ Buď $f:\mathbb R\to\mathbb R$ funkce, která má derivaci. V okolí bodu $x_0$
 $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 ```
 
-
 ```{prf:remark} Slovní interpretace vzorce pro lineární aproximaci
 :nonumber:
  Výše uvedený vzorec není těžké rozšifrovat.
@@ -124,6 +123,22 @@ $$f(x+h)\approx f(x)+f'(x)h,$$
 což získáme dosazením $x+h$ za $x$ a $x$ za $x_0$.
 ```
 
+```{prf:remark} Význam vzorce pro lineární aproximaci
+:nonumber:
+
+* Vzorec umožňuje složitý funkční předpis předpisem jednodušším (lineární funkce jsou jedny z nejtrivilálnějších). 
+* K použití vzorce stačí znát jeden bod grafu a funkční hodnotu a hodnotu derivace v tomto bodě.
+* Aproximace je pouze lokální, použitelná pouze v určitém okolí uvažovaného bodu. Jak velké toto okolí může být a jaké chyby se dopouštíme při lineární aproximaci je různé pro různé funkce. Obecně platí, že čím blíže jsme k bodu $x_0$, tím je tato aproximace přesnější.
+
+```
+
+<div class='obtekat'>
+
+```{figure} linapprox.svg
+Následující obrázek demonstruje skutečnost, že lineární aproximace je pouze lokální. Funkce sinus má nelineární graf a žádná lineární funkce ji nemůže aproximovat na celém definičním oboru. Pokud se však zaměříme na malý kousek grafu (žlutý obdélník), je lineární aproximace možná a použitelná.
+```
+
+</div>
 
 **Příklad (růst stromu).** Strom má v roce 2019 výšku 3 metry a roste
   rychlostí 0.5 metru za rok. V roce $x$ je jeho výška dána vzorcem
