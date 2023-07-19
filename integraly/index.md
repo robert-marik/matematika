@@ -139,23 +139,28 @@ $$     F(x)=G(x)+c $$ na $I$.
 
 **Příklad.** Funkce $x^2$ má primitivní funkce například $\frac 13 x^3$, nebo $\frac 13 x^3+7$,  nebo $\frac 13 x^3+\pi$, protože derivace všech těchto tří funkcí je $x^2$. Platí $$\int x^2 \,\mathrm dx=\frac 13 x^3+c,\qquad c\in\mathbb R.$$
 
-<div style='column-count: 2;background-color:lightgray;padding-top:1ex'>
 
-**Vzorce.** 
+```{prf:remark} Vzorce pro výpočet integrálu
 
-1. $\int c\,\mathrm dx=cx+C$
-1. $\int  x^n\,\mathrm dx= \frac{x^{n+1}}{n+1}+C$
-1. $\int  \frac 1x\,\mathrm dx=\ln |x|+C$
-1. $\int  e^x\,\mathrm dx=e^x+C$
-1. $\int  \sin x\,\mathrm dx=-\cos x+C$
-1. $\int  \cos x\,\mathrm dx=\sin x+C$
-1. $\int  \frac 1{\cos^2 x}\,\mathrm dx=\mathop{\mathrm{tg}} x+C$
-1. $\int  \frac 1{\sin^2 x}\,\mathrm dx=-\mathop{\mathrm{cotg}} x+C$
-1. $\int  \frac 1{A^2+x^2}\,\mathrm dx=\frac 1A \mathrm{\mathrm {arctg}} \frac xA+C$
-1. $\int  \frac1{\sqrt{A^2-x^2}}\,\mathrm dx=\arcsin\frac xA+C$
-1. $\int  f(ax+b)\,\mathrm dx=\frac 1a F(ax+b)+C$, kde $F(x)=\int f(x)\,\mathrm dx$
+Následující vzorce jsou zpravidla vzorce pro derivování napsané naopak (integrál derivace je roven původní funkci, až na aditivní konstantu).
+
+<div style='column-count: 2;'>
+
+1. $\displaystyle\int c\,\mathrm dx=cx+C$
+1. $\displaystyle\int  x^n\,\mathrm dx= \frac{x^{n+1}}{n+1}+C$
+1. $\displaystyle\int  \frac 1x\,\mathrm dx=\ln |x|+C$
+1. $\displaystyle\int  e^x\,\mathrm dx=e^x+C$
+1. $\displaystyle\int  \sin x\,\mathrm dx=-\cos x+C$
+1. $\displaystyle\int  \cos x\,\mathrm dx=\sin x+C$
+1. $\displaystyle\int  \frac 1{\cos^2 x}\,\mathrm dx=\mathop{\mathrm{tg}} x+C$
+1. $\displaystyle\int  \frac 1{\sin^2 x}\,\mathrm dx=-\mathop{\mathrm{cotg}} x+C$
+1. $\displaystyle\int  \frac 1{A^2+x^2}\,\mathrm dx=\frac 1A \mathrm{\mathrm {arctg}} \frac xA+C$
+1. $\displaystyle\int  \frac1{\sqrt{A^2-x^2}}\,\mathrm dx=\arcsin\frac xA+C$
+1. $\displaystyle\int  f(ax+b)\,\mathrm dx=\frac 1a F(ax+b)+C$, kde $F(x)=\int f(x)\,\mathrm dx$
 
 </div>
+
+```
 
 ```{prf:theorem} Linearita neurčitého integrálu
 :nonumber:
