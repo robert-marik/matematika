@@ -122,3 +122,5 @@ figcaption {font-size: 60%;}
 .Ylink a{border:solid 1px; padding:5px;}
 
 div.algorithm p.admonition-title {background-color: lightyellow;}
+
+.algorithm figure {width:100%; max-width:100%;}

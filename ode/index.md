@@ -4,9 +4,11 @@ https://youtu.be/gU6ClJwLFs0
 
 > V této přednášce se seznámíme s diferenciálními rovnicemi. To není nic jiného, než správný název pro to, čemu jsme dříve říkali matematické modely formulované pomocí derivace. Viděli jsme že tyto modely jsou v některých případech přirozeným matematickým aparátem pro popis reálně probíhajících dějů v přírodě. V přednášce se seznámíme se základním názvoslovím spojeným s touto problematikou, seznámíme se s metodami identifikace některých kvalitativních vlastností a u rovnic se separovanými proměnnými se naučíme hledat i analytické řešení. Protože se často setkáváme s modely nezávislými na čase, budeme se problematice těchto modelů věnovat podrobněji. Tyto modely mají tu vlastnost, že se ohraničená řešení po čase ustálí okolo stabilní hodnoty. Naučíme se hledat hodnoty odpovídající ustáleným řešením a z nich vybrat ty stabilní, k nimž systém může konvergovat, nebo nestabilní, které oddělují oblasti, ze kterých systém dospívá k jednotlivým stabilním stavům.
 
-## Motivace
 
-<div class="shorten" data-text="V matematice neexistuje nástroj užitečnější pro modelování dějů v přírodě nebo ve společnosti, než diferenciální rovnice. Několik významných úspěchů této teorie je shrnuto v motivaci.">
+````{prf:algorithm} Motivace, přehled úspěchů
+:class: dropdown
+
+Diferenciální rovnice jsou jakýmsi zlatým grálem modelování. V historii byly matematické modely založené na těchto rovnicích přímou motivací k rozvoji diferenicálního počtu (aby bylo možno tyto rovnice formulovat) a integrálního počtu (aby bylo možno tyto rovnice řešit). Od té doby dosáhla trojice derivace+integrál+diferenciální rovnice na obrovskou řadu úspěchů napříč mnoha obory.
 
 \iffalse
 
@@ -23,8 +25,6 @@ Analogové počítače využívaly toho, že různé děje mohou být popisován
 </div>
 
 \fi
-
-Diferenciální rovnice jsou jakýmsi zlatým grálem modelování. V historii byly matematické modely založené na těchto rovnicích přímou motivací k rozvoji diferenicálního počtu (aby bylo možno tyto rovnice formulovat) a integrálního počtu (aby bylo možno tyto rovnice řešit). Od té doby dosáhla trojice derivace+integrál+diferenciální rovnice na obrovskou řadu úspěchů napříč mnoha obory.
 
 * Odvození [Keplerových zákonů](https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion) pohybu planet matematickou cestou a tím potvrzení gravitačního zákona (Newton).
 * Matematický aparát pro statické výpočty a výpočty [nosníků](https://cs.wikipedia.org/wiki/Bernoulliho%E2%80%93Navierova_hypot%C3%A9za) (Euler, Bernoulli, Timoshenko).
@@ -44,7 +44,7 @@ Někdy je nutné znát řešení rovnice, někdy stačí znát rovnici řídíc�
 * Chování řešení při změně rozměrů systému. Využívá se například v aerodynamických tunelech, kdy se rozměrné objekty testují na zmenšeninách. Dále se využívá tam, kde rovnici nedokážeme vyřešit, například model sesuvu hory do přehrady a následná tsunami v údolí Vajont nebo akustika v Janáčkově hudební síni.
 * Náhrada jednoho problému jiným, který se chová stejně, ale je možné jej modelovat. Zahrnuje sestavování mechanických počítačů (zaměřovače prof. Svobody) nebo vodních počítačů ([Moniac](https://en.wikipedia.org/wiki/MONIAC) sestavený v roce 1949 pro model ekonomiky Nového Zélandu, [vodní integrátor](https://en.wikipedia.org/wiki/Water_integrator) používaný Ruskem do 80-tých let)
 
-</div>
+````
 
 ## Obyčejná diferenciální rovnice prvního řádu
 
@@ -146,12 +146,9 @@ jisté míry libovolnou) konstantu $C$. Takový vzorec se nazývá **obecné
 **partikulárním řešení**, máme tím na mysli jednu libovolnou funkci
 splňující diferenciální rovnici.
 
-**Příklad:** Obecným řešením diferenciální rovnice $$y'=2xy$$ je
-  $$y=Ce^{x^2}, \quad C\in\mathbb{R}.$$ Žádná jiná řešení neexistují,
-  všechna řešení se dají zapsat v tomto tvaru pro nějakou vhodnou
-  konstantu $C$.  Partikulárním řešením je například
-  $y=5e^{x^2}$. Řešením počáteční úlohy $$y'=2xy, \quad y(0)=3$$ je
-  $$y=3e^{x^2}.$$
+**Příklad:** Obecným řešením diferenciální rovnice $$y'=2xy$$ je $$y=Ce^{x^2}, \quad C\in\mathbb{R}.$$ Žádná jiná řešení neexistují,
+všechna řešení se dají zapsat v tomto tvaru pro nějakou vhodnou
+konstantu $C$.  Partikulárním řešením je například $y=5e^{x^2}$. Řešením počáteční úlohy $$y'=2xy, \quad y(0)=3$$ je $$y=3e^{x^2}.$$
 
 \iffalse
 
@@ -196,6 +193,7 @@ Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot, https://
   funkce udávající závislost teploty na čase. Chceme-li znát teplotu
   za určitý čas, není nutné provádět pokus a čekat na uplynutí
   požadované doby. Můžeme teplotu přímo vypočítat.
+* Jednotka konstanty úměrnosti $k$ je rovna převrácené hodnotě času. Tato konstanta číselně vyjadřuje rychlost ochlazování horkého tělesa v okamžiku, kde je jednotkový rozdíl teplot. Podrobnější rozbor těchto tvrzení je uveden v úvodní přednášce o derivaci, kdy jsme se s danou rovnicí setkali poprvé. 
 * Někdy může být vhodné nesledovat teplotu $T$, ale rozdíl oproti
   okolní teplotě, $\tau=T-T_0$. Rovnice se potom zjednoduší na $$
   \frac{\mathrm d\tau}{\mathrm dt}=-k\tau,$$
@@ -225,8 +223,8 @@ Rovnice konstantního růstu nebo úbytku je základem datování pomocí uhlík
   důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
   stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
   pravděpodobnost se s časem nemění.
-* Vhodný radioaktivní prvek vybereme podle toho, jak starý vzorek
-  chceme datovat. Nejčastěji měříme množství radioaktivního uhlíku
+* Konstanta $\lambda$ má jednotku rovnu převrácené hodnotě jednotky času a udává rychlost radioaktivního rozpadu pro jednotkové množství vzorku. 
+* Měříme množství radioaktivního uhlíku
   $^{14}C$ vztažené k množství stabilního $^{12}C$. Počáteční podmínka
   je známa (předpokládáme stejný poměr zastoupení jako relativně
   nedávno, před průmyslovou revolucí) a díky tomu můžeme najít funkci
@@ -234,15 +232,13 @@ Rovnice konstantního růstu nebo úbytku je základem datování pomocí uhlík
   radioaktivního i stabilního uhlíku je možné změřit a tím získáme
   odhad, kolik procent radioaktivního
   uhlíku se rozpadlo. Řešení počáteční úlohy poté použijeme pro odhad
-  doby, kdy organismus přestal spotřebovávat uhlík z atmosféry,
-  tj. odhad stáří vzorku.
+  doby, kdy organismus přestal spotřebovávat uhlík z atmosféry. Tím získáme odhad, před kolika lety došlo ke smrti studovaného objektu.
 * Při pokusu o datování kostí dinosaurů klesne množství
   radioaktivního uhlíku pod měřitelnou úroveň. Proto se
   v tomto případě používají látky s delším poločasem rozpadu.
 
-### Rovnice samočištění jezer
-
-<div class="shorten" data-text="Některé další modely založené na diferenciálních rovnicích.">
+````{prf:algorithm} Rovnice samočištění jezer
+:class: dropdown
 
 \iffalse
 
@@ -250,6 +246,10 @@ Rovnice konstantního růstu nebo úbytku je základem datování pomocí uhlík
 
 ```{figure} voda.jpg
 Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,  se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot je úměrná míře znečištění.  https://pixabay.com
+```
+
+```{figure} chirurg.jpg
+Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: https://pixabay.com
 ```
 
 </div>
@@ -291,13 +291,6 @@ Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,  se
 
 ### Akutní normovolemická hemodiluce
 
-<div class='obtekat'>
-
-```{figure} chirurg.jpg
-Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: https://pixabay.com
-```
-
-</div>
 
 * Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s
   ní i krvinky. Při konstantní intenzitě krvácení to znamená, že
@@ -332,7 +325,10 @@ Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. 
 
 \fi
 
-### RC obvod
+````
+
+````{prf:algorithm} RC obvod
+:class: dropdown
 
 \iffalse
 
@@ -359,7 +355,9 @@ Rovnice je tedy stejná jako rovnice radioaktivního rozpadu a rovnice samočiš
 RC obvod jako takový má však důležité místo i dnes. Dokáže například filtrovat signály podle frekvence. Výpočet jeho charakteristiky (tj. vyřešení rovnice) a sledování napětí na kondenzátoru umožní měření elektrického odporu tam, kde není vhodné odpor určovat z proudu a napětí pomocí Ohmova zákona. Typickým příkladem je odpor dřeva a jeho vodivost, tj. převrácená hodnota odporu. Tato veličina se používá k rychlému stanovení vlhkosti dřeva, nebo je možno ji dlouhodobě sledovat pomocí senzorů zabudovaných do dřevostavby. 
 
 Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s [operačním zesilovačem](https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D) (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).
-	
+
+````
+
 ### Vývoj populace a její ekologický lov
 
 \iffalse
@@ -393,9 +391,8 @@ Při intenzivním lovu může dojít ke zničení populace https://pixabay.com
 
 \iffalse
 
-### Lovci meteoritů z ČSSR a ČR
-
-<div class="shorten" data-text="Čeští hledači meteoritů a diferenciální rovnice.">
+````{prf:algorithm} Lovci meteoritů z ČSSR a ČR
+:class: dropdown
 
 <div class='obtekat'>
 
@@ -405,7 +402,7 @@ Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https:
 
 </div>
 
-Česká republika je na světové špičce ve oblasti propočítávání dráhy meteoritů ze světelné stopy zachycené sítí bolidových kamer. Vědcům z Astronomického ústavu se podařilo 
+Česká republika je na světové špičce v oblasti propočítávání dráhy meteoritů ze světelné stopy zachycené sítí bolidových kamer. Vědcům z Astronomického ústavu se podařilo 
 
 * jako prvním na světě najít pozůstatky meteoritu propočítáním jeho dráhy ze snímků zachycených speciálními kamerami a zpětně propočítat, odkud meteorit přiletěl (meteorit Příbram, 1959, první "meteorit s rodokmenem", tj. s doloženým původem),
 * jako prvním na světě najít pozůstatky meteoritu 20 let po dopadu použitím analýz, které v době dopadu meteoritu nebyly k dispozici (meteorit Benešov, dopad 1991, nalezen 2011),
@@ -416,7 +413,7 @@ Použité metody jsou popsány například v článku *Ceplecha, Revelle: Fragme
 $$\frac{\mathrm dm}{\mathrm dt}=-K\sigma \rho m^{2/3}v^3.$$
 Jedná se o diferenciální rovnice, kde zrychlení (derivace rychlosti) a časová změna hmotnosti (derivace hmotnosti podle času, rychlost, s jakou ubývá hmotnost)  je úměrná vhodným mocninám těchto veličin.
 
-</div>
+````
 
 \fi
 
@@ -899,10 +896,10 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
  Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm dy}{\mathrm dx}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 ```
 
+````{prf:algorithm} Diferenciální rovnice růstu vodní kapky
+:class: dropdown
 
-### Diferenciální rovnice růstu vodní kapky
-
-<div class="shorten" data-text="Příklad ukazuje, že i u modelů přírodních procesů může být více než jedno řešení. A že to není v rozporu s tím, jak chápeme fyziku a její kauzalitu.">
+Příklad ukazuje, že i u modelů přírodních procesů může být více než jedno řešení. A že to není v rozporu s tím, jak chápeme fyziku a její kauzalitu.
 
 \iffalse
 
@@ -952,20 +949,23 @@ přechlazenou tekutinu ve formě hřejících polštářků, kde se po lupnutí
 plíškem spustí přeměna skupenství na pevné spojená s intenzivním
 uvolněním tepla.
 
-</div>
+````
 
-## Diferenciální rovnice vyšších řádů
+````{prf:algorithm} Diferenciální rovnice vyšších řádů
+:class: dropdown
 
 https://youtu.be/ahkeA6fopaQ
 
 \iffalse
 
-<div class="shorten" data-text="Diferenciální rovnice obsahující druhé derivace se vyskytují v problémech z mechaniky. Kromě počátečních podmínek je s nimi spojen ještě jiný druh podmínek, okrajové podmínky. Tyto úlohy je možné řešit aproximací derivace centrální diferencí a převodem diferenciální rovnice na soustavu lineárních rovnic. Ovšem soustavu obrovskou.">
-
 <div class='obtekat'>
 
 ```{figure} satelit.jpg
 Téměř veškerá klasická mechanika a dynamika pohybů se redukuje na studium diferenciálních rovnic druhého řádu. Ve vesmíru i na Zemi. Zdroj: pixabay.com.
+```
+
+```{figure} nosnik.jpg
+Příhradový nosník. Vzpěry jsou namáhány v ose. Teorii vybudoval v 18. století L. Euler, ale začala se dále rozvíjet a využívat až po sérii pádů příhradových železničních mostů v 19. století. Zdroj: www.ceskestavby.cz.
 ```
 
 </div>
@@ -1012,29 +1012,16 @@ $$\frac 1R = \frac{\frac{\mathrm d^2y}{\mathrm dx^2}}{\sqrt{\left(1+\left(\frac{
 $$\frac{\alpha}{\sqrt{(1+x^2)^3}}= \alpha (1+x^2)^{-3/2}\approx \alpha ,$$
 dostáváme $$\frac 1R \approx \frac{\mathrm d^2y}{\mathrm dx^2},$$ což veškeré výpočty značně zjednodušuje.
 
-</div>
+
 
 ## Diferenciální rovnice metodou konečných diferencí
 
-<div class="shorten" data-text="Diferenciální rovnice obsahující druhé derivace se vyskytují v problémech z mechaniky. Kromě počátečních podmínek je s nimi spojen ještě jiný druh podmínek, okrajové podmínky. Tyto úlohy je možné řešit aproximací derivace centrální diferencí a převodem diferenciální rovnice na soustavu lineárních rovnic. Ovšem soustavu obrovskou.">
 
 Z přednášek o derivaci máme aproximace derivací
 $$ \frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}  $$
 a 
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 Využijeme tuto informaci k ukázce použití na příkladu nosníku s kombinovaným namáháním.
-
-\iffalse
-
-<div class='obtekat'>
-
-```{figure} nosnik.jpg
-Příhradový nosník. Vzpěry jsou namáhány v ose. Teorii vybudoval v 18. století L. Euler, ale začala se dále rozvíjet a využívat až po [sérii pádů](https://en.wikipedia.org/wiki/Cast_iron#Cast-iron_bridges) příhradových železničních mostů v 19. století. Zdroj: www.ceskestavby.cz.
-```
-
-</div>
-
-\fi
 
 **Příklad** (podle Autar Kaw et al.: [Finite Difference Method for
 Ordinary Differential
@@ -1061,7 +1048,8 @@ algebra, kterému se začneme věnovat na příští přednášce.
 Pro analogickou úlohu se vzpěrnou tlakovou pevností dřeva viz
 též A. Požgaj, Štruktúra a vlastnosti dreva str. 359.
 
-</div>
+
+````
 
 ## Shrnutí, hlavní myšlenky
 

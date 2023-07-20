@@ -158,8 +158,6 @@ manim:Linearni_aproximace|aOvVJzeWy3o|Lineární aproximace může pomoci zjedno
 
 ### Lineární aproximace v některých fyzikálních zákonech
 
-<div class="shorten" data-text="Lineární aproximace se běžně využívá v při aproximaci fyzikálních zákonů. Středoškolské vzorce pro potenciální a kinetickou energii jsou lineárními aproximacemi obecnějších vztahů.">
-
 \iffalse
 
 <div class='obtekat'>
@@ -210,7 +208,6 @@ pro $v$ mnohem menší než $c$. Snadno rozšifrujeme, že s rychlostí souvisí
 
 Ač se jedná "jenom" o lineární aproximaci, je  vzorec $E=\frac 12 mv^2$ dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného relativistického vzorce při malých rychlostech v praxi obvykle zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUb1OwzAQ3iv1HU7t4lSkSQwFOmQMCwNSH6CS45yIG_-UOLVIn55LCm0YGJA8nO8-fT93Js2zDSyhNq6zznfgygM23Wk-kznfbp-2_GHzDARoe1nrAeADdlpAALPyexZn0XwWcp4m9-vHKeybB46u7svTQUlVO_B4BSjgKTQmqV0FxxYDVmgF0LvRzmfHVtkO2OJVWeyUbASgxfZdITRaeGr0BsLZtRINkTgwQk8UFtGVIUv4yqSrsOe33i-FtxKl7UcylCOXVqULTtup5co1zkqkHLoWgZagrDvBWbimdSfCBCGVrEFS5EG8yHISlXtOJc_ZpU6Y_2g7lsVkJqF_FBFyCRcjRQaTD19bdvPLCh4XWTT0fpr_TnAHw4Y84GfXoqHJOfQehxB0A2_HkKGnm1gnKY0dd7iDHHYo9ItCXbEsTceT79jl6DeDO8b-zhhfJlR9AXtJxZs=&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
-</div>
 ````
 
 ## Lineární aproximace a jednorozměrné materiálové vztahy
@@ -331,8 +328,6 @@ $$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(
 
 ### Druhá derivace a deformace nosníků
 
-<div class="shorten" data-text="Derivace vyšších řádů se využívají při výpočtu ohybové čáry nosníků.">
-
 \iffalse
 
 <div class='obtekat'>
@@ -362,7 +357,6 @@ $$EI\frac{\mathrm d^2v}{\mathrm dx^2}+Fv=0.$$ Aplikace jsou, jak bylo uvedeno, p
 
 Někdy je vhodné mít moment $M(x)$ síly deformující nosník mít vyjádřený pomocí zatížení nosníku. To souvisí s druhou derivací momentu a proto je nutno rovnici ještě dvakrát derivovat. Proto se ohybová rovnice nosníku někdy uvádí jako vztah obsahující dokonce čtvrtou derivaci.
 
-</div>
 ````
 
 ### Taylorův polynom a polynomiální aproximace v 1D
@@ -460,7 +454,6 @@ $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h
 
 ## Odbočka: od vazeb mezi atomy k materiálovým vlastnostem
 
-<div class="shorten" data-text="">
 
 \iffalse
 
@@ -502,7 +495,7 @@ Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyziká
 
 \fi
 
-</div>
+
 ````
 
 ## Řešení rovnic
@@ -628,7 +621,6 @@ mnoho výpočtů a rychlost konvergence je zásadní.
 ````{prf:algorithm} Ad hoc iterace
 :class: dropdown
 
-<div class="shorten" data-text="Někdy je možné použít místo Newtonova iteračního vzorce i jednodušší iterace, které například nemusí tak rychle konvergovat, ale zase není nutné znát derivace funkce.">
 
 ```{prf:remark} Ad hoc iterace
 :nonumber:
@@ -668,7 +660,6 @@ Vidíme konvergenci a iterační vzorec jsme našli s minimálním úsilím. Ryc
 4 0.904417592352745
 ~~~
 
-</div>
 ````
 
 ## Shrnutí, hlavní myšlenky

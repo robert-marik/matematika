@@ -42,7 +42,8 @@ Závislá proměnná|Derivace podle času|
 
 \fi
 
-<div class="shorten" data-text="Ukázka úlohy vedoucí na problém nalézt funkci, mající známou derivaci.">
+````{prf:algorithm} Ukázka úlohy vedoucí na problém nalézt funkci, mající známou derivaci.
+:class: dropdown
 
 **Motivace: Jak z derivace křivky získat rovnici křivky?**
 
@@ -103,7 +104,7 @@ redukuje na případ pohybu konstantní rychlostí ($s=vt$) a na střední
 případě obecné rychlosti, měnící se libovolně. Přesně to je úkol pro
 neurčitý integrál.
 
-</div>
+````
 
 ## Neurčitý integrál
 
@@ -342,9 +343,10 @@ Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v 
 
 \fi
 
-### Změna funkce z rychlosti změny (prostorová změna teploty)
 
-<div class="shorten" data-text="Tato ukázka demonstruje převod rychlosti změny teploty v prostoru na změnu teploty mezi dvěma místy.">
+````{prf:algorithm} Změna funkce z rychlosti změny (prostorová změna teploty)
+:class: dropdown
+
 
 \iffalse
 
@@ -382,9 +384,9 @@ Stejný princip funguje pro libovolné ustálené proudění radiálním směrem
 
 Pokud sledujeme prostup tepla izolací, jejíž teplotní vodivost se mění s teplotou, není veličina $k$ konstantní a proto výše uvedený postup není možné realizovat a odvozený vzorec pro takový případ neplatí. Stejná situace nastává u podzemní vody a proudění s volnou hladinou (není horní nepropustná vrstva zvodně). Takové úlohy vedou na jinou problematiku, kterou se naučíme řešit v kapitole s diferenciálními rovnicemi.
 
-</div>
+````
 
-```{prf:remark} Změna veličiny vypočtená pomocí gradientu
+```{prf:remark} Změna veličiny vypočtená pomocí (jednodimenzionálního) gradientu
 :nonumber:
  Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
 ```
@@ -501,7 +503,9 @@ je, že v některých případech je vhodné postupovat naopak a určit
 neurčitý integrál pomocí integrálu určitého, což si ukážeme v
 následující přednášce.
 
-### Nasčítání příspěvků k celkové dráze
+````{prf:algorithm} Nasčítání příspěvků k celkové dráze
+:class: dropdown
+
 
 \iffalse
 
@@ -529,9 +533,10 @@ Při pohybu proměnnou rychlostí je dráha integrálem rychlosti. Zdroj: pixaba
 1. Pokud se rychlost mění spojitě a $a$ a $b$ jsou počáteční a koncový
    okamžik pohybu, platí $$s=\int_a^b v(t)\,\mathrm dt.$$
 
-### Nasčítání příspěvků k celkové síle na přehradu
+````
 
-<div class="shorten" data-text="Zde je ukázáno, jak vypočítat tlak na plochu, která je rozložena přes celý interval hloubky. Na každém místě totiž působí jiný tlak a příspěvky přes všechny hodnoty hloubky je nutné posčítat integrálem.">
+````{prf:algorithm} Nasčítání příspěvků k celkové síle na přehradu
+:class: dropdown
 
 \iffalse
 
@@ -582,11 +587,10 @@ označíme $H$.
    působila tlaková síla vyvolaná tlakem $\frac 12 H\rho g$,
    tj. tlakem v poloviční hloubce.
 
-</div>
+````
 
-### Nasčítání příspěvků k celkovému toku potrubím
-
-<div class="shorten" data-text="Ukázka demonstruje, jak stanovit tok trubkou. Pokud by v celém průřezu byla stejná rychlost, počítal by se tok násobením. Protože v reálném proudění rychlost směrem ke stěnám trubky klesá, je nutné celkový tok určit jako příspěvky z jednotlivých míst trubky a všechno posčítat integrálem.">
+````{prf:algorithm} Nasčítání příspěvků k celkovému toku potrubím
+:class: dropdown
 
 \iffalse
 
@@ -631,11 +635,10 @@ trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost pr
 
 (Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 3.)
 
-</div>
+````
 
-### Nasčítání příspěvků k celkovému momentu setrvačnosti tyče
-
-<div class="shorten" text="Volitelná ukázka aplikace (výpočet momentu setrvačnosti pomocí integrálu)">
+````{prf:algorithm} Nasčítání příspěvků k celkovému momentu setrvačnosti tyče
+:class: dropdown
 
 \iffalse
 
@@ -647,6 +650,10 @@ Při posuzování stability rozhledny hraje moment setrvačnosti ústřední rol
 
 ```{figure} 4.png
 Tyč rotující okolo kolmé osy.
+```
+
+```{figure} wallenda.jpg
+Provazochodec při přechodu přes Grand Canyon. Zdroj:  cbsnews.com
 ```
 
 </div>
@@ -685,18 +692,6 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
 **Závěr.**
 
-\iffalse
-
-<div class='obtekat'>
-
-```{figure} wallenda.jpg
-Provazochodec při přechodu přes Grand Canyon. Zdroj:  cbsnews.com
-```
-
-</div>
-
-\fi
-
 * Na roztočení tyče okolo konce je potřeba více energie, než na
   roztočení okolo středu. Čtyřikrát více. (Z praxe víme, že s dlouhým
   žebřem se manipuluje nejlépe, pokud jej držíme uprostřed.)
@@ -709,7 +704,7 @@ Provazochodec při přechodu přes Grand Canyon. Zdroj:  cbsnews.com
   tyč (pro Grand Canyon 9.1 metrů a 20 kilogramů, viz [Nik
   Wallenda](https://en.wikipedia.org/wiki/Nik_Wallenda#Canyon_walk)).
 
-</div>
+````
 
 ## Shrnutí, hlavní myšlenky
 

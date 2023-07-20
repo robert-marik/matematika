@@ -560,8 +560,6 @@ vektorem. Nazývá se *nabla* nebo *Hamiltonův operátor*.
 
 ### Lineární aproximace rovinné transformace
 
-<div class="shorten" data-text="Derivace a lineární aproximace funkce více proměnných. Využívá se například při popisu deformace">
-
 Následující pasáže jsou motivací pro tematický celek, kterému se
 začneme věnovat na další přednášce.
 
@@ -619,7 +617,6 @@ je přesná jenom pro relativně malé deformace. Proto se také výsledný
 produkt, ke kterému se v průběhu semestru dopracujeme, nazývá tenzor
 malých deformací.
 
-</div>
 ````
 
 ## Shrnutí, hlavní myšlenky

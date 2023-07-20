@@ -23,10 +23,8 @@ definování funkcí, které nejsou elementární.
 Nejprve si připomeneme jednu ze základních aplikací integrálu:
 nasčítání příspěvků od spojitě se měnící veličiny.
 
-
-## Příklad: proč trubky praskají podélně?
-
-<div class="shorten" data/text="Ukázka vysvětluje, proč trubky praskají podélně. Demonstruje integrál jako nástroj k sečtení nekonečně mnoha příspěvků, protože celkovou sílu je potřeba určit jako součet sil v každém bodě trubky. Protože z různých bodech je síla různá (má jiný směr), nedá se celková síla určit násobením tlaku a obsahu. ">
+````{prf:algorithm} Příklad: proč trubky praskají podélně?
+:class: dropdown
 
 <div class='obtekat'>
 
@@ -65,7 +63,7 @@ Ještě je vhodné ověřit, že svislý průmět, tj . $$\Delta F_y=pLr\Delta \
 
 Pokud se chcete dozvědět více, zkuste Google a heslo "hoop stress".
 
-</div>
+````
 
 ## Vlastnosti integrálu
 
@@ -235,9 +233,8 @@ tomuto příkladu vrátíme.
 
 https://youtu.be/Z8wDZxap794
 
-### Příklad: práce při vytahování řetězu
-
-<div class="shorten" data-text="Práci určujeme jako součin síly a posunutí. Co když se ale síla během konání práce snižuje? Například při vytahování řetězu na střechu visí dolů stále menší část řetězu a síla je stále menší. Potom se místo součinu dá použít integrál. ">
+````{prf:algorithm} Příklad: práce při vytahování řetězu
+:class: dropdown
 
 \iffalse
 
@@ -285,7 +282,7 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9JLFVIV8hQyDBUyDBS1-TlKs7IL9fIzCtJTS9KLElV0NDN0AKq0UrX0cjQyTDUyTDS1CROlUaGka0BsWqBArZGOum2lnoWQBFDW2MDoLitEYX6wdoBxXNBdg==&lang=sage)
 
-</div>
+````
 
 ```{prf:remark} Práce konaná silou proměnné velikosti
 :nonumber:
@@ -293,10 +290,9 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 ```
 
 
+````{prf:algorithm} Příklad: práce při čerpání vody
+:class: dropdown
 
-### Příklad: práce při čerpání vody
-
-<div class="shorten" data-text="Příklad konání práce konstantní silou ale po různých drahách je vyčerpávání nádrže. Litr vody u hladiny se při čerpání musí přmístit o jinou výšku než litr vody u dna a proto se práce nedá vypočítat jako součin síly a posunutí. Dá se však vypočítat integrálem.">
 
 \iffalse
 
@@ -338,7 +334,7 @@ konstantní a rovno obsahu dna.)
    stlačena v těžišti a my bychom tuto vodu zvedli na úroveň okraje
    nádrže.
 
-</div>
+````
 
 ## Numerická aproximace určitého integrálu
 
@@ -470,7 +466,6 @@ $$\int \ln x\,\mathrm dx=x\ln x-\int \frac 1x x\,\mathrm dx=x\ln x-\int 1\,\math
 
 https://youtu.be/tdK-zog1cv0
 
-<div class="shorten" data-text="Substituční metoda je jedna z metod jak najít neurčitý integrál, který se nedá najít pomocí vzorců. Spočívá v přechodu k jiné proměnné, kdy se počítaný integrál nahradí jiným integrálem, pokud možno jednodušším a integrovatelným pomocí vzorců.">
 
 Substituční metoda je metoda odvozená z derivace složené funkce
 $$[u(v(x))]'=u'(v(x))v'(x),$$
@@ -533,7 +528,6 @@ proměnná. Pokud používáme substituci $t=\varphi(x)$, potom v dolní
 mezi pro $x=a$ platí $t=\varphi(a).$ Podobná situace je i v mezi
 horní.
 
-</div>
 
 ## Integrál jako funkce meze
 
@@ -586,9 +580,9 @@ Následující ukázka demonstruje, že i s funkcí definovanou pomocí
 integrálu je možné jistým způsobem pracovat, aniž bychom měli k
 dispozici analytické vyjádření této funkce.
 
-## Ukázka funkce definované pomocí integrálu
+````{prf:algorithm} Ukázka funkce definované pomocí integrálu
+:class: dropdown
 
-<div class="shorten" data-text="Ukázka demonstruje, že funkce se dají v matematice definovat pomocí integrálu. Vlasntosti funkcí se dají odvodit z vlastností odvozených pomocí metod práce s integrály.">
 
 \iffalse
 
@@ -632,7 +626,7 @@ $t=s^r$, $\mathrm dt=rs^{r-1}\,\mathrm ds$ například ukáže, že platí
 $$f(a^r)=\int_1^{a^r}\frac 1t\,\mathrm dt= \int _1^a \frac
 1{s^r}rs^{r-1}\,\mathrm ds= r\int _1^a\frac 1s\,\mathrm ds=rf(a).$$
 
-</div>
+````
 
 <!--
 
@@ -698,9 +692,21 @@ kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 
 -->
 
-## Příklad: řetěz jinak (pomocí změny potenciální energie)
 
-<div class="shorten" data-text="Ukázka se vrací k jednomu z předchozích příkladů, k vytahování řetězu. Úlohu je možno vyřešit pomocí potenciální energie. Ale protože každá část řetězu je v jiné výšce, není možné použít klasický vzorec pro potenciální energii. Přípěvky k celkové potenciální energii můžeme nasčítat integrálem.">
+````{prf:algorithm} Příklad: práce při vytahování řetězu určená pomocí potenciální energie
+:class: dropdown
+
+\iffalse
+
+<div class='obtekat'>
+
+```{figure} zdymadlo.jpg
+Lodní výtah Falkrik Wheel. Zdroj: Wikipedie.
+```
+
+</div>
+
+\fi
 
 Vypočítáme příklad z prací při vytahování řetězu tak, že určíme změnu potenciální energie
 řetězu. Práci $W$ vykonanou při vyzvednutí tělesa o hmotnosti $m$ o výšku
@@ -728,15 +734,7 @@ rozpojení a případné opětovné napojení. Práce se tedy koná jenom tak,
 kdybychom řetěz nepřetáčeli, jenom odpojili dolních 10 metrů a tuto
 část zvedli nahoru.
 
-\iffalse
 
-<div class='obtekat'>
-
-```{figure} zdymadlo.jpg
-Lodní výtah Falkrik Wheel. Zdroj: Wikipedie.
-```
-
-</div>
 
 Ještě možná stojí za rozvážení fakt, že při otočení řetězu okolo
 středu se nekoná práce. Tato skutečnost se dá opět dokázat myšlenkovým
@@ -751,9 +749,8 @@ místo lodi voda) a stačí jenom vykompenzovat třecí síly v
 mechanismu. V minulosti zde byla soustava 11 zdymadel a lodě touto
 soustavou proplouvaly celý den.
 
-\fi
 
-</div>
+````
 
 ## Shrnutí, hlavní myšlenky
 

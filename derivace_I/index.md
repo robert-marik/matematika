@@ -157,7 +157,8 @@ nerovnice jsou záporné) apod. Takových situací je mnoho a protože není
 v lidských silách si všechny pamatovat, stačí je míst spojeny s
 definicí rostoucí a klesající funkce.
 
-<div class="shorten" data-text="Využití monotonie k práci s nerovnostmi">
+````{prf:algorithm} Využití monotonie k práci s nerovnostmi
+:class: dropdown
 
 **Příklad (užitečnost monotonie při práci s nerovnicemi).** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a skutečnost, že nezápornost obou stran nerovnice zajišťuje, že pracujeme na intervalu kladných hodnot $x$, kde je druhé mocnina rostoucí funkce. Nestačí říct, že umocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena. Na celém svém definičním oboru totiž druhá mocnina rostoucí není. 
 
@@ -171,13 +172,12 @@ plyne
 $$\sqrt x\geq 5=\sqrt {25}.$$ 
 Druhá mocnina je na intervalu $(5,\infty)$ rostoucí a proto odsud plyne dále $$x\geq 25.$$
 
-</div>
+````
 
 ## Přípravné úvahy pro zavedení derivace
 
 https://youtu.be/e4bnDYi5nkc
 
-<!-- <div class="shorten" data-text="Níže si představíme nástroje, které používáme při definici derivace a vysvětlujeme si, jak je derivace zavedena. Pokud tomu nepotřebujete rozumět, nerozklikávejte tento odkaz a pokračujte na derivaci. Pokud v definici derivace něco nebude jasné a budete tomu chtít rozumět, můžete se sem vrátit."> -->
 
 \iffalse
 
@@ -297,8 +297,6 @@ Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď
 
 
 Velmi stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit přímo, mohlo by to jít pomocí limity. Například funkce $$\frac{\sin x}{x}$$ není definována v nule. V okolí nuly se však chová v jistém smyslu pěkně: má funkční hodnoty prakticky nerozlišitelné od jedničky, viz graf v odstavci věnovanému spojitosti. Proto platí $$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
-
-<!-- </div> -->
 
 ## Derivace
 
@@ -442,9 +440,13 @@ za hodinu je rychlost, s jakou roste teplota tělesa.
    * Pokud je derivace dána vztahem $-e^{-t}$, kde $t$ je čas v hodinách a derivace vychází ve stupních Celsia za hodinu, využijeme toho, že $e^0=1$ a $e^{-1}=0.37$. To znamená, že na počátku se teplota snižuje okamžitou rychlostí jeden stupeň Celsia za hodinu, tato rychlost ochlazování se pozvolna mění a například po hodině se teplota snižuje už jenom rychlostí $0.37$ stupně Celsia za hodinu.
 * Matematickým vyjádřením toho, že rychlost s jakou se mění teplota  je úměrná 
 teplotnímu rozdílu $T-T_0$ je rovnice $$\frac{\mathrm
-dT}{\mathrm dt}=-k(T-T_0),$$ kde $k$ je konstanta úměrnosti a záporné znaménko vyjadřuje, že teplota klesá. Konstanta $k$ je číselně rovna rychlosti ochlazování v situaci, kdy je jednotkový rozdíl mezi teplotou objektu a okolí. 
-* Neznámou v sestavené rovnici je funkce a v rovnici figuruje derivace této
+dT}{\mathrm dt}=-k(T-T_0),$$ kde $k$ je konstanta úměrnosti a záporné znaménko vyjadřuje, že teplota klesá. 
+* Neznámou v sestavené rovnici je funkce $T$ a v rovnici figuruje derivace této
 funkce. Takové rovnice se naučíme řešit později.
+* Na levé straně rovnice je derivace teploty podle času vyjadřená v jednotkách teploty na jednotku času, například ${}^\circ \mathrm {C}/\mathrm{min}^{-1}$.  Na pravé straně je rozdíl teplot násobený konstantou $k$. Protože fyzikální jednotka na obou stranách musí souhlasit, platí $$\frac{{}^\circ \mathrm C}{\mathrm {min}}=[k]\times {}^\circ \mathrm C,$$ kde $[k]$ je jednotka konstanty $k$. Odsud plyne $$[k]=\frac{{}^\circ \mathrm C}{\mathrm {min}} \cdot \frac{1}{{}^\circ \mathrm C} = \frac{1}{\mathrm {min}}=\mathrm{min}^{-1},$$ a jednotka konstanty $k$ je rovna převrácené hodnotě jednotky času.
+* Je-li teplotní rozdíl roven jedné, tj. je-li $(T-T_0)=1$, plyne z rovnice $$ \frac{\mathrm
+  dT}{\mathrm dt}=-k(T-T_0).  $$ vztah $$k = -\frac{\mathrm dT}{\mathrm dt}\qquad (\text{pro }T-T_0=1).$$ To znamená, že v tomto případě je konstanta $k$ rovna záporně vzaté derivaci teploty podle času. To umožňuje vyslovit následující charakterizaci konstanty $k$: _Konstanta $k$ je čísleně rovna rychlosti poklesu teploty v okamžiku, kdy je teplotní rozdíl teploty tělesa a okolí roven jedné._ 
+* Protože káva v plechovém hrníčkku chladne ve stejných podmínkách rychleji než káva v porcelánovém hrníčku, znamená to, že při modelování ochlazování kávy v plechovém hrníčku je hodnota konstanty $k$ větší.
 
 V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
@@ -480,7 +482,7 @@ archeologických nálezů pozůstatků živých organismů
   pravděpodobnost se s časem nemění. Kvantitativně je proces rozpadu popsán rovnicí
   $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
   kde $\lambda$ je konstanta úměrnosti. 
-* Konstanta úměrnosti $\lambda$ vyjadřuje rychlost, s jakou se rozpadá jednotkové množství látky. 
+* Konstanta $\lambda$ má jednotku rovnu převrácené hodnotě jednotky času a udává rychlost radioaktivního rozpadu pro jednotkové množství látky. Zdůvodnění tohoto tvrzení je stejné jako u modelu zákona ochlazování.
 * Uhlík je na datování vhodný, protože jej během života absorbují živé organismy a protože poločas rozpadu jej činí vhodným pro datování většiny archeologicky zajímavých nálezů. (Pro datování vzorků starších než 50 tisíc let je nutné použít jiný prvek, protože v tomto případě již uhlíku $^{14}C$ ve vzorku zůstane málo.)
 
 ## Aplikace derivací 2: Jak strmě? (změna v prostoru)
@@ -606,11 +608,10 @@ Perioda kyvadla se prodlužuje rychlostí $0.35$ milisekundy za sekundu.
 
 </div>
 
-## Rychlost nabíjení kondenzátoru
+````{prf:algorithm} Rychlost nabíjení kondenzátoru
+:class: dropdown
 
 \iffalse
-
-<div class="shorten" data-text="Využití derivace k odvození vztahu mezi rychlostmi změn veličin ze vztahu mezi těmito veličinami. ">
 
 <div class='obtekat'>
 
@@ -626,7 +627,7 @@ Elektrický odpor dřeva a mnoha dalších stavebních materiálů souvisí s vl
 $$\frac{\mathrm dU}{\mathrm dt}=\frac 1C \frac{\mathrm dQ}{\mathrm dt}.$$
 Veličina $\frac{\mathrm dQ}{\mathrm dt}$ je nabíjecí proud. Ten dokážeme určit analýzou elektrického obvodu, jak si ukážeme v přednášce o diferenciálních rovnicích. Tím budeme znát derivaci $\frac{\mathrm dU}{\mathrm dt}$ a najít napětí jako funkci času z derivace se naučíme v přednášce o integrálech. Důležitým prvním krokem při analýze uvažovaného elektrického zapojení je však souvislost časové změny napětí a časové změny náboje, tj. derivace dvou souvisejících veličin.
 
-</div>
+````
 
 ## Funkce více proměnných
 

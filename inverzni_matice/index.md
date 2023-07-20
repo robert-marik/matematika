@@ -230,9 +230,9 @@ Výše uvedený výpočet se používá, když chceme najít deformaci vyvolanou
 
 Stejný výpočet používáme, pokud se snažíme transformovat působící napětí při posouzení, jaké smykové a jaké normálové napětí působí na šikmý lepený spoj. Pokud je spoj pod úhlem $30$ stupňů a v ose $y$ působí tahové napětí $10\,\mathrm{MPa}$, potom  normálové napětí namáhající tento spoj je $7.5\,\mathrm{MPa}$ a smykové napětí $4.3\,\mathrm{MPa}$.
 
-## Obecné vzorce pro transformaci tenzoru
 
-<div class='shorten' data-text="Někdy je výhodné odvodit obecné rovnice pro složky tenzoru v otočených souřadnicích. Díky tomu napříkald můžeme zkoumat, kdy jsou mimodiagonální prvky nulové, kdy jsou maximální, kdy jsou maximální diagonální prvky a podobně.">
+````{prf:algorithm} Obecné vzorce pro transformaci tenzoru
+:class: dropdown
 
 \iffalse
 
@@ -302,7 +302,7 @@ složek ve třetím řádku tento koeficient naopak figuruje. Je proto
 potřeba dávat pozor na to, s jakými komponentami je tenzor malých
 deformací uvažován.
 
-</div>
+````
 
 ## Role vlastních vektorů při transformaci matic
 
@@ -579,9 +579,9 @@ snadno, o kolik se souřadná soustava otáčí a v jakém směru.
 
 -->
 
-## Hookův zákon, matice tuhosti a poddajnosti
 
-<div class="shorten" data-text="Hookův zákon je jedním ze základních stavebních kamenů teorie pružnosti a pevnosti. V jiných než izotropních materiálech však k nalezení souvislosti mezi stavem napjatosti tělesa a jeho deformací musíme použít matice (tenzory).">
+````{prf:algorithm} Hookův zákon, matice tuhosti a poddajnosti
+:class: dropdown
 
 V minulé přednášce jsme odvodili tvar tenzoru malých deformací pro popis deformace tělesa ve tvaru
 $$\begin{pmatrix}
@@ -594,6 +594,10 @@ $$\begin{pmatrix}
 
 ```{figure} napeti.png
 Složky tenzoru napětí charakterizují sílu způsobující deformaci. Zdroj: Wikiepdie.
+```
+
+```{figure} wood.jpg
+Ortotropie dřeva. Zdroj: researchgate.net, Mathew Legg.
 ```
 
 </div>
@@ -618,13 +622,6 @@ tj. že tato linearizace platí pro prakticky významné případy.
 K tomu si přidejme, že příspěvky k deformaci, způsobené různými složkami tenzoru napětí, se přirozeně sčítají. Matematicky vyjádřeno proto platí
 $$ \begin{pmatrix}\varepsilon_{11}\\\varepsilon_{22}\\\varepsilon_{33}\\\varepsilon_{23}\\\varepsilon_{13}\\\varepsilon_{12}\end{pmatrix}    =    S\begin{pmatrix}\sigma_{11}\\\sigma_{22}\\\sigma_{33}\\\sigma_{23}\\\sigma_{13}\\\sigma_{12}\end{pmatrix},$$ kde $S$ je čtvercová $6\times 6$ matice.
 
-<div class='obtekat'>
-
-```{figure} wood.jpg
-Ortotropie dřeva. Zdroj: researchgate.net, Mathew Legg.
-```
-
-</div>
 
 Fyzikální úvahy ukazují, že matice $S$ je určitě symetrická a obsahuje celkem ne 36, ale jenom 21 nezávislých
 veličin. Nazývá se *matice poddajnosti*. V obecném případě tedy musíme
@@ -665,9 +662,10 @@ Souvislostí vlastních vektorů matice tuhosti a matice poddajnosti
 (nebo obecněji souvislostí vlastních vektorů matice a matice inverzní)
 se budeme zabývat na následujícím slidu.
 
-</div>
+````
 
-## Vlastní vektory matice a matice inverzní
+````{prf:algorithm} Vlastní vektory matice a matice inverzní
+:class: dropdown
 
 Fyzikální úvaha snadno vede k závěru, že matice a matice inverzní mají
 stejné vlastní vektory. To proto, že pokud v některém směru je
@@ -682,6 +680,8 @@ identitě $\frac 1\lambda A^{-1}A \vec u=\frac 1\lambda I \vec u =\frac
 $$\frac 1\lambda \vec u=A^{-1}\vec u,$$ 
 která vyjadřuje, že $\vec u$ je vlastním vektorem matice $A^{-1}$ s
 vlastním číslem $\frac 1\lambda.$
+
+````
 
 ## Shrnutí, hlavní myšlenky
 

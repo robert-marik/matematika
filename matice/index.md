@@ -401,11 +401,10 @@ Je-li druhá matice v součinu sloupcový vektor $\vec u$, je výsledkem maticov
 
 https://youtu.be/4jqBoskZ9Ak
 
-### Derivace diskrétní funkce
+````{prf:algorithm} Derivace diskrétní funkce
+:class: dropdown
 
-<!-- <div class="shorten" data-text="Níže jsou popsány triválnější aplikace maticového součinu, jako jsou například populační model s věkovou strukturou. Odvážnější mohou přeskočit a pokračovat na to nejdůležitější, kdy matici chápeme jako zobrazení vektorů na vektory."> -->
-
-V metodě konečných diferencí jsme si ukázali a v předcházejícím textu připomněli, že derivace umíme aproximovat výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Toto je možné vyjádřit pomocí maticového součinu. Pro konkrétnost, pro druhou derivaci aproximujeme pomocí tří po sobě jdoucích hodnot v ekvidistantních krocích vzorcem 
+Z numerické aproximace derivace víme, že derivace umíme aproximovat výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Toto je možné vyjádřit pomocí maticového součinu. Pro konkrétnost, pro druhou derivaci aproximujeme pomocí tří po sobě jdoucích hodnot v ekvidistantních krocích vzorcem 
 $$ f''(x)\approx\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
 Tento vztah  můžeme chápat jako lineární kombinaci hodnot 
 $$\frac 1{h^2}, \quad -\frac{2}{h^2}, \quad \frac 1{h^2}$$ s koeficienty 
@@ -421,7 +420,11 @@ Proto matice
 $$\begin{pmatrix}-2 & 1& 0& 0 & 0\\1 & -2 & 1& 0& 0\\0& 1 & -2 & 1& 0\\0& 0 & 1  & -2 & 1\\0& 0& 0 & 1  & -2 \\\end{pmatrix}$$
 hraje důležitou roli v numerické matematice při numerickém modelování fyzikálních dějů. Až na první a poslední řádek se jedná o matici, která umí zprostředkovat numerické  derivování funkce. První a poslední řádek se přidávají, aby matice získala čtvercový tvar a jistou míru symetrie. (Symetrickým maticím se budeme věnovat za chviličku.) Tyto dva přidané řádky se uplatní při formulaci okrajových podmínek definujících chování funkce na koncích intervalu.
 
+````
+
 Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, které zachovává součet a násobení konstantou, mezi něž derivování patří. Jiný přístup k maticové formulaci derivace, k derivování na množině polynomů, si ukážeme ve cvičení.
+
+````
 
 ### Markovovy řetězce
 
@@ -818,15 +821,18 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 [Obrázky a online výpočty, Sage.](https://sagecell.sagemath.org/?z=eJxtkk-OmzAUxveRcgeLWcQMDgHadFGNK9FWqmaRTZsdQpEDnsQasJFx0sId5gSzygHmFORgffwRk1GCBMLm977ve8_cId9Fv1X9nLEUqS1PJEdGM1k-KZ2zhCPJkDIq4VIghsoq50aL5FkdLikxndyh4F1nxK61RK2MVgWoJaw0IJnyo2BGaXgZxaaTY610RXHkES8mkT88fXh67pL47pf2rV_DN3s6CWnOwPIfjiIXcDdYdqy3JHM3iDtiTUO3i1OokmPY-b6BoBSHTri2F0G7Zv3GfNhotyAw7cC2NoG6RXAvUi6NMNVm8Aw6MeikJ-ddVVsOHaEVEhJFUUisHzxrTmOf3IKEvSWxQtAbpwbQ-aU5lYagQsHwzy9cNm-Ao6jTJ9afG2idn19hwObI9GFgIQWxHoeJN28D2pPVBxKyE-snHEVzujyL1jX-Op0guNRWs7qiEV5FXuxcj8C-P_IEirGwUdu3aPvuzjHuBR5Xv2ihhDS4lyIoUZnSdKZ5OiOoFDWnnz3bKVRW7ZS8TbGs2DMKP4HtZELyW5D9bge301t2QUaTkd9mBw6qOy3SVq6ks1xIpa81-kiDypPIMrrWB36R56PkUF_u1V-8N3mGrYd98M1yVpEfO9bDol3YFxDCspsrQanYCVPST5dfMWQAq7KAAW80M0JR_5aDbkX_A0uKQGY=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
-## Rozložení teploty na tepelně vodivé desce
+
+````{prf:algorithm} Rozložení teploty na tepelně vodivé desce
+:class: dropdown
+
 
 https://youtu.be/xV46lYgdHSQ
 
-<div class="shorten" data-text="Následující text je motivační příklad ukazující aplikaci soustav lineárních rovnic na problém vedení tepla, souvislost s maticovým počtem a zejména přirozenou numerickou metodu řešení soustavy rovnic. Slouží jako motivace a bude pokryto v následující přednášce.">
+Následující text je motivační příklad ukazující aplikaci soustav lineárních rovnic na problém vedení tepla, souvislost s maticovým počtem a zejména přirozenou numerickou metodu řešení soustavy rovnic.
 
 <!-- YTB YJEydfa_mHI -->
 
-Na závěr si ukážeme, že pomocí lineární algebry a maticového počtu je možno popsat funkci dvou proměnných popisující rozložení teploty na tepelně vodivé desce. Postup je takový, že budeme sledovat teplotu v referenčních bodech. Požadavek, že teploty v okolních bodech mají odpovídat našim představám o vedení tepla vyjádříme kvantitativně pomocí vhodné matice.
+Ukážeme, že pomocí lineární algebry a maticového počtu je možno popsat funkci dvou proměnných popisující rozložení teploty na tepelně vodivé desce. Postup je takový, že budeme sledovat teplotu v referenčních bodech. Požadavek, že teploty v okolních bodech mají odpovídat našim představám o vedení tepla vyjádříme kvantitativně pomocí vhodné matice.
 
 <div class='obtekat'>
 
@@ -895,7 +901,7 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 
 [Online výpočet rovnicemi.](https://sagecell.sagemath.org/?z=eJxdj81qwzAQhO8Gv8NALlJtqPVzKvhhVEdJRM3KyKqr-Om7JiYxWZjDMszsfkW1RbfFtMWih-7ag4ATpji47AcKIDdnt3gKdXWJCQGBkBxdPYTu5Fddgaco6kmoT_shVNforim6KVZKbF3Lndt8BsXlPtyQ_TTGvOf0M8chyznVFCPl7pqnax7uo3V37fGmec--AHv-jheWYVnafvod48pMmFLE2Y0zY2Wf3MCUdTXf4p8Qh4YN5IQ1fie3hsxA8-jP_ucflI1XEg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
-</div>
+````
 
 ## Shrnutí, hlavní myšlenky
 
