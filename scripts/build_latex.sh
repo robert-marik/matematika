@@ -9,6 +9,8 @@ cp custom_preamble.tex $directory/
 
 cd $directory
 
+cp python.tex python_kopie.tex
+
 sed -i 's/\\chapter{Výpočet derivací}/\\part{Cvičení}\\input cviceni_definice.tex\n\\chapter{Výpočet derivací}/' python.tex
 sed -i 's/\\chapter{Derivace funkce}/\\part{Přednášky}\\input prednasky_definice.tex\n\\chapter{Derivace funkce}/' python.tex
 
@@ -47,6 +49,9 @@ sed -i 's/Remark/Poznámka/' python.tex
 sed -i 's/Definition/Definice/' python.tex
 sed -i 's/Example/Příklad/' python.tex
 sed -i 's/begin{sphinxadmonition}{note}{Příklad (Řešení)}/begin{sphinxadmonition}{note}{Řešení}/' python.tex
+sed -i 's/twocolumn,a4paper,10pt,czech/twocolumn,a4paper,10pt/' python.tex
+sed -i 's/Algorithm.*$/Volitelný obsah}\\footnotesize/' python.tex
+
 
 xelatex python
 xelatex python

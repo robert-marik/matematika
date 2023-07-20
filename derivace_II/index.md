@@ -132,6 +132,8 @@ což získáme dosazením $x+h$ za $x$ a $x$ za $x_0$.
 
 ```
 
+\iffalse
+
 <div class='obtekat'>
 
 ```{figure} linapprox.svg
@@ -139,6 +141,8 @@ Následující obrázek demonstruje skutečnost, že lineární aproximace je po
 ```
 
 </div>
+
+\fi
 
 **Příklad (růst stromu).** Strom má v roce 2019 výšku 3 metry a roste
   rychlostí 0.5 metru za rok. V roce $x$ je jeho výška dána vzorcem
@@ -622,16 +626,12 @@ mnoho výpočtů a rychlost konvergence je zásadní.
 :class: dropdown
 
 
-```{prf:remark} Ad hoc iterace
-:nonumber:
-
 Newtonovu metodu je možné chápat také tak, že rovnici $$f(x)=0$$ přepíšeme do ekvivalentního tvaru 
 
 $$x = x - \frac{f(x)}{f'(x)}$$ (newton*)
 
 a poté hledáme iteracemi 
 $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$ takové $x$, kdy se levá strana rovná pravé. Někdy je možné použít analogickou iterační techniku, kdy však zadanou rovnici převedeme do jiného tvaru, než {eq}`newton*`. Zpravidla snížíme šance, že proces konverguje a snížíme rychlost konvergence, ale i tak to může být výhodné, protože nemusíme počítat derivaci funkce. Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy lineárních rovnic.
-```
 
 
 **Příklad (ad hoc iterace).** Například rovnici $$x^4+7x-7=0$$ můžeme přepsat do tvaru $$x=\frac 17 (7-x^4)$$ a iterační vzorec
