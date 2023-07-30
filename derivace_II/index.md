@@ -80,6 +80,12 @@ aparát používá tam, kde se chyba limitním přechodem "stáhne na
 nulu". Navíc, ukazujeme koncept. *Důležité je si z příkladu odnést, že derivace umožní analyzovat, jak vypočítané veličiny reagují na změny ve vstupních datech. Výsledkem může být například maximální teoretická přesnost se kterou je možné vypočítat výslednou veličinu při vstupních datech zatížených chybou nebo nějakým způsobem nejistých (zákon šíření chyb).*
 ```
 
+\iffalse
+
+`ww2:problems/derivace_pouziti/citlivost.pg`
+
+\fi
+
 
 ## Lineární aproximace 
 
@@ -214,6 +220,15 @@ Ač se jedná "jenom" o lineární aproximaci, je  vzorec $E=\frac 12 mv^2$ doko
 
 ````
 
+\iffalse
+
+`ww2:problems/derivace_pouziti/lin_approx.pg`
+
+`ww2:problems/derivace_pouziti/lokalnost_lin_approx.pg`
+
+\fi
+
+
 ## Lineární aproximace a jednorozměrné materiálové vztahy
 
 https://youtu.be/yX6azlYcEs0
@@ -240,6 +255,12 @@ Pokusíme se modelovat funkci dávající do souvislosti velikost podnětu a rea
 * Ukazuje se, že v řadě praktických úloh je uvedená aproximace dobrá na dostatečně dlouhém intervalu a podle typu úlohy má tato aproximace povahu fyzikálního zákona a svůj vlastní název.  Nejčastěji se setkáme se s *Hookovým zákonem* pro deformaci materiálu (relativní prodloužení je úměrné normálovému napětí), *Darcyho zákonem* pro tok tekutiny půdou (filtrační rychlost je úměrná záporně vzatému hydraulickému gradientu), *Fickovým zákonem* pro difuzi (hustota difuzniho toku je úměrná záporně vzatému gradientu koncentrace) a *Fourierovým zákonem* pro vedení tepla v materiálu (hustota tepelného toku je úměrná záporně vzatému gradientu teploty). Později, v přednášce o zákonech zachování ve vektorovém poli ke konci semestru, si tyto závislosti naformulujeme ve vícerozměrném prostředí a hlavně ve tvaru, který umožní zohlednit práci s neizotropními materiály (různé fyzikální vlastnosti v různých směrech).
 * Matematicky je tedy povaha přímé úměrnosti v materiálových vztazích zřejmá a experimentálně je možné ověřit, pro jaké oblasti platí. Toto nám však mnohdy nestačí a snažíme se tyto vztahy ještě odvodit ze základních fyzikálních vztahů a z představy jak daný proces funguje. To otevírá možnosti potvrdit si, že naše představa o chování materiálu je správná.
 * V některých velmi speciálních případech dokonce umíme určit materiálovou charakteristiku výpočtem namísto měření. Pro praktické využití tato dovednost není významná (můžeme vypočítat například koeficient filtrace pro půdu složenou z částic ve tvaru stejně velkých kuliček, v praxi se však s takovým materiálem setkáme nanejvýš při speciálních aplikacích v laboratoři), ale dává nám to důležitý prostor pro ověření fyzikálních hypotéz a matematických postupů.
+
+\iffalse
+
+`ww2:problems/derivace_pouziti/konstitutivni_vztahy.pg`
+
+\fi
 
 ## Derivace a tečna
 
@@ -453,6 +474,15 @@ a odsud dostáváme aproximaci druhé derivace
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 
 
+\iffalse
+
+`ww2:problems/derivace_pouziti/aproximace_derivace.pg`
+
+`ww2:problems/derivace_pouziti/aproximace_derivace_tabulka.pg`
+
+\fi
+
+
 ````{prf:algorithm} Od vazeb mezi atomy k materiálovým vlastnostem
 :class: dropdown
 
@@ -621,6 +651,16 @@ rovnic, která má desítky tisíc proměnných. Každé kolo iterační metody 
 mnoho výpočtů a rychlost konvergence je zásadní. 
 
 [Python skript](https://gist.github.com/robert-marik/7eb864d3bc5d995772164baf13299e79)
+
+
+\iffalse
+
+`ww2:problems/derivace_pouziti/newton_raphson.pg`
+
+\fi
+
+
+
 
 ````{prf:algorithm} Ad hoc iterace
 :class: dropdown

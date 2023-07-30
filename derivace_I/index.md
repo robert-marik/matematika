@@ -337,6 +337,8 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 
 `ww2:problems/derivace_pouziti/definice_derivace.pg`
 
+`ww2:problems/derivace_pouziti/role_limity.pg`
+
 \fi
 
 <div class='obtekat'>
@@ -362,6 +364,10 @@ zpravidla přenášíme i na případy, kdy nezávislou proměnnou není
 Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivace $f'(x)$ často slovně interpretuje jako změna veličiny $f$, odpovídající změně veličiny $x$ o jednotku. Je to podobné, jako údaj o rychlosti na tachometru v automobilu. Ten udává, kolik kilometrů ujedeme za hodinu. Od skutečně uražené dráhy se tento údaj může lišit, protože pohyb může trvat třeba jenom deset minut. A kdyby jízda opravdu trvala hodinu, mohlo vlivem jízdy v zácpě dojít k podstatnému nesouladu se skutečně uraženou dráhou. Přesto je okamžitá rychlost ukazovaná na tachometru při jízdě automobilem užitečná veličina a nemáme problémy s jejím chápáním. Stejně tak pohlížejme na derivaci.
 
 \iffalse
+
+`ww2:problems/derivace_pouziti/intepretace_d_dt.pg`
+
+`ww2:problems/derivace_pouziti/derivace_v_aplikacich.pg`
 
 `ww2:problems/derivace_pouziti/hromada.pg`
 
@@ -395,6 +401,12 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 |Derivace je konstantní.|Funkce je lineární. Klesá nebo roste pořád stejně rychle. Pokud vstup roste aritmetickou řadou (po stejných skocích), sledovaná veličina roste nebo klesá také aritmetickou řadou.|
 |Derivace roste.|Funkce je nelineární a roste stále rychleji. Pokud je funkce kladná, rostoucí derivace znamená, že růst se stále zrychluje.|
 |Derivace klesá k nule.|Funkce je nelineární a přibližuje se k vodorovné asymptotě. Pokud je funkce kladná, k nule klesající derivace znamená, že růst se stále zpomaluje a zastaví se.|
+
+\iffalse
+
+`ww2:problems/derivace_pouziti/derivace_populace.pg`
+
+\fi
 
 ## Aplikace derivací 1: Jak rychle? (změna v čase)
 
@@ -446,7 +458,9 @@ funkce. Takové rovnice se naučíme řešit později.
 * Na levé straně rovnice je derivace teploty podle času vyjadřená v jednotkách teploty na jednotku času, například ${}^\circ \mathrm {C}/\mathrm{min}^{-1}$.  Na pravé straně je rozdíl teplot násobený konstantou $k$. Protože fyzikální jednotka na obou stranách musí souhlasit, platí $$\frac{{}^\circ \mathrm C}{\mathrm {min}}=[k]\times {}^\circ \mathrm C,$$ kde $[k]$ je jednotka konstanty $k$. Odsud plyne $$[k]=\frac{{}^\circ \mathrm C}{\mathrm {min}} \cdot \frac{1}{{}^\circ \mathrm C} = \frac{1}{\mathrm {min}}=\mathrm{min}^{-1},$$ a jednotka konstanty $k$ je rovna převrácené hodnotě jednotky času.
 * Je-li teplotní rozdíl roven jedné, tj. je-li $(T-T_0)=1$, plyne z rovnice $$ \frac{\mathrm
   dT}{\mathrm dt}=-k(T-T_0).  $$ vztah $$k = -\frac{\mathrm dT}{\mathrm dt}\qquad (\text{pro }T-T_0=1).$$ To znamená, že v tomto případě je konstanta $k$ rovna záporně vzaté derivaci teploty podle času. To umožňuje vyslovit následující charakterizaci konstanty $k$: _Konstanta $k$ je čísleně rovna rychlosti poklesu teploty v okamžiku, kdy je teplotní rozdíl teploty tělesa a okolí roven jedné._ 
-* Protože káva v plechovém hrníčkku chladne ve stejných podmínkách rychleji než káva v porcelánovém hrníčku, znamená to, že při modelování ochlazování kávy v plechovém hrníčku je hodnota konstanty $k$ větší.
+* Protože káva v plechovém hrníčku chladne ve stejných podmínkách rychleji než káva v porcelánovém hrníčku, znamená to, že při modelování ochlazování kávy v plechovém hrníčku je hodnota konstanty $k$ větší.
+* Stejná rovnice platí i pro studené těleso přemístěné do teplejší místnosti. Rychlost růstu teploty je úměrná teplotnímu rozdílu, tj.
+  $$ \frac{\mathrm dT}{\mathrm dt}=k(T_0-T)$$ a rovnice je (až na algebraickou úpravu spojenou s roznásobením závorky záporným znaménkem) stejná.
 
 V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
@@ -457,6 +471,12 @@ V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální pop
 
 
 \iffalse
+
+`ww2:problems/derivace_pouziti/derivace_teploty_hodnota.pg`
+
+`ww2:problems/derivace_pouziti/Newtonuv_zakon_ochlazovani.pg`
+
+`ww2:problems/derivace_pouziti/jednotka_konstanty.pg`
 
 <div class='obtekat'>
 
@@ -485,6 +505,13 @@ archeologických nálezů pozůstatků živých organismů
 * Konstanta $\lambda$ má jednotku rovnu převrácené hodnotě jednotky času a udává rychlost radioaktivního rozpadu pro jednotkové množství látky. Zdůvodnění tohoto tvrzení je stejné jako u modelu zákona ochlazování.
 * Uhlík je na datování vhodný, protože jej během života absorbují živé organismy a protože poločas rozpadu jej činí vhodným pro datování většiny archeologicky zajímavých nálezů. (Pro datování vzorků starších než 50 tisíc let je nutné použít jiný prvek, protože v tomto případě již uhlíku $^{14}C$ ve vzorku zůstane málo.)
 
+\iffalse
+
+`ww2:problems/derivace_pouziti/radioaktivni_rozpad.pg`
+
+\fi
+
+
 ## Aplikace derivací 2: Jak strmě? (změna v prostoru)
 
 https://youtu.be/cy2Mqw4KN4E
@@ -494,6 +521,13 @@ veličiny. Tím zjistíme, jak nerovnoměrně je veličina rozložena v
 prostoru. Často se derivace podle prostorové proměnné nazývá *gradient*,
 zejména pokud nepracujeme v jednorozměrném případě, ale pokud
 popisujeme děj probíhající v rovině nebo v prostoru.
+
+\iffalse
+
+`ww2:problems/derivace_pouziti/d_dx.pg`
+
+\fi
+
 
 ### Vedení tepla (dřevařství, nábytek, dřevostavby)
 
@@ -543,6 +577,8 @@ https://youtu.be/-k_roagRII0
 
 \iffalse
 
+### Testové otázky s výpočtem derivace
+
 Derivování si také můžete procvičit v následujících cvičeních. Se zápisem matematických výrazů Vám může pomoci [tento cheatsheet](https://raw.githubusercontent.com/robert-marik/hw-webwork/master/cheatsheet/cheatsheet.pdf).
 
 `ww2:problems/derivace_vypocet/01.pg`
@@ -566,6 +602,12 @@ Derivování si také můžete procvičit v následujících cvičeních. Se zá
 `ww2:problems/derivace_vypocet/10.pg`
 
 `ww2:problems/derivace_vypocet/derivovani_slozena_funkce.pg`
+
+
+
+### Testové otázky s výpočtem a interpretací derivace
+
+`ww2:problems/derivace_pouziti/dino.pg`
 
 \fi
 
