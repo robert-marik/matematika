@@ -107,4 +107,9 @@ Pro jiné hodnoty je rychlost poklesu hladiny v centimetrech za den rovna rychlo
 
 ```
 
+## Informační zdroje
 
+* Moodle na MENDELU
+* WeBWorK na UM 
+
+Kde co najdu, jak se přihlásím, ukázky práce.
