@@ -94,11 +94,14 @@ $$T(d)-T(0)=\int _0^d -\frac Qk\,\mathrm dx=-\frac Qk\int _0^d \mathrm dx= -\fra
 Pro $T(0)=T_1$ a $T(d)=T_2$ dostáváme
 $$T_2-T_1=-\frac Qk d$$
 a odsud
-$$Q=k\frac{T_1-T_2}d$$
+$$Q=k\frac{T_1-T_2}d.$$
+Toto je příklad, kdy se integrál redukuje na násobení díky tomu, že derivace je konstantní. V tomto případě pravá strana vztahu 
+$$\frac{\mathrm dT}{\mathrm dx}=-\frac Qk$$
+nezávisí na $x$.
 
 ```
 
-## Vedení tepla stěnou, nelineární materiálové vztahy
+## Vedení tepla stěnou, nelineární materiálové vztahy (volitelné)
 
 Zopakujte předchozí výpočet pro materiál s nelineární materiálovou odezvou, kdy Fourierův zákon není lineární, tj. $k$ závisí na teplotě. Nejjednodušší zobecnění je případ, kdy $k(T)$ je lineární, tj. platí $$k(T)=a+bT.$$ Použijte substituční metodu převádějící integrál $\int k(T(x))\frac{\mathrm dT}{\mathrm dx}\,\mathrm dx$ na integrál $\int k(T)\,\mathrm dT.$ Použijte dále skutečnost, že střední hodnota lineární funkce je aritmetickým průměrem hodnot v krajních bodech intervalu.
 
@@ -238,7 +241,7 @@ kde i tento integrál se dá vypočítat přímou integrací pomocí vzorce.
 
 </div>
 
-## Rodičovské stromy
+## Rodičovské stromy (volitelné)
 
 <div class="shorten" data-text="Další trošku náročnější aplikace integrálu. Jak je v úlohách na integrál obvyklé, potřebujeme posčítat příspěvky k aditivní veličině, jejíž hodnota nás zajímá. V tomto případě potřebujeme posčítat příspěvky z kruhové oblasti okolo stromu.">
 

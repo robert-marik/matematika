@@ -23,6 +23,7 @@ parts:
   - caption: Cvičení
     numbered: true
     chapters:
+    - file: cviceni/cviceni00.md
     - file: cviceni/cviceni01.md
     - file: cviceni/cviceni02.md
     - file: cviceni/cviceni03.md

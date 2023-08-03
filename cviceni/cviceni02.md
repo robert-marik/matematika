@@ -79,7 +79,7 @@ Shrneme si, co je možné očekávát během průběhu děje. U studené tyče o
 
 ```
 
-## Okrajové podmínky pro rovnici vedení tepla
+## Okrajové podmínky pro rovnici vedení tepla (volitelný obsah)
 
   K modelu stěny pomocí rovnice vedení tepla je ještě nutné přidat podmínky související s počátečním stavem (počáteční podmínky) a s chováním na okrajích (okrajové podmínky).
 
@@ -271,7 +271,7 @@ $$\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).$$
 
 ```
 
-## Výpočet derivace
+## Výpočet derivace (volitelný obsah)
 
 <div class="shorten" data-text="Volitelně další derivace.">
 

@@ -207,7 +207,7 @@ $$\begin{aligned}
 
 ```
 
-## Práce na pružině
+## Práce na pružině (volitelné)
 
 <div class="shorten" data-text="Volitelně ukázka příkladu počítaného v různých jednotkách. Integruje se pokaždé jiná funkce a pokaždé v jiných mezích, ale počítá se vždy to stejné a výsledky si odpovídají. Je to speciální případ substituce, pokročilejší integrační metody, které se budeme věnovat příště.">
 

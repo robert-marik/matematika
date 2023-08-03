@@ -266,7 +266,7 @@ $$  A^2=   \begin{pmatrix}  0 & 0 & 0 \\  0 & 0 & 0 \\  2 & 0 & 0\end{pmatrix}, 
 
 ```
 
-## Matice projekce
+## Matice projekce (volitelný obsah)
 
 Matice $P=\begin{pmatrix}  \cos^2 \alpha & \cos \alpha \sin \alpha \\  \cos\alpha\sin\alpha & \sin^2 \alpha\end{pmatrix}$ reprezentuje kolmou projekci na přímku, která jde počátkem soustavy souřadnic a svírá s kladnou částí osy $x$ úhel $\alpha$.
 
