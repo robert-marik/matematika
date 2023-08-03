@@ -107,6 +107,10 @@ Pro jiné hodnoty je rychlost poklesu hladiny v centimetrech za den rovna rychlo
 
 ```
 
+## Soustavy lineárních rovnic
+
+Soustavy dvou rovnic o dvou neznámých můžeme řešit dosazovací nebo sčítací metodou. Dosazovací metoda je jednodušší, ale sčítací metodu je snadné rozšířit na libovolný počet rovnic a libovolný počet neznámých. Zopakujeme si (ze střední školy) obě metody.
+
 ## Informační zdroje
 
 * Moodle na MENDELU
