@@ -2,7 +2,9 @@
 
 Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází přednášku.
 
-## Množení bakterie _Escherichia coli_ (_E. coli_)
+## Bakterie _Escherichia coli_ (_E. coli_)
+
+
 
 \iffalse 
 
@@ -10,34 +12,39 @@ Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází předn
 
 \fi
 
+Michael Crichton ve svém převratném scifi Kmen Andromeda (1969) napsal: _Matematika neomezeného růstu je děsivá. Jediná buňka bakterie E. coli se za příznivých okolností dělí každých dvacet minut. Na tom není nic tak zlého, pokud si neuvědomíme, že se bakterie dělí geometrickou řadou. Z jedné vznikonu dvě, ze dvou čtyři, ze čtyř osm a tak dále. Takto lze dojít k závěru, že by se za jeden den mohla jedna buňka rozrůst do superkolonie velikosti a váhy celé planety Země._
 
-Bakterie _E. coli_ se za optimálních podmínek dělí každých dvacet minut. Tj. za příhodné teploty, pH a při dostatku potravy z každé bakterie během dvaceti minut vzniknou bakterie dvě.
+V něčem měl spisovatel pravdu. Bakterie _E. coli_ se za optimálních podmínek dělí každých dvacet minut. Tj. za příhodné teploty, pH a při dostatku potravy z každé bakterie během dvaceti minut vzniknou bakterie dvě.
 
-Na začátku je jedna jediná bakterie. Kolik bakterií bude za dva dny? Určete i výslednou hmotnost. Určete i funkci, která udává počet a hmotnost bakterií po uplynutí $t$ hodin. Hmotnost jedné bakterie uvažujte $10^{-12}\,\mathrm{kg}$.
+Je pravdivý i zbytek? Uvažujme na začátku jednu jedinou bakterii. Kolik bakterií bude za 24 hodin? Určete i výslednou hmotnost. Určete i funkci, která udává počet a hmotnost bakterií po uplynutí $t$ hodin. Hmotnost jedné bakterie uvažujte $10^{-12}\,\mathrm{g}$.
 
-Odhadněte, jestli celková hmotnost bude srovntalná s hmotností kočky (kilogramy), psa (nízké desítky kilogramů), člověka (vyšší desitky kilogramů), automobilu (tuny), Boeingu 737 (desítky tun), Empire State Building (stovky tisíc tun, <https://cs.wikipedia.org/wiki/Empire_State_Building>), Země ($5\times 10^{24}\,$kg).
+Srovnejte s hmotností kočky (kilogramy), psa (nízké desítky kilogramů), člověka (vyšší desitky kilogramů), automobilu (tuny, $10^3\,\mathrm {kg}$), Boeingu 737 (desítky tun, $10^4\,\mathrm {kg}$), Empire State Building (stovky tisíc tun, <https://cs.wikipedia.org/wiki/Empire_State_Building>, $10^8\,\mathrm {kg}$), Země ($5\times 10^{24}\,$kg).
 
-Bakterie _E. coli_ je přítomna v lidském organismu ve střevech. Její případnáí přítomnost například v pitné vodě je indikátorem fekálního znečištění. Jedná se o dobře prozkoumanou bakterii, která se využívá v genovém inženýrství a biotechnologiích.
+Bakterie _E. coli_ je přítomna v lidském organismu ve střevech a většina jejích kmenů je neškodná. Její případná přítomnost například v pitné vodě je indikátorem fekálního znečištění. Jedná se o dobře prozkoumanou bakterii, která se využívá v genovém inženýrství a biotechnologiích.
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
 
-Každých dvacet minut se množství bakterií zdvojnásobí. Za jednu hodinou jsou tři dvacetiminutovky. Počet zdvojnásobení je tedy roven počtu hodin vynásobených třemi.
+Každých dvacet minut se množství bakterií zdvojnásobí. Za jednu hodinu jsou tři dvacetiminutovky. Počet zdvojnásobení je tedy roven počtu hodin vynásobených třemi.
 
-Za $t$ hodin dostáváme
-$$N(t)=1\cdot\underbrace{2\cdot 2 \cdot 2 \cdots 2}_{3t\text{-krát}} = 2^{3t}$$
+Za $t$ hodin dostáváme pro počet bakterií funkci
+$$N(t)=1\cdot\underbrace{2\cdot 2 \cdot 2 \cdots 2}_{3t\text{-krát}} = 2^{3t}.$$
 
 
-Za dva dny, tj. za 48 hodin, dostáváme
-$$N(48)=2^{3\times 48}=2^{144}=2\times 10^{43}.$$
+Za den, tj. za 24 hodin, dostáváme
+$$N(24)=2^{3\times 24}=2^{72}=4.7\times 10^{21}.$$
 
-Hmotnost bakterií dostaneme jako součin hmotnosti jedné bakterie a jejich počtu, tj. $$m(t)=2^{3t}\times 10^{-12}\,\mathrm{kg}.$$ Pro růst trvající dva dny dostáváme
-$$m(48)=2\times 10^{31}\,\mathrm{kg},$$
+Hmotnost bakterií dostaneme jako součin hmotnosti jedné bakterie a jejich počtu, tj. $$m(t)=2^{3t}\times 10^{-12}\,\mathrm{g}=2^{3t}\times 10^{-15}\,\mathrm{kg}.$$ Pro růst trvající celý den dostáváme
+$$m(24)=4.7\times 10^{6}\,\mathrm{kg},$$ což je méně než hmotnost mrakodrapu Empire state building.
+
+Šance, že by se podařilo bakterie "zásobovat" tak, aby se celý den mohly množit optimální rychlostí, tedy není ani teoretická. Poměrně rychle dojde k vyčerpání zdrojů a omezení rychlosti růstu.
+
+
+Pro zajímavost, při růstu dva dny bychom měli
+$$m(48)=2.2 \times 10^{28}\,\mathrm{kg},$$
 což je více než hmotnost Země.
-Šance, že by se podařilo bakterie "zásobovat" tak, aby se celé dva dny mohly množit optimální rychlostí, tedy není ani teoretická. Poměrně rychle dojde k vyčerpání zdrojů a omezení rychlosti růstu.
-
 
 ```
 
@@ -113,7 +120,8 @@ Soustavy dvou rovnic o dvou neznámých můžeme řešit dosazovací nebo sčít
 
 ## Informační zdroje
 
-* Moodle na MENDELU
-* WeBWorK na UM 
+Seznámíte se s informačními zdroji.
 
-Kde co najdu, jak se přihlásím, ukázky práce.
+* Moodle na MENDELU, pro zápis do předmětu použijete kód rozlišující formu studia (presenční versus kombinovaná). Zde jsou učební materiáy, podmínky pro ukončení. Odsud se autentizujete do systému pro domácí úkoly.
+* WeBWorK na UM. Systém pro domácí úkoly. Přístup autoamticky z Moodle opory. DOmácí úkoly se otevírají a uzavírají podle nastaveného harmonogramu. Plněním těchto nepovinných domácích úkolů si můžete výrazně snížit laťku nutnou pro překonání zkoušky a vylepšit známku.
+
