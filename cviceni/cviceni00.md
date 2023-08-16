@@ -8,7 +8,9 @@ Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází předn
 
 \iffalse 
 
-![byfkfkrErbe, <https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg>](ecoli.jpg)
+```{figure} ecoli.jpg
+byfkfkrErbe, <https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg>
+```
 
 \fi
 
@@ -50,7 +52,9 @@ což je více než hmotnost Země.
 
 \iffalse 
 
-![Theresa Knott, <https://commons.wikimedia.org/wiki/File:Pisa_experiment.png>](Pisa_experiment.png)
+```{figure} Pisa_experiment.png
+Theresa Knott, <https://commons.wikimedia.org/wiki/File:Pisa_experiment.png>
+```
 
 \fi
 
@@ -81,7 +85,9 @@ U volného pádu a růstu bakterií průměrná rychlost roste.
 
 \iffalse 
 
-![Harold17, <https://commons.wikimedia.org/wiki/File:Lanov%C3%A1_dr%C3%A1ha_Punkevn%C3%AD_jeskyn%C4%9B-Macocha,_lanovka(2).jpg>](Lanova_draha_Punkevni_jeskyne.jpg)
+```{figure} Lanova_draha_Punkevni_jeskyne.jpg
+Harold17, <https://commons.wikimedia.org/wiki/File:Lanov%C3%A1_dr%C3%A1ha_Punkevn%C3%AD_jeskyn%C4%9B-Macocha,_lanovka(2).jpg>
+```
 
 \fi
 
@@ -93,7 +99,9 @@ Jak rychle stoupá lanovka v Moravském krasu mezi Punkevními jeskyněmi a Maco
 
 \iffalse 
 
-![<https://ekolist.cz/cz/zpravodajstvi/zpravy/pred-50-lety-byl-objeven-nejdelsi-jeskynni-system-v-cr-amaterska-jeskyne>](stara_amaterska_jeskyne.jpg)
+```{figure} stara_amaterska_jeskyne.jpg
+<https://ekolist.cz/cz/zpravodajstvi/zpravy/pred-50-lety-byl-objeven-nejdelsi-jeskynni-system-v-cr-amaterska-jeskyne>
+```
 
 \fi
 
