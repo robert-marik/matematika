@@ -4,7 +4,9 @@
 
 \iffalse 
 
-![Difuzní rovnice dokáže například objasnit i modelování chemických rekací s přihlédnutím k prostorovému rozložení reagujících látek a jejich koncentrací. Jednou z aplikací je vysvětlení toho, proč jednotný mechanismus tvorby vzorů na srsti savců vede jednou k pruhům a jednou ke skvrnám na srsti. Dokážeme tak například lépe pochopit proces, jakým se geny přepisují do viditelných znaků. Podrobněji Murray: Mathematical biology nebo How the leopard gets its spots. Obrázek: pixabay.com](tigr.jpg)
+```{figure} tigr.jpg
+Difuzní rovnice dokáže například objasnit i modelování chemických rekací s přihlédnutím k prostorovému rozložení reagujících látek a jejich koncentrací. Jednou z aplikací je vysvětlení toho, proč jednotný mechanismus tvorby vzorů na srsti savců vede jednou k pruhům a jednou ke skvrnám na srsti. Dokážeme tak například lépe pochopit proces, jakým se geny přepisují do viditelných znaků. Podrobněji Murray: Mathematical biology nebo How the leopard gets its spots. Obrázek: pixabay.com
+```
 
 \fi 
 
@@ -100,7 +102,9 @@ krajích stěny.
 
 \iffalse 
 
-![pixabay.com](chladic.jpg)
+```{figure} chladic.jpg
+pixabay.com
+```
 
 \fi 
 
@@ -148,7 +152,9 @@ Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, 
 <!--
 %## Gradient, anizotropní vedení tepla
 
-%![pixabay.com](teplo_deska.png)
+%```{figure} teplo_deska.png
+pixabay.com
+```
 -->
 
 ## Rovnice vedení tepla v dvourozměrném materiálu

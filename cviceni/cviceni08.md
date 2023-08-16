@@ -106,7 +106,9 @@ $$
 
 ## Timmyho transformace
 
-![](Timmy.png)
+```{figure} Timmy.png
+
+```
 
 Figurka na obrázku je Timmy ve třech situacích. Jednou se pozoruje svůj obraz ve vodě, jednou spadl na záda, a jednou vrhá stín. Vyjádřete pomocí matice transformaci, která vzor (černá malůvka) převádí na obraz (barevná malůvka).
 

@@ -8,7 +8,9 @@
 
 \iffalse
 
-![pixabay.com](room.jpg)
+```{figure} room.jpg
+pixabay.com
+```
 
 \fi
 
@@ -114,7 +116,9 @@ Všimněte si, že poslední dvě podmínky se liší znaménkem u $T$. To proto
 
 \iffalse
 
-![Model popsaný v této úloze se často používá například při studiu růstu ryb. Obrázek: pixabay.com, PublicDomainImages](pstruh.jpg)
+```{figure} pstruh.jpg
+Model popsaný v této úloze se často používá například při studiu růstu ryb. Obrázek: pixabay.com, PublicDomainImages
+```
 
 \fi
 
@@ -141,7 +145,9 @@ Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky ch
 
 \iffalse
 
-![pixabay.com](kontaminace.jpg)
+```{figure} kontaminace.jpg
+pixabay.com
+```
 
 \fi
 
@@ -166,7 +172,9 @@ $$\frac{\mathrm dy}{\mathrm dt}=-0.08y-30.$$
 
 \iffalse
 
-![pixabay.com](lov.jpg)
+```{figure} lov.jpg
+pixabay.com
+```
 
 \fi 
 
@@ -196,7 +204,9 @@ Funkce $f_h(x)=rx\left(1-\frac xK\right)-h$ vznikne posunutím funkce $f(x)=rx\l
 
 \iffalse
 
-![pixabay.com, autor Free-Photos](deer.jpg)
+```{figure} deer.jpg
+pixabay.com, autor Free-Photos
+```
 
 \fi
 
@@ -237,7 +247,9 @@ $$\frac{\mathrm dy}{\mathrm dt}=ky(M-y).$$
 
 \iffalse
 
-![pixabay.com](olej.jpg)
+```{figure} olej.jpg
+pixabay.com
+```
 
 \fi
 

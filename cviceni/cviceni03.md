@@ -187,7 +187,9 @@ $\left(1-\frac 0K\right)=1$. V okolí $x=0$ je první součinitel lineární a v
 
 \iffalse 
 
-![pixabay.com](medene_nadobi.jpg)
+```{figure} medene_nadobi.jpg
+pixabay.com
+```
 
 \fi
 
@@ -220,7 +222,9 @@ Pokusíme se trošku slovně ilustrovat, co nám vlastně vyšlo. Při teplotě 
 
 \iffalse 
 
-![pixabay.com](sun_house.jpg)
+```{figure} sun_house.jpg
+pixabay.com
+```
 
 \fi
 

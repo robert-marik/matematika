@@ -75,7 +75,9 @@ Body nespojitosti nejsou a jeden nulový bod rozdělí reálnou osu na dva podin
 
 \iffalse 
 
-![vlastní](krabicka.jpg)
+```{figure} krabicka.jpg
+vlastní
+```
 
 \fi
 
@@ -117,7 +119,9 @@ $$
 
 \iffalse 
 
-![pixabay.com](plot.jpg)
+```{figure} plot.jpg
+pixabay.com
+```
 
 \fi
 
@@ -196,7 +200,9 @@ a kratší strana je polovinou délky delší strany. Jako v předchozím příp
 
 \iffalse 
 
-![Harry Rogers, youtube.com](beam.jpg)
+```{figure} beam.jpg
+Harry Rogers, youtube.com
+```
 
 \fi
 
@@ -244,7 +250,9 @@ $$b=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\frac{1}{2}$$ a trám má v tomto případě 
 
 \iffalse 
 
-![pixabay.com](pstruh.jpg)
+```{figure} pstruh.jpg
+pixabay.com
+```
 
 \fi
 

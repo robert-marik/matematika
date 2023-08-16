@@ -75,7 +75,9 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 
 \iffalse 
 
-![wikimedia.org](ryba.png)
+```{figure} ryba.png
+wikimedia.org
+```
 
 \fi
 
@@ -108,7 +110,9 @@ Zadaná funkce vyjadřující závislost délky na čase je polynom. Použitím 
 
 \iffalse
 
-![pixabay.com](kolibrik.jpg)
+```{figure} kolibrik.jpg
+pixabay.com
+```
 
 \fi
 
@@ -132,7 +136,9 @@ Pro výpočet si stačí uvědomit, že funkce je konstantním násobkem mocninn
 \iffalse 
 
 
-![wikimedia.org](airbus.jpg)
+```{figure} airbus.jpg
+wikimedia.org
+```
 
 \fi
 
@@ -165,7 +171,9 @@ $$C'(x)=\frac{2}{\sqrt{4x+4}}.$$ Ve druhém případě máme zlomek s konstantn�
 
 \iffalse 
 
-![pixabay.com](horizont.jpg)
+```{figure} horizont.jpg
+pixabay.com
+```
 
 \fi 
 
@@ -189,7 +197,9 @@ $$\frac{\mathrm dH}{\mathrm dh}(5)=0.7983 \times \frac {1000\, \mathrm{m}}{\math
 
 \iffalse 
 
-![J. Kameníček, brnensky.denik.cz](vate_pisky.jpg)
+```{figure} vate_pisky.jpg
+J. Kameníček, brnensky.denik.cz
+```
 
 \fi
 
@@ -225,7 +235,9 @@ $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathr
 
 \iffalse 
 
-![Že je u koule objem úměrný třetí mocnině poloměru vidíme přímo ze vzorce. Nejinak to je u těles, které si zachovávají proporce, tj. vzniknou zvětšením či zmenšením z jediného vzoru. Typickým příkladem je kromě koule i kužel s pevně zadaným vrcholovým úhlem. Tento tvar zachovávají volně sypané materiály. Obrázek: pixabay.com](kopec_soli.jpg)
+```{figure} kopec_soli.jpg
+Že je u koule objem úměrný třetí mocnině poloměru vidíme přímo ze vzorce. Nejinak to je u těles, které si zachovávají proporce, tj. vzniknou zvětšením či zmenšením z jediného vzoru. Typickým příkladem je kromě koule i kužel s pevně zadaným vrcholovým úhlem. Tento tvar zachovávají volně sypané materiály. Obrázek: pixabay.com
+```
 
 \fi 
 
@@ -253,7 +265,9 @@ Hromada roste do výšky rychlostí 5.3 centimetru za minutu.
 
 \iffalse 
 
-![http://mp.mestokyjov.cz/](kyjov.jpg)
+```{figure} kyjov.jpg
+http://mp.mestokyjov.cz/
+```
 
 \fi
 

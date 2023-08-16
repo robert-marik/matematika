@@ -52,7 +52,9 @@ Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\ma
 
 \iffalse 
 
-![pixabay.com](oil.jpg)
+```{figure} oil.jpg
+pixabay.com
+```
 
 \fi 
 
@@ -81,7 +83,9 @@ $$
 
 \iffalse 
 
-![pixabay.com](bees.jpg)
+```{figure} bees.jpg
+pixabay.com
+```
 
 \fi 
 
@@ -125,7 +129,9 @@ $$
 
 \iffalse 
 
-![pixabay.com](kanalizace.jpg)
+```{figure} kanalizace.jpg
+pixabay.com
+```
 
 \fi 
 
@@ -153,7 +159,9 @@ a koncentrace poklesne o $4000$ jednotek (bakterií na kubický centimetr).
 
 \iffalse 
 
-![vlastní](slovnik.jpg)
+```{figure} slovnik.jpg
+vlastní
+```
 
 \fi
 

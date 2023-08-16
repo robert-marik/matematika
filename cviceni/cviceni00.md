@@ -12,7 +12,7 @@ Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází předn
 
 \fi
 
-Michael Crichton ve svém převratném scifi Kmen Andromeda (1969) napsal: _Matematika neomezeného růstu je děsivá. Jediná buňka bakterie E. coli se za příznivých okolností dělí každých dvacet minut. Na tom není nic tak zlého, pokud si neuvědomíme, že se bakterie dělí geometrickou řadou. Z jedné vznikonu dvě, ze dvou čtyři, ze čtyř osm a tak dále. Takto lze dojít k závěru, že by se za jeden den mohla jedna buňka rozrůst do superkolonie velikosti a váhy celé planety Země._
+Michael Crichton ve svém převratném sci-fi Kmen Andromeda (1969) napsal: _Matematika neomezeného růstu je děsivá. Jediná buňka bakterie E. coli se za příznivých okolností dělí každých dvacet minut. Na tom není nic tak zlého, pokud si neuvědomíme, že se bakterie dělí geometrickou řadou. Z jedné vzniknou dvě, ze dvou čtyři, ze čtyř osm a tak dále. Takto lze dojít k závěru, že by se za jeden den mohla jedna buňka rozrůst do superkolonie velikosti a váhy celé planety Země._
 
 V něčem měl spisovatel pravdu. Bakterie _E. coli_ se za optimálních podmínek dělí každých dvacet minut. Tj. za příhodné teploty, pH a při dostatku potravy z každé bakterie během dvaceti minut vzniknou bakterie dvě.
 
@@ -37,9 +37,7 @@ Za den, tj. za 24 hodin, dostáváme
 $$N(24)=2^{3\times 24}=2^{72}=4.7\times 10^{21}.$$
 
 Hmotnost bakterií dostaneme jako součin hmotnosti jedné bakterie a jejich počtu, tj. $$m(t)=2^{3t}\times 10^{-12}\,\mathrm{g}=2^{3t}\times 10^{-15}\,\mathrm{kg}.$$ Pro růst trvající celý den dostáváme
-$$m(24)=4.7\times 10^{6}\,\mathrm{kg},$$ což je méně než hmotnost mrakodrapu Empire state building.
-
-Šance, že by se podařilo bakterie "zásobovat" tak, aby se celý den mohly množit optimální rychlostí, tedy není ani teoretická. Poměrně rychle dojde k vyčerpání zdrojů a omezení rychlosti růstu.
+$$m(24)=4.7\times 10^{6}\,\mathrm{kg}.$$ Není to hmotnost Země, ale i tak to je úctyhodné číslo. Šance, že by se podařilo bakterie "zásobovat" tak, aby se celý den mohly množit optimální rychlostí, tedy není ani teoretická. Poměrně rychle dojde k vyčerpání zdrojů a omezení rychlosti růstu.
 
 
 Pro zajímavost, při růstu dva dny bychom měli
@@ -63,7 +61,7 @@ Uvažujme tři různé děje, kde nějaká veličina roste v čase.
 * Dráha $s$ objektu padajícího volným pádem (ve vakuu nebo při zandbání odporu vzduchu) roste s časem $t$ podle funkce $$s=5t^2,$$ kde dráhu měříme v metrech a čas v sekundách. Na obrázku je Galileův experiment ukazující, že rychlost volného pádu nesouvisí s hmotností, ale je opravdu jenom funkcí času.
 * Počet bakterií _E. coli_ z předchozího příkladu jako funkce času v hodinách.
 
-Porovnejte průměrnou rychlost za první dvě jednotky času (první dvě hodiny preo auto a bakterie, resp. první dvě sekundy v případě volného pádu) a za časový interval od 2 do 4 hodin resp. sekund.
+Porovnejte průměrnou rychlost za první dvě jednotky času (první dvě hodiny pro auto a bakterie, resp. první dvě sekundy v případě volného pádu) a za časový interval od 2 do 4 hodin resp. sekund.
 
 Shrňte své pozorování a pokuste se toto pozorování zobecnit.
 
@@ -88,7 +86,7 @@ U volného pádu a růstu bakterií průměrná rychlost roste.
 \fi
 
 
-Jak rychle stoupá lanovka v Moravském krasu mezi Punkevními jeskyněmi a Macochou?
+Jak rychle stoupá lanovka v Moravském krasu mezi Punkevními jeskyněmi a Macochou? Jedná se o nejprudší lanovku v ČR. Výškový rozdíl mezi stanicemi je 131 metrů, vodorovná vzdálenost je 207 metrů (<https://www.kudyznudy.cz/ceska-nej/dopravni/lanovka-v-moravskem-krasu>). Vypočtěte průměrnou rychlost stoupání lanovky (průměrný sklon). 
 
 ## Rychlost může záviset na jiné rychlosti
 
@@ -108,7 +106,7 @@ Vyřešte úlohu pro zadané konkrétní hodnoty a pokuste se sestavit obecný v
 :class: dropdown
 :nonumber:
 
-Za den odtečou tři metry krychlové. Každý metr krychlový, který odteče, způsobí pokles hladiny o půl centimeetru. Tři metry krychlové, které odtečou za den, tedy způsobí snížení hladiny o centimetr a půl. Voda klesá rychlostí jeden a půl centimetru za den. 
+Za den odtečou tři metry krychlové. Každý metr krychlový, který odteče, způsobí pokles hladiny o půl centimetru. Tři metry krychlové, které odtečou za den, tedy způsobí snížení hladiny o centimetr a půl. Voda klesá rychlostí jeden a půl centimetru za den. 
 
 Pro jiné hodnoty je rychlost poklesu hladiny v centimetrech za den rovna rychlosti odtoku (v metrech krychlových za den) vynásobenému rychlostí, s jakou klesá hladina v závislosti na objemu odtečené vody (v centimetrech výšky hladiny na metr krychlový odtečené vody).
 
@@ -123,5 +121,5 @@ Soustavy dvou rovnic o dvou neznámých můžeme řešit dosazovací nebo sčít
 Seznámíte se s informačními zdroji.
 
 * Moodle na MENDELU, pro zápis do předmětu použijete kód rozlišující formu studia (presenční versus kombinovaná). Zde jsou učební materiáy, podmínky pro ukončení. Odsud se autentizujete do systému pro domácí úkoly.
-* WeBWorK na UM. Systém pro domácí úkoly. Přístup autoamticky z Moodle opory. DOmácí úkoly se otevírají a uzavírají podle nastaveného harmonogramu. Plněním těchto nepovinných domácích úkolů si můžete výrazně snížit laťku nutnou pro překonání zkoušky a vylepšit známku.
+* WeBWorK na UM. Systém pro domácí úkoly. Přístup je automaticky z Moodle opory. Domácí úkoly se otevírají a uzavírají podle nastaveného harmonogramu. Plněním těchto nepovinných domácích úkolů si můžete výrazně snížit laťku nutnou pro překonání zkoušky a vylepšit známku.
 

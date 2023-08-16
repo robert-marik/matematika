@@ -44,7 +44,9 @@ _Umění najít řešení diferenciální rovnice je sympatické a naučíme se 
 
 \iffalse 
 
-![pixabay.com](ledni_medved.jpg)
+```{figure} ledni_medved.jpg
+pixabay.com
+```
 
 \fi 
 
@@ -72,7 +74,9 @@ $$
 
 \iffalse 
 
-![www.rodovystatek.cz](voda_plastovky.jpg)
+```{figure} voda_plastovky.jpg
+www.rodovystatek.cz
+```
 
 \fi 
 
@@ -124,7 +128,9 @@ $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
 \iffalse 
 
-![www.rodovystatek.cz](voda_plastovky.jpg)
+```{figure} voda_plastovky.jpg
+www.rodovystatek.cz
+```
 
 \fi 
 
@@ -176,7 +182,9 @@ Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, 
 
 \iffalse 
 
-![vlastní](pokros.jpg)
+```{figure} pokros.jpg
+vlastní
+```
 
 \fi 
 
@@ -209,7 +217,9 @@ kde $r$ a $k=k_0k_1$ jsou konstanty.
 
 \iffalse 
 
-![vlastní](pokros.jpg)
+```{figure} pokros.jpg
+vlastní
+```
 
 \fi 
 

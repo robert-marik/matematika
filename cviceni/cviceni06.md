@@ -140,7 +140,9 @@ $$Q=\frac{k (T_1)+k (T_2)}{2}\frac{T_1-T_2}{d}.$$
 
 \iffalse 
 
-![pixabay.com](medene_nadobi.jpg)
+```{figure} medene_nadobi.jpg
+pixabay.com
+```
 
 \fi 
 
@@ -191,7 +193,9 @@ použít přímo lichoběžníkové pravidlo.
 
 \iffalse 
 
-![pixabay.com](znecisteni.jpg)
+```{figure} znecisteni.jpg
+pixabay.com
+```
 
 \fi 
 
@@ -247,7 +251,9 @@ kde i tento integrál se dá vypočítat přímou integrací pomocí vzorce.
 
 \iffalse 
 
-![publicdomainpictures.net](zaludy.jpg)
+```{figure} zaludy.jpg
+publicdomainpictures.net
+```
 
 \fi 
 
