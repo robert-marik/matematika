@@ -106,9 +106,15 @@ Některé stromy se při pohybu chovají spíše jako kyvadlo, jiné spíše jak
 
 \iffalse
 
+```{prf:proof} Vyzkoušejte si, jestli umíte přečíst výraz s přímou úměrností a jestli mu i naopak umíte dát matematickou podobu.
+
+
 `ww2:problems/precalculus/umernost_slovne.pg`
 
 `ww2:problems/precalculus/umernost_vzorcem.pg`
+
+
+```
 
 \fi
 
@@ -283,7 +289,7 @@ Body, v jejichž okolí je funkce ohraničená, ale je zde porušena spojitost, 
 **odstranitelná nespojitost**
 : Tato nespojitost nás zajímá nejvíce. Je to nespojitost, která zmizí pokud vhodně dodefinujeme funkční hodnotu v bodě nespojitosti. Například funkce $$f(x)= \begin{cases}   \frac {\sin x}{x}& x\neq 0\\   1& x=0 \end{cases} $$ je spojitá funkce. Vznikla doplněním jedné funkční hodnoty do definice funkce $\frac{\sin x}x$, která má odstranitelnou nespojitost v bodě $x=0$.
 
- [Grafy.](https://sagecell.sagemath.org/?z=eJxL06jQtNWo0NZITCoGMjU19TWMtCo0ebnSQRLFmXlASr-ClyvA0DZNryAnv0RDo0JH11THVBOoJsDINh1VUEchOT8nv8hWvSg1RR2kwlA7wAgAMsAaHQ==&lang=sage)
+ [Grafy (Python).](https://sagecell.sagemath.org/?z=eJxVyjsKwzAMgOHd4Dt4lNPECYWMPYxTChH4ISqHKrevTLoUDRL6fsxU382VI9PpIrtC1uD1y7FRqi3hFujsV3dKzRpxDw1DwsIUny-Y1lFnWbw16qG3ICPITaO4MYj3M9wHXX-BKmNRneUHvNcP-C-HCS-5&lang=python&interacts=eJyLjgUAARUAuQ==)
 ```
 
 ### Limita
@@ -335,9 +341,13 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 
 \iffalse
 
+```{prf:proof} Definice derivace
+
 `ww2:problems/derivace_pouziti/definice_derivace.pg`
 
 `ww2:problems/derivace_pouziti/role_limity.pg`
+
+```
 
 \fi
 
@@ -365,11 +375,15 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 \iffalse
 
+```{prf:proof} Vyzkoušejte si, jestli dokážete popsat, co v konkrétních situacích představuje derivace.
+
 `ww2:problems/derivace_pouziti/intepretace_d_dt.pg`
 
 `ww2:problems/derivace_pouziti/derivace_v_aplikacich.pg`
 
 `ww2:problems/derivace_pouziti/hromada.pg`
+
+```
 
 \fi
 
@@ -404,7 +418,11 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 \iffalse
 
+```{prf:proof} Derivace
+
 `ww2:problems/derivace_pouziti/derivace_populace.pg`
+
+```
 
 \fi
 
@@ -459,10 +477,9 @@ funkce. Takové rovnice se naučíme řešit později.
 * Je-li teplotní rozdíl roven jedné, tj. je-li $(T-T_0)=1$, plyne z rovnice $$ \frac{\mathrm
   dT}{\mathrm dt}=-k(T-T_0).  $$ vztah $$k = -\frac{\mathrm dT}{\mathrm dt}\qquad (\text{pro }T-T_0=1).$$ To znamená, že v tomto případě je konstanta $k$ rovna záporně vzaté derivaci teploty podle času. To umožňuje vyslovit následující charakterizaci konstanty $k$: _Konstanta $k$ je čísleně rovna rychlosti poklesu teploty v okamžiku, kdy je teplotní rozdíl teploty tělesa a okolí roven jedné._ 
 * Protože káva v plechovém hrníčku chladne ve stejných podmínkách rychleji než káva v porcelánovém hrníčku, znamená to, že při modelování ochlazování kávy v plechovém hrníčku je hodnota konstanty $k$ větší.
-* Stejná rovnice platí i pro studené těleso přemístěné do teplejší místnosti. Rychlost růstu teploty je úměrná teplotnímu rozdílu, tj.
-  $$ \frac{\mathrm dT}{\mathrm dt}=k(T_0-T)$$ a rovnice je (až na algebraickou úpravu spojenou s roznásobením závorky záporným znaménkem) stejná.
+* Stejná rovnice platí i pro studené těleso přemístěné do teplejší místnosti. Rychlost růstu teploty je úměrná teplotnímu rozdílu, tj.$$ \frac{\mathrm dT}{\mathrm dt}=k(T_0-T)$$ a rovnice je (až na algebraickou úpravu spojenou s roznásobením závorky záporným znaménkem) stejná.
 
-V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==).
+V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači, vhodným nástrojem je Python](https://sagecell.sagemath.org/?z=eJxtU02L2zAQvRv8HwZySbJJmhQKpbDHngpLKb4ty6LYk0aRrBHSSFv713dkp7vZpfZFH2-e3rwnLeAh9Rh0axRE3SerWgQfCB7whcmlDKMy5IDas1UjZeU0dM2njuEetmBgDctm2-xXdbWAn0H3mnUWiKc0yhB4zDvoyAfsHML3ZDFQHqBHpm6YawicCtQ6vMS3OvyjI6eLhkgnmZty8ASYKzdS44M2VnXwK7nfuP2RmFVd6d5TYHCp9wOoCM6_rvWKvSW2-rjzQxmVfW-5rsrfPGuRfQ9f9yDfAhgLRN30jWeSVYtRjindT0BBjqpVjEaUBRSKVsVUV5M_-92hAGSl9GwCmcnZq826rswE-jLRGMKTbjU6BlGzl53P-_dKDFmp8dQiPxeyNGFmUOpUlgA9WRQnIUKH1lCCGXdVoB1jyMp-UNEIj_O7UaKJyxv6lfAWwo0ECEZKiwPH1GGPkIr1imVfYvJugDxkuly1DrNB_-WU4x73T7I7GV5XJwqgRRkEJTHeQreH1bfJvsHYFOuquM2P-u5QqmXwBHcgNr9-RWxMDnJpF2d8V3rbmvWyEXy5puu3igWEQcKVBmAUR1QW21hUDCBX1Gl5BnlwYtwRnZp8xF7Om3mbfzqaq47mnQ55Tlzuwtij0JlCLPFcJF44U-eIr_JK6g7bucV5SQK2vCsuLnnTrOZpPNPLcvUXy2kuJg==&lang=python&interacts=eJyLjgUAARUAuQ==).
 
 ```{prf:remark} Smysl příkladu se zákonem ochlazování
 :nonumber:
@@ -472,11 +489,15 @@ V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální pop
 
 \iffalse
 
+```{prf:proof} Derivace
+
 `ww2:problems/derivace_pouziti/derivace_teploty_hodnota.pg`
 
 `ww2:problems/derivace_pouziti/Newtonuv_zakon_ochlazovani.pg`
 
 `ww2:problems/derivace_pouziti/jednotka_konstanty.pg`
+
+```
 
 <div class='obtekat'>
 
@@ -507,7 +528,11 @@ archeologických nálezů pozůstatků živých organismů
 
 \iffalse
 
+```{prf:proof} Radioaktivní rozpad
+
 `ww2:problems/derivace_pouziti/radioaktivni_rozpad.pg`
+
+```
 
 \fi
 
@@ -537,7 +562,8 @@ tyči. Ke kvantitativnímu vyjádření vedení tepla je nutné vědět, jaký
 rozdíl teplot připadá na jednotku délky. V homogenním případě vydělíme
 teplotní rozdíl vzdáleností. V obecném případě rychlost s jakou se
 mění teplota podél tyče (gradient teploty) vyjadřujeme pomocí derivace
-$$\frac{\mathrm dT}{\mathrm dx}.$$ Využívá se v posuzování izolačních
+$$\frac{\mathrm dT}{\mathrm dx}.$$ 
+Využívá se v posuzování izolačních
 vlastností a při sušení dřeva.
 
 \iffalse
@@ -581,6 +607,8 @@ https://youtu.be/-k_roagRII0
 
 Derivování si také můžete procvičit v následujících cvičeních. Se zápisem matematických výrazů Vám může pomoci [tento cheatsheet](https://raw.githubusercontent.com/robert-marik/hw-webwork/master/cheatsheet/cheatsheet.pdf).
 
+```{prf:proof} Naučte se počítat derivace pomocí vzorců pro derivování.
+
 `ww2:problems/derivace_vypocet/01.pg`
 
 `ww2:problems/derivace_vypocet/02.pg`
@@ -603,52 +631,21 @@ Derivování si také můžete procvičit v následujících cvičeních. Se zá
 
 `ww2:problems/derivace_vypocet/derivovani_slozena_funkce.pg`
 
-
-
-### Testové otázky s výpočtem a interpretací derivace
+Výpočet derivace a interpretace derivace
 
 `ww2:problems/derivace_pouziti/dino.pg`
+
+```
 
 \fi
 
 ## Vztah mezi rychlostmi měnících se veličin
 
+Derivace umožňují mimo jiné převést statické vztahy mezi hodnotami veličin na vztahy dynamické mezi rychlostmi, s nimiž se tyto veličiny mění. 
 
-<div class="shorten" data-text="Využití derivace k odvození vztahu mezi rychlostmi změn veličin ze vztahu mezi těmito veličinami. ">
+Uvažujme kruh o poloměru 30 metrů, jehož poloměr roste rychlostí dva metry za hodinu. Rychlost růstu poloměru je dána derivací $\frac{\mathrm dr}{\mathrm dt}$. Zajímá nás, jak rychle roste obsah kruhu s časem, tj. jaký je nárůst obsahu v metrech čtverečních za hodinu. Je zřejmé, že pokud je kruh malý, je rychlost jiná, než pokud je kruh velký. Přesný vztah mezi těmito rychlostmi je možné najít pomocí derivací. Vztah mezi obsahem a poloměrem je $$S=\pi r^2.$$ Derivace obsahu podle poloměru je $$\frac{\mathrm dS}{\mathrm dr}=2\pi r.$$ To znamená, že zvětšení poloměru o metr způsobí zvětšení obsahu o $$2\pi \times 30 = 188$$ metrů čtverečních.  Rychlost růstu obsahu v čase je dána derivací obsahu podle času, tedy $$\frac{\mathrm dS}{\mathrm dt}=\frac{\mathrm dS}{\mathrm dr} \times \frac{\mathrm dr}{\mathrm dt} = 2\pi r \frac{\mathrm dr}{\mathrm dt}.$$ Pro zadané hodnoty $r=30\,\mathrm {m}$ a $\frac{\mathrm dr}{\mathrm dt}=2 \,\mathrm{m}\,\mathrm{h}^{-1}$ dostáváme $$\frac{\mathrm dS}{\mathrm dt}=\frac{\mathrm dS}{\mathrm dr} \times \frac{\mathrm dr}{\mathrm dt} = 2\pi r \frac{\mathrm dr}{\mathrm dt}=2\pi \times 30\,\mathrm{m} \times 2 \,\mathrm{m}\,\mathrm{h}^{-1}\approx 377 \,\mathrm{m}^2\,\mathrm{h}^{-1}.$$
+Tedy obsah roste rychlostí 377 metrů čtverečních za hodinu.
 
-\iffalse
-
-<div class='obtekat'>
-
-```{figure} kyvadlo_hodinky.jpg
-Matematické kyvadlo je hmotný bod na nehmotném závěsu. Aproximací je relativně těžký objekt relativně malého objemu na lehkém závěsu. Přírodní méně přesnou aproximací kyvadla vzhůru nohama je strom s dlouhým kmenem a větvemi v horní části. Zdroj: pixabay.com, geralt.
-```
-
-</div>
-
-\fi
-
-Pokud existuje mezi dvěma veličinami známý vztah, můžeme pomocí derivací odvodit vztah mezi rychlostmi, s jakými se tyto veličiny mění. Ukážeme si to na příkladu kyvadla. Podobně se chová strom s dlouhým kmenem a korunou nahoře, například listnaté stromy v lese.
-
-Perioda matematického kyvadla délky $L$ je dána vzorcem $T=2\pi
-\sqrt{\frac Lg}$. Tento vzorec je možno přepsat do tvaru
-$$T=\frac{2\pi}{\sqrt g} \sqrt L, $$ který ukazuje, že perioda je
-úměrná odmocnině délky kyvadla.
-
-Pro derivování použijeme vzorec pro derivaci konstantního násobku a mocninné funkce. 
-\dm$$\frac {\mathrm d T}{\mathrm dL}=\frac{\mathrm d}{\mathrm dL}\left(\frac{2\pi}{\sqrt g} \sqrt L\right)=\frac{2\pi}{\sqrt g} \frac{\mathrm d}{\mathrm dL}\left (L^{\frac 12}\right)=\frac{2\pi}{\sqrt g}\frac 12 L^{-\frac 12}=\frac{\pi}{\sqrt{gL}}.
-$$
-Tento výraz udává v jednotkách sekunda na metr, jak rychle se prodlužuje perioda kyvadla při prodloužení délky kyvadla. Například pro $L=2\,\mathrm m$ je derivace [číselně rovna](https://sagecell.sagemath.org/?z=eJxVjEEOwiAQRfck3IHERaExGrvSBTdg2QtgGRpSGSogsbcXa9rE2fxk_nt_lLfT9cLqHZgB69ANwKaAKWvMlBQdeaMa8aunh4669nMMHhCBkp4rIbt2duf0jJmPol1Tib89-8KpRr-LTFFiILpS16Rx1vL-qARXslvFssxhgMw2hBV2D6ZasqME-fZeWV03385_qR03kCA7xMWzwaUH-A8U2Un-&lang=sage&interacts=eJyLjgUAARUAuQ==) $0.71\,\mathrm{s}\,\mathrm{m}^{-1}.$ Prodloužení dvoumetrového kyvadla o metr prodlouží periodu o $0.71$ sekundy. Protože derivace je okamžitá rychlost změny a na delším intervalu se tato rychlost může změnit, je blíže realitě spíše formulace pro jednotky tisíckrát menší: "Prodloužení kyvadla o milimetr prodlouží periodu o $0.71$ milisekundy."
-
-Pokud se kyvadlo délky $L=2\,\mathrm m$ prodlužuje (po přenesení ze zimy do vytopené místnosti se závěs se prodlužuje teplotní roztažností), je rychlost prodlužování $\frac{\mathrm dL}{\mathrm dt}$ a rychlost, s jakou roste perioda je (s použitím pravidla pro derivaci složené funkce) 
-$$ \frac{\mathrm dT}{\mathrm dt} = \frac{\mathrm dT}{\mathrm dL} \frac{\mathrm dL}{\mathrm dt} = \frac{\pi}{\sqrt {gL}}\frac{\mathrm dL}{\mathrm dt}$$
-Pokud se kyvadlo prodlužuje rychlostí $0.5$ milimetru za sekundu, je $$\frac{\mathrm dL}{\mathrm dt}=0.000\,5\,\mathrm{m}\,\mathrm{s}^{-1}$$ a 
-$$\frac{\mathrm dT}{\mathrm dt} =\frac {\pi}{\sqrt{2\cdot 9.81}} 0.000\,5=0.00035$$
-Derivace vychází bez jednotky (sekunda lomeno sekundou se zkrátí) a je možné ji přepsat do tvaru 
-$$\frac{\mathrm dT}{\mathrm dt} =0.35 \frac{\mathrm{ms}}{\mathrm{s}}.$$
-Perioda kyvadla se prodlužuje rychlostí $0.35$ milisekundy za sekundu.
-
-</div>
 
 ````{prf:algorithm} Rychlost nabíjení kondenzátoru
 :class: dropdown

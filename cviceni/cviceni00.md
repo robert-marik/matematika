@@ -1,6 +1,12 @@
 # Úvod
 
-Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází přednášku.
+Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází přednášku. V první úloze si připomeneme exponenciální funkci a jednou její zajímavou vlastnost (neintuitivní rychlost růstu). V dalších úlohách se podíváme na výpočet rychlosti, protože na to navazujeme na přednášce. A na závěr něco k soustavám lineárních rovnic.
+
+## Informační zdroje
+
+* [Moodle na MENDELU, předmět Matematika](https://moodle.mendelu.cz/course/view.php?id=381). Přihlášení přes Shibboleth pomocí údajů pro přihlášení do UIS. Poté pro zápis do předmětu použijete kód rozlišující formu studia (presenční versus kombinovaná). Zde jsou učební materiáy, podmínky pro ukončení. Odsud se autentizujete do systému pro domácí úkoly.
+* WeBWorK na UM. Systém pro domácí úkoly. Přístup je automaticky z Moodle opory. Domácí úkoly se otevírají a uzavírají podle nastaveného harmonogramu. Plněním těchto nepovinných domácích úkolů si můžete výrazně snížit laťku nutnou pro překonání zkoušky a vylepšit známku. Více viz podmínky pro ukončení předmětu v Moodle.
+
 
 ## Bakterie _Escherichia coli_ (_E. coli_)
 
@@ -9,7 +15,7 @@ Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází předn
 \iffalse 
 
 ```{figure} ecoli.jpg
-byfkfkrErbe, <https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg>
+Bakterie *E. Coli*, autor: byfkfkrErbe, <https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg>
 ```
 
 \fi
@@ -53,7 +59,7 @@ což je více než hmotnost Země.
 \iffalse 
 
 ```{figure} Pisa_experiment.png
-Theresa Knott, <https://commons.wikimedia.org/wiki/File:Pisa_experiment.png>
+Šikmá věž v Pise, na které prováděl své slavné experimenty G. Galilie, autor: Theresa Knott, <https://commons.wikimedia.org/wiki/File:Pisa_experiment.png>
 ```
 
 \fi
@@ -86,6 +92,7 @@ U volného pádu a růstu bakterií průměrná rychlost roste.
 \iffalse 
 
 ```{figure} Lanova_draha_Punkevni_jeskyne.jpg
+Lanovka mezi Macochou a Punkevními jeskyněmi, autor: 
 Harold17, <https://commons.wikimedia.org/wiki/File:Lanov%C3%A1_dr%C3%A1ha_Punkevn%C3%AD_jeskyn%C4%9B-Macocha,_lanovka(2).jpg>
 ```
 
@@ -124,10 +131,4 @@ Pro jiné hodnoty je rychlost poklesu hladiny v centimetrech za den rovna rychlo
 
 Soustavy dvou rovnic o dvou neznámých můžeme řešit dosazovací nebo sčítací metodou. Dosazovací metoda je jednodušší, ale sčítací metodu je snadné rozšířit na libovolný počet rovnic a libovolný počet neznámých. Zopakujeme si (ze střední školy) obě metody.
 
-## Informační zdroje
-
-Seznámíte se s informačními zdroji.
-
-* Moodle na MENDELU, pro zápis do předmětu použijete kód rozlišující formu studia (presenční versus kombinovaná). Zde jsou učební materiáy, podmínky pro ukončení. Odsud se autentizujete do systému pro domácí úkoly.
-* WeBWorK na UM. Systém pro domácí úkoly. Přístup je automaticky z Moodle opory. Domácí úkoly se otevírají a uzavírají podle nastaveného harmonogramu. Plněním těchto nepovinných domácích úkolů si můžete výrazně snížit laťku nutnou pro překonání zkoušky a vylepšit známku.
 

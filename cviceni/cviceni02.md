@@ -112,8 +112,7 @@ Všimněte si, že poslední dvě podmínky se liší znaménkem u $T$. To proto
 
 ```
 
-## Model růstu úměrného velikosti chybějícího množství
-
+## Model růstu úměrného vzdálenosti od cílové hodnoty
 \iffalse
 
 ```{figure} pstruh.jpg

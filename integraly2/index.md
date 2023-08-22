@@ -471,11 +471,11 @@ Substituční metoda je metoda odvozená z derivace složené funkce
 $$[u(v(x))]'=u'(v(x))v'(x),$$
 což dává
 
-$$u(v(x))=\int u'(v(x))v'(x)\,\mathrm dx.$$ (1)
+$$u(v(x))=\int u'(v(x))v'(x)\,\mathrm dx.$$ (i.1)
 
 Označme $u'(x)=f(x)$, tj. $u(x)=\int f(x)\,\mathrm dx$. Označíme-li
 dále $v(x)=t$, platí $$u(v(x))=u(t)=\int f(t)\,\mathrm dt.$$ Přeznačme
-ještě $v(x)$ na $\varphi(x)$. Potom má {eq}`1` po záměně levé a pravé
+ještě $v(x)$ na $\varphi(x)$. Potom má {eq}`i.1` po záměně levé a pravé
 strany tvar uvedený v následující větě.
 
 ```{prf:theorem} Substituční metoda pro neurčitý integrál
@@ -483,13 +483,13 @@ strany tvar uvedený v následující větě.
  Platí
  
 $$\int f(\varphi (x))\varphi'(x)\,\mathrm dx=\int f(t)\,\mathrm
-dt,$$ (2)
+dt,$$ (i.2)
 
 kde po výpočtu integrálu napravo dosazujeme $t=\varphi (x).$
 ```
 
 
-Formálně výraz napravo ve {eq}`2` přejde ve výraz nalevo a naopak
+Formálně výraz napravo ve {eq}`i.2` přejde ve výraz nalevo a naopak
 dosazením rovností
 $$\varphi(x)=t,\qquad \varphi'(x)\,\mathrm dx=\mathrm dt.$$ Toto je
 současně i návod, jak substituční metodu použít prakticky.
@@ -507,7 +507,7 @@ tvaru $a\,\mathrm dx=\mathrm dt$. Odsud je možné odvodit vzorec, který
 již známe pro integrál funkce s lineární vnitřní složkou. Vskutku, platí
 $$\int  f(ax+b)\,\mathrm dx= \int  \frac 1af(t)\,\mathrm dt= \frac 1a F(t)= \frac 1a F(ax+b)+C,$$ kde $F(x)=\int f(x)\,\mathrm dx.$
 
-Vztah {eq}`2` je základní vztah pro substituci v neurčitém
+Vztah {eq}`i.2` je základní vztah pro substituci v neurčitém
 integrálu. Používáme jej ve vhodných případech zprava doleva i zleva
 doprava. Variantu pro určitý integrál jsme viděli ve speciálním
 případě ve cvičení, kdy vnitřní funkce reprezentovala konstantní

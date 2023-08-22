@@ -45,7 +45,7 @@ probrání Taylorova polynomu, kdy se použije o něco obecnější postup.
 **Příklad.** Nosník výšky $h$, šířky $a$ a délky $L$ je uprostřed
   zatížený silou $F$. Průhyb $s$ uprostřed nosníku je dán vztahem
   
-  $$s=\frac {F L^3}{4Eah^3},$$  (1)
+  $$s=\frac {F L^3}{4Eah^3},$$  (2.1)
   
   kde $E$ je materiálová
   konstanta. Pro $h=20\,\mathrm{cm}$ je průhyb
@@ -55,7 +55,7 @@ probrání Taylorova polynomu, kdy se použije o něco obecnější postup.
 **Řešení.** Relevantními veličinami jsou $s$ a $h$ a vzorec je tedy
 možno shrnout do tvaru $$s=\frac k{h^3},$$ kde $k$ je konstanta
 charakterizující danou situaci. Pro zadané hodnoty výšky a průhybu
-vychází konstanta $$k=s h^3=10\times 20^3=80\,000.$$ Vzorec {eq}`1` tedy
+vychází konstanta $$k=s h^3=10\times 20^3=80\,000.$$ Vzorec {eq}`2.1` tedy
 redukujeme na $$s={80\,000}{h^{-3}}.$$ Derivováním obdržíme
 $$\frac{\mathrm ds}{\mathrm dh}=80\,000\times(-3)
 h^{-4}=-\frac{3\times 80\,000}{h^4}.$$ Změna výšky nosníku je $$\Delta
@@ -68,13 +68,13 @@ zvětší o $3\,\mathrm{cm}$.
  Proč nepočítáme přesně? Stačila by selská logika a změna
 funkce $s=\frac k{h^3}$ by byla
 
-$$\Delta s=\frac k{(h+\Delta h)^3}-\frac k{h^3}.$$  (2)
+$$\Delta s=\frac k{(h+\Delta h)^3}-\frac k{h^3}.$$  (2.2)
 
 Odpověď je
 překvapivá: pomocí derivací je vyjádření změny v naprosté většině
 případů jednodušší. V tomto našem případě máme
 $$\Delta s\approx -\frac{3k}{h^4}\Delta h,$$ což je na další práci
-mnohem příjemnější výraz, než rozdíl dvou zlomků {eq}`2`. Skutečnost, že platí
+mnohem příjemnější výraz, než rozdíl dvou zlomků {eq}`2.2`. Skutečnost, že platí
 pouze pro malé $\Delta h$ nás nijak neomezuje. Většinou se tento
 aparát používá tam, kde se chyba limitním přechodem "stáhne na
 nulu". Navíc, ukazujeme koncept. *Důležité je si z příkladu odnést, že derivace umožní analyzovat, jak vypočítané veličiny reagují na změny ve vstupních datech. Výsledkem může být například maximální teoretická přesnost se kterou je možné vypočítat výslednou veličinu při vstupních datech zatížených chybou nebo nějakým způsobem nejistých (zákon šíření chyb).*

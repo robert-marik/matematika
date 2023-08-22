@@ -237,10 +237,70 @@ Rovnice konstantního růstu nebo úbytku je základem datování pomocí uhlík
   radioaktivního uhlíku pod měřitelnou úroveň. Proto se
   v tomto případě používají látky s delším poločasem rozpadu.
 
+### Vývoj populace a její ekologický lov
+
+\iffalse
+
+<div class='obtekat'>
+
+```{figure} kralik.jpg
+Při intenzivním lovu může dojít ke zničení populace https://pixabay.com
+```
+
+</div>
+
+\fi
+
+* Zkoumejme velikost $y$  určité populace, v prostředí s nosnou kapacitou $K$.
+* Budeme pracovat s pojmem specifická míru růstu populace, což je rychlost růstu populace vztažená na jednotkové množství
+  populace. Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s omezenými úživnými
+  vlastnostmi specifická míru růstu populace klesá s tím, jak se velikost populace přibližuje k nosné
+  kapacitě, a specifická rychlost růstu populace je modelována funkcí $r\left(1-\frac yK\right)$.  Podle
+  velkosti koeficientů v této rovnici dělíme živočichy na [r-stratégy
+  a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
+  toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.
+* Za uvedených předpokladů je možno vývoj populace popsat rovnicí 
+  $$\frac 1y \frac{\mathrm dy}{\mathrm dt}=r\left(1-\frac yK\right),$$ tj.
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right).$$ Tato rovnice se nazývá *logistická rovnice.* Podle ní je rychlost růstu úměrná současně velikosti populace a volnému procentu životního prostředí.
+* Pokud lovem snížíme přírůstky populace, můžeme tento proces modelovat rovnicí 
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$
+  kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
+  tohoto procesu umožní nalezení ekonomicky výhodné ale přitom trvale
+  udržitelné strategie lovu. Nejčatěji studované jsou případy konstantního lovu a lovu úměrného velikosti populace, tedy rovnice 
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h$$
+  a 
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-hy,$$
+  kde $h$ je konstanta.
+
+### Model ostrovní biogeografie
+
+\iffalse
+
+<div class='obtekat'>
+
+```{figure} Mangrove_plants_swamp_in_Florida.jpg
+
+Závěry modelu ostrovní biogeografie byly verifikovány pomocí experimentů na mangrovových ostrůvcích u pobřeží Floridy. Experimenty zahrnovaly vliv vzdálenosti od pevniny, vliv velikosti (některé ostrůvky byly uměle zmenšeny) a sledování kolonizace (na některých ostrůvcích byl zničen život, aby mohly být opětovně kolonizovány). Obrázek z https://commons.wikimedia.org/wiki/File:Mangrove_plants_swamp_in_Florida.jpg
+```
+
+</div>
+
+\fi
+
+Matematické modely je možné použít i pro studium ekosystémů. Následující model katapultoval jeho autory, Robert MacArthura a Edwarda Wilson mezi nejvýznamnější ekology. Slouží pro vysvětlení dynamické rovnováhy počtu druhů na ostrově, kdy se druhová skladba na ostrově mění, ale bohatost (počet druhů) zůstává. Původně byl odvozen pro skutečné ostrovy v moři, platí však pro jakýkoliv biotop odlišující se od okolí, například les v moři polí, vrcholky hor v moři krajiny s nižší nadmořskou výškou a podobně. Množství druhů, žijících na ostrově, označíme $N$. 
+
+* Na ostrov migrují nové druhy, které se mohou trvale usadit. Kromě toho, některé druhy, které kolonizovaly ostrov v minulosti, pod tlakem nových kolonizátorů vymírají. Rychlost změny počtu druhů na ostrově je dána jako rozdíl rychlosti kolonizace a vymírání druhů. $$\frac{\mathrm dN}{\mathrm dt}=\text{kolonizace}-\text{vymírání}.$$
+* Rozmanitější ekosystémy jsou stabilnější. Je-li na ostrově hodně druhů, je pro nové kolonizátory těžké se usadit. Proto je rychlost kolonizace klesající funkcí počtu druhů. Pro jednoduchost můžeme předpokládat, že rychlost kolonizace je nepřímo úměrná počtu druhů a tedy pro nějakou konstantu $k_1$ platí $$\text{kolonizace}=\frac{k_1}{N}.$$
+* Je-li na ostrově více druhů, je pravděpodobnější, že některý vymře. Proto je rychlost mizení druhl z ostrova rostoucí funkcí počtu druhů. Pro jednoduchost můžeme předpokládat, že závislost je přímou úměrností, tj. $$\text{vymírání}=k_2 N$$ pro nějakou konstantu $k_2$.
+  
+Model má potom tvar $$\frac{\mathrm dN}{\mathrm dt}=\frac{k_1}{N}-k_2 N.$$ Analýza tohoto modelu dokáže objasnit, jak probíhá kolonizace a jaká je druhová pestrost v izolovaných biotopech. Umožňuje posoudit, jak se tato druhová pestrost mění s velikostí ostrova, jeho izolovaností (vzdáleností od pevniny) a má vliv například na posuzování míry ochrany chráněných lokalit v závislosti na jejich velikosti.
+
+\iffalse
+
+
 ````{prf:algorithm} Rovnice samočištění jezer
 :class: dropdown
 
-\iffalse
 
 <div class='obtekat'>
 
@@ -254,7 +314,6 @@ Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. 
 
 </div>
 
-\fi
 
 * Nechť veličina $y$ udává množství látky, která znečišťuje vodu v jezeře o objemu $V$.
 * Předpokládejme, že do jezera přitéká čistá voda a stejnou rychlostí
@@ -287,7 +346,6 @@ Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. 
   většina léčiv za běžných koncentrací), řídí se proces odbourávání
   stejnou diferenciální rovnicí.
 
-\iffalse
 
 ### Akutní normovolemická hemodiluce
 
@@ -323,14 +381,11 @@ Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. 
   z ní vyplývající. Současně je tato metoda výrazně finančně levnější
   a její přínos je tak i ekonomický. (Podle https://zdravi.euro.cz/)
 
-\fi
 
 ````
 
 ````{prf:algorithm} RC obvod
 :class: dropdown
-
-\iffalse
 
 <div class='obtekat'>
 
@@ -344,8 +399,6 @@ Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudova
 
 </div>
 
-\fi
-
 Při nabíjení kondenzátoru o kapacitě $C$ přes odpor o velikosti $R$ roste napětí na kondenzátoru, tím se mění nabíjecí proud a proto se mění i rychlost nabíení. Pomocí zákonů elektrotechniky je [možno ukázat](http://fyzikalniolympiada.cz/texty/matematika/difro.pdf), že nabíjecí proud $i$ kondenzátoru se řídí diferenciální rovnicí
 $$R\frac{\mathrm di}{\mathrm dt}+\frac 1Ci=0.$$
 Napětí na kondenzátoru je možno odvodit buď z proudu, napětí na rezistoru a napětí zdroje, nebo z celkového proudu, který prošel kondenzátorem.
@@ -357,39 +410,6 @@ RC obvod jako takový má však důležité místo i dnes. Dokáže například 
 Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s [operačním zesilovačem](https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D) (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).
 
 ````
-
-### Vývoj populace a její ekologický lov
-
-\iffalse
-
-<div class='obtekat'>
-
-```{figure} kralik.jpg
-Při intenzivním lovu může dojít ke zničení populace https://pixabay.com
-```
-
-</div>
-
-\fi
-
-* Zkoumejme velikost $y$  určité populace, v prostředí s nosnou kapacitou $K$.
-* Budeme pracovat s pojmem specifická míru růstu populace, což je rychlost růstu populace vztažená na jednotkové množství
-  populace. Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s omezenými úživnými
-  vlastnostmi specifická míru růstu populace klesá s tím, jak se velikost populace přibližuje k nosné
-  kapacitě, a specifická rychlost růstu populace je modelována funkcí $r\left(1-\frac yK\right)$.  Podle
-  velkosti koeficientů v této rovnici dělíme živočichy na [r-stratégy
-  a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
-  toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.
-* Za uvedených předpokladů je možno vývoj populace popsat rovnicí 
-  $$\frac 1y \frac{\mathrm dy}{\mathrm dt}=r\left(1-\frac yK\right),$$ tj.
-  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right).$$ Tato rovnice se nazývá *logistická rovnice.*
-* Pokud lovem snížíme přírůstky populace, můžeme tento proces modelovat rovnicí 
-  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$
-  kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
-  tohoto procesu umožní nalezení ekonomicky výhodné ale přitom trvale
-  udržitelné strategie lovu.
-
-\iffalse
 
 ````{prf:algorithm} Lovci meteoritů z ČSSR a ČR
 :class: dropdown
@@ -725,7 +745,7 @@ proto můžeme udělat následující závěr.
 
 -->
 
-```{prf:theorem} Sstabilita konstantních řešení
+```{prf:theorem} Stabilita konstantních řešení
 :nonumber:
  Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
@@ -896,12 +916,13 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
  Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm dy}{\mathrm dx}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 ```
 
+\iffalse
+
 ````{prf:algorithm} Diferenciální rovnice růstu vodní kapky
 :class: dropdown
 
 Příklad ukazuje, že i u modelů přírodních procesů může být více než jedno řešení. A že to není v rozporu s tím, jak chápeme fyziku a její kauzalitu.
 
-\iffalse
 
 <div class='obtekat'>
 
@@ -911,7 +932,6 @@ Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední v
 
 </div>
 
-\fi
 
 Modelujme růst kulové kapky. Ta roste tak, že na povrchu kondenzují
 vodní páry. Kapka proto roste tak, že její objem se zvětšuje rychlostí
@@ -956,7 +976,6 @@ uvolněním tepla.
 
 https://youtu.be/ahkeA6fopaQ
 
-\iffalse
 
 <div class='obtekat'>
 
@@ -970,7 +989,6 @@ Příhradový nosník. Vzpěry jsou namáhány v ose. Teorii vybudoval v 18. sto
 
 </div>
 
-\fi
 
 Je-li $x$ poloha tělesa, je derivace $\frac{\mathrm dx}{\mathrm dt}$
 rychlost a druhá derivace $\frac{\mathrm d^2x}{\mathrm dt^2}$
@@ -1050,6 +1068,8 @@ též A. Požgaj, Štruktúra a vlastnosti dreva str. 359.
 
 
 ````
+
+\fi
 
 ## Shrnutí, hlavní myšlenky
 

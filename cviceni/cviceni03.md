@@ -230,7 +230,7 @@ pixabay.com
 
 Úlohy s tepelnou bilancí (např. osluněná stěna) často vedou na rovnice obsahující čtvrtou mocninu  a první mocninu neznámé veličiny. Toto je dáno tím, že vyzařování tepla souvisí podle Stefanova-Bolzmannova zákona se čtvrtou mocninou teploty  a přenos tepla prouděním nebo vedením souvisí s první mocninou teploty.
 Koeficient u první mocniny bývá větší než u čtvrté mocniny, protože konstanta ze Stefanova-Bolzmannova zákona je velmi malá. Typickým představitelem by mohla být rovnice $$x^4-8x+6=0.$$
-Napište iterační vzorec pro řešení této rovnice Newtonovou metodou a proveďte několik iterací s vhodnou celočíselnou počáteční aproximací. Poté porovnejte s postupem, kdy v rovnici osamostatníte $x$ z lineární části a z takové rovnice sestavíte iterační vzorec.
+Napište iterační vzorec pro řešení této rovnice Newtonovou metodou a proveďte několik iterací s počáteční aproximací $x_0=1$. Poté porovnejte s postupem, kdy v rovnici osamostatníte $x$ z lineární části a z takové rovnice sestavíte iterační vzorec.
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -249,7 +249,7 @@ $x_4$|$0.801614587354561$
 $x_5$|$0.801614587355901$
 $x_6$|$0.801614587355901$
 
-[Sage.](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggrbPI0KXY2KOBNdC60KbTNNfQ0TrYo4Y10LTU2IioKizLwSBY0KTQC3JxJK&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Python.](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggrbCl2NCi0tE10LrQptM019DRMtINdY10IToqCgKDOvREGjQhMAkuMRdw==&lang=python&interacts=eJyLjgUAARUAuQ==)
 
 Ad hoc iterace: Rovnici převedeme na tvar
 $$x=\frac{x^4+6}{8}$$
@@ -267,7 +267,7 @@ $x_4$|$0.803126865733812$
 $x_5$|$0.802005182967586$
 $x_6$|$0.801715260030858$
 
-[Sage.](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggrbPA2NijgTbTNNfQ0LTU2IaEFRZl6JgkaFJgDh9g8K&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Python.](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggpbjQotLRNtM019DQtNiFhBUWZeiYJGhSYAu6IOQQ==&lang=python&interacts=eJyLjgUAARUAuQ==)
 
 ```
 
