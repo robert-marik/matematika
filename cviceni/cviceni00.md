@@ -20,7 +20,7 @@ Bakterie *E. Coli*, autor: byfkfkrErbe, <https://commons.wikimedia.org/wiki/File
 
 \fi
 
-Michael Crichton ve svém převratném sci-fi Kmen Andromeda (1969) napsal: _Matematika neomezeného růstu je děsivá. Jediná buňka bakterie E. coli se za příznivých okolností dělí každých dvacet minut. Na tom není nic tak zlého, pokud si neuvědomíme, že se bakterie dělí geometrickou řadou. Z jedné vzniknou dvě, ze dvou čtyři, ze čtyř osm a tak dále. Takto lze dojít k závěru, že by se za jeden den mohla jedna buňka rozrůst do superkolonie velikosti a váhy celé planety Země._
+Michael Crichton (autor scénáře k Jurskému parku) ve svém převratném sci-fi Kmen Andromeda (1969) napsal: _Matematika neomezeného růstu je děsivá. Jediná buňka bakterie E. coli se za příznivých okolností dělí každých dvacet minut. Na tom není nic tak zlého, pokud si neuvědomíme, že se bakterie dělí geometrickou řadou. Z jedné vzniknou dvě, ze dvou čtyři, ze čtyř osm a tak dále. Takto lze dojít k závěru, že by se za jeden den mohla jedna buňka rozrůst do superkolonie velikosti a váhy celé planety Země._
 
 V něčem měl spisovatel pravdu. Bakterie _E. coli_ se za optimálních podmínek dělí každých dvacet minut. Tj. za příhodné teploty, pH a při dostatku potravy z každé bakterie během dvaceti minut vzniknou bakterie dvě.
 
@@ -59,7 +59,7 @@ což je více než hmotnost Země.
 \iffalse 
 
 ```{figure} Pisa_experiment.png
-Šikmá věž v Pise, na které prováděl své slavné experimenty G. Galilie, autor: Theresa Knott, <https://commons.wikimedia.org/wiki/File:Pisa_experiment.png>
+Šikmá věž v Pise, na které prováděl své slavné experimenty s volným pádem G. Galilei, autor: Theresa Knott, <https://commons.wikimedia.org/wiki/File:Pisa_experiment.png>
 ```
 
 \fi
@@ -68,12 +68,13 @@ Uvažujme tři různé děje, kde nějaká veličina roste v čase.
 
 * Dráha $s$ automobilu roste s časem $t$ podle funkce $$s=60t,$$
   kde dráhu a čas měříme v kilometrech a hodinách.
-* Dráha $s$ objektu padajícího volným pádem (ve vakuu nebo při zandbání odporu vzduchu) roste s časem $t$ podle funkce $$s=5t^2,$$ kde dráhu měříme v metrech a čas v sekundách. Na obrázku je Galileův experiment ukazující, že rychlost volného pádu nesouvisí s hmotností, ale je opravdu jenom funkcí času.
+* Dráha $s$ objektu padajícího volným pádem (ve vakuu nebo při zanedbání odporu vzduchu) roste s časem $t$ podle funkce $$s=5t^2,$$ kde dráhu měříme v metrech a čas v sekundách. Na obrázku je Galileův experiment ukazující, že rychlost volného pádu nesouvisí s hmotností, ale je opravdu jenom funkcí času.
 * Počet bakterií _E. coli_ z předchozího příkladu jako funkce času v hodinách.
 
 Porovnejte průměrnou rychlost za první dvě jednotky času (první dvě hodiny pro auto a bakterie, resp. první dvě sekundy v případě volného pádu) a za časový interval od 2 do 4 hodin resp. sekund.
 
-Shrňte své pozorování a pokuste se toto pozorování zobecnit.
+Shrňte své pozorování a pokuste se odhadnou, pro jaké funkční závislosti budou
+průměrné rychlosti stejné, ať použijeme libovolný interval. (Možná pomůže obrázek.)
 
 
 ```{prf:example} Řešení
@@ -83,6 +84,8 @@ Shrňte své pozorování a pokuste se toto pozorování zobecnit.
 U auta jsou obě průměrné rychlosti stejné a budou stejné i pro jakýkoliv jiný časový úsek.
 
 U volného pádu a růstu bakterií průměrná rychlost roste.
+
+Průměrná rychlost nezávisí na intervalu, pokud je grafem přímka, tj. pro lineární funkce. 
 
 ```
 
@@ -99,7 +102,20 @@ Harold17, <https://commons.wikimedia.org/wiki/File:Lanov%C3%A1_dr%C3%A1ha_Punkev
 \fi
 
 
-Jak rychle stoupá lanovka v Moravském krasu mezi Punkevními jeskyněmi a Macochou? Jedná se o nejprudší lanovku v ČR. Výškový rozdíl mezi stanicemi je 131 metrů, vodorovná vzdálenost je 207 metrů (<https://www.kudyznudy.cz/ceska-nej/dopravni/lanovka-v-moravskem-krasu>). Vypočtěte průměrnou rychlost stoupání lanovky (průměrný sklon). 
+Jak rychle stoupá lanovka v Moravském krasu mezi Punkevními jeskyněmi a
+Macochou? Jedná se o nejprudší lanovku v ČR. Výškový rozdíl mezi stanicemi je
+131 metrů, vodorovná vzdálenost je 207 metrů
+(<https://www.kudyznudy.cz/ceska-nej/dopravni/lanovka-v-moravskem-krasu>).
+Vypočtěte průměrnou rychlost stoupání lanovky (průměrný sklon). 
+
+
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
+$$\frac{131}{207}=0.63$$
+
+```
 
 ## Rychlost může záviset na jiné rychlosti
 
