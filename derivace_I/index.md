@@ -379,6 +379,8 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 `ww2:problems/derivace_pouziti/intepretace_d_dt.pg`
 
+`ww2:problems/derivace_pouziti/derivace_teploty_hodnota.pg`
+
 `ww2:problems/derivace_pouziti/derivace_v_aplikacich.pg`
 
 `ww2:problems/derivace_pouziti/hromada.pg`
@@ -479,7 +481,7 @@ funkce. Takové rovnice se naučíme řešit později.
 * Protože káva v plechovém hrníčku chladne ve stejných podmínkách rychleji než káva v porcelánovém hrníčku, znamená to, že při modelování ochlazování kávy v plechovém hrníčku je hodnota konstanty $k$ větší.
 * Stejná rovnice platí i pro studené těleso přemístěné do teplejší místnosti. Rychlost růstu teploty je úměrná teplotnímu rozdílu, tj.$$ \frac{\mathrm dT}{\mathrm dt}=k(T_0-T)$$ a rovnice je (až na algebraickou úpravu spojenou s roznásobením závorky záporným znaménkem) stejná.
 
-V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači, vhodným nástrojem je Python](https://sagecell.sagemath.org/?z=eJxtU02L2zAQvRv8HwZySbJJmhQKpbDHngpLKb4ty6LYk0aRrBHSSFv713dkp7vZpfZFH2-e3rwnLeAh9Rh0axRE3SerWgQfCB7whcmlDKMy5IDas1UjZeU0dM2njuEetmBgDctm2-xXdbWAn0H3mnUWiKc0yhB4zDvoyAfsHML3ZDFQHqBHpm6YawicCtQ6vMS3OvyjI6eLhkgnmZty8ASYKzdS44M2VnXwK7nfuP2RmFVd6d5TYHCp9wOoCM6_rvWKvSW2-rjzQxmVfW-5rsrfPGuRfQ9f9yDfAhgLRN30jWeSVYtRjindT0BBjqpVjEaUBRSKVsVUV5M_-92hAGSl9GwCmcnZq826rswE-jLRGMKTbjU6BlGzl53P-_dKDFmp8dQiPxeyNGFmUOpUlgA9WRQnIUKH1lCCGXdVoB1jyMp-UNEIj_O7UaKJyxv6lfAWwo0ECEZKiwPH1GGPkIr1imVfYvJugDxkuly1DrNB_-WU4x73T7I7GV5XJwqgRRkEJTHeQreH1bfJvsHYFOuquM2P-u5QqmXwBHcgNr9-RWxMDnJpF2d8V3rbmvWyEXy5puu3igWEQcKVBmAUR1QW21hUDCBX1Gl5BnlwYtwRnZp8xF7Om3mbfzqaq47mnQ55Tlzuwtij0JlCLPFcJF44U-eIr_JK6g7bucV5SQK2vCsuLnnTrOZpPNPLcvUXy2kuJg==&lang=python&interacts=eJyLjgUAARUAuQ==).
+V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači, vhodným nástrojem je Python](https://sagecell.sagemath.org/?z=eJxtU02L2zAQvRv8HwZySbJJmhQKpbDHngpLKb4ty6LYk0aRrBHSSFv713dkp7vZpfZFH2-e3rwnLeAh9Rh0axRE3SerWgQfCB7whcmlDKMy5IDas1UjZeU0dM2njuEetmBgDctm2-xXdbWAn0H3mnUWiKc0yhB4zDvoyAfsHML3ZDFQHqBHpm6YawicCtQ6vMS3OvyjI6eLhkgnmZty8ASYKzdS44M2VnXwK7nfuP2RmFVd6d5TYHCp9wOoCM6_rvWKvSW2-rjzQxmVfW-5rsrfPGuRfQ9f9yDfAhgLRN30jWeSVYtRjindT0BBjqpVjEaUBRSKVsVUV5M_-92hAGSl9GwCmcnZq826rswE-jLRGMKTbjU6BlGzl53P-_dKDFmp8dQiPxeyNGFmUOpUlgA9WRQnIUKH1lCCGXdVoB1jyMp-UNEIj_O7UaKJyxv6lfAWwo0ECEZKiwPH1GGPkIr1imVfYvJugDxkuly1DrNB_-WU4x73T7I7GV5XJwqgRRkEJTHeQreH1bfJvsHYFOuquM2P-u5QqmXwBHcgNr9-RWxMDnJpF2d8V3rbmvWyEXy5puu3igWEQcKVBmAUR1QW21hUDCBX1Gl5BnlwYtwRnZp8xF7Om3mbfzqaq47mnQ55Tlzuwtij0JlCLPFcJF44U-eIr_JK6g7bucV5SQK2vCsuLnnTrOZpPNPLcvUXy2kuJg==&lang=python&interacts=eJyLjgUAARUAuQ==). Alternativou je použít specializované postupy pro řešení [diferenciálních rovnic](https://gist.github.com/robert-marik/69021f700bcc7021d736445617ce3540), opět v Pythonu.
 
 ```{prf:remark} Smysl příkladu se zákonem ochlazování
 :nonumber:
@@ -490,8 +492,6 @@ V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální pop
 \iffalse
 
 ```{prf:proof} Derivace
-
-`ww2:problems/derivace_pouziti/derivace_teploty_hodnota.pg`
 
 `ww2:problems/derivace_pouziti/Newtonuv_zakon_ochlazovani.pg`
 

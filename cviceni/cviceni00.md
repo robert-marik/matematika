@@ -1,6 +1,6 @@
 # Úvod
 
-Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází přednášku. V první úloze si připomeneme exponenciální funkci a jednou její zajímavou vlastnost (neintuitivní rychlost růstu). V dalších úlohách se podíváme na výpočet rychlosti, protože na to navazujeme na přednášce. A na závěr něco k soustavám lineárních rovnic.
+Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází přednášku. V první úloze si připomeneme exponenciální funkci a jednu její zajímavou vlastnost (neintuitivní rychlost růstu). V dalších úlohách se podíváme na výpočet rychlosti, protože na to navazujeme na přednášce. A na závěr něco k soustavám lineárních rovnic.
 
 ## Informační zdroje
 
@@ -86,6 +86,8 @@ U auta jsou obě průměrné rychlosti stejné a budou stejné i pro jakýkoliv 
 U volného pádu a růstu bakterií průměrná rychlost roste.
 
 Průměrná rychlost nezávisí na intervalu, pokud je grafem přímka, tj. pro lineární funkce. 
+
+Obrázky je možné vygenerovat pomocí [Wolfram Alpha](https://www.wolframalpha.com/input?i=draw+2%5E%283t%29) (jednoduché, rychlé) nebo pomocí [Pythonu](https://gist.github.com/robert-marik/d61794d36e9caf503dba96c61c856981) (vyspělejší postup, může být součástí složitější simulace, není nutné se bát syntaxe příkazů, pokud využijeme pomoc umělé interligence).
 
 ```
 
