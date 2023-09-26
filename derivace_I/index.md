@@ -233,7 +233,7 @@ Průměrná rychlost s jakou se mění funkce $f$ na intervalu $[x,x+h]$ je dán
 
 Průměrná rychlost pracuje jenom s informací v koncových bodech intervalu a proto bohužel neobsahuje informaci, co přesně se děje uvnitř intervalu, přes který průměrujeme. Počítáme-li ale průměr přes stále kratší interval, nevýhoda průměrné
 rychlosti mizí. Cílem je počítat průměr přes interval prakticky
-nerozlišitelný od nuly. To by dalo okamžitou rychlost. [Numerický experiment](https://sagecell.sagemath.org/?z=eJyNksFunDAQhu9IvMOIIAUXd7ebHipV4hWqHNpeyCYy9iBYwKbG3pqt-iBVT32AKg-R5r06sE2q3orEYA98M_8_-ALeCYV1q_0BBwRlJiccSj2DxdGgdUZYqL3uZMvBQydOCsFb2dLHo_UDWm082Fk2PaFwGpBQLaDVDu1R9B4U9t0MDcTRBQgYjVu7CLVUaIpXnFKdV-AMHBRu4OM89aiwA9dOnV40HcGJyvcSN3EUR0fSk10GKiigAgn6ksWRNZ-noiyTtM4CSxOeXNvH--HXd6sffvwVR7LSMvCQN_uUgztsIL25qa2QXwjLG_Zyob82xENy_fgNlWzM6eEnTL3xI0ryayAlyWmy38dRbWgw5BOywMWLkFc83F4tq9urvKK9pP1rut9w2G0D322px47x6ZN11IbD1Or1Gc4v2Ns4ArrISlHWPMtITPGkqgiMbRu2mdph7Nt6vqt932dsf0acnf_Aa4Ei-y-YEr6aMvLDzjAGiaP7p1LyQa-HA1XyrG4qlpCXFCksk6Df02O2ZDk0SMfJ3i0u3luPHGi-A65r9hv54sRQ&lang=sage&interacts=eJyLjgUAARUAuQ==) ukazuje, že u některých funkcí toto funguje pěkně, u některých bohužel ne.
+nerozlišitelný od nuly. To by dalo okamžitou rychlost. [Numerický experiment](https://gist.github.com/robert-marik/09fea0d67b84461c9d2e6980b0a84530) ukazuje, že u některých funkcí toto funguje pěkně, u některých bohužel ne.
 
 Pokud průměrujeme za stále kratší čas, čitatel i jmenovatel se blíží k
 nule a jsou potíže s interpretací zlomku. Nulou totiž není možné
