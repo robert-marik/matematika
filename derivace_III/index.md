@@ -310,7 +310,7 @@ izolace dosáhnout toho, aby její teplota a povrch byly co
 nejmenší. Teplotu snížíme, pokud uděláme izolaci silnější, to ovšem
 zvýší její povrch. A z většího povrchu se vyzáří více tepla. Přidávání
 izolace by tedy mohlo být kontraproduktivní. Zdá se to být proti
-logice, ale logika nás někdy může zavést na zcestí a stojí za to jev
+logice, ale logika nás někdy může zavést na scestí a stojí za to jev
 prozkoumat.
 
 Nejprve ukážeme, že přidávání izolace opravdu může zvýšit tepelné
