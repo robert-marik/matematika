@@ -138,6 +138,9 @@ _Jakmile vidíme, že v zadání figuruje rychlost změny veličiny,
 
 Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky chybí  $L_{\max}-L$ a model má tvar $$\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).$$
 
+
+Poznámka: ChatGPT úkol splnil [až napodruhé](https://chat.openai.com/share/88d550e4-1b8b-4e1c-9a0e-2ad01cb862dd). Napoprvé nabídl už řešení tohoto modelu.
+
 ```
 
 ## Kontaminace a čištění
@@ -164,6 +167,8 @@ _Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na 
 
 Je-li $y$ znečištění v galonech a $t$ čas ve dnech, má model tvar
 $$\frac{\mathrm dy}{\mathrm dt}=-0.08y-30.$$
+
+*Poznámka:* ChatGPT [zvládl](https://chat.openai.com/share/f79dfceb-5aa4-4ec8-b4d4-f57b0fca2bbc) úlohu, ale napoprvé nabídl model jiného typu a proto byl do otázky vsunut požadavek na přítomnost derivace.
 
 ```
 
@@ -223,6 +228,8 @@ $$
 $$
 kde $t$ je čas v letech.
 
+*Poznámka:* ChatGPT [skvěle](https://chat.openai.com/share/df22fb50-8003-4164-adc3-4aebee0c1cdc).
+
 ```
 
 ## Hrubý model chřipkové epidemie
@@ -239,6 +246,8 @@ _Toto je současně model popisující šíření informace v populaci, stačí 
 
 Je-li $M$ velikost populace a $y$ počet nemocných, je v populaci $M-y$ zdravých a model má tvar
 $$\frac{\mathrm dy}{\mathrm dt}=ky(M-y).$$
+
+*Poznámka:* ChatGPT při řešení tohoto úkolu částečně zklamal. Nejprve se snažil podstrčit klasický SIR model pro modelování epidemie a teprve [napodruhé respektoval zadání](https://chat.openai.com/share/b38fdc8b-8646-4b96-b0a8-521036dbb736).
 
 ```
 
@@ -263,6 +272,10 @@ pomocí derivací.
 
 Je-li $r$ poloměr, je $r^2$ druhá mocnina a protože se jedná o nepřímou úměrnost, platí
 $$\frac{\mathrm dr}{\mathrm dt}=\frac{k}{r^2}.$$
+
+Konstanta úměrnosti $k$ vyjadřuje číselně rychlost růstu skvrny o jednotkovém poloměru. 
+
+*Poznámka:* ChatGPT bohužel v řešení této úlohy zklamal a vnucoval model s klesajícím poloměrem a přímou úměrností. Můžete si prohlédnout [zde](https://chat.openai.com/share/3ccd9009-c599-49de-b537-abefa9dc7e9d).
 
 ```
 
