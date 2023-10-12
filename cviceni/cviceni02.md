@@ -2,7 +2,14 @@
 
 >   * Procvičíme si interpretaci derivace jako rychlosti změny.
 >   * Naučíme se sestavovat matematické modely situací, ve kterých se veličina mění nekonstantní rychlostí
->   * Prerekvizitou je schopnost chápat derivaci jako rychlost změny a umět matematicky vyjádřit úměrnost mezi veličinami.
+>   * Prerekvizitou je schopnost chápat derivaci jako rychlost změny a umět
+>     matematicky vyjádřit úměrnost mezi veličinami.
+>   * V některých řešeních jsou odkazy, jak se s úlohou porvala umělá
+>     inteligence (AI). Ukazují, že AI může pomoci, ale může i generovat
+>     zavádějící nebo nesprávná řešení. Proto používáme jenom jako doplněk tam,
+>     kde úloze plně rozumíme, dokážeme zkontrolovat výstupy AI a AI využíváme
+>     jako pomocníka pro urychlení práce. V roce 2023 ještě zdaleka není rozumné
+>     AI využívat jako zdroj znalostí (viz halucinace AI).
 
 ## Tepelná výměna podle Newtonova zákona
 
@@ -38,6 +45,8 @@ $$
   \frac{\mathrm dT}{\mathrm dt}=-k(T-T_{\text{venku}}),\quad T(0)=23^\circ\mathrm{C}
 $$
 kde $k$ je konstanta úměrnosti a $T_{\text{venku}}$ teplota venku.
+
+*Poznámka:* S úlohou si [poradil i automat chatGPT](https://chat.openai.com/share/85a27270-9a5e-4208-bb86-3f8390af470a) a [nabídl počítačovou simulaci](https://gist.github.com/robert-marik/b7a8a893ffbdd248081314e30b73a2b7) pro vizualizaci řešení. 
 
 ```
 

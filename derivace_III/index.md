@@ -332,7 +332,7 @@ $$\frac Q{h 2\pi RL}= T_2-T_\infty.$$ (3.2)
 Sečtením {eq}`3.1` a {eq}`3.2` dostaneme 
 $$ \frac{Q}{2\pi L}\left(\frac 1k \ln \frac{R}{r}+\frac 1{h R}\right) = T_1-T_\infty.$$
 Tento vzorec popisuje tepelné ztráty při izolaci trubky o vnitřním poloměru $r$ a teplotě $T_1$ izolací o vnějším poloměru $R$ ve vnější teplotě $T_\infty$. Parametry izolace jsou tepelná vodivost $k$ a s koeficient prostupu tepla $h$. Budeme sledovat, jak se chová veličina $Q$ (tepelné ztráty) jako funkce proměnné $R$. 
-$$Q(R)=2\pi L\frac {T_1-T\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}$$
+$$Q(R)=2\pi L\frac {T_1-T_\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}$$
 Pokud chceme minimalizovat tepelné ztráty $Q$, musíme maximalizovat jmenovatel
 $$f(R)=\frac 1k \ln \frac{R}{r}+\frac 1{h R}=\frac 1k \ln R -\frac 1k \ln r+\frac 1{h} R^{-1}.$$
 Ostatní veličiny jsou totiž konstantní. 
