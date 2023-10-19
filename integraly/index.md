@@ -226,6 +226,12 @@ $C=18 ^\circ \mathrm C$. Funkce udávající závislost
 teploty místnosti na čase je $$T=\left(18+10 e^{-0.01
 t}\right)\,{}^\circ \mathrm C.$$
 
+\iffalse
+
+[Online výpočet (Python)](https://gist.github.com/robert-marik/01a508cd521ba4e0c672098cdac3f9ce)
+
+\fi
+
 **Poznámka (vlhkost dřeva elektrickou metodou).** Podobný výpočet se využívá u měření elektrického odporu dřeva pro stanovení vlhkosti. Protože elektrický odpor dřeva je velký, není vhodné pro určení elektrického odporu použít Ohmův zákon a změřený proud a napětí. Jedna z možností je měření času nutného k nabití nebo vybití kondenzátoru přes odpor. V případě nabíjení proud exponenciálně klesá (zdůvodníme později v přednášce věnované diferenciálním rovnicím) a proto (díky elektrickým vlastnostem kondenzátoru) exponenciálně klesá i rychlost, s jakou roste napětí na kondenzátoru. Toto napětí je nutné pro výpočet odporu. Pokud známe rychlost, s jakou se napětí mění, určíme napětí integrováním a znalostí napětí na začátku nabíjení.
 
 ```{prf:remark} Veličina vypočtená z rychlosti své změny
@@ -311,9 +317,11 @@ teplotě, ale zato jsme schopni určit jenom změnu teploty za daný
 Za druhou hodinu bude změna teploty
 \dm$$\int_{60}^{120} - 0.1 e^{-0.01t} \,\mathrm dt=\left[10 e^{-0.01t}\right]_{60}^{120}= 10 e^{-0.01\cdot 120} - 10 e^{-0.01\cdot 60}\approx  -2.5 ^\circ \mathrm C. $$
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9R1-TlStMo0VSwVdA10DNU0FJIrSjQADINDLVKgHIFRZl5JQoaQCI1vSixJFUDpFhHo0THQMfMQFMTnwozAx1DI5AaANtfHHM=&lang=sage&interacts=eJyLjgUAARUAuQ==)
-
 \iffalse
+
+[Online výpočet (Python)](https://gist.github.com/robert-marik/01a508cd521ba4e0c672098cdac3f9ce)
+
+[Online výpočet (Sage).](https://sagecell.sagemath.org/?z=eJwrSyzSUC9R1-TlStMo0VSwVdA10DNU0FJIrSjQADINDLVKgHIFRZl5JQoaQCI1vSixJFUDpFhHo0THQMfMQFMTnwozAx1DI5AaANtfHHM=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 Integrování určitým integrálem si také můžete procvičit v následujících cvičeních.
 

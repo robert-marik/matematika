@@ -198,7 +198,12 @@ $$w=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\sqrt{\frac 14}=\frac 12.$$
 Poměr výšky a šířky u nosníku maximální tuhosti tedy bude $\sqrt{3}:1$
 a šířka bude rovna polovině průměru.
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9QSFHX5OVK08jQtM2IM9YqLiwq0UiJM9LNiDMCihdn5JdrpOmlZKaBVGAI6BXn55SlgmQAYWkWzQ==&lang=sage)
+\iffalse
+
+* [Online výpočet.](https://gist.github.com/robert-marik/17c21c17330d7e30b0ffc4ec74eae0e0) 
+* [ChatGPT a jeho totální fail](https://chat.openai.com/share/f56e697a-09b7-4e2d-b05c-2f970b306d02).
+
+\fi
 
 ## Postačující podmínka pro lokální extrém
 
