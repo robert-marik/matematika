@@ -1,5 +1,8 @@
 # Vlastní čísla a směry
 
+> * Vlastní čísla umí numericky najít počítače, WolframAlpha, Python, Matlab, ... 
+> * Pro Python ukázku výpočtu [vygeneruje ChatGPT](https://chat.openai.com/share/7cabf98a-1c64-418a-b61b-f1eba78c4ff1)
+
 ## Vektor, který není vlastním směrem
 
 Ukažte, že vektor $\vec a=  \begin{pmatrix}    1\\2  \end{pmatrix}$
