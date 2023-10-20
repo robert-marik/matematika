@@ -230,6 +230,8 @@ t}\right)\,{}^\circ \mathrm C.$$
 
 [Online výpočet (Python)](https://gist.github.com/robert-marik/01a508cd521ba4e0c672098cdac3f9ce)
 
+[Online výpočet (Sage)](https://sagecell.sagemath.org/?z=eJw1ikEOgjAQRfck3GF2zGAhU1duuu01TE2KNoFC6Kg9vqOG3Xv__VfYsZOO2mZCIXAw8Gihh1g3VGTbizavIWWJ9z1IxO_T_ObrlHKYNXoYwI_leSsojglOcL60TXmsb_R0wP-tus2rHGrqkrJjA3UJ1Vlmpg9IRCjL&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
 \fi
 
 **Poznámka (vlhkost dřeva elektrickou metodou).** Podobný výpočet se využívá u měření elektrického odporu dřeva pro stanovení vlhkosti. Protože elektrický odpor dřeva je velký, není vhodné pro určení elektrického odporu použít Ohmův zákon a změřený proud a napětí. Jedna z možností je měření času nutného k nabití nebo vybití kondenzátoru přes odpor. V případě nabíjení proud exponenciálně klesá (zdůvodníme později v přednášce věnované diferenciálním rovnicím) a proto (díky elektrickým vlastnostem kondenzátoru) exponenciálně klesá i rychlost, s jakou roste napětí na kondenzátoru. Toto napětí je nutné pro výpočet odporu. Pokud známe rychlost, s jakou se napětí mění, určíme napětí integrováním a znalostí napětí na začátku nabíjení.
