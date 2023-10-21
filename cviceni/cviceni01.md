@@ -1,8 +1,8 @@
 # Výpočet derivací
 
 >  * Derivaci budeme chápat jako zobrazení, které funkci přiřadí jinou funkci. Proč je tak nesmírně užitečná zjistíme v následujících týdnech.
->  * Naučíte se derivovat jednoduché funkce (mocninné funkce, další základní elementární funkce a složené funkce). Nejsou nutné žádné přdchozí znalosti, budete potřebovat pouze vzorce pro derivování a spoustu cviku.
->  * Naučíte se interpretovat derivaci jako rychlost růstu v různých kontextech, kdy veličina závisí na čase, příapdně na jiné veličině.
+>  * Naučíte se derivovat jednoduché funkce (mocninné funkce, další základní elementární funkce a složené funkce). Nejsou nutné žádné předchozí znalosti, budete potřebovat pouze vzorce pro derivování a spoustu cviku.
+>  * Naučíte se interpretovat derivaci jako rychlost růstu v různých kontextech, kdy veličina závisí na čase, případně na jiné veličině.
 >  * Naučíte se ze známého vzorce mezi dvěma veličinami odvodit vzorec dávající do souvislosti rychlosti změn těchto veličin.
 >  * [Zde jsou numerické výpočty](https://gist.github.com/robert-marik/9807f45acd8e4c522472749d73bb5b46) k některým příkladům v jazyce Python.
 
@@ -179,7 +179,7 @@ pixabay.com
 
 Vzdálenost k horizontu pro pozorovatele ve výšce $h$ nad Zemí je dána funkcí $H=\sqrt {2Rh},$ kde $R=6.371\times 10^6\,\mathrm m$ je poloměr Země ([viz zde](https://aty.sdsu.edu/explain/atmos_refr/horizon.html)). Po dosazení a vydělení faktorem 1000, aby $H$ vycházelo v kilometrech, dostáváme vzorec $$H=3.57\sqrt{h},$$ kde $h$ je v metrech a $H$ v kilometrech. Určete hodnotu této derivace $\frac{\mathrm d H}{\mathrm dh}$ pro $h=5\,\mathrm{m}$ (včetně jednotky) a slovní interpretaci této derivace.
 
-_Tento příklad opět udává derivaci jako rychlost změny, ale nezávislá proměnná není čas. Sledujeme vzájmenou relaci dvou délek - vzdálenosti k horizontu a výšky pozorovatele. V případech jako je tento je rozměr veličiny derivované stejný, jako rozměr veličiny, podle které se derivuje. Potom je derivace vlastně bez rozměru. Někdy je však vhodné pro srozumitelnější interpretaci jednotky nevykrátit, obzvlášť v případě jako zde, kdy se obě délky udávají v řádově jiných jednotkách (metry versus kilometry)._
+_Tento příklad opět udává derivaci jako rychlost změny, ale nezávislá proměnná není čas. Sledujeme vzájemnou relaci dvou délek - vzdálenosti k horizontu a výšky pozorovatele. V případech jako je tento je rozměr veličiny derivované stejný, jako rozměr veličiny, podle které se derivuje. Potom je derivace vlastně bez rozměru. Někdy je však vhodné pro srozumitelnější interpretaci jednotky nevykrátit, obzvlášť v případě jako zde, kdy se obě délky udávají v řádově jiných jednotkách (metry versus kilometry)._
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -211,7 +211,7 @@ vysušené oblasti šíří ve tvaru kruhu. V určitém okamžiku je poloměr $5
 metrů a roste rychlostí $1.5$ metrů za minutu. Zapište zadání pomocí
 derivací a určete jak rychle roste plocha zasažená ohněm.
 
-_V tomto příkladě se učíme, že ze znalosti vztahů mezi veličinami můžeme odvodit vztah, mezi rychlostmi změn, tj. do statických vzorců můžeme dodat dynamiku vývoje. V praxi někdy jde příklad tohoto typu obejít úvahou: teď je poloměr 50 metrů, tomu odpovídá jakási plocha, za minutu  bude poloměr 51.5 metru, tomu odpovídá opět jakási plocha a provnáním s plochou původní snadno zjistím přírůstek. To pro nás může být kontrola, že aparát funguje. Pro nás je teď důležité naučit se tento aparát na malých věcech, abyste mohli později dělat věci velké._
+_V tomto příkladě se učíme, že ze znalosti vztahů mezi veličinami můžeme odvodit vztah, mezi rychlostmi změn, tj. do statických vzorců můžeme dodat dynamiku vývoje. V praxi někdy jde příklad tohoto typu obejít úvahou: teď je poloměr 50 metrů, tomu odpovídá jakási plocha, za minutu  bude poloměr 51.5 metru, tomu odpovídá opět jakási plocha a porovnáním s plochou původní snadno zjistím přírůstek. To pro nás může být kontrola, že aparát funguje. Pro nás je teď důležité naučit se tento aparát na malých věcech, abyste mohli později dělat věci velké._
 
 ```{prf:example} Řešení
 :class: dropdown

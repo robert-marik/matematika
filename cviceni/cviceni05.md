@@ -3,6 +3,7 @@
 > * Naučíme se hledat neurčitý integrál funkce. Stačí mít po ruce vzorce.
 > * Naučíme se hledat určitý integrál funkce.
 > * Procvičíme si interpretaci integrálu v kontextu změny veličiny, která se mění nekonstantní rychlostí.
+> * Výpočet na počítači pomocí [WolframAlpha](https://www.wolframalpha.com/) nebo Pythonu (možno automatizovat, spustit v cyklu nebo zakomponovat do rozsáhlejšího výpočtu, [vzorový postup vygeneruje ChatGPT](https://chat.openai.com/share/50b05eb0-39a8-4190-8337-8eaae2e8da2d))
 
 ## Výpočet integrálu
 

@@ -216,7 +216,7 @@ aproximací přesných vztahů plynoucích z Einsteinovy teorie relativity získ
 \dm $$E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}} =m_0 c^2 \left(1-\frac {v^2}{c^2}\right)^{-1/2} \approx m_0 c^2 \left(1+\left(-\frac 12\right)\left(-\frac {v^2}{c^2}\right)\right)=m_0c^2+\frac 12 m_0v^2 $$
 pro $v$ mnohem menší než $c$. Snadno rozšifrujeme, že s rychlostí souvisí jenom druhý sčítanec a že se jedná o klasický vzorec pro kinetickou energii $\frac 12 mv^2$.
 
-Ač se jedná "jenom" o lineární aproximaci, je  vzorec $E=\frac 12 mv^2$ dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného relativistického vzorce při malých rychlostech v praxi obvykle zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUb1OwzAQ3iv1HU7t4lSkSQwFOmQMCwNSH6CS45yIG_-UOLVIn55LCm0YGJA8nO8-fT93Js2zDSyhNq6zznfgygM23Wk-kznfbp-2_GHzDARoe1nrAeADdlpAALPyexZn0XwWcp4m9-vHKeybB46u7svTQUlVO_B4BSjgKTQmqV0FxxYDVmgF0LvRzmfHVtkO2OJVWeyUbASgxfZdITRaeGr0BsLZtRINkTgwQk8UFtGVIUv4yqSrsOe33i-FtxKl7UcylCOXVqULTtup5co1zkqkHLoWgZagrDvBWbimdSfCBCGVrEFS5EG8yHISlXtOJc_ZpU6Y_2g7lsVkJqF_FBFyCRcjRQaTD19bdvPLCh4XWTT0fpr_TnAHw4Y84GfXoqHJOfQehxB0A2_HkKGnm1gnKY0dd7iDHHYo9ItCXbEsTceT79jl6DeDO8b-zhhfJlR9AXtJxZs=&lang=sage&interacts=eJyLjgUAARUAuQ==).
+Ač se jedná "jenom" o lineární aproximaci, je  vzorec $E=\frac 12 mv^2$ dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného relativistického vzorce při malých rychlostech v praxi obvykle zhavaruje na [zaokrouhlovacích chybách](https://gist.github.com/robert-marik/40a475b8a566bb1dc9ef58da2766228a).
 
 ````
 

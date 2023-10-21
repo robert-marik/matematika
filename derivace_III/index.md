@@ -198,7 +198,12 @@ $$w=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\sqrt{\frac 14}=\frac 12.$$
 Poměr výšky a šířky u nosníku maximální tuhosti tedy bude $\sqrt{3}:1$
 a šířka bude rovna polovině průměru.
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9QSFHX5OVK08jQtM2IM9YqLiwq0UiJM9LNiDMCihdn5JdrpOmlZKaBVGAI6BXn55SlgmQAYWkWzQ==&lang=sage)
+\iffalse
+
+* [Online výpočet.](https://gist.github.com/robert-marik/17c21c17330d7e30b0ffc4ec74eae0e0) 
+* [ChatGPT a jeho totální fail](https://chat.openai.com/share/f56e697a-09b7-4e2d-b05c-2f970b306d02).
+
+\fi
 
 ## Postačující podmínka pro lokální extrém
 
@@ -310,7 +315,7 @@ izolace dosáhnout toho, aby její teplota a povrch byly co
 nejmenší. Teplotu snížíme, pokud uděláme izolaci silnější, to ovšem
 zvýší její povrch. A z většího povrchu se vyzáří více tepla. Přidávání
 izolace by tedy mohlo být kontraproduktivní. Zdá se to být proti
-logice, ale logika nás někdy může zavést na zcestí a stojí za to jev
+logice, ale logika nás někdy může zavést na scestí a stojí za to jev
 prozkoumat.
 
 Nejprve ukážeme, že přidávání izolace opravdu může zvýšit tepelné
@@ -332,7 +337,7 @@ $$\frac Q{h 2\pi RL}= T_2-T_\infty.$$ (3.2)
 Sečtením {eq}`3.1` a {eq}`3.2` dostaneme 
 $$ \frac{Q}{2\pi L}\left(\frac 1k \ln \frac{R}{r}+\frac 1{h R}\right) = T_1-T_\infty.$$
 Tento vzorec popisuje tepelné ztráty při izolaci trubky o vnitřním poloměru $r$ a teplotě $T_1$ izolací o vnějším poloměru $R$ ve vnější teplotě $T_\infty$. Parametry izolace jsou tepelná vodivost $k$ a s koeficient prostupu tepla $h$. Budeme sledovat, jak se chová veličina $Q$ (tepelné ztráty) jako funkce proměnné $R$. 
-$$Q(R)=2\pi L\frac {T_1-T\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}$$
+$$Q(R)=2\pi L\frac {T_1-T_\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}$$
 Pokud chceme minimalizovat tepelné ztráty $Q$, musíme maximalizovat jmenovatel
 $$f(R)=\frac 1k \ln \frac{R}{r}+\frac 1{h R}=\frac 1k \ln R -\frac 1k \ln r+\frac 1{h} R^{-1}.$$
 Ostatní veličiny jsou totiž konstantní. 

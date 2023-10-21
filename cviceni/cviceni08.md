@@ -112,7 +112,7 @@ $$
 
 Figurka na obrázku je Timmy ve třech situacích. Jednou se pozoruje svůj obraz ve vodě, jednou spadl na záda, a jednou vrhá stín. Vyjádřete pomocí matice transformaci, která vzor (černá malůvka) převádí na obraz (barevná malůvka).
 
-Poznámka: Stačí si všímat, kam se zobrazují jednotkové vektory ve směru os, tj. kam se zobrazí Timmiho nakročená noha a Timyho ruka, která je natažená dozadu. Případné neceločíselné složky matice jenom odhadněte. \textit{Podle LAFF Linear Algebra - Foundations to Frontiers (www.ulaff.net)}
+Poznámka: Stačí si všímat, kam se zobrazují jednotkové vektory ve směru os, tj. kam se zobrazí Timmiho nakročená noha a Timyho ruka, která je natažená dozadu. Případné neceločíselné složky matice jenom odhadněte. *Podle LAFF Linear Algebra - Foundations to Frontiers (www.ulaff.net)*
 
 ```{prf:example} Řešení
 :class: dropdown
