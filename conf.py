@@ -112,3 +112,4 @@ latex_table_style = ['booktabs']
 
 notfound_urls_prefix = '/matematika/'
 latex_toplevel_sectioning = 'chapter'
+

@@ -483,6 +483,17 @@ funkce. Takové rovnice se naučíme řešit později.
 
 V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači, vhodným nástrojem je Python](https://sagecell.sagemath.org/?z=eJxtU02L2zAQvRv8HwZySbJJmhQKpbDHngpLKb4ty6LYk0aRrBHSSFv713dkp7vZpfZFH2-e3rwnLeAh9Rh0axRE3SerWgQfCB7whcmlDKMy5IDas1UjZeU0dM2njuEetmBgDctm2-xXdbWAn0H3mnUWiKc0yhB4zDvoyAfsHML3ZDFQHqBHpm6YawicCtQ6vMS3OvyjI6eLhkgnmZty8ASYKzdS44M2VnXwK7nfuP2RmFVd6d5TYHCp9wOoCM6_rvWKvSW2-rjzQxmVfW-5rsrfPGuRfQ9f9yDfAhgLRN30jWeSVYtRjindT0BBjqpVjEaUBRSKVsVUV5M_-92hAGSl9GwCmcnZq826rswE-jLRGMKTbjU6BlGzl53P-_dKDFmp8dQiPxeyNGFmUOpUlgA9WRQnIUKH1lCCGXdVoB1jyMp-UNEIj_O7UaKJyxv6lfAWwo0ECEZKiwPH1GGPkIr1imVfYvJugDxkuly1DrNB_-WU4x73T7I7GV5XJwqgRRkEJTHeQreH1bfJvsHYFOuquM2P-u5QqmXwBHcgNr9-RWxMDnJpF2d8V3rbmvWyEXy5puu3igWEQcKVBmAUR1QW21hUDCBX1Gl5BnlwYtwRnZp8xF7Om3mbfzqaq47mnQ55Tlzuwtij0JlCLPFcJF44U-eIr_JK6g7bucV5SQK2vCsuLnnTrOZpPNPLcvUXy2kuJg==&lang=python&interacts=eJyLjgUAARUAuQ==). Alternativou je použít specializované postupy pro řešení [diferenciálních rovnic](https://gist.github.com/robert-marik/69021f700bcc7021d736445617ce3540), opět v Pythonu.
 
+
+
+\iffalse
+
+
+[![https://static.anaconda.cloud/content/a22d04e8445b700f28937ab3231b8cded505d0395c63b7a269696722196d5415](https://static.anaconda.cloud/content/a22d04e8445b700f28937ab3231b8cded505d0395c63b7a269696722196d5415)](https://anaconda.cloud/api/nbserve/launch_notebook?nb_url=https%3A%2F%2Fanaconda.cloud%2Fapi%2Fprojects%2Fcbcc30b1-5984-4491-b8db-68f9d9604342%2Fversions%2F5db43d6f-d13d-4d62-b23f-84b3b69efb1b%2Ffiles%2FMTK_Rovnice_ochlazovani.ipynb)
+
+
+\fi
+
+
 ```{prf:remark} Smysl příkladu se zákonem ochlazování
 :nonumber:
  Předchozí příklad je často v různých obměnách používán na modelování ochlazování kávy, což je proces, který většina lidí důvěrně zná. Nemáme pochopitelně ambice se domnívat, že bychom dokázali z této rovnice odvodit nějaké zásadní výsledky aplikovatelné při pití ranní kávy nebo při konzumaci horké polévky. Učíme se na malých věcech, abychom později mohli dělat věci velké. Na známých věcech se učíme aparát, který bude naším jediným nástrojem tam, kde intuice začne selhávat. Z tohoto příkladu je nutné si odnést, že derivace, jako rychlost změny, hraje roli při kvantitativním popisu dějů a při studia procesů, kdy se mění veličiny. Ať už doopravdy (studium pohybu nebo dějů, probíhajících v čase) nebo virtuálně (problémy spojené s mechanikou, včetně statiky, stability a deformací, často pracují s virtuálními změnami, tj. se změnami, které jsou sice z hlediska úlohy přípustné, ale příroda je z nějakého důvodu nerealizuje). Tedy naprostá většina dějů a jevů, které studujeme a chceme jim rozumět. Jakmile se v popisu fyzikálního zákona objeví slovo *rychlost*, někdy nahrazené souslovím *časová změna*, znamená to, že kvantitativní popis se děje pomocí derivací.
@@ -600,6 +611,7 @@ https://youtu.be/-k_roagRII0
 
 * **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme [vzorce](https://raw.githubusercontent.com/robert-marik/mat-slidy/master/cheatsheet/cheatsheet-MT.pdf) pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
 * Viz cvičení v prvním týdnu.
+* Derivace je možno počítat i na počítači. Je možné počítat numericky (hodnota derivace z funkčních hodnot funkce, naučíme se později) nebo analyticky (k funknčnímu předpisu funkce nalezen funkční předpis pro její derivaci s použitím pravidel pro derivování, jak to dělá člověk). Pro analytický výpočet je nutné mít k dispozici program ze skupiny CAS (Computer algebra system). Nejjendodušší je [WolframAlpha](https://www.wolframalpha.com/input?i=find+derivative+of+x%5E4%2B4x%5E3-4x%5E2-24x), který má webové rozhraní, nebo [pythonovská knihovna Sympy](https://gist.github.com/robert-marik/cf41fe54729faf7c36c82bfbc3adfe67), kterou můžete snadno začlenit do rozsáhlejšího výpočtu nebo projektu.
 
 \iffalse
 
