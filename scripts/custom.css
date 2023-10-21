@@ -124,3 +124,6 @@ figcaption {font-size: 60%;}
 div.algorithm p.admonition-title {background-color: lightyellow;}
 
 .algorithm figure {width:100%; max-width:100%;}
+
+.bd-footer-content__inner {width:100%;}
+.utterances {max-width: 100%;}
