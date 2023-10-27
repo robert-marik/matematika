@@ -412,7 +412,7 @@ Odhadneme celkovou vykonanou práci.
 
 \iffalse
 
-Výpočet pomocí lichoběžníkového pravidla  si také můžete procvičit v následujícícm cvičení.
+Výpočet pomocí lichoběžníkového pravidla  si také můžete procvičit v následujícím cvičení.
 
 `ww2:problems/integraly_vypocet/lichobeznikove_pravidlo.pg`
 
@@ -491,8 +491,18 @@ kde po výpočtu integrálu napravo dosazujeme $t=\varphi (x).$
 
 Formálně výraz napravo ve {eq}`i.2` přejde ve výraz nalevo a naopak
 dosazením rovností
-$$\varphi(x)=t,\qquad \varphi'(x)\,\mathrm dx=\mathrm dt.$$ Toto je
-současně i návod, jak substituční metodu použít prakticky.
+$$\varphi(x)=t,\qquad \varphi'(x)\,\mathrm dx=\mathrm dt.$$ 
+Toto je současně i návod, jak substituční metodu použít prakticky.
+
+S použitím zápisu derivace pomocí diferenciálů máme
+
+$$\int f(\varphi (x))\frac{\mathrm d\varphi}{\mathrm dx}\,\mathrm dx=\int
+f(\varphi)\,\mathrm  d\varphi,$$
+přičemž formálně odpadá nutnost použití proměnné $t$ a vztah ukazuje, že v tomto
+případě je
+možné chápat derivaci $\frac{\mathrm d\varphi}{\mathrm dx}$ jako podíl
+diferenciálů, s touto derivací jako s podílem diferenciálů pracovat a zkrátit
+člen $\mathrm dx$ klasickým krácením (resp. násobením) zlomků. 
 
 **Příklad.** Substituce $x^2=t$ vede na vztah mezi diferenciály ve tvaru $2x\,\mathrm dx=\mathrm dt$. Odsud
 $$\int x e^{x^2}\,\mathrm dx=\frac 12 \int e^t\,\mathrm dt=\frac 12e^t=\frac 12 e^{x^2}+c.$$
