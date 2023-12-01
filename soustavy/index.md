@@ -283,8 +283,10 @@ Libovolnou matici lze konečným počtem těchto úprav převést do schodovité
 Následující věta udává, že veškerá tvrzení, uvedená v souvislosti s
 hodností pro řádky matice, se dají přeformulovat i pro sloupce matice.
 
-> Věta. 
+```{prf:theorem} Hodnost transponované matice
+:nonumber:
   Transponování nemění  hodnost matice.
+```
 
 ## Existence a jednoznačnost řešení soustavy lineárních rovnic  
 
