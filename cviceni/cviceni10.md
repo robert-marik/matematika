@@ -7,6 +7,7 @@
 
 > * Vlastní čísla umí numericky najít počítače, WolframAlpha, Python, Matlab, ... 
 > * Pro Python ukázku výpočtu [vygeneruje ChatGPT](https://chat.openai.com/share/7cabf98a-1c64-418a-b61b-f1eba78c4ff1)
+> * Některé výpočty jsou v [zápisníku pro Python](https://gist.github.com/robert-marik/87a5c146c98a8dc0840633e96a417214).
 
 ## Vektor, který není vlastním směrem
 
@@ -65,6 +66,8 @@ $$2x_1-x_2=0$$ a první rovnice je jejím násobkem. Volbou $x_1=1$ dostáváme 
 Protože platí $$A-(-3) I=\begin{pmatrix}  -2 & 2\\2&1\end{pmatrix}+\begin{pmatrix}  3&0\\0&3\end{pmatrix}=\begin{pmatrix}  1 & 2\\ 2 &4\end{pmatrix},$$řešíme soustavu $$\begin{pmatrix}1 & 2\\ 2 &4\end{pmatrix}\begin{pmatrix}  x_1\\x_2\end{pmatrix}=\begin{pmatrix}  0\\0\end{pmatrix},$$
 která má nekonečně mnoho řešení. Musíme najít alespoň jendo nenulové řešení. Pokud zapíšeme jako soustavu rovnic, dostáváme první rovnici ve tvaru
 $$x_1+2x_2=0$$ a druhá rovnice je jejím násobkem. Volbou $x_2=1$ dostáváme $x_1=-2x_2=-2$ a vlastní vektor příslušný vlastnímu číslu $\lambda_2=-3$ je $\vec e_2=\begin{pmatrix}   -2\\1\end{pmatrix}.$ Tento vektor je dán jednoznačně až na nenulový konstantní násobek.
+
+**Poznámka.** Protože je matice symetrická, jsou vlastní vektory na sebe kolmé. Proto není nutné druhý vektor počítat, ale stačí vzít libovolný vektor kolmý k prvnímu vlastnímu vektoru. V praxi tedy stačí vektoru $\vec e_1$ prohodit komponenty a na první nebo druhé pozici změnit znaménko. Tím dostaneme vektor $\vec e_2$.
 
 ```
 

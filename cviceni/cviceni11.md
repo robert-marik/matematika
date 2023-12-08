@@ -16,6 +16,8 @@ ve dvourozměrném případě do kartézských souřadnic za předpokladu, že s
 
 Okomentujte, jak předpoklady o vlastnostech materiálu a o modelovaném procesu (stacionárnost, existence či neexistence zdrojů, homogenita materiálu, stejné chování v různých směrech apod.) ovlivní výslednou rovnici.
 
+`ww2:problems/difuzni_rce/predpoklady.pg`
+
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
@@ -205,7 +207,7 @@ Nejzásadnější jsou první a poslední příklad.
 
 * V prvním příkladě se trénuje rozepsání rovnice do souřadnic a posouzení, jestli je stacionární, se zdroji atd. To není vlastně žádná matematika ani počítání a dá se to odhalit na první pohled. Toto je také většinou jediné, co člověk s rovnicí dělá. Kromě toho ji už jenom "nacpe" do výpočetního prostředí. 
 * Druhý a třetí příklad jsou jenom reformulace příkladů, kterým jsme se věnovali ve cvičení s integrálem. Nyní to stejné jenom s jiným názvoslovím a aparátem difuzní rovnice. Abychom viděli, že to stejné "vypadne" i z obecného modelu.
-* Čtvrtý příklad je ukázka, že i když je náš svět trojrozměrný, někdy je možné dimenzi úloh redukovat. Třeba i tak, že se nějaká věc započítá méně přirozeným způsobem. Modelový příklad je žebro chladiče. Doj nebo trojrozměrné (podle toho bereme-li ho jako placku nebo jako těleso). Teplo se předává plochou žebra do okolí. Kdybychom chtěli studovat žebro jednodimenzionálně ve směru od součástky ven, můžeme předávání tepla do okolí modelovat tak, že podél žebra jsou spotřebiče, které teplo z žebra odstraňují. Výkon těchto spotřebičů souvisí s teplotou. Vede to na jednoduchou jednodimenzionální rovnici, se kterou se v numerických výpočtech manipuluje lépe, než s rovnicí dvoudimenzionální. 
+* Čtvrtý příklad je ukázka, že i když je náš svět trojrozměrný, někdy je možné dimenzi úloh redukovat. Třeba i tak, že se nějaká věc započítá méně přirozeným způsobem. Modelový příklad je žebro chladiče. Dvojrozměrné nebo trojrozměrné (podle toho bereme-li ho jako placku nebo jako těleso). Teplo se předává plochou žebra do okolí. Kdybychom chtěli studovat žebro jednodimenzionálně ve směru od součástky ven, můžeme předávání tepla do okolí modelovat tak, že podél žebra jsou spotřebiče, které teplo z žebra odstraňují. Výkon těchto spotřebičů souvisí s teplotou. Vede to na jednoduchou jednodimenzionální rovnici, se kterou se v numerických výpočtech manipuluje lépe, než s rovnicí dvoudimenzionální. 
 * Pátý příklad je výpočet jednoduchých derivací, ale tentokrát funkce dvou proměnných.  Není to nic nového: proměnnou, přes kterou se nederivuje, považujte za parametr (konstantu). A rovnice s parametrem derivovat umíme. 
 * Poslední příklad je co do matematického aparátu triviální (derivace polynomu a násobení 2x2 matice se sloupcovým vektorem), ale spojuje spoustu dovedností do řetězce, který už má reálné využití. Ve výpočtech je hlavně nutné  neztratit hlavní linii. Nesoustředit se na detaily, ale na to, co se vlastně počítá a jak na to.
     * Výpočtem derivací teploty podle prostorových souřadnic vypočítáme, jak se mění teplota podél osy x a podél osy y. Z toho poté určíme vektor (gradient), ukazující, kterým směrem teplota roste a jak intenzivní tento růst je. 

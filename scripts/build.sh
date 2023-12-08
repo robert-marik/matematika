@@ -38,6 +38,8 @@ sed -i 's/\\(/\\(\\displaystyle /g' $directory/*/cviceni*.html
 
 sed -i 's/<p><code class="docutils literal notranslate"><span class="pre">ww2:\(.*\)<\/span><\/code><\/p>/<a onclick=otevrit("\1"); target="_blank" class="WWotazka">Úkol<\/a>/' $directory/*/index.html
 
+sed -i 's/<p><code class="docutils literal notranslate"><span class="pre">ww2:\(.*\)<\/span><\/code><\/p>/<a onclick=otevrit("\1"); target="_blank" class="WWotazka">Úkol<\/a>/' $directory/*/cviceni*.html
+
 # sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ycontainer"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' $directory/*/index.html
 
 sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ylink">  <a href="https:\/\/www.youtu.be\/\1">Minivideo<\/a> <\/div>/' $directory/*/index.html
