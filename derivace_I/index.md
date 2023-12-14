@@ -603,7 +603,7 @@ koryto obdélníkového tvaru.
 
 https://youtu.be/-k_roagRII0
 
-* **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme [vzorce](https://raw.githubusercontent.com/robert-marik/mat-slidy/master/cheatsheet/cheatsheet-MT.pdf) pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
+* **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme [vzorce](https://raw.githubusercontent.com/robert-marik/matematika/master/cheatsheet/cheatsheet.pdf) pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
 * Viz cvičení v prvním týdnu.
 * Derivace je možno počítat i na počítači. Je možné počítat numericky (hodnota derivace z funkčních hodnot funkce, naučíme se později) nebo analyticky (k funknčnímu předpisu funkce nalezen funkční předpis pro její derivaci s použitím pravidel pro derivování, jak to dělá člověk). Pro analytický výpočet je nutné mít k dispozici program ze skupiny CAS (Computer algebra system). Nejjendodušší je [WolframAlpha](https://www.wolframalpha.com/input?i=find+derivative+of+x%5E4%2B4x%5E3-4x%5E2-24x), který má webové rozhraní, nebo [pythonovská knihovna Sympy](https://gist.github.com/robert-marik/cf41fe54729faf7c36c82bfbc3adfe67), kterou můžete snadno začlenit do rozsáhlejšího výpočtu nebo projektu.
 
