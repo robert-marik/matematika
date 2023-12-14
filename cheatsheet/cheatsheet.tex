@@ -1,0 +1,388 @@
+\documentclass{article}
+\usepackage[landscape, margin = 0.8cm, bottom=1.5cm, top=1.3cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts}
+
+\usepackage{multicol, enumerate, tikz}
+\setlength{\columnseprule}{0.4pt}
+\everymath{\displaystyle}
+
+\def\dx{\,dx}
+\def\dy{\,dy}
+\def\dr{\,dr}
+\def\dphi{\,d\phi}
+\def\dA{\,dA}
+\def\tg{\mathop{\mathrm{tg}}}
+\def\arctg{\mathop{\mathrm{arctg}}}
+\def\cotg{\mathop{\mathrm{cotg}}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+
+\abovedisplayskip 3 pt
+\belowdisplayskip 3 pt
+\let\phi\varphi
+\footnotesize
+\parindent 0 pt
+\parskip 10 pt
+\begin{multicols}{3}
+\rightskip 0 pt plus 1 fill
+
+{\centering \parskip 0 pt
+\textbf{Cheatsheet Matematika}
+
+(Robert Mařík, \today)
+
+}
+
+\textbf{Funkce}
+\vspace*{-\baselineskip}
+\begin{itemize}
+\item Funkce jsou zobrazení mající na vstupu a výstupu reálná čísla. Používají se k vyjádření vzájemných relací zkoumaných veličin.
+\item Podle  toho, zda zachovávají uspořádání vzorů i pro obrazy dělíme na rostoucí, klesající a ostatní (bez monotonie).
+\item Podle toho, zda a jakým způsobem jsou symetrické dělíme na sudé, liché a ostatní (bez parity).
+\item Nejjednoduššími funkcemi jsou přímá úměrnost (násobení konstantou, $y=kx$) a nepřímá úměrnost (násobení převrácené hodnoty konstantou, $y=\frac kx=k\frac 1x$).
+\item Je-li $y=f(x)$, říkáme, že $y$ závisí na $x$. Veličina $y$ je závislá veličina, veličina $x$ je nezávislá veličina.
+\end{itemize}
+
+\textbf{Spojitost a limita (velmi zjednodušeně)}
+\vspace*{-\baselineskip}
+\begin{itemize}
+\item Spojité funkce mají relativně malé změny funkčních hodnot při relativně malých změnách vstupních dat. Např. nejsou skoky.
+\item Limita umožňuje doplnit funkční hodnotu funkce tak, aby se stala spojitou (odstranitelná nespojitost).
+\end{itemize}
+
+\textbf{Derivace}
+\vspace*{-\baselineskip}
+
+Dává do souvislosti změny závislé a nezávislé veličiny. 
+
+$$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
+
+\begin{itemize}
+\item Rychlost s jakou se mění $f$ při změnách $x$.
+\item Změna $f$ vyvolaná jednotkovou změnou $x$.
+\item Pro $f(t)$ je $\frac{\mathrm df}{\mathrm dt}$ rychlost růstu veličiny $f$ (v čase).
+\item Jednotka derivace veličiny $f$ podle $x$ je stejná jako jednotka podílu těchto veličin.
+\end{itemize}
+
+\textbf{Konečné diference}
+\vspace*{-\baselineskip}
+
+Konečné diference slouží k numerickému aproximování derivace. Slouží také k odhadu derivace funkce dané tabulkou.
+
+Dopředná diference: $\frac{\mathrm df}{\mathrm dx}=f'(x)\approx\frac{f(x+h)-f(x)}{h}$
+
+Centrální diference: $\frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}$
+
+Druhá diference: $\frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}$
+
+\columnbreak
+
+\textbf{Aplikace derivace}
+
+\begin{itemize}
+\item Rovnice pro růst rychlostí úměrnou funkční hodnotě je
+  $$\frac{\mathrm dx}{\mathrm dt}=kx.$$
+  Rovnice pro růst rychlostí úměrnou vzdálenosti od stacionárního stavu je
+  $$\frac{\mathrm dx}{\mathrm dt}=k(M-x).$$
+  Řešením těchto modelů je možné získat časový průběh hledané funkce.
+\item Lineární aproximace funkce $f$ v okolí bodu $x_0$ je
+  $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
+\item Okamžitá rychlost. Derivace vystupuje všude tam, kde nestačí průměrná rychlost, ale požadujeme rychlost okamžitou. Je proto v matematické formulace naprosté většiny fyzikálních zákonů, pokud se nechceme specializovat pouze na děje probíhající konstantními rychlostmi (jako ve středoškolské fyzice).
+\item Rovnice vedení tepla (pro parciální derivace) -- obsahuje časové i prostorové derivace, protože teplo se šíří v prostoru a teplota v daném místě se při vedení tepla mění s časem.
+\item Řešení rovnice $f(x)=0$ je možno provést iteracemi
+  $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)},$$
+  kde $f'(x_n)=\frac{\mathrm df(x_n)}{\mathrm dx}$ je derivace v bodě $x_n$ a iterační proces začne v nepříliš špatném počátečním odhadu řešení $x_0$ (Newtonova metoda). Každý jeden krok metody zdvojnásobí počet desetinných míst při přibližném řešení rovnice.
+\end{itemize}
+
+
+\newcount\formulacount
+\def\hopla{\advance\formulacount by 1 {\scriptsize ({\the\formulacount})\ }}
+\def\derivace#1;#2\par{\kern 1pt\hopla $\displaystyle{(#1)'=#2}$\par\kern 2pt}
+\def\integral#1;#2\par{\kern 1pt\hopla $\displaystyle{\int #1\dx=#2+c}$\par}
+
+\textbf{Vzorce pro derivování}
+
+{\parskip 0 pt
+
+% \vspace*{-15pt}
+
+\begin{multicols}2
+  \derivace c;0
+
+  \derivace x^n;n x^{n-1}
+
+  \derivace e^x;e^x
+
+  \derivace \ln x;\frac 1x
+
+  \derivace \sin x;\cos x
+
+  \derivace \cos x;-\sin x
+
+  \derivace \tg x;\frac 1{\cos^2 x}
+
+  \derivace \cotg x;-\frac 1{\sin^2 x}
+
+  \derivace \arcsin x;\frac{1}{\sqrt {1-x^2}}
+
+  \derivace \arccos x;-\frac{1}{\sqrt {1-x^2}}
+
+  \derivace \arctg x;\frac 1{1+x^2}
+
+\bigskip
+
+\parskip 5 pt
+
+1. $(u\pm v)'=u'\pm v'$
+
+2. $(cu)'=cu'$
+
+3. $(uv)'=u'v+uv'$
+
+4. $\displaystyle{\Bigl(\frac {u}{v}\Bigr)'=\frac{u'v-uv'}{v^2}}$
+
+5. $\displaystyle{\Bigl(u(v(x))\Bigr)'=u'(v(x))v'(x)}$
+
+\end{multicols}
+
+}
+
+
+\textbf{Neurčitý integrál}
+
+Neurčitý integrál je opak derivace, kdy z rychlosti změny určíme časový průběh měnící se veličiny. Je dána až na aditivní konstantu související s výchozím stavem.
+Píšeme
+$$\int f(x)\,\mathrm dx=F(x),$$
+kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
+
+\textbf{Vzorce pro integrování}
+
+\vspace*{-8pt}
+{
+\parskip 0 pt
+\hbox to \linewidth{
+\begin{minipage}[t]{0.42\linewidth}
+  \integral ;x
+
+  \integral x^n; \frac{x^{n+1}}{n+1}
+
+  \integral \frac 1x;\ln |x|
+
+  \integral e^x;e^x
+
+  \integral \sin x;-\cos x
+
+  \integral \cos x;\sin x
+
+\end{minipage}\hfil\vrule\hfil
+\begin{minipage}[t]{0.53\linewidth}
+\formulacount=6
+\parskip 3pt
+
+  \integral \frac 1{\cos^2 x};\tg x
+
+  \integral \frac 1{\sin^2 x};-\cotg x
+
+
+  \integral \frac1{\sqrt{1-x^2}};\arcsin x
+
+  \integral \frac 1{1+x^2};\arctg x
+
+  \integral \frac 1{1-x^2};\frac 1{2}\ln\left|\frac{1+x}{1-x}\right|
+
+\end{minipage}}
+}
+
+
+
+\textbf{Určitý Newtonův integrál}
+
+Newtonův integrál je opak derivace, kdy z rychlosti změny a z časového intervalu určíme změnu veličiny na daném intervalu. Na rozdíl od neurčitého integrálu je určitý integrál dán jednoznačně a není nutná informace o počátečním stavu. Počítáme vztahem 
+$$\int_a^bf(x)\,\mathrm dx=F(b)-F(a),$$
+kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
+
+\textbf{Určitý Riemmannův integrál}
+
+Riemmannův integrál umožňuje vypočítat součet nekonečné mnoha malých příspěvků k aditivní veličině. V praxi náhrada za nemožnost použít násobení v případě nekonstantních parametrů. Například dráha pohybu je rychlost násobená časem v případě pohybu konstantní rychlostí. V případě pohybu nekonstantní rychlostí je dráha místo součinu integrál rychlosti jako funkce času.
+
+Riemmannův integrál se počítá stejně jako Newtonův. 
+
+\vfill\null
+
+\columnbreak
+
+
+\textbf{Autonomní DR 1. řádu}
+$$\frac{\mathrm dy}{\mathrm dt}=f(y)$$ 
+
+Konstantních řešení je tolik, kolik je nulových bodů funkce $f(y)$.
+
+Stabilní konstantní řešení jsou v bodech, kde je funkce $f$ klesající. 
+
+Netabilní konstantní řešení jsou v bodech, kde je funkce $f$ rostoucí. 
+
+
+
+% \vfill
+% \null
+% \penalty -500
+
+% \columnbreak
+
+\smallskip
+\hrule
+
+
+\textbf{Vektory}, $\vec a=(a_1,a_2,a_3)$, $\vec b=(b_1,b_2,b_3)$, 
+
+Skalární součin vektorů
+$\vec a\cdot\vec b=a_1 b_1 + a_2 b_2+a_3b_3$
+
+Vektorový součin vektorů
+\vspace*{-8pt}
+$$\vec a\times \vec b=
+\begin{vmatrix}
+  \vec i & \vec j & \vec k\\
+  a_1 & a_2 & a_3 \\
+  b_1 & b_2 & b_3
+\end{vmatrix}
+$$
+
+Délka vektoru  $|\vec a|=\sqrt{a_1^2+a_2^2+a_3^2}$
+
+\textbf{Matice}
+
+Součin matice a sloupcového vektoru je lineární kombinace sloupců matice, kdy koeficienty jsou komponentami vektoru.
+
+$$
+\begin{pmatrix}
+  5& 2\\-3 & 1
+\end{pmatrix}
+\begin{pmatrix}
+  22\\15
+\end{pmatrix}
+=
+22
+\begin{pmatrix}
+  5\\-3
+\end{pmatrix}
++
+15
+\begin{pmatrix}
+  2\\1
+\end{pmatrix}
+=
+\begin{pmatrix}
+  140 \\-51
+\end{pmatrix}
+$$
+
+\textbf{Determinanty}
+
+
+Determinant 2$\times$2 \hfill$
+\begin{vmatrix}
+  a & b \\ c &d
+\end{vmatrix}
+=ad-bc
+$
+
+Determinant 3$\times$3 \\\null\hfill$
+\begin{vmatrix}
+  a & b & c \\ d & e &f \\ g & h & i
+\end{vmatrix}
+=aei-afh+bfg-bdi+cdh-ceg
+$\hfill\null
+
+
+\textbf{Matice rotace} pootočí bod nebo vektor o úhel $\theta$ proti směru hodinových ručiček. Inverze je poootočení o $-\theta$.
+
+$$R(\theta)=
+\begin{pmatrix}
+  \cos\theta & -\sin \theta\\
+  \sin\theta & \cos\theta
+\end{pmatrix}$$
+
+Zobrazení dané maticcí $A$ má v souřadnicích pootočených o $\theta$ proti směru hodinových ručiček matici $R(-\theta)AR(\theta)$.
+
+
+\vfill\null
+
+\columnbreak
+
+\textbf{Vlastní čísla a vektory}
+
+Vlastní vektory jsou vektory, které se zobrazí do stejného směru, poměr délek je vlastní číslo. Tj. vektor $\vec u$ je vlastním vektorem matice $A$ příslušným vlastnímu číslu $\lambda$, pokud platí $$A\vec u=\lambda\vec u.$$
+
+Všechna vlastní čísla najdeme jako kořeny rovnice $$|A-\lambda I|=0.$$ Symetrická pozitivně definitní matice má tolik reálných vlastních čísel, kolik je její dimenze. 
+
+Je-li $\lambda$ vlastní číslo, je vlastní vektor řešení rovnice $$(A-\lambda I)\vec u=0.$$
+
+Vlastní směry pro dřevo odpovídají anatomickým směrům dřeva. V těchto směrech má odezva na podnět stejný směr jako podnět. Poměr velikosti odezvy a velikosti podnětu je roven vlastnímu číslu. Například pro difuzi vody je největší vlastní číslo v~podélném směru, protože v tomto směru vede dřevo vodu nejlépe.
+
+\medskip\hrule\medskip
+
+\textbf{Rovnice kontiuity} vyjadřuje celkovou bilanci stavové veličiny a nárůst množství způsobený přítomností zdrojů a změnami v toku přenášejícího tuto stavovou veličinu.
+
+
+$${\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}$$
+
+$u$ ... stavová veličina
+
+$\frac{\partial u}{\partial t}$ ... rychlost růstu stavové veličiny
+
+$\sigma$ ... vydatnost zdrojů stavové velčiny
+
+$\vec\jmath$ ... tok stavové veličiny
+
+$-\nabla\cdot \vec \jmath$ ... úbytek toku stavové veličiny (záporně vzatá divergence toku)
+
+
+
+\textbf{Difuzní rovnice} je rovnice kontinuty doplněná předpokladem, že tok je úměrný záporně vzatému gradientu stavové veličiny.
+
+$$\vec \jmath=-D\nabla \vec u$$
+
+$${\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)}$$
+
+
+\vfill
+\columnbreak
+
+\textbf{Difuzní rovnice v kartézských souřadnicích}
+
+
+Budeme uvažovat diagonální difuzní koeficient. Například homogenní materiál, nebo otrotropní materiál ve kterém volíme osy v souladu s materiálovými vlastnostmi.
+
+Obecný tvar difuzní rovnice v kartézských souřadnicích je
+$$\frac{\partial u}{\partial t}=\sigma +
+\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right)
++
+\frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right)
++
+\frac{\partial }{\partial z}\left(D_z \frac{\partial u}{\partial z}\right).
+$$
+
+Ve \textit{stacionárním případě} (sledujeme stav po dosažení rovnováhy) položíme navíc $\frac{\partial u}{\partial t}=0$.
+
+Pro \textit{bezzdrojový případ} (stavová veličina nemůže vznikat ani zanikat) položíme navíc $\sigma=0$.
+
+Studujeme-li materiál současně \textit{homogenní} a s \textit{lineárními materiálovými vlastnostmi} (v všech místech má materiál stejné vlastnosti a ty se nemění při změně stavové veličiny), potom kvaziderivace
+$$\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right)$$
+upravíme a použijeme druhé derivace
+$$D_x \frac{\partial^2 u}{\partial x^2}$$ (a pro ostatní proměnné analogicky).
+
+U \textit{izotropního materiálu} (má ve všech směrech stejné vlastnosti) nerozlišujeme materiálové charakteristiky v jednolivých směrech, klademe $D_x=D_y=D_z=D.$
+
+Pro méně dimenzí  použijeme pouze odpovídající počet difuzních členů. Jednotlivé předpoklady je možno libovolně kombinovat.
+
+
+\end{multicols}
+\end{document}
+
+
