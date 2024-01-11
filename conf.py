@@ -59,7 +59,7 @@ html_sourcelink_suffix = ''
 html_theme = 'sphinx_book_theme'
 html_theme_options = {
     'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n<p><script src="https://utteranc.es/client.js"\n repo="robert-marik/matematika" \n issue-term="pathname" \n label="comment" \n theme="github-light" \n crossorigin="anonymous" \n  async> \n </script> \n </p>',
-    'search_bar_text': 'Hledat v textu...',
+    #'search_bar_text': 'Hledat v textu...',
     'path_to_docs': '',
     'repository_url': 'https://github.com/robert-marik/matematika',
     'repository_branch': 'main',
@@ -78,7 +78,7 @@ html_sidebars = {
     "**": [
         "navbar-logo.html",
 #        "offline-version.html",
-#        "search-field.html",
+        "search-field.html",
         "sbt-sidebar-nav.html",
     ]
 }
@@ -95,7 +95,7 @@ use_jupyterbook_latex = True
 use_multitoc_numbering = True
 myst_dmath_double_inline = True
 
-html_css_files = ['custom.css?3']
+html_css_files = ['custom.css']
 language = 'cs'
 myst_footnote_transition = False
 latex_elements = {
