@@ -451,7 +451,7 @@ Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a
 
 Pro numerické řešení rovnic obsahujících derivace je vhodné umět nahradit derivace veličinami, se kterými se lépe pracuje v numerických výpočtech. 
 
-Základním přístupem je vynechání limitního přechodu v definici derivace $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$ Tedy $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá *dopředná poměrná diference*. Analogicky je definována vztahem $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x)-f(x-h)}{h}$$ *zpětná diference*.
+Základním přístupem je vynechání limitního přechodu v definici derivace $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$ Tedy $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá *dopředná poměrná diference*. Analogicky je definována vztahem $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x)-f(x-h)}{h}$$ *zpětná poměrná diference*.
 
 Lepší aproximace derivace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů
 $$\begin{aligned}
