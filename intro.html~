@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="cs" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <meta property="article:modified_time" content="2023-08-22T10:30:38+02:00" />
+    <title>Matematika &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?1" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="_static/custom.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <link rel="index" title="Rejstřík" href="genindex.html" />
+    <link rel="search" title="Vyhledávání" href="search.html" />
+    <link rel="next" title="1. Derivace funkce" href="derivace_I/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni/cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Matematika</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="matematika">
+<h1>Matematika<a class="headerlink" href="#matematika" title="Permalink to this heading">#</a></h1>
+<p>Zde jsou učební texty (přednášku a cvičení) do předmětu <a class="reference external" href="https://robert-marik.github.io/pages/mt">Matematika MTK</a> na LDF MENDELU, vyučující Robert Mařík.</p>
+
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="_images/mtk_logo.jpg" src="_images/mtk_logo.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 1 </span><span class="caption-text">V 21. století má každý nástroje pro simulace na dosah ruky. I pojetí matematiky je proto vhodné posunout od “jak vypočítat jednoduchý příklad” k “jak naformulovat a zadat užitečný model”. Na obrázku je měření teplotního toku dřevěným panelem ve VCJR v Útěchově. Popis transportu energie a hmoty bude jeden z našich hlavních cílů.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Předmět odpovídá obecným úvodům do matematiky na technicky zaměřených oborech s jednosemestrální výukou matematiky. Obsahuje diferenciální a integrální počet a lineární algebru. Je však pojetím a skladbou příkladů silně zaměřen na praktické využití matematiky ve vědách o přírodě a přírodních materiálech. Toto pojetí zahrnuje dřevo (dřevařství, arboristika, nábytek, dřevostavby), půdu (krajinářství) i ekosystémy (lesnictví).</p>
+<p>Například <em>derivaci</em> poznáme jako nástroj pro detekci prostorové nebo časové změny veličiny. Nikoliv jako směrnici tečny z obecně zaměřených učebnic nebo Wikipedie.</p>
+<p><em>Integrál</em> poznáme především jako cestu od rychlosti změny k velikosti této změny. Nikoliv jako obsah obrazce. To je sice obvyklá představa, ale v materiálovém inženýrství málo užitečná.</p>
+<p><em>Lineární algebru</em> nezaměříme na soustavy lineárních rovnic, které za nás dnes řeší počítače tak, že vše vlastně probíhá na pozadí a my o tom ani nevíme. Zaměříme se raději na využití vyjadřovacích prostředků lineární algebry v popisu materiálů, které mají význačné směry ve kterých se liší jejich fyzikální vlastnosti. Dřevo totiž mezi takové materiály bezesporu patří.</p>
+<p>Jak plyne z předešlých odstavců, předmět se malinko liší od obecně zaměřených matematických přednášek. Ke zvládnutí čistě matematického aparátu existuje v online i tištěné podobě nepřeberné množství snadno dostupného materiálu. Všechno potřebovat nebudeme. Ale budeme potřebovat poznatky, které se z takové záplavy informací těžko vyzobávají a v těch ryze matematicky orientovaných materiálech ani nejsou. Proto je silně doporučeno sledovat náplň kurzu a přizpůsobit tomu práci během semestru a výběr literatury. To poněkud zvyšuje nároky na studenty, ale je nutné si uvědomit, že cílem předmětu není přispět k výchově poloprofesionálních matematiků, jak tomu může být na obecně zaměřených oborech. Chceme otevřít dveře poznání studentům, kteří mají ambice studovat přírodu a prostředí okolo nás prostředky dostupnými v 21. století.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+                </article>
+		AAA
+              
+<script async="async" src="https://hypothes.is/embed.js"></script>
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="right-next"
+       href="derivace_I/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Derivace funkce</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 22.08.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+
+</div>
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
