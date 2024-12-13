@@ -483,9 +483,11 @@ funkce. Takové rovnice se naučíme řešit později.
 
 V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači, vhodným nástrojem je Python](https://sagecell.sagemath.org/?z=eJxtU02L2zAQvRv8HwZySbJJmhQKpbDHngpLKb4ty6LYk0aRrBHSSFv713dkp7vZpfZFH2-e3rwnLeAh9Rh0axRE3SerWgQfCB7whcmlDKMy5IDas1UjZeU0dM2njuEetmBgDctm2-xXdbWAn0H3mnUWiKc0yhB4zDvoyAfsHML3ZDFQHqBHpm6YawicCtQ6vMS3OvyjI6eLhkgnmZty8ASYKzdS44M2VnXwK7nfuP2RmFVd6d5TYHCp9wOoCM6_rvWKvSW2-rjzQxmVfW-5rsrfPGuRfQ9f9yDfAhgLRN30jWeSVYtRjindT0BBjqpVjEaUBRSKVsVUV5M_-92hAGSl9GwCmcnZq826rswE-jLRGMKTbjU6BlGzl53P-_dKDFmp8dQiPxeyNGFmUOpUlgA9WRQnIUKH1lCCGXdVoB1jyMp-UNEIj_O7UaKJyxv6lfAWwo0ECEZKiwPH1GGPkIr1imVfYvJugDxkuly1DrNB_-WU4x73T7I7GV5XJwqgRRkEJTHeQreH1bfJvsHYFOuquM2P-u5QqmXwBHcgNr9-RWxMDnJpF2d8V3rbmvWyEXy5puu3igWEQcKVBmAUR1QW21hUDCBX1Gl5BnlwYtwRnZp8xF7Om3mbfzqaq47mnQ55Tlzuwtij0JlCLPFcJF44U-eIr_JK6g7bucV5SQK2vCsuLnnTrOZpPNPLcvUXy2kuJg==&lang=python&interacts=eJyLjgUAARUAuQ==). Alternativou je použít specializované postupy pro řešení [diferenciálních rovnic](https://gist.github.com/robert-marik/69021f700bcc7021d736445617ce3540), opět v Pythonu.
 
+\iffalse
 
 [![https://static.anaconda.cloud/content/a22d04e8445b700f28937ab3231b8cded505d0395c63b7a269696722196d5415](https://static.anaconda.cloud/content/a22d04e8445b700f28937ab3231b8cded505d0395c63b7a269696722196d5415)](https://anaconda.cloud/api/nbserve/launch_notebook?nb_url=https%3A%2F%2Fanaconda.cloud%2Fapi%2Fprojects%2Fcbcc30b1-5984-4491-b8db-68f9d9604342%2Fversions%2F5db43d6f-d13d-4d62-b23f-84b3b69efb1b%2Ffiles%2FMTK_Rovnice_ochlazovani.ipynb)
 
+\fi
 
 
 ```{prf:remark} Smysl příkladu se zákonem ochlazování

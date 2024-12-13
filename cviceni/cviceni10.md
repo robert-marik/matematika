@@ -210,11 +210,15 @@ Odsud již dostaneme odpovědi na všechny uvedené otázky.
 1. Smykové namáhání je prvek v matici mimo hlavní diagonálu. V našem případě $-\frac 12 \sin(2\theta)$. Smykové namáhání je maximální, pokud má tato funkce maximum nebo minimum. Takový extrém je pro $2\theta=\frac \pi 2$ tj. pro $\theta = \frac\pi4.$ Maximální smykové namáhání je pro spoj skloněný pod úhlem 45 stupňů.
 1. Nezáleží. Změnou znaménka u úhlu $\theta$ se napětí ve směru kolmo na spoj ani podél spoje nemění, funkce $\cos^2\theta$ i $\sin^2\theta$ jsou obě sudé. U smykového napětí se mění znaménko, ale to jenom znamená namáhání v opačném smyslu (Pokud si na stěnu materiálu nakreslíme čtvereček s jednou stranou podél spoje a s druhou stranou kolmo na spoj, podle směru sklonu spoje máme dva zrcadlové případy, jak se tento čtvereček deformuje. Tomu odpovídá opačné znaménko smykové derivace.)
 
+\iffalse
+
 Snadno je odpověď patrná i z obrázku, kde jsou vyneseny funkce z jednotlivých komponent transformovaného tenzoru. 
 
-![](namahani.svg)
+![](namahani.png)
 
 [Kód pro vygenerování obrázku](https://sagecell.sagemath.org/?z=eJyFUD1ugzAU3pG4wxMTRA6NsnOLTo0ymOCCW2NbfobCIXoIxgy9QKVO7sFqh1KBMtSL38_3Z_NWK2NBdq0egSJIHUd8nrXUaqGs4GWux1CFvRY2juLINsxSKDw8F1yipheW7n2j-cORLPfxcMjiqKILkhpDx_TkK-QyvUlku90Nf1G4Guy3kM3-nOWPIcEzrwnQwSv7SDl2ZUiIqTcMfWhmAtkYb33ukvxnTCCO4PcIWjJRnBKpTOsmoXr3BZY20IM2vXQfoJAlBO73DCrTNe66ALAdX_32CpJ6YOMmT07O_iF0yJHZdJidEvfZMAFaKau-31kAEbDcClYkT27qOQqFdi3ia_Ak0a1JgFq9sGSWrw2vli8TrGbyr8NGvaXZD-3IwKg=&lang=python&interacts=eJyLjgUAARUAuQ==)
+
+\fi
 
 ```
 

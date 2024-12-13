@@ -558,7 +558,7 @@ tlakové síly.
 Tlaková síla působící na svislou hráz má celkový nulový moment
 vzhledem k ose proházející působištěm. Je-li hráz definována množinou
 $M$ a je-li $y_c$ působiště výsledné tlakové síly, je v hloubce $y$
-tlak na plošku o velikosti $\Delta S$ roven $y\rho g \Delta S$ a
+tlaková síla na plošku o velikosti $\Delta S$ roven $y\rho g \Delta S$ a
 součin $(y_c-y)y\rho g\Delta S$ je příspěvek k otáčivému momentu
 vzhledem k ose, procházející vodorovně působištěm tlakové
 síly. Součet všech těchto příspěvků se nuluje, tedy musí platit
