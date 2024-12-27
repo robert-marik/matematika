@@ -64,8 +64,8 @@ _Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením vede nap
 
 Rovnici můžeme vydělit konstantou $k$
 
-Po zintegrování dostáváme $$ \frac{\partial T}{\partial x}=C_1$$
-a po dalším zintegrování $$T=C_1x+C_2.$$ Teplota se mění lineárně. Dvě konstanty se určí pomocí dvou teplot na hranicích stěny.
+Po výpočtu integrálu dostáváme $$ \frac{\partial T}{\partial x}=C_1$$
+a po dále $$T=C_1x+C_2.$$ Teplota se mění lineárně. Dvě konstanty se určí pomocí dvou teplot na hranicích stěny.
 
 ```
 
@@ -87,12 +87,12 @@ _Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením, pouze p
 :class: dropdown
 :nonumber:
 
-Po zintegrování dostáváme
+Po výpočtu integrálu dostáváme
 $$(a+bT)\frac{\partial T}{\partial x}=C_1$$
 a rovnici řešíme jako diferenciální rovnici se separovanými proměnnými.
 Odseparováním získáme
 $$(a+bT)\mathrm dT=C_1\mathrm dx$$
-a po zintegrování
+a integrací obdržíme
 $$aT+\frac 12bT^2 = C_1x+C_2.$$
 Řešením je
 parabola otočená naležato. Dvě konstanty se určí pomocí teplot na hranicích stěny. Pro správný profil je nutné si vybrat

@@ -6,9 +6,8 @@
 1. $D_2=  \begin{vmatrix}    2 & -1 \\ x-4 &y-3  \end{vmatrix}$
   ($D_2=0$ je přímka daná bodem $(4,3)$ a směrovým vektorem $(2,-1)$)
 1. $D_3=  \begin{vmatrix}    2-\lambda & -1 \\ 4 & 3-\lambda  \end{vmatrix}$ (charakteristický polynom matice z prvního bodu)
-1.  $D_4=  \begin{vmatrix}    1 & -1 & 0\\ 2 & 3 & 1 \\ -1 &-1 & 2\end{vmatrix}$
-1.
-  $D_5=  \begin{vmatrix}    a & -1 & 0\\ 2 & 3 & 1 \\ -1 &-1 & 2\end{vmatrix}$  
+1. $D_4=  \begin{vmatrix}    1 & -1 & 0\\ 2 & 3 & 1 \\ -1 &-1 & 2\end{vmatrix}$
+1. $D_5=  \begin{vmatrix}    a & -1 & 0\\ 2 & 3 & 1 \\ -1 &-1 & 2\end{vmatrix}$  
 1.  $D_6=  \begin{vmatrix}    2-\lambda & 0 & 0\\ 0 & 3-\lambda & 0 \\ 0 & 0& 7-\lambda \end{vmatrix}$  (charakteristický polynom diagonální matice)
 
 ```{prf:example} Řešení

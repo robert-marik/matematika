@@ -1,5 +1,17 @@
 # Vektorová pole, tok, zákony zachování
 
+> **Poznámky k samostudiu:**
+> 
+> * Příroda "nemá ráda"  nerovnoměrné rozložení celé řady veličin, jako je koncentrace látky nebo hustota vnitřní energie (teplota). Proto se snaží případnou nerovnost vyrovnávat transportními ději, jako je difuze nebo vedení tepla. V této přednášce je jednotný přístup ke všem transportním dějům.
+> * Rovnice kontinuity je matematickým vyjádřením základní "selské úvahy", že navýšení transportované veličiny v daném místě je způsobeno produkcí veličiny v tomto místě a tím, co do tohoto místa přinese tok, tj. zeslabením toku.
+> * Difuzní rovnice je rovnice kontinuity doplněná o konstituční zákon. Ten je matematickým vyjádřením pozorování, že větší nerovnosti se vyhlazují intenzivnějším tokem. Moderní formulace konstitučních zákonů vychází z tenzorového (maticového) tvaru, aby bylo možno modelovat i chování anizotropních látek.
+> * Pro určení, pro jaký materiál a děj je napsána transportní rovnice typu
+>   $$\frac{\partial u}{\partial t} =\sigma +
+\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+
+\frac{\partial }{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)$$ 
+>    je potřeba se dívat, zda je v rovnici derivace podle času (posoudíme stacionárnost a nestacionárnost), zda je tam člen bez derivací (posoudíme existenci zdrojů a spotřebičů), zda jsou difuzní konstanty pro jednotlivé směry odlišeny či nikoliv a zda prostorové souřadnice jsou ve výrazech s kvaziderivacemi, nebo se druhými derivacemi. To je snadné, jenom je potřeba vědět, na co se dívat.
+
+
 https://youtu.be/DonzhFhcyQ4
 
 ## Připomenutí derivací
