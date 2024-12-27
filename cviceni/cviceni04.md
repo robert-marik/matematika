@@ -234,7 +234,7 @@ T^2(h)&=b^2h^6=(1-h^2)h^6=h^6-h^8.
 $$
 Postup je korektní, protože veličiny jsou kladné a funkce $y=x^2$ je pro kladné $x$ rostoucí. Proto bude veličina maximální tam, kde je maximální její druhá mocnina.
 
-*Obsah:* Funkce $f(h)=(1-h^2)h^2$ je parabola v proměnné $h^2$ a proto má maximum pro $h^2=\frac 12$ a $h=\frac {1}{\sqrt 2}$. Druhý rozměr vychází
+*Obsah:* Funkce $f(h)=(1-h^2)h^2$ je parabola v proměnné $h^2$ a proto má maximum pro $h^2=\frac 12$, tj. $h=\frac {1}{\sqrt 2}$. Druhý rozměr vychází
 $$b=\sqrt{1-h^2}=\sqrt{1-\frac 12}=\frac{1}{\sqrt 2}$$ a trám má v tomto případě (maximalizujeme objem) průřez čtverce.
 
 *Nosnost:* Funkce $f(b)=b-b^3$ má derivaci $\frac{\mathrm df}{\mathrm db}=1-3b^2$ a derivace je pro $b>0$ nulová, jestliže $b^2=\frac 13$, tj. $b=\frac{1}{\sqrt 3}$.  Druhý rozměr vychází
