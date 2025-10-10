@@ -4,7 +4,7 @@ Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází předn
 
 ## Informační zdroje
 
-* [Moodle na MENDELU, předmět Matematika](https://moodle.mendelu.cz/course/view.php?id=381). Přihlášení přes Shibboleth pomocí údajů pro přihlášení do UIS. Poté pro zápis do předmětu použijete kód rozlišující formu studia (presenční versus kombinovaná). Zde jsou učební materiáy, podmínky pro ukončení. Odsud se autentizujete do systému pro domácí úkoly.
+* [Moodle na MENDELU, předmět Matematika](https://moodle.mendelu.cz/course/view.php?id=968). Přihlášení přes Shibboleth pomocí údajů pro přihlášení do UIS. Poté pro zápis do předmětu použijete kód rozlišující formu studia (presenční versus kombinovaná). Zde jsou učební materiáy, podmínky pro ukončení. Odsud se autentizujete do systému pro domácí úkoly.
 * WeBWorK na UM. Systém pro domácí úkoly. Přístup je automaticky z Moodle opory. Domácí úkoly se otevírají a uzavírají podle nastaveného harmonogramu. Plněním těchto nepovinných domácích úkolů si můžete výrazně snížit laťku nutnou pro překonání zkoušky a vylepšit známku. Více viz podmínky pro ukončení předmětu v Moodle.
 
 
