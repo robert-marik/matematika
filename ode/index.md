@@ -118,7 +118,7 @@ křivka*.
 
 **Příklad.** Najděte všechny funkce splňující $y'=2xy$ a $y(0)=3$. (Naučíme se řešit později.)
 
-```{prf:theorem} Eexistence a jednoznačnost řešení Cauchyovy úlohy
+```{prf:theorem} Existence a jednoznačnost řešení Cauchyovy úlohy
 :nonumber:
  Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha {eq}`r1`-{eq}`r2` právě jedno řešení definované v nějakém okolí počáteční podmínky.
 ```
