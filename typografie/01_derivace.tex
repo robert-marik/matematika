@@ -1,0 +1,71 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[czech]{babel}
+\usepackage[a4paper, margin=.75in]{geometry}
+\begin{document}
+
+
+\title{Derivace}
+\maketitle
+\thispagestyle{empty}
+
+Derivace funkce je důležitý pojem při matematickém modelování
+přírodních dějů a jevů. Popisuje jak rychle se mění hodnota funkce
+vzhledem k její nezávislé proměnné. V praxi se nejčastěji setkáváme s
+funkcemi vyjadřujícími závislost nějaké veličiny na čase nebo prostorové
+souřadnici.
+
+\section*{Definice}
+Derivace funkce f(x) v bodě x je definována jako limita
+\[
+\frac{\mathrm df}{\mathrm dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}.
+\]
+Zlomek v této definici vyjadřuje průměrnou rychlost změny funkce $f$ na intervalu od x do x + h. Limitní přechod 
+v definici derivace slouží k tomu, aby se délka tohoto intervalu zmenšila na nulu a interval zdegeneroval na bod. Tím získáme okamžitou rychlost změny funkce v bodě $x$.
+
+\section*{Interpretace a použití}
+Nejčastěji se v aplikacích setkáme s derivací podle času. Obvyklá slovní interpretace derivace je \textit{rychlost změny} nebo 
+ekvivalentně \textit{změna za jednotku času}. Například derivace teploty $T$ horké kávy podle času t může mít hodnotu 
+\[\frac{\mathrm dT}{\mathrm dt}=-4^\circ  C/{min}\]
+To znamená, že teplota kávy klesá rychlostí 4 stupně Celsia za minutu.
+
+Derivace je základním nástrojem pro popis přírodních dějů, protože vnější podmínky definují, jak rychle se mění parametry systému
+v čase. Například rychlost ochlazování kávy (tj. rychlost poklesu teploty kávy) je úměrná rozdílu teploty kávy a teploty okolí.
+Skutečnost, že v popisu tohoto procesu figuruje slovo \textit{rychlost}, naznačuje, že se při modelování tohoto děje pracuje 
+s derivací podle času. Matematický model poté má tvar
+\[
+\frac{\mathrm dT}{\mathrm dt} = -k*(T - T_{M})
+\]
+
+kde $T_M$ je teplota okolí a k je konstanta závislá na vlastnostech systému (např. na materiálu šálku, 
+jeho tvaru, velikosti povrchu atd.).
+
+\section*{Lineární aproximace}
+Derivaci je možné využít k lineární aproximaci funkčních vztahů pomocí vzorce 
+\[
+f(x + h) \approx f(x) + \frac{\mathrm df}{\mathrm dx}*h.
+\]
+Klasickou ukázkou je skutečnost, že mnoho konstitučních vztahů má tvar přímé úměrnosti: 
+Darcyho zákon, Hookův zákon, Fourierův zákon, Fickův zákon atd.
+
+Linearizaci je možné též využít při řešení rovnic Newtonovou metodou. V tomto případě se nulový bod 
+funkce hledá jako nulový bod její lineární aproximace v okolí aktuálního odhadu řešení. Výsledkem
+je zpřesnění původního odhadu řešení, kdy se počet platných číslic přibližně zdvojnásobí s každou iterací.
+
+\section*{Parciální derivace}
+
+V případě funkcí více proměnných je možné definovat parciální derivace podle jednotlivých proměnných. 
+Například při vedení tepla ve stěně je teplota funkcí prostorových souřadnic a času. Poté rychlost 
+růstu teploty jako funkce času a rychlost růstu teploty jako funkce prostorové souřadnice jsou 
+\[
+\frac{\partial T}{\partial t} \quad \mathrm{a} \quad \frac{\partial T}{\partial x}.
+\]
+
+\vfill
+{\bfseries Instrukce:} \itshape V textu jsou typografické chyby týkající se sazby matematických výrazů. 
+Najděte je a vyznačte barevně ve vytištěném textu. Papír podepište v pravém horním rohu, napište zkratku oboru, který studujete
+a odevzdejte na příští přednášce. Datum je u zadání úkolu v Moodle.
+
+\end{document}

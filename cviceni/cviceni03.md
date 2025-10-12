@@ -21,7 +21,7 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 :nonumber:
 
 1. $f'(x)=1\cdot \ln x+x\frac 1x=1+\ln x$
-1. $f'(x)=\sqrt{x^2+a}+x\frac{x}{\sqrt{x^2+1}}$
+1. $f'(x)=\sqrt{x^2+1}+x\frac{x}{\sqrt{x^2+1}}$
 1. $f'(x)=\frac{1\cdot (ax+b)-x\cdot a}{(ax+b)^2}=\frac b{(ax+b)^2}$
 1. $f'(t)=\frac{(t^2+6)-t2t}{(t^2+6)^2}=\frac{6-t^2}{(t^2+6)^2}$
 1. $f'(x)=\frac {2ax(x^2+1)-ax^22x}{(x^2+1)^2}=\frac {2ax}{(x^2+1)^2}$
