@@ -1,15 +1,17 @@
 # Vektorová pole, tok, zákony zachování
 
 > **Poznámky k samostudiu:**
+>
+> Toto jsou hlavní myšlenky, které jsou v přednášce jenom rozvíjeny a precizovány. 
 > 
-> * Příroda "nemá ráda"  nerovnoměrné rozložení celé řady veličin, jako je koncentrace látky nebo hustota vnitřní energie (teplota). Proto se snaží případnou nerovnost vyrovnávat transportními ději, jako je difuze nebo vedení tepla. V této přednášce je jednotný přístup ke všem transportním dějům.
+> * Příroda "nemá ráda"  nerovnoměrné rozložení celé řady veličin, jako je koncentrace vody ve dřevě nebo v půdě nebo různá teplota dotýkajících se objaktů (jiná hustota vnitřní energie). Proto se snaží případnou nerovnost vyrovnávat transportními ději, jako je difuze nebo vedení tepla. V této přednášce je jednotný přístup ke všem transportním dějům.
 > * Rovnice kontinuity je matematickým vyjádřením základní "selské úvahy", že navýšení transportované veličiny v daném místě je způsobeno produkcí veličiny v tomto místě a tím, co do tohoto místa přinese tok, tj. zeslabením toku.
 > * Difuzní rovnice je rovnice kontinuity doplněná o konstituční zákon. Ten je matematickým vyjádřením pozorování, že větší nerovnosti se vyhlazují intenzivnějším tokem. Moderní formulace konstitučních zákonů vychází z tenzorového (maticového) tvaru, aby bylo možno modelovat i chování anizotropních látek.
-> * Pro určení, pro jaký materiál a děj je napsána transportní rovnice typu
->   $$\frac{\partial u}{\partial t} =\sigma +
+> * Modely často vyjadřujeme v kartézských souřadnicích. Pro určení, pro jaký materiál a děj je napsána transportní rovnice typu
+>   $${\color{blue}\frac{\partial u}{\partial t}} = {\color{green}\sigma} +
 \frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+
 \frac{\partial }{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)$$ 
->    je potřeba se dívat, zda je v rovnici derivace podle času (posoudíme stacionárnost a nestacionárnost), zda je tam člen bez derivací (posoudíme existenci zdrojů a spotřebičů), zda jsou difuzní konstanty pro jednotlivé směry odlišeny či nikoliv a zda prostorové souřadnice jsou ve výrazech s kvaziderivacemi, nebo se druhými derivacemi. To je snadné, jenom je potřeba vědět, na co se dívat.
+>    je potřeba se dívat, zda je v rovnici derivace podle času (posoudíme stacionárnost a nestacionárnost, tady vyznačeno modře), zda je tam člen bez derivací (posoudíme existenci zdrojů a spotřebičů, tady odpovídající člen je a je vyznačen zeleně), zda jsou difuzní konstanty pro jednotlivé směry odlišeny či nikoliv a zda prostorové souřadnice jsou ve výrazech s kvaziderivacemi, nebo se druhými derivacemi. To je snadné, jenom je potřeba vědět, na co se dívat.
 
 
 https://youtu.be/DonzhFhcyQ4
