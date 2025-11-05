@@ -1,0 +1,67 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[czech]{babel}
+\usepackage[a4paper, margin=.75in]{geometry}
+\begin{document}
+
+
+\title{Integrál}
+\maketitle
+\thispagestyle{empty}
+
+
+Integrál je v jistém smyslu nástroj opačný k derivaci. Zatímco derivace umožní z časového průběhu veličiny
+získat informaci o její rychlosti změny, integrál umožní z rychlosti změny získat informaci o~celkové změně veličiny
+za dané časové období (určitý integrál) nebo o~časovém přůběhu veličiny na základě její rychlosti změny (neurčitý integrál, nebo integrál jako funkce horní meze).
+
+\section*{Neurčitý integrál, primitivní funkce}
+
+{\itshape Primitivní funkce} k funkci $f(x)$ je funkce $F(x)$, jejíž derivace je rovna funkci $f(x)$, tj. 
+\[\frac{\mathrm dF}{\mathrm dx} = f(x).\] Primitivní funkce existuje ke každé spojité funkci a je určena jednoznačně až na aditivní konstantu.
+{\itshape Neurčitý integrál} funkce $f(x)$ je množina všech primitivních funkcí k funkci $f(x)$ a značí se
+\[\int f(x) \,\mathrm dx.\]
+
+\section*{Interpretace a použití neurčitého integrálu}
+
+Uvažujme proces, kde se sledovaná veličina mění známou rychlostí $f(t)$ v závislosti na čase $t$.
+Neurčitý integrál funkce $f(t)$ nám umožní určit časový průběh sledované veličiny $F(t)$ na základě znalosti její rychlosti změny $f(t)$.
+
+\begin{itemize}
+  \item 
+Pokud funkce $f(t)$ udává rychlost růstu teploty v čase $t$, pak primitivní funkce $F(t)$ k funkci $f(t)$ udává teplotu v čase $t$, přičemž aditivní konstanta určuje počáteční teplotu v~čase $t=0$.
+\item
+Pokud funkce $f(t)$ udává rychlost s jakou se mění množství vlhkosti v materiálu v závislosti  
+na čase $t$, pak primitivní funkce $F(t)$ k funkci $f(t)$ udává množství vlhkosti v materiálu v čase $t$, přičemž aditivní konstanta určuje počáteční množství vlhkosti v čase $t=0$.
+\end{itemize}
+
+\section*{Určitý integrál}
+
+{\itshape Určitý integrál} funkce $f(x)$ na intervalu $[a, b]$ je definován jako nárůst primitivní funkce 
+k~funkci $f(x)$ mezi body $a$ a $b$, tj. 
+\[\int_a^b f(x) \,\mathrm dx = F(b) - F(a),\] kde $F(x)$ je libovolná primitivní funkce k funkci $f(x)$.
+
+\section*{Interpretace a použití určitého integrálu}
+
+Geometricky určitý integrál představuje obsah plochy mezi křivkou funkce $f(x)$ a osou $x$ na intervalu $[a, b]$. Pokud funkce $f(t)$ udává rychlost růstu sledované veličiny v čase, pak určitý integrál funkce $f(t)$ na intervalu $[a,b]$ 
+\[\int_a^b f(t) \,\mathrm dt\]
+udává celkovou změnu sledované veličiny v čase od okamžiku $a$ do okamžiku $b$. 
+Fyzikálně určitý integrál vystupuje také v aplikacích, kde 
+je určována hodnota aditivní veličiny na základě příspěvků k celkové hodnotě této veličiny.
+
+Další využití určitého integrálu spočívá v možnosti nalézt jakousi průměrnou hodnotu funkce $f(x)$ na intervalu $[a,b]$. Tato hodnota se nazývá \emph{střední hodnota funkce} a je definována vztahem
+\[\bar{f} = \frac{1}{b-a} \int_a^b f(x) \,\mathrm dx.\]
+
+
+
+
+\vfill
+{\bfseries Instrukce:} \itshape V textu jsou typografické chyby týkající se sazby matematických výrazů. 
+Najděte je a rukou vyznačte barevně ve vytištěném textu. Papír podepište v pravém horním rohu, napište zkratku 
+oboru, který studujete
+a odevzdejte na přednášce 13. listopadu. Tam proběhne i zpětná vazba. Protože už nejsou hlavní cvičení, 
+nebude možné práci vhazovat
+do schránky. 
+
+\end{document}

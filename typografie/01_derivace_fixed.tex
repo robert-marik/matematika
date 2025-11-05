@@ -18,17 +18,17 @@ funkcemi vyjadřujícími závislost nějaké veličiny na čase nebo prostorov�
 souřadnici.
 
 \section*{Definice}
-Derivace funkce f(x) v bodě x je definována jako limita
+Derivace funkce $f(x)$ v bodě $x$ je definována jako limita
 \[
 \frac{\mathrm df}{\mathrm dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}.
 \]
-Zlomek v této definici vyjadřuje průměrnou rychlost změny funkce $f$ na intervalu od x do x + h. Limitní přechod 
+Zlomek v této definici vyjadřuje průměrnou rychlost změny funkce $f$ na intervalu od $x$ do $x + h$. Limitní přechod 
 v definici derivace slouží k tomu, aby se délka tohoto intervalu zmenšila na nulu a interval zdegeneroval na bod. Tím získáme okamžitou rychlost změny funkce v bodě $x$.
 
 \section*{Interpretace a použití}
 Nejčastěji se v aplikacích setkáme s derivací podle času. Obvyklá slovní interpretace derivace je \textit{rychlost změny} nebo 
-ekvivalentně \textit{změna za jednotku času}. Například derivace teploty $T$ horké kávy podle času t může mít hodnotu 
-\[\frac{\mathrm dT}{\mathrm dt}=-4^\circ  C/{min}\]
+ekvivalentně \textit{změna za jednotku času}. Například derivace teploty $T$ horké kávy podle času $t$ může mít hodnotu 
+\[\frac{\mathrm dT}{\mathrm dt}=-4^\circ  \mathrm{C}/\mathrm{min}.\]
 To znamená, že teplota kávy klesá rychlostí 4 stupně Celsia za minutu.
 
 Derivace je základním nástrojem pro popis přírodních dějů, protože vnější podmínky definují, jak rychle se mění parametry systému
@@ -36,15 +36,15 @@ v čase. Například rychlost ochlazování kávy (tj. rychlost poklesu teploty 
 Skutečnost, že v popisu tohoto procesu figuruje slovo \textit{rychlost}, naznačuje, že se při modelování tohoto děje pracuje 
 s derivací podle času. Matematický model poté má tvar
 \begin{equation*}
-  \frac{\mathrm dT}{\mathrm dt} = -k*(T - T_{M})
+    \frac{\mathrm dT}{\mathrm dt} = -k(T - T_{M}),
 \end{equation*}
-\hspace*{\parindent}kde $T_M$ je teplota okolí a k je konstanta závislá na vlastnostech systému (např. na materiálu šálku, 
+kde $T_M$ je teplota okolí a $k$ je konstanta závislá na vlastnostech systému (např. na materiálu šálku, 
 jeho tvaru, velikosti povrchu atd.).
 
 \section*{Lineární aproximace}
 Derivaci je možné využít k lineární aproximaci funkčních vztahů pomocí vzorce 
 \[
-f(x + h) \approx f(x) + \frac{\mathrm df}{\mathrm dx}*h.
+f(x + h) \approx f(x) + \frac{\mathrm df}{\mathrm dx}h.
 \]
 Klasickou ukázkou je skutečnost, že mnoho konstitučních vztahů má tvar přímé úměrnosti: 
 Darcyho zákon, Hookův zákon, Fourierův zákon, Fickův zákon atd.

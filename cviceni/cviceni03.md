@@ -96,7 +96,7 @@ $f'(x)= \left(rx-r\frac 1K x^2\right)' = r-\frac{2r}K x$, $f'(0)=r-\frac{2r}{K} 
 
 ```
 
-## Kinetika chemických reakcích pro malé koncentrace
+## Kinetika chemických reakcí pro malé koncentrace
 
 Rychlost mnoha chemických reakcí je dána vzorcem
 $$
