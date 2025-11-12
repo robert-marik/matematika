@@ -295,6 +295,37 @@ Matematické modely je možné použít i pro studium ekosystémů. Následujíc
   
 Model má potom tvar $$\frac{\mathrm dN}{\mathrm dt}=\frac{k_1}{N}-k_2 N.$$ Analýza tohoto modelu dokáže objasnit, jak probíhá kolonizace a jaká je druhová pestrost v izolovaných biotopech. Umožňuje posoudit, jak se tato druhová pestrost mění s velikostí ostrova, jeho izolovaností (vzdáleností od pevniny) a má vliv například na posuzování míry ochrany chráněných lokalit v závislosti na jejich velikosti.
 
+### Model aktivace kambia
+
+Kambium je pletivo, které se nachází mezi dřevem a lýkem u dřevin. Jeho aktivace
+vede k přírůstku tloušťky kmene. Aktivace kambia byla modelována pomocí
+diferenciální rovnice v článku [Computational modeling of cambium activity
+provides a regulatory framework for simulating radial plant
+growth](https://elifesciences.org/articles/66627). V tomto modelu je vysvětlena
+dynamika pomocí enyzmu PXY a jeho aktivátoru CLE41. Tato aktivace probíhá podle
+schematu $$ \text{CLE41} + \text{PXY} \to \text{PXY}_{\text{active}}.$$
+Označíme-li koncentrace látek $\text{PXY}_{\text{active}}$, $\text{PXY}$ a $\text{CLE41}$ po řadě $x$, $y$ a $z$, je v odkazované
+publikaci navržen model popsaný rovnicemi
+$$ \begin{aligned}\frac{\mathrm dx}{\mathrm dt} &= xy-k_1x,\\
+\frac{\mathrm dy}{\mathrm dt} &= \frac{k_2}{1+k_3z} - xy-k_4y,\\
+\frac{\mathrm dz}{\mathrm dt} &= k_5 - xy-k_6z.\\
+\end{aligned}
+$$
+V tomto modelu jsou patrné předpoklady, že každá z látek degraduje rychlostí
+úměrnou své koncentraci (členy s koeficienty $k_1$, $k_4$ a $k_6$) a že produkce
+látek $\text{CLE41}$ je konstantní (člen s koeficientem $k_5$). Rychlost
+chemické reakce je úměrná součinu koncentrací reaktantů proto se člen $xy$
+vyskytuje ve všech třech rovnicích. Pro produkty reakce je tento člen kladný,
+pro reaktanty záporný. Přítomnost $\text{PXY}_{\text{active}}$ brzdí 
+produkci $\text{PXY}$, což je modelováno členem $\frac{k_2}{1+k_3z}$ v druhé rovnici.
+
+Na rozdíl od předchozích příkladů se zde setkáváme s systémem tří vzájemně
+propojených diferenciálních rovnic. Takové systémy jsou běžné v modelování
+biologických dějů, kde dochází k vzájemným interakcím mezi několika látkami nebo
+druhy. Studují se podobnými metodami jako obyčejné diferenciální rovnice, ale jejich analýza je
+složitější. Zejména posouzení stability rovnovážných stavů není tak přímočaré
+jako u obyčejných diferenciálních rovnic.
+
 \iffalse
 
 
