@@ -306,18 +306,18 @@ dynamika pomocí enyzmu PXY a jeho aktivátoru CLE41. Tato aktivace probíhá po
 schematu $$ \text{CLE41} + \text{PXY} \to \text{PXY}_{\text{active}}.$$
 Označíme-li koncentrace látek $\text{PXY}_{\text{active}}$, $\text{PXY}$ a $\text{CLE41}$ po řadě $x$, $y$ a $z$, je v odkazované
 publikaci navržen model popsaný rovnicemi
-$$ \begin{aligned}\frac{\mathrm dx}{\mathrm dt} &= xy-k_1x,\\
-\frac{\mathrm dy}{\mathrm dt} &= \frac{k_2}{1+k_3z} - xy-k_4y,\\
-\frac{\mathrm dz}{\mathrm dt} &= k_5 - xy-k_6z.\\
+$$ \begin{aligned}\frac{\mathrm dx}{\mathrm dt} &= yz-k_1x,\\
+\frac{\mathrm dy}{\mathrm dt} &= \frac{k_2}{1+k_3x} - yz-k_4y,\\
+\frac{\mathrm dz}{\mathrm dt} &= k_5 - yz-k_6z.\\
 \end{aligned}
 $$
 V tomto modelu jsou patrné předpoklady, že každá z látek degraduje rychlostí
 úměrnou své koncentraci (členy s koeficienty $k_1$, $k_4$ a $k_6$) a že produkce
-látek $\text{CLE41}$ je konstantní (člen s koeficientem $k_5$). Rychlost
-chemické reakce je úměrná součinu koncentrací reaktantů proto se člen $xy$
+$\text{CLE41}$ je konstantní (člen s koeficientem $k_5$). Rychlost
+chemické reakce je úměrná součinu koncentrací reaktantů. Proto se člen $yz$
 vyskytuje ve všech třech rovnicích. Pro produkty reakce je tento člen kladný,
 pro reaktanty záporný. Přítomnost $\text{PXY}_{\text{active}}$ brzdí 
-produkci $\text{PXY}$, což je modelováno členem $\frac{k_2}{1+k_3z}$ v druhé rovnici.
+produkci $\text{PXY}$, což je modelováno členem $\frac{k_2}{1+k_3x}$ v druhé rovnici.
 
 Na rozdíl od předchozích příkladů se zde setkáváme s systémem tří vzájemně
 propojených diferenciálních rovnic. Takové systémy jsou běžné v modelování
