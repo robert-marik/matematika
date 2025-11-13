@@ -1,0 +1,1129 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-10-21T14:33:48+02:00" />
+    <title>3. Derivace a další užitečné nástroje &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'derivace_III/index';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="4. Integrál, integrál a integrál" href="../integraly/index.html" />
+    <link rel="prev" title="2. Derivace a lineární aproximace" href="../derivace_II/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="21.10.2023"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Derivace a další užitečné nástroje</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parita-funkce">3.1. Parita funkce</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vyuziti-parity-pri-technickych-vypoctech">3.1.1. Využití parity při technických výpočtech</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lokalni-extremy">3.2. Lokální extrémy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivace-jak-najit-minimum-potencialu">3.2.1. Motivace: Jak najít minimum potenciálu?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lokalni-extremy-spojitych-funkci">3.2.2. Lokální extrémy spojitých funkcí</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#priklad-nosnik-maximalni-tuhosti">3.2.3. Příklad: Nosník maximální tuhosti</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postacujici-podminka-pro-lokalni-extrem">3.3. Postačující podmínka pro lokální extrém</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bolzanova-veta">3.3.1. Bolzanova věta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#priklad-kriticka-tloustka-izolace-trubky">3.3.2. Příklad: kritická tloušťka izolace trubky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odbocka-triky-pro-praci-s-funkcemi-1">3.4. Odbočka: triky pro práci s funkcemi 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buckinghamuv-pi-teorem">3.5. Buckinghamův <span class="math notranslate nohighlight">\(\displaystyle \Pi\)</span>-teorém</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorove-funkce-gradient">3.6. Vektorové funkce, gradient</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">3.6.1. Gradient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace-rovinne-transformace">3.6.2. Lineární aproximace rovinné transformace</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">3.7. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="derivace-a-dalsi-uzitecne-nastroje">
+<h1><span class="section-number">3. </span>Derivace a další užitečné nástroje<a class="headerlink" href="#derivace-a-dalsi-uzitecne-nastroje" title="Link to this heading">#</a></h1>
+<div class="Ylink">  <a href="https://youtu.be/va5-0hR4tdQ">Minivideo</a> </div>
+<section id="parita-funkce">
+<h2><span class="section-number">3.1. </span>Parita funkce<a class="headerlink" href="#parita-funkce" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/5vRoVfXUbvE">Minivideo</a> </div>
+<p>V následující definici se budeme zajímat o to, jestli existuje nějaký
+vztah mezi funkční hodnotou v bodě <span class="math notranslate nohighlight">\(\displaystyle x\)</span> z definičního oboru a v bodě
+opačném.</p>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span>Definice </span> (Parita funkce)</p>
+<section class="definition-content" id="proof-content">
+<p>Nechť je pro funkci <span class="math notranslate nohighlight">\(\displaystyle f\)</span> a libovolný bod <span class="math notranslate nohighlight">\(\displaystyle x\)</span> definičního oboru definována kromě <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span> i hodnota <span class="math notranslate nohighlight">\(\displaystyle f(-x)\)</span>.</p>
+<ul class="simple">
+<li><p>Řekneme, že funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je <em>sudá</em>
+pokud platí <span class="math notranslate nohighlight">\(\displaystyle f(-x)=f(x)\)</span>.</p></li>
+<li><p>Řekneme, že funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je <em>lichá</em>
+pokud platí <span class="math notranslate nohighlight">\(\displaystyle f(-x)=-f(x)\)</span>.</p></li>
+<li><p>Řekneme, že funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> má <em>paritu</em>, je-li
+sudá nebo lichá.</p></li>
+</ul>
+</section>
+</div>
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/teplotni_modifikace.jpg" src="../_images/teplotni_modifikace.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.1 </span><span class="caption-text">Tepelná modifikace dřeva ve VCJR Útěchov. Úloha je symetrická, teplo prostupuje do dřeva stejným způsobem shora jako zespoda. Díky tomu je složitost úlohy poloviční. Zdroj: J. Dömény.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Graf sudé funkce je osově souměrný podle osy <span class="math notranslate nohighlight">\(\displaystyle y\)</span>.  Graf liché funkce
+je středově souměrný podle bodu <span class="math notranslate nohighlight">\(\displaystyle [0,0]\)</span>.</p>
+<p>U sudé funkce stačí mít algoritmus nebo tabulky pro kladné argumenty. Například kosinus je sudá funkce a platí <div class="math notranslate nohighlight">
+\[\cos(-x)=\cos(x).\]</div>
+ Analogicky pro funkci sinus jako pro lichou funkci platí <div class="math notranslate nohighlight">
+\[\sin(-x)=-\sin (x).\]</div>
+</p>
+<div class="proof remark admonition" id="remark-1">
+<p class="admonition-title"><span>Poznámka </span> (Využití sudosti v materiálovém inženýrství)</p>
+<section class="remark-content" id="proof-content">
+<p>Funkční hodnoty sudé funkce jsou rozloženy symetricky podle osy <span class="math notranslate nohighlight">\(\displaystyle y\)</span>. Pokud víme, že úloha bude mít osově symetrické řešení, můžeme tuto znalost použít a hledat řešení mezi sudými funkcemi. Například při řešení prostupu tepla deskou, kdy stejný fyzikální proces probíhá na obou stranách desky, je přirozené modelovat jenom polovinu desky a uprostřed nastavit podmínku, která umožní sudé prodloužení do druhé poloviny. Většinou to bývá nulovost derivace. Proto se například při nestacionární difuzi používá v definici bezrozměrného času, který charakterizuje fyzikální proces, polovina tloušťky materiálu. Viz P. Horáček, Fyzikální a mechanické vlastnosti dřeva I nebo odpovídající <a class="reference external" href="https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180">e-opora</a>.</p>
+</section>
+</div><p>Sudé a liché funkce jsou, díky svým vlastnostem, v jistém smyslu
+pěkné. V matematice se často snažíme zapsat nějaký objekt pomocí
+podobných pěkných objektů. Uvidíme to později například při popisu
+deformace. Jako ukázku přístupu si můžeme už teď ukázat následující
+snadnou větu. Věta je teď asi málo užitečná, ale naučíme se na ní
+trik, kterým později rozdělíme složitější objekt (matici) na součet
+dvou jiných a šikovnějších objektů (součet symetrické a antisymetrické
+matice).</p>
+<div class="proof theorem admonition" id="theorem-2">
+<p class="admonition-title"><span>Věta </span> (O rozkladu funkce na součet sudé a liché funkce)</p>
+<section class="theorem-content" id="proof-content">
+<p>Platí <div class="math notranslate nohighlight">
+\[f(x)=\frac{f(x)+f(-x)}2 + \frac{f(x)-f(-x)}2.\]</div>
+
+Každou funkci definovanou na <span class="math notranslate nohighlight">\(\displaystyle (-\infty,\infty)\)</span> je možné takto rozložit na součet sudé a liché funkce.</p>
+</section>
+</div><p><strong>Příklad.</strong> Pro funkci <span class="math notranslate nohighlight">\(\displaystyle f(x)=e^x\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[e^x=\frac{e^x+e^{-x}}2+\frac{e^x-e^{-x}}2.\]</div>
+ Dvě funkce na pravé
+straně mají význam v aplikacích a nazývají se hypebolický kosinus,
+<span class="math notranslate nohighlight">\(\displaystyle \cosh x\)</span>, a hyperbolický sinus, <span class="math notranslate nohighlight">\(\displaystyle \sinh x\)</span>.</p>
+<p><strong>Příklad.</strong> Je-li funkce <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span> polynom, potom rozkladem na sudou a lichou část dostaneme polynomy, které jsou tvořeny členy původního polynomu tak, že sudá část obsahuje právě členy se sudým exponentem a lichá část právě členy s lichým exponentem.</p>
+<section id="vyuziti-parity-pri-technickych-vypoctech">
+<h3><span class="section-number">3.1.1. </span>Využití parity při technických výpočtech<a class="headerlink" href="#vyuziti-parity-pri-technickych-vypoctech" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id2">
+<img alt="../_images/nosnik_3bodovy.png" src="../_images/nosnik_3bodovy.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.2 </span><span class="caption-text">Tříbodový ohyb nosníku. Sleduje se veličina symetricky rozložená vzhledem ke středu (napětí ve směru nosníku).</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="../_images/nosnik_ctvrtina.png" src="../_images/nosnik_ctvrtina.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.3 </span><span class="caption-text">Tříbodový ohyb nosníku s využitím symetrie. Počítá se jenom čtvrtina tělesa.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<img alt="../_images/beam_smyk.png" src="../_images/beam_smyk.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.4 </span><span class="caption-text">Tříbodový ohyb nosníku. Sledovaná veličina (smykové napětí v rovnině boční stěny) je symetrická, ale vlevo i vpravo se liší znaménkem.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Model tříbodového namáhání nosníku vykazuje dvě roviny symetrie: uprostřed (levá půlka je zrcadlem pravé) a uprostřed podélně podle svislé osy. Stačí tedy modelovat jenom čtvrtinu nosníku. To je výhoda. Protože dřevo je anizotropní materiál s nelineárními materiálovými vlastnostmi, trvá řešení modelu i na nejrychlejších počítačích dlouho a využití symetrie dokáže značně zkrátit čas výpočtu. Na obrázku nahoře je tříbodové namáhání nosníku modelované i s podporami použitými pro deformaci. Dole je zjednodušená situace, kdy nás zajímá jenom část mezi levou dolní a prostřední horní čelistí zkušebního stroje. Protože se jedná jenom o výřez, končí pravá strana poněkud nepřirozeně. Po zrcadlovém doplnění chybějící části nosníku se však obě poloviny spojí a výsledek bude odpovídat modelování celého nosníku.</p>
+<p>Na dvou obrázcích je barevně napětí ve vodorovném směru. Pokud bychom na přední stranu nakreslili vodorovné čárečky, souvisí toto napětí se silou, která se snaží tyto čárečky natáhnout (kladná hodnota, červená barva) nebo stlačit (záporná hodnota, modrá barva). Z popisu je jasné, že situace je symetrická. Z obrázku například vyčteme, která část je podél nosníku namáhána tahem a která tlakem a jak velká jsou tato tahová a tlaková napětí. Co je však důležité, pravá polovina je zrcadlovou kopií levé poloviny a proto není nutné zde výpočty opakovat. Výsledná funkce bude sudou funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, pokud počátek soustavy umístíme do středu nosníku a osu <span class="math notranslate nohighlight">\(\displaystyle x\)</span> orientujeme ve směru nosníku.</p>
+<p>Třetí obrázek znázorňuje smykové napětí v rovině <span class="math notranslate nohighlight">\(\displaystyle xz\)</span>, tj. v rovině boční stěny. Pokud bychom si na boční stěně nakreslili čtverečky, sledujeme tímto sílu, snažící se tyto čtverečky deformovat. Situace je opět symetrická, jako v zrcadle. Ale v tomto případě platí, že co se zkosí doprava se v zrcadle zkosí doleva a naopak. Proto se sledovaná veličina liší v levé a pravé půlce znaménkem. Bude popsána funkcí, která je lichou funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Stačí vypočítat levou půlku a podle ní doplnit půlku pravou.</p>
+<p>Pro zajímavost: u dřeva jako nelineárního anizotropního materiálu je nutné před výpočtem rozhodnout, na kolik elementů se během výpočtu těleso rozdělí a při výpočtu postupně zvyšovat zatížení, sledovat poměry v každém kousku tělesa a rozhodovat, kdy se dostaneme mimo platnost Hookova zákona pro deformaci a přepneme v daném místě na nelineární chování. Proto výpočet trvá cca 20 minut nebo 40 minut (podle velikosti elementů, na které se těleso rozdělí). Oproti tomu výpočet například s ocelí trvá řádově vteřiny, protože úloha je lineární, izotropní, dá se vypočítat hned konečný stav a je možné během výpočtu zmenšovat velikost elementů jenom v místech, kde to je nutné. U dřeva výpočet jedné čtvrtiny modelu výrazně pomůže, závislost doby výpočtu na složitosti dokonce není lineární. Výpočet čtvrtinového modelu trvá výrazně kratší dobu než je čtvrtina doby pro výpočet celého modelu.</p>
+</section>
+</section>
+<section id="lokalni-extremy">
+<h2><span class="section-number">3.2. </span>Lokální extrémy<a class="headerlink" href="#lokalni-extremy" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/E1XxOQDtto0">Minivideo</a> </div>
+<section id="motivace-jak-najit-minimum-potencialu">
+<h3><span class="section-number">3.2.1. </span>Motivace: Jak najít minimum potenciálu?<a class="headerlink" href="#motivace-jak-najit-minimum-potencialu" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id5">
+<img alt="../_images/taylor.png" src="../_images/taylor.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.5 </span><span class="caption-text">Znalost minima potenciální energie je často zásadní pro nalezení stabilní konfigurace systému. Od molekul po soustavy těles. Musíme mít univerzální postup, jak tato minima hledat.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>V příkladě s aproximací potenciálu pomocí Taylorova polynomu se nám
+povedlo potenciál aproximovat pomocí kvadratické funkce v okolí
+vrcholu paraboly. To je častá úloha, protože systémy s potenciální
+energií se často nacházejí ve stavu blízkému minimu této
+energie. Otázka je, jak toto minimum najít. Budeme řešit poněkud
+obecnější úlohu, jak hledat nejenom minimální hodnotu, ale i maximální
+hodnotu. Zaměříme se na minima a maxima, která jsou lokální (s funkcí pracujeme
+pouze na určitém intervalu, třeba i krátkém).</p>
+</section>
+<section id="lokalni-extremy-spojitych-funkci">
+<h3><span class="section-number">3.2.2. </span>Lokální extrémy spojitých funkcí<a class="headerlink" href="#lokalni-extremy-spojitych-funkci" title="Link to this heading">#</a></h3>
+<p>Následující definice si všímají bodů které mají tu vlastnost, že v okolí není možné najít body buď s vyšší funkční hodnotou (potom se jedná o lokální maximum, nikde v okolí mi funkce neukáže více) nebo s nižší funkční hodnotou (analogicky, lokální minimum).</p>
+<div class="proof definition admonition" id="definition-3">
+<p class="admonition-title"><span>Definice </span> (Lokální extrémy)</p>
+<section class="definition-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle f\colon \mathbb R\to\mathbb R\)</span>.</p>
+<ul class="simple">
+<li><p>Řekneme, že <span class="math notranslate nohighlight">\(\displaystyle f\)</span> má v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> <em>lokální maximum</em>, pokud platí <div class="math notranslate nohighlight">
+\[f(x)\leq f(x_0)\]</div>
+ pro všechna <span class="math notranslate nohighlight">\(\displaystyle x\)</span> z nějakého okolí bodu <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span>.</p></li>
+<li><p>Řekneme, že <span class="math notranslate nohighlight">\(\displaystyle f\)</span> má v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> <em>lokální minimum</em>, pokud platí <div class="math notranslate nohighlight">
+\[f(x)\geq f(x_0)\]</div>
+ pro všechna <span class="math notranslate nohighlight">\(\displaystyle x\)</span> z nějakého okolí bodu <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span>.</p></li>
+<li><p>Řekneme, že <span class="math notranslate nohighlight">\(\displaystyle f\)</span> má v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> <em>lokální extrém</em>, pokud v tomto bodě má buď lokální maximum nebo lokální minimum.</p></li>
+</ul>
+</section>
+</div><p>Přímo z definice lokálních extrémů a rostoucí a klesající funkce plyne, že funkce nemůže mít lokální extrém v bodě, kde je rostoucí nebo kde je klesající. Tuto skutečnost vyjadřuje pomocí derivací následující věta.</p>
+<div class="proof theorem admonition" id="theorem-4">
+<p class="admonition-title"><span>Věta </span> (Fermatova věta o lokálním extrému, nutná podmínka pro lokální extrém)</p>
+<section class="theorem-content" id="proof-content">
+<p>Má-li funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> lokální extrém, potom je derivace funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> nulová, nebo neexistuje.</p>
+</section>
+</div><p>Předchozí věta představuje <em>nutnou podmínku</em> pro lokální extrém. V bodě kde není splněna (tj. pokud je derivace v tomto bodě kladná nebo záporná) extrém nemůže nastat. Tím je eliminováno obrovské množství bodů z definičního oboru funkce. V prakticky využitelných případech nám po této eliminaci často zůstane jenom jediný bod, podobně jako v následující úloze.</p>
+</section>
+<section id="priklad-nosnik-maximalni-tuhosti">
+<h3><span class="section-number">3.2.3. </span>Příklad: Nosník maximální tuhosti<a class="headerlink" href="#priklad-nosnik-maximalni-tuhosti" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id6">
+<img alt="../_images/vyrezavani_tramu.jpg" src="../_images/vyrezavani_tramu.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.6 </span><span class="caption-text">Ukázka zpracování kulatiny na trám ve VCJR v Útěchově. Zdroj: J. Dömény.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<img alt="../_images/hewing.jpg" src="../_images/hewing.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.7 </span><span class="caption-text">Ukázka zpracování kulatiny na trám sekerou. Zdroj: https://www.bladeforums.com</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id8">
+<img alt="../_images/nosnik.png" src="../_images/nosnik.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.8 </span><span class="caption-text">K problému vyřezání co nejtužšího nosníku. Budeme předpokládat krásný kmen, dokonalý válec bez vad, které by nás limitovaly při plánování, jak má výsledný trám vypadat.</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p><strong>Příklad.</strong> Z kulatiny o průměru <span class="math notranslate nohighlight">\(\displaystyle d\)</span> chceme získat nosník
+obdélníkového průřezu, který se při zatížení co nejméně prohýbá. Z
+fyzikálních úvah víme, že musí být maximální součin <span class="math notranslate nohighlight">\(\displaystyle wh^3\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle w\)</span>
+je šířka a <span class="math notranslate nohighlight">\(\displaystyle h\)</span> výška nosníku.</p>
+<p><em>Trik 1: Budeme měřit jednotky v násobcích průměru.</em> Proto je
+<span class="math notranslate nohighlight">\(\displaystyle d=1\)</span>. Můžeme tedy bez újmy na obecnosti předpokládat, že kulatina má
+jednotkový průměr.</p>
+<p>Z Pythagorovy věty (nakreslete si průřez, tj. obdélník vepsaný do
+kružnice) plyne <span class="math notranslate nohighlight">\(\displaystyle w=\sqrt{1-h^2}\)</span> a snažíme se tedy řešit úlohu
+<div class="math notranslate nohighlight">
+\[wh^3=h^3 \sqrt{1-h^2}\to \mathrm{MAX},\]</div>
+
+která má fyzikální smysl na intervalu <span class="math notranslate nohighlight">\(\displaystyle (0,1)\)</span>.</p>
+<p><em>Trik 2: Protože uvažujeme jenom
+kladné délky, je funkce kladná a bude maximální tam, kde bude
+maximální její druhé mocnina.</em> Je tedy možné studovat ekvivalentní
+úlohu
+<div class="math notranslate nohighlight">
+\[(wh^3)^2=h^6(1-h^2)=h^6-h^8\to \mathrm{MAX}\]</div>
+
+na intervalu <span class="math notranslate nohighlight">\(\displaystyle (0,\infty)\)</span>. Výhoda je zřejmá: místo součinu dvou
+funkcí, z nichž jedna je navíc složená, studujeme dvoučlenný
+polynom. Pro funkci <div class="math notranslate nohighlight">
+\[f(h)=h^6-h^8\]</div>
+ dostáváme
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm df}{\mathrm dh}=6h^5-8h^7=2h^5(3-4h^2).\]</div>
+
+Tato derivace je nulová pro
+<div class="math notranslate nohighlight">
+\[h^2=\frac 34\]</div>
+
+tj. <div class="math notranslate nohighlight">
+\[h=\frac{\sqrt 3}2.\]</div>
+ Pro tuto výšku bude mít nosník maximální
+hodnotu tuhosti. Šířka nosníku bude
+<div class="math notranslate nohighlight">
+\[w=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\sqrt{\frac 14}=\frac 12.\]</div>
+
+Poměr výšky a šířky u nosníku maximální tuhosti tedy bude <span class="math notranslate nohighlight">\(\displaystyle \sqrt{3}:1\)</span>
+a šířka bude rovna polovině průměru.</p>
+
+<ul class="simple">
+<li><p><a class="reference external" href="https://gist.github.com/robert-marik/17c21c17330d7e30b0ffc4ec74eae0e0">Online výpočet.</a></p></li>
+<li><p><a class="reference external" href="https://chat.openai.com/share/f56e697a-09b7-4e2d-b05c-2f970b306d02">ChatGPT a jeho totální fail</a>.</p></li>
+</ul>
+
+</section>
+</section>
+<section id="postacujici-podminka-pro-lokalni-extrem">
+<h2><span class="section-number">3.3. </span>Postačující podmínka pro lokální extrém<a class="headerlink" href="#postacujici-podminka-pro-lokalni-extrem" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/W7Kf-waoHQE">Minivideo</a> </div>
+<p>Pokud řešíme úlohu s praktickým zadáním, je z povahy úlohy často
+zřejmé, že lokální extrém požadovaného typu existuje a často to bývá
+jediný bod, kde je derivace nulová. V takovém případě pro identifikaci
+lokálního extrému stačí nutná podmínka. Pokud bodů vyhovujících nutné
+podmínce máme více, nebo pokud je situace méně zřetelná, můžeme
+existenci lokálního extrému posoudit pomocí následující věty. Ta
+představuje <em>dostatečnou (postačující) podmínku</em> pro lokální
+extrém. Stačí aby tato podmínka byla splněna a můžeme s jistotou
+usoudit, že v bodě je extrém a jaký.</p>
+<div class="proof theorem admonition" id="theorem-5">
+<p class="admonition-title"><span>Věta </span> (Postačující podmínka pro lokální extrémy)</p>
+<section class="theorem-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle f\)</span> spojitá v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> a mění-li se v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> z rostoucí na klesající, má funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> lokální maximum. Analogicky, lokální minimum nastává při změně z klesající na rostoucí.</p>
+</section>
+</div><p>Podle této věty jsou intervaly monotonie zásadní informací pro
+nalezení lokálních extrémů. Vzhledem k souvislosti monotonie s
+derivací je tedy nutné se věnovat nalezení intervalů, kde má funkce
+kladnou derivaci a intervalů, kde má funkce zápornou derivaci.</p>
+<section id="bolzanova-veta">
+<h3><span class="section-number">3.3.1. </span>Bolzanova věta<a class="headerlink" href="#bolzanova-veta" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id9">
+<img alt="../_images/bolzano.png" src="../_images/bolzano.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.9 </span><span class="caption-text">Bolzanova věta je jedna z těch, které člověka nepřekvapí. Pokud se má funkce spojitě přehoupnout z jedné strany osy na druhou, musí tuto osu někde protnout.</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Pro nalezení intervalů, kde je výraz závislý na jedné proměnné kladný
+a kde záporný je vynikajícím nástrojem Bolzanova věta představená v
+následujících odstavcích. Hodí se například pro nalezení intervalů,
+kde má funkce kladnou a kde zápornou derivaci, což využijeme při
+nalezení intervalů, kde je funkce rostoucí a kde klesající.</p>
+<p>Bolzanova věta je poměrně názorné tvrzení. Hlavním přínosem pražského
+matematika Bernarda Bolzana bylo, že si uvědomil, že toto tvrzení není
+snadným důsledkem definice spojitosti a že přes názornost tohoto
+tvrzení je nutno podat jeho přesný důkaz, který rozhodně není
+jednoduchý. Jiná, zdánlivě nevinná tvrzení, však pravdivá být
+nemusí. Zde se nabízí souvislost se spojitostí funkce a nakreslitelností jedním tahem. Bolzano například našel funkci, která je spojitá, ale její
+graf je tak komplikovaný, že se nedá nakreslit.</p>
+<p>Podmínka <span class="math notranslate nohighlight">\(\displaystyle f(a)f(b)&lt;0\)</span> v následující větě znamená, že funkční hodnoty
+funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> v bodech <span class="math notranslate nohighlight">\(\displaystyle a\)</span> a <span class="math notranslate nohighlight">\(\displaystyle b\)</span> se liší znaménkem.</p>
+<div class="proof theorem admonition" id="theorem-6">
+<p class="admonition-title"><span>Věta </span> (Bolzanova věta)</p>
+<section class="theorem-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je spojitá funkce na intervalu <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span> a <span class="math notranslate nohighlight">\(\displaystyle f(a)f(b)&lt;0\)</span>. Potom existuje <span class="math notranslate nohighlight">\(\displaystyle c\)</span> na intervalu <span class="math notranslate nohighlight">\(\displaystyle (a,b)\)</span> takové, že platí <span class="math notranslate nohighlight">\(\displaystyle f(c)=0.\)</span></p>
+</section>
+</div><p><strong>Důsledek.</strong></p>
+<ul class="simple">
+<li><p>Na intervalu, kde je funkce spojitá a různá od nuly, se zachovává
+znaménko funkce, tj. funkce je zde buď pořád kladná nebo pořád
+záporná. Mezi oběma variantami se můžeme rozhodnout testováním
+znaménka funkce v jednom libovolném bodě intervalu.</p></li>
+<li><p>Na intervalu, kde má funkce spojitou a od nuly různou derivaci, se
+zachovává monotonie funkce, tj. funkce je zde buď pořád rostoucí nebo
+pořád klesající. Mezi oběma variantami se můžeme rozhodnout testováním
+monotonie (tj. znaménka derivace) v jednom libovolném bodě intervalu.</p></li>
+</ul>
+<p><strong>Poznámka.</strong> Lokální extrém nastává tam, kde je funkce spojitá a kde
+se mění monotonie. Nenastává tam, kde se monotonie spojité funkce
+nemění. Přirozeně nenastává ani tam, kde funkce není definována.</p>
+<p><strong>Příklad.</strong> Najděte lokální extrém funkce <span class="math notranslate nohighlight">\(\displaystyle y=\frac x{x^2+1}\)</span>. Derivace je <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{(1+x)(1-x)}{(x^2+1)^2}\)</span>.</p>
+<p><strong>Příklad.</strong> Najděte lokální extrém funkce <span class="math notranslate nohighlight">\(\displaystyle y=\frac{x^3}{x+2}\)</span>. Derivace je <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{2(x+3)x^2}{(x+2)^2}\)</span>.</p>
+<div class="proof algorithm dropdown admonition" id="algorithm-7">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 3.1 </span> (Příklad: kritická tloušťka izolace trubky)</p>
+<section class="algorithm-content" id="proof-content">
+</section>
+</div></section>
+<section id="priklad-kriticka-tloustka-izolace-trubky">
+<h3><span class="section-number">3.3.2. </span>Příklad: kritická tloušťka izolace trubky<a class="headerlink" href="#priklad-kriticka-tloustka-izolace-trubky" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id10">
+<img alt="../_images/kotelna_trubky.jpg" src="../_images/kotelna_trubky.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.10 </span><span class="caption-text">Na rozdíl od tepelné izolace rovné stěny, u trubek neplatí za každé situace že více izolace vede k menším ztrátám. Zdroj: pixabay.com</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id11">
+<img alt="../_images/izolovane_draty.jpg" src="../_images/izolovane_draty.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.11 </span><span class="caption-text">Elektrikáři vidí problém tepla poněkud jinak, než topenáři. Potřebují se tepla naopak zbavovat. Zdroj: pixabay.com</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Následující příklad je poněkud překvapivý. Představme si, že
+potřebujeme obalit horkou trubku izolací, abychom snížili tepelné
+ztráty. Izolace se zahřeje od trubky a vyzařuje teplo do
+okolí. Vyzářené teplo je úměrné rozdílu teploty povrchu izolace a
+teploty vnějšího okolí a také plošnému obsahu povrchu izolace (větší
+plocha více vyzáří). Roli hraje i kvalita povrchu, to je skryto v
+příslušné konstantě úměrnosti. S daným materiálem potřebujeme tedy u
+izolace dosáhnout toho, aby její teplota a povrch byly co
+nejmenší. Teplotu snížíme, pokud uděláme izolaci silnější, to ovšem
+zvýší její povrch. A z většího povrchu se vyzáří více tepla. Přidávání
+izolace by tedy mohlo být kontraproduktivní. Zdá se to být proti
+logice, ale logika nás někdy může zavést na scestí a stojí za to jev
+prozkoumat.</p>
+<p>Nejprve ukážeme, že přidávání izolace opravdu může zvýšit tepelné
+ztráty, ale potom se uklidníme tím, že v praktickém životě, například
+při izolování topenářských trubek, tento problém nemáme. Potřebujeme
+dva vzorce, které dodá fyzika, poté již budeme pracovat čistě
+matematicky.</p>
+<p>Teplo <span class="math notranslate nohighlight">\(\displaystyle Q\)</span>, které projde za jednotku času při ustáleném vedení tepla povrchem trubky délky <span class="math notranslate nohighlight">\(\displaystyle L\)</span> o vnitřním poloměru <span class="math notranslate nohighlight">\(\displaystyle r\)</span>, vnějším poloměru <span class="math notranslate nohighlight">\(\displaystyle R\)</span> je dáno vztahem</p>
+<div class="math notranslate nohighlight" id="equation-3-1">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-3-1" title="Link to this equation">#</a></span>\[\frac Q{2\pi Lk} \ln \frac{R}{r}=T_1-T_2,\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\displaystyle T_1\)</span> je teplota uvnitř, <span class="math notranslate nohighlight">\(\displaystyle T_2\)</span> teplota na vnějším okraji a <span class="math notranslate nohighlight">\(\displaystyle k\)</span> je tepelná vodivost materiálu. Tento vzorec odvodíme později v přednášce o integrálu.</p>
+<p>Teplo <span class="math notranslate nohighlight">\(\displaystyle Q\)</span>, které za jednotku času vyzáří plocha trubky o poloměru <span class="math notranslate nohighlight">\(\displaystyle R\)</span> a teplotě <span class="math notranslate nohighlight">\(\displaystyle T_2\)</span> do okolí o teplotě <span class="math notranslate nohighlight">\(\displaystyle T_\infty\)</span>, vztažené na jednotku povrchu trubky, je přímo úměrné rozdílu teplot a povrchu, tj. platí <div class="math notranslate nohighlight">
+\[\frac{Q}{2\pi  R L}=h (T_2-T_\infty).\]</div>
+ Odsud</p>
+<div class="math notranslate nohighlight" id="equation-3-2">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-3-2" title="Link to this equation">#</a></span>\[\frac Q{h 2\pi RL}= T_2-T_\infty.\]</div>
+<p>Sečtením <a class="reference internal" href="#equation-3-1">(3.1)</a> a <a class="reference internal" href="#equation-3-2">(3.2)</a> dostaneme
+<div class="math notranslate nohighlight">
+\[ \frac{Q}{2\pi L}\left(\frac 1k \ln \frac{R}{r}+\frac 1{h R}\right) = T_1-T_\infty.\]</div>
+
+Tento vzorec popisuje tepelné ztráty při izolaci trubky o vnitřním poloměru <span class="math notranslate nohighlight">\(\displaystyle r\)</span> a teplotě <span class="math notranslate nohighlight">\(\displaystyle T_1\)</span> izolací o vnějším poloměru <span class="math notranslate nohighlight">\(\displaystyle R\)</span> ve vnější teplotě <span class="math notranslate nohighlight">\(\displaystyle T_\infty\)</span>. Parametry izolace jsou tepelná vodivost <span class="math notranslate nohighlight">\(\displaystyle k\)</span> a s koeficient prostupu tepla <span class="math notranslate nohighlight">\(\displaystyle h\)</span>. Budeme sledovat, jak se chová veličina <span class="math notranslate nohighlight">\(\displaystyle Q\)</span> (tepelné ztráty) jako funkce proměnné <span class="math notranslate nohighlight">\(\displaystyle R\)</span>.
+<div class="math notranslate nohighlight">
+\[Q(R)=2\pi L\frac {T_1-T_\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}\]</div>
+
+Pokud chceme minimalizovat tepelné ztráty <span class="math notranslate nohighlight">\(\displaystyle Q\)</span>, musíme maximalizovat jmenovatel
+<div class="math notranslate nohighlight">
+\[f(R)=\frac 1k \ln \frac{R}{r}+\frac 1{h R}=\frac 1k \ln R -\frac 1k \ln r+\frac 1{h} R^{-1}.\]</div>
+
+Ostatní veličiny jsou totiž konstantní.
+Platí
+<div class="math notranslate nohighlight">
+\[\frac {\mathrm d f}{\mathrm dR}=\frac 1k \frac 1R+\frac 1h (-1)R^{-2} =\frac {Rh-k}{khR^2}.\]</div>
+
+Derivace je nulová pro <div class="math notranslate nohighlight">
+\[R=\frac kh\]</div>
+ a v okolí tohoto bodu mění
+znaménko ze záporného na kladné. Proto má funkce <span class="math notranslate nohighlight">\(\displaystyle f(R)\)</span> v tomto bodě
+minimum. To odpovídá maximu funkce <span class="math notranslate nohighlight">\(\displaystyle Q\)</span>. Hodnota <span class="math notranslate nohighlight">\(\displaystyle R=\frac kh\)</span> tedy
+odpovídá maximu funkce tepelných ztrát <span class="math notranslate nohighlight">\(\displaystyle Q\)</span>. Pro menší poloměr izolace
+přidávání další izolace paradoxně zvyšuje tepelné ztráty. Nazývá se <em>kritický poloměr izolace</em>.</p>
+<p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJw1jkuOgzAQRPdI3KGlLGIzngDZc4JkM4h91CGOaOzYlmMswemnmc-upH6vqg8w6KCt07CliGmFEAlo89ZndAQpLnezwozGw3NxZtSQnZ7fNHkIDL10XH5wHPWpLA5wyWgpYaLMdmBbTwoccqux-ICkg_UJYdbAqnYIma9vfx9pnCD67UF2gb3ol1z_P0DwxlvijbIYbq0abuSeae1a1ZRFVFcObVkYNXXnPWSM4tgfZVl8iV525ypQda0Em59_pqxFW5vKOtHXUX60tZiqXrKwz4rdUqJXzYnrGqnWF7mukd96J18r&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">Online graf funkce</a></p>
+<p>Při použití běžných materiálů pro izolaci vodovodních a topenářských
+trubek je kritický poloměr tak malý, že při praktické realizaci s
+ním nemusíme pracovat a materiál se chová dle očekávání, tj. více
+izolace znamená menší ztráty.</p>
+<p>Inženýr, který má navrhnout izolaci elektrického vodiče ovšem vidí
+problém trochu jinak. Potřebuje naopak tepelné ztráty maximalizovat
+aby se vodič zbavoval tepla vytvořeného průchodem elektrického
+proudu. Proto by izolace neměla překročit kritický poloměr.</p>
+</section>
+</section>
+<section id="odbocka-triky-pro-praci-s-funkcemi-1">
+<h2><span class="section-number">3.4. </span>Odbočka: triky pro práci s funkcemi 1<a class="headerlink" href="#odbocka-triky-pro-praci-s-funkcemi-1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Vhodnou volbou jednotek dokážeme eliminovat některé
+parametry. Přesněji, vhodnou volnou jednotek dokážeme některým
+parametrům dát konkrétní numerickou hodnotu. Vyšetřovaná funkce je
+potom často jednodušší. Viděli jsme v příkladě s vytesáním nosníku maximální tuhosti z kulatiny.</p></li>
+<li><p>Je-li <span class="math notranslate nohighlight">\(\displaystyle g\)</span> rostoucí, potom z definice rostoucí funkce plynou ekvivalence
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+f(x)\leq f(x_0) \iff   g(f(x))\leq g(f(x_0)),\\
+ f(x)\geq f(x_0) \iff   g(f(x))\geq g(f(x_0))
+\end{gathered}
+\end{split}\]</div>
+
+a proto funkce <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span> a <span class="math notranslate nohighlight">\(\displaystyle g(f(x))\)</span> mají lokální extrémy ve stejných
+bodech. Toho je možné využít, pokud vidíme, že při vhodné volbě funkce
+<span class="math notranslate nohighlight">\(\displaystyle g\)</span> by byla funkce <span class="math notranslate nohighlight">\(\displaystyle g(f(x))\)</span> vhodnější pro hledání lokálních
+extrémů. Viděli jsme v příkladě s vytesáním nosníku maximální tuhosti z kulatiny.</p></li>
+<li><p>Podobně jako v předchozím bodě je možné uvažovat i klesající funkce
+<span class="math notranslate nohighlight">\(\displaystyle g\)</span>. Ale protože klesající funkce obrací směr nerovností, mění se
+lokální maximum na lokální minimum a naopak.
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+f(x)\leq f(x_0) \iff   g(f(x))\geq g(f(x_0)),\\
+ f(x)\geq f(x_0) \iff   g(f(x))\leq g(f(x_0))
+\end{gathered}
+\end{split}\]</div>
+
+Viděli jsme v příkladě s
+tepelnými ztrátami tepelně izolovaných trubek. Zde jsme využili toho,
+že zúžení funkce <span class="math notranslate nohighlight">\(\displaystyle \frac 1x\)</span> na kladná čísla je klesající.</p></li>
+</ol>
+<!--
+
+Dva útvary jsou podobné, jestli jeden vznikne z druhého zvětšením všech délek na jejich $k$-násobek. Pro $k$-krát zvětšený útvar platí, že všechny jeho rozměry jsou $k$-krát větší, všechny jeho plochy jsou $k^2$-krát větší a všechny jeho objemy jsou $k^3$-krát větší. Podobné útvary jsou vždy definovány jedním parametrem, například u kruhu a koule stačí zadat poloměr. U krychle stačí zadat délku jedné strany nebo délku stěnové uhlopříčky nebo délku tělesové uhlopříčky. U válce, který má stejnou výšku jako průměr podstavy stačí zadat výšku nebo poloměr podstavy. U kužele s vrcholovým úhlem $45^\circ$ stačí zadat výšku nebo poloměr podstavy a je tím dán celý kužel. U takových těles platí pro jakýkoliv povrch (povrch koule, povrch kužele, povrch pláště kužele, povrch válce, povrch válcové plochy, ...)
+$$S=k_1r^2$$ a pro jakýkoliv objem
+$$V=k_2r^3,$$ kde $k_1$ a $k_2$ jsou konstanty a $r$ vhodný délkový parametr.  Tyto konstanty mají dokonce pěknou interpretaci - odpovídají obsahu nebo objemu pro $r=1$ a ve většině případů je známe, protože například pro kouli nebo kužel máme přesný vzorec založený na poloměru.
+Díky tomuto je dokonce možné snadno najít vztahy mezi objemem a povrchem $$V=k_3 S^{3/2}$$ a $$S=k_4 V^{2/3}.$$ Tyto vztahy je snadné si pamatovat, stačí se řídit tím, že mocnina musí být taková, aby vycházely správné jednotky. Metodami středoškolské matematiky dokonce dokážeme dokonce konstanty $k_1$ až $k_4$ najít pro jednotlivá tělesa jako je koule apod. Často nás však přesná hodnota konstanty nezajímá a jde nám jenom o charakter funkční závislosti, o přímou úměrnost mezi vhodnými mocninami. Vztahy stejného typu platí například i pro kužel s konstantním úhlem u vrcholu. To je možné využít při skladování sypkého materiálu (písek nasypaný na hromadu zaujme tvar kužele, úhel u vrcholu je daný vlastnostmi písku) nebo vyprazdňování nádrže ve tvaru trychtýře. Podobnost nacházíme i v živé přírodě, výrazná je například u ryb, kdy velká ryba je často tvarově blízká zvětšené malé rybě (viz S. Vogel, Comparative biomechanics, kap. 3). Formálně je podobné úvahy možno zobecnit pomocí [Buckinghamova Pi-teorému](http://geo.mff.cuni.cz/seismosoft/Pi-teorem.pdf).
+
+-->
+</section>
+<section id="buckinghamuv-pi-teorem">
+<h2><span class="section-number">3.5. </span>Buckinghamův <span class="math notranslate nohighlight">\(\displaystyle \Pi\)</span>-teorém<a class="headerlink" href="#buckinghamuv-pi-teorem" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/C4_3IbbLpiI">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id12">
+<img alt="../_images/trinity.jpg" src="../_images/trinity.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.12 </span><span class="caption-text">Nejslavnější aplikace rozměrové analýzy a Buckinghamova <span class="math notranslate nohighlight">\(\displaystyle \Pi\)</span>-teorému je odhad energie atomové bomby Trinity. Energie (20kt TNT) byla přísně tajná, ale pomocí rozměrové analýzy a veřejně publikované fotky v časopise Life ji G. I. Taylor odhadl na 22kt TNT bez složitých výpočtů. Zdroj: http://chalkdustmagazine.com/features/the-buckingham-pi-theorem-and-the-atomic-bomb/</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Naučíme se, že některé vztahy mezi veličinami se dají určit z
+fyzikálních jednotek těchto veličin.</p>
+<p>Existují tělesa, která jsou závislá jenom na jednom délkovém parametru
+a pokud tento délkový parametr zvětšíme <span class="math notranslate nohighlight">\(\displaystyle k\)</span>-krát, povrchy a obsahy na
+tomto tělese se zvětšují <span class="math notranslate nohighlight">\(\displaystyle k^2\)</span>-krát a objemy <span class="math notranslate nohighlight">\(\displaystyle k^3\)</span>-krát. To je princip
+známý z elementární matematiky jako podobnost. Proto objem koule o
+poloměru <span class="math notranslate nohighlight">\(\displaystyle r\)</span> je objem koule o jednotkovém poloměru vynásobený faktorem
+<span class="math notranslate nohighlight">\(\displaystyle r^3\)</span> a analogické tvrzení platí i pro krychli. Podobnost nacházíme i
+v živé přírodě. Výrazná je například u ryb, kdy velká ryba je často
+tvarově blízká zvětšené malé rybě (viz S. Vogel, Comparative
+biomechanics, kap. 3). V technických aplikacích najdeme stejný princip
+u skladování sypkého materiálu (písek nasypaný na hromadu zaujme tvar
+kužele, úhel u vrcholu je daný vlastnostmi písku) nebo vyprazdňování
+nádrže ve tvaru trychtýře (tekutina má tvar kužele s úhlem u vrcholu
+daným trychtýřem).</p>
+<p>Rozšíření myšlenky podobnosti je rozměrová analýza. Ta je založená na poznatku,
+že fyzikální zákony je možno vyjadřovat v různých jednotkách. Formální
+postup umožňuje například následující věta.</p>
+<div class="proof theorem admonition" id="theorem-8">
+<p class="admonition-title"><span>Věta </span> (Buckinghamův Pi-teorém)</p>
+<section class="theorem-content" id="proof-content">
+<p>Rovnici <div class="math notranslate nohighlight">
+\[F_0(x_1,x_2,\dots,x_n)=0,\]</div>
+ resp. <div class="math notranslate nohighlight">
+\[x_1=F(x_2,\dots,x_n),\]</div>
+ která vyjadřuje fyzikální zákon a obsahuje
+<span class="math notranslate nohighlight">\(\displaystyle n\)</span> veličin (včetně fyzikálních a materiálových konstant) vyjádřených pomocí <span class="math notranslate nohighlight">\(\displaystyle m\)</span> základních
+jednotek je možno zapsat jako rovnici vyjádřenou pomocí <span class="math notranslate nohighlight">\(\displaystyle (n-m)\)</span>
+bezrozměrných parametrů, tj. <div class="math notranslate nohighlight">
+\[f_0(\pi_1,\pi_2,\dots,\pi_{n-m})=0,\]</div>
+
+nebo
+<div class="math notranslate nohighlight">
+\[\pi_1=f(\pi_2,\dots,\pi_{n-m}).\]</div>
+</p>
+</section>
+</div><p>Formální tvar a metoda výběru bezrozměrných parametrů jsou v tuto
+chvíli pro nás poměrně komplikované a proto bude nejjednodušší si
+problematiku ukázat na příkladech. Jejich hlavním smyslem je to, že
+vztah mezi veličinami odhalíme (až na detaily typu multiplikativní
+konstanta) jenom z fyzikálních jednotek, bez hlubší znalosti
+fyzikálního pozadí. Stačí identifikovat relevantní parametry.</p>
+<p><strong>Příklad (vztah mezi rychlostí, dráhou a dobou u pohybu konstantní rychlostí).</strong> U pohybu konstantní rychlostí jsou relevantní parametry rychlost <span class="math notranslate nohighlight">\(\displaystyle v\)</span> v kilometrech za hodinu, doba <span class="math notranslate nohighlight">\(\displaystyle t\)</span> v hodinách a dráha <span class="math notranslate nohighlight">\(\displaystyle s\)</span> v kilometrech. To jsou tři veličiny vyjádřené pomocí dvou základních jednotek. Existuje tedy jediná bezrozměrná veličina, pomocí které je možno zapsat souvislost mezi parametry pohybu. Tu je možno sestavit jediným možným způsobem (až na případné mocniny) a to ve tvaru <div class="math notranslate nohighlight">
+\[\pi_1=\frac{vt}{s}.\]</div>
+ Podle Buckinghamova teorému tato veličina musí být konstantní, tj. musí platit <span class="math notranslate nohighlight">\(\displaystyle \frac{vt}{s}=k\)</span> pro nějakou konstantu <span class="math notranslate nohighlight">\(\displaystyle k\)</span>. Prozkoumáním modelového případu, kdy rychlost, dráha i čas jsou jednotkové, vidíme, že konstanta musí být rovna jedné a proto platí <div class="math notranslate nohighlight">
+\[\frac{vt}{s}=1.\]</div>
+ Odsud již snadno nalezneme <span class="math notranslate nohighlight">\(\displaystyle v=\frac{s}{t}\)</span> a další variace vzorce pro rovnoměrný pohyb tak jak je známe ze základní školy.</p>
+<p><strong>Příklad (vztah mezi objemem a povrchem koule).</strong> Pro nalezení
+přepočtu mezi objemem koule <span class="math notranslate nohighlight">\(\displaystyle V\)</span> (v metrech krychlových) a povrchem
+koule <span class="math notranslate nohighlight">\(\displaystyle S\)</span> (v metrech čtverečních) máme <span class="math notranslate nohighlight">\(\displaystyle n=2\)</span> (veličiny <span class="math notranslate nohighlight">\(\displaystyle S\)</span> a <span class="math notranslate nohighlight">\(\displaystyle V\)</span>) a
+<span class="math notranslate nohighlight">\(\displaystyle m=1\)</span> (jediná základní jednotka metr). Tedy platí <span class="math notranslate nohighlight">\(\displaystyle n-m=1\)</span> a vztah se
+dá zapsat pomocí jedné bezrozměrné veličiny. Pro tuto veličinu
+existuje jenom jediná možná varianta: <span class="math notranslate nohighlight">\(\displaystyle \pi_1=V^2 S^{-3}\)</span>. Potom je
+funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> konstantní a pro nějakou hodnotu <span class="math notranslate nohighlight">\(\displaystyle k\)</span> platí <div class="math notranslate nohighlight">
+\[V^2 S^{-3}=k\]</div>
+
+a odsud <div class="math notranslate nohighlight">
+\[V^2=k S^{3}.\]</div>
+ Tedy vhodné mocniny objemu a obsahu jsou si
+úměrné. Tento výsledek je možné získat i kombinací vzorců <span class="math notranslate nohighlight">\(\displaystyle V=\frac 43
+\pi r^3\)</span> a <span class="math notranslate nohighlight">\(\displaystyle S=4\pi r^2\)</span>, ovšem je nutná znalost těchto vzorců a
+provedení netriválního množství matematických výpočtů. Jako výsledek
+takové detailnější analýzy bychom navíc věděli, jaká je hodnota
+konstanty úměrnosti <span class="math notranslate nohighlight">\(\displaystyle k\)</span>. My jsme si však chtěli ukázat dosažení
+výsledku s minimální námahou a s minimálními vstupními znalostmi,
+abychom podobný postup mohli používat i v jiných případech, kdy
+alternativní postup nemáme k dispozici.</p>
+
+<div class='obtekat'>
+<figure class="align-default" id="id13">
+<img alt="../_images/strom_praha_2019.jpg" src="../_images/strom_praha_2019.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.13 </span><span class="caption-text">Vánoční strom pro Prahu v prosinci 2019. Ořezání průměru kmene na polovinu sníží tuhost kmene cca 16-krát (za předpokladu homogenity, ve skutečnosti je to ještě výraznější). Vánoční strom v Praze proto musí držet ocelová lana. Zdroj: Pražský deník</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id14">
+<img alt="../_images/nosniky_unod.jpg" src="../_images/nosniky_unod.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.14 </span><span class="caption-text">Nosníky obdélníkového průřezu. Trojnásobný nosník má devětkrát vetší tuhost než nosníky tři. Slepením tří nosníků k sobě zvýšíme tuhost devětkrát ve srovnání s případem, kdy bychom je na sebe volně položili.</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p><strong>Příklad (tuhost nosníků čtvercového a kruhového průřezu).</strong> Veličinou ovlivňující tuhost nosníku při
+daném materiálovém složení je kvadratický moment průřezu <span class="math notranslate nohighlight">\(\displaystyle I\)</span> v
+jednotkách metr na čtvrtou. Pokud je průřez nosníku daný jenom jedním
+délkovým parametrem <span class="math notranslate nohighlight">\(\displaystyle a\)</span> (například čtvercový nebo kruhový průřez),
+máme stejný případ jako výše, kdy počet parametrů o jedničku převyšuje počet základních jednotek: <span class="math notranslate nohighlight">\(\displaystyle n=2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle m=1\)</span>. Vztah mezi
+kvadratickým průřezem <span class="math notranslate nohighlight">\(\displaystyle I\)</span> a rozměrem <span class="math notranslate nohighlight">\(\displaystyle a\)</span> se dá vyjádřit pomocí jedné bezrozměrné veličiny a  máme vlastně jenom jedinou možnost jako tuto veličinu sestavit: <div class="math notranslate nohighlight">
+\[\pi_1=\frac {I}{a^4}.\]</div>
+ Stejně jako v předchozím
+příkladě existuje konstanta <span class="math notranslate nohighlight">\(\displaystyle k\)</span> taková, že <span class="math notranslate nohighlight">\(\displaystyle \frac I{a^4}=k,\)</span> tj. <div class="math notranslate nohighlight">
+\[I=ka^4.\]</div>
+ Po seznámení se
+s dvojným integrálem uvidíme, že pro čtvercový průřez o straně čtverce
+<span class="math notranslate nohighlight">\(\displaystyle a\)</span> je <span class="math notranslate nohighlight">\(\displaystyle k=\frac 1{12}.\)</span></p>
+<p><strong>Příklad (tuhost nosníků obdélníkového průřezu).</strong> Budeme pokračovat
+v předchozím příkladě. Pro obdélníkový průřez o rozměrech <span class="math notranslate nohighlight">\(\displaystyle w\)</span> krát <span class="math notranslate nohighlight">\(\displaystyle h\)</span>
+je <span class="math notranslate nohighlight">\(\displaystyle m=3\)</span> (tři veličiny <span class="math notranslate nohighlight">\(\displaystyle w\)</span>, <span class="math notranslate nohighlight">\(\displaystyle h\)</span>, <span class="math notranslate nohighlight">\(\displaystyle I\)</span>) a <span class="math notranslate nohighlight">\(\displaystyle n=1\)</span> (jediná základní
+jednotka metr). Pokud však víme, že dva nosníky vedle sebe se
+prohýbají stejně, jako by byly spojeny, víme, že mezi <span class="math notranslate nohighlight">\(\displaystyle I\)</span> a <span class="math notranslate nohighlight">\(\displaystyle w\)</span> musí
+být přímá úměrnost. Proto můžeme místo kvadratického momentu průřezu
+pracovat s kvadratickým momentem na jednotku šířky <span class="math notranslate nohighlight">\(\displaystyle \frac Iw\)</span> v
+jednotkách metr na třetí a potom stejně jako v minulém případě
+existuje konstanta <span class="math notranslate nohighlight">\(\displaystyle k\)</span> taková, že <span class="math notranslate nohighlight">\(\displaystyle \frac Iw=kh^3,\)</span> tj. <div class="math notranslate nohighlight">
+\[I=kwh^3.\]</div>
+ To
+je přesně v souladu s tvrzením, které jsme použili v příkladu s
+maximalizací tuhosti nosníku obdélníkového průřezu, kdy jsme tvrdili,
+že mírou tuhosti je součin <span class="math notranslate nohighlight">\(\displaystyle wh^3\)</span>.</p>
+<p>Pokud více nosníků pokládáme na sebe nebo vedle sebe, tuhost se
+sčítá. Pokud nosníky vedle sebe slepíme bočními hranami, nic se
+nezmění, protože na spoji není žádné tahové napětí. Tuhost tedy roste
+lineárně s šířkou. Pokud tři nosníky položíme na sebe, vzroste tuhost
+na trojnásobek jednoho nosníku.  Tuhost nosníku však také roste se
+třetí mocninou výšky.  Nosníky položené na sebe a slepené se chovají
+jako jediný nosník. Pokud tři nosníky slepíme nebo spojíme hřebíky,
+vzroste tuhost <span class="math notranslate nohighlight">\(\displaystyle 3^3\)</span>-krát, tj. 27-krát v porovnání s jediným
+nosníkem. Tři spojené nosníky mají tedy devítinásobnou tuhost v
+porovnání se třemi na sobě volně položenými.</p>
+</section>
+<section id="vektorove-funkce-gradient">
+<h2><span class="section-number">3.6. </span>Vektorové funkce, gradient<a class="headerlink" href="#vektorove-funkce-gradient" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/trdMQ6WOGlk">Minivideo</a> </div>
+<p>Výstupem vektorové funkce je vektor. Vstupem je buď reálné číslo (funkce jedné proměnné), nebo vektor. V prvním případě se jedná o parametrickou křivku v <a class="reference external" href="https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkv0YhOzi_WKNHUUSjOzAPSsToKGgY6BZmamgDCkhs_&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">rovině</a> nebo v <a class="reference external" href="https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkvMU7RiC7RSs4v1ijR1FEo0SrOzAOxSmJ1FDQMdMy0CjI1NQHngx4S&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">prostoru</a>, ve druhém případě bývá zpravidla na vstupu stejný počet veličin jako na výstupu a jedná se o vektorové pole (každému bodu v rovině je přiřazen <a class="reference external" href="https://sagecell.sagemath.org/?z=eJyr0KnUqbItSyzSUK9QqFSoUtfk5SrIyS-JL0tNLskvik_LTM1J0dDQrdSp0NRR0KjQ0TXUMQSxKqGsxOICoMr4osSSzHxbQ00A7BcYPA==&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">rovinný vektor</a> nebo každému bodu v prostoru je přiřazen prostorový vektor). Vektory zapisujeme pomocí jejich komponent následovně.
+<div class="math notranslate nohighlight">
+\[\vec F=(P,Q,R)=P\vec i+Q\vec j+R\vec k = P\vec e_1+Q\vec e_2+R\vec e_3\]</div>
+</p>
+<section id="gradient">
+<h3><span class="section-number">3.6.1. </span>Gradient<a class="headerlink" href="#gradient" title="Link to this heading">#</a></h3>
+<p>Pokud nerovnoměrnost v prostorovém rozložení skalární veličiny iniciuje nějaký děj, je nutné znát směr, ve kterém tato veličina roste nebo klesá. To jsme viděli například u rovnice vedení tepla, kde nerovnoměrnost v prostorovém rozložení teploty dává vznik toku tepla. V jednorozměrném případě byla situace jednoduchá a stačí se řídit znaménkem derivace. Ve dvourozměrném nebo trojrozměrném případě je bohužel situace složitější ale i zde máme nástroj pro detekci směrů ve kterém veličina roste nebo klesá a také intenzity tohoto růstu nebo poklesu.</p>
+<div class="proof definition admonition" id="definition-9">
+<p class="admonition-title"><span>Definice </span> (Gradient)</p>
+<section class="definition-content" id="proof-content">
+<p>Buď <span class="math notranslate nohighlight">\(\displaystyle f(x,y)\)</span> funkce dvou proměnných, která má
+parciální derivace. <em>Gradientem</em> funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> rozumíme
+vektor
+<div class="math notranslate nohighlight">
+\[\nabla f:=\left(\frac{\partial f}{\partial
+    x},\frac{\partial f}{\partial y}\right).\]</div>
+</p>
+</section>
+</div><p><strong>Poznámka.</strong> Formálně též často píšeme
+<div class="math notranslate nohighlight">
+\[\left(\frac{\partial}{\partial x},\frac\partial{\partial y}\right)f,\]</div>
+
+kde
+<span class="math notranslate nohighlight">\(\displaystyle \nabla=\left(\frac{\partial}{\partial x},\frac\partial{\partial
+    y}\right)\)</span> je operátor, se kterým pracujeme jako s
+vektorem. Nazývá se <em>nabla</em> nebo <em>Hamiltonův operátor</em>.</p>
+<div class="proof remark admonition" id="remark-10">
+<p class="admonition-title"><span>Poznámka </span> (Fyzikální význam gradientu)</p>
+<section class="remark-content" id="proof-content">
+<p>Gradient skalární veličiny <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny <span class="math notranslate nohighlight">\(\displaystyle f\)</span>. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny <span class="math notranslate nohighlight">\(\displaystyle f\)</span>. Délka tohoto vektoru je nárůst veličiny <span class="math notranslate nohighlight">\(\displaystyle f\)</span> na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat, například vedení tepla nebo difuze. V praxi nás proto většinou zajímá směr maximálního poklesu, tj. <span class="math notranslate nohighlight">\(\displaystyle -\nabla f\)</span>.</p>
+</section>
+</div><div class="proof algorithm dropdown admonition" id="algorithm-11">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 3.2 </span> (Lineární aproximace rovinné transformace)</p>
+<section class="algorithm-content" id="proof-content">
+</section>
+</div></section>
+<section id="linearni-aproximace-rovinne-transformace">
+<h3><span class="section-number">3.6.2. </span>Lineární aproximace rovinné transformace<a class="headerlink" href="#linearni-aproximace-rovinne-transformace" title="Link to this heading">#</a></h3>
+<p>Následující pasáže jsou motivací pro tematický celek, kterému se
+začneme věnovat na další přednášce.</p>
+<div class='obtekat'>
+<figure class="align-default" id="id15">
+<img alt="../_images/deformace.png" src="../_images/deformace.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.15 </span><span class="caption-text">Působením síly se element materiálu může posunout, rotovat, deformovat. Tuto změnu potřebujeme zachytit. Zdroj: https://physics.stackexchange.com/questions/311716/geometric-derivation-of-the-infinitesimal-strain-tensor/311744</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Rozšiřují lineární aproximaci na případ, kdy chceme
+popsat transformaci roviny. Protože v tomto případě pracujeme se dvěma
+souřadnicemi, je nutno uvažovat dvě funkce (pro každou souřadnici
+jednu funkci) a každá funkce závisí na dvou proměnných (na obou
+souřadnicích). Popis, který si představíme, využijeme při popisu
+matematického namáhání při odvození veličin, na nichž je založen obecný
+Hookův zákon dávající do souvislosti deformaci materiálu a působení
+vnější síly.</p>
+<p>Lineární aproximaci funkce jedné proměnné můžeme zapsat ve tvaru
+<div class="math notranslate nohighlight">
+\[f(x+\Delta x)\approx f+\frac{\mathrm df}{\mathrm dx}\Delta x,\]</div>
+
+kde na pravé straně pro stručnost nevypisujme závislost na
+<span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Podobně můžeme zapsat lineární aproximaci pro funkci dvou
+proměnných <span class="math notranslate nohighlight">\(\displaystyle x_{1}\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x_{2}\)</span> ve tvaru
+<div class="math notranslate nohighlight">
+\[
+f(x_{1}+\Delta x_{1}, x_{2})\approx f +\frac{\partial f}{\partial x_{1}},\qquad
+f(x_{1}, x_{2}+\Delta x_{2})\approx f +\frac{\partial f}{\partial x_{2}}.
+\]</div>
+</p>
+<p>Uvažujme nyní mechanické namáhání, kdy se těleso posunuje, rotuje a
+deformuje vlivem působení vnější síly a bod <span class="math notranslate nohighlight">\(\displaystyle (x_{1}, x_{2})\)</span> se
+posune o <span class="math notranslate nohighlight">\(\displaystyle (u_{1}(x_{1},x_{2}),u_{2}(x_{1},x_{2})).\)</span>
+Pomocí lineárních
+aproximací
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  u_{1}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&amp;\approx u_{1}+\frac{\partial u_{1}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{1}}{\partial x_{2}}\Delta x_{2}\\
+  u_{2}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&amp;\approx u_{2}+\frac{\partial u_{2}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{2}}{\partial x_{2}}\Delta x_{2}
+  \end{aligned}
+\end{split}\]</div>
+
+dostáváme aproximace této transformace. Při
+transformaci ve <span class="math notranslate nohighlight">\(\displaystyle 3D\)</span> je situace podobná, jenom jsou zde další členy
+od třetích souřadnic. Aby se situace nestala nepřehlednou, je klasický
+způsob zápisu neudržitelný. Nástroj pro přehlednou formulaci lineární
+aproximace dostaneme k dispozici později po probrání maticového počtu
+a maticového násobení. Poté budeme díky lineární aproximaci schopni
+zformulovat souvislost mezi deformací a působením vnější síly.</p>
+<p>Za výše uvedenou lineární aproximaci však platíme jistou daň. Lineární
+zobrazení mimo jiné transformuje přímky na přímky, rovnoběžky na
+rovnoběžky, střed úsečky na střed úsečky. Deformaci, která tyto
+podmínky nesplňuje, tím pádem nemůžeme podchytit. Lineární aproximace
+je přesná jenom pro relativně malé deformace. Proto se také výsledný
+produkt, ke kterému se v průběhu semestru dopracujeme, nazývá tenzor
+malých deformací.</p>
+</section>
+</section>
+<section id="shrnuti-hlavni-myslenky">
+<h2><span class="section-number">3.7. </span>Shrnutí, hlavní myšlenky<a class="headerlink" href="#shrnuti-hlavni-myslenky" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id16">
+<img alt="../_images/message.jpg" src="../_images/message.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 3.16 </span><span class="caption-text">A jaká je hlavní message? Zdroj: pixabay.com</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Derivace dokáže detekovat růst a klesání funkce a díky tomu dokážeme také detekovat body, kde se růst zastaví a změní na klesání nebo naopak. Tyto body nás přirozeně zajímají, protože v těchto bodech je studovaná veličina maximální nebo minimální a to má dopad při minimalizaci nákladů, maximalizaci pevnosti či zisku a jiných úlohách z praktického života.</p></li>
+<li><p>Silným nástrojem dokáží být i jednodušší postupy, jako například rozměrová analýza reprezentovaná Buckinghamovým <span class="math notranslate nohighlight">\(\displaystyle \Pi\)</span> teorémem.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../derivace_II/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Derivace a lineární aproximace</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../integraly/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Integrál, integrál a integrál</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parita-funkce">3.1. Parita funkce</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vyuziti-parity-pri-technickych-vypoctech">3.1.1. Využití parity při technických výpočtech</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lokalni-extremy">3.2. Lokální extrémy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivace-jak-najit-minimum-potencialu">3.2.1. Motivace: Jak najít minimum potenciálu?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lokalni-extremy-spojitych-funkci">3.2.2. Lokální extrémy spojitých funkcí</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#priklad-nosnik-maximalni-tuhosti">3.2.3. Příklad: Nosník maximální tuhosti</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postacujici-podminka-pro-lokalni-extrem">3.3. Postačující podmínka pro lokální extrém</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bolzanova-veta">3.3.1. Bolzanova věta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#priklad-kriticka-tloustka-izolace-trubky">3.3.2. Příklad: kritická tloušťka izolace trubky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odbocka-triky-pro-praci-s-funkcemi-1">3.4. Odbočka: triky pro práci s funkcemi 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buckinghamuv-pi-teorem">3.5. Buckinghamův <span class="math notranslate nohighlight">\(\displaystyle \Pi\)</span>-teorém</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorove-funkce-gradient">3.6. Vektorové funkce, gradient</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">3.6.1. Gradient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace-rovinne-transformace">3.6.2. Lineární aproximace rovinné transformace</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">3.7. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 21.10.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

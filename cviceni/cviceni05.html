@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-10-21T14:33:48+02:00" />
+    <title>5. Integrály I &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni05';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="6. Integrály II" href="cviceni06.html" />
+    <link rel="prev" title="4. Lokální extrémy" href="cviceni04.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="21.10.2023"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Integrály I</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-integralu">5.1. Výpočet integrálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vytekani-oleje">5.2. Vytékání oleje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#populace-vcel">5.3. Populace včel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#napousteni-nadrze">5.4. Napouštění nádrže</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praskla-kanalizace">5.5. Prasklá kanalizace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-uceni">5.6. Rychlost učení</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urceni-parametru-tak-aby-integral-mel-zadanou-hodnotu">5.7. Určení parametru tak, aby integrál měl zadanou hodnotu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-na-pruzine-volitelne">5.8. Práce na pružině (volitelné)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="integraly-i">
+<h1><span class="section-number">5. </span>Integrály I<a class="headerlink" href="#integraly-i" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><ul class="simple">
+<li><p>Naučíme se hledat neurčitý integrál funkce. Stačí mít po ruce vzorce.</p></li>
+<li><p>Naučíme se hledat určitý integrál funkce.</p></li>
+<li><p>Procvičíme si interpretaci integrálu v kontextu změny veličiny, která se mění nekonstantní rychlostí.</p></li>
+<li><p>Výpočet na počítači pomocí <a class="reference external" href="https://www.wolframalpha.com/">WolframAlpha</a> nebo Pythonu (možno automatizovat, spustit v cyklu nebo zakomponovat do rozsáhlejšího výpočtu, <a class="reference external" href="https://chat.openai.com/share/50b05eb0-39a8-4190-8337-8eaae2e8da2d">vzorový postup vygeneruje ChatGPT</a>)</p></li>
+</ul>
+</div></blockquote>
+<section id="vypocet-integralu">
+<h2><span class="section-number">5.1. </span>Výpočet integrálu<a class="headerlink" href="#vypocet-integralu" title="Link to this heading">#</a></h2>
+<p>Najděte následující integrály.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int x^2+2x\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \sqrt{x}\Bigl(x+\sqrt{x}\Bigr)\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac 1{\sqrt x}+\sqrt x\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac{x^2-1}x\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int e^x+e^{2x}\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \sin\left(x+\frac \pi 3\right)\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac 1{4x^2}\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac 1{4+x^2}\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac 1{1+4x^2}\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac 1{r^2}-\frac 1{r^6}\,\mathrm dr\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int _0^{\frac \pi 2} \cos x\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int _0^1(x-1)^3\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int _{-1}^{1} 3x^2+x^5\mathrm dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int_0^{10} e^{-0.1 t}\,\mathrm dt\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int_{-a}^{a} u^3\,\mathrm du\)</span></p></li>
+</ol>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Používáme vzorce <span class="math notranslate nohighlight">\(\displaystyle \int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \int e^x\,\mathrm dx=e^x+c\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \int e^{ax}\,\mathrm dx=\frac 1a e^{ax}+c\)</span> a dále linearitu (integrál zachovává součet a konstantní násobek)</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int x^2+2x\,\mathrm dx=\frac 13 x^3 + 2\frac 12 x^2 = \frac 13 x^3+x^2+c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \sqrt x(x+\sqrt x)\,\mathrm dx=\int x\sqrt x+\sqrt x\sqrt x\,\mathrm dx=\int x^{\frac 32}+x\,\mathrm dx=\frac 25 x^{\frac 52}+\frac 12 x^2+c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac 1{\sqrt x}+\sqrt x \,\mathrm dx=\int x^{-\frac 12}+x^{\frac 12}\,\mathrm dx=2x^{\frac 12}+\frac 23 x^{\frac 32}+c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac{x^2-1}{x}\,\mathrm dx=\int x-\frac 1x \,\mathrm dx=\frac {x^2}{2} - \ln|x|+C\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int e^x+e^{2x}\,\mathrm dx=e^x+\frac 12 e^{2x}+c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \sin\left(x+\frac\pi 3\right)=-\cos\left(x+\frac \pi3\right)+C\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int\frac{1}{4x^2}\,\mathrm dx=\frac 14 \int x^{-2}\,\mathrm dx=\frac 14  (-1)x^{-1}=-\frac {1}{4x}+c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac{1}{4+x^2}\,\mathrm dx=\frac 12 \mathop{\mathrm{arctg}} \frac x2 +C\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac{1}{1+4x^2}\,\mathrm dx=\int \frac{1}{1+(2x)^2}\,\mathrm dx=\frac 12 \mathop{\mathrm{arctg}} 2x +C\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int \frac 1{r^2}-\frac 1{r^6}\,\mathrm dr=\int r^{-2}-r^{-6}\,\mathrm dr=(-1)r^{-1}+\frac 15 r^{-5}=-\frac 1r+\frac 1{5r^5}+c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int_0^{\frac \pi2}\cos(x)\,\mathrm dx=[\sin x]_0^{\frac \pi2}=\sin\frac \pi2- \sin 0=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int_0^1 (x-1)^3\,\mathrm dx=\left[\frac 14 (x-1)^4\right]_0^1=\frac 14 (1-1)^4- \frac 14 (0-1)^4=-\frac 14\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int_{-1}^1 3x^2+x^5\,\mathrm dx=\left[x^3+\frac 16 x^6\right]_{-1}^1=\left(1^3+\frac 16 1^6\right)-\left((-1)^3+\frac 16 (-1)^6\right)=2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int_0^{10} e^{-0.1 t}\,\mathrm dt=\left[-10 e^{-0.1t}\right]_0^{10}=-10 e^{-0.1\times 10}-\left(-10 e^{-0.1\times 0}\right)=-10 e^{-1}+10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int_{-a}^{a} u^3\,\mathrm du=\left[\frac 14 u^4\right]_{-a}^a=\frac 14 a^4 - \frac 14 (-a)^4 = 0\)</span></p></li>
+</ol>
+</section>
+</div></section>
+<section id="vytekani-oleje">
+<h2><span class="section-number">5.2. </span>Vytékání oleje<a class="headerlink" href="#vytekani-oleje" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id1">
+<img alt="../_images/oil.jpg" src="../_images/oil.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.12 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Najděte slovní interpretaci integrálu
+<div class="math notranslate nohighlight">
+\[
+  \int_0^{10} r(t)\mathrm dt,
+\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle r(t)\)</span> je rychlost s jakou vytéká olej z děravé nádrže (v litrech
+za hodinu) a <span class="math notranslate nohighlight">\(\displaystyle t\)</span> je čas v hodinách. Vypočtěte integrál pro <span class="math notranslate nohighlight">\(\displaystyle r(t)=200-4t\)</span>.</p>
+<p><em>Toto a další příklady jsou klasické aplikace integrálu, kdy integrálem rychlosti, s jakou se mění nějaká veličina, je změna této veličiny.</em></p>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Integrál udává objem oleje, který vyteče za prvních 10 hodin. Pro zadanou funkci dostáváme
+<div class="math notranslate nohighlight">
+\[
+    \int_0^{10}r(t)\mathrm{d}t= \int_0^{10}(200-4t)\mathrm{d}t=     \left[200t-2t^2\right]_0^{10}= 2000-200-(0-0)=1800.
+  \]</div>
+
+Za 10 hodin vyteče 1800 litrů oleje.</p>
+</section>
+</div></section>
+<section id="populace-vcel">
+<h2><span class="section-number">5.3. </span>Populace včel<a class="headerlink" href="#populace-vcel" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id2">
+<img alt="../_images/bees.jpg" src="../_images/bees.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.13 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Populace včel o počáteční velikosti 100 včel se rozmnožuje rychlostí <span class="math notranslate nohighlight">\(\displaystyle r(t)\)</span>. Najděte slovní interpretaci výrazů
+<div class="math notranslate nohighlight">
+\[
+  \int_0^{15} r(t)\mathrm dt,
+\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[
+  100+\int_0^{15} r(t)\mathrm dt.
+\]</div>
+</p>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>První integrál značí přírůstek populace včel za patnáct jednotek času, druhý integrál značí celkovou velikost populace včel po uplynutí patnácti jednotek času. (Jednotky času nejsou v zadání specifikovány.)</p>
+</section>
+</div></section>
+<section id="napousteni-nadrze">
+<h2><span class="section-number">5.4. </span>Napouštění nádrže<a class="headerlink" href="#napousteni-nadrze" title="Link to this heading">#</a></h2>
+<p>Chemikálie teče do nádrže rychlostí
+<span class="math notranslate nohighlight">\(\displaystyle 180+3t\)</span> litrů za minutu, kde <span class="math notranslate nohighlight">\(\displaystyle t\in [0,60]\)</span> je čas v minutách. Určete, kolik chemikálie
+nateče do nádrže během prvních 20 minut.</p>
+<p>(Podle Stewart: Calculus.)</p>
+<div class="proof example dropdown admonition" id="example-3">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Změna množství v nádrži je integrál rychlosti, tj.
+<div class="math notranslate nohighlight">
+\[
+  \int_0^{20} (180+3t)\,\mathrm dt=180\times 20 + \left[\frac 32 t^2\right]_0^{20}=4\, 200 \,\mathrm l.
+\]</div>
+</p>
+</section>
+</div></section>
+<section id="praskla-kanalizace">
+<h2><span class="section-number">5.5. </span>Prasklá kanalizace<a class="headerlink" href="#praskla-kanalizace" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id3">
+<img alt="../_images/kanalizace.jpg" src="../_images/kanalizace.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.14 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Prasklá kanalizace způsobila znečištění jezera v rekreační
+oblasti. Koncentrace bakterií <span class="math notranslate nohighlight">\(\displaystyle C(t)\)</span> (v bakteriích na kubický
+centimetr, <span class="math notranslate nohighlight">\(\displaystyle t\)</span> je čas ve dnech) se po ošetření úniku pro <span class="math notranslate nohighlight">\(\displaystyle t\in[0,6]\)</span>  vyvíjí
+rychlostí <div class="math notranslate nohighlight">
+\[C'(t)=10^3(t-7).\]</div>
+ Jaká je změna koncentrace bakterií mezi
+čtvrtým a šestým dnem?</p>
+<p>(Podle Mardsen, Weinstein: Calculus I.)</p>
+<div class="proof example dropdown admonition" id="example-4">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Změna koncentrace je integrál z rychlosti s jakou se koncentrace mění, tj.
+<div class="math notranslate nohighlight">
+\[
+  \int_4^6 10^3(t-7)\,\mathrm dt= \left[10^3\left (\frac 12 t^2-7t\right)\right]_4^6=-4000
+\]</div>
+
+a koncentrace poklesne o <span class="math notranslate nohighlight">\(\displaystyle 4000\)</span> jednotek (bakterií na kubický centimetr).</p>
+</section>
+</div></section>
+<section id="rychlost-uceni">
+<h2><span class="section-number">5.6. </span>Rychlost učení<a class="headerlink" href="#rychlost-uceni" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id4">
+<img alt="../_images/slovnik.jpg" src="../_images/slovnik.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.15 </span><span class="caption-text">vlastní</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle W(t)\)</span> je počet francouzských slovíček,
+které se naučíme po <span class="math notranslate nohighlight">\(\displaystyle t\)</span> minutách. Typicky může být (pro první dvě hodiny učení)
+<div class="math notranslate nohighlight">
+\[W(0)=0\quad \text {a} \quad W'(t)=\frac{4t}{100}-3\left (\frac  t{100}\right)^2.\]</div>
+ Najděte pomocí integrálu funkci <span class="math notranslate nohighlight">\(\displaystyle W(t)\)</span>.</p>
+<p>(Podle Mardsen, Weinstein: Calculus I.)</p>
+<div class="proof example dropdown admonition" id="example-5">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Výsledná funkce integrálem rychlosti učení, tj.
+<div class="math notranslate nohighlight">
+\[
+W(t)=\int W'(t) \,\mathrm dt  =  \int \frac{4t}{100}-3\left (\frac  t{100}\right)^2 \,\mathrm dt  =\frac {2t^2}{100}-\frac{t^3}{10000} +C,
+\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle C\)</span> je integrační konstanta. Protože musí platit <span class="math notranslate nohighlight">\(\displaystyle W(0)=0\)</span>, je <span class="math notranslate nohighlight">\(\displaystyle C=0\)</span> a proto
+<div class="math notranslate nohighlight">
+\[
+  W(t)=\frac {2t^2}{100}-\frac{t^3}{10000}.
+\]</div>
+</p>
+<p>Jiné řešení je pomocí určitého integrálu najít změnu a poté přičíst k počáteční hodnotě. Aby nedošlo ke kolizi mezi označením integrační proměnné <span class="math notranslate nohighlight">\(\displaystyle t\)</span> a mezi koncem časového intervalu, budeme tento konec časového intervalu označovat <span class="math notranslate nohighlight">\(\displaystyle T\)</span>. Tedy platí
+<div class="math notranslate nohighlight">
+\[
+  w(T)=w(0)+\int_0^T w'(t)\,\mathrm dt=   0+ \int_0^T \frac{4t}{100}-3\left (\frac  t{100}\right)^2 \,\mathrm dt  =\frac {2T^2}{100}-\frac{T^3}{10000}.
+\]</div>
+
+Tedy
+<div class="math notranslate nohighlight">
+\[
+  w(T)=\frac {2T^2}{100}-\frac{T^3}{10000}
+\]</div>
+
+a po přeznační proměnné máme stejný výsledek jako předešlým postupem.</p>
+</section>
+</div></section>
+<section id="urceni-parametru-tak-aby-integral-mel-zadanou-hodnotu">
+<h2><span class="section-number">5.7. </span>Určení parametru tak, aby integrál měl zadanou hodnotu<a class="headerlink" href="#urceni-parametru-tak-aby-integral-mel-zadanou-hodnotu" title="Link to this heading">#</a></h2>
+<p>V praktických úlohách je někdy situace, kdy integrujeme funkci s parametrem a hodnotu parametru je nutno doladit tak, aby integrál měl
+předem stanovenou hodnotu.  Určete hodnotu reálného parametru <span class="math notranslate nohighlight">\(\displaystyle a\)</span> tak,
+aby byl integrál <div class="math notranslate nohighlight">
+\[\int_0^{10} a \sqrt x\,\mathrm dx\]</div>
+ roven hodnotě
+2019.</p>
+<div class="proof example dropdown admonition" id="example-6">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\int _0^{10} a\sqrt x=\left[a\frac 23 x^{\frac 32}\right]_0^{10}=\frac {2a}{3}(10)^{\frac 32}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  2019&amp;=\frac {2a}{3}(10)^{\frac 32}\\
+  a&amp;=\frac 32 2019 (10)^{-\frac 32}\end{aligned}\end{split}\]</div>
+</section>
+</div></section>
+<section id="prace-na-pruzine-volitelne">
+<h2><span class="section-number">5.8. </span>Práce na pružině (volitelné)<a class="headerlink" href="#prace-na-pruzine-volitelne" title="Link to this heading">#</a></h2>
+<div class="shorten" data-text="Volitelně ukázka příkladu počítaného v různých jednotkách. Integruje se pokaždé jiná funkce a pokaždé v jiných mezích, ale počítá se vždy to stejné a výsledky si odpovídají. Je to speciální případ substituce, pokročilejší integrační metody, které se budeme věnovat příště.">
+<p>Síla působící na pružinu je úměrná
+deformaci pružiny. Natáhneme-li pružinu z rovnovážného stavu o hodnotu
+<span class="math notranslate nohighlight">\(\displaystyle x\)</span>, je nutno působit silou <span class="math notranslate nohighlight">\(\displaystyle kx\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle k\)</span> je konstanta (tuhost
+pružiny). Vypočtěte práci nutnou k natažení pružiny z nedeformovaného
+stavu o jednotkovou délku a poté o délku <span class="math notranslate nohighlight">\(\displaystyle l\)</span>.</p>
+<p>Po obecném výpočtu vypočtěte práci pro pružinu o zadané tuhosti <span class="math notranslate nohighlight">\(\displaystyle k\)</span> a
+deformaci <span class="math notranslate nohighlight">\(\displaystyle \Delta x\)</span>. Výpočet proveďte určitým integrálem třikrát,
+postupně pro jednotku délky centimetr, decimetr a metr. Až po
+dokončení výpočtu převeďte na joule (newton krát metr).</p>
+<div class="math notranslate nohighlight">
+\[k=10 \,\mathrm{N}/\mathrm{cm}=100 \,\mathrm{N}/\mathrm{dm}=1000 \,\mathrm{N}/\mathrm{m}, \qquad \Delta x=10\,\mathrm{cm}=1\,\mathrm{dm}=0.1\,\mathrm{m}\]</div>
+<p><em>Všimněte si, že v každém případě se integruje jiná funkce a v jiných
+mezích. Protože však všechny výpočty charakterizují stejnou situaci,
+výsledky jsou po převedení na stejné jednotky stejné, což je
+očekávané.
+Změna jednotek je speciální případ substituce, kdy proměnnou podle
+které integrujeme nahradíme proměnnou jinou. Tuto metodu si pro
+integrál představíme na přednášce.</em></p>
+<div class="proof example dropdown admonition" id="example-7">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Jednotková délka:
+<div class="math notranslate nohighlight">
+\[W=\int_0^1 F\,\mathrm dx = \int_0^1 kx\,\mathrm dx = \left[k\frac 12 x^2\right]_0^1=\frac 12 k-0=\frac 12 k\]</div>
+</p>
+<p>Délka <span class="math notranslate nohighlight">\(\displaystyle l\)</span>:
+<div class="math notranslate nohighlight">
+\[W=\int_0^l F\,\mathrm dx = \int_0^l kx\,\mathrm dx = \left[k\frac 12 x^2\right]_0^l=\frac 12 kl^2-0=\frac 12 kl^2\]</div>
+</p>
+<p>Výpočet v centimetrech:
+<div class="math notranslate nohighlight">
+\[W=\int_0^{10}  10 x\,\mathrm dx = \left[5 x^2\right]_0^{10}=5\times 100=500\,\mathrm N \mathrm{cm}=5\,\mathrm N\mathrm m\]</div>
+</p>
+<p>Výpočet v decimetrech:
+<div class="math notranslate nohighlight">
+\[W=\int_0^{1}  100 x\,\mathrm dx = \left[50 x^2\right]_0^{1}=50\,\mathrm N \mathrm{dm}=5\,\mathrm N\mathrm m\]</div>
+</p>
+<p>Výpočet v metrech:
+<div class="math notranslate nohighlight">
+\[W=\int_0^{0.1}  1000 x\,\mathrm dx = \left[500 x^2\right]_0^{0.1}=500\times 0.01\,\mathrm N \mathrm{m}=5\,\mathrm N \mathrm{m}\]</div>
+</p>
+</section>
+</div></div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cviceni04.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Lokální extrémy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cviceni06.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Integrály II</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-integralu">5.1. Výpočet integrálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vytekani-oleje">5.2. Vytékání oleje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#populace-vcel">5.3. Populace včel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#napousteni-nadrze">5.4. Napouštění nádrže</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praskla-kanalizace">5.5. Prasklá kanalizace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-uceni">5.6. Rychlost učení</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#urceni-parametru-tak-aby-integral-mel-zadanou-hodnotu">5.7. Určení parametru tak, aby integrál měl zadanou hodnotu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prace-na-pruzine-volitelne">5.8. Práce na pružině (volitelné)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 21.10.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

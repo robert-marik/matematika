@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-10-21T14:33:48+02:00" />
+    <title>8. Matice &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni08';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="9. Determinanty, soustavy rovnic" href="cviceni09.html" />
+    <link rel="prev" title="7. Diferenciální rovnice" href="cviceni07.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="21.10.2023"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Matice</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nasobeni-matic">8.1. Násobení matic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustava-rovnic-jako-nasobeni-matic">8.2. Soustava rovnic jako násobení matic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timmyho-transformace">8.3. Timmyho transformace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-rotace">8.4. Matice rotace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-posunuti">8.5. Matice posunutí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-zachovavajici-vyznacne-smery">8.6. Matice, zachovávající význačné směry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-derivovani">8.7. Matice derivování</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-projekce-volitelny-obsah">8.8. Matice projekce (volitelný obsah)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="matice">
+<h1><span class="section-number">8. </span>Matice<a class="headerlink" href="#matice" title="Link to this heading">#</a></h1>
+<section id="nasobeni-matic">
+<h2><span class="section-number">8.1. </span>Násobení matic<a class="headerlink" href="#nasobeni-matic" title="Link to this heading">#</a></h2>
+<p>Vynásobte matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> a <span class="math notranslate nohighlight">\(\displaystyle B\)</span> pro obě pořadí násobení.
+<div class="math notranslate nohighlight">
+\[\begin{split}A=  \begin{pmatrix}  1 &amp; -2 &amp; 3\\  0 &amp; 1 &amp; 0\\  1 &amp; 2 &amp; -2\end{pmatrix},\qquad B=  \begin{pmatrix}  2 &amp; -2 &amp; 2\\  -1 &amp; 2 &amp; -1\\  0 &amp; 1 &amp; 3\end{pmatrix}.\end{split}\]</div>
+
+Vynásobte matice <span class="math notranslate nohighlight">\(\displaystyle B\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C\)</span> pro obě pořadí násobení, je-li
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C=  \begin{pmatrix}
+  1 &amp; 0 &amp; 0\\
+  0 &amp; 3 &amp; 0\\
+  0 &amp; 0 &amp; 4
+\end{pmatrix}.
+\end{split}\]</div>
+</p>
+<p><em>V tomto příkladě si vyzkoušíme násobení matic a kromě toho uvidíme, že násobení diagonální maticí je v jistém smyslu jednoduché. Podle toho, v jakém pořadí násobíme matice, se diagonálními prvky se násobí řádky nebo sloupce druhé matice.</em></p>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>S rozepsáním pomocí lineárních kombinací vektorů tvořených sloupci matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\begin{split}2\cdot   \begin{pmatrix}  1 \\  0 \\  1 \end{pmatrix} -1\cdot\begin{pmatrix}   -2 \\   1 \\   2 \end{pmatrix} +0\cdot\begin{pmatrix}3\\ 0\\ -2\end{pmatrix} = \begin{pmatrix} 4\\ -1\\ 0\end{pmatrix}\end{split}\]</div>
+
+<div class="math notranslate nohighlight">
+\[\begin{split}-2\cdot  \begin{pmatrix}  1 \\  0 \\  1 \end{pmatrix}+2\cdot\begin{pmatrix}   -2 \\   1 \\   2 \end{pmatrix}+1\cdot\begin{pmatrix}3\\ 0\\ -2\end{pmatrix} = \begin{pmatrix}-3\\ 2\\ 0\end{pmatrix}\end{split}\]</div>
+
+<div class="math notranslate nohighlight">
+\[\begin{split}2\cdot  \begin{pmatrix}  1 \\  0 \\  1 \end{pmatrix}-1\cdot\begin{pmatrix}   -2 \\   1 \\   2 \end{pmatrix}+3\cdot\begin{pmatrix}3\\ 0\\ -2\end{pmatrix}=\begin{pmatrix}13\\ -1\\ -6\end{pmatrix}
+\end{split}\]</div>
+
+Odsud dostáváme
+<div class="math notranslate nohighlight">
+\[\begin{split}
+AB=  \begin{pmatrix}
+  4 &amp; -3 &amp; 13 \\
+  -1 &amp; 2 &amp; -1\\
+  0 &amp; 0 &amp; -6
+\end{pmatrix}
+\end{split}\]</div>
+
+Jinou metodou, s podrobným rozepsáním pomocí skalárního součinu řádků první matice a sloupců druhé matice dostáváme
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+  \begin{aligned}   AB&amp;=    \begin{pmatrix}
+  1 &amp; -2 &amp; 3\\
+  0 &amp; 1 &amp; 0\\
+  1 &amp; 2 &amp; -2
+\end{pmatrix} \begin{pmatrix}
+  2 &amp; -2 &amp; 2\\
+  -1 &amp; 2 &amp; -1\\
+  0 &amp; 1 &amp; 3
+\end{pmatrix}
+\\&amp;= \begin{pmatrix}
+  1\times 2-2\times (-1)+3\times 0 &amp; 1\times (-2)-2\times 2+3\times 1 &amp; 1\times 2-2\times (-1)+3\times 3\\
+  0\times 2 +1\times (-1) +0\times 0  &amp;   0\times (-2) +1\times 2 +0\times 1  &amp;   0\times 2 +1\times (-1) +0\times 3  \\
+  1\times 2 +2\times (-1) -2\times 0 &amp;  1\times (-2) +2\times 2 -2\times 1 &amp;  1\times 2 +2\times (-1) -2\times 3
+\end{pmatrix}
+\\&amp;= \begin{pmatrix}
+  4 &amp; -3 &amp; 13 \\
+  -1 &amp; 2 &amp; -1\\
+  0 &amp; 0 &amp; -6
+\end{pmatrix}.
+\end{aligned}
+\end{split}\]</div>
+
+Poté již stručněji (rozepište si sami)
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   BA=    \begin{pmatrix}
+     4 &amp; -2 &amp; 2 \\
+-2 &amp; 2 &amp; -1 \\
+3 &amp; 7 &amp; -6
+\end{pmatrix}\quad
+BC= \begin{pmatrix}
+  2 &amp; -6 &amp; 8 \\
+-1 &amp; 6 &amp; -4 \\
+0 &amp; 3 &amp; 12
+\end{pmatrix}
+\quad
+CB= \begin{pmatrix}
+  2 &amp; -2 &amp; 2 \\
+-3 &amp; 6 &amp; -3 \\
+0 &amp; 4 &amp; 12
+\end{pmatrix}.
+\end{split}\]</div>
+
+V případě součinů s diagonální maticí se diagonálními prvky násobí odpovídající řádky nebo sloupce matice, podle toho, v jakém pořadí součin uvažujeme.</p>
+</section>
+</div></section>
+<section id="soustava-rovnic-jako-nasobeni-matic">
+<h2><span class="section-number">8.2. </span>Soustava rovnic jako násobení matic<a class="headerlink" href="#soustava-rovnic-jako-nasobeni-matic" title="Link to this heading">#</a></h2>
+<p>Zapište soustavu rovnic pomocí maticového násobení
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \begin{aligned}
+2x_1-3x_2+2x_3&amp;{}=12\\
+2x_1+\phantom{1}x_2+\phantom{1}x_3&amp;{}=21\\
+-x_1+3x_2+\phantom{1}x_3&amp;{}=0\\
+\end{aligned}
+\end{split}\]</div>
+</p>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \begin{pmatrix}
+  2 &amp; -3 &amp; 2 \\ 2 &amp; 1 &amp; 1 \\ -1 &amp; 3&amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+  x_1\\x_2\\x_3
+\end{pmatrix} = \begin{pmatrix}
+  12\\21\\0
+\end{pmatrix}
+\end{split}\]</div>
+</section>
+</div></section>
+<section id="timmyho-transformace">
+<h2><span class="section-number">8.3. </span>Timmyho transformace<a class="headerlink" href="#timmyho-transformace" title="Link to this heading">#</a></h2>
+<figure class="align-default">
+<img alt="../_images/Timmy.png" src="../_images/Timmy.png" />
+</figure>
+<p>Figurka na obrázku je Timmy ve třech situacích. Jednou se pozoruje svůj obraz ve vodě, jednou spadl na záda, a jednou vrhá stín. Vyjádřete pomocí matice transformaci, která vzor (černá malůvka) převádí na obraz (barevná malůvka).</p>
+<p>Poznámka: Stačí si všímat, kam se zobrazují jednotkové vektory ve směru os, tj. kam se zobrazí Timmiho nakročená noha a Timyho ruka, která je natažená dozadu. Případné neceločíselné složky matice jenom odhadněte. <em>Podle LAFF Linear Algebra - Foundations to Frontiers (www.ulaff.net)</em></p>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Nakročená noha je v bodě <span class="math notranslate nohighlight">\(\displaystyle (1,0)\)</span> a tento bod se transformuje sám na sebe pro krajní obrázky a na bod <span class="math notranslate nohighlight">\(\displaystyle (0,1)\)</span> pro prostřední obrázek. Tím je dán první sloupec matice zobrazení. Ruka natažená dozadu je v bodě <span class="math notranslate nohighlight">\(\displaystyle (0,1)\)</span> a u modrého Timmyho se transformuje (odhadem) na <span class="math notranslate nohighlight">\(\displaystyle (0,-0.8)\)</span>, u červeného Timmyho na <span class="math notranslate nohighlight">\(\displaystyle (-1,0)\)</span> a u šedého Timmyho (odhadem) na <span class="math notranslate nohighlight">\(\displaystyle (1,0.8)\)</span>. Matice jsou postupně
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  M_{\text{modrá}}=   \begin{pmatrix}
+    1 &amp; 0
+    \\
+    0 &amp;-0.8
+  \end{pmatrix},
+ \quad
+  M_{\text{červená}}=   \begin{pmatrix}
+    0 &amp; -1
+    \\
+    1 &amp; 0
+  \end{pmatrix},\quad
+  M_{\text{šedá}}=   \begin{pmatrix}
+    1 &amp; 1
+    \\
+    0 &amp; 0.8
+  \end{pmatrix}.
+\end{split}\]</div>
+</p>
+</section>
+</div></section>
+<section id="matice-rotace">
+<h2><span class="section-number">8.4. </span>Matice rotace<a class="headerlink" href="#matice-rotace" title="Link to this heading">#</a></h2>
+<p>Matice rotace o úhel <span class="math notranslate nohighlight">\(\displaystyle \theta\)</span> v kladném smyslu je
+<div class="math notranslate nohighlight">
+\[\begin{split}R_\theta=   \begin{pmatrix}
+    \cos\theta &amp; -\sin \theta\\
+    \sin\theta &amp; \cos\theta
+  \end{pmatrix}.
+\end{split}\]</div>
+
+Násobením ověřte, že matice otočení o úhel <span class="math notranslate nohighlight">\(\displaystyle -\theta\)</span> je k této matici inverzní.</p>
+<p><em>Návod:</em> Funkce kosinus je sudá funkce a funkce sinus je lichá funkce. Proto platí <div class="math notranslate nohighlight">
+\[\cos(-\theta)=\cos \theta \qquad\text{a}\qquad \sin(-\theta)=-\sin \theta.\]</div>
+</p>
+<p><em>Matice rotace je důležitá v aplikacích zabývajících se deformacemi, protože umožní odfiltrovat tu část změny polohy referenčních bodů, která je způsobena rotací a nepřispívá tedy ke změně tvaru tělesa.</em></p>
+<div class="proof example dropdown admonition" id="example-3">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Při zkratce <span class="math notranslate nohighlight">\(\displaystyle S=\sin \theta\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C=\cos\theta\)</span> platí
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+  R_{-\theta}=\begin{pmatrix} \cos(-\theta) &amp; -\sin(-\theta) \\ \sin(-\theta) &amp; \cos(-\theta)
+  \end{pmatrix}   =\begin{pmatrix} \cos \theta  &amp; \sin \theta \\ -\sin\theta &amp; \cos\theta
+  \end{pmatrix}   =   \begin{pmatrix}
+    C &amp; S\\ -S &amp; C
+  \end{pmatrix}
+\end{split}\]</div>
+
+a potom <div class="math notranslate nohighlight">
+\[\begin{split}R_\theta R_{-\theta}=   \begin{pmatrix}     C &amp; -S \\ S&amp; C  \end{pmatrix}   \begin{pmatrix}     C &amp; S\\ -S &amp; C   \end{pmatrix}   =   \begin{pmatrix}     C^2+S^2 &amp; CS-SC \\ SC-CS &amp; S^2+C^2\end{pmatrix} = \begin{pmatrix}  1 &amp; 0 \\0&amp; 1\end{pmatrix}, \end{split}\]</div>
+
+kde jsme využili identitu
+<div class="math notranslate nohighlight">
+\[\sin^2\theta + \cos^2\theta=1.\]</div>
+</p>
+</section>
+</div></section>
+<section id="matice-posunuti">
+<h2><span class="section-number">8.5. </span>Matice posunutí<a class="headerlink" href="#matice-posunuti" title="Link to this heading">#</a></h2>
+<p>Transformace pomocí násobení matic zachovává počátek a nemůže proto charakterizovat například posunutí roviny. Pokud chceme mít
+pomocí maticového násobení realizováno i posunutí, musíme zavést
+homogenní souřadnice a ztotožnit bod <span class="math notranslate nohighlight">\(\displaystyle (x,y)\)</span> s vektorem
+<span class="math notranslate nohighlight">\(\displaystyle (x,y,1)^T\)</span>. Ukažte, že matice
+<div class="math notranslate nohighlight">
+\[\begin{split}P_{a,b}= \begin{pmatrix}
+  1&amp; 0&amp; a\\
+  0 &amp; 1 &amp; b\\
+  0&amp; 0&amp; 1
+\end{pmatrix}
+\end{split}\]</div>
+
+je matice posunutí o <span class="math notranslate nohighlight">\(\displaystyle a\)</span> doprava a <span class="math notranslate nohighlight">\(\displaystyle b\)</span> nahoru. Odhadněte, jak bude
+vypadat matice popisující opačnou transformaci a pro jedno nějaké pořadí
+součinu ověřte, že součin těchto matic je jednotková matice.</p>
+<div class="proof example dropdown admonition" id="example-4">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Platí
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{pmatrix}  1&amp; 0&amp; a\\  0 &amp; 1 &amp; b\\  0&amp; 0&amp; 1\end{pmatrix}\begin{pmatrix}  x\\y\\1\end{pmatrix} = \begin{pmatrix}  x+a\\y+b\\1\end{pmatrix} \end{split}\]</div>
+
+a vidíme, že k souřadnici <span class="math notranslate nohighlight">\(\displaystyle x\)</span> se přičítá <span class="math notranslate nohighlight">\(\displaystyle a\)</span> a k souřadnici <span class="math notranslate nohighlight">\(\displaystyle y\)</span> se přičítá <span class="math notranslate nohighlight">\(\displaystyle b\)</span>.
+Inverzní zobrazení bude posunutí o <span class="math notranslate nohighlight">\(\displaystyle a\)</span> doleva a o <span class="math notranslate nohighlight">\(\displaystyle b\)</span> dolů, tj.
+<div class="math notranslate nohighlight">
+\[\begin{split}   \begin{pmatrix}  1&amp; 0&amp; -a\\  0 &amp; 1 &amp; -b\\  0&amp; 0&amp; 1\end{pmatrix}.\end{split}\]</div>
+
+Přímým výpočtem vidíme, že platí
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{pmatrix}  1&amp; 0&amp; a\\  0 &amp; 1 &amp; b\\  0&amp; 0&amp; 1\end{pmatrix}  \begin{pmatrix}  1&amp; 0&amp; -a\\  0 &amp; 1 &amp; -b\\  0&amp; 0&amp; 1\end{pmatrix}=   \begin{pmatrix}  1&amp; 0&amp; 0\\  0 &amp; 1 &amp; 0\\  0&amp; 0&amp; 1\end{pmatrix}.\end{split}\]</div>
+</p>
+</section>
+</div></section>
+<section id="matice-zachovavajici-vyznacne-smery">
+<h2><span class="section-number">8.6. </span>Matice, zachovávající význačné směry<a class="headerlink" href="#matice-zachovavajici-vyznacne-smery" title="Link to this heading">#</a></h2>
+<p>Dřevo má tři výrazné
+směry a pokud máme možnost zvolit souřadnou soustavu tak, aby tyto
+směry byly dány vektory <span class="math notranslate nohighlight">\(\displaystyle (1,0,0)^T\)</span>, <span class="math notranslate nohighlight">\(\displaystyle (0,1,0)^T\)</span> a <span class="math notranslate nohighlight">\(\displaystyle (0,0,1)^T\)</span>, formulace
+fyzikálních zákonů se zjednoduší. Nyní si ukážeme proč. Najděte</p>
+<ol class="arabic simple">
+<li><p>nejobecnější matici <span class="math notranslate nohighlight">\(\displaystyle 3\times 3\)</span>, která zachovává směr vektoru <span class="math notranslate nohighlight">\(\displaystyle (1,0,0)^T\)</span>,</p></li>
+<li><p>nejobecnější symetrickou matici <span class="math notranslate nohighlight">\(\displaystyle 3\times 3\)</span>, která zachovává směr vektoru <span class="math notranslate nohighlight">\(\displaystyle (1,0,0)^T\)</span>,</p></li>
+<li><p>nejobecnější symetrickou matici <span class="math notranslate nohighlight">\(\displaystyle 3\times 3\)</span>, která zachovává směr vektorů <span class="math notranslate nohighlight">\(\displaystyle (1,0,0)^T\)</span>, <span class="math notranslate nohighlight">\(\displaystyle (0,1,0)^T\)</span>, <span class="math notranslate nohighlight">\(\displaystyle (0,0,1)^T\)</span>.</p></li>
+</ol>
+<p><em>V tomto příkladě uvidíme, že matice zachovávající směr os souřadnic jsou v určitém smyslu pěkné.</em></p>
+<div class="proof example dropdown admonition" id="example-5">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>ad 1.
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{pmatrix}    a &amp; b &amp; c \\ d &amp; e &amp; f \\ g&amp; h&amp; i \end{pmatrix}  \begin{pmatrix}    1\\0\\0  \end{pmatrix}   =   \begin{pmatrix}    a \\ d \\g  \end{pmatrix}\end{split}\]</div>
+
+a vektory <span class="math notranslate nohighlight">\(\displaystyle (1,0,0)^T\)</span>
+a <span class="math notranslate nohighlight">\(\displaystyle (a,d,g)^T\)</span> musí mít stejný směr. Proto <span class="math notranslate nohighlight">\(\displaystyle d=g=0\)</span> a nejobecnější matice s danou vlastností je matice, která ve druhém a třetím řádku začíná nulou.
+<div class="math notranslate nohighlight">
+\[\begin{split}     \begin{pmatrix}    a &amp; b &amp; c \\ 0 &amp; e &amp; f \\ 0&amp; h&amp; i \end{pmatrix}\end{split}\]</div>
+
+ad 2. Jako minulý případ, ale aby byla matice symetrická, musí být také <span class="math notranslate nohighlight">\(\displaystyle b=c=0\)</span>, a <span class="math notranslate nohighlight">\(\displaystyle h=f\)</span> tj.
+<div class="math notranslate nohighlight">
+\[\begin{split}     \begin{pmatrix}    a &amp; 0 &amp; 0 \\ 0 &amp; e &amp; f \\ 0&amp; f&amp; i \end{pmatrix}.\end{split}\]</div>
+</p>
+<p>ad 3. Jako minulý případ, ale ještě se musí zachovávat směry vektorů <span class="math notranslate nohighlight">\(\displaystyle (0,1,0)^T\)</span> a <span class="math notranslate nohighlight">\(\displaystyle (0,0,1)^T\)</span>. Platí
+<div class="math notranslate nohighlight">
+\[\begin{split}    \begin{pmatrix}    a &amp; 0 &amp; 0 \\ 0 &amp; e &amp; f \\ 0&amp; f&amp; i \end{pmatrix}  \begin{pmatrix}    0 \\1\\0  \end{pmatrix}   =   \begin{pmatrix}    0 \\ e\\f  \end{pmatrix},\quad    \begin{pmatrix}    a &amp; 0 &amp; 0 \\ 0 &amp; e &amp; f \\ 0&amp; f&amp; i \end{pmatrix}  \begin{pmatrix}    0 \\0\\1  \end{pmatrix}   =   \begin{pmatrix}    0 \\ f\\i \end{pmatrix}\end{split}\]</div>
+
+a aby vzor a obraz měly stejný směr, musí být <span class="math notranslate nohighlight">\(\displaystyle f=0\)</span>. Nejobecnější symetrická matice, která zachovává směr všech tří základních bázových vektorů je matice, která má mimo hlavní diagonálu nuly.</p>
+</section>
+</div></section>
+<section id="matice-derivovani">
+<h2><span class="section-number">8.7. </span>Matice derivování<a class="headerlink" href="#matice-derivovani" title="Link to this heading">#</a></h2>
+<p>Ukažte, že matice
+<span class="math notranslate nohighlight">\(\displaystyle A=\begin{pmatrix}  0 &amp; 0 &amp; 0 \\  2 &amp; 0 &amp; 0 \\  0 &amp; 1 &amp; 0\end{pmatrix}\)</span> je matice derivování polynomů stupně nejvýše <span class="math notranslate nohighlight">\(\displaystyle 2\)</span>, pokud polynom <span class="math notranslate nohighlight">\(\displaystyle ax^2+bx+c\)</span> ztotožníme s vektorem <span class="math notranslate nohighlight">\(\displaystyle \begin{pmatrix}  a \\ b\\c\end{pmatrix}\)</span>.  Vysvětlete, jak bychom
+interpretovali matici <span class="math notranslate nohighlight">\(\displaystyle A^2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle A^3\)</span> a tyto matice vypočtěte.</p>
+<p><em>Návod: je možné ukázat buď pro obecný polynom <span class="math notranslate nohighlight">\(\displaystyle ax^2+bx+c\)</span>, nebo samostatně pro polynomy  <span class="math notranslate nohighlight">\(\displaystyle x^2\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle 1\)</span> a poté si všimnout, že ostatní polynomy můžeme dostat lineárními kombinacemi a maticová násobení tyto l	ineární kombinace nepokazí díky tomu, že je distributivní a komutuje při násobení s konstantou.
+V tomto příkladě mimo jiné vidíme, že mocnina nenulové matice může být nula. To je efekt, který nemá obdobu u násobení reálných čísel.</em></p>
+<div class="proof example dropdown admonition" id="example-6">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Polynom <span class="math notranslate nohighlight">\(\displaystyle x^2\)</span> má derivaci <span class="math notranslate nohighlight">\(\displaystyle 2x\)</span>, tj. v označení pomocí vektorů
+se musí vektor <span class="math notranslate nohighlight">\(\displaystyle (1,0,0)^T\)</span> zobrazit na <span class="math notranslate nohighlight">\(\displaystyle (0,2,0)^T\)</span>. Toto snadno
+ukážeme, že platí, protože se vlastně jedná o první sloupec matice
+<span class="math notranslate nohighlight">\(\displaystyle A\)</span>. Podobně, polynom <span class="math notranslate nohighlight">\(\displaystyle x\)</span> má derivaci <span class="math notranslate nohighlight">\(\displaystyle 1\)</span> a polynom <span class="math notranslate nohighlight">\(\displaystyle 1\)</span> má derivaci
+<span class="math notranslate nohighlight">\(\displaystyle 0\)</span>, tj. v označení pomocí vektorů se musí vektory <span class="math notranslate nohighlight">\(\displaystyle (0,1,0)^T\)</span> a
+<span class="math notranslate nohighlight">\(\displaystyle (0,0,1)^T\)</span> zobrazit na <span class="math notranslate nohighlight">\(\displaystyle (0,0,1)^T\)</span> a <span class="math notranslate nohighlight">\(\displaystyle (0,0,0)^T\)</span>. Opět vidíme snadno,
+že pro naši matici <span class="math notranslate nohighlight">\(\displaystyle A\)</span> platí (dostáváme vlastně druhý a třetí sloupec
+matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span>).</p>
+<p>Protože libovolný polynom druhého stupně dostaneme pomocí lineárních
+kombinací výše uvedených vektorů a protože tyto lineární kombinace
+zůstanou při maticovém násobení zachovány, je při výše definovaném
+zobrazení obrazem libovolného polynomu druhého stupně jeho derivace.</p>
+<p>Pro obecný polynom <span class="math notranslate nohighlight">\(\displaystyle ax^2+bx+c\)</span> s derivací <span class="math notranslate nohighlight">\(\displaystyle 2ax+b\)</span> vidíme, že obrazem
+vektoru <span class="math notranslate nohighlight">\(\displaystyle (a,b,c)^T\)</span> musí být <span class="math notranslate nohighlight">\(\displaystyle (0,2a, b)^T\)</span>, což matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> opět (po
+krátkém výpočtu) splňuje.</p>
+<p>Matice <span class="math notranslate nohighlight">\(\displaystyle A^2\)</span> je druhá derivace a <span class="math notranslate nohighlight">\(\displaystyle A^3\)</span> třetí derivace a mají tvar
+<div class="math notranslate nohighlight">
+\[\begin{split}  A^2=   \begin{pmatrix}  0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 \\  2 &amp; 0 &amp; 0\end{pmatrix}, \qquad   A^3=   \begin{pmatrix}  0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0\end{pmatrix}.\end{split}\]</div>
+</p>
+</section>
+</div></section>
+<section id="matice-projekce-volitelny-obsah">
+<h2><span class="section-number">8.8. </span>Matice projekce (volitelný obsah)<a class="headerlink" href="#matice-projekce-volitelny-obsah" title="Link to this heading">#</a></h2>
+<p>Matice <span class="math notranslate nohighlight">\(\displaystyle P=\begin{pmatrix}  \cos^2 \alpha &amp; \cos \alpha \sin \alpha \\  \cos\alpha\sin\alpha &amp; \sin^2 \alpha\end{pmatrix}\)</span> reprezentuje kolmou projekci na přímku, která jde počátkem soustavy souřadnic a svírá s kladnou částí osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span> úhel <span class="math notranslate nohighlight">\(\displaystyle \alpha\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Ukažte, že platí <span class="math notranslate nohighlight">\(\displaystyle P^2=P\)</span>.</p></li>
+<li><p>Ukažte, (nemusíte výpočtem, například graficky, nebo využitím
+toho, že každý bod přímky se zobrazí sám na sebe) že dva různé body
+se projekcí mohou zobrazit na stejný bod a proto není naděje na to
+mít inverzní zobrazení. Proto neexistuje inverzní matice.</p></li>
+</ol>
+<div class="proof example dropdown admonition" id="example-7">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Pro <span class="math notranslate nohighlight">\(\displaystyle C=\cos \alpha\)</span> a <span class="math notranslate nohighlight">\(\displaystyle S=\sin\alpha\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}P^2&amp;=  \begin{pmatrix}    C^2 &amp; CS \\CS &amp; S^2  \end{pmatrix}  \begin{pmatrix}    C^2 &amp; CS \\CS &amp; S^2  \end{pmatrix} = \begin{pmatrix}  C^4+C^2S^2 &amp; C^3S+CS^3 \\C^3S+CS^3 &amp; C^2S^2+S^4\end{pmatrix} \\&amp;= \begin{pmatrix}  C^2(C^2+S^2) &amp; CS(C^2+S^2) \\CS(C^2+S^2) &amp; S^2(C^2+S^2) \end{pmatrix} = \begin{pmatrix}  C^2 &amp; CS \\CS &amp; S^2\end{pmatrix} =P\end{aligned}\end{split}\]</div>
+</p>
+<p>Evidentně jakýkoliv bod mimo přímku projekce a jeho obraz jsou dva různé body, které mají stejný obraz. Proto nemůže existovat inverzní zobrazení.</p>
+<p>Pro determinant platí
+<div class="math notranslate nohighlight">
+\[\begin{split}  |P|=   \begin{vmatrix}      C^2 &amp; CS \\CS &amp; S^2  \end{vmatrix} =C^2S^2-(CS)(CS)=C^2S^2-C^2S^2=0\end{split}\]</div>
+
+a tento výpočet potvrzuje, že neexistuje inverzní matice.</p>
+</section>
+</div></section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cviceni07.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Diferenciální rovnice</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cviceni09.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Determinanty, soustavy rovnic</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nasobeni-matic">8.1. Násobení matic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustava-rovnic-jako-nasobeni-matic">8.2. Soustava rovnic jako násobení matic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timmyho-transformace">8.3. Timmyho transformace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-rotace">8.4. Matice rotace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-posunuti">8.5. Matice posunutí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-zachovavajici-vyznacne-smery">8.6. Matice, zachovávající význačné směry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-derivovani">8.7. Matice derivování</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-projekce-volitelny-obsah">8.8. Matice projekce (volitelný obsah)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 21.10.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

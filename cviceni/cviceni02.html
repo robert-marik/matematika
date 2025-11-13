@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-10-21T14:33:48+02:00" />
+    <title>2. Využití derivací v matematických modelech &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni02';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="3. Výpočet derivací, lineární aproximace" href="cviceni03.html" />
+    <link rel="prev" title="1. Výpočet derivací" href="cviceni01.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="21.10.2023"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Využití derivací v matematických modelech</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tepelna-vymena-podle-newtonova-zakona">2.1. Tepelná výměna podle Newtonova zákona</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veliciny-z-rovnice-vedeni-tepla">2.2. Veličiny z rovnice vedení tepla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#okrajove-podminky-pro-rovnici-vedeni-tepla-volitelny-obsah">2.3. Okrajové podmínky pro rovnici vedení tepla (volitelný obsah)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-rustu-umerneho-vzdalenosti-od-cilove-hodnoty">2.4. Model růstu úměrného vzdálenosti od cílové hodnoty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kontaminace-a-cisteni">2.5. Kontaminace a čištění</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logisticka-rovnice-model-vyuzivani-prirodnich-zdroju">2.6. Logistická rovnice: model využívání přírodních zdrojů</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#populace-jelenu">2.7. Populace jelenů</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hruby-model-chripkove-epidemie">2.8. Hrubý model chřipkové epidemie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ropna-skvrna">2.9. Ropná skvrna</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-uceni">2.10. Model učení</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-derivace-volitelny-obsah">2.11. Výpočet derivace (volitelný obsah)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="vyuziti-derivaci-v-matematickych-modelech">
+<h1><span class="section-number">2. </span>Využití derivací v matematických modelech<a class="headerlink" href="#vyuziti-derivaci-v-matematickych-modelech" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><ul class="simple">
+<li><p>Procvičíme si interpretaci derivace jako rychlosti změny.</p></li>
+<li><p>Naučíme se sestavovat matematické modely situací, ve kterých se veličina mění nekonstantní rychlostí</p></li>
+<li><p>Prerekvizitou je schopnost chápat derivaci jako rychlost změny a umět
+matematicky vyjádřit úměrnost mezi veličinami.</p></li>
+<li><p>V některých řešeních jsou odkazy, jak se s úlohou porvala umělá
+inteligence (AI). Ukazují, že AI může pomoci, ale může i generovat
+zavádějící nebo nesprávná řešení. Proto používáme jenom jako doplněk tam,
+kde úloze plně rozumíme, dokážeme zkontrolovat výstupy AI a AI využíváme
+jako pomocníka pro urychlení práce. V roce 2023 ještě zdaleka není rozumné
+AI využívat jako zdroj znalostí (viz halucinace AI).</p></li>
+</ul>
+</div></blockquote>
+<section id="tepelna-vymena-podle-newtonova-zakona">
+<h2><span class="section-number">2.1. </span>Tepelná výměna podle Newtonova zákona<a class="headerlink" href="#tepelna-vymena-podle-newtonova-zakona" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id1">
+<img alt="../_images/room.jpg" src="../_images/room.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.10 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Newtonův zákon ochlazování je možné použít pro tělesa, u nichž teplota je ve všech místech stejná a efekty spojené s vedením tepla jsou zanedbatelné. Takové objekty charakterizujeme nízkým Biotovým číslem (naučíte se v navazujících předmětech jako Fyzikální vlastnosti dřeva). Předpokládejme, že nevytápěná místnost tyto podmínky splňuje.</p>
+<p>Teplota v místnosti kde se přestalo topit při teplotě
+<span class="math notranslate nohighlight">\(\displaystyle T=23^\circ\mathrm{C}\)</span> se mění tepelnou výměnou s okolím. Rychlost,
+s jakou teplota místnosti v zimě klesá je úměrná rozdílu teplot
+v místnosti a venku. Vyjádřete toto pozorování kvantitativně pomocí
+derivací. Sestavíte tím matematický model popisující pokles teploty
+v této místnosti.</p>
+<p><em>V tomto příkladu se učíme, že tam, kde se pracuje s rychlostmi změn hraje při kvantitativním popisu roli derivace. Ze střední školy známe tvary fyzikálních zákonů a vztahů v omezené platnosti, kdy se rychlost nemění (jako například  rovnoměrný pohyb) nebo mění jenom velmi speciálním způsobem (jako například  rovnoměrně zrychlený pohyb). Pomocí derivací tato omezení středoškolské fyziky padají.</em></p>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle T\)</span> teplota a <span class="math notranslate nohighlight">\(\displaystyle t\)</span> čas, je veličina <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dT}{\mathrm dt}\)</span> rychlost s jakou roste teplota a veličina <span class="math notranslate nohighlight">\(\displaystyle -\frac{\mathrm dT}{\mathrm dt}\)</span> rychlost, s jakou teplota klesá. Podle předpokladů platí
+<div class="math notranslate nohighlight">
+\[
+  -\frac{\mathrm dT}{\mathrm dt}=k(T-T_{\text{venku}})
+\]</div>
+
+a model má tvar
+<div class="math notranslate nohighlight">
+\[
+  \frac{\mathrm dT}{\mathrm dt}=-k(T-T_{\text{venku}}),\quad T(0)=23^\circ\mathrm{C}
+\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle k\)</span> je konstanta úměrnosti a <span class="math notranslate nohighlight">\(\displaystyle T_{\text{venku}}\)</span> teplota venku.</p>
+<p><em>Poznámka:</em> S úlohou si <a class="reference external" href="https://chat.openai.com/share/85a27270-9a5e-4208-bb86-3f8390af470a">poradil i automat chatGPT</a> a <a class="reference external" href="https://gist.github.com/robert-marik/b7a8a893ffbdd248081314e30b73a2b7">nabídl počítačovou simulaci</a> pro vizualizaci řešení.</p>
+</section>
+</div></section>
+<section id="veliciny-z-rovnice-vedeni-tepla">
+<h2><span class="section-number">2.2. </span>Veličiny z rovnice vedení tepla<a class="headerlink" href="#veliciny-z-rovnice-vedeni-tepla" title="Link to this heading">#</a></h2>
+<p>V případech, kdy je nutno uvažovat vedení tepla (vysoké Biotovo číslo), postupujeme podle rovnice vedení tepla, kterou jsme na přednášce odvodili pro jednorozměrný případ ve tvaru
+<div class="math notranslate nohighlight">
+\[\varrho c \frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\Bigl(\lambda\frac{\partial T}{\partial x}\Bigr).\]</div>
+  Typickým případem vedení tepla v jedné dimenzi je vedení tepla ve stěně.</p>
+<p>Uvažujme jednorozměrnou úlohu s vedením tepla. Osa <span class="math notranslate nohighlight">\(\displaystyle x\)</span> směřuje doprava, teplota v bodě <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span> je <span class="math notranslate nohighlight">\(\displaystyle T(x,t)\)</span> ve stupních Celsia. Tok tepla v čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span> a v bodě <span class="math notranslate nohighlight">\(\displaystyle x\)</span> je <span class="math notranslate nohighlight">\(\displaystyle q(x,t)\)</span> v joulech za sekundu. Kladný tok je ve směru osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span>.
+Podle Fourierova zákona je <div class="math notranslate nohighlight">
+\[q=-\lambda \frac{\partial T}{\partial x}.\]</div>
+</p>
+<p>Budeme uvažovat jednorozměrný objekt, tyč nebo stěnu. Počáteční teplota je <span class="math notranslate nohighlight">\(\displaystyle 0\,^{\circ}\mathrm{C}\)</span>, pravý konec udržujeme na této teplotě, levý konec ohříváme na <span class="math notranslate nohighlight">\(\displaystyle 20\,^{\circ}\mathrm{C}\)</span> a udržujeme na této teplotě. Ve zbytku tyče (stěny) se postupně nastolí rovnováha vlivem vedení tepla.</p>
+<p>Vyjádřete následující veličiny a určete jejich znaménko.</p>
+<ol class="arabic simple">
+<li><p>Rychlost s jakou v daném místě a čase roste teplota jako funkce času.</p></li>
+<li><p>Rychlost s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle  roste teplota směrem doprava.</p></li>
+<li><p>Rychlost s jakou klesá teplota jako funkce polohy, tj. směrem doprava.</p></li>
+<li><p>Rychlost se kterou roste (směrem doprava) tok tepla jako funkce polohy.</p></li>
+<li><p>Rychlost se kterou klesá (směrem doprava) tok tepla jako funkce polohy.</p></li>
+</ol>
+<p><em>Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasnění si toho, co derivace vyjadřují a kdy jsou kladné a kdy záporné. To je nutné znát při zadávání modelů do numerických simulací. Výpočet za člověka udělají počítače, ale slovní interpretaci ani kontrolu, že je model relevantní a nemá popletená znaménka, za člověka nikdo neudělá. Používáme postup všeobecně přijímaný ve fyzikálních modelech. To však někdy nekoresponduje s výpočetními nástroji. Například ANSYS, nejpoužívanější program na výpočet modelů typu rovnice vedení tepla, používá pro zadání okrajových podmínek nikoliv tok ven z tělesa, ale tok dovnitř tělesa. Tedy pro fyzika a výpočtáře mají tyto podmínky opačné znaménko. Proto je potřeba vědět co se počítá, jak se systém chová, jak se to projeví na jeho vlastnostech a potom zkontrolovat, jestli to tak vychází i ve výpočetním modelu, jestli nepočítáme něco nesmyslného.</em></p>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Shrneme si, co je možné očekávát během průběhu děje. U studené tyče ohřejeme levý konec a teplotu udržujeme, pravý konec udržujmeme na nízké teplotě. Tyč se postupně ohřeje a pořád, během dosahování rovnováhy i po nastolení rovnováhy, bude blíž k teplému konci teplota vyšší. Směrem doprava tedy teplota bude klesat a tím směrem také poteče teplo. Po dodsažení rovnováhy bude toto teplo stejné, jako energie, kterou musíme na ohřívaném konci dodávat a na ochlazovaném konci odebírat. Než však nastane rovnováha, musí se všechny části tyče prohřát na cílovou teplotu. To znamená, že při předávání tepla směrem k chladnějšímu konci musí část tepla zůstat v daném místě jako vnitřní energie a projeví se zvýšením teploty. Do dosažení rovnovážného stavu tyč vede teplo, ale každá část tyče předává dál jenom část tepla, protože další část použije na zvýšení své teploty. Proto platí, že čím více jsme napravo, tím méně tam teče tepla.</p>
+<ol class="arabic simple">
+<li><p>Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je <span class="math notranslate nohighlight">\(\displaystyle \frac {\partial T}{\partial t}\)</span> a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních Celsia za sekundu.
+<span class="math notranslate nohighlight">\(\displaystyle \left[\frac {\partial T}{\partial t}\right]={}^\circ\mathrm{C}\,\mathrm{s}^{-1}\)</span></p></li>
+<li><p>Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je <span class="math notranslate nohighlight">\(\displaystyle \frac {\partial T}{\partial x}\)</span> a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních Celsia na metr.
+<span class="math notranslate nohighlight">\(\displaystyle \left[\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}\)</span></p></li>
+<li><p>Rychlost s jakou klesá teplota jako funkce polohy, tj. směrem doprava, je <span class="math notranslate nohighlight">\(\displaystyle -\frac {\partial T}{\partial x}\)</span> a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních Celsia na metr.
+<span class="math notranslate nohighlight">\(\displaystyle \left[-\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}\)</span></p></li>
+<li><p>Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy je <span class="math notranslate nohighlight">\(\displaystyle \frac {\partial q}{\partial x}\)</span>. Teplo teče doprava a přitom se spotřebovává, protože se ohřívá tyč. Proto tok klesá a parciální derivace je záporná.
+Měříme v joulech za sekundu na metr.
+<span class="math notranslate nohighlight">\(\displaystyle \left[\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}\)</span></p></li>
+<li><p>Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy je <span class="math notranslate nohighlight">\(\displaystyle -\frac {\partial q}{\partial x}\)</span> a tato veličina je kladná, což plyne z předchozího bodu a z toho, že jsme změnili znaménko. Tato veličina udává, kolik tepla za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže „ztratit“, ale použije se na zvýšení teploty, což je právě obsahem rovnice vedení tepla. Měříme v joulech za sekundu na metr.
+<span class="math notranslate nohighlight">\(\displaystyle \left[-\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}\)</span></p></li>
+</ol>
+</section>
+</div></section>
+<section id="okrajove-podminky-pro-rovnici-vedeni-tepla-volitelny-obsah">
+<h2><span class="section-number">2.3. </span>Okrajové podmínky pro rovnici vedení tepla (volitelný obsah)<a class="headerlink" href="#okrajove-podminky-pro-rovnici-vedeni-tepla-volitelny-obsah" title="Link to this heading">#</a></h2>
+<p>K modelu stěny pomocí rovnice vedení tepla je ještě nutné přidat podmínky související s počátečním stavem (počáteční podmínky) a s chováním na okrajích (okrajové podmínky).</p>
+<p>Nechť stěna je na intervalu <span class="math notranslate nohighlight">\(\displaystyle x\in[0,L]\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> je vnitřní okraj a <span class="math notranslate nohighlight">\(\displaystyle x=L\)</span> je vnější okraj. Výraz <span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}\)</span> udává tok tepla ve směru osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Tok ve směru osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span> má kladné znaménko. Naformulujte okrajové podmínky v následujících scénářích.</p>
+<ol class="arabic simple">
+<li><p>Z venku dokonale izolovaná stěna. Na hranici <span class="math notranslate nohighlight">\(\displaystyle x=L\)</span> nedochází k toku tepla.</p></li>
+<li><p>Vnitřní část stěny je udržovaná na konstantní teplotě <span class="math notranslate nohighlight">\(\displaystyle T=23^\circ \mathrm C\)</span>.</p></li>
+<li><p>Stěna je zvenku osvětlená a zahřívaná Sluncem. Na vnější hranici je konstantní tok tepla směrem do stěny.</p></li>
+<li><p>Stěna je zvenku ochlazována prouděním vzduchu. Tok tepla mezi stěnou a okolím je úměrný rozdílu teplot stěny a okolí.</p></li>
+<li><p>Stěna je zevnitř ohřívána prouděním vzduchu od radiátorů. Tok tepla mezi stěnou a okolím je úměrný rozdílu teplot stěny a okolí.</p></li>
+</ol>
+<p><em>Zpracováno podle Cengel: Mass and heat transfer.</em></p>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Je-li podmínka na teplotu, figuruje v matematické formulaci <span class="math notranslate nohighlight">\(\displaystyle T\)</span> vypočtená v bodě <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> nebo <span class="math notranslate nohighlight">\(\displaystyle x=L\)</span> podle toho, jedná-li se o vnitřní nebo vnější část stěny.
+<span class="math notranslate nohighlight">\(\displaystyle T\)</span> je funkce polohy, tj. <span class="math notranslate nohighlight">\(\displaystyle T=T(x).\)</span> Je-li podmínka na tok, figuruje v matematické formulaci tok ve tvaru <span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}\)</span>, opět vypočtená v jednom z krajních bodů.</p>
+<ol class="arabic simple">
+<li><p>Nulový tok pro <span class="math notranslate nohighlight">\(\displaystyle x=L\)</span> znamená <span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}(L)=0\)</span>, což je ekvivalentní <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial T}{\partial x}(L)=0.\)</span></p></li>
+<li><p>Teplota 23 stupňů pro <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> znamená <span class="math notranslate nohighlight">\(\displaystyle T(0)=23\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}(L)=-Q\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle Q\)</span> je teplo za jednotku času dodané ze Slunce. Jedná se o výkon Slunce dopadající na stěnu vynásobený koeficientem absorbce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}(L)=h(T(L)-T_{\text{okolí}})\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle h\)</span> je koeficient přestupu tepla.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}(0)=h(T_{\text{místnost}}-T(0))\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle h\)</span> je koeficient přestupu tepla.</p></li>
+</ol>
+<p>Všimněte si, že poslední dvě podmínky se liší znaménkem u <span class="math notranslate nohighlight">\(\displaystyle T\)</span>. To proto, že v jednom případě je kladný směr toku tepla do materiálu a jednou z materiálu. Pokud chceme mít popis jednotný, nebo nezávislý na zvolené souřadné soustavě, formulujeme podmínky pro tok tepla ven z materiálu. Tento tok získáme tak, že tok tepla vynásobíme skalárně s jednotkovým vektorem směřujícím ven z materiálu kolmo na jeho povrch. V tomto případě by pro tok ze stěny do místnosti bylo <span class="math notranslate nohighlight">\(\displaystyle k\frac{\partial T}{\partial x}(0)=h(T(0)-T_{\text{místnost}})\)</span>. Tento tok by byl záporný, protože ve skutečnosti teplo uniká z místnosti stěnou ven.</p>
+</section>
+</div></section>
+<section id="model-rustu-umerneho-vzdalenosti-od-cilove-hodnoty">
+<h2><span class="section-number">2.4. </span>Model růstu úměrného vzdálenosti od cílové hodnoty<a class="headerlink" href="#model-rustu-umerneho-vzdalenosti-od-cilove-hodnoty" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id2">
+<img alt="../_images/pstruh.jpg" src="../_images/pstruh.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.11 </span><span class="caption-text">Model popsaný v této úloze se často používá například při studiu růstu ryb. Obrázek: pixabay.com, PublicDomainImages</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Mnoho
+živočichů roste tak, že mohou dorůstat jisté maximální délky a
+rychlost jejich růstu je úměrná délce, která jim do této maximální
+délky chybí (tj. kolik ještě musí do této maximální délky
+dorůst). Sestavte matematický model popisující takovýto růst
+(von Bertalanffy growth model).</p>
+<p><em>Jakmile vidíme, že v zadání figuruje rychlost změny veličiny,
+která nás zajímá, je jasné, že kvantitativní model bude obsahovat
+derivaci. Zatím se učíme model zapsat, později ho budeme umět i vyřešit.</em></p>
+<div class="proof example dropdown admonition" id="example-3">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle L\)</span> délka a <span class="math notranslate nohighlight">\(\displaystyle L_{\max}\)</span> maximální délka, potom do maximální délky chybí  <span class="math notranslate nohighlight">\(\displaystyle L_{\max}-L\)</span> a model má tvar <div class="math notranslate nohighlight">
+\[\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).\]</div>
+</p>
+<p>Poznámka: ChatGPT úkol splnil <a class="reference external" href="https://chat.openai.com/share/88d550e4-1b8b-4e1c-9a0e-2ad01cb862dd">až napodruhé</a>. Napoprvé nabídl už řešení tohoto modelu.</p>
+</section>
+</div></section>
+<section id="kontaminace-a-cisteni">
+<h2><span class="section-number">2.5. </span>Kontaminace a čištění<a class="headerlink" href="#kontaminace-a-cisteni" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id3">
+<img alt="../_images/kontaminace.jpg" src="../_images/kontaminace.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.12 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Znečišťující látky se v kontaminované oblasti rozkládají tak, že za den se samovolně rozloží
+<span class="math notranslate nohighlight">\(\displaystyle 8\%\)</span> aktuálního znečištění. Kromě toho pracovníci odstraňují látky rychlostí <span class="math notranslate nohighlight">\(\displaystyle 30\)</span>
+galonů denně. Vyjádřete tento proces kvantitativně pomocí vhodného
+modelu.</p>
+<p><em>Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na změně podílejí dva procesy a jejich účinek se sčítá. Příklad navíc připomíná, jak se pracuje se změnou vyjádřenou procenty. Toto je používané například při úročení spojitým úrokem. Pokud pokles změníme na růst, tj. pokud změníme
+znaménka u derivace, máme okamžitě model růstu financí na účtu, na kterém se pravidelně připisuje úrok a k tomu se přidává fixní úložka.</em></p>
+<div class="proof example dropdown admonition" id="example-4">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle y\)</span> znečištění v galonech a <span class="math notranslate nohighlight">\(\displaystyle t\)</span> čas ve dnech, má model tvar
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dy}{\mathrm dt}=-0.08y-30.\]</div>
+</p>
+<p><em>Poznámka:</em> ChatGPT <a class="reference external" href="https://chat.openai.com/share/f79dfceb-5aa4-4ec8-b4d4-f57b0fca2bbc">zvládl</a> úlohu, ale napoprvé nabídl model jiného typu a proto byl do otázky vsunut požadavek na přítomnost derivace.</p>
+</section>
+</div></section>
+<section id="logisticka-rovnice-model-vyuzivani-prirodnich-zdroju">
+<h2><span class="section-number">2.6. </span>Logistická rovnice: model využívání přírodních zdrojů<a class="headerlink" href="#logisticka-rovnice-model-vyuzivani-prirodnich-zdroju" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id4">
+<img alt="../_images/lov.jpg" src="../_images/lov.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.13 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Při modelování růstu populace o velikosti <span class="math notranslate nohighlight">\(\displaystyle x(t)\)</span> často pracujeme s populací žijící v prostředí s omezenou úživností (nosnou kapacitou). Často používáme model <div class="math notranslate nohighlight">
+\[\frac{\mathrm d x}{\mathrm dt}=rx\left(1-\frac xK\right),\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle r\)</span> a <span class="math notranslate nohighlight">\(\displaystyle K\)</span> jsou parametry modelu (reálné konstanty).  Nakreslete
+graf funkce <span class="math notranslate nohighlight">\(\displaystyle f(x)=rx\left(1-\frac xK\right)\)</span> a ověřte, že pro velká
+<span class="math notranslate nohighlight">\(\displaystyle x\)</span> je <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span> záporné a velikost populace proto klesá. Pokud populaci
+lovíme konstantní rychlostí, sníží se pravá strana o konstantu, kterou
+označíme <span class="math notranslate nohighlight">\(\displaystyle h\)</span>. Ukažte, že pro intenzivní lov bude pravá strana rovnice
+pořád záporná a intenzivní lov tak způsobí vyhubení populace. Dá se
+najít kritická hodnota lovu oddělující vyhynutí populace a její
+trvalé přežívání?</p>
+<p><em>Toto je asi nejdůležitější rovnice pro modelování biologických jevů. Používá se při modelování vývoje obnovitelných zdrojů a bývá modifikována pro konkrétní případy podle toho, jak populace interaguje s okolím.</em></p>
+<div class="proof example dropdown admonition" id="example-5">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Funkce <span class="math notranslate nohighlight">\(\displaystyle f(x)=rx\left(1-\frac xK\right)\)</span> je kvadratická funkce s nulovými body <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x=K\)</span>, vrcholem uprostřed mezi nulovými body (tj. pro <span class="math notranslate nohighlight">\(\displaystyle x=\frac K2\)</span>) a parabola je otočená vrcholem nahoru. Proto je napravo od <span class="math notranslate nohighlight">\(\displaystyle x=K\)</span> záporná. To odpovídá tomu, že populace s velikostí přesahující nosnou kapacitu v dlouhodobém horizontu vymírá.</p>
+<p>Funkce <span class="math notranslate nohighlight">\(\displaystyle f_h(x)=rx\left(1-\frac xK\right)-h\)</span> vznikne posunutím funkce <span class="math notranslate nohighlight">\(\displaystyle f(x)=rx\left(1-\frac xK\right)\)</span> o <span class="math notranslate nohighlight">\(\displaystyle h\)</span> dolů. Pokud posuneme hodně, dostane se celá parabola pod osu <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a funkce bude pořád záporná. Kritická hodnota je v situaci, kdy mizí možnost, že <span class="math notranslate nohighlight">\(\displaystyle f_h(x)\)</span> má body kde je kladná a populace se může rozvíjet. To nastane,  pokud se vrchol paraboly dostane na osu <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, tj. <span class="math notranslate nohighlight">\(\displaystyle h\)</span> je rovno funkční hodnotě funkce <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span> v bodě <span class="math notranslate nohighlight">\(\displaystyle x=\frac K2.\)</span></p>
+</section>
+</div></section>
+<section id="populace-jelenu">
+<h2><span class="section-number">2.7. </span>Populace jelenů<a class="headerlink" href="#populace-jelenu" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id5">
+<img alt="../_images/deer.jpg" src="../_images/deer.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.14 </span><span class="caption-text">pixabay.com, autor Free-Photos</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Populace jelenů v národním parku přibývá rychlostí 10% za
+rok. Správa parku každý rok odebere 50 jedinců. Napište
+matematický model pro velikost populace jelenů v tomto parku.</p>
+<div class="proof example dropdown admonition" id="example-6">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle x\)</span> velikost populace jelenů, platí
+<div class="math notranslate nohighlight">
+\[
+  \frac{\mathrm dx}{\mathrm dt}=0.10 x-50, 
+\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle t\)</span> je čas v letech.</p>
+<p><em>Poznámka:</em> ChatGPT <a class="reference external" href="https://chat.openai.com/share/df22fb50-8003-4164-adc3-4aebee0c1cdc">skvěle</a>.</p>
+</section>
+</div></section>
+<section id="hruby-model-chripkove-epidemie">
+<h2><span class="section-number">2.8. </span>Hrubý model chřipkové epidemie<a class="headerlink" href="#hruby-model-chripkove-epidemie" title="Link to this heading">#</a></h2>
+<p>Rychlost s jakou roste počet nemocných chřipkou je úměrný současně
+počtu nemocných a počtu zdravých jedinců. Sestavte model takového
+šíření chřipky.</p>
+<p><em>Toto je současně model popisující šíření informace v populaci, stačí si místo chřipky představit nějakou informaci předávanou mezi lidmi (sociální difuze).</em></p>
+<div class="proof example dropdown admonition" id="example-7">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle M\)</span> velikost populace a <span class="math notranslate nohighlight">\(\displaystyle y\)</span> počet nemocných, je v populaci <span class="math notranslate nohighlight">\(\displaystyle M-y\)</span> zdravých a model má tvar
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dy}{\mathrm dt}=ky(M-y).\]</div>
+</p>
+<p><em>Poznámka:</em> ChatGPT při řešení tohoto úkolu částečně zklamal. Nejprve se snažil podstrčit klasický SIR model pro modelování epidemie a teprve <a class="reference external" href="https://chat.openai.com/share/b38fdc8b-8646-4b96-b0a8-521036dbb736">napodruhé respektoval zadání</a>.</p>
+</section>
+</div></section>
+<section id="ropna-skvrna">
+<h2><span class="section-number">2.9. </span>Ropná skvrna<a class="headerlink" href="#ropna-skvrna" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id6">
+<img alt="../_images/olej.jpg" src="../_images/olej.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.15 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Kruhová ropná skvrna na hladině se rozšiřuje
+tak, že její poloměr jako funkce času roste rychlostí, která je
+nepřímo úměrná druhé mocnině poloměru. Vyjádřete proces kvantitativně
+pomocí derivací.</p>
+<div class="proof example dropdown admonition" id="example-8">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle r\)</span> poloměr, je <span class="math notranslate nohighlight">\(\displaystyle r^2\)</span> druhá mocnina a protože se jedná o nepřímou úměrnost, platí
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dr}{\mathrm dt}=\frac{k}{r^2}.\]</div>
+</p>
+<p>Konstanta úměrnosti <span class="math notranslate nohighlight">\(\displaystyle k\)</span> vyjadřuje číselně rychlost růstu skvrny o jednotkovém poloměru.</p>
+<p><em>Poznámka:</em> ChatGPT bohužel v řešení této úlohy zklamal a vnucoval model s klesajícím poloměrem a přímou úměrností. Můžete si prohlédnout <a class="reference external" href="https://chat.openai.com/share/3ccd9009-c599-49de-b537-abefa9dc7e9d">zde</a>.</p>
+</section>
+</div></section>
+<section id="model-uceni">
+<h2><span class="section-number">2.10. </span>Model učení<a class="headerlink" href="#model-uceni" title="Link to this heading">#</a></h2>
+<p>Rychlost učení (tj. časová změna objemu
+osvojené látky nebo procento z maximální manuální zručnosti) je úměrná
+objemu dosud nenaučené látky. Vyjádřete proces kvantitativně pomocí
+derivací.</p>
+<div class="proof example dropdown admonition" id="example-9">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle L\)</span> objem naučené látky a <span class="math notranslate nohighlight">\(\displaystyle L_{\max}\)</span> maximální objem látky kterou je možné se naučit, je objem dosud nenaučené látky <span class="math notranslate nohighlight">\(\displaystyle L_{\max}-L\)</span> a model má tvar
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).\]</div>
+</p>
+</section>
+</div></section>
+<section id="vypocet-derivace-volitelny-obsah">
+<h2><span class="section-number">2.11. </span>Výpočet derivace (volitelný obsah)<a class="headerlink" href="#vypocet-derivace-volitelny-obsah" title="Link to this heading">#</a></h2>
+<div class="shorten" data-text="Volitelně další derivace.">
+<p>Určete derivace následujících funkcí jedné proměnné. Ostatní veličiny jsou parametry. Pokud v zadaném vzorci odhalíte vztah mezi veličinami známý ze středoškolské geometrie, pokuste se najít odpovídající interpretaci derivace.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle V(r)=\frac 43\pi r^3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle S(r)=4\pi r^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle A(r)=\pi r^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle V(h)=\frac 13 \pi r^2h\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle S(a)=6a^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle U(v)=\frac 12 mv^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle V(r)=\frac {a}{r^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle f(y)=ae^{by}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle S(r)= 2\pi r^2 + 2\pi r h\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle S(h)= 2\pi r^2 + 2\pi r h\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle S(a)= \frac 12(a+c)v\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle L(r)= 2\pi r\)</span></p></li>
+</ol>
+<p><em>V tomto příkladě se učíme mimo jiné derivovat i podle jiné proměnné než podle <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. To je nezbytné pro aplikace. Abychom nebyli fixováni na proměnnou <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, je vhodné se učit vzorce pro derivování vyjadřovat slovně a bez jména konkrétní proměnné.</em></p>
+<div class="proof example dropdown admonition" id="example-10">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dV}{\mathrm dr}=4\pi r^2\)</span>, rychlost změny objemu koule při změnách poloměru, tj. změna objemu koule vztažená k jednotkové změně poloměru</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dS}{\mathrm dr}=8\pi r\)</span>, rychlost změny povrchu koule při změnách poloměru, tj. změna povrchu koule vztažená k jednotkové změně poloměru</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dA}{\mathrm dr}=2\pi r\)</span>, rychlost změny obsahu kruhu při změnách poloměru, tj. změna obsahu kruhu vztažená k jednotkové změně poloměru</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dV}{\mathrm dh}=\frac 13\pi r^2\)</span>, rychlost změny objemu kužele při změnách výšky, tj. změna objemu kužele vztažená k jednotkové změně výšky při zachovaném poloměru podstavy</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dS}{\mathrm da}=12a\)</span>, změna povrchu krychle vyvolaná jednotkovou změnou délky hrany krychle</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dU}{\mathrm dv}=mv\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dV}{\mathrm dr}=-2\frac{a}{r^3}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm df}{\mathrm dy}=abe^{by}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dS}{\mathrm dr}=4\pi r+2\pi h\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dS}{\mathrm dr}=2\pi r\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dS}{\mathrm da}=\frac 12v\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dL}{\mathrm dr}=2\pi\)</span>,</p></li>
+</ol>
+</section>
+</div></div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cviceni01.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Výpočet derivací</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cviceni03.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Výpočet derivací, lineární aproximace</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tepelna-vymena-podle-newtonova-zakona">2.1. Tepelná výměna podle Newtonova zákona</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veliciny-z-rovnice-vedeni-tepla">2.2. Veličiny z rovnice vedení tepla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#okrajove-podminky-pro-rovnici-vedeni-tepla-volitelny-obsah">2.3. Okrajové podmínky pro rovnici vedení tepla (volitelný obsah)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-rustu-umerneho-vzdalenosti-od-cilove-hodnoty">2.4. Model růstu úměrného vzdálenosti od cílové hodnoty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kontaminace-a-cisteni">2.5. Kontaminace a čištění</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logisticka-rovnice-model-vyuzivani-prirodnich-zdroju">2.6. Logistická rovnice: model využívání přírodních zdrojů</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#populace-jelenu">2.7. Populace jelenů</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hruby-model-chripkove-epidemie">2.8. Hrubý model chřipkové epidemie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ropna-skvrna">2.9. Ropná skvrna</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-uceni">2.10. Model učení</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-derivace-volitelny-obsah">2.11. Výpočet derivace (volitelný obsah)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 21.10.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

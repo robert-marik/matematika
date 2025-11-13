@@ -1,0 +1,1167 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-12-13T13:59:54+01:00" />
+    <title>11. Dvojný integrál &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'dvojny_integral/index';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="12. Vybrané postupy numerické matematiky" href="../numerika/index.html" />
+    <link rel="prev" title="10. Vektorová pole, tok, zákony zachování" href="../vektorove_pole/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="13.12.2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dvojný integrál</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivace">11.1. Motivace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hmotnost-nehomogenni-desky">11.1.1. Hmotnost nehomogenní desky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objem-vody-v-jezere">11.1.2. Objem vody v jezeře</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prutok-v-rece-nebo-v-potrubi">11.1.3. Průtok v řece nebo v potrubí</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11.2. Dvojný integrál</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearita-a-aditivita">11.3. Linearita a aditivita</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet">11.4. Výpočet</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-pro-oblast-mezi-funkcemi-promenne-x">11.4.1. Výpočet pro oblast mezi funkcemi proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-pro-oblast-mezi-funkcemi-promenne-y">11.4.2. Výpočet pro oblast mezi funkcemi proměnné <span class="math notranslate nohighlight">\(\displaystyle y\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problematika-zameny-poradi-integrace">11.4.3. Problematika záměny pořadí integrace</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-pro-obdelnikovou-oblast">11.4.4. Výpočet pro obdélníkovou oblast</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu">11.5. Aplikace dvojného integrálu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matematicke-aplikace-dvojneho-integralu">11.5.1. Matematické aplikace dvojného integrálu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objem-kopce-nebo-jezera-pomoci-vrstevnic">11.5.2. Objem kopce nebo jezera pomocí vrstevnic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fyzikalni-aplikace-dvojneho-integralu">11.5.3. Fyzikální aplikace dvojného integrálu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#technike-aplikace-dvojneho-integralu">11.5.4. Techniké aplikace dvojného integrálu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticke-aplikace-dvojneho-integralu-tuhost-nosniku-stabilita-stromu">11.5.5. Praktické aplikace dvojného integrálu - tuhost nosníků, stabilita stromů</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu-teziste-slozeneho-obrazce">11.5.6. Aplikace dvojného integrálu - těžiště složeného obrazce</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu-steinerova-veta">11.5.7. Aplikace dvojného integrálu - Steinerova věta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu-tlak-na-svislou-plochu">11.5.8. Aplikace dvojného integrálu - tlak na svislou plochu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu-pusobiste-tlakove-sily">11.5.9. Aplikace dvojného integrálu - působiště tlakové síly</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">11.6. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="dvojny-integral">
+<h1><span class="section-number">11. </span>Dvojný integrál<a class="headerlink" href="#dvojny-integral" title="Link to this heading">#</a></h1>
+<section id="motivace">
+<h2><span class="section-number">11.1. </span>Motivace<a class="headerlink" href="#motivace" title="Link to this heading">#</a></h2>
+<p>V praxi pracujeme s řadou veličin, které se počítají tak, že se parametr systému násobí obsahem.</p>
+<ul class="simple">
+<li><p>Z plošné hustoty a obsahu násobením obdržíme hmotnost.</p></li>
+<li><p>Z hloubky nádrže a obsahu obdržíme násobením objem.</p></li>
+<li><p>Z tlaku a obsahu obdržíme násobením tlakovou sílu.</p></li>
+</ul>
+<p>Je však otázka, jak tento přístup použít v případě, že daný parametr není po celé ploše na které je rozložen konstantní. Deska může být nehomogenní, nádrž nemusí mít vodorovné dno a ponořená deska nemusí mít všechny své části ve stejné hloubce.</p>
+<p>Řešení této nesnáze je použití dvojného integrálu, který si nyní představíme.</p>
+
+<section id="hmotnost-nehomogenni-desky">
+<h3><span class="section-number">11.1.1. </span>Hmotnost nehomogenní desky<a class="headerlink" href="#hmotnost-nehomogenni-desky" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id2">
+<img alt="../_images/table.jpg" src="../_images/table.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.1 </span><span class="caption-text">Deska s nekonstantní plošnou hustotou,  https://www.flickr.com/photos/svacher, licence CC BY-NC-ND  2.0</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<ul class="simple">
+<li><p>Hmotnost desky <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span> je možno vypočítat jako součin plošné
+hustoty (hmotnost na jednotku obsahu) a obsahu desky. <div class="math notranslate nohighlight">
+\[M=\sigma S\]</div>
+</p></li>
+<li><p>Toto funguje pro desky s konstantní plošnou hustotou, kdy má deska
+ve všech místech stejné fyzikální vlastnostmi.</p></li>
+<li><p>Pokud je deska slepená z konečného počtu malých homogenních desek o
+různých plošných hustotách, určíme hmotnost každé jednotlivé desky
+samostatně a výsledky potom sečteme.
+<div class="math notranslate nohighlight">
+\[m=\sigma_1 S_1+\sigma_2 S_2+\cdots + \sigma_n S_n\]</div>
+</p></li>
+<li><p>Pokud není možné nebo vhodné použít předchozí bod, musíme
+předpokládat, že hustota je obecnou funkcí. Potom namísto součtu
+konečného počtu sčítanců následuje nekonečný počet sčítanců a
+vybudujeme aparát, který nám umožní psát
+<div class="math notranslate nohighlight">
+\[m=\iint_\Omega \sigma \,\mathrm dS.\]</div>
+</p></li>
+</ul>
+</section>
+<section id="objem-vody-v-jezere">
+<h3><span class="section-number">11.1.2. </span>Objem vody v jezeře<a class="headerlink" href="#objem-vody-v-jezere" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id3">
+<img alt="../_images/lake.jpg" src="../_images/lake.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.2 </span><span class="caption-text">Nádrž s proměnnou hloubkou, https://www.pixabay.com</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<ul class="simple">
+<li><p>Objem vody <span class="math notranslate nohighlight">\(\displaystyle V\)</span> v nádrži nebo bazénu (se svislými stěnami, ale jinak
+i nepravidelného půdorysu <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span>) vypočteme jako součin obsahu
+hladiny <span class="math notranslate nohighlight">\(\displaystyle S\)</span> a hloubky vody <span class="math notranslate nohighlight">\(\displaystyle h\)</span>, tj. <div class="math notranslate nohighlight">
+\[V=Sh\]</div>
+ To ovšem platí jenom,
+pokud je v každém místě stejná hloubka.</p></li>
+<li><p>Pokud má jedna část bazénu jinou hloubku než část druhá, vypočteme
+objem u každé hloubky samostatně a příspěvky sečteme,
+tj. <div class="math notranslate nohighlight">
+\[V=S_1h_1+S_2h_2.\]</div>
+</p></li>
+<li><p>Předchozí postup je možné aplikovat pro konečně mnoho hloubek, ale
+někdy to je nevhodné nebo, v případě spojitě se měnící hloubky,
+dokonce nemožné. Potom místo součtu konečně mnoha příspěvků
+použijeme dvojný integrál a dostáváme <div class="math notranslate nohighlight">
+\[V=\iint_\Omega h\mathrm dS.\]</div>
+</p></li>
+</ul>
+</section>
+<section id="prutok-v-rece-nebo-v-potrubi">
+<h3><span class="section-number">11.1.3. </span>Průtok v řece nebo v potrubí<a class="headerlink" href="#prutok-v-rece-nebo-v-potrubi" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id4">
+<img alt="../_images/pipe.jpg" src="../_images/pipe.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.3 </span><span class="caption-text">Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji než ve středu, potrubí na Aljašce, https://www.pixabay.com</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<ul class="simple">
+<li><p>Teče-li průřezem <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span> tekutina kolmo na průřez rychlostí <span class="math notranslate nohighlight">\(\displaystyle v\)</span>, je
+celkový průtok <span class="math notranslate nohighlight">\(\displaystyle Q\)</span> (objem, který proteče průřezem za jednotku času)
+dán součinem <div class="math notranslate nohighlight">
+\[Q=vS,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle S\)</span> je plošný obsah průřezu.</p></li>
+<li><p>Teče-li různými místy průřezu voda různou rychlostí, sečteme
+jednotlivé příspěvky.  <div class="math notranslate nohighlight">
+\[Q=v_1S_1+v_2S_2+\dots +v_nS_n\]</div>
+</p></li>
+<li><p>Myšlenku z předchozího bodu není snadné udělat, pokud se rychlost
+mění spojitě. Například v potrubí je rychlost rozdělena parabolicky
+a ubývá se vzdáleností od středu. Situaci zachraňuje dvojný integrál
+<div class="math notranslate nohighlight">
+\[Q=\iint_\Omega v\,\mathrm dS.\]</div>
+</p></li>
+</ul>
+
+</section>
+</section>
+<section id="id1">
+<h2><span class="section-number">11.2. </span>Dvojný integrál<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class='sloupce'>
+<p>Uvažujme plošný materiál (desku) s danou plošnou hustotou. Budeme se snažit
+vypočítat hmotnost.</p>
+<ul class="simple">
+<li><p>Pokud je deska homogenní, je její (plošná) hustota desky konstantní
+a její hmotnost je možno získat jednoduše jako součin této hustoty a
+obsahu.</p></li>
+<li><p>Pokud deska není homogenní, ale skládá se z konečného počtu homogenních kousků, určíme
+postupem z minulého bodu hmotnost každého kousku a tyto hmotnosti
+poté sečteme.</p></li>
+<li><p>Zbývá případ, kdy je hustota dána nějakou obecnou funkcí. Pokud se
+hustota desky mění a v obecném bodě <span class="math notranslate nohighlight">\(\displaystyle (x,y)\)</span> je dána funkcí
+<span class="math notranslate nohighlight">\(\displaystyle f(x,y)\)</span>, můžeme myšlenkově rozdělit desku na malé kousky, v rámci
+každého malého kousku hustotu aproximovat konstantou a postupovat
+jako u desky z konečného počtu (malých) homogenních částí.</p></li>
+<li><p>Získaná veličina je aproximací celkové hmotnosti. Pro jemnější
+dělení se přesnost aproximace zlepšuje.</p></li>
+</ul>
+<p>V limitním přechodu kdy rozměry všech kousků na něž je deska dělena
+jde k nule dostáváme <strong>dvojný integrál</strong>
+<div class="math notranslate nohighlight">
+\[ \iint_\Omega f(x,y)\mathrm{d}x \mathrm{d}y , \]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span> je oblast v rovině <span class="math notranslate nohighlight">\(\displaystyle (x,y)\)</span> definovaná uvažovanou deskou. V aplikacích je častý též zápis
+<div class="math notranslate nohighlight">
+\[ \iint_\Omega f(x,y)\mathrm{d}A\]</div>
+
+nebo
+<div class="math notranslate nohighlight">
+\[ \iint_\Omega f(x,y)\mathrm{d}S.\]</div>
+</p>
+
+<figure class="align-default">
+<img alt="../_images/dvojny_integral.png" src="../_images/dvojny_integral.png" />
+</figure>
+
+</div>
+</section>
+<section id="linearita-a-aditivita">
+<h2><span class="section-number">11.3. </span>Linearita a aditivita<a class="headerlink" href="#linearita-a-aditivita" title="Link to this heading">#</a></h2>
+<p>Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
+veličiny a proto se „dobře snáší“ se sčítáním (ať už integrovaných
+funkcí, nebo integračních oborů) a s násobení integrované funkce
+konstantou. Přesněji, platí následující věty.</p>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span>Věta </span> (Linearita dvojného integrálu)</p>
+<section class="theorem-content" id="proof-content">
+<p>Buď <span class="math notranslate nohighlight">\(\displaystyle f_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle f_2\)</span> funkce integrovatelné v <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span> a <span class="math notranslate nohighlight">\(\displaystyle c_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle c_2\)</span>   libovolná reálná čísla. Platí
+<div class="math notranslate nohighlight">
+\[     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy \]</div>
+</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span>Věta </span> (Aditivita vzhledem k oboru integrace)</p>
+<section class="theorem-content" id="proof-content">
+<p>Nechť je množina <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span> rozdělena na dvě oblasti <span class="math notranslate nohighlight">\(\displaystyle \Omega_1\)</span>   a <span class="math notranslate nohighlight">\(\displaystyle \Omega_2\)</span>, které mají společné nejvýše hraniční body. Platí <div class="math notranslate nohighlight">
+\[     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. \]</div>
+</p>
+</section>
+</div></section>
+<section id="vypocet">
+<h2><span class="section-number">11.4. </span>Výpočet<a class="headerlink" href="#vypocet" title="Link to this heading">#</a></h2>
+<section id="vypocet-pro-oblast-mezi-funkcemi-promenne-x">
+<h3><span class="section-number">11.4.1. </span>Výpočet pro oblast mezi funkcemi proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span><a class="headerlink" href="#vypocet-pro-oblast-mezi-funkcemi-promenne-x" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id5">
+<img alt="../_images/fub_1.png" src="../_images/fub_1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.4 </span><span class="caption-text">Oblast mezi funkcemi proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span>.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>V závislosti na tom, jakými nerovnostmi množinu <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span> definujeme,
+můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
+věty udávají, jak je možno dvojný integrál přepsat jako dvojnásobný
+integrál. Mají název <strong>Fubiniovy věty</strong>.</p>
+<div class="proof theorem admonition" id="theorem-2">
+<p class="admonition-title"><span>Věta </span> (Fubiniova věta)</p>
+<section class="theorem-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je funkce spojitá v uzavřené oblasti
+<div class="math notranslate nohighlight">
+\[  
+\Omega=\{(x,y)\in\mathbb{R}^2:{a\leq x\leq b}\text{ a }
+{\varphi (x)\leq y\leq \psi (x)}\}.\]</div>
+
+Potom
+<div class="math notranslate nohighlight">
+\[
+\iint_{\Omega}f(x,y)\mathrm{d}x \mathrm{d}y ={\int_{a}^{b}}
+\Bigl[ \int_{\varphi (x)}^{\psi(x)}   
+f(x,y){\mathrm{d}y }\Bigr]{\mathrm{d}x }.
+\]</div>
+</p>
+</section>
+</div></section>
+<section id="vypocet-pro-oblast-mezi-funkcemi-promenne-y">
+<h3><span class="section-number">11.4.2. </span>Výpočet pro oblast mezi funkcemi proměnné <span class="math notranslate nohighlight">\(\displaystyle y\)</span><a class="headerlink" href="#vypocet-pro-oblast-mezi-funkcemi-promenne-y" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+```{figure} fub_2.png
+Oblast mezi funkcemi proměnné $y$.
+```
+</div>
+<div class="proof theorem admonition" id="theorem-3">
+<p class="admonition-title"><span>Věta </span> (Fubiniova věta pro jiné pořadí integrace)</p>
+<section class="theorem-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je funkce spojitá v uzavřené oblasti
+<div class="math notranslate nohighlight">
+\[  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
+{\varphi (y)\leq x\leq
+\psi (y)}\}.
+\]</div>
+
+Potom
+<div class="math notranslate nohighlight">
+\[
+\iint_{\Omega}f(x,y)\mathrm{d}x \mathrm{d}y ={\int_a^b}\Bigl[ 
+{\int_{\varphi (y)}^{\psi(y)}}
+f(x,y){\mathrm{d}x }\Bigr]{\mathrm{d}y }.
+\]</div>
+</p>
+</section>
+</div><div class='obtekat'>
+<figure class="align-default" id="id6">
+<img alt="../_images/fub_4.png" src="../_images/fub_4.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.5 </span><span class="caption-text">Oblast, pro kterou jsou možná obě pořadí integrace.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="problematika-zameny-poradi-integrace">
+<h3><span class="section-number">11.4.3. </span>Problematika záměny pořadí integrace<a class="headerlink" href="#problematika-zameny-poradi-integrace" title="Link to this heading">#</a></h3>
+<p>Často je možné oblast integrace zapsat pomocí obou možností uvedených
+na předchozích slidech. Například oblast na obrázku je možno zapsat
+buď jako
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+0\leq x \leq 2\\
+0\leq y\leq x^2
+\end{gathered}\end{split}\]</div>
+
+nebo
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+0\leq y \leq 4\\
+\sqrt{y}\leq x\leq  2.
+\end{gathered}\end{split}\]</div>
+</p>
+<p>Pro integrál funkce <span class="math notranslate nohighlight">\(\displaystyle f(x,y)\)</span> přes takovou množinu tedy máme dvě alternativy:
+<div class="math notranslate nohighlight">
+\[\int_0^2 \int _0^{x^2} f(x,y)\;\mathrm{d}y\;\mathrm{d}x\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[\int_0^4 \int _{\sqrt y}^{2} f(x,y)\;\mathrm{d}x\;\mathrm{d}y.\]</div>
+</p>
+<p>Všimněte si, že nestačí prosté prohození integrálů. Je nutno
+přepočítávat meze a hraniční křivky je nutno vyjádřit jednou jako
+funkce proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a jednou jako funkce proměnné <span class="math notranslate nohighlight">\(\displaystyle y\)</span>. V důsledku
+tohoto dochází v průběhu výpočtu dvěma různými způsoby k tomu, že
+pracujeme se dvěma různými integrály. Výsledky jsou stejné, nemusí
+však být dosažitelné srovnatelnou námahou, jedna z cest může být
+snazší.</p>
+</section>
+<section id="vypocet-pro-obdelnikovou-oblast">
+<h3><span class="section-number">11.4.4. </span>Výpočet pro obdélníkovou oblast<a class="headerlink" href="#vypocet-pro-obdelnikovou-oblast" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+```{figure} fub_3.png
+Integrál přes obdélník.
+```
+</div>
+<p>Výše uvedené problémy se stanovením a případným přepočítáváním mezí
+při záměně pořadí integrace se nevyskytují při integrování přes
+obdélníkovou oblast.</p>
+<div class="proof theorem admonition" id="theorem-4">
+<p class="admonition-title"><span>Věta </span> (Fubiniova věta na obdélníku)</p>
+<section class="theorem-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle R=[a,b]\times[c,d]\)</span> je uzavřený obdélník v <span class="math notranslate nohighlight">\(\displaystyle \mathbb{R}^2\)</span> a
+<span class="math notranslate nohighlight">\(\displaystyle f\)</span> funkce definovaná a spojitá na <span class="math notranslate nohighlight">\(\displaystyle R\)</span>. Pak platí
+<div class="math notranslate nohighlight">
+\[\begin{split}    \begin{aligned}\iint_R f(x,y)\mathrm{d}x \mathrm{d}y 
+&amp;= \int_a^b\Bigl[\int_c^d f(x,y)\mathrm{d}y \Bigr]\mathrm{d}x 
+\\&amp;= \int_c^d\Bigl[\int_a^b f(x,y)\mathrm{d}x \Bigr]\mathrm{d}y .\end{aligned}
+\end{split}\]</div>
+</p>
+<p>Platí-li dokonce rovnost <span class="math notranslate nohighlight">\(\displaystyle f(x,y)=g(x)h(y)\)</span>, pak
+<div class="math notranslate nohighlight">
+\[
+\iint_R f(x,y)\mathrm{d}x \mathrm{d}y  =     \int_a^b g(x) \mathrm{d}x  \int_c^d h(y)\mathrm{d}y .
+\]</div>
+</p>
+</section>
+</div></section>
+</section>
+<section id="aplikace-dvojneho-integralu">
+<h2><span class="section-number">11.5. </span>Aplikace dvojného integrálu<a class="headerlink" href="#aplikace-dvojneho-integralu" title="Link to this heading">#</a></h2>
+<section id="matematicke-aplikace-dvojneho-integralu">
+<h3><span class="section-number">11.5.1. </span>Matematické aplikace dvojného integrálu<a class="headerlink" href="#matematicke-aplikace-dvojneho-integralu" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Obsah</strong> <span class="math notranslate nohighlight">\(\displaystyle \mu(\Omega)\)</span> množiny <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span> vypočteme jako integrál
+<div class="math notranslate nohighlight">
+\[\mu(\Omega)=\iint_\Omega \mathrm{d}x \mathrm{d}y.\]</div>
+</p></li>
+<li><p><strong>Integrální střední hodnota</strong> funkce <span class="math notranslate nohighlight">\(\displaystyle f(x,y)\)</span> definované na množině
+<span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span> je
+<div class="math notranslate nohighlight">
+\[ \frac{\iint_\Omega f(x,y)\mathrm{d}x \mathrm{d}y }{\mu (\Omega)},\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle \mu (\Omega)=\iint_\Omega\mathrm{d}x\mathrm{d}y\)</span> je obsah
+množiny <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span>.</p>
+
+</li>
+</ul>
+</section>
+<section id="objem-kopce-nebo-jezera-pomoci-vrstevnic">
+<h3><span class="section-number">11.5.2. </span>Objem kopce nebo jezera pomocí vrstevnic<a class="headerlink" href="#objem-kopce-nebo-jezera-pomoci-vrstevnic" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id7">
+<img alt="../_images/fuji.jpg" src="../_images/fuji.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.6 </span><span class="caption-text">Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Obsah množiny ohraničené vrstevnicí na mapě vynásobený rozestupem
+mezi vrstevnicemi je přibližně roven objemu vrstvy mezi dvěma
+vrstevnicemi.</p></li>
+<li><p>Pokud sečteme obsahy všech vrstevnic a vynásobíme rozestupem mezi
+těmito vrstevnicemi, dostaneme odhad pro objem kopce. Vlastně je to
+jako bychom kopec rozřezali na stejně tlusté plátky, naskládali je
+vedle sebe, sečetli obsahy postav takto vzniklých těles a vynásobili
+výškou.</p></li>
+<li><p>Podobně je možné odhadnout objem jezera.</p></li>
+<li><p>V tomto případě je dvojný integrál pouze koncept. Samozřejmě nemáme
+ambice vyjadřovat vrstevnice v analytickém tvaru a integrovat pomocí
+Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.</p>
+
+</li>
+</ul>
+</section>
+<section id="fyzikalni-aplikace-dvojneho-integralu">
+<h3><span class="section-number">11.5.3. </span>Fyzikální aplikace dvojného integrálu<a class="headerlink" href="#fyzikalni-aplikace-dvojneho-integralu" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Hmotnost</strong> množiny <span class="math notranslate nohighlight">\(\displaystyle M\)</span> je <div class="math notranslate nohighlight">
+\[m=\iint_M \sigma(x,y)\mathrm{d}x
+\mathrm{d}y,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle \sigma(x,y)\)</span> je <strong>plošná hustota</strong> (hmotnost
+vztažená na jednotku povrchu).</p></li>
+<li><p><strong>Lineární momenty</strong> hmotné množiny <span class="math notranslate nohighlight">\(\displaystyle M\)</span> vzhledem k osám <span class="math notranslate nohighlight">\(\displaystyle y\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x\)</span>
+jsou rovny <div class="math notranslate nohighlight">
+\[\iint_M x\sigma(x,y)\mathrm{d}x \mathrm{d}y\]</div>
+ a
+<div class="math notranslate nohighlight">
+\[\iint_M y\sigma(x,y)\mathrm{d}x \mathrm{d}y.\]</div>
+</p></li>
+<li><p><strong>Moment setrvačnosti</strong> hmotné množiny <span class="math notranslate nohighlight">\(\displaystyle M\)</span> vzhledem k ose je
+<div class="math notranslate nohighlight">
+\[J=\iint_M \rho^2(x,y)\sigma(x,y)\mathrm{d}x \mathrm{d}y ,\]</div>
+ kde
+<span class="math notranslate nohighlight">\(\displaystyle \rho(x,y)\)</span> je vzdálenost bodu <span class="math notranslate nohighlight">\(\displaystyle (x,y)\)</span> od osy otáčení. Například pro
+osu <span class="math notranslate nohighlight">\(\displaystyle x\)</span> je <span class="math notranslate nohighlight">\(\displaystyle \rho(x,y)=y\)</span> a pro osu <span class="math notranslate nohighlight">\(\displaystyle y\)</span> je <span class="math notranslate nohighlight">\(\displaystyle \rho (x,y)=x\)</span>. Pro osu
+procházející kolmo počátkem je <span class="math notranslate nohighlight">\(\displaystyle \rho(x,y)=\sqrt{x^2+y^2}\)</span>.</p></li>
+</ul>
+</section>
+<section id="technike-aplikace-dvojneho-integralu">
+<h3><span class="section-number">11.5.4. </span>Techniké aplikace dvojného integrálu<a class="headerlink" href="#technike-aplikace-dvojneho-integralu" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id8">
+<img alt="../_images/I-nosniky.jpg" src="../_images/I-nosniky.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.7 </span><span class="caption-text">Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR <a class="reference external" href="https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico">realizována 2011</a>. Zdroj: https://www.taus.eu</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p><strong>Souřadnice těžiště</strong> množiny jsou podílem lineárních momentů a
+celkové hmotnosti množiny.</p></li>
+<li><p><strong>Kvadratický moment průřezu</strong> (což je moment setrvačnosti pro
+<span class="math notranslate nohighlight">\(\displaystyle \sigma(x,y)=1\)</span>, anglicky <em>second moment of area</em>) je veličina,
+která hraje podstatnou roli v mechanice (nábytek, stavby) při
+dimenzování (polic, nosných tyčí, nosníků).</p></li>
+<li><p>V technické praxi zpravidla neuvažujeme nekonstantní plošnou hustotu. Potom je možné je bez újmy na obecnosti nahradit jedničkou.
+Vzorce pro obsah, <span class="math notranslate nohighlight">\(\displaystyle x\)</span>-ovou souřadnici těžiště (<span class="math notranslate nohighlight">\(\displaystyle x_0\)</span>), <span class="math notranslate nohighlight">\(\displaystyle y\)</span>-ovou
+souřadnici těžiště (<span class="math notranslate nohighlight">\(\displaystyle y_0\)</span>), kvadratický moment vzhledem k ose <span class="math notranslate nohighlight">\(\displaystyle x\)</span>
+(<span class="math notranslate nohighlight">\(\displaystyle I_x\)</span>) a kvadratický moment vzhledem k ose <span class="math notranslate nohighlight">\(\displaystyle y\)</span> (<span class="math notranslate nohighlight">\(\displaystyle I_y\)</span>) (pro množinu <span class="math notranslate nohighlight">\(\displaystyle M\)</span> s plošnou hustotou <span class="math notranslate nohighlight">\(\displaystyle 1\)</span>) jsou
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{alignedat}{2}
+    %  S&amp;=\iint_M\mathrm{d}x \mathrm{d}y \\
+    x_0&amp;=\frac 1S \iint_M x\mathrm{d}x \mathrm{d}y ,&amp;\qquad    I_x&amp;= \iint_M y^2\mathrm{d}x \mathrm{d}y, \\
+    y_0&amp;=\frac 1S \iint_M y\mathrm{d}x \mathrm{d}y , &amp;    I_y&amp;= \iint_M x^2\mathrm{d}x \mathrm{d}y, \\
+\end{alignedat}
+\end{split}\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle S=\mu (M)\)</span> je obsah množiny <span class="math notranslate nohighlight">\(\displaystyle M\)</span>.
+Poloha těžiště je tedy střední hodnotou funkcí <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y\)</span>.</p></li>
+</ul>
+</section>
+<section id="prakticke-aplikace-dvojneho-integralu-tuhost-nosniku-stabilita-stromu">
+<h3><span class="section-number">11.5.5. </span>Praktické aplikace dvojného integrálu - tuhost nosníků, stabilita stromů<a class="headerlink" href="#prakticke-aplikace-dvojneho-integralu-tuhost-nosniku-stabilita-stromu" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id9">
+<img alt="../_images/beam1.jpg" src="../_images/beam1.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.8 </span><span class="caption-text">Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id10">
+<img alt="../_images/vanocni_strom.jpg" src="../_images/vanocni_strom.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.9 </span><span class="caption-text">Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Tuhost (odolnost vůči deformaci) pro nosník obdélníkového průřezu o výšce <span class="math notranslate nohighlight">\(\displaystyle b\)</span> a
+šířce <span class="math notranslate nohighlight">\(\displaystyle a\)</span> je dána kvadratickým momentem obdélníkového průřezu vzhledem
+k vodorovné ose procházející těžištěm.
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}I_x&amp;= \iint_{\left[-\frac a2,\frac a2\right]\times \left[-\frac b2,\frac b2\right]} y^2\,\mathrm dx\mathrm dy\\
+&amp;= \int_{-\frac a2}^{\frac a2} \,\mathrm dx\int_{-\frac b2}^{\frac b2}
+y^2 \,\mathrm dy= a\left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2} =\frac 1{12}ab^3
+\end{aligned}
+\end{split}\]</div>
+
+Odsud máme okamžitě několik pozorování</p>
+<ul class="simple">
+<li><p>Pokud šířka vzroste dvakrát, tuhost vzroste také dvakrát. Pokud ale
+dvakrát vzroste výška, tuhost vzroste dokonce osmkrát. Pro nosník s
+poměrem stran 1:2 je poměr tuhostí při poloze naplacato a nastojato roven 1:4.</p></li>
+<li><p>Pro nosník čtvercového průřezu (<span class="math notranslate nohighlight">\(\displaystyle a=b\)</span>) roste tuhost se čtvrtou
+mocninou rozměrů. Obsah (a tedy i hmotnost) roste s druhou
+mocninou. Pokud tedy u nosníku se čtvercovým průřezem zdvojnásobíme
+množství materiálu, tuhost vzroste čtyřnásobně. Toto si můžeme představit tak, že jsme původní nosník obalili trubkou vyrobenou ze stejného množství materiálu. Protože společná tuhost je čtyřnásobná, znamená to, že přidaná trubka má trojnásobnou tuhost než původní tyč. Proto se v konstrukcích nepoužívají tyče, ale trubky nebo analogické struktury (I-čka apod). I příroda zná tyto zákonitosti a kosti tvořící opěrný aparát živočichů jsou trubkovitého tvaru.</p></li>
+<li><p>Pro čtvercový průřez roste tuhost se čtvrtou mocninou délky
+strany <div class="math notranslate nohighlight">
+\[I_x=\frac 1{12} a^4.\]</div>
+  Stejná závislost (přímá úměrnost mezi kvadratickým momentem a čtvrtou mocninou rozměru) musí být u každého průřezu
+jednoparametrického tvaru, například pro kruh. To plyne například z věty nazývané <a class="reference external" href="https://en.wikipedia.org/wiki/Buckingham_%CF%80_theorem">Buckinghamův <span class="math notranslate nohighlight">\(\displaystyle \Pi\)</span> teorém</a>. Jako aplikaci uvažujme strom modelovaný jako nosník s kruhovým průřezem. Například strom, ve
+kterém je dutina o velikosti poloviny průměru kmene většinou vyvolá
+obavy ze stability. I když taková dutina vypadá obrovská, tuhost se
+sníží o původní tuhost vynásobenou koeficientem
+<div class="math notranslate nohighlight">
+\[(0.5)^4=0.0625\approx 6\%.\]</div>
+
+Vidíme, že i s hrozivě vypadající dutinou má kmen pořád tuhost
+<span class="math notranslate nohighlight">\(\displaystyle 94\%\)</span> původní tuhosti (za předpokladu dutiny uprostřed
+kmene). Z hlubšího fyzikálního rozboru, který je nyní nad rámec našeho popisu,  pevnost roste jenom s třetí
+mocninou a proto odolnost vůči zlomení klesne o něco více než
+tuhost.</p></li>
+</ul>
+</section>
+<section id="aplikace-dvojneho-integralu-teziste-slozeneho-obrazce">
+<h3><span class="section-number">11.5.6. </span>Aplikace dvojného integrálu - těžiště složeného obrazce<a class="headerlink" href="#aplikace-dvojneho-integralu-teziste-slozeneho-obrazce" title="Link to this heading">#</a></h3>
+<p>Uvažujme množinu <span class="math notranslate nohighlight">\(\displaystyle M\)</span> s jednotkovou plošnou hustotou, rozdělenou na dvě
+disjunktní části <span class="math notranslate nohighlight">\(\displaystyle M_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle M_2\)</span>. Tyto množiny mají <span class="math notranslate nohighlight">\(\displaystyle x\)</span>-ovou polohu
+těžiště v bodě
+<div class="math notranslate nohighlight">
+\[x_{0i}=\frac1{S_i}{\iint_{M_i}x\,\mathrm dx\mathrm dy}, \qquad S_i=\iint_{M_i}\,\mathrm dx\mathrm dy,\qquad i=1,2.\]</div>
+
+Poloha těžiště není aditivní veličinou. Dvojný integrál však aditivní veličinou je. Platí
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\iint _{M} x\,\mathrm dx\mathrm dy&amp;=\iint _{M_1} x\,\mathrm dx\mathrm dy + \iint _{M_2} x\,\mathrm dx\mathrm dy\\
+&amp;=S_1 x_{01} + S_2 x_{02}
+\end{aligned}
+\end{split}\]</div>
+
+a těžiště množiny <span class="math notranslate nohighlight">\(\displaystyle M\)</span> je
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_0&amp;=\frac 1{S_1+S_2}\iint _{M} x\,\mathrm dx\mathrm dy\\
+&amp;=\frac 1{S_1+S_2}(S_1 x_{01} + S_2 x_{02})\\
+&amp;=\frac {S_1 x_{01} + S_2 x_{02}}{S_1+S_2}.
+\end{aligned}
+\end{split}\]</div>
+
+Totéž je možné provést pro <span class="math notranslate nohighlight">\(\displaystyle y\)</span>-ovou souřadnici, nebo pro libovolný
+konečný počet částí. Podobně je možné odvodit vzorec s obecnou
+nekonstantní plošnou hustotou.  Poloha těžiště složeného obrazce je
+tedy <em>váženým průměrem</em> těžišť jednotlivých složek, kde váha každé
+složky je určena její hmotností. Protože se jedná o vážený průměr,
+tj. vlastně o lineární kombinaci bodů, kdy součet koeficientů je roven
+jedné, okamžitě vidíme, že těžiště složeného obrazce je na úsečce mezi
+těžišťmi jednotlivých částí.</p>
+<p>Zobecnění výše uvedených myšlenek na množinu rozdělenou na více částí
+je již snadné.</p>
+</section>
+<section id="aplikace-dvojneho-integralu-steinerova-veta">
+<h3><span class="section-number">11.5.7. </span>Aplikace dvojného integrálu - Steinerova věta<a class="headerlink" href="#aplikace-dvojneho-integralu-steinerova-veta" title="Link to this heading">#</a></h3>
+<p>Nechť je dána množina <span class="math notranslate nohighlight">\(\displaystyle M\)</span> s plošnou hustotou <span class="math notranslate nohighlight">\(\displaystyle \sigma(x,y)\)</span>. <em>Ukážeme,
+že vzhledem k ose procházející těžištěm je nejmenší moment
+setrvačnosti.</em> Ukážeme si dále, že pomocí momentu setrvačnosti
+vzhledem k ose procházející těžištěm je možné vyjádřit momenty
+setrvačnosti i k libovolným rovnoběžným osám. Pro jednotkovou plošnou
+hustotu dostáváme jako speciální případ vzorce pro kvadratický moment,
+důležité ve statice.</p>
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle m=\iint \sigma(x,y)\,\mathrm dx\mathrm dy\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y_0=\frac
+1{m}\iint_M y\sigma(x,y)\,\mathrm dx\mathrm dy\)</span> a <span class="math notranslate nohighlight">\(\displaystyle I_{xT}=\iint_M
+(y-y_0)^2\sigma(x,y)\,\mathrm dx\mathrm dy\)</span> jsou hmotnost, <span class="math notranslate nohighlight">\(\displaystyle y\)</span>-ová poloha těžiště
+a moment setrvačnosti vzhledem k ose jdoucí těžištěm rovnoběžně s osou
+<span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Moment setrvačnosti vhledem k ose  <span class="math notranslate nohighlight">\(\displaystyle x\)</span> je
+<div class="math notranslate nohighlight">
+\[I_{x0}=\iint y^2\sigma(x,y)\,\mathrm dx\mathrm dy.\]</div>
+
+Platí (píšeme zkráceně <span class="math notranslate nohighlight">\(\displaystyle \sigma\)</span> místo <span class="math notranslate nohighlight">\(\displaystyle \sigma(x,y)\)</span>)
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+I_{xT}&amp;=\iint_M
+(y-y_0)^2\sigma\,\mathrm dx\mathrm dy\\
+&amp;=\iint_M
+(y^2-2yy_0+y_0^2)\sigma\,\mathrm dx\mathrm dy\\
+&amp;=\iint_M
+y^2\sigma\,\mathrm dx\mathrm dy
+-2y_0
+\iint_M
+y\sigma\,\mathrm dx\mathrm dy
++y_0^2
+\iint_M
+\sigma\,\mathrm dx\mathrm dy\\
+&amp;=I_{x0}
+-2y_0 m y_0
++
+y_0^2 m
+\\
+&amp;=I_{x0}
+-m y_0^2.
+\end{aligned}
+\end{split}\]</div>
+
+Odsud dostáváme
+<div class="math notranslate nohighlight">
+\[I_{x0}=I_{xT}+my_0^2,\]</div>
+
+což lze interpretovat tak, že <em>moment setrvačnosti vhledem k ose <span class="math notranslate nohighlight">\(\displaystyle o\)</span>
+je součtem momentu setrvačnosti vzhledem k ose procházející těžištěm rovnoběžně s <span class="math notranslate nohighlight">\(\displaystyle o\)</span>
+a momentu setrvačnosti hmotného bodu ležícího
+v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k ose <span class="math notranslate nohighlight">\(\displaystyle o\)</span>.</em></p>
+</section>
+<section id="aplikace-dvojneho-integralu-tlak-na-svislou-plochu">
+<h3><span class="section-number">11.5.8. </span>Aplikace dvojného integrálu - tlak na svislou plochu<a class="headerlink" href="#aplikace-dvojneho-integralu-tlak-na-svislou-plochu" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id11">
+<img alt="../_images/bobri.jpeg" src="../_images/bobri.jpeg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.10 </span><span class="caption-text">Bobři v ZOO v Brně jsou za skleněnou stěnou obdélníkového tvaru.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Vzorec pro tlakovou sílu <span class="math notranslate nohighlight">\(\displaystyle F=pS\)</span> není možné použít například pro
+výpočet celkové síly působící na svislou stěnu nebo hráz, protože tlak <span class="math notranslate nohighlight">\(\displaystyle p\)</span> se
+mění s hloubkou a není tedy konstantní na celém průřezu o obsahu
+<span class="math notranslate nohighlight">\(\displaystyle S\)</span>. Pro obdélníkovou stěnu jsme úlohu vyřešili (viz <a class="reference external" href="http://user.mendelu.cz/marik/mt/mat-slidy/integraly/index_h.html#aplikace-ur%C4%8Dit%C3%A9ho-integr%C3%A1lu-tlakov%C3%A1-s%C3%ADla">Mojžíšův most</a>) pomocí integrálu, pro stěnu obecného tvaru použijeme integrál dvojný.</p>
+<p>Uvažujme svislou rovinnou hráz <span class="math notranslate nohighlight">\(\displaystyle M\)</span>. Hrází je přitom myšlena rovinná
+množina s jednotkovou plošnou hustotou, ne postavený trojrozměrný
+objekt. Počátek kartézské soustavy souřadnic volíme u hladiny, osa <span class="math notranslate nohighlight">\(\displaystyle y\)</span>
+směřuje dolů, osa <span class="math notranslate nohighlight">\(\displaystyle x\)</span> vodorovně. Tlak v hloubce <span class="math notranslate nohighlight">\(\displaystyle y\)</span> je roven <span class="math notranslate nohighlight">\(\displaystyle p=y\rho
+g\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle \rho\)</span> je hustota vody a <span class="math notranslate nohighlight">\(\displaystyle g\)</span> tíhové zrychlení. Na plochu o
+rozměrech <span class="math notranslate nohighlight">\(\displaystyle \Delta S\)</span> v hloubce <span class="math notranslate nohighlight">\(\displaystyle y\)</span> působí tlaková síla
+<div class="math notranslate nohighlight">
+\[\Delta F=y\rho g \Delta S.\]</div>
+
+Tato tlaková síla má ve všech bodech hráze stejný směr a celkovou sílu
+na hráz je možno zjistit sečtením sil v jednotlivých bodech. Podobná
+myšlenková úvaha jako v úvodu pro hmotnost desky, nebo přesný
+matematický popis, nás dovedou k tomu, že celková síla na hráz je dána
+integrálem
+<div class="math notranslate nohighlight">
+\[F=\iint _M y\rho g \,\mathrm d x\mathrm dy.\]</div>
+
+Protože <span class="math notranslate nohighlight">\(\displaystyle g\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \rho\)</span> jsou konstanty, je možno psát
+<div class="math notranslate nohighlight">
+\[F=\rho g\iint _M y \,\mathrm d x\mathrm dy.\]</div>
+
+Využijeme-li vzorec pro <span class="math notranslate nohighlight">\(\displaystyle y\)</span>-ovou souřadnici těžiště, má výsledný vztah tvar
+<div class="math notranslate nohighlight">
+\[F=\rho g y_0 S,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle S\)</span> je obsah hráze. Formálně tento vztah odpovídá vzorci</p>
+<div class="math notranslate nohighlight" id="equation-h1">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-h1" title="Link to this equation">#</a></span>\[F=p_0 S,\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\displaystyle p_0=\rho g y_0\)</span> je tlak v těžišti. <em>Proto v praxi stačí znát těžiště
+hráze a pro výpočet síly na hráz použít celkovou plochu hráze a tlak
+v těžišti.</em> Protože jsme pracovali s obecnou množinou <span class="math notranslate nohighlight">\(\displaystyle M\)</span>, není tento
+poznatek nijak vázán na konkrétní tvar hráze. Musí být však splněna
+podmínka, že všechny body hráze leží v jedné rovině.</p>
+<p>Ve výpočtu výše jsme uvažovali svislou rovinu, ale zobecnění na šikmou
+rovinu je snadné. Stačí opravit vztah pro hloubku, protože když svislou množinu
+i s kartézskými souřadnicemi pootočíme okolo osy procházející
+hladinou, hloubka všech bodů se sníží faktorem <span class="math notranslate nohighlight">\(\displaystyle \sin \alpha\)</span>, kde
+<span class="math notranslate nohighlight">\(\displaystyle \alpha\)</span> je úhel mezi vodorovnou hladinou a rovinou hráze. Formálně
+tato operace dopadne stejně, jako kdybychom tekutinu nahradili tekutinou
+s hustotou <span class="math notranslate nohighlight">\(\displaystyle \sin\alpha\)</span>-krát nižší. Protože však vztah <a class="reference internal" href="#equation-h1">(11.1)</a>
+nezávisí na hustotě, nic se na něm nezmění. Také zobecnění na několik rovin
+je snadné. Zobecnění na zakřivenou plochu je náročnější a vyžaduje
+jiný typ integrálu.</p>
+<p>V předchozím textu jsme proměnnou veličinu popisující tlak na hráz
+jako funkci hloubky nahradili konstantní veličinou, udávající tlak v
+těžišti. Výsledný účinek na hráz se nezměnil. To je přesně smysl
+střední hodnoty. V matematických pojmech je možno říci, že střední
+hodnota tlaku na svislou hráz je rovna tlaku v těžišti hráze. (Protože
+hrází myslíme spíše rovinnou plochu, tak by přesnější terminologie
+měla používat raději pojem geometrický střed. Budeme se však držet
+ustálené terminologie.)</p>
+<p>Nikde ve výpočtu jsme nepoužili konkrétní meze pro integraci. Výsledek
+tedy platí nejenom pro hráz dosahující k hladině, ale například i pro
+poklop výpusti, který je celý pod vodou.</p>
+</section>
+<section id="aplikace-dvojneho-integralu-pusobiste-tlakove-sily">
+<h3><span class="section-number">11.5.9. </span>Aplikace dvojného integrálu - působiště tlakové síly<a class="headerlink" href="#aplikace-dvojneho-integralu-pusobiste-tlakove-sily" title="Link to this heading">#</a></h3>
+<p>Budeme pokračovat v předchozím příkladě a hledat působiště výsledné
+tlakové síly.</p>
+<p>Tlaková síla působící na svislou hráz má celkový nulový moment
+vzhledem k ose proházející působištěm. Je-li hráz definována množinou
+<span class="math notranslate nohighlight">\(\displaystyle M\)</span> a je-li <span class="math notranslate nohighlight">\(\displaystyle y_c\)</span> působiště výsledné tlakové síly, je v hloubce <span class="math notranslate nohighlight">\(\displaystyle y\)</span>
+tlaková síla na plošku o velikosti <span class="math notranslate nohighlight">\(\displaystyle \Delta S\)</span> roven <span class="math notranslate nohighlight">\(\displaystyle y\rho g \Delta S\)</span> a
+součin <span class="math notranslate nohighlight">\(\displaystyle (y_c-y)y\rho g\Delta S\)</span> je příspěvek k otáčivému momentu
+vzhledem k ose, procházející vodorovně působištěm tlakové
+síly. Součet všech těchto příspěvků se nuluje, tedy musí platit
+<div class="math notranslate nohighlight">
+\[\iint_M (y_c-y)y\rho g\,\mathrm dx\mathrm dy=0.\]</div>
+
+Odsud po vydělení konstantami <span class="math notranslate nohighlight">\(\displaystyle \rho g\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\iint_M (y_c-y)y\,\mathrm dx\mathrm dy=0\]</div>
+
+a po roznásobení závorky, rozdělení integrálu na dva a vytknutí konstanty
+<div class="math notranslate nohighlight">
+\[y_c\iint_M y\,\mathrm dx\mathrm dy = \iint_M y^2\,\mathrm dx\mathrm dy.\]</div>
+
+Nyní již snadno dostaneme výsledný vztah</p>
+<div class="math notranslate nohighlight" id="equation-h2">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-h2" title="Link to this equation">#</a></span>\[y_c=\frac{\iint_M y^2\,\mathrm dx\mathrm dy}{\iint_M y\,\mathrm dx\mathrm dy}.\]</div>
+<p>Pokud je množina <span class="math notranslate nohighlight">\(\displaystyle M\)</span> obdélník, je možné ji (po vhodné změně jednotek) brát jako jednotkový čtverec. Protože platí
+<div class="math notranslate nohighlight">
+\[\iint_{[0,1]\times [0,1]}y\,\mathrm dx\mathrm dy=\frac 12, \quad
+\iint_{[0,1]\times [0,1]}y^2\,\mathrm dx\mathrm dy=\frac 13,
+\]</div>
+
+dostáváme <span class="math notranslate nohighlight">\(\displaystyle y_c=\frac{\frac 13}{\frac 12}=\frac 23\)</span>
+a působiště na obdélníkovou hráz je v hloubce odpovídající dvěma třetinám celkové hloubky.</p>
+<p>Formálně vztah pro <span class="math notranslate nohighlight">\(\displaystyle y_c\)</span> odpovídá vztahu pro těžiště množiny s plošnou
+hustotou <span class="math notranslate nohighlight">\(\displaystyle y\)</span>. Na tomto pozorování a na skutečnosti, že u pravidelných
+množin umíme těžiště najít geometricky, je založena metoda nalezení
+působiště tlakové síly pomocí <a class="reference external" href="https://en.wikipedia.org/wiki/Pressure_prism">zatěžovacího obrazce</a>.</p>
+<p>Kvadratický moment v čitateli zlomku <a class="reference internal" href="#equation-h2">(11.2)</a> vyjadřujícího <span class="math notranslate nohighlight">\(\displaystyle y_c\)</span> je často
+výhodnější rozepsat pomocí Steinerovy věty. Ve jmenovateli je součin
+obsahu <span class="math notranslate nohighlight">\(\displaystyle S\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y\)</span>-ové souřadnice těžiště <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span>. Tím dostaneme
+<div class="math notranslate nohighlight">
+\[y_c=\frac{I_{x0}+Sy_0^2}{Sy_0}=\frac{I_{x0}}{Sy_0}+y_0,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle I_{x0}\)</span> je kvadratický moment vzhledem k ose procházející vodorovně těžištěm.
+Působiště tlakové síly <span class="math notranslate nohighlight">\(\displaystyle y_c\)</span> je tedy posunuto směrem dolů od těžiště
+<span class="math notranslate nohighlight">\(\displaystyle y_0\)</span> o hodnotu odpovídající kvadratickému momentu vzhledem k
+vodorovné ose těžištěm <span class="math notranslate nohighlight">\(\displaystyle I_{x0}\)</span> vyděleném součinem obsahu hráze <span class="math notranslate nohighlight">\(\displaystyle S\)</span> a
+<span class="math notranslate nohighlight">\(\displaystyle y\)</span>-ové polohy těžiště <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span>.</p>
+</section>
+</section>
+<section id="shrnuti-hlavni-myslenky">
+<h2><span class="section-number">11.6. </span>Shrnutí, hlavní myšlenky<a class="headerlink" href="#shrnuti-hlavni-myslenky" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id12">
+<img alt="../_images/message.jpg" src="../_images/message.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.11 </span><span class="caption-text">A jaká je hlavní message? Zdroj: pixabay.com</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Mnoho veličin, které nás zajímají, počítáme jako součin obsahu plochy s nějakou jinou veličinou. Zpravidla veličina kterou takto počítáme souvisí v objektem jako s celkem a veličina, kterou násobíme s plochou, souvisí se situací v jednom konkrétním místě. Například hmotnost desky z plošného materiálu (vlastnost objektu) je součinem plošné hustoty (charakteristika materiálu) a obsahu. Celková tlaková síla na hráz (vlastnost objektu) je součinem tlaku (vlastnost v daném bodě) a obsahu. Problém však nastane, pokud vlastnosti nejsou všude stejné. Například plošný materiál může mít v různých místech různé vlastnosti, nebo tlak může být v každém místě hráze jiný, protože hráz je napříč více hloubkami. V takových případech je potřeba součin něčím nahradit. Příslušná náhrada je dvojný integrál.</p></li>
+<li><p>Vidíte dvojný integrál a potřebujete promyslet, co vyjadřuje? Představte si, že integrovaná veličina je konstantní. Potom se integrál redukuje na součin a ten už zpravidla je snadné vyjádřit slovně. Například dvojný integrál hloubky jezera vypočítaný přes celé jezero. Pro konstantní hloubku se tato veličina redukuje na součin hloubky a obsahu hladiny. To je ale objem jezera. Proto dvojný integrál hloubky jezera vyjadřuje objem vody v jezeře.</p></li>
+<li><p>Dvojný integrál počítáme převodem na dvojnásobný integrál, tj. dva integrály, z nichž jeden je uvnitř druhého. V některých situacích (integrál funkce sestavené jako součin funkcí jedné proměnné a počítaný přes obdélník) se dokonce může situace redukovat na součin dvou integrálů funkce jedné proměnné.</p></li>
+<li><p>Dvojný integrál je také odpověď na problém, jak sesčítat veličinu rozloženou v ploše (kvadratický moment obrazce, veličina důležitá pro posuzování tuhosti a pevnosti nosníků) nebo jak ji zprůměrovat (integrální střední hodnota funkce dvou proměnných).</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../vektorove_pole/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Vektorová pole, tok, zákony zachování</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../numerika/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Vybrané postupy numerické matematiky</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivace">11.1. Motivace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hmotnost-nehomogenni-desky">11.1.1. Hmotnost nehomogenní desky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objem-vody-v-jezere">11.1.2. Objem vody v jezeře</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prutok-v-rece-nebo-v-potrubi">11.1.3. Průtok v řece nebo v potrubí</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11.2. Dvojný integrál</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearita-a-aditivita">11.3. Linearita a aditivita</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet">11.4. Výpočet</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-pro-oblast-mezi-funkcemi-promenne-x">11.4.1. Výpočet pro oblast mezi funkcemi proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-pro-oblast-mezi-funkcemi-promenne-y">11.4.2. Výpočet pro oblast mezi funkcemi proměnné <span class="math notranslate nohighlight">\(\displaystyle y\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problematika-zameny-poradi-integrace">11.4.3. Problematika záměny pořadí integrace</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-pro-obdelnikovou-oblast">11.4.4. Výpočet pro obdélníkovou oblast</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu">11.5. Aplikace dvojného integrálu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matematicke-aplikace-dvojneho-integralu">11.5.1. Matematické aplikace dvojného integrálu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objem-kopce-nebo-jezera-pomoci-vrstevnic">11.5.2. Objem kopce nebo jezera pomocí vrstevnic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fyzikalni-aplikace-dvojneho-integralu">11.5.3. Fyzikální aplikace dvojného integrálu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#technike-aplikace-dvojneho-integralu">11.5.4. Techniké aplikace dvojného integrálu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticke-aplikace-dvojneho-integralu-tuhost-nosniku-stabilita-stromu">11.5.5. Praktické aplikace dvojného integrálu - tuhost nosníků, stabilita stromů</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu-teziste-slozeneho-obrazce">11.5.6. Aplikace dvojného integrálu - těžiště složeného obrazce</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu-steinerova-veta">11.5.7. Aplikace dvojného integrálu - Steinerova věta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu-tlak-na-svislou-plochu">11.5.8. Aplikace dvojného integrálu - tlak na svislou plochu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-dvojneho-integralu-pusobiste-tlakove-sily">11.5.9. Aplikace dvojného integrálu - působiště tlakové síly</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">11.6. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 13.12.2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

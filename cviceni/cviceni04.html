@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-11-05T17:10:39+01:00" />
+    <title>4. Lokální extrémy &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni04';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="5. Integrály I" href="cviceni05.html" />
+    <link rel="prev" title="3. Výpočet derivací, lineární aproximace" href="cviceni03.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="05.11.2025"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lokální extrémy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lokalni-extremy-bez-slovniho-zadani">4.1. Lokální extrémy bez slovního zadání</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krabicka-z-papiru">4.2. Krabička z papíru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-ze-tri-stran-pozemku">4.3. Plot ze tří stran pozemku</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimalni-tram-vyrezany-z-kulatiny">4.4. Optimální trám vyřezaný z kulatiny</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ryba-migrujici-proti-proudu">4.5. Ryba migrující proti proudu</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lokalni-extremy">
+<h1><span class="section-number">4. </span>Lokální extrémy<a class="headerlink" href="#lokalni-extremy" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><ul class="simple">
+<li><p>Naučíme se hledat lokální extrémy funkce</p></li>
+</ul>
+</div></blockquote>
+<section id="lokalni-extremy-bez-slovniho-zadani">
+<h2><span class="section-number">4.1. </span>Lokální extrémy bez slovního zadání<a class="headerlink" href="#lokalni-extremy-bez-slovniho-zadani" title="Link to this heading">#</a></h2>
+<p>V úlohách z praxe často
+víme, že existuje optimální řešení a studovaná funkce má jediný bod s nulovou derivací. Pokud studujeme funkci bez jakéhokoliv kontextu,
+musíme posuzovat to, zda v daném bodě opravdu extrém je a
+jaký. Nejlépe tak, že současně určíme i intervaly monotonie. Za
+povšimnutí stojí, že při hledání bodů, kde jsou lokální extrémy,
+vlastně ani nemusíme znát původní funkci. Stačí nám o ní informace
+týkající se spojitosti a poté stačí znát derivaci. I s takovým
+případem se v praxi setkáváme.</p>
+<p>Najděte lokální extrémy a intervaly monotonie následujících funkcí. Spolu s funkcí je zadána i její derivace.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle y=\frac x{(x+1)^2}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{1-x}{(x+1)^3}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle y=\frac{x^2}{x+1}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{x(x+2)}{(x+1)^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle y=\frac{x^2}{x^2+1}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{2x}{(x^2+1)^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle y=(5-x)\sqrt x\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{1}{2\sqrt x}(5-3x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle y=x^2 e^{-x}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y'=-(x - 2)xe^{-x}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle y\)</span> je spojitá na <span class="math notranslate nohighlight">\(\displaystyle \mathbb R\setminus\{2\}\)</span>,\ <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{(x^2+3)(x^2-3)}{2-x}\)</span></p></li>
+</ol>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p><em>1.</em> <span class="math notranslate nohighlight">\(\displaystyle y=\frac x{(x+1)^2}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{1-x}{(x+1)^3}\)</span></p>
+<p>Nulové body derivace jsou řešení rovnice <div class="math notranslate nohighlight">
+\[1-x=0.\]</div>
+ Tato rovnice má jediné řešení <div class="math notranslate nohighlight">
+\[x=1.\]</div>
+</p>
+<p>Body nespojitosti derivace jsou řešení rovnice <div class="math notranslate nohighlight">
+\[(x+1)^3=0.\]</div>
+ Tato rovnice má jediné řešení <div class="math notranslate nohighlight">
+\[x=-1.\]</div>
+</p>
+<p>Body nespojitosti a nulové body rozdělí reálnou osu na tři podintervaly.</p>
+<ul>
+<li><p>Interval <span class="math notranslate nohighlight">\(\displaystyle (-\infty,-1)\)</span>. Dosazením reprezentanta <span class="math notranslate nohighlight">\(\displaystyle x=-2\)</span> z tohoto intervalu máme <div class="math notranslate nohighlight">
+\[y'(-2)=\frac{1-(-2)}{(-2+1)^3}&lt;0\]</div>
+ a proto je derivace na tomto intervalu záporná a funkce klesá.</p></li>
+<li><p>Interval <span class="math notranslate nohighlight">\(\displaystyle (-1,1)\)</span>. Dosazením reprezentanta <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> z tohoto intervalu máme <div class="math notranslate nohighlight">
+\[y'(0)=\frac{1-0}{(0+1)^3}&gt;0\]</div>
+ a proto je derivace na tomto intervalu kladná a funkce roste.</p></li>
+<li><p>Interval <span class="math notranslate nohighlight">\(\displaystyle (1,\infty)\)</span>. Dosazením reprezentanta <span class="math notranslate nohighlight">\(\displaystyle x=2\)</span> z tohoto intervalu máme <div class="math notranslate nohighlight">
+\[y'(2)=\frac{1-2}{(2+1)^3}&lt;0\]</div>
+ a proto je derivace na tomto intervalu záporná a funkce klesá.</p>
+<p>V bodě <span class="math notranslate nohighlight">\(\displaystyle x=1\)</span> se monotonie funkce mění spojitě z klesající na rostoucí (nakreslete si schema) a funkce má lokální minimum.</p>
+<p>V bodě <span class="math notranslate nohighlight">\(\displaystyle x=-1\)</span> se monotonie funkce mění z rostoucí na klesající, ale lokální extrém zde není, protože funkce ani její derivace v tomto bodě nejsou definovány.</p>
+</li>
+</ul>
+<p><em>2.</em> <span class="math notranslate nohighlight">\(\displaystyle y=\frac {x^2}{x+1}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{x(x+2)}{(x+1)^2}\)</span></p>
+<p>Nulové body derivace jsou řešení rovnice <div class="math notranslate nohighlight">
+\[x(x+2)=0.\]</div>
+ Tato rovnice má dvě řešení <div class="math notranslate nohighlight">
+\[x_1=0, \ x_2=-2.\]</div>
+</p>
+<p>Body nespojitosti derivace jsou řešení rovnice <div class="math notranslate nohighlight">
+\[(x+1)^2=0.\]</div>
+ Tato rovnice má jediné řešení <div class="math notranslate nohighlight">
+\[x=-1.\]</div>
+</p>
+<p>Body nespojitosti a nulové body rozdělí reálnou osu na čtyři podintervaly.</p>
+<ul class="simple">
+<li><p>Interval <span class="math notranslate nohighlight">\(\displaystyle (-\infty,-2)\)</span>. Dosazením reprezentanta <span class="math notranslate nohighlight">\(\displaystyle x=-10\)</span> z tohoto intervalu máme <div class="math notranslate nohighlight">
+\[y'(-10)=\frac{(-10)(-10+2)}{(\dots )^2}&gt;0\]</div>
+ a proto je derivace na tomto intervalu kladná a funkce roste. Všimněte si, že jmenovatel je stále kladný a znaménko podílu nijak neovlivní.</p></li>
+<li><p>Interval <span class="math notranslate nohighlight">\(\displaystyle (-2,-1)\)</span>. Dosazením reprezentanta <span class="math notranslate nohighlight">\(\displaystyle x=-1.5\)</span> z tohoto intervalu máme <div class="math notranslate nohighlight">
+\[y'(-1.5)=\frac{-1.5(-1.5+2)}{(\dots)^2}&lt;0\]</div>
+ a proto je derivace na tomto intervalu záporná a funkce klesá.</p></li>
+<li><p>Interval <span class="math notranslate nohighlight">\(\displaystyle (-1,0)\)</span>. Dosazením reprezentanta <span class="math notranslate nohighlight">\(\displaystyle x=-0.5\)</span> z tohoto intervalu máme <div class="math notranslate nohighlight">
+\[y'(-0.5)=\frac{-0.5(-0.5+2)}{(\dots)^2}&lt;0\]</div>
+ a proto je derivace na tomto intervalu záporná a funkce klesá.</p></li>
+<li><p>Interval <span class="math notranslate nohighlight">\(\displaystyle (0,\infty)\)</span>. Dosazením reprezentanta <span class="math notranslate nohighlight">\(\displaystyle x=1\)</span> z tohoto intervalu máme <div class="math notranslate nohighlight">
+\[y'(1)=\frac{1(1+2)}{(\dots)^2}&gt;0\]</div>
+ a proto je derivace na tomto intervalu kladná a funkce roste.</p></li>
+</ul>
+<p>V bodě <span class="math notranslate nohighlight">\(\displaystyle x=-2\)</span> se monotonie funkce mění spojitě z rostoucí na klesající (nakreslete si schema) a funkce má v tomto bodě lokální maximum.</p>
+<p>V bodě <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> se monotonie funkce mění spojitě z klesající na rostoucí (nakreslete si schema) a funkce má v tomto bodě lokální minimum.</p>
+<p>V bodě <span class="math notranslate nohighlight">\(\displaystyle x=-1\)</span> se monotonie funkce nemění. Navíc funkce v tomto bodě ani není definována a existenci lokálního extrému tedy ani neuvažujeme</p>
+<p><em>3.</em> <span class="math notranslate nohighlight">\(\displaystyle y=\frac {x^2}{x^2+1}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y'=\frac{2x}{(x^2+1)^2}\)</span></p>
+<p>Nulové body derivace jsou řešení rovnice <div class="math notranslate nohighlight">
+\[2x=0.\]</div>
+ Tato rovnice má jediné řešení <div class="math notranslate nohighlight">
+\[x=0.\]</div>
+</p>
+<p>Body nespojitosti derivace jsou řešení rovnice <div class="math notranslate nohighlight">
+\[(x^2+1)^2=0.\]</div>
+ Tato rovnice nemá v oboru reálných čísel žádné řešení.</p>
+<p>Body nespojitosti nejsou a jeden nulový bod rozdělí reálnou osu na dva podintervaly. Z derivace je zřejmé, že derivace má stejné znaménko jako <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, tj. derivace je záporná nalevo od nuly a kladná napravo od nuly. To znamená, že v nule se funkce mění z klesající na rostoucí a funkce má v tomto bodě lokální minimum.</p>
+</section>
+</div></section>
+<section id="krabicka-z-papiru">
+<h2><span class="section-number">4.2. </span>Krabička z papíru<a class="headerlink" href="#krabicka-z-papiru" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id1">
+<img alt="../_images/krabicka.jpg" src="../_images/krabicka.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 4.17 </span><span class="caption-text">vlastní</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>V každém rohu papíru A4 vystřihneme čtverec a zbylý papír podél stran
+poohýbáme nahoru, aby vznikla (až se to slepí) krabička bez horního
+víka. Jak velké čtverce musíme odstříhat, pokud chceme, aby výsledná
+krabička měla co největší objem?</p>
+<p><em>Toto je klasický příklad přítomný snad v každé učebnici
+diferenciálního počtu. Zajímavý je tím, že A4 má ve výuce zpravidla
+každý před sebou a může si tipnout, jaký očekává výsledek a kolik
+maximální objem bude. Pro odhad objemu si můžeme představit třeba
+litrovou krabici mléka a porovnávat s tímto referenčním kvádrem.</em></p>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Papír A4 má rozměry <span class="math notranslate nohighlight">\(\displaystyle 210\times 297\,\mathrm{mm}\)</span> a je-li vystřižený čtverec o straně <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, má krabička rozměry <span class="math notranslate nohighlight">\(\displaystyle (210-2x)\times(297-2x)\times x\)</span> a objem
+<div class="math notranslate nohighlight">
+\[
+V(x)=(210-2x)(297-2x)x=4 x^3 - 1014 x^2 + 62370 x.
+\]</div>
+
+Derivováním dostaneme
+<div class="math notranslate nohighlight">
+\[
+  \frac{\mathrm dV}{\mathrm dx} = 12x^2 - 2028x + 62370
+\]</div>
+
+a nulové body derivace jsou řešeními rovnice
+<div class="math notranslate nohighlight">
+\[
+   12x^2 - 2028x + 62370 = 0.
+ \]</div>
+
+Tato rovnice má pro naši úlohu jediné smysluplné řešení <span class="math notranslate nohighlight">\(\displaystyle x=40.4\)</span> (další řešení <span class="math notranslate nohighlight">\(\displaystyle x=128.5\)</span> neodpovídá realizovatelnému výrobku). Optimální krabička vznikne vystřižením čtverců o stranách <span class="math notranslate nohighlight">\(\displaystyle 40.4\,\mathrm{mm}\)</span>. Objem je
+<div class="math notranslate nohighlight">
+\[
+   V(40.4)=1.12 \times 10^6\,\mathrm {mm}^3=1.12\,\mathrm{l}.
+ \]</div>
+</p>
+</section>
+</div></section>
+<section id="plot-ze-tri-stran-pozemku">
+<h2><span class="section-number">4.3. </span>Plot ze tří stran pozemku<a class="headerlink" href="#plot-ze-tri-stran-pozemku" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id2">
+<img alt="../_images/plot.jpg" src="../_images/plot.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 4.18 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Chceme oplotit pozemek obdélníkového tvaru, jehož jedna strana je
+rovná přirozená hranice. Stavíme plot tedy jenom na zbylých třech
+stranách.</p>
+<ol class="arabic simple">
+<li><p>Jaký tvar pozemku zvolit, pokud je dána délka pletiva a chceme mít plochu pozemku co největší?</p></li>
+<li><p>Jaký tvar pozemku zvolit, pokud je dána plocha pozemku a chceme mít co nejmenší spotřebu pletiva?</p></li>
+</ol>
+<p><em>Než začnete řešit, tak si zkuste tipnout jestli optimální je čtverec
+nebo obdélník. Pokud obdélník, tak zda podél přirozené hranice nebo
+kolmo na ni. Také si zkuste tipnout, zda je řešení obou úloh stejné
+(tj. stejný tvar obdélníku, například stejný poměr stran). Úlohy řešte
+s co nejmenším množstvím parametrů. Uvažujte tedy, že máte jednu
+délkovou jednotku pletiva v prvním případě a že chcete oplotit pozemek
+o jednotkovém obsahu v případě druhém.</em></p>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Obsah obdélníka o stranách <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y\)</span> je součin délek dvou sousedních stran
+<div class="math notranslate nohighlight">
+\[
+  S=xy
+\]</div>
+
+délka plotu bude délka strany podél hranice (např <span class="math notranslate nohighlight">\(\displaystyle x\)</span>) a dvojnásobek délky strany kolmé na hranici (např. <span class="math notranslate nohighlight">\(\displaystyle y\)</span>)
+<div class="math notranslate nohighlight">
+\[
+  L=x+2y
+\]</div>
+
+\textbf{Maximální plocha při daném obvodu.}
+Měřeno v násobcích délky plotu je <span class="math notranslate nohighlight">\(\displaystyle L=1\)</span> a ze vztahu
+<div class="math notranslate nohighlight">
+\[
+  x+2y=1
+\]</div>
+
+dostaneme
+<div class="math notranslate nohighlight">
+\[
+  x=1-2y.
+\]</div>
+
+Potom platí
+<div class="math notranslate nohighlight">
+\[
+  S=xy=(1-2y)y=y-2y^2.
+\]</div>
+
+Derivací obdržíme
+<div class="math notranslate nohighlight">
+\[
+  \frac{\mathrm dS}{\mathrm dy}=1-4y
+\]</div>
+
+a derivace je rovna nule pro <span class="math notranslate nohighlight">\(\displaystyle y=\frac 14\)</span>, tedy kratší strana je čtvrtina celkové délky plotu. Na delší strana tedy zbude polovina (dvakrát odkrojím čtvrtinu) a obdélník má poměr stran <span class="math notranslate nohighlight">\(\displaystyle 2:1\)</span>.</p>
+<p><em>Minimální obvod při daném obsahu.</em>
+Měřeno v jednotkách, ve kterých je obsah <span class="math notranslate nohighlight">\(\displaystyle S\)</span> roven jedné (tj. v násobcích délky strany čtverce o stejném obsahu jako náš obdélník) dostáváme ze vztahu
+<div class="math notranslate nohighlight">
+\[
+  xy=1
+\]</div>
+
+vztah
+<div class="math notranslate nohighlight">
+\[
+  y=\frac 1x.
+\]</div>
+
+Potom platí
+<div class="math notranslate nohighlight">
+\[
+  L=x+2y=x+\frac 2x=x+2x^{-1}
+\]</div>
+
+Derivací obdržíme
+<div class="math notranslate nohighlight">
+\[
+  \frac{\mathrm dL}{\mathrm dx}=1+2(-1)x^{-2}=1-\frac 2{x^2}
+\]</div>
+
+a derivace je rovna nule pro <span class="math notranslate nohighlight">\(\displaystyle x^2=2\)</span>, tj. pro <span class="math notranslate nohighlight">\(\displaystyle x=\sqrt{2}\)</span> (uvažujeme jenom kladné hodnoty <span class="math notranslate nohighlight">\(\displaystyle x\)</span>). Ze vztahu <span class="math notranslate nohighlight">\(\displaystyle y=\frac 1x\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[
+  y=\frac 1{\sqrt 2}=\frac{\sqrt{2}}2=\frac x2
+\]</div>
+
+a kratší strana je polovinou délky delší strany. Jako v předchozím případě, obdélník má poměr stran <span class="math notranslate nohighlight">\(\displaystyle 2:1\)</span>.</p>
+</section>
+</div></section>
+<section id="optimalni-tram-vyrezany-z-kulatiny">
+<h2><span class="section-number">4.4. </span>Optimální trám vyřezaný z kulatiny<a class="headerlink" href="#optimalni-tram-vyrezany-z-kulatiny" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id3">
+<img alt="../_images/beam.jpg" src="../_images/beam.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 4.19 </span><span class="caption-text">Harry Rogers, youtube.com</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Ukažte, že pro vyřezání nebo vytesání trámu o maximálním objemu z kulatiny válcového tvaru je nutné vyřezat trám se čtvercovým
+průřezem. Návod: Uvažujte válec, ze kterého chceme vyříznout
+hranol. Zvolte jako jednotku délky průměr kulatiny a hledejte maximum
+druhé mocniny obsahu průřezu. Zdůvodněte, že tento postup je
+korektní. Maximum paraboly najděte ze znalosti toho, že vrchol
+paraboly leží v polovině mezi kořeny.</p>
+<p>Poté zopakujte předchozí úlohu pro maximum veličin <span class="math notranslate nohighlight">\(\displaystyle bh^2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle bh^3\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle h\)</span>
+je výška a <span class="math notranslate nohighlight">\(\displaystyle b\)</span> šířka průřezu trámu. V prvním případě maximalizujeme
+nosnost a ve druhém tuhost nosníku. Použijte stejný postup jako v minulé úloze, ale už nebude stačit najít vrchol paraboly. (Poznámka: Jedna z těchto funkcí se maximalizovala na přednášce a proto tento případ nemusíte dopočítávat.)</p>
+<p><em>Tento příklad je zajímavý spíše z aplikačního hlediska: nejvíce dřeva neznamená největší nosnost a nosník, který nejvíce unese, vychází jinak, než nosník, který se nejméně prohýbá.</em></p>
+<div class="proof example dropdown admonition" id="example-3">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>V jednotkách průměru platí <span class="math notranslate nohighlight">\(\displaystyle h^2+b^2=1\)</span>
+a mají se postupně maximalizovat funkce obsah <span class="math notranslate nohighlight">\(\displaystyle S=bh\)</span>, nosnost <span class="math notranslate nohighlight">\(\displaystyle N=bh^2\)</span> a tuhost <span class="math notranslate nohighlight">\(\displaystyle T=bh^3\)</span>. Protože <span class="math notranslate nohighlight">\(\displaystyle b\)</span> se pomocí <span class="math notranslate nohighlight">\(\displaystyle h\)</span> vyjadřuje pomocí druhé odmocniny a naopak, bude výhodnější maximalizovat funkce, kde aspoň jedna mocnina je sudá. To je jenom u nosnosti, u obsahu a tuhosti si sudé mocniny vyrobíme umocněním na druhou a budeme dosazovat <div class="math notranslate nohighlight">
+\[b^2=1-h^2,\]</div>
+ tj.
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+S^2(h)&amp;=b^2h^2=(1-h^2)h^2,\\
+N(b)&amp;=b(1-b^2)=b-b^3,\\
+T^2(h)&amp;=b^2h^6=(1-h^2)h^6=h^6-h^8.
+\end{aligned}
+\end{split}\]</div>
+
+Postup je korektní, protože veličiny jsou kladné a funkce <span class="math notranslate nohighlight">\(\displaystyle y=x^2\)</span> je pro kladné <span class="math notranslate nohighlight">\(\displaystyle x\)</span> rostoucí. Proto bude veličina maximální tam, kde je maximální její druhá mocnina.</p>
+<p><em>Obsah:</em> Funkce <span class="math notranslate nohighlight">\(\displaystyle f(h)=(1-h^2)h^2\)</span> je parabola v proměnné <span class="math notranslate nohighlight">\(\displaystyle h^2\)</span> a proto má maximum pro <span class="math notranslate nohighlight">\(\displaystyle h^2=\frac 12\)</span>, tj. <span class="math notranslate nohighlight">\(\displaystyle h=\frac {1}{\sqrt 2}\)</span>. Druhý rozměr vychází
+<div class="math notranslate nohighlight">
+\[b=\sqrt{1-h^2}=\sqrt{1-\frac 12}=\frac{1}{\sqrt 2}\]</div>
+ a trám má v tomto případě (maximalizujeme objem) průřez čtverce.</p>
+<p><em>Nosnost:</em> Funkce <span class="math notranslate nohighlight">\(\displaystyle f(b)=b-b^3\)</span> má derivaci <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm df}{\mathrm db}=1-3b^2\)</span> a derivace je pro <span class="math notranslate nohighlight">\(\displaystyle b&gt;0\)</span> nulová, jestliže <span class="math notranslate nohighlight">\(\displaystyle b^2=\frac 13\)</span>, tj. <span class="math notranslate nohighlight">\(\displaystyle b=\frac{1}{\sqrt 3}\)</span>.  Druhý rozměr vychází
+<div class="math notranslate nohighlight">
+\[h=\sqrt{1-b^2}=\sqrt{1-\frac 13}=\frac{\sqrt 2}{\sqrt 3}\]</div>
+ a trám má v tomto případě (maximalizujeme nosnost) průřez obdélníka s poměrem stran <span class="math notranslate nohighlight">\(\displaystyle h:b=\sqrt 2:1\)</span>.</p>
+<p><em>Tuhost:</em> Funkci <span class="math notranslate nohighlight">\(\displaystyle f(h)=h^6-h^8\)</span> jsme maximalizovali na přednášce a  trám má v tomto případě průřez obdélníka s poměrem stran <span class="math notranslate nohighlight">\(\displaystyle \sqrt 3:1\)</span>.
+Vskutku. Funkce <span class="math notranslate nohighlight">\(\displaystyle f(h)=h^6-h^8\)</span> má derivaci <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm df}{\mathrm dh}=6h^5-8h^7=2h^5(3-4h^2)\)</span> a derivace je pro <span class="math notranslate nohighlight">\(\displaystyle h&gt;0\)</span> nulová, jestliže <span class="math notranslate nohighlight">\(\displaystyle h^2=\frac 34\)</span>, tj. <span class="math notranslate nohighlight">\(\displaystyle h=\frac{\sqrt 3}{2}\)</span>.  Druhý rozměr vychází
+<div class="math notranslate nohighlight">
+\[b=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\frac{1}{2}\]</div>
+ a trám má v tomto případě  průřez obdélníka s poměrem stran <span class="math notranslate nohighlight">\(\displaystyle h:b=\sqrt 3:1\)</span>.</p>
+</section>
+</div></section>
+<section id="ryba-migrujici-proti-proudu">
+<h2><span class="section-number">4.5. </span>Ryba migrující proti proudu<a class="headerlink" href="#ryba-migrujici-proti-proudu" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id4">
+<img alt="../_images/pstruh.jpg" src="../_images/pstruh.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 4.20 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Ryba ve vodě vydává za časovou jednotku
+energii úměrnou třetí mocnině rychlosti vzhledem k vodě. Pro překonání
+určité vzdálenosti proti proudu o rychlosti <span class="math notranslate nohighlight">\(\displaystyle v\)</span> je proto potřeba
+energie <div class="math notranslate nohighlight">
+\[E= k \frac 1x (x+v)^3,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle x\)</span> je rychlost ryby vzhledem
+ke břehu a <span class="math notranslate nohighlight">\(\displaystyle x+v\)</span> rychlost vzhledem k vodě. Najděte pro rybu optimální
+cestovní rychlost při migraci na dlouhé vzdálenosti, tj. rychlost, při
+které je minimalizován nutný energetický výdaj.</p>
+<p><em>Než začnete řešit, uvědomte si, že pokud měříme rychlosti v jednotkách rychlosti vody v řece, platí <span class="math notranslate nohighlight">\(\displaystyle v=1\)</span> a po vynechání konstanty <span class="math notranslate nohighlight">\(\displaystyle k\)</span>, která nemá vliv na polohu a kvalitu lokálních extrémů, hledáme lokální minimum funkce <span class="math notranslate nohighlight">\(\displaystyle \frac{(x+1)^3}x.\)</span></em></p>
+<p><em>Podle Stewart, Day: Biocalculus. Calculus for the life siences.</em></p>
+<div class="proof example dropdown admonition" id="example-4">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Měřeno v násobcích rychlosti vody máme minimalizovat funkci
+<div class="math notranslate nohighlight">
+\[
+  y=\frac{(x+1)^3}x.
+\]</div>
+
+Platí
+<div class="math notranslate nohighlight">
+\[
+  \frac{\mathrm dy}{\mathrm dx}=\frac{3(x+1)^2\cdot 1\cdot x-(x+1)^3\cdot 1}{x^2}=\frac{(x+1)^2(3x-(x+1))}{x^2}=\frac{(x+1)^2(2x-1)}{x^2}
+\]</div>
+
+Derivace je rovna nule pro <span class="math notranslate nohighlight">\(\displaystyle x=-1\)</span> (ryba plave rychlostí stejnou jako voda, ale po proudu) a <span class="math notranslate nohighlight">\(\displaystyle x=\frac 12\)</span> (ryba plave proti proudu takovou rychlostí, že její rychlost vzhledem k břehu je poloviční ve srovnání s rychlostí vody v protiproudu). Smysluplné je pouze řešení <span class="math notranslate nohighlight">\(\displaystyle x=\frac 12\)</span> tj polovina rychlosti proudu. Například v proudu o rychlosti <span class="math notranslate nohighlight">\(\displaystyle 20\,\mathrm{km}\,\mathrm{hod}^{-1}\)</span> ryba plave tak, že vzhledem k nehybnému pozorovateli na břehu plave rychlostí <span class="math notranslate nohighlight">\(\displaystyle 10\,\mathrm{km}\,\mathrm{hod}^{-1}\)</span>. Ve vodě tedy plave rychlostí <span class="math notranslate nohighlight">\(\displaystyle 30\,\mathrm{km}\,\mathrm{hod}^{-1}\)</span>, proud <span class="math notranslate nohighlight">\(\displaystyle 20\,\mathrm{km}\,\mathrm{hod}^{-1}\)</span> ji strhává zpět a výsledná rychlost je <span class="math notranslate nohighlight">\(\displaystyle 10\,\mathrm{km}\,\mathrm{hod}^{-1}\)</span></p>
+</section>
+</div><p><em>Pozorování potvrdila, že migrující ryby „znají“ řešení předchozího
+příkladu a proto plavou proti proudu rychlostí o polovinu větší než
+rychlost proudu. Vzhledem ke břehu je tedy jejich „cestovní rychlost
+proti proudu“ poloviční jako je rychlost proudu. Mimo jiné, v rychlé
+vodě plavou rychle a v pomalejší pomaleji.</em></p>
+<p><em>Příklad typu jaký jsme řešili u migrace ryb se ale ve skutečnosti
+často objevuje naopak. Například následovně.</em></p>
+<ul class="simple">
+<li><p><em>Pozorujeme specifické chování ryb. Někdo si to toho nevšímá,
+někdo to bere jako fakt, ale někomu to vrtá hlavou. Proč to tak je?
+Asi si přirozeně minimalizují energii.</em></p></li>
+<li><p><em>Jakou musíme učinit hypotézu aby tato hypotéza vedla k pozorovanému jevu? Jaká musí být souvislost energie s rychlostí, aby
+minimalizace energie vedla k tomu, co pozorujeme?</em></p></li>
+<li><p><em>Po nalezení odpovědi na předchozí otázku je přirozené
+předpokládat, že jsme našli podstatu jevu. Tedy třeba, že energie je
+úměrná třetí mocnině rychlosti. V tomto smyslu matematika
+zviditelnila neviditelné.</em></p></li>
+<li><p><em>Někdy je potřeba při konfrontaci s jinými pozorováními hypotézu
+poopravit, zpřesnit nebo bohužel zamítnout. To však je přirozené při
+poznávání světa.</em></p></li>
+</ul>
+<!-- 
+%
+% # Průběh funkce
+
+% Dle instrukcí cvičícího.
+% \begin{itemize}
+% \item Dokončení příkladů, které se nestihly.
+% \item Ukázka využití
+%   derivací k vyšetření průběhu funkce.
+% \item Shrnutí diferenciálního počtu, další ukázky a příklady.
+% \end{itemize}
+-->
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cviceni03.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Výpočet derivací, lineární aproximace</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cviceni05.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Integrály I</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lokalni-extremy-bez-slovniho-zadani">4.1. Lokální extrémy bez slovního zadání</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krabicka-z-papiru">4.2. Krabička z papíru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-ze-tri-stran-pozemku">4.3. Plot ze tří stran pozemku</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimalni-tram-vyrezany-z-kulatiny">4.4. Optimální trám vyřezaný z kulatiny</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ryba-migrujici-proti-proudu">4.5. Ryba migrující proti proudu</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 05.11.2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

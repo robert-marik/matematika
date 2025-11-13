@@ -1,0 +1,1230 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-10-27T08:57:24+02:00" />
+    <title>5. Integrály pro pokročilé &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'integraly2/index';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="6. Diferenciální rovnice" href="../ode/index.html" />
+    <link rel="prev" title="4. Integrál, integrál a integrál" href="../integraly/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="27.10.2023"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Integrály pro pokročilé</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vlastnosti-integralu">5.1. Vlastnosti integrálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stredni-hodnota">5.2. Střední hodnota</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-prace-pomoci-integralu">5.3. Výpočet práce pomocí integrálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numericka-aproximace-urciteho-integralu">5.4. Numerická aproximace určitého integrálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrace-substitucni-metodou">5.5. Integrace substituční metodou</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-jako-funkce-meze">5.6. Integrál jako funkce meze</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">5.7. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="integraly-pro-pokrocile">
+<h1><span class="section-number">5. </span>Integrály pro pokročilé<a class="headerlink" href="#integraly-pro-pokrocile" title="Link to this heading">#</a></h1>
+<div class="Ylink">  <a href="https://youtu.be/nvagZcCVm4k">Minivideo</a> </div>
+<p>Naučili jsme se integrovat pomocí neurčitého a určitého
+integrálu. Neurčitý integrál vyjadřuje funkční hodnotu vypočítanou z
+akumulace okamžitých změn. Z principiálních důvodů není možné, pokud
+je zadána pouze rychlost změny, určit celou veličinu, ale jenom její
+změnu. Proto je neurčitý integrál dán jednoznačně až na aditivní
+konstantu. Velikost změny na zadaném intervalu je dána určitým
+integrálem, ke kterému je možné dospět i geometricky a fyzikálně
+názorným způsobem představeným v definici Riemannova integrálu. Ten
+otevírá možnost rozšířit platnost mnoha fyzikálních vzorců na případ,
+kdy parametry úlohy nejsou konstantní. Dokážeme tak počítat dráhu
+pohybu proměnnou rychlostí, tlak vody na plochu ponořenou napříč
+různými hloubkami a podobně.</p>
+<p>V následujícím textu rozvineme některé poznatky o integrálu, odvodíme
+si některé pokročilejší metody pro výpočet, ukážeme si, že každá
+spojitá funkce má primitivní funkci a také otevřeme cestu k
+definování funkcí, které nejsou elementární.</p>
+<p>Nejprve si připomeneme jednu ze základních aplikací integrálu:
+nasčítání příspěvků od spojitě se měnící veličiny.</p>
+<div class="proof algorithm dropdown admonition" id="algorithm-0">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 5.1 </span> (Příklad: proč trubky praskají podélně?)</p>
+<section class="algorithm-content" id="proof-content">
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/hoop_stress.png" src="../_images/hoop_stress.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.1 </span><span class="caption-text">Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<figure class="align-default" id="id2">
+<img alt="../_images/impregnacni_komora.jpg" src="../_images/impregnacni_komora.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.2 </span><span class="caption-text">Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových  nádob. Zdroj: J. Dömény.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="../_images/popraskane_trubky.jpg" src="../_images/popraskane_trubky.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.3 </span><span class="caption-text">Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+</div>
+<p>Uvažujme natlakovanou válcovou nádobu s tlakem <span class="math notranslate nohighlight">\(\displaystyle p\)</span>, výškou <span class="math notranslate nohighlight">\(\displaystyle L\)</span>, poloměrem podstavy <span class="math notranslate nohighlight">\(\displaystyle r\)</span> a stěnou o tloušťce <span class="math notranslate nohighlight">\(\displaystyle t\)</span>.</p>
+<p>Vypočteme namáhání silou v ose, tj. namáhání řezu A. Obsah řezu (vyšrafováno červeně) je <span class="math notranslate nohighlight">\(\displaystyle 2\pi r t\)</span>. Na dno a víko působí síla <span class="math notranslate nohighlight">\(\displaystyle F=p\pi r^2\)</span> a v řezu A kolmém na osu válce je tahové napětí <div class="math notranslate nohighlight">
+\[\sigma_{p} = \frac FS=\frac {p\pi r^2}{2\pi rt}=\frac {pr}{2t}.\]</div>
+</p>
+<p>Směrem radiálně od osy se tlaková síla rozkládá na celou plochu pláště válce a v tomto směru je tahové napětí minimální.</p>
+<p>Vypočteme poslední složku přispívající k namáhání pláště válce, obvodové napětí. K tomu musíme vypočítat sílu, která působí po obvodě válce, tj. která se snaží válec roztrhnout v řezu B. Tento řez má obsah (červeně vyznačeno) <span class="math notranslate nohighlight">\(\displaystyle 2Lt\)</span>. Nejtěžší bude najít celkovou sílu, která od sebe oddaluje dvě poloviny pláště. To je místo, kde zapojíme integrál.</p>
+<p>Kousek pláště válce odpovídající úhlu <span class="math notranslate nohighlight">\(\displaystyle \Delta \alpha\)</span> má obsah <span class="math notranslate nohighlight">\(\displaystyle rL\Delta \alpha\)</span> a tlaková síla na tento kousek je součin tlaku a obsahu, tj. <div class="math notranslate nohighlight">
+\[\Delta F=pS=p Lr\Delta \alpha .\]</div>
+ Směr je kolmý k plášti válce a s vodorovnou osou svírá úhel <span class="math notranslate nohighlight">\(\displaystyle \alpha\)</span>.  Průmět této síly do vodorovného směru je <div class="math notranslate nohighlight">
+\[\Delta F_x=pLr\Delta \alpha \cos \alpha\]</div>
+ a tyto příspěvky musíme posčítat na intervalu <span class="math notranslate nohighlight">\(\displaystyle \alpha \in \left[-\frac\pi 2,\frac \pi 2\right]\)</span>. Celková síla, která se snaží nádobu roztrhnout podélně je
+<div class="math notranslate nohighlight">
+\[F_x=\int_{-\frac \pi2}^{\frac \pi 2} prL \cos \alpha \,\mathrm d \alpha  =prL [\sin \alpha]_{-\frac \pi 2}^{\frac \pi 2}=prL \left[\sin\frac \pi 2 -\sin\left(-\frac \pi2 \right)\right]=2p rL.\]</div>
+ Povrch na který tato síla působí odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah <span class="math notranslate nohighlight">\(\displaystyle 2Lt\)</span> a napětí je tedy
+<div class="math notranslate nohighlight">
+\[\sigma_{h}=\frac{2pLr}{2Lt}=\frac{pr}t=2\sigma_p.\]</div>
+ Vidíme, že toto napětí je dvojnásobkem napětí v podélné ose.</p>
+<p>Ještě je vhodné ověřit, že svislý průmět, tj . <div class="math notranslate nohighlight">
+\[\Delta F_y=pLr\Delta \alpha \sin \alpha\]</div>
+ k namáhání nepřispívá, protože
+<div class="math notranslate nohighlight">
+\[F_y=\int_{-\frac \pi2}^{\frac \pi 2} prL \sin \alpha \,\mathrm d \alpha  =0.\]</div>
+ To však je možné očekávat i ze symetrie.</p>
+<p>Pokud se chcete dozvědět více, zkuste Google a heslo „hoop stress“.</p>
+</section>
+</div><section id="vlastnosti-integralu">
+<h2><span class="section-number">5.1. </span>Vlastnosti integrálu<a class="headerlink" href="#vlastnosti-integralu" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/uyiQAbYZVRU">Minivideo</a> </div>
+<div class='obtekat'>
+<figure class="align-default" id="id4">
+<img alt="../_images/int_vlastnosti.png" src="../_images/int_vlastnosti.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.4 </span><span class="caption-text">Monotonie a aditivia vzhledem k mezi pro určitý integrál.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Z minulé přednášky víme, že integrál (určitý i neurčitý) je lineární,
+tj. zachovává součet funkcí a násobení konstantou.</p>
+<p>Následující dvě věty nejsou překvapivé. Vyjadřují dvě intuitivně
+zřejmá fakta.</p>
+<ul class="simple">
+<li><p>Pokud se veličina mění rychleji, výsledná změna je větší.</p></li>
+<li><p>Pokud sledujeme změnu veličiny za určitý čas, můžeme sledovat změnu
+do nějakého mezičasu a poté od mezičasu do konce a obě částečné
+změny poté sečíst.</p></li>
+</ul>
+<p>Je však důležité vědět, že tyto myšlenky platí pro libovolné
+integrovatelné funkce a proto zformulujeme následující věty.</p>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span>Věta </span> (Monotonie vzhledem k funkci)</p>
+<section class="theorem-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle f(x)\geq g(x)\)</span> na
+intervalu <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span>, platí <div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,\mathrm dx\geq \int_a^b
+  g(x)\,\mathrm dx.\]</div>
+</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-2">
+<p class="admonition-title"><span>Věta </span> (Integrál nezáporné funkce je nezáporný)</p>
+<section class="theorem-content" id="proof-content">
+<p>Integrál nezáporné funkce je nezáporný. Přesněji, je-li <span class="math notranslate nohighlight">\(\displaystyle a&lt;b\)</span> a <span class="math notranslate nohighlight">\(\displaystyle f(x)\geq 0\)</span> na <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span>, platí <div class="math notranslate nohighlight">
+\[\int _a^b f(x)\,\mathrm dx \geq 0.\]</div>
+</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-3">
+<p class="admonition-title"><span>Věta </span> (Aditivita vzhledem k integračnímu oboru)</p>
+<section class="theorem-content" id="proof-content">
+<p>Platí <div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,\mathrm dx= \int_a^c f(x)\,\mathrm dx + \int_c^b f(x)\,\mathrm dx.\]</div>
+</p>
+</section>
+</div><p>Věta o aditivitě vzhledem k integračnímu oboru je například pro
+Newtonovu definici integrálu důsledkem zřejmého vztahu
+<div class="math notranslate nohighlight">
+\[[F(b)-F(c)]+[F(c)-F(a)]=F(b)-F(a)\]</div>
+ pro libovolnou primitivní funkci
+<span class="math notranslate nohighlight">\(\displaystyle F\)</span>. Graficky i fyzikálně je názorný případ, kdy <span class="math notranslate nohighlight">\(\displaystyle c\)</span> leží v intervalu
+<span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span>. Vzorec však platí pro libovolné uspořádání mezí podle
+velikosti.</p>
+</section>
+<section id="stredni-hodnota">
+<h2><span class="section-number">5.2. </span>Střední hodnota<a class="headerlink" href="#stredni-hodnota" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/8Qc0RI4T5LI">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id5">
+<img alt="../_images/tepelna_vodivost.png" src="../_images/tepelna_vodivost.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.5 </span><span class="caption-text">Když materiálová konstanta není konstantní a chceme ji zprůměrovat, použijeme integrální střední hodnotu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Určitou souvislost s monotonií vzhledem k funkci má otázka, zda je
+možné funkci definovanou na intervalu <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span> nahradit funkcí
+konstantní tak, aby obě funkce měly stejný integrál. V praxi to
+znamená, že bychom například při pohybu tělesa časový průběh rychlosti
+nahradili jednou hodnotou takovou, že dráha za daný čas bude
+stejná. To je přesně to, co známe z běžného života jako definici
+průměrné rychlosti. Je to současně i návod pro následující rozšíření
+pojmu průměrná rychlost na libovolné integrovatelné funkce. Jedná se
+vlastně o jakousi průměrnou hodnotu, při které ale nepočítáme průměr z
+konečného počtu hodnot, ale z hodnot rozložených spojitě na
+zadaném intervalu.</p>
+<p>Definice střední hodnoty je snadným důsledkem toho, že hledáme hodnotu
+<span class="math notranslate nohighlight">\(\displaystyle \mu\)</span> s vlastností <div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,\mathrm dx=\int_a^b \mu\,\mathrm dx=\mu \int_a^b \mathrm dx=\mu(b-a).\]</div>
+</p>
+<div class="proof definition admonition" id="definition-4">
+<p class="admonition-title"><span>Definice </span> (Střední hodnota)</p>
+<section class="definition-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je funkce definovaná a
+integrovatelná na uzavřeném intervalu <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span>. Číslo <span class="math notranslate nohighlight">\(\displaystyle \mu\)</span>
+definované vztahem <div class="math notranslate nohighlight">
+\[\mu=\frac 1{b-a}\int_a^b f(x)\,\mathrm dx\]</div>
+ se
+nazývá <em>střední hodnota</em> funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> na intervalu <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span>.</p>
+</section>
+</div><div class='obtekat'>
+<figure class="align-default" id="id6">
+<img alt="../_images/mean.png" src="../_images/mean.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.6 </span><span class="caption-text">Střední hodnota lineární a obecné funkce.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Geometricky je střední hodnota výška obdélníka, který má jednu stranu
+tvořenou intervalem <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span> a obsah je roven integrálu <span class="math notranslate nohighlight">\(\displaystyle \int_a^b
+f(x)\,\mathrm dx.\)</span> Pokud je funkce <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span> kladná a lineární, je tento
+integrál roven obsahu lichoběžníka o základnách <span class="math notranslate nohighlight">\(\displaystyle f(a)\)</span> a <span class="math notranslate nohighlight">\(\displaystyle f(b)\)</span> a
+výšce <span class="math notranslate nohighlight">\(\displaystyle b-a\)</span>. Tedy <div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,\mathrm dx=(b-a)\frac{f(a)+f(b)}2\]</div>
+
+a střední hodnota lineární funkce je tedy průměrem hodnoty na začátku
+a na konci intervalu.</p>
+<div class="proof remark admonition" id="remark-5">
+<p class="admonition-title"><span>Poznámka </span> (Střední hodnota materiálové konstanty)</p>
+<section class="remark-content" id="proof-content">
+<p>Tepelná vodivost materiálu podobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce <span class="math notranslate nohighlight">\(\displaystyle k(T)\)</span>, je střední hodnota tepelné vodivosti v tepelném rozsahu od <span class="math notranslate nohighlight">\(\displaystyle T_1\)</span> do <span class="math notranslate nohighlight">\(\displaystyle T_2\)</span> dána vztahem (viz Cengel, Ghajar: Heat and Mass Transfer) <div class="math notranslate nohighlight">
+\[k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT\]</div>
+ V praxi nemáme analytický předpis pro funkci <span class="math notranslate nohighlight">\(\displaystyle k(T)\)</span>, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.</p>
+</section>
+</div><p><strong>Příklad.</strong> Střední hodnota funkce <span class="math notranslate nohighlight">\(\displaystyle y=2x^2-1\)</span> na intervalu <span class="math notranslate nohighlight">\(\displaystyle [0,2]\)</span> je
+<div class="math notranslate nohighlight">
+\[\frac 12 \int_0^2 2x^2-1 \,\mathrm dx=\frac 12 \left[\frac 23 x^3-x\right]_0^2=\frac 12 \left[\frac 23 8-2 - 0\right]=\frac 53.\]</div>
+</p>
+<p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJwz1DfSyswrSU0vSixJ1TDSqogz0jXU0ajQMdAx0tQEAIuACEI=&amp;amp;lang=sage">Online výpočet.</a></p>
+
+<p>Výpočet střední hodnoty si také můžete procvičit v následujících cvičeních.</p>
+<a onclick=otevrit("problems/integraly_pouziti/stredni_hodnota.pg"); target="_blank" class="WWotazka">Úkol</a>
+<a onclick=otevrit("problems/integraly_pouziti/stredni_hodnota_2.pg"); target="_blank" class="WWotazka">Úkol</a>
+<a onclick=otevrit("problems/integraly_pouziti/stredni_hodnota_3.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+<!--
+
+<div class='obtekat'>
+
+```{figure} graf.png
+Graf počtu nemocných chřipkou. Čárkovaně je dlouhodobý trend, okolo kterého počet nemocných osciluje s krátkou periodou. Zelená plná křivka je pětiletý průměr začínající v daném roce. Minimum této křivky je vhodný okamžik pro začátek plošné vakcinace.
+```
+
+</div>
+
+**Příklad.** (Podle Leah Edelstein-Keshet: Integral Calculus with
+Applications to the Life Sciences). Health Canada dlouhodobě monitoruje
+chřipku. Ze získaných dat vyplývá, že u této nemoci existuje sezonní
+cyklus s krátkou periodou a dlouhodobý dvacetiletý cyklus s dlouhou
+periodou. Je-li $t$ čas v měsících, je počet nemocných (ve stotisících
+jedinců) dobře aproximován funkcí $$I(t)=\cos\left(\frac \pi 6
+t\right)+\cos\left(\frac \pi {120} t\right)+2.$$ Health Canada má
+snahu chřipku eliminovat z populace očkováním. Odhaduje se, že je
+nutné pětileté období intenzivní vakcinace. Pro co nejnižší náklady je
+vhodné vakcinaci začít v období, kdy je virus na pětiletém
+minimu. Střední hodnota za pětileté období počínající časem $t_0$ je
+$$\overline I(t_0)=\frac 1{12\times 5}\int_{t_0}^{t_0+12\times 5}
+I(t)\,\mathrm dt.$$
+
+Pro výpočet minima funkce $\overline I(t_0)$ je nutné umět derivovat
+funkce, které jsou vyjádřeny integrálem a proměnná je v mezi tohoto
+integrálu. To se naučíme v dalších částech přednášky a poté se k
+tomuto příkladu vrátíme.
+
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjs0KgzAQhO-C75BbNj9iErG3XD3nFcTGIAQjcSn27du0pT_Q2-x8M8xexgwUKaurGZDZKe2wLe2JIxMvrY0ql6mr8JX4uENxdQva8J4RTpYVfcgjepjhYBIOiRJFz7Vh95W6ctpuMeGbKtkrVZAzTxB-gCRTiilbmv2ZShKX1e94jd7Spilvu-7ZGv63QvZ-feS0cEa47gb9BD-U&lang=sage)
+
+-->
+</section>
+<section id="vypocet-prace-pomoci-integralu">
+<h2><span class="section-number">5.3. </span>Výpočet práce pomocí integrálu<a class="headerlink" href="#vypocet-prace-pomoci-integralu" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/Z8wDZxap794">Minivideo</a> </div>
+<div class="proof algorithm dropdown admonition" id="algorithm-6">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 5.2 </span> (Příklad: práce při vytahování řetězu)</p>
+<section class="algorithm-content" id="proof-content">
+
+<div class='obtekat'>
+<figure class="align-default" id="id7">
+<img alt="../_images/chain.jpg" src="../_images/chain.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.7 </span><span class="caption-text">Visící řetěz. Při vytahování na střechu se zmenšuje síla, kterou je nutno překonávat.  Zdroj: pixabay.com</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Ze střechy budovy o výšce <span class="math notranslate nohighlight">\(\displaystyle 50\)</span> metrů visí řetěz dlouhý <span class="math notranslate nohighlight">\(\displaystyle 30\)</span>
+metrů. Jeden metr řetězu váží dva kilogramy. Vypočítáme práci
+potřebnou pro povytažení řetězu o deset metrů a poté práci potřebnou
+pro úplné vytažení řetězu.</p>
+<p>Z fyziky víme, že na těleso o hmotnosti <span class="math notranslate nohighlight">\(\displaystyle m\)</span> působí síla <span class="math notranslate nohighlight">\(\displaystyle F\)</span> daný vztahem <div class="math notranslate nohighlight">
+\[F=mg,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle g\)</span>
+je tíhové zrychlení a že práce <span class="math notranslate nohighlight">\(\displaystyle W\)</span> konaná silou <span class="math notranslate nohighlight">\(\displaystyle F\)</span> po dráze <span class="math notranslate nohighlight">\(\displaystyle s\)</span> je rovna
+součinu <div class="math notranslate nohighlight">
+\[W=Fs.\]</div>
+</p>
+<p>Pokud z budovy visí <span class="math notranslate nohighlight">\(\displaystyle h\)</span> metrů řetězu o lineární hustotě
+<span class="math notranslate nohighlight">\(\displaystyle \tau=2\,\mathrm{kg}/\mathrm m\)</span>, je nutné při vytahování řetězu zvedat těleso o hmotnosti <span class="math notranslate nohighlight">\(\displaystyle h\tau\)</span>, tj.
+vyvinout sílu <div class="math notranslate nohighlight">
+\[F=h\tau g.\]</div>
+ Při vytahování řetězu se délka visící
+části zkracuje a změna délky <span class="math notranslate nohighlight">\(\displaystyle \Delta h\)</span> je záporná. Při povytažení
+řetězu o délku <span class="math notranslate nohighlight">\(\displaystyle |\Delta h|=-\Delta h\)</span> je nutné vykonat práci <div class="math notranslate nohighlight">
+\[\Delta
+W=F|\Delta h|=-h\tau g \Delta h.\]</div>
+</p>
+<p>Při povytažení o 10 metrů řetěz vytahujeme spojitě od <span class="math notranslate nohighlight">\(\displaystyle h_1=30\)</span> po
+<span class="math notranslate nohighlight">\(\displaystyle h_2=20\)</span>. Celková práce je
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}W&amp;=\int_{h_1}^{h_2}-h\tau g\,\mathrm dh=\tau g\int_{h_2}^{h_1}h\,\mathrm dh =\tau g\left[\frac 12 h^2\right]_{h_2}^{h_1}\\&amp; =\tau g\left[\frac 12 h_1^2 - \frac 12 h_2^2\right]=\frac 12 \tau g (h_1^2-h_2^2)
+\\&amp;=\frac 12 \tau g (h_1-h_2)(h_1+h_2).
+\end{aligned}
+\end{split}\]</div>
+
+Pro <span class="math notranslate nohighlight">\(\displaystyle \tau =2\,\mathrm{kg}\,\mathrm m^{-1}\)</span> a <span class="math notranslate nohighlight">\(\displaystyle g=9.81\,
+\mathrm{kg}\,\mathrm{m}\,\mathrm {s}^{-2}\)</span> dostáváme <span class="math notranslate nohighlight">\(\displaystyle W=4905\,\mathrm
+J.\)</span> Formálně je tento výsledek stejný, jako bychom hmotnost dolních
+<span class="math notranslate nohighlight">\(\displaystyle h_1-h_2\)</span> metrů řetězu soustředili do středu tohoto úseku (tedy do
+úrovně <span class="math notranslate nohighlight">\(\displaystyle \frac 12 (h_1+h_2)\)</span> metrů pod střechu) a poté tento hmotný bod
+přemístili konstantní silou po dráze <span class="math notranslate nohighlight">\(\displaystyle \frac 12 (h_1+h_2)\)</span> na střechu.</p>
+<p>Práci pro vytažení celého řetězu dostaneme volbou <span class="math notranslate nohighlight">\(\displaystyle h_2=0\)</span>. Tedy
+<div class="math notranslate nohighlight">
+\[W=\frac 12 \tau g h_1^2\]</div>
+ a numericky <span class="math notranslate nohighlight">\(\displaystyle W=8829\,\mathrm J.\)</span> Protože vytáhnout první třetinu nejtěžší, očekáváme, že práce potřebná pro vytažení celého řetězu bude menší než trojnásobek práce nutné pro povytažení o třetinu. Toto se přirozeně potvrzuje porovnáním numerických hodnot.</p>
+<p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJwrSyzSUC9JLFVIV8hQyDBUyDBS1-TlKs7IL9fIzCtJTS9KLElV0NDN0AKq0UrX0cjQyTDUyTDS1CROlUaGka0BsWqBArZGOum2lnoWQBFDW2MDoLitEYX6wdoBxXNBdg==&amp;amp;lang=sage">Online výpočet.</a></p>
+</section>
+</div><div class="proof remark admonition" id="remark-7">
+<p class="admonition-title"><span>Poznámka </span> (Práce konaná silou proměnné velikosti)</p>
+<section class="remark-content" id="proof-content">
+<p>Práce vykonaná silou <span class="math notranslate nohighlight">\(\displaystyle F(x)\)</span> při přemístění tělesa z polohy <span class="math notranslate nohighlight">\(\displaystyle x=a\)</span> do polohy <span class="math notranslate nohighlight">\(\displaystyle x=b\)</span> je <div class="math notranslate nohighlight">
+\[W=\int_a^b F(x)\,\mathrm dx.\]</div>
+ Jako speciální případ dostáváme pro konstantní sélu <span class="math notranslate nohighlight">\(\displaystyle F\)</span> středoškolský vzorec <div class="math notranslate nohighlight">
+\[W=Fs,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle s=b-a\)</span> je posunutí.</p>
+</section>
+</div><div class="proof algorithm dropdown admonition" id="algorithm-8">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 5.3 </span> (Příklad: práce při čerpání vody)</p>
+<section class="algorithm-content" id="proof-content">
+
+<div class='obtekat'>
+<figure class="align-default" id="id8">
+<img alt="../_images/mojzisuv_most_pod_vodou.jpg" src="../_images/mojzisuv_most_pod_vodou.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.8 </span><span class="caption-text">Mojžíšův most je z obou stran chráněný přehradou umožňující regulací  výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku  však není překvapení, že může být i zatopený. Zdroj:  http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Pokud potřebujeme vyčerpat vodu z rezervoáru, nádrže, rybníka nebo
+jezera, musíme ji dopravit za stěnu (za hráz, dostat na břeh,
+…). Představme si, že po opadnutí vody v okolí Mojžíšova mostu, se
+kterým jsme se seznámili na minulé přednášce, zůstane uvnitř voda. Tu
+je potřeba vyčerpat. Tím se most proměnil v nádrž o hloubce
+<span class="math notranslate nohighlight">\(\displaystyle H\)</span>. Povrch hladiny ve chvíli, kdy je voda <span class="math notranslate nohighlight">\(\displaystyle x\)</span> jednotek délky pod
+okrajem mostu označme <span class="math notranslate nohighlight">\(\displaystyle S\)</span>. (Pro nádrž ve tvaru kvádru by <span class="math notranslate nohighlight">\(\displaystyle S\)</span> bylo
+konstantní a rovno obsahu dna.)</p>
+<ol class="arabic simple">
+<li><p>Pro vyzvednutí tělesa o hmotnosti <span class="math notranslate nohighlight">\(\displaystyle m\)</span> o výšku <span class="math notranslate nohighlight">\(\displaystyle h\)</span> musíme vykonat
+práci <span class="math notranslate nohighlight">\(\displaystyle W=mgh,\)</span> abychom vykompenzovali nárůst potenciální energie.</p></li>
+<li><p>Vodu v nádrži rozdělíme na vodorovné vrstvy o výšce <span class="math notranslate nohighlight">\(\displaystyle \Delta
+x\)</span>. Hmotnost vrstvy o výšce <span class="math notranslate nohighlight">\(\displaystyle \Delta x\)</span> v hloubce <span class="math notranslate nohighlight">\(\displaystyle x\)</span> pod okrajem
+nádrže bude <span class="math notranslate nohighlight">\(\displaystyle \Delta m=S\Delta x\rho\)</span> a abychom vodu dostali přes
+okraj, musíme vykonat práci <div class="math notranslate nohighlight">
+\[\Delta W=\Delta m gx=S\Delta x\rho
+gx.\]</div>
+</p></li>
+<li><p>Celková práce na vyčerpání vody se vypočte jako součet jednotlivých
+příspěvků. Spojitě se měnící veličinu sčítáme integrálem, což vede
+na vztah <div class="math notranslate nohighlight">
+\[W=\int_0^H S\rho gx \,\mathrm dx=\rho g\int_0^H Sx
+\,\mathrm dx.\]</div>
+</p></li>
+<li><p>Pro nádrže ve tvaru kvádru by veličina <span class="math notranslate nohighlight">\(\displaystyle S\)</span> byla konstantní a
+integrál by vycházel <div class="math notranslate nohighlight">
+\[W=S\rho g\int_0^H x\,\mathrm dx=S\rho g\left[\frac 12 x^2\right]_0^H=S\rho g\frac 12 H^2=(SH\rho)g\frac 12 H.\]</div>
+ Výraz <span class="math notranslate nohighlight">\(\displaystyle SH\rho\)</span> je celková hmotnost. Práce je tedy stejná, jako
+kdybychom těleso o stejné hmotnosti jako je hmotnost vodní masy
+zvedli z poloviční hloubky pod hladinou na úroveň hladiny. Je to
+stejná práce, jakou bychom vykonali, kdyby všechna voda byla
+stlačena v těžišti a my bychom tuto vodu zvedli na úroveň okraje
+nádrže.</p></li>
+</ol>
+</section>
+</div></section>
+<section id="numericka-aproximace-urciteho-integralu">
+<h2><span class="section-number">5.4. </span>Numerická aproximace určitého integrálu<a class="headerlink" href="#numericka-aproximace-urciteho-integralu" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/7jo_pZJjgRA">Minivideo</a> </div>
+<p>Následující myšlenka se si týká výlučně určitého integrálu, ale dále v
+dnešní přednášce si představíme nástroj, který umožní ji použít i pro
+integrál neurčitý.</p>
+<p>Někdy se stane, že neumíme nebo nepotřebujeme určitý integrál
+vypočítat přesně. Nebo že ani nemáme dostatek informací pro přesný
+výpočet, například funkce může být známa jenom v několika bodech,
+které jsou výsledkem měření a mimo tyto body nejsou žádné informace o
+funkčních hodnotách. To je přesně situace pro numerickou aproximaci
+určitého integrálu. Mechanický model základních myšlenek aproximace je
+shrnut v několika následujících bodech.</p>
+<ul class="simple">
+<li><p>Představme si, že máme určit dráhu pohybu, ale v zadaném časovém
+intervalu máme pouze několik záznamů hodnoty rychlosti z
+tachometru.</p></li>
+<li><p>Mimo tyto záznamy se mohlo dít v podstatě cokoliv.
+Budeme však doufat, že rychlost se měnila spíše pozvolna.</p></li>
+<li><p>Základní taktika odhadu dráhy může být taková, že mezi každými
+zaznamenanými hodnotami rychlosti na tachometru nahradíme pohyb
+rovnoměrným pohybem rychlostí, která je průměrem krajních hodnot.</p></li>
+<li><p>Předchozí postup aplikovaný na libovolnou funkci odpovídá tomu, že
+mezi každými dvěma hodnotami nahradíme funkci funkcí lineární a poté
+integrál vypočítáme pro tuto lineární funkci. Tento postup
+(lichoběžníkové pravidlo) je možné modifikovat nebo
+vylepšit. Například je možné použít pro aproximaci části parabol
+místo přímek (Simpsonovo pravidlo). U funkce, která je rostoucí, je
+možné například použít funkční hodnotu v dolní mezi a tím dostaneme
+dolní odhad pro výsledný integrál.</p></li>
+</ul>
+<p><strong>Příklad.</strong> Zahradnická firma vytáhla pařez a malotraktorem jej
+odtáhla o 20 metrů bokem. Vzhledem k nepravidelnému tvaru a tažení po
+různých druzích povrchu po cestě se síla měnila. Pracovníkovi se
+podařilo odhadnout sílu během pohybu. Závislost síly na dráze
+zachycuje následující tabulka.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\displaystyle s\)</span>/m</p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>10</p></th>
+<th class="head"><p>15</p></th>
+<th class="head"><p>20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle F\)</span>/kN</p></td>
+<td><p>2.3</p></td>
+<td><p>1.5</p></td>
+<td><p>2.1</p></td>
+<td><p>3.1</p></td>
+<td><p>2.0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Odhadneme celkovou vykonanou práci.
+<div class="math notranslate nohighlight">
+\[W=5 \frac{2.3+1.5}2 +5 \frac{1.5+2.1}2 +5 \frac{2.1+3.1}2 +5 \frac{3.1+2.0}2=44.25 \,\mathrm{kN}\,\mathrm {m} = 44.25\,\mathrm{kJ}\]</div>
+</p>
+<p><strong>Poznámka.</strong> V předchozím příkladě byla funkce dána v pravidelných
+intervalech. Proto se ve všech členech objevuje faktor <span class="math notranslate nohighlight">\(\displaystyle \frac 52\)</span>,
+který je možné vytknout. Po vytknutí zůstane v závorce součet, kde
+se hodnoty funkce v dolní a horní mezi objeví jednou a ostatní
+dvakrát. To v obecném případě vede k následujícímu vzorci.</p>
+<div class="proof theorem admonition" id="theorem-9">
+<p class="admonition-title"><span>Věta </span> (Lichoběžníkové pravidlo)</p>
+<section class="theorem-content" id="proof-content">
+<p>Nechť je funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span>  spojitá na
+intervalu <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span>. Rozdělme interval <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span> na <span class="math notranslate nohighlight">\(\displaystyle n\)</span> intervalů
+stejné délky <span class="math notranslate nohighlight">\(\displaystyle h\)</span>, tj. platí <span class="math notranslate nohighlight">\(\displaystyle h=\frac{b-a}n\)</span>. Krajní body
+těchto intervalů označme po řadě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span>, …, <span class="math notranslate nohighlight">\(\displaystyle x_n\)</span> a jim
+odpovídající funkční hodnoty funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> po řadě <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y_1\)</span>, …,
+<span class="math notranslate nohighlight">\(\displaystyle y_n\)</span>. Platí
+<div class="math notranslate nohighlight">
+\[
+    \int_a^bf(x)\,\mathrm dx\approx \frac h2\Bigl(
+    {y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}\Bigr).
+  \]</div>
+</p>
+</section>
+</div><div class="proof remark admonition" id="remark-10">
+<p class="admonition-title"><span>Poznámka </span> (Slovní interpretace lichoběžníkového pravidla)</p>
+<section class="remark-content" id="proof-content">
+<p>Pokud ve vzorci pro lichoběžníkové pravidlo dosadíme za hodnotu <span class="math notranslate nohighlight">\(\displaystyle h\)</span> odpovídající délku intervalu <span class="math notranslate nohighlight">\(\displaystyle \frac{ b-a}n\)</span> a přeuspořádáme členy, dostaneme   <div class="math notranslate nohighlight">
+\[ \int_a^bf(x)\,\mathrm dx\approx (b-a)\frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n} \]</div>
+  a <div class="math notranslate nohighlight">
+\[ \frac 1{b-a}\int_a^bf(x)\,\mathrm dx\approx \frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n}. \]</div>
+ Toto je odhad pro veličinu, kterou jsme výše nazvali střední hodnotou. Lichoběžníkové pravidlo je tedy možné chápat tak, že vezmeme funkční hodnoty v pravidelných intervalech a vypočteme vážený průměr těchto hodnot, kdy všechny funkční hodnoty ve vnitřních bodech se berou s dvojnásobnou vahou než funkční hodnoty v krajních bodech. To je odhad střední hodnoty, který stačí vynásobit délkou intervalu a dostaneme odhad integrálu.</p>
+</section>
+</div>
+<p>Výpočet pomocí lichoběžníkového pravidla  si také můžete procvičit v následujícím cvičení.</p>
+<a onclick=otevrit("problems/integraly_vypocet/lichobeznikove_pravidlo.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+<!--
+
+## Integrace metodou per partés
+
+Metoda per partés je metoda odvozená z derivace součinu. Nechť $u$ a
+$v$ jsou funkce, mající derivace $u'$ a $v'$. Snadným důsledkem
+derivace součinu
+$$(uv)'=u'v+uv'$$
+je
+$$uv'=(uv)'-u'v.$$
+Integrací tohoto vztahu dostáváme následující tvrzení.
+
+```{prf:theorem} Metoda per partés pro neurčitý a určitý integrál
+:nonumber:
+ Nechť $u$ a
+$v$ jsou funkce proměnné $x$, mající spojité derivace $u'$ a
+$v'$. Platí
+$$\int uv' \,\mathrm dx=uv-\int u'v\,\mathrm dx$$
+pro neurčitý integrál a
+$$\int_a^b uv' \,\mathrm dx=[uv]_a^b-\int_a^b u'v\,\mathrm dx$$
+pro integrál určitý.
+```
+
+
+Použití této metody má smysl, pokud je integrál $\int u'v\,\mathrm dx$
+jednodušší pro výpočet ve srovnání s integrálem $\int uv'\,\mathrm
+dx.$ Typické situace pro integrování metodou per partés jsou následující.
+
+1. $\int x\sin x\,\mathrm dx$, $\int x\cos x\,\mathrm dx$, $\int xe^x\,\mathrm dx$
+1. Mírné obměny integrálů z předchozího bodu, kdy místo $x$ může být libovolný polynom a goniometrická nebo exponenciální funkce má lineární vnitřní složku.
+1. $\int x^k\ln x\,\mathrm dx$
+
+**Příklad.** Volbou
+$${\begin{aligned} u&= x & u'&=1 \\ v'&=e^x & v&=e^x\end{aligned}}$$
+můžeme vypočítat integrál
+$$\int x e^x\,\mathrm dx=xe^x-\int 1e^x\,\mathrm dx=xe^x-e^x+c.$$
+
+**Příklad.** Volbou
+$${\begin{aligned} u&= \ln x & u'&=\frac 1x \\ v'&=1 & v&=x\end{aligned}}$$
+můžeme vypočítat integrál
+$$\int \ln x\,\mathrm dx=x\ln x-\int \frac 1x x\,\mathrm dx=x\ln x-\int 1\,\mathrm dx=x\ln x-x+c.$$
+
+-->
+</section>
+<section id="integrace-substitucni-metodou">
+<h2><span class="section-number">5.5. </span>Integrace substituční metodou<a class="headerlink" href="#integrace-substitucni-metodou" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/tdK-zog1cv0">Minivideo</a> </div>
+<p>Substituční metoda je metoda odvozená z derivace složené funkce
+<div class="math notranslate nohighlight">
+\[[u(v(x))]'=u'(v(x))v'(x),\]</div>
+
+což dává</p>
+<div class="math notranslate nohighlight" id="equation-i-1">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-i-1" title="Link to this equation">#</a></span>\[u(v(x))=\int u'(v(x))v'(x)\,\mathrm dx.\]</div>
+<p>Označme <span class="math notranslate nohighlight">\(\displaystyle u'(x)=f(x)\)</span>, tj. <span class="math notranslate nohighlight">\(\displaystyle u(x)=\int f(x)\,\mathrm dx\)</span>. Označíme-li
+dále <span class="math notranslate nohighlight">\(\displaystyle v(x)=t\)</span>, platí <div class="math notranslate nohighlight">
+\[u(v(x))=u(t)=\int f(t)\,\mathrm dt.\]</div>
+ Přeznačme
+ještě <span class="math notranslate nohighlight">\(\displaystyle v(x)\)</span> na <span class="math notranslate nohighlight">\(\displaystyle \varphi(x)\)</span>. Potom má <a class="reference internal" href="#equation-i-1">(5.1)</a> po záměně levé a pravé
+strany tvar uvedený v následující větě.</p>
+<div class="proof theorem admonition" id="theorem-11">
+<p class="admonition-title"><span>Věta </span> (Substituční metoda pro neurčitý integrál)</p>
+<section class="theorem-content" id="proof-content">
+<p>Platí</p>
+<div class="math notranslate nohighlight" id="equation-i-2">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-i-2" title="Link to this equation">#</a></span>\[\int f(\varphi (x))\varphi'(x)\,\mathrm dx=\int f(t)\,\mathrm
+dt,\]</div>
+<p>kde po výpočtu integrálu napravo dosazujeme <span class="math notranslate nohighlight">\(\displaystyle t=\varphi (x).\)</span></p>
+</section>
+</div><p>Formálně výraz napravo ve <a class="reference internal" href="#equation-i-2">(5.2)</a> přejde ve výraz nalevo a naopak
+dosazením rovností
+<div class="math notranslate nohighlight">
+\[\varphi(x)=t,\qquad \varphi'(x)\,\mathrm dx=\mathrm dt.\]</div>
+
+Toto je současně i návod, jak substituční metodu použít prakticky.</p>
+<p>S použitím zápisu derivace pomocí diferenciálů máme</p>
+<div class="math notranslate nohighlight">
+\[\int f(\varphi (x))\frac{\mathrm d\varphi}{\mathrm dx}\,\mathrm dx=\int
+f(\varphi)\,\mathrm  d\varphi,\]</div>
+<p>přičemž formálně odpadá nutnost použití proměnné <span class="math notranslate nohighlight">\(\displaystyle t\)</span> a vztah ukazuje, že v tomto
+případě je
+možné chápat derivaci <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm d\varphi}{\mathrm dx}\)</span> jako podíl
+diferenciálů, s touto derivací jako s podílem diferenciálů pracovat a zkrátit
+člen <span class="math notranslate nohighlight">\(\displaystyle \mathrm dx\)</span> klasickým krácením (resp. násobením) zlomků.</p>
+<p><strong>Příklad.</strong> Substituce <span class="math notranslate nohighlight">\(\displaystyle x^2=t\)</span> vede na vztah mezi diferenciály ve tvaru <span class="math notranslate nohighlight">\(\displaystyle 2x\,\mathrm dx=\mathrm dt\)</span>. Odsud
+<div class="math notranslate nohighlight">
+\[\int x e^{x^2}\,\mathrm dx=\frac 12 \int e^t\,\mathrm dt=\frac 12e^t=\frac 12 e^{x^2}+c.\]</div>
+</p>
+<p><strong>Příklad.</strong> Substituce <span class="math notranslate nohighlight">\(\displaystyle f(x)=t\)</span> vede na vztah mezi diferenciály ve tvaru <span class="math notranslate nohighlight">\(\displaystyle f'(x)\,\mathrm dx=\mathrm dt\)</span>. Odsud
+<div class="math notranslate nohighlight">
+\[\int \frac {f'(x)}{f(x)}\,\mathrm dx=\int \frac 1t\,\mathrm dt=\ln |t|=\ln|f(x)|+c.\]</div>
+
+Například
+<div class="math notranslate nohighlight">
+\[\int \frac{x}{x^2+1}\,\mathrm dx=\frac 12\int \frac{2x}{x^2+1}\,\mathrm dx= \frac 12\int \frac{(x^2+1)'}{x^2+1}\,\mathrm dx=\frac 12 \ln|x^2+1|+c.\]</div>
+</p>
+<p><strong>Příklad.</strong> Substituce <span class="math notranslate nohighlight">\(\displaystyle ax+b=t\)</span> vede na vztah mezi diferenciály ve
+tvaru <span class="math notranslate nohighlight">\(\displaystyle a\,\mathrm dx=\mathrm dt\)</span>. Odsud je možné odvodit vzorec, který
+již známe pro integrál funkce s lineární vnitřní složkou. Vskutku, platí
+<div class="math notranslate nohighlight">
+\[\int  f(ax+b)\,\mathrm dx= \int  \frac 1af(t)\,\mathrm dt= \frac 1a F(t)= \frac 1a F(ax+b)+C,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle F(x)=\int f(x)\,\mathrm dx.\)</span></p>
+<p>Vztah <a class="reference internal" href="#equation-i-2">(5.2)</a> je základní vztah pro substituci v neurčitém
+integrálu. Používáme jej ve vhodných případech zprava doleva i zleva
+doprava. Variantu pro určitý integrál jsme viděli ve speciálním
+případě ve cvičení, kdy vnitřní funkce reprezentovala konstantní
+násobek. Viděli jsme přirozeným způsobem, že při substituci (vyjádření
+v jiných jednotkách) se s integrovanou funkcí se mění i meze. Obecný
+vzorec pro integrování určitého integrálu substituční metodou je v
+následující větě.</p>
+<div class="proof theorem admonition" id="theorem-12">
+<p class="admonition-title"><span>Věta </span> (Substituční metoda pro určitý integrál)</p>
+<section class="theorem-content" id="proof-content">
+<p>Platí <div class="math notranslate nohighlight">
+\[\int_a^b f(\varphi (x))\varphi'(x)\,\mathrm dx=\int_{\varphi
+  (a)}^{\varphi(b)} f(t)\,\mathrm dt.\]</div>
+</p>
+</section>
+</div><p>Meze tedy podléhají stejné transformaci, jako integrovaná
+proměnná. Pokud používáme substituci <span class="math notranslate nohighlight">\(\displaystyle t=\varphi(x)\)</span>, potom v dolní
+mezi pro <span class="math notranslate nohighlight">\(\displaystyle x=a\)</span> platí <span class="math notranslate nohighlight">\(\displaystyle t=\varphi(a).\)</span> Podobná situace je i v mezi
+horní.</p>
+</section>
+<section id="integral-jako-funkce-meze">
+<h2><span class="section-number">5.6. </span>Integrál jako funkce meze<a class="headerlink" href="#integral-jako-funkce-meze" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/qUwPJkVBFOQ">Minivideo</a> </div>
+<p>Integrál může být součástí definice funkce. Tím se můžeme dostat mimo
+množinu elementárních funkcí a značně tak rozšířit třídu funkcí, se
+kterými umíme pracovat.</p>
+<div class="proof theorem admonition" id="theorem-13">
+<p class="admonition-title"><span>Věta </span> (Integrál jako funkce horní meze)</p>
+<section class="theorem-content" id="proof-content">
+<p>Buď <span class="math notranslate nohighlight">\(\displaystyle f\)</span> spojitá funkce na intervalu <span class="math notranslate nohighlight">\(\displaystyle I\)</span> a <span class="math notranslate nohighlight">\(\displaystyle a\in I\)</span>. Funkce
+<span class="math notranslate nohighlight">\(\displaystyle F(x)\)</span> definovaná vztahem
+<div class="math notranslate nohighlight">
+\[
+    F(x):=\int_a^x f(t)\,\mathrm dt
+\]</div>
+
+má na intervalu <span class="math notranslate nohighlight">\(\displaystyle I\)</span> derivaci a platí <span class="math notranslate nohighlight">\(\displaystyle F'(x)=f(x)\)</span>, tj. <span class="math notranslate nohighlight">\(\displaystyle F(x)\)</span> je primitivní funkcí k funkci <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span>.</p>
+</section>
+</div><p><strong>Příklad.</strong>  Pro funkci <span class="math notranslate nohighlight">\(\displaystyle f(x)=x^2\)</span> platí <div class="math notranslate nohighlight">
+\[\int_0^x t^2\,\mathrm dt=\left[\frac
+    {t^3}{3}\right]_0^{x}=\frac{x^3}{3}\]</div>
+ což je skutečně jedna
+z primitivních funkcí k funkci <span class="math notranslate nohighlight">\(\displaystyle x^2\)</span>, jak již víme z přednášky
+o neurčitém integrálu.</p>
+<p>Věta o integrálu jako funkci horní meze dokonce udává tvar primitivní
+funkce pro libovolnou spojitou funkci. Tím dostáváme okamžitě
+následující tvrzení.</p>
+<div class="proof corollary admonition" id="corollary-14">
+<p class="admonition-title"><span>Důsledek </span> (Postačující podmínka existence primitivní funkce)</p>
+<section class="corollary-content" id="proof-content">
+<p>Ke každé  spojité funkci existuje neurčitý integrál.</p>
+</section>
+</div><p>Bohužel, ne vždy neurčitý integrál dokážeme efektivně najít. Zatímco
+problém nalezení derivace funkce složené z funkcí, které umíme
+derivovat, spočívá pouze ve správné aplikaci vzorců pro derivování,
+problém nalézt neurčitý integrál i k funkci tak jednoduché, jako je
+například <span class="math notranslate nohighlight">\(\displaystyle e^{-x^2}\)</span> je neřešitelný ve třídě elementárních
+funkcí. Totéž platí pro další „nevinně vyhlížející“ funkce jako <span class="math notranslate nohighlight">\(\displaystyle \int
+\sin (x^2)\,\mathrm dx\)</span> nebo <span class="math notranslate nohighlight">\(\displaystyle \int \frac{\sin x}{x}\,\mathrm dx\)</span>. Věta
+o integrálu jako funkci horní meze nabízí možnost zapsat primitivní
+funkci vztahem <div class="math notranslate nohighlight">
+\[\int e^{-x^2}\,\mathrm dx=c+\int_0^x
+e^{-t^2}\,\mathrm dt.\]</div>
+ Funkční hodnoty takové funkce můžeme určovat
+například tak, že integrál aproximujeme numericky.</p>
+<p>Následující ukázka demonstruje, že i s funkcí definovanou pomocí
+integrálu je možné jistým způsobem pracovat, aniž bychom měli k
+dispozici analytické vyjádření této funkce.</p>
+<div class="proof algorithm dropdown admonition" id="algorithm-15">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 5.4 </span> (Ukázka funkce definované pomocí integrálu)</p>
+<section class="algorithm-content" id="proof-content">
+
+<div class='obtekat'>
+<figure class="align-default" id="id9">
+<img alt="../_images/slide-rule.jpg" src="../_images/slide-rule.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.9 </span><span class="caption-text">Součin se na součet mění například u logaritmického pravítka.  Zdroj: pixabay.com</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Uvažujme funkci definovanou vztahem</p>
+<div class="math notranslate nohighlight" id="equation-i-i">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-i-i" title="Link to this equation">#</a></span>\[f(x)=\int_1^x\frac 1t\,\mathrm dt.\]</div>
+<p>Ukážeme si, že tento tvar umožňuje odvodit některé vlastnosti funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span>. Dokážeme například, že funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> mění násobení na sčítání, tj. že platí <div class="math notranslate nohighlight">
+\[f(ab)=f(a)+f(b).\]</div>
+
+Podle definice je
+<div class="math notranslate nohighlight">
+\[f(ab)=\int_1^{ab}\frac 1t \,\mathrm dt.\]</div>
+
+Podle aditivity vzhledem k integračnímu oboru platí</p>
+<div class="math notranslate nohighlight" id="equation-i-ii">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-i-ii" title="Link to this equation">#</a></span>\[f(ab)=\int_1^{a}\frac 1t \,\mathrm dt+\int_a^{ab}\frac 1t \,\mathrm dt =f(a)+\int_a^{ab}\frac 1t \,\mathrm dt.\]</div>
+<p>Ve druhém integrálu bychom potřebovali dostat jedničku v dolní mezi,
+abychom dostali integrál stejný jako v definici funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span>. Proto
+zavedeme substituci <span class="math notranslate nohighlight">\(\displaystyle \frac ta=s\)</span>, <span class="math notranslate nohighlight">\(\displaystyle t=sa\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \mathrm dt=a\mathrm ds\)</span>. S
+použitím této substituce se <a class="reference internal" href="#equation-i-ii">(5.4)</a> transformuje na
+<div class="math notranslate nohighlight">
+\[f(ab) =f(a)+\int_1^{b}\frac 1{sa} a\,\mathrm ds =f(a)+\int_1^{b}\frac 1{s} \,\mathrm ds =f(a)+f(b).\]</div>
+</p>
+<p>Pokud si všimneme, že integrál <a class="reference internal" href="#equation-i-i">(5.3)</a> v definici funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je možné
+vypočítat a že funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je vlastně funkce <span class="math notranslate nohighlight">\(\displaystyle \ln x\)</span>, není vlastnost,
+že funkce mění násobení na sčítání nijak překvapivá. Pro nás však bylo
+důležité, že v důkaze jsme použili jenom definici funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> pomocí
+integrálu a pravidla pro práci s integrály. Nemuseli jsme nijak
+používat ani vlastnosti logaritmu, ani vlastnosti funkce k logaritmu
+inverzní, což bývá základem středoškolského odvození tohoto
+vzorce. Vidíme, že integrál je možné použít k definici funkce a s
+touto funkcí je možné dále pracovat. Substituce <span class="math notranslate nohighlight">\(\displaystyle t^{\frac 1r}=s\)</span>,
+<span class="math notranslate nohighlight">\(\displaystyle t=s^r\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \mathrm dt=rs^{r-1}\,\mathrm ds\)</span> například ukáže, že platí
+<div class="math notranslate nohighlight">
+\[f(a^r)=\int_1^{a^r}\frac 1t\,\mathrm dt= \int _1^a \frac
+1{s^r}rs^{r-1}\,\mathrm ds= r\int _1^a\frac 1s\,\mathrm ds=rf(a).\]</div>
+</p>
+</section>
+</div><!--
+
+## Model eliminace chřipky
+
+V příkladě u střední hodnoty jsme se zabývali problémem eliminace chřipky a zjistili, že potřebujeme najít minimum funkce
+$$\overline I(t_0)=\frac 1{12\times 5}\int_{t_0}^{t_0+12\times 5} I(t)\,\mathrm dt.$$
+Protože jsme se zabývali připadem, kdy je proměnná jenom v horní mezi a naše funkce má proměnnou v horní i v dolní mezi, můžeme využít aditivitu
+integrálu vzhledem k mezi a psát
+$$
+\begin{aligned}
+\overline I(t_0)&= \frac 1{12\times 5}\int_{t_0}^{0} I(t)\,\mathrm dt +
+\frac 1{12\times 5}\int_{0}^{t_0+12\times 5} I(t)\,\mathrm dt
+\\&= -\frac 1{60}\int_{0}^{t_0} I(t)\,\mathrm dt +
+\frac 1{60}\int_{0}^{t_0+60} I(t)\,\mathrm dt
+.
+\end{aligned}
+$$
+Derivací podle $t_0$ nyní dostáváme podle věty o integrálu jako funkci horní meze a podle pravidla o derivování součtu a složené funkce
+$$\begin{aligned}\frac{\mathrm d\overline I}{\mathrm dt_0}
+&=-\frac 1{60} I(t_0)+
+\frac 1{60} I(t_0+60) \frac{\mathrm d}{\mathrm dt_0}(t_0+60)
+\\&=-\frac 1{60}I(t_0)+\frac 1{60}I(t_0+60)
+\\&=\frac 1{60} \Bigl(I(t_0+60)-I(t_0)\Bigr)
+\end{aligned}
+$$
+Minimum tedy najdeme z podmínky $I(t_0)=I(t_0+60).$ Po dosazení vztahu pro funkci $I$ a potřebných výpočtech, které jsou záležitostí středoškolské matematiky a proto k nim teď nebudeme odbočovat, abychom neztratili linii výpočtu, dostaneme 
+$t_0=90+120k$, kde $k$ je libovolné celé číslo.
+
+-->
+<!-- tedy řešíme rovnici
+ $$ \cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right)+2 = \cos\left(\frac \pi 6 (t+60)\right)+\cos\left(\frac \pi {120} (t+60)\right)+2 $$
+tj. (následující výpočty jsou sice dlouhé, ale jedná se běžnou středoškolskou matematiku a práci s goniometrickými funkcemi)
+$$
+\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right) = \cos\left(\frac \pi 6 t+ 10\pi\right)+\cos\left(\frac \pi {120} t+\frac 12\pi\right)
+$$
+$$
+\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right) = \cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t+\frac 12\pi\right)
+$$
+$$
+\cos\left(\frac \pi {120} t\right) = \cos\left(\frac \pi {120} t+\frac 12\pi\right)
+$$
+$$
+\cos\left(\frac \pi {120} t\right) = -\sin\left(\frac \pi {120} t\right)
+$$
+$$
+\tan\left(\frac \pi {120} t\right) = -1
+$$
+Tato rovnice má řešení $\frac \pi {120} t=\frac 34\pi +k\pi$ tj.
+$t=90+120k$.
+-->
+<!--
+
+Vzhledem k povaze problému se střídají maxima a minima
+funkce $\overline I(t_0)$. Toto je ještě nutné rozvážit, abychom s
+očkováním nezačali v době, kdy by byly náklady naopak
+maximální. Vzhledem ke snadné praktické interpretaci je však zřejmé,
+že minimum pětiletého průměru bude v době, jejíž začátek o něco
+předchází dlouhodobé minimum výskytu chřipky. Odsud snadno rozlišíme,
+kdy se jedná o minimum pětiletého průměru a kdy o maximum.
+
+-->
+<div class="proof algorithm dropdown admonition" id="algorithm-16">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 5.5 </span> (Příklad: práce při vytahování řetězu určená pomocí potenciální energie)</p>
+<section class="algorithm-content" id="proof-content">
+
+<div class='obtekat'>
+<figure class="align-default" id="id10">
+<img alt="../_images/zdymadlo.jpg" src="../_images/zdymadlo.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.10 </span><span class="caption-text">Lodní výtah Falkrik Wheel. Zdroj: Wikipedie.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Vypočítáme příklad z prací při vytahování řetězu tak, že určíme změnu potenciální energie
+řetězu. Práci <span class="math notranslate nohighlight">\(\displaystyle W\)</span> vykonanou při vyzvednutí tělesa o hmotnosti <span class="math notranslate nohighlight">\(\displaystyle m\)</span> o výšku
+<span class="math notranslate nohighlight">\(\displaystyle h\)</span> vypočteme jako změnu potenciální energie v tíhovém poli Země,
+tj. <div class="math notranslate nohighlight">
+\[W=mgh.\]</div>
+ Komplikace v tomto případě je, že každou část řetězu
+vytahujeme z jiné hloubky. Část řetězu délky <span class="math notranslate nohighlight">\(\displaystyle \Delta h\)</span> váží
+<span class="math notranslate nohighlight">\(\displaystyle m=\tau\Delta h\)</span> kilogramů a při vytažení z hloubky <span class="math notranslate nohighlight">\(\displaystyle h\)</span> na úroveň
+střechy je změna potenciální energie (a vykonaná práce) <div class="math notranslate nohighlight">
+\[\Delta
+W=mgh=\tau\Delta h g h.\]</div>
+ Součet těchto příspěvků pro dolní třetinu řetězu, od
+<span class="math notranslate nohighlight">\(\displaystyle h_2=20\,\mathrm m\)</span> po <span class="math notranslate nohighlight">\(\displaystyle h_1=30\,\mathrm m\)</span> je <div class="math notranslate nohighlight">
+\[W=\int_{h_2}^{h_1}\tau
+g h\,\mathrm dh=\tau g\int_{h_2}^{h_1} h\,\mathrm dh.\]</div>
+
+Tím výpočet přechází ve stejný integrál jako v předchozím přístupu a
+výsledky jsou tedy stejné. Práci pro celý řetěz získáme opět volbou
+<span class="math notranslate nohighlight">\(\displaystyle h_2=0.\)</span></p>
+<p>Že práce vykonaná při vytažení celého řetězu je stejná jako změna
+potenciální energie celého řetězu je zřejmé. Za zmínku ještě stojí
+úvaha, proč je povytažení řetězu o 10 metrů ekvivalentní změně
+potenciální energie dolních 10 metrů při vytažení této části řetězu na
+střechu. Stačí uvážit, že bychom řetěz přetočili vzhůru nohama,
+povytáhli o 10 metrů, rozpojili a visící část znovu otočili vzhůru
+nohama. Otočení vzhůru nohama není spojeno s konáním práce, stejně tak
+rozpojení a případné opětovné napojení. Práce se tedy koná jenom tak,
+že řetěz vytahujeme o 10 metrů. Výsledek však je stejný, jako
+kdybychom řetěz nepřetáčeli, jenom odpojili dolních 10 metrů a tuto
+část zvedli nahoru.</p>
+<p>Ještě možná stojí za rozvážení fakt, že při otočení řetězu okolo
+středu se nekoná práce. Tato skutečnost se dá opět dokázat myšlenkovým
+rozdělením řetězu na kousky a sečtením práce nutné pro přemístění
+těchto kousků. Ta bude kladná pro kousky pod těžištěm, záporná pro
+kousky nad těžištěm a výsledný součet bude nulový. Na podobném
+principu pracuje lodní výtah Falkrik Wheel. Práce potřebná pro otočení
+výtahu a vytažení lodě nahoru (nebo spuštění dolů nebo obojí současně)
+je překvapivě malá – jedna loď potenciální energii získává, druhá loď
+stejně velkou potenciální energii ztrácí (pokud není loď, použije se
+místo lodi voda) a stačí jenom vykompenzovat třecí síly v
+mechanismu. V minulosti zde byla soustava 11 zdymadel a lodě touto
+soustavou proplouvaly celý den.</p>
+</section>
+</div></section>
+<section id="shrnuti-hlavni-myslenky">
+<h2><span class="section-number">5.7. </span>Shrnutí, hlavní myšlenky<a class="headerlink" href="#shrnuti-hlavni-myslenky" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id11">
+<img alt="../_images/message.jpg" src="../_images/message.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.11 </span><span class="caption-text">A jaká je hlavní message? Zdroj: pixabay.com</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Naučili jsme se některé triky pro integrály: určitý integrál se dá numericky aproximovat a neurčitý integrál se dá převést metodou per-partés nebo substitucí na jiný integrál, v optimálním případě na integrál vhodný pro aplikaci vzorců.</p></li>
+<li><p>Integrál, resp. střední hodnota funkce,  slouží jako náhrada aritmetického průměru v situacích, kdy počítáme průměr z nekonečně mnoha veličin a vzorec pro klasický aritmetický průměr selhává.</p></li>
+<li><p>Integrál je také nástrojem, který nás dokáže vymanit ze světa elementárních funkcí a můžeme pomocí tohoto integrálu definovat funkce, které nejsou elementární. Základním prostředkem je integrál jako funkce horní meze. Toto se využívá například ve statistice. Vedlejším produktem je věta zaručující existenci primitivní funkce pro libovolnou spojitou funkci.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../integraly/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Integrál, integrál a integrál</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../ode/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Diferenciální rovnice</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vlastnosti-integralu">5.1. Vlastnosti integrálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stredni-hodnota">5.2. Střední hodnota</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-prace-pomoci-integralu">5.3. Výpočet práce pomocí integrálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numericka-aproximace-urciteho-integralu">5.4. Numerická aproximace určitého integrálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrace-substitucni-metodou">5.5. Integrace substituční metodou</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-jako-funkce-meze">5.6. Integrál jako funkce meze</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">5.7. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 27.10.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1214 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-01-21T15:44:41+01:00" />
+    <title>2. Derivace a lineární aproximace &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'derivace_II/index';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="3. Derivace a další užitečné nástroje" href="../derivace_III/index.html" />
+    <link rel="prev" title="1. Derivace funkce" href="../derivace_I/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="21.01.2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Derivace a lineární aproximace</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-derivaci-3-jak-citlive-reakce-na-zmenu">2.1. Aplikace derivací 3: Jak citlivě? (reakce na změnu)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace">2.2. Lineární aproximace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace-v-1d">2.2.1. Lineární aproximace v 1D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace-v-nekterych-fyzikalnich-zakonech">2.2.2. Lineární aproximace v některých fyzikálních zákonech</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace-a-jednorozmerne-materialove-vztahy">2.3. Lineární aproximace a jednorozměrné materiálové vztahy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivace-a-tecna">2.4. Derivace a tečna</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aproximace-vyssiho-radu">2.5. Aproximace vyššího řádu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivace-je-mozne-chtit-vice-nez-je-linearni-aproximace">2.5.1. Motivace: Je možné chtít více než je lineární aproximace?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivace-vyssich-radu">2.5.2. Derivace vyšších řádů</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#druha-derivace-a-deformace-nosniku">2.5.3. Druhá derivace a deformace nosníků</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tayloruv-polynom-a-polynomialni-aproximace-v-1d">2.5.4. Taylorův polynom a polynomiální aproximace v 1D</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konecne-diference-a-numericka-aproximace-derivace">2.6. Konečné diference a numerická aproximace derivace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odbocka-od-vazeb-mezi-atomy-k-materialovym-vlastnostem">2.7. Odbočka: od vazeb mezi atomy k materiálovým vlastnostem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-rovnic">2.8. Řešení rovnic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prosta-funkce">2.8.1. Prostá funkce</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inverzni-funkce">2.8.2. Inverzní funkce</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newtonova-metoda">2.8.3. Newtonova metoda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">2.9. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="derivace-a-linearni-aproximace">
+<h1><span class="section-number">2. </span>Derivace a lineární aproximace<a class="headerlink" href="#derivace-a-linearni-aproximace" title="Link to this heading">#</a></h1>
+
+<div class="Ylink">  <a href="https://youtu.be/9N2Z02S2tAw">Minivideo</a> </div>
+<div class="admonition-pripomenuti-derivaci-z-ptaci-perspektivy admonition">
+<p class="admonition-title">Připomenutí derivací z ptačí perspektivy</p>
+<p>S využitím aparátu derivací jsme v minulé přednášce poznali a naučili nebo naučíme se ve cvičení řešit úlohy tří základních různých typů:</p>
+<ol class="arabic simple">
+<li><p><em>K funkci najdi její derivaci, tj. rychlost změny.</em> Toto je klasické derivování, případně doplněné o slovní interpretaci derivace. Použijeme vzorce a jedná se o čistě manuální dovednost. Vstupem je funkce, výstupem její derivace a případně slovní interpretace této derivace. Příkladů je spousta na webu i v učebnicích.</p></li>
+<li><p><em>Ze zadaného vztahu mezi dvěma veličinami najdi vztah mezi rychlostmi změn těchto veličin.</em> Jako vedlejší produkt mimo jiné využíváme dovednosti derivování z předchozího bodu a vždy derivujeme složenou funkci: vzorec vyjadřující jednu veličinu pomocí druhé je vnější složka a druhá veličina, resp. její závislost na čase, je složka vnitřní. Vstupem je vztah mezi veličinami a rychlost, s jakou se jedna z veličin mění, výstupem je rychlost, s jakou se mění veličina druhá.</p></li>
+<li><p><em>Ze zadaného slovního popisu nějakého děje sestav matematický model.</em> Ve slovním modelu je zmíněna rychlost, tu matematicky přepisujeme jako derivaci a tato rychlost je v nějaké relaci s ostatními veličinami. Odsud sestavujeme rovnici. Vstupem je mechanismus popisující vývoj systému, výstupem matematický model ve formě rovnice obsahující neznámou funkci popisující stav systému a její derivaci. V průběhu semestru se takovéto rovnice naučíme řešit, nejprve se však detailněji koukneme na to, abychom poznali i další role derivace.</p></li>
+</ol>
+</div>
+
+<section id="aplikace-derivaci-3-jak-citlive-reakce-na-zmenu">
+<h2><span class="section-number">2.1. </span>Aplikace derivací 3: Jak citlivě? (reakce na změnu)<a class="headerlink" href="#aplikace-derivaci-3-jak-citlive-reakce-na-zmenu" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/uKO6IZwraOQ">Minivideo</a> </div>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/Chyby" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/Chyby.jpg"></a><figcaption>Derivace ukazuje, jak citlivě funkční hodnoty reagují na změny ve vstupních datech. Pokud jsou například vstupní data pro funkci produktem nějakého měření, zjistíme, jak se nepřesnosti v tomto měření projeví na nepřesnostech vypočtených funkčních hodnot. <a href="https://user.mendelu.cz/marik/manim/Chyby" class=but-prez target=_blank>Otevřít prezentaci</a></figcaption></figure></div>
+<p>Derivace v bodě, pokud ji nahlížíme z hlediska citlivosti reakce
+funkce na změnu vstupních dat, udává, jaký vliv má jednotková změna ve
+vstupních datech na změnu funkční hodnoty funkce. Pokud změna ve
+vstupních datech není jednotková ale násobek jednotkové změny, je i
+odezva násobná.</p>
+<div class="proof remark admonition" id="remark-0">
+<p class="admonition-title"><span>Poznámka </span> (Derivace jako měřítko citlivosti funkce na změnu vstupních dat)</p>
+<section class="remark-content" id="proof-content">
+<p>Buď <span class="math notranslate nohighlight">\(\displaystyle f:\mathbb R\to\mathbb R\)</span> funkce taková, že má derivaci. Pokud se veličina <span class="math notranslate nohighlight">\(\displaystyle x\)</span> změní z hodnoty <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> o hodnotu <span class="math notranslate nohighlight">\(\displaystyle \Delta x\)</span> (tj. nová hodnota je <span class="math notranslate nohighlight">\(\displaystyle x_0+\Delta x\)</span>), potom se <span class="math notranslate nohighlight">\(\displaystyle f\)</span> mění přibližně o <span class="math notranslate nohighlight">\(\displaystyle f'(x_0)\Delta x\)</span>, tj. <div class="math notranslate nohighlight">
+\[\Delta f\approx f'(x_0)\Delta x\]</div>
+ neboli
+<div class="math notranslate nohighlight">
+\[\Delta f\approx \frac{\mathrm df(x_0)}{\mathrm dx}\Delta x.\]</div>
+ Tato aproximace je použitelná pro malé hodnoty <span class="math notranslate nohighlight">\(\displaystyle \Delta x\)</span>.</p>
+</section>
+</div><p>Co se rozumí malou hodnotou <span class="math notranslate nohighlight">\(\displaystyle \Delta x\)</span> závisí na více faktorech,
+například i na tom, jak se funkce „vzpírá“ tomu, být aproximována
+výrazem úměrným <span class="math notranslate nohighlight">\(\displaystyle \Delta x\)</span>. Přesněji tuto podmínku zformulujeme po
+probrání Taylorova polynomu, kdy se použije o něco obecnější postup.</p>
+<p><strong>Příklad.</strong> Nosník výšky <span class="math notranslate nohighlight">\(\displaystyle h\)</span>, šířky <span class="math notranslate nohighlight">\(\displaystyle a\)</span> a délky <span class="math notranslate nohighlight">\(\displaystyle L\)</span> je uprostřed
+zatížený silou <span class="math notranslate nohighlight">\(\displaystyle F\)</span>. Průhyb <span class="math notranslate nohighlight">\(\displaystyle s\)</span> uprostřed nosníku je dán vztahem</p>
+<div class="math notranslate nohighlight" id="equation-2-1">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-2-1" title="Link to this equation">#</a></span>\[s=\frac {F L^3}{4Eah^3},\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\displaystyle E\)</span> je materiálová
+konstanta. Pro <span class="math notranslate nohighlight">\(\displaystyle h=20\,\mathrm{cm}\)</span> je průhyb
+<span class="math notranslate nohighlight">\(\displaystyle s=10\,\mathrm{cm}\)</span>. Zjistěte, jak se průhyb mění při změnách výšky nosníku. Odhadněte, jak se průhyb změní, pokud se <span class="math notranslate nohighlight">\(\displaystyle h\)</span> sníží na
+<span class="math notranslate nohighlight">\(\displaystyle 18\,\mathrm{cm}\)</span>?</p>
+<p><strong>Řešení.</strong> Relevantními veličinami jsou <span class="math notranslate nohighlight">\(\displaystyle s\)</span> a <span class="math notranslate nohighlight">\(\displaystyle h\)</span> a vzorec je tedy
+možno shrnout do tvaru <div class="math notranslate nohighlight">
+\[s=\frac k{h^3},\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle k\)</span> je konstanta
+charakterizující danou situaci. Pro zadané hodnoty výšky a průhybu
+vychází konstanta <div class="math notranslate nohighlight">
+\[k=s h^3=10\times 20^3=80\,000.\]</div>
+ Vzorec <a class="reference internal" href="#equation-2-1">(2.1)</a> tedy
+redukujeme na <div class="math notranslate nohighlight">
+\[s={80\,000}{h^{-3}}.\]</div>
+ Derivováním obdržíme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm ds}{\mathrm dh}=80\,000\times(-3)
+h^{-4}=-\frac{3\times 80\,000}{h^4}.\]</div>
+ Změna výšky nosníku je <div class="math notranslate nohighlight">
+\[\Delta
+h=18-20=-2\,\mathrm{cm}\]</div>
+ a tomu odpovídá změna průhybu <div class="math notranslate nohighlight">
+\[\Delta
+s=-\frac{3\times 80\,000}{(20)^4}(-2)=3\,\mathrm{cm}.\]</div>
+ Průhyb se tedy
+zvětší o <span class="math notranslate nohighlight">\(\displaystyle 3\,\mathrm{cm}\)</span>.</p>
+<div class="proof remark admonition" id="remark-1">
+<p class="admonition-title"><span>Poznámka </span> (Smysl předchozího příkladu)</p>
+<section class="remark-content" id="proof-content">
+<p>Proč nepočítáme přesně? Stačila by selská logika a změna
+funkce <span class="math notranslate nohighlight">\(\displaystyle s=\frac k{h^3}\)</span> by byla</p>
+<div class="math notranslate nohighlight" id="equation-2-2">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-2-2" title="Link to this equation">#</a></span>\[\Delta s=\frac k{(h+\Delta h)^3}-\frac k{h^3}.\]</div>
+<p>Odpověď je
+překvapivá: pomocí derivací je vyjádření změny v naprosté většině
+případů jednodušší. V tomto našem případě máme
+<div class="math notranslate nohighlight">
+\[\Delta s\approx -\frac{3k}{h^4}\Delta h,\]</div>
+ což je na další práci
+mnohem příjemnější výraz, než rozdíl dvou zlomků <a class="reference internal" href="#equation-2-2">(2.2)</a>. Skutečnost, že platí
+pouze pro malé <span class="math notranslate nohighlight">\(\displaystyle \Delta h\)</span> nás nijak neomezuje. Většinou se tento
+aparát používá tam, kde se chyba limitním přechodem „stáhne na
+nulu“. Navíc, ukazujeme koncept. <em>Důležité je si z příkladu odnést, že derivace umožní analyzovat, jak vypočítané veličiny reagují na změny ve vstupních datech. Výsledkem může být například maximální teoretická přesnost se kterou je možné vypočítat výslednou veličinu při vstupních datech zatížených chybou nebo nějakým způsobem nejistých (zákon šíření chyb).</em></p>
+</section>
+</div>
+<a onclick=otevrit("problems/derivace_pouziti/citlivost.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+</section>
+<section id="linearni-aproximace">
+<h2><span class="section-number">2.2. </span>Lineární aproximace<a class="headerlink" href="#linearni-aproximace" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/-3h53Ivl_Pc">Minivideo</a> </div>
+<p>V následujících pasážích se budeme věnovat lineární aproximaci funkce. To je nahrazení funkce s jakkoli složitým funkčním předpisem funkcí s tím nejjednodušším možným předpisem: lineární funkcí. Tím se pochopitelně dopouštíme jisté nepřesnosti a je to něco za něco: k popisu úlohy máme poté k dispozici jednodušší funkce, ale výpočty jsou zatíženy chybou. Někdy tato chyba může být tak velká, že je idea lineární aproximace naprosto nepoužitelná. Ale jindy se jedná o nástroj, který prakticky neřešitelnou úlohu převede na úlohu snadno zvládnutelnou. Linearizace nelineárních úloh je jedním ze základních inženýrských postupů. V mnoha případech dává samotná dobré výsledky a řeší zadaný problém, v jiných případech slouží jako odrazový můstek ke zvládnutí nelineárního problému.</p>
+<section id="linearni-aproximace-v-1d">
+<h3><span class="section-number">2.2.1. </span>Lineární aproximace v 1D<a class="headerlink" href="#linearni-aproximace-v-1d" title="Link to this heading">#</a></h3>
+<p>Pokud se funkce mění, můžeme odhad změny z předchozího odstavce přičíst k
+funkční hodnotě a tím máme odhad funkční hodnoty po změně. Toto je
+principem lineární aproximace, neuvěřitelně jednoduché a přitom velice
+mocné techniky používané inženýry k tomu, aby se popis problémů a
+řešení úloh vůbec daly efektivně zvládnout.</p>
+<div class="proof theorem admonition" id="theorem-2">
+<p class="admonition-title"><span>Věta </span> (Lineární aproximace)</p>
+<section class="theorem-content" id="proof-content">
+<p>Buď <span class="math notranslate nohighlight">\(\displaystyle f:\mathbb R\to\mathbb R\)</span> funkce, která má derivaci. V okolí bodu <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> platí přibližný vzorec <div class="math notranslate nohighlight">
+\[f(x)\approx f(x_0)+ f'(x_0)(x-x_0)\]</div>
+ neboli
+<div class="math notranslate nohighlight">
+\[f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).\]</div>
+</p>
+</section>
+</div><div class="proof remark admonition" id="remark-3">
+<p class="admonition-title"><span>Poznámka </span> (Slovní interpretace vzorce pro lineární aproximaci)</p>
+<section class="remark-content" id="proof-content">
+<p>Výše uvedený vzorec není těžké rozšifrovat.</p>
+<ul class="simple">
+<li><p>Veličina <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span> je funkční hodnota v bodě <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, tu chceme odhadnout.</p></li>
+<li><p>Veličina <span class="math notranslate nohighlight">\(\displaystyle f(x_0)\)</span> je známá funkční hodnota v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span>, to je
+ýchozí bod pro odhad.</p></li>
+<li><p>Veličina <span class="math notranslate nohighlight">\(\displaystyle f'(x_0)\)</span> je odhad změny veličiny <span class="math notranslate nohighlight">\(\displaystyle f\)</span> způsobený jednotkovou změnou vstupních dat (zvýšení hodnoty <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> o jednotku). Tento faktor ještě v dalším kroku musíme přizpůsobit tomu, že změna vstupních dat není jednotková, což uděláme s využitím přímé úměrnosti.</p></li>
+<li><p>Veličina <span class="math notranslate nohighlight">\(\displaystyle f'(x_0)(x-x_0)\)</span> je odhad změny veličiny <span class="math notranslate nohighlight">\(\displaystyle f\)</span> vyvolané
+změnou veličiny <span class="math notranslate nohighlight">\(\displaystyle x\)</span> z <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> o <span class="math notranslate nohighlight">\(\displaystyle \Delta x=x-x_0\)</span> tak, jak jsme jej
+používali v minulé přednášce.</p></li>
+</ul>
+</section>
+</div><div class="proof remark admonition" id="remark-4">
+<p class="admonition-title"><span>Poznámka </span> (Alternativní vzorec pro lineární aproximaci)</p>
+<section class="remark-content" id="proof-content">
+<p>Vzorec pro lineární aproximaci se často píše v ekvivalentním tvaru
+<div class="math notranslate nohighlight">
+\[f(x+h)\approx f(x)+f'(x)h,\]</div>
+
+což získáme dosazením <span class="math notranslate nohighlight">\(\displaystyle x+h\)</span> za <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x\)</span> za <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span>.</p>
+</section>
+</div><div class="proof remark admonition" id="remark-5">
+<p class="admonition-title"><span>Poznámka </span> (Význam vzorce pro lineární aproximaci)</p>
+<section class="remark-content" id="proof-content">
+<ul class="simple">
+<li><p>Vzorec umožňuje složitý funkční předpis předpisem jednodušším (lineární funkce jsou jedny z nejtrivilálnějších).</p></li>
+<li><p>K použití vzorce stačí znát jeden bod grafu a funkční hodnotu a hodnotu derivace v tomto bodě.</p></li>
+<li><p>Aproximace je pouze lokální, použitelná pouze v určitém okolí uvažovaného bodu. Jak velké toto okolí může být a jaké chyby se dopouštíme při lineární aproximaci je různé pro různé funkce. Obecně platí, že čím blíže jsme k bodu <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span>, tím je tato aproximace přesnější.</p></li>
+</ul>
+</section>
+</div>
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/linapprox.svg" src="../_images/linapprox.svg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.1 </span><span class="caption-text">Následující obrázek demonstruje skutečnost, že lineární aproximace je pouze lokální. Funkce sinus má nelineární graf a žádná lineární funkce ji nemůže aproximovat na celém definičním oboru. Pokud se však zaměříme na malý kousek grafu (žlutý obdélník), je lineární aproximace možná a použitelná.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p><strong>Příklad (růst stromu).</strong> Strom má v roce 2019 výšku 3 metry a roste
+rychlostí 0.5 metru za rok. V roce <span class="math notranslate nohighlight">\(\displaystyle x\)</span> je jeho výška dána vzorcem
+<div class="math notranslate nohighlight">
+\[h(x)=3+0.5(x-2019).\]</div>
+</p>
+<p><strong>Příklad (aproximace důležitých funkcí v okolí nuly).</strong> Ve cvičení
+ukážeme platnost následujících přibližných vzorců, které platí pro <span class="math notranslate nohighlight">\(\displaystyle x\)</span>
+blízké k nule.  <div class="math notranslate nohighlight">
+\[\sin x\approx x, \quad \cos x\approx 1,\qquad
+(1+x)^n\approx 1+nx.\]</div>
+ První dva vzorce využijeme později při popisu malých
+rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na webu <a class="reference external" href="http://fyzikalniolympiada.cz/studijni-texty">fyzikální olympiády</a> v dokumentu <a class="reference external" href="http://fyzikalniolympiada.cz/texty/aproxim.pdf">Aproximace ve fyzikálních úlohách</a>.</p>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/Linearni_aproximace" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/Linearni_aproximace.jpg"></a><figcaption>Lineární aproximace může pomoci zjednodušit komplikované funkční vztahy v případě, kdy vstupní data nejsou příliš variabilní. <a href="https://user.mendelu.cz/marik/manim/Linearni_aproximace" class=but-prez target=_blank>Otevřít prezentaci</a> <a href="https:\\youtu.be/aOvVJzeWy3o" class=but-video target=_blank>Spustit video</a></figcaption></figure></div>
+<div class="proof algorithm dropdown admonition" id="algorithm-6">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 2.1 </span> (Lineární aproximace v některých fyzikálních zákonech)</p>
+<section class="algorithm-content" id="proof-content">
+</section>
+</div>
+<a onclick=otevrit("problems/derivace_pouziti/lin_approx.pg"); target="_blank" class="WWotazka">Úkol</a>
+<a onclick=otevrit("problems/derivace_pouziti/lokalnost_lin_approx.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+</section>
+<section id="linearni-aproximace-v-nekterych-fyzikalnich-zakonech">
+<h3><span class="section-number">2.2.2. </span>Lineární aproximace v některých fyzikálních zákonech<a class="headerlink" href="#linearni-aproximace-v-nekterych-fyzikalnich-zakonech" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id2">
+<img alt="../_images/chimborazo.jpg" src="../_images/chimborazo.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.2 </span><span class="caption-text">Vrcholek hory Chimborazo je místo nejvzdálenější od středu  Země. Roli hraje nadmořská výška a zploštění Země. Gravitační  zrychlení zde je nejmenší.  Zdroj: pixabay.com</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p><strong>Příklad (gravitační potenciál v malých výškách nad zemí).</strong>
+Gravitační potenciál <span class="math notranslate nohighlight">\(\displaystyle V\)</span> ve vzdálenosti <span class="math notranslate nohighlight">\(\displaystyle r\)</span> od středu koule
+o hmotnosti <span class="math notranslate nohighlight">\(\displaystyle M\)</span> je dán vztahem <div class="math notranslate nohighlight">
+\[V(r)=-G\frac Mr=-GMr^{-1},\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle G\)</span>
+je gravitační konstanta. Najdeme lineární aproximaci v bodě <span class="math notranslate nohighlight">\(\displaystyle R\)</span>.</p>
+<p>Dosazením obdržíme <div class="math notranslate nohighlight">
+\[V(R)=-GMR^{-1}\]</div>
+ a derivováním <div class="math notranslate nohighlight">
+\[\frac{\mathrm
+dV}{\mathrm dr}=GMr^{-2}, \quad \frac{\mathrm dV(R)}{\mathrm
+dr}=GMR^{-2}.  \]</div>
+ Odsud poté získáme lineární aproximaci <div class="math notranslate nohighlight">
+\[V(r)\approx
+-GMR^{-1}+GMR^{-2}(r-R)\]</div>
+ Pro Zemi jako kouli o poloměru <span class="math notranslate nohighlight">\(\displaystyle R\)</span> je <span class="math notranslate nohighlight">\(\displaystyle r-R\)</span>
+výška nad Zemí <span class="math notranslate nohighlight">\(\displaystyle h\)</span> a aproximaci je možno po přeznačení napsat ve tvaru
+<div class="math notranslate nohighlight">
+\[V(r)\approx V_0 +gh.\]</div>
+ V tomto označení je <span class="math notranslate nohighlight">\(\displaystyle V_0=-GMR^{-1}\)</span> konstanta
+související s volbou nulové hladiny potenciálu a vzhledem
+k libovolnosti volby nulové hladiny je tato hodnota
+nepodstatná. Veličina <span class="math notranslate nohighlight">\(\displaystyle g=GMR^{-2}\)</span> je tíhové zrychlení vyjádřené
+pomocí gravitační konstanty <span class="math notranslate nohighlight">\(\displaystyle G\)</span> a parametrů Země. Veličina <span class="math notranslate nohighlight">\(\displaystyle gh\)</span> je
+potenciál v tíhovém poli Země. Tuto veličinu známe lépe ze vzorce pro
+potenciální energii tělesa o hmotnosti <span class="math notranslate nohighlight">\(\displaystyle m\)</span>, který má tvar <div class="math notranslate nohighlight">
+\[E=mgh.\]</div>
+</p>
+<p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJxNjrEKgzAUAPdA_uFBB6Ngmlir7fDGji4OjoVHRQ22Rp6p31916nhwHDfSPBMWuihzc0usearU2hjgBD3T6oLzE73h5acl0BSkqLG4lNYYsytMrfsu4Dt4EIdBigqv-l5mRyfLj8yHln-DcSVWEUexFI3iGNNxP0iq8wYgRY-Nbl3XbaQY683qf4UjLIo=&amp;amp;lang=sage">Online výpočet tíhového zrychlení</a></p>
+<p><strong>Příklad (potenciální a <a class="reference external" href="https://cs.wikipedia.org/wiki/Kinetick%C3%A1_energie">kinetická</a> energie).</strong>
+V předchozím příkladě je možné využít vztah
+<div class="math notranslate nohighlight">
+\[(1\pm x)^n\approx 1\pm nx
+,\quad \text{pro malé }x.\]</div>
+
+Přepsáním gravitačního potenciálu <span class="math notranslate nohighlight">\(\displaystyle V\)</span> do tvaru obsahujícího výšku nad zemí <span class="math notranslate nohighlight">\(\displaystyle h\)</span>
+a využitím lineární aproximace získáme
+ <div class="math notranslate nohighlight">
+\[V = -G \frac{M}{R+h} =-G \frac{M}{R}\left (1+\frac hR\right)^{-1} \approx -G \frac MR\left(1+(-1)\frac hR\right) =-G \frac{M}{R} + G \frac{M}{R^2} h\]</div>
+
+a po zavedení nových konstant
+<div class="math notranslate nohighlight">
+\[ V\approx V_0+ g h,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle g=G \frac{M}{R^2}\)</span>.</p>
+<p>Podobně
+aproximací přesných vztahů plynoucích z Einsteinovy teorie relativity získáme složku energie související s pohybem, tj. kinetickou energii
+ <div class="math notranslate nohighlight">
+\[E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}} =m_0 c^2 \left(1-\frac {v^2}{c^2}\right)^{-1/2} \approx m_0 c^2 \left(1+\left(-\frac 12\right)\left(-\frac {v^2}{c^2}\right)\right)=m_0c^2+\frac 12 m_0v^2 \]</div>
+
+pro <span class="math notranslate nohighlight">\(\displaystyle v\)</span> mnohem menší než <span class="math notranslate nohighlight">\(\displaystyle c\)</span>. Snadno rozšifrujeme, že s rychlostí souvisí jenom druhý sčítanec a že se jedná o klasický vzorec pro kinetickou energii <span class="math notranslate nohighlight">\(\displaystyle \frac 12 mv^2\)</span>.</p>
+<p>Ač se jedná „jenom“ o lineární aproximaci, je  vzorec <span class="math notranslate nohighlight">\(\displaystyle E=\frac 12 mv^2\)</span> dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného relativistického vzorce při malých rychlostech v praxi obvykle zhavaruje na <a class="reference external" href="https://gist.github.com/robert-marik/40a475b8a566bb1dc9ef58da2766228a">zaokrouhlovacích chybách</a>.</p>
+</section>
+</section>
+<section id="linearni-aproximace-a-jednorozmerne-materialove-vztahy">
+<h2><span class="section-number">2.3. </span>Lineární aproximace a jednorozměrné materiálové vztahy<a class="headerlink" href="#linearni-aproximace-a-jednorozmerne-materialove-vztahy" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/yX6azlYcEs0">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id3">
+<img alt="../_images/Stress_Strain_Ductile_Material.jpg" src="../_images/Stress_Strain_Ductile_Material.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.3 </span><span class="caption-text">Podnět a materiálová odezva v případě mechanického namáhání oceli s malým obsahem uhlíku. Pěkně vidíme lineární závislost v okolí počátku a odklon od lineární závislosti pro velké namáhání. Zdroj: https://en.wikipedia.org, Breakeydown</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>V inženýrské praxi často potřebujeme modelovat odezvu materiálu reagujícího na vnější podnět. Může se jednat například o změnu délky při mechanickém namáhání, tok tepla materiálem při tepelném namáhání, tok tekutiny porézním materiálem (dřevo, půda) při difuzi nebo rozdílu tlaků a podobně.</p>
+<p>Pokusíme se modelovat funkci dávající do souvislosti velikost podnětu a reakci materiálu.</p>
+<ul class="simple">
+<li><p>Je přirozené, že při nulovém podnětu není žádná odezva a proto funkce  prochází počátkem.</p></li>
+<li><p>S velikostí podnětu odezva na tento podnět roste a proto funkce v okolí počátku má kladnou derivaci a roste.</p></li>
+<li><p>Z lineární aproximace vidíme, že pro <span class="math notranslate nohighlight">\(\displaystyle x_0=0\)</span> a <span class="math notranslate nohighlight">\(\displaystyle f(0)=0\)</span> se vzorec pro lineární aproximaci redukuje na <div class="math notranslate nohighlight">
+\[f(x)\approx f'(0)x,\]</div>
+ tj. na přímou úměrnost.</p></li>
+<li><p>Ukazuje se, že v řadě praktických úloh je uvedená aproximace dobrá na dostatečně dlouhém intervalu a podle typu úlohy má tato aproximace povahu fyzikálního zákona a svůj vlastní název.  Nejčastěji se setkáme se s <em>Hookovým zákonem</em> pro deformaci materiálu (relativní prodloužení je úměrné normálovému napětí), <em>Darcyho zákonem</em> pro tok tekutiny půdou (filtrační rychlost je úměrná záporně vzatému hydraulickému gradientu), <em>Fickovým zákonem</em> pro difuzi (hustota difuzniho toku je úměrná záporně vzatému gradientu koncentrace) a <em>Fourierovým zákonem</em> pro vedení tepla v materiálu (hustota tepelného toku je úměrná záporně vzatému gradientu teploty). Později, v přednášce o zákonech zachování ve vektorovém poli ke konci semestru, si tyto závislosti naformulujeme ve vícerozměrném prostředí a hlavně ve tvaru, který umožní zohlednit práci s neizotropními materiály (různé fyzikální vlastnosti v různých směrech).</p></li>
+<li><p>Matematicky je tedy povaha přímé úměrnosti v materiálových vztazích zřejmá a experimentálně je možné ověřit, pro jaké oblasti platí. Toto nám však mnohdy nestačí a snažíme se tyto vztahy ještě odvodit ze základních fyzikálních vztahů a z představy jak daný proces funguje. To otevírá možnosti potvrdit si, že naše představa o chování materiálu je správná.</p></li>
+<li><p>V některých velmi speciálních případech dokonce umíme určit materiálovou charakteristiku výpočtem namísto měření. Pro praktické využití tato dovednost není významná (můžeme vypočítat například koeficient filtrace pro půdu složenou z částic ve tvaru stejně velkých kuliček, v praxi se však s takovým materiálem setkáme nanejvýš při speciálních aplikacích v laboratoři), ale dává nám to důležitý prostor pro ověření fyzikálních hypotéz a matematických postupů.</p></li>
+</ul>
+
+<a onclick=otevrit("problems/derivace_pouziti/konstitutivni_vztahy.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+</section>
+<section id="derivace-a-tecna">
+<h2><span class="section-number">2.4. </span>Derivace a tečna<a class="headerlink" href="#derivace-a-tecna" title="Link to this heading">#</a></h2>
+<p>Lineární aproximace funkce je vlastně aproximace tečnou. Protože
+pojem tečna ze střední školy chápeme jenom intuitivně, můžeme nyní pomocí
+derivace tečnu dokonce definovat. Z geometrického pohledu je tečna přímka
+bodem <span class="math notranslate nohighlight">\(\displaystyle [x_0,f(x_0)]\)</span>, která má směrnici <span class="math notranslate nohighlight">\(\displaystyle f'(x_0)\)</span>. Proto se o derivaci
+často mluví jako o směrnici tečny.</p>
+<div class="proof definition admonition" id="definition-7">
+<p class="admonition-title"><span>Definice </span> (Tečna)</p>
+<section class="definition-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je funkce, která má v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> derivaci <span class="math notranslate nohighlight">\(\displaystyle f(x_0)\)</span>. Přímka <div class="math notranslate nohighlight">
+\[y=f(x_0)+f'(x_0)(x-x_0)\]</div>
+ se nazývá <em>tečna ke grafu funkce</em> <span class="math notranslate nohighlight">\(\displaystyle f\)</span> v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span>.</p>
+</section>
+</div><p>Díky souvislosti derivace s tečnou je derivace jedinečným nástrojem při popisu vlastností křivek. Příslušná oblast se nazývá diferenciální geometrie a je to jakási oblast mezi geometrií a diferenciálním počtem.</p>
+</section>
+<section id="aproximace-vyssiho-radu">
+<h2><span class="section-number">2.5. </span>Aproximace vyššího řádu<a class="headerlink" href="#aproximace-vyssiho-radu" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/PyZcNSio8J0">Minivideo</a> </div>
+<section id="motivace-je-mozne-chtit-vice-nez-je-linearni-aproximace">
+<h3><span class="section-number">2.5.1. </span>Motivace: Je možné chtít více než je lineární aproximace?<a class="headerlink" href="#motivace-je-mozne-chtit-vice-nez-je-linearni-aproximace" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id4">
+<img alt="../_images/laser.jpg" src="../_images/laser.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.4 </span><span class="caption-text">Teorie založené na lineárních aproximacích vyřešily mnoho důležitých úloh, ale pokud by příroda fungovala lineárně jako celek, nemohli bychom sestrojit například laser. Ten je založený na nelineární optice a materiálech s nelineární materiálovou odezvou. Neměli bychom řezací stroje, ale ani laserová ukazovátka. Zdroj: pixabay.com</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Lineární aproximace vychází z předpokladu, že rychlost růstu (nebo
+poklesu) se příliš nemění. Někdy můžeme mít dodatečnou informaci o tom, jak se tato rychlost změní. Například pokud se bude rychlost
+zpomalovat, bude skutečná hodnota funkce menší než lineární
+aproximace.</p>
+<p>Je otázka, zda a jak je možné informaci o tom, jak rychle roste
+rychlost, případně jak rychle roste rychlost růstu rychlosti, využít.
+To znamená že budeme studovat derivaci derivace, derivaci derivace
+derivace atd.</p>
+<p>Aproximaci funkce <span class="math notranslate nohighlight">\(\displaystyle \cos x\approx 1\)</span> zmíněnou výše (odvodíme ve
+cvičení), kdy aproximujeme vlastně konstantní funkcí, je možné také
+chápat jako selhání lineární aproximace. Následující slidy a pojem
+Taylorův polynom nám umožní najít prostředek pro aproximaci i v těchto
+případech.</p>
+</section>
+<section id="derivace-vyssich-radu">
+<h3><span class="section-number">2.5.2. </span>Derivace vyšších řádů<a class="headerlink" href="#derivace-vyssich-radu" title="Link to this heading">#</a></h3>
+<div class="proof definition admonition" id="definition-8">
+<p class="admonition-title"><span>Definice </span> (Druhá a další vyšší derivace)</p>
+<section class="definition-content" id="proof-content">
+<ul class="simple">
+<li><p><em>Druhou derivací</em> rozumíme derivaci derivace. Označujeme <span class="math notranslate nohighlight">\(\displaystyle f''(x)\)</span> nebo <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm d^2 f}{\mathrm dx^2}\)</span>.</p></li>
+<li><p>Podobně <em><span class="math notranslate nohighlight">\(\displaystyle k\)</span>-tou derivací</em> rozumíme derivaci <span class="math notranslate nohighlight">\(\displaystyle (k-1)\)</span>-ní derivace. Označujeme <span class="math notranslate nohighlight">\(\displaystyle f^{(k)}(x)\)</span> nebo <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm d^k f}{\mathrm dx^k}\)</span>.</p></li>
+</ul>
+<p>Platí tedy <div class="math notranslate nohighlight">
+\[\frac {\mathrm d^2 f}{\mathrm dx^2}:=\frac {\mathrm d}{\mathrm dx} \left(\frac {\mathrm d f}{\mathrm dx}\right),\quad  
+\frac {\mathrm d^kf}{\mathrm dx^k}:=\frac {\mathrm d}{\mathrm dx}
+\left(\frac {\mathrm d^{k-1}f}{\mathrm dx^{k-1}}\right)  \]</div>
+
+aneb
+<div class="math notranslate nohighlight">
+\[f'':=(f')', 
+\quad f'''=(f'')', \quad f^{(k)}={(f^{(k-1)})'}.\]</div>
+</p>
+</section>
+</div><p>Označení derivací pomocí čárek se nazývá Lagrangeova notace, označení
+pomocí podílu diferenciálů Leibnizova notace. Ještě se někdy používá i
+Eulerova notace, používající <span class="math notranslate nohighlight">\(\displaystyle \mathrm Df\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \mathrm D^2 f\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \mathrm
+D^k f\)</span> pro první, druhou a <span class="math notranslate nohighlight">\(\displaystyle k\)</span>-tou derivaci.</p>
+<p><strong>Příklad.</strong></p>
+<ul class="simple">
+<li><p>Exponenciální funkce <span class="math notranslate nohighlight">\(\displaystyle e^x\)</span> má všechny derivace stejné.</p></li>
+<li><p>U mocninné funkce se každým derivováním sníží exponent. Je-li
+exponentem přirozené číslo, po konečném počtu kroků se exponent sníží
+na nulu, funkce tedy bude konstantní a všechny další derivace budou
+nulové.</p></li>
+<li><p>Polynomy mají všechny derivace od jistého řádu rovny nule.</p></li>
+</ul>
+<p>Podobně je možné pracovat s parciálními derivacemi parciálních derivací. Například <div class="math notranslate nohighlight">
+\[\frac{\partial ^2 f}{\partial x^2}:=\frac{\partial }{\partial x}\left(\frac{\partial f}{\partial x}\right)\]</div>
+
+<div class="math notranslate nohighlight">
+\[\frac{\partial ^2 f}{\partial y^2}:=\frac{\partial }{\partial y}\left(\frac{\partial f}{\partial y}\right)\]</div>
+
+nebo
+<div class="math notranslate nohighlight">
+\[\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(\frac{\partial f}{\partial x}\right).\]</div>
+</p>
+<div class="proof algorithm dropdown admonition" id="algorithm-9">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 2.2 </span> (Druhá derivace a deformace nosníků)</p>
+<section class="algorithm-content" id="proof-content">
+</section>
+</div></section>
+<section id="druha-derivace-a-deformace-nosniku">
+<h3><span class="section-number">2.5.3. </span>Druhá derivace a deformace nosníků<a class="headerlink" href="#druha-derivace-a-deformace-nosniku" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id5">
+<img alt="../_images/nosniky.jpg" src="../_images/nosniky.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.5 </span><span class="caption-text">Druhé derivace nám umožňují popsat tak zásadní věc, jako je chování nosníků při zátěži. Zdroj: pixabay.com</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Derivace hrají ústřední roli v teorii studující tuhost, deformaci a
+odolnost proti selhání u nosníků. Máme-li nosník podepřený na koncích
+a zatížený silou kolmo na podélnou osu nosníku (například vodorovný
+nosník se svislým zatížením) a je-li <span class="math notranslate nohighlight">\(\displaystyle v(x)\)</span> výchylka od rovnovážného
+stavu v bodě <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, potom derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dv}{\mathrm dx}\)</span>
+vyjadřuje úhel pootočení svislého průřezu nosníku vlivem deformace a
+druhá derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm d^2v}{\mathrm dx^2}\)</span> při malých
+deformacích vyjadřuje křivost nosníku. Z fyzikálních úvah a ze vztahu
+mezi křivostí a momentem <span class="math notranslate nohighlight">\(\displaystyle M(x)\)</span> síly, která nosník deformuje, je možné
+odvodit rovnici <div class="math notranslate nohighlight">
+\[M(x)=EI\frac{\mathrm d^2v}{\mathrm dx^2},\]</div>
+ kde
+konstanta <span class="math notranslate nohighlight">\(\displaystyle E\)</span> souvisí s materiálem (Youngův modul pružnosti) a <span class="math notranslate nohighlight">\(\displaystyle I\)</span> s
+průřezem nosníku (kvadratický moment průřezu). Podobně, pro nosník
+namáhaný v ose (například svislá vzpěra) silou <span class="math notranslate nohighlight">\(\displaystyle F\)</span> platí vztah
+<div class="math notranslate nohighlight">
+\[EI\frac{\mathrm d^2v}{\mathrm dx^2}+Fv=0.\]</div>
+ Aplikace jsou, jak bylo uvedeno, při dimenzování nosníků (angl. beam buclinkg). Odvození výše uvedených rovnic není komplikované, ale vyžaduje dodatečné fyzikální znalosti a proto zde neuvádíme.</p>
+<p>Někdy je vhodné mít moment <span class="math notranslate nohighlight">\(\displaystyle M(x)\)</span> síly deformující nosník mít vyjádřený pomocí zatížení nosníku. To souvisí s druhou derivací momentu a proto je nutno rovnici ještě dvakrát derivovat. Proto se ohybová rovnice nosníku někdy uvádí jako vztah obsahující dokonce čtvrtou derivaci.</p>
+</section>
+<section id="tayloruv-polynom-a-polynomialni-aproximace-v-1d">
+<h3><span class="section-number">2.5.4. </span>Taylorův polynom a polynomiální aproximace v 1D<a class="headerlink" href="#tayloruv-polynom-a-polynomialni-aproximace-v-1d" title="Link to this heading">#</a></h3>
+<div class="proof definition admonition" id="definition-10">
+<p class="admonition-title"><span>Definice </span> (Taylorův polynom)</p>
+<section class="definition-content" id="proof-content">
+<p><em>Taylorův polynom</em> stupně <span class="math notranslate nohighlight">\(\displaystyle n\)</span> pro funkci <span class="math notranslate nohighlight">\(\displaystyle f\)</span> v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> je polynom
+<div class="math notranslate nohighlight">
+\[T(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{1}{2!}f''(x_0)(x-x_0)^2+\cdots +\frac{1}{n!}f^{(n)}(x_0)(x-x_0)^n,\]</div>
+
+tj.
+<div class="math notranslate nohighlight">
+\[T(x)=f(x_0)+\frac {\mathrm df(x_0)}{\mathrm dx}(x-x_0)+\frac{1}{2!} \frac {\mathrm d^2f(x_0)}{\mathrm dx^2} (x-x_0)^2+\cdots +\frac{1}{n!}\frac {\mathrm d^nf(x_0)}{\mathrm dx^n}(x-x_0)^n.\]</div>
+</p>
+</section>
+</div><p>Taylorův polynom je nejlepší aproximace funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> polynomem. Je možné
+ukázat, že rozdíl <div class="math notranslate nohighlight">
+\[f(x)-T(x)\]</div>
+ je blízký k nule, pokud je <span class="math notranslate nohighlight">\(\displaystyle n\)</span>
+dostatečně velké, <span class="math notranslate nohighlight">\(\displaystyle x\)</span> dostatečně blízko k <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> a <span class="math notranslate nohighlight">\(\displaystyle (n+1)\)</span>-ní derivace
+funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je relativně malá. V těchto případech je <div class="math notranslate nohighlight">
+\[f(x)\approx
+T(x).\]</div>
+  V tomto případě dostáváme
+následující větu. V ní <span class="math notranslate nohighlight">\(\displaystyle O((x-x_0)^{n+1})\)</span> je takzvané <a class="reference external" href="https://cs.wikipedia.org/wiki/Landauova_notace">Landauovo velké
+O</a>. Tímto zápisem je
+vyjádřen člen, který je pro <span class="math notranslate nohighlight">\(\displaystyle x\)</span> blízká k <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> v absolutní hodnotě
+menší než násobek funkce <span class="math notranslate nohighlight">\(\displaystyle (x-x_0)^{n+1}\)</span>, tj. v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> konverguje k nule
+stejně rychle nebo rychleji jako mocninná funkce s exponentem <span class="math notranslate nohighlight">\(\displaystyle n+1\)</span>.</p>
+<div class="proof theorem admonition" id="theorem-11">
+<p class="admonition-title"><span>Věta </span> (Taylorova aproximace v okolí nuly)</p>
+<section class="theorem-content" id="proof-content">
+<p>Platí
+<div class="math notranslate nohighlight">
+\[f(x)=T(x)+O((x-x_0)^{n+1}),\]</div>
+
+resp. pro <span class="math notranslate nohighlight">\(\displaystyle x=x_0+h\)</span>
+<div class="math notranslate nohighlight">
+\[f(x_0+h)=f(x_0)+f'(x_0)h+\frac{1}{2!}f''(x_0)h^2+\cdots +\frac{1}{n!}f^{(n)}(x_0)h^n+O(h^{n+1}),\]</div>
+
+pokud existují spojité derivace funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> do řádu <span class="math notranslate nohighlight">\(\displaystyle n+1\)</span>.</p>
+<p>Často používáme aproximaci v nule. Potom dostáváme pro aproximaci v okolí nuly
+<div class="math notranslate nohighlight">
+\[f(x)=f(0)+f'(0)x+\frac{1}{2!}f''(0)x^2+\cdots +\frac{1}{n!}f^{(n)}(0)x^n+O(x^{n+1}).\]</div>
+</p>
+</section>
+</div><p><strong>Příklad.</strong> <div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\ln \frac{1+x}{1-x}&amp;\approx 2x+\frac 23 x^3+\frac 25 x^5+\frac 27 x^7 +\frac 29 x^9\\
+\ln 2=\ln\frac {1+\frac 13}{1-\frac 13}&amp;\approx 0.69314604
+\end{aligned}\end{split}\]</div>
+
+Po tomto výpočtu je prvních pět cifer aproximace <span class="math notranslate nohighlight">\(\displaystyle \ln 2\)</span> správně. Tady vidíme i jeden zajímavý trik. Pokud bychom se snažili napsat Taylorův polynom funkce <span class="math notranslate nohighlight">\(\displaystyle \ln (x+1)\)</span>, která vypadá příjemněji, chyba aproximace by byla mnohem větší.</p>
+<p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJx1jrsKwkAQRfuF_YcBmxmMidHKws4_0E4sloQ8IJkJMYm7fr2bNSAErGY4F869BVo6N4yYbi0lmO4skVblQmeolVYbuEwGbsY10svkoJPGsbROqyIeAkUb7aMTxc9KXjgb_vDZdfUONlxDJTnL4MA3HQgM5JOMYLpebN2arPY1rfjTj292WfXr9_-yYNQqmO9BETNStFqEaXL8BuU6CPhBH7pTT2k=&amp;amp;lang=sage">Online výpočet.</a></p>
+</section>
+</section>
+<section id="konecne-diference-a-numericka-aproximace-derivace">
+<h2><span class="section-number">2.6. </span>Konečné diference a numerická aproximace derivace<a class="headerlink" href="#konecne-diference-a-numericka-aproximace-derivace" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/U93Q3XaDnDA">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id6">
+<img alt="../_images/diference.png" src="../_images/diference.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.6 </span><span class="caption-text">V praxi často pracujeme s daty získanými po skocích. Místo spojité funkce (křivky) tedy máme funkci definovanou v bodech (diskrétní funkce). I zde je nutné mít možnost měření rychlosti změny, která je co nejvíce kompatibilní s derivací.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<img alt="../_images/pisarky.jpg" src="../_images/pisarky.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.7 </span><span class="caption-text">Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v dřevěných konstrukcích a to i v případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: vlastní.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Pro numerické řešení rovnic obsahujících derivace je vhodné umět nahradit derivace veličinami, se kterými se lépe pracuje v numerických výpočtech.</p>
+<p>Základním přístupem je vynechání limitního přechodu v definici derivace <div class="math notranslate nohighlight">
+\[\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.\]</div>
+ Tedy <div class="math notranslate nohighlight">
+\[\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.\]</div>
+ Okamžitá rychlost je nahrazena průměrnou rychlostí na intervalu <span class="math notranslate nohighlight">\(\displaystyle (x,x+h).\)</span> Tento podíl se nazývá <em>dopředná poměrná diference</em>. Analogicky je definována vztahem <div class="math notranslate nohighlight">
+\[\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x)-f(x-h)}{h}\]</div>
+ <em>zpětná poměrná diference</em>.</p>
+<p>Lepší aproximace derivace vychází z Taylorova polynomu druhého řádu napsaného pro <span class="math notranslate nohighlight">\(\displaystyle f(x+h)\)</span> a <span class="math notranslate nohighlight">\(\displaystyle f(x-h)\)</span>, tj. ze vztahů
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+f(x+h)&amp;\approx f(x)+f'(x)h+\frac 12 f''(x)h^2,\\
+f(x-h)&amp;\approx f(x)-f'(x)h+\frac 12 f''(x)h^2.
+\end{aligned}\end{split}\]</div>
+</p>
+<ul class="simple">
+<li><p>Pokud tyto vztahy odečteme, dostaneme
+<div class="math notranslate nohighlight">
+\[
+f(x+h)-f(x-h)\approx2f'(x)h.
+\]</div>
+
+a odsud dostáváme aproximaci první derivace pomocí <em>centrální diference</em> ve tvaru
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}.\]</div>
+
+Protože používáme aproximaci kvadratickým polynomem, je aproximace derivace pomocí centrální diference přesnější než aproximace pomocí dopředné diference.</p></li>
+<li><p>Pokud tyto vztahy sečteme, dostaneme
+<div class="math notranslate nohighlight">
+\[
+f(x+h)+f(x-h)\approx 2f(x)+ f''(x)h^2
+\]</div>
+
+a odsud dostáváme aproximaci druhé derivace
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  \]</div>
+</p></li>
+</ul>
+
+<a onclick=otevrit("problems/derivace_pouziti/aproximace_derivace.pg"); target="_blank" class="WWotazka">Úkol</a>
+<a onclick=otevrit("problems/derivace_pouziti/aproximace_derivace_tabulka.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+<div class="proof algorithm dropdown admonition" id="algorithm-12">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 2.3 </span> (Od vazeb mezi atomy k materiálovým vlastnostem)</p>
+<section class="algorithm-content" id="proof-content">
+</section>
+</div></section>
+<section id="odbocka-od-vazeb-mezi-atomy-k-materialovym-vlastnostem">
+<h2><span class="section-number">2.7. </span>Odbočka: od vazeb mezi atomy k materiálovým vlastnostem<a class="headerlink" href="#odbocka-od-vazeb-mezi-atomy-k-materialovym-vlastnostem" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id8">
+<img alt="../_images/table-detail.jpg" src="../_images/table-detail.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.8 </span><span class="caption-text">Stůl z kompozitního materiálu. U řady materiálů je možné ze struktury vypočítat fyzikální vlastnosti ještě dříve, než tyto materiály vůbec vyrobíme. Zdroj: http://seiboncarbon.com.au</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Výraz <div class="math notranslate nohighlight">
+\[V(r)=\frac 1{r^{12}}-\frac 2{r^6}=r^{-12}-2r^{-6}\]</div>
+ je (až na konstanty, které pro pohodlí volíme pevně) Lennard-Jonesův potenciál často používaný pro interakci mezi atomy nebo molekulami. Napíšeme Taylorův polynom druhého stupně v bodě <span class="math notranslate nohighlight">\(\displaystyle r=1\)</span>. K tomu potřebujeme znát funkční hodnotu a hodnotu prvních dvou derivací v tomto bodě.
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+V(1)&amp;=1-2=-1\\
+\frac{\mathrm dV}{\mathrm dr}&amp;=-12r^{-13}-2(-6)r^{-7}\Bigr|_{r=1}=-12+12=0\\
+\frac{\mathrm d^2V}{\mathrm dr^2}&amp;=12\cdot 13 r^{-14}-2\cdot6\cdot 7r^{-8}\Bigr|_{r=1}=12\cdot 13-12\cdot 7=72\\
+V(r)&amp;\approx -1+\frac 12 72 (r-1)^2
+\end{aligned}
+\end{split}\]</div>
+
+Konstanta <span class="math notranslate nohighlight">\(\displaystyle -1\)</span> je nezajímavá, souvisí s nulovou hladinou potenciálu a nulovou hladinu potenciálu si můžeme volit libovolně.</p>
+<p>Lineární člen chybí a kvadratický člen je analogický potenciální
+energii pružiny o tuhosti <span class="math notranslate nohighlight">\(\displaystyle k\)</span> ve tvaru <div class="math notranslate nohighlight">
+\[U=\frac 12 kx^2.\]</div>
+ Molekuly či
+atomy popsané tímto potenciálem se chovají jako tělesa na pružině o tuhosti <span class="math notranslate nohighlight">\(\displaystyle k=72\)</span> kmitající okolo rovnovážné polohy odpovídající <span class="math notranslate nohighlight">\(\displaystyle r=1\)</span>. Pro atom o hmotnosti <span class="math notranslate nohighlight">\(\displaystyle m\)</span> tedy například platí vzorec pro
+úhlovou frekvenci oscilací <span class="math notranslate nohighlight">\(\displaystyle \omega = \sqrt{\frac km}\)</span>, odvozený
+původně pro těleso na pružině. Analogicky se chovají pružné konstrukce. V klidu jsou ve stavu s minimální potenciální energií a při vychýlení z tohoto stavu o malou hodnotu začínají kmitat.</p>
+<ul class="simple">
+<li><p>Pokud aproximujeme potenciál pomocí Taylorova polynomu, z koeficientu u kvadratického člene můžeme určit frekvenci oscilací.</p></li>
+<li><p>Dále můžeme tímto způsobem určit pevnost vazby a tím pro daný materiál určit Youngův modul pružnosti, tj. konstantu úměrnosti mezi deformací materiálu a tahovým nebo tlakovým napětí v materiálu.</p></li>
+<li><p>Poloha rovnovážné polohy, resp. její závislost na teplotě (pokud bychom do matematického modelu dodali skutečné parametry i s jejich teplotní závislostí) zase definuje koeficient teplotní roztažnosti materiálu.</p></li>
+</ul>
+<p>Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyzikální vlastnosti výpočtem. To je důležité, protože teoretické předpovídání vlastností materiálu otevírá cestu k navrhování nových materiálů s výhodnějšími vlastnostmi. materiál můžeme prozkoumat ještě dříve, než jej vyrobíme a dostaneme na stůl.</p>
+
+<p><a class="reference external" href="https://gist.github.com/robert-marik/e53bfb4b0bf91809c489780ddcff447c">Online výpočet a obrázek.</a></p>
+
+</section>
+<section id="reseni-rovnic">
+<h2><span class="section-number">2.8. </span>Řešení rovnic<a class="headerlink" href="#reseni-rovnic" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/1DxpXD8YEYY">Minivideo</a> </div>
+<p>V praxi se setkáváme s případy, kdy je znám výsledek po aplikování funkce na vstupní data a je nutné rekonstruovat tato vstupní data. Řešíme tedy rovnici, kde neznámá je argumentem funkce a je známa funkční hodnota. Pojmy nutné pro korektní formulaci a jednu z velmi rychlých přibližných metod řešení rovnic si představíme v následujících pasážích.</p>
+<p>Nejprve se budeme zabývat tím, jestli se k funkční hodnotě dají vstupní data rekonstruovat jednoznačně (prostá funkce). Pokud ano, představíme si pravidlo, které toto přiřazení vstupních dat k výsledku po aplikaci funkce dokáže realizovat (inverzní funkce). A na závěr si ukážeme metodu, jak při řešení rovnic (resp. počítat funkční hodnoty inverzních funkcí) využít derivaci. To vede k velmi rychlé a velmi obecné metodě numerického řešení (Newtonova metoda).</p>
+<section id="prosta-funkce">
+<h3><span class="section-number">2.8.1. </span>Prostá funkce<a class="headerlink" href="#prosta-funkce" title="Link to this heading">#</a></h3>
+<p>Někdy jsme v situaci, že známe výsledek po působení nějaké funkce a
+potřebujeme zrekonstruovat vstupní hodnotu. Řešíme tedy pro zadanou
+funkci <span class="math notranslate nohighlight">\(\displaystyle f\)</span> a hodnotu <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span> rovnici <div class="math notranslate nohighlight">
+\[f(x)=y_0.\]</div>
+ Řešení této rovnice,
+pokud existuje, nemusí být určeno jednoznačně. Pro funkce, pro které
+je určeno jednoznačně, zavádíme následující pojem.</p>
+<div class="proof definition admonition" id="definition-13">
+<p class="admonition-title"><span>Definice </span> (Prostá funkce)</p>
+<section class="definition-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je funkce a <span class="math notranslate nohighlight">\(\displaystyle M\subseteq \mathrm{Dom}(f)\)</span> podmnožina definičního oboru funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span>.   Řekneme, že funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je <em>prostá</em>,
+jestliže každý obraz má jen jediný vzor, tj. pro každé <span class="math notranslate nohighlight">\(\displaystyle y_0\in f(M)\)</span>
+existuje jediné <span class="math notranslate nohighlight">\(\displaystyle x\in M\)</span> s vlastností <span class="math notranslate nohighlight">\(\displaystyle f(x)=y_0\)</span>.
+Nespecifikujeme-li množinu <span class="math notranslate nohighlight">\(\displaystyle M\)</span>, máme na mysli, že uvedená vlastnost
+platí na celém definičním oboru funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span>.</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-14">
+<p class="admonition-title"><span>Věta </span> (Rovnice s prostou funkcí)</p>
+<section class="theorem-content" id="proof-content">
+<p>Pokud je <span class="math notranslate nohighlight">\(\displaystyle f\)</span> prostá funkce a platí <div class="math notranslate nohighlight">
+\[f(x)=f(a),\]</div>
+ potom platí <span class="math notranslate nohighlight">\(\displaystyle x=a.\)</span></p>
+</section>
+</div><p><strong>Příklad.</strong> Vlastnost být či nebýt prostá je zásadní pro vyslovení odpovědi na  otázku, zda rovnice má jediné řešení, či zda řešení může být více.</p>
+<ul class="simple">
+<li><p>Funkce <span class="math notranslate nohighlight">\(\displaystyle \frac 1x\)</span> je prostá a proto z rovnosti <span class="math notranslate nohighlight">\(\displaystyle \frac 1x = \frac 15\)</span>
+plyne <span class="math notranslate nohighlight">\(\displaystyle x=5\)</span>.</p></li>
+<li><p>Funkce <span class="math notranslate nohighlight">\(\displaystyle x^2\)</span> není prostá a proto z rovnosti <span class="math notranslate nohighlight">\(\displaystyle x^2 = 7^2\)</span> neplyne <span class="math notranslate nohighlight">\(\displaystyle x=7\)</span>. Ve skutečnosti pro každou rovnici ve které není prostá funkce, potřebujeme speciální metodu. Proto máme speciální vzorec pro řešení kvadratické rovnice, nebo například speciální postupy pro řešení goniometrickcýh rovnic.</p></li>
+</ul>
+</section>
+<section id="inverzni-funkce">
+<h3><span class="section-number">2.8.2. </span>Inverzní funkce<a class="headerlink" href="#inverzni-funkce" title="Link to this heading">#</a></h3>
+<p>Inverzní úloha je tak trošku jako reverzní inženýrství. Máme výsledek
+a potřebujeme znát vstupní data. U funkcí to je supersnadné, u
+konstrukcí supersložité. Užitečné je ale obojí.</p>
+<div class="proof definition admonition" id="definition-15">
+<p class="admonition-title"><span>Definice </span> (Inverzní funkce)</p>
+<section class="definition-content" id="proof-content">
+<p>Nechť funkce <span class="math notranslate nohighlight">\(\displaystyle f: A\to B\)</span> je prostá. Pravidlo, které každému <span class="math notranslate nohighlight">\(\displaystyle x\)</span>   z množiny <span class="math notranslate nohighlight">\(\displaystyle f(A)\)</span> přiřadí to (jediné) <span class="math notranslate nohighlight">\(\displaystyle y\)</span>, pro které platí <span class="math notranslate nohighlight">\(\displaystyle f(y)=x\)</span> se nazývá <em>inverzní funkce</em> k funkci <span class="math notranslate nohighlight">\(\displaystyle f\)</span>, označujeme   <span class="math notranslate nohighlight">\(\displaystyle f^{-1}\)</span>.</p>
+</section>
+</div><div class="proof remark admonition" id="remark-16">
+<p class="admonition-title"><span>Poznámka </span> (Inverzní funkce pří řešení rovnic)</p>
+<section class="remark-content" id="proof-content">
+<p>Jinak zapsáno, je-li <div class="math notranslate nohighlight">
+\[f(y)=x\]</div>
+ a <span class="math notranslate nohighlight">\(\displaystyle f\)</span> má inverzní funkci, platí
+<div class="math notranslate nohighlight">
+\[y=f^{-1}(x).\]</div>
+ Jedná se o zobecnění pouček jak „převádět výrazy na druhou stranu rovnice“.</p>
+</section>
+</div><p>Symbol <span class="math notranslate nohighlight">\(\displaystyle f^{-1}(x)\)</span> lze tedy chápat buď jako hodnotu inverzní funkce
+k funkci <span class="math notranslate nohighlight">\(\displaystyle f\)</span> v bodě <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, nebo jako převrácenou hodnotu k číslu
+<span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span>, tj jako <span class="math notranslate nohighlight">\(\displaystyle [f(x)]^{-1}=\frac{1}{f(x)}\)</span>. Nebude-li z kontextu
+zřejmé, o kterou variantu se jedná, musíme toto upřesnit.</p>
+<p><strong>Příklad.</strong> Funkce <span class="math notranslate nohighlight">\(\displaystyle y=x^2\)</span> není prostá na <span class="math notranslate nohighlight">\(\displaystyle \mathbb R\)</span> a proto zde nemá inverzní funkci. Pokud definiční obor funkce <span class="math notranslate nohighlight">\(\displaystyle y=x^2\)</span> zúžíme na nezáporná čísla, tj. požadujeme <span class="math notranslate nohighlight">\(\displaystyle x\geq 0\)</span>, je taková funkce prostá a má inverzní funkci. Protože tato úloha má praktický význam, vyplatí se pro tuto inverzní funkcí zavést speciální označení. Jak dobře víme, inverzní funkcí je druhá odmocnina, tj. funkce <span class="math notranslate nohighlight">\(\displaystyle y=\sqrt x\)</span>.</p>
+</section>
+<section id="newtonova-metoda">
+<h3><span class="section-number">2.8.3. </span>Newtonova metoda<a class="headerlink" href="#newtonova-metoda" title="Link to this heading">#</a></h3>
+<p>Newtonova metoda (též Newtonova Raphsonova metoda) je metoda pro
+numerické řešení rovnic. To používáme v případě, že není možné (nebo
+není účelné) řešit rovnici přesně a snažíme se najít přibližné
+řešení. Například neznáme inverzní funkci, nebo s touto funkcí neumíme
+pracovat.</p>
+<p>Budeme hledat řešení rovnice <div class="math notranslate nohighlight">
+\[f(x)=0.\]</div>
+ Budeme postupovat tak, že
+vyjdeme z nějaké aproximace řešení (získáme například graficky nebo
+zkusmo hrubou výpočetní silou) a tuto aproximaci budeme postupně
+zpřesňovat. Postup zpřesňování je takový, že v dosažené aproximaci
+funkci nahradíme lineární funkcí a další aproximace (zpřesnění
+předchozí aproximace) bude v nulovém bodě této lineární funkce. Za
+poměrně snadno splnitelných předpokladů (začneme dostatečně blízko
+nulového bodu a funkce má v nulovém bodě nenulovou derivaci) postup
+konverguje ke kořeni studované rovnice a to velmi rychle: každým
+krokem se přibližně zdvojnásobí počet míst, která máme správně.</p>
+<p>Z lineární aproximace funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> <div class="math notranslate nohighlight">
+\[f(x)\approx
+f(x_0)+f'(x_0)(x-x_0)\]</div>
+ pro <span class="math notranslate nohighlight">\(\displaystyle x_0=x_n\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x=x_{n+1}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle f(x_{n+1})=0\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[0=f(x_n)+f'(x_n)(x_{n+1}-x_n)\]</div>
+ a po osamostatnění <span class="math notranslate nohighlight">\(\displaystyle x_{n+1}\)</span> přímo
+iterační vzorec <div class="math notranslate nohighlight">
+\[x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.\]</div>
+ Tento vzorec
+používáme opakovaně až do dosažení požadované přesnosti. Obvyklým
+testem pro ukončení výpočtu je porovnání dvou po sobě jdoucích
+iterací. Pokud se v rámci požadované přesnosti shodují, výpočet končí
+a známe přibližné řešení zadané rovnice.</p>
+<p><strong>Příklad.</strong>
+Zkusme najít číslo takové, jehož kosinus je stejný jako toto číslo.
+Rovnici <div class="math notranslate nohighlight">
+\[x=\cos x\]</div>
+ nejprve přepíšeme do tvaru <div class="math notranslate nohighlight">
+\[x-\cos x=0\]</div>
+ a hledáme vlastně řešení nulový bod funkce <span class="math notranslate nohighlight">\(\displaystyle f(x)=x-\cos x\)</span>. Po dosazení <span class="math notranslate nohighlight">\(\displaystyle f'(x)=1+\sin x\)</span> získáváme iterační vzorec <div class="math notranslate nohighlight">
+\[x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin x_n}\]</div>
+ a jednotlivé iterace s počátečním odhadem <span class="math notranslate nohighlight">\(\displaystyle x_0=1\)</span> a s aproximací na 60 desetinných míst <a class="reference external" href="https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TDXtOLlUgCCCluNCl0gSs4v1qjQ1NTXMNQuzswDMTX18jRSMtMzS4ptLQw0IaoLijLzShSAsgDDoBas&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">dávají postupně</a> následující hodnoty.</p>
+<p> </p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.7503638678402438930349423066821768532469930658553590309665831</span>
+<span class="mf">0.7391128909113616703605852909048902340028928367356569073234079</span>
+<span class="mf">0.7390851333852839697601251208568043328895331231701889796312306</span>
+<span class="mf">0.7390851332151606416617026256850263723252232625296426915134025</span>
+<span class="mf">0.7390851332151606416553120876738734040134207763670352584051590</span>
+<span class="mf">0.7390851332151606416553120876738734040134117589007574649656806</span>
+<span class="mf">0.7390851332151606416553120876738734040134117589007574649656806</span>
+</pre></div>
+</div>
+<p></p>
+<p>Vidíme, že proces opravdu neuvěřitelně rychle konverguje k řešení rovnice.
+Rychlost konvergence je důležitá, pokud je výpočet funkční hodnoty „drahý“.
+Například při modelování namáhání dřevěné konstrukce s nelineární
+charakteristikou aproximujeme rovnici pomocí konečných diferencí soustavou
+rovnic, která má desítky tisíc proměnných. Každé kolo iterační metody vyžaduje
+mnoho výpočtů a rychlost konvergence je zásadní.</p>
+<p><a class="reference external" href="https://gist.github.com/robert-marik/7eb864d3bc5d995772164baf13299e79">Python skript</a></p>
+
+<a onclick=otevrit("problems/derivace_pouziti/newton_raphson.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+<div class="proof algorithm dropdown admonition" id="algorithm-17">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 2.4 </span> (Ad hoc iterace)</p>
+<section class="algorithm-content" id="proof-content">
+<p>Newtonovu metodu je možné chápat také tak, že rovnici <div class="math notranslate nohighlight">
+\[f(x)=0\]</div>
+ přepíšeme do ekvivalentního tvaru</p>
+<div class="math notranslate nohighlight" id="equation-newton">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-newton" title="Link to this equation">#</a></span>\[x = x - \frac{f(x)}{f'(x)}\]</div>
+<p>a poté hledáme iteracemi
+<div class="math notranslate nohighlight">
+\[x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}\]</div>
+ takové <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, kdy se levá strana rovná pravé. Někdy je možné použít analogickou iterační techniku, kdy však zadanou rovnici převedeme do jiného tvaru, než <a class="reference internal" href="#equation-newton">(2.3)</a>. Zpravidla snížíme šance, že proces konverguje a snížíme rychlost konvergence, ale i tak to může být výhodné, protože nemusíme počítat derivaci funkce. Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy lineárních rovnic.</p>
+<p><strong>Příklad (ad hoc iterace).</strong> Například rovnici <div class="math notranslate nohighlight">
+\[x^4+7x-7=0\]</div>
+ můžeme přepsat do tvaru <div class="math notranslate nohighlight">
+\[x=\frac 17 (7-x^4)\]</div>
+ a iterační vzorec
+<div class="math notranslate nohighlight">
+\[x_{n+1}=\frac 17 (7-x_n^4)\]</div>
+ s počátečním odhadem <span class="math notranslate nohighlight">\(\displaystyle x=1\)</span> dává po deseti iteracích <a class="reference external" href="https://sagecell.sagemath.org/?z=eJxTVqiIM9E2r9A1tzXg5VJWqLA11DdX0DDXBQpr8nLxcgEFeLnS8osUMhUy8xSKEvPSUzVMDTSteLkUgKDCNk8DqEELqkETIlpQlJlXoqCRqVOhCQAgthZa&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">tři desetinná místa shodná</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mf">0.857142857142857</span>
+<span class="mi">1</span> <span class="mf">0.922889272327007</span>
+<span class="mi">2</span> <span class="mf">0.896366455780602</span>
+<span class="mi">3</span> <span class="mf">0.907775917517455</span>
+<span class="mi">4</span> <span class="mf">0.902989981267125</span>
+<span class="mi">5</span> <span class="mf">0.905019667139163</span>
+<span class="mi">6</span> <span class="mf">0.904162819564782</span>
+<span class="mi">7</span> <span class="mf">0.904525248412642</span>
+<span class="mi">8</span> <span class="mf">0.904372074163256</span>
+<span class="mi">9</span> <span class="mf">0.904436833065177</span>
+</pre></div>
+</div>
+<p>Vidíme konvergenci a iterační vzorec jsme našli s minimálním úsilím. Rychlost konvergence však není nijak velká a riziko, že výpočet nebude konvergovat roste se složitostí rovnice a silně závisí na zkušenostech uživatele s touto technikou. Newtonova metoda <div class="math notranslate nohighlight">
+\[x_{n+1}=x_n-\frac{x_n^4+7x_n-7}{4x_n^3+7}\]</div>
+ je jistější a se stejným počátečním odhadem konverguje mnohem rychleji, což ukazuje následující <a class="reference external" href="https://sagecell.sagemath.org/?z=eJwljDEKgDAMAPdA_hBwSdTSikpA6FcEB5UuVYpDnm_RG4_jGrJ16tScxoDQkMXBK7G6qgUBoQqE4yqUKGUqWz53noMsCFSxmNkcf4-2TsTz1No6diryF3dJ-SFOvckLTdwZiw==&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">výpočet</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mf">0.909090909090909</span>
+<span class="mi">1</span> <span class="mf">0.904428379310109</span>
+<span class="mi">2</span> <span class="mf">0.904417592410086</span>
+<span class="mi">3</span> <span class="mf">0.904417592352745</span>
+<span class="mi">4</span> <span class="mf">0.904417592352745</span>
+</pre></div>
+</div>
+</section>
+</div></section>
+</section>
+<section id="shrnuti-hlavni-myslenky">
+<h2><span class="section-number">2.9. </span>Shrnutí, hlavní myšlenky<a class="headerlink" href="#shrnuti-hlavni-myslenky" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id9">
+<img alt="../_images/message.jpg" src="../_images/message.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2.9 </span><span class="caption-text">A jaká je hlavní message? Zdroj: pixabay.com</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Derivace udává trend ve změnách veličin a díky tomu umožňuje za určitých okolností nahrazovat komplikované funkční vztahy pomocí vztahů lineárních. Toto nazýváme lineární aproximace a je to jedna za zásadních metod, jak si inženýři zjednodušují úlohy, které by byly jinak neřešitelné.</p></li>
+<li><p>Derivace dokáže detekovat růst a klesání funkce a díky tomu dokážeme také detekovat body, kde se růst zastaví a změní na klesání nebo naopak. Tyto body nás přirozeně zajímají, protože v těchto bodech je studovaná veličina maximální nebo minimální a to má dopad při minimalizaci nákladů, maximalizaci pevnosti či zisku a jiných úlohách z praktického života.</p></li>
+<li><p>Pokud trend (rychlost změny, derivace) nestačí k podchycení zásadních vlastností veličiny (nastává v lokálním extrému nebo v případě, že potřebujeme lepší aproximaci, než je aproximace lineární), máme k dispozici nástroje i v tomto případě: derivace vyšších řádů a Taylorův polynom.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../derivace_I/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Derivace funkce</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../derivace_III/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Derivace a další užitečné nástroje</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-derivaci-3-jak-citlive-reakce-na-zmenu">2.1. Aplikace derivací 3: Jak citlivě? (reakce na změnu)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace">2.2. Lineární aproximace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace-v-1d">2.2.1. Lineární aproximace v 1D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace-v-nekterych-fyzikalnich-zakonech">2.2.2. Lineární aproximace v některých fyzikálních zákonech</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-aproximace-a-jednorozmerne-materialove-vztahy">2.3. Lineární aproximace a jednorozměrné materiálové vztahy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivace-a-tecna">2.4. Derivace a tečna</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aproximace-vyssiho-radu">2.5. Aproximace vyššího řádu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivace-je-mozne-chtit-vice-nez-je-linearni-aproximace">2.5.1. Motivace: Je možné chtít více než je lineární aproximace?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivace-vyssich-radu">2.5.2. Derivace vyšších řádů</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#druha-derivace-a-deformace-nosniku">2.5.3. Druhá derivace a deformace nosníků</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tayloruv-polynom-a-polynomialni-aproximace-v-1d">2.5.4. Taylorův polynom a polynomiální aproximace v 1D</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konecne-diference-a-numericka-aproximace-derivace">2.6. Konečné diference a numerická aproximace derivace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odbocka-od-vazeb-mezi-atomy-k-materialovym-vlastnostem">2.7. Odbočka: od vazeb mezi atomy k materiálovým vlastnostem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-rovnic">2.8. Řešení rovnic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prosta-funkce">2.8.1. Prostá funkce</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inverzni-funkce">2.8.2. Inverzní funkce</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newtonova-metoda">2.8.3. Newtonova metoda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">2.9. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 21.01.2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

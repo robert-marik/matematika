@@ -1,0 +1,1415 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-11-05T17:10:39+01:00" />
+    <title>10. Vektorová pole, tok, zákony zachování &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'vektorove_pole/index';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="11. Dvojný integrál" href="../dvojny_integral/index.html" />
+    <link rel="prev" title="9. Soustavy lineárních rovnic" href="../soustavy/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="05.11.2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Vektorová pole, tok, zákony zachování</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pripomenuti-derivaci">10.1. Připomenutí derivací</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obycejna-derivace-frac-mathrm-df-mathrm-dt">10.1.1. (Obyčejná) derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm df}{\mathrm dt}\)</span>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parcialni-derivace-frac-partial-f-partial-t-frac-partial-f-partial-x-dots">10.1.2. Parciální derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial f}{\partial t}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial f}{\partial x}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \dots\)</span>.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transportni-jevy">10.2. Transportní jevy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tok-a-gradient-v-konstitutivnich-zakonech">10.3. Tok a gradient v konstitutivních zákonech</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vicerozmerne-konstitutivni-zakony">10.4. Vícerozměrné konstitutivní zákony</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fickuv-zakon-difuze">10.4.1. Fickův zákon (difuze)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#darcyho-zakon-proudeni-podzemni-vody">10.4.2. Darcyho zákon (proudění podzemní vody)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fourieruv-zakon-vedeni-tepla">10.4.3. Fourierův zákon (vedení tepla)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soretuv-efekt-termodifuze">10.4.4. Soretův efekt (termodifuze)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specialni-pripady-vztahu-mezi-gradientem-a-tokem">10.5. Speciální případy vztahu mezi gradientem a tokem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obecny-pripad-anizotropni">10.5.1. Obecný případ (anizotropní)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ortotropni-pripad-vhodne-zvolene-osy">10.5.2. Ortotropní případ, vhodně zvolené osy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ortotropni-pripad-ve-2d">10.5.3. Ortotropní případ ve 2D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#izotropni-pripad">10.5.4. Izotropní případ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">10.6. Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-gradientu-a-divergence">10.7. Výpočet gradientu a divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-kontinuity">10.8. Rovnice kontinuity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-melke-vody">10.9. Rovnice mělké vody</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proudeni-tekutiny-v-mechanice-kontinua">10.10. Proudění tekutiny v mechanice kontinua</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difuzni-rovnice">10.11. Difuzní rovnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vedeni-tepla">10.12. Vedení tepla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voda-v-poreznim-materialu">10.13. Voda v porézním materiálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-podzemni-vody">10.14. Rovnice podzemní vody</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-vedeni-tepla-ve-2d-v-ruznych-podminkach">10.15. Rovnice vedení tepla ve 2D v různých podmínkách</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacionarni-stav">10.15.1. Stacionární stav</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-izotropni-material-a-linearni-materialove-vztahy">10.15.2. Homogenní izotropní materiál a lineární materiálové vztahy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ortotropni-material-nehomogenni-nebo-nelinearni">10.15.3. Ortotropní materiál, nehomogenní nebo nelineární</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-ortotropni-material-a-linearni-materialove-vztahy">10.15.4. Homogenní ortotropní materiál a lineární materiálové vztahy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umeni-identifikace-predpokladu-z-tvaru-difuzni-rovnice">10.16. Umění identifikace předpokladů z tvaru difuzní rovnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">10.17. Shrnutí, hlavní myšlenky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-vice-matematickou-formou">10.18. Shrnutí více matematickou formou</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticka-aplikace-zajimavost-z-jine-oblasti-nez-nauky-o-materialu">10.19. Praktická aplikace (zajímavost z jiné oblasti než nauky o materiálu)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="vektorova-pole-tok-zakony-zachovani">
+<h1><span class="section-number">10. </span>Vektorová pole, tok, zákony zachování<a class="headerlink" href="#vektorova-pole-tok-zakony-zachovani" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p><strong>Poznámky k samostudiu:</strong></p>
+<p>Toto jsou hlavní myšlenky, které jsou v přednášce jenom rozvíjeny a precizovány.</p>
+<ul class="simple">
+<li><p>Příroda „nemá ráda“  nerovnoměrné rozložení celé řady veličin, jako je koncentrace vody ve dřevě nebo v půdě nebo různá teplota dotýkajících se objaktů (jiná hustota vnitřní energie). Proto se snaží případnou nerovnost vyrovnávat transportními ději, jako je difuze nebo vedení tepla. V této přednášce je jednotný přístup ke všem transportním dějům.</p></li>
+<li><p>Rovnice kontinuity je matematickým vyjádřením základní „selské úvahy“, že navýšení transportované veličiny v daném místě je způsobeno produkcí veličiny v tomto místě a tím, co do tohoto místa přinese tok, tj. zeslabením toku.</p></li>
+<li><p>Difuzní rovnice je rovnice kontinuity doplněná o konstituční zákon. Ten je matematickým vyjádřením pozorování, že větší nerovnosti se vyhlazují intenzivnějším tokem. Moderní formulace konstitučních zákonů vychází z tenzorového (maticového) tvaru, aby bylo možno modelovat i chování anizotropních látek.</p></li>
+<li><p>Modely často vyjadřujeme v kartézských souřadnicích. Pro určení, pro jaký materiál a děj je napsána transportní rovnice typu
+<div class="math notranslate nohighlight">
+\[{\color{blue}\frac{\partial u}{\partial t}} = {\color{green}\sigma} +
+\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+
+\frac{\partial }{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)\]</div>
+
+je potřeba se dívat, zda je v rovnici derivace podle času (posoudíme stacionárnost a nestacionárnost, tady vyznačeno modře), zda je tam člen bez derivací (posoudíme existenci zdrojů a spotřebičů, tady odpovídající člen je a je vyznačen zeleně), zda jsou difuzní konstanty pro jednotlivé směry odlišeny či nikoliv a zda prostorové souřadnice jsou ve výrazech s kvaziderivacemi, nebo se druhými derivacemi. To je snadné, jenom je potřeba vědět, na co se dívat.</p></li>
+</ul>
+</div></blockquote>
+<div class="Ylink">  <a href="https://youtu.be/DonzhFhcyQ4">Minivideo</a> </div>
+<section id="pripomenuti-derivaci">
+<h2><span class="section-number">10.1. </span>Připomenutí derivací<a class="headerlink" href="#pripomenuti-derivaci" title="Link to this heading">#</a></h2>
+<p>Derivace umožňují studovat a popisovat změny veličin, vyjadřovat kvantitativně jejich vzájemné souvislosti.</p>
+<section id="obycejna-derivace-frac-mathrm-df-mathrm-dt">
+<h3><span class="section-number">10.1.1. </span>(Obyčejná) derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm df}{\mathrm dt}\)</span>.<a class="headerlink" href="#obycejna-derivace-frac-mathrm-df-mathrm-dt" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>S touto derivací se pracuje u funkce jedné proměnné <span class="math notranslate nohighlight">\(\displaystyle f(t)\)</span>. Např. <span class="math notranslate nohighlight">\(\displaystyle f(t)=kt^2\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle k\)</span> je parametr (reálné číslo).</p></li>
+<li><p>Derivace je okamžitá rychlost změny veličiny <span class="math notranslate nohighlight">\(\displaystyle f\)</span> vzhledem k <span class="math notranslate nohighlight">\(\displaystyle t\)</span>, tj. nárůst veličiny <span class="math notranslate nohighlight">\(\displaystyle f\)</span> vyvolaný jednotkovým nárůstem veličiny <span class="math notranslate nohighlight">\(\displaystyle t\)</span>. (Prakticky však veličinu <span class="math notranslate nohighlight">\(\displaystyle t\)</span> změníme o malou hodnotu a nárůst přepočítáme na jednotkovou změnu.)</p></li>
+<li><p>Jednotka derivace je stejná, jako bychom veličiny <span class="math notranslate nohighlight">\(\displaystyle f\)</span> a <span class="math notranslate nohighlight">\(\displaystyle t\)</span> dělili.</p></li>
+<li><p>V modelech a při praktickém využití pracujeme s definicí derivace jako s rychlostí změny. Při výpočtu ale využíváme dostupné vzorce pro výpočet derivace. Například pro funkci z prvního bodu platí <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm df}{\mathrm dt}=2kt.\)</span></p></li>
+</ul>
+</section>
+<section id="parcialni-derivace-frac-partial-f-partial-t-frac-partial-f-partial-x-dots">
+<h3><span class="section-number">10.1.2. </span>Parciální derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial f}{\partial t}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial f}{\partial x}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \dots\)</span>.<a class="headerlink" href="#parcialni-derivace-frac-partial-f-partial-t-frac-partial-f-partial-x-dots" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>S touto derivací se pracuje u funkce více proměnných, typicky <span class="math notranslate nohighlight">\(\displaystyle f(x,y,z,t)\)</span>. Např. <span class="math notranslate nohighlight">\(\displaystyle f(x,y,z,t)=xt^2\)</span></p></li>
+<li><p>Jedná se o obyčejnou derivaci podle jedné proměnné, přičemž ostatní proměnné považujeme za parametry. Tj. v případě funkce z minulého bodu je <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial f}{\partial t}=2xt\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial f}{\partial x}=t^2\)</span>,  <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial f}{\partial y}=\frac{\partial f}{\partial z}=0\)</span>.</p></li>
+<li><p>Pro jednotku a výpočet platí totéž co u obyčejné derivace.</p></li>
+<li><p>Při aplikacích často pracujeme s gradientem, tj. s vektorem sestaveným z parciálních derivací podle jednotlivých prostorových proměnných. Pro funkci tří proměnných <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y\)</span> a <span class="math notranslate nohighlight">\(\displaystyle z\)</span> a pro
+potřeby matematické formulace fyzikálních zákonů gradient uvažujeme jako sloupcový
+vektor
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla f =\begin{pmatrix}\frac{\partial f}{\partial x}\\\mathstrut \frac{\partial f \mathstrut}{\partial y \mathstrut}\\\frac{\partial f}{\partial z}\end{pmatrix}.\end{split}\]</div>
+
+Pro úsporu místa jej někdy píšeme v transponovaném tvaru
+<div class="math notranslate nohighlight">
+\[\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)^T.\]</div>
+ Gradient je vektor, který má směr odpovídající směru nejrychlejšího růstu skalární veličiny a velikost odpovídá změně veličiny na jednotku délky.</p></li>
+</ul>
+</section>
+</section>
+<section id="transportni-jevy">
+<h2><span class="section-number">10.2. </span>Transportní jevy<a class="headerlink" href="#transportni-jevy" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/ULoUeHincbM">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/3d_pole.png" src="../_images/3d_pole.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.1 </span><span class="caption-text">Pro popis proudění je vhodné vektorové pole. Zde je ve 3D a vykreslené v náhodných bodech v prostoru.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Pochopení a modelování transportních dějů je
+důležité pro většinu technických oborů. Podstata těchto dějů je často
+odlišná, přesto mají navenek podobné chování a tím je umožněn
+jednotný přístup při matematickém modelování.</p>
+<p>Příklady veličin podléhajících transportním dějům</p>
+<ul class="simple">
+<li><p>povrchová voda</p></li>
+<li><p>podzemní voda</p></li>
+<li><p>teplo</p></li>
+<li><p>voda ve dřevě</p></li>
+</ul>
+<p>Obecná bilance veličiny, která má zdroje a spotřebiče a je přenášena tokem vypadá následovně.</p>
+<ul class="simple">
+<li><p>Existuje veličina, spojitě rozložená v prostoru, charakterizující stav systému. Tuto veličinu budeme nazývat
+<em>stavovou veličinou</em> a její hustotu označíme <span class="math notranslate nohighlight">\(\displaystyle u\)</span>.</p></li>
+<li><p>Stavová veličina se může v prostoru přemisťovat <em>tokem</em> <span class="math notranslate nohighlight">\(\displaystyle \vec
+  \jmath\)</span>.</p></li>
+<li><p>Stavová veličina může vznikat a zanikat.
+<em>Zdroje</em> i <em>spotřebiče</em> budeme
+uvažovat společně a jejich vydatnost rozlišíme
+znaménkem: spotřebiče budou zdroje se zápornou vydatností. Celkovou vydatnost zdrojů a spotřebičů v daném místě, tj.
+množství veličiny vygenerované na jednotku objemu (nebo plochy,
+nebo délky, podle počtu dimenzí v úloze) za jednotku času,
+označíme <span class="math notranslate nohighlight">\(\displaystyle \sigma\)</span>.</p></li>
+</ul>
+<p>Zákon zachování (se zohledněním toku a zdrojů) je vlastně celková
+bilance stavové veličiny. Přirozeným jazykem je možno tuto bilanci
+formulovat následovně.</p>
+<blockquote>
+<div><p>Přírůstek množství veličiny je součtem přírůstku ze zdrojů a přírůstku způsobeného tokem.</p>
+</div></blockquote>
+<p>Toto je jednoduchý, ale přitom neuvěřitelně silný nástroj, který
+umožní popsat řadu zcela odlišných dějů. Pro použití v matematickém
+modelu ale musíme jednotlivé pojmy kvantifikovat. Měřit rychlost, s
+jakou se mění množství veličiny v daném místě umíme pomocí derivace
+podle času. Měřit změny v toku přenášejícím sledovanou veličinu jsme
+se naučili jako jednu z aplikací parciálních derivací: jedná se o
+záporně vzatou derivaci podle prostorové proměnné vynásobenou
+fyzikální materiálovou konstantou. Ještě se musíme naučit měřit intenzitu toku a její změny ve dvou nebo třech dimenzích.</p>
+</section>
+<section id="tok-a-gradient-v-konstitutivnich-zakonech">
+<h2><span class="section-number">10.3. </span>Tok a gradient v konstitutivních zákonech<a class="headerlink" href="#tok-a-gradient-v-konstitutivnich-zakonech" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/xUhAudBfGLo">Minivideo</a> </div>
+<div class="proof remark admonition" id="remark-0">
+<p class="admonition-title"><span>Poznámka </span> (Konstitutivní zákony)</p>
+<section class="remark-content" id="proof-content">
+<p>V aplikacích často formulujeme
+zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látku nebo materiál a udávají odezvu tohoto materiálu na externí stimul. Tyto zákony se nazývají <em>konstitutivní zákony</em> a formulujeme je pomocí gradientu a toku vektorového pole. Viz též <a class="reference external" href="https://en.wikipedia.org/wiki/Constitutive_equation">Wikipedie</a>.</p>
+</section>
+</div>
+<div class='obtekat'>
+<figure class="align-default" id="id2">
+<img alt="../_images/vitr.jpg" src="../_images/vitr.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.2 </span><span class="caption-text">Tok si snadno představíme mechanickým modelem. Například větru nebo vody. Zdroj: pixabay.com</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Například vítr (tok
+molekul vzduchu) je vyvolán nerovnoměrným rozložením vzduchu (jeho
+hustoty a tím i tlaku) v prostoru a směřuje z míst s vyšším tlakem do
+míst s tlakem nižším.  Větší rozdíl tlaků způsobí „větší vítr“ a tím
+větší tok vzduchu. Toto platí i pro jiné proudění, jak ukážeme dále.</p>
+<p>Nerovnoměrnost v prostorovém rozložení charakterizuje gradient.
+V ustáleném stavu je pro široké rozmezí fyzikálních problémů závislost
+intenzity toku na gradientu lineární.  A protože nulovému gradientu (nulovému stimulu) odpovídá nulový tok (nulová odezva),
+bude tato lineární funkce přímou úměrností.</p>
+<p>V dalším shrneme důležité praktické příklady, kdy je tok úměrný
+gradientu.  Konstanta úměrnosti je obecně pouze konstantou pro daný
+problém a dané hodnoty parametrů. Může se měnit s velikostí
+studovaného objektu (například obsah průřezu geologické vrstvy, kterou
+proudí voda), s fyzikálními vlastnostmi proudící látky
+(např. viskozita nebo hustota tekutiny, stlačitelnost vzduchu), s fyzikálními vlastnostmi prostředí (např. velikost pórů v pórovitém
+prostředí nebo vlhkost dřeva). Proto je možné tyto zákony najít v různých tvarech, s různými členy a případnými přídavnými konstantami,
+které například odseparují vliv vlastností proudící látky a vliv vlastností prostředí. Vždy
+záleží na konkrétní situaci, zvyklostech v příslušném podoboru, nebo
+na přístupu autora. Není proto naší ambicí vést výklad dopodrobna,
+všímejme si jenom základních myšlenek.</p>
+</section>
+<section id="vicerozmerne-konstitutivni-zakony">
+<h2><span class="section-number">10.4. </span>Vícerozměrné konstitutivní zákony<a class="headerlink" href="#vicerozmerne-konstitutivni-zakony" title="Link to this heading">#</a></h2>
+<p>Zákony uvedené níže byly často odvozeny v jednorozměrném případě a letmo zmíněny v přednášce Derivace II. V moderní formulaci používáme obecný vektorový zápis, který zohledňuje i směr. Konstanta úměrnosti potom zprostředkovává vztah mezi dvěma
+vektory. Jedná se tedy z matematického pohledu o matici, která umožní
+nejenom změnit délku vektoru a jeho jednotku, ale i směr. Tato matice
+se navíc při změně báze transformuje speciálním způsobem, tak jako
+vektory. Takové objekty nazýváme <strong>tenzory</strong>. Níže budeme pojmem
+tenzor rozumět matici <span class="math notranslate nohighlight">\(\displaystyle 3\times 3\)</span> nebo <span class="math notranslate nohighlight">\(\displaystyle 2\times 2\)</span>, podle
+kontextu. (Obecněji je možno považovat skalární veličiny a vektory za
+tenzory nižších řádů, toto my však dělat nebudeme.)</p>
+<p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJxlT89ugyAcvpv4DqSpEVvs1K2Xpexkeu5h2cV1hlmorCgN0E76TnuKvdhQu6zJOPwI34_vH4MdshHOZt1bNr-fWTc738txQ4ziHSyKJUq2qEhQut1GvmfkAcf5jC32iuw4bQ0sHL_fNPRCO-zU4sUSZYvlFbIYWhSnKHPvWjhOa_FD4nu6lp-wNo2Ak1WdPb0obei55RUFBDiT1Z0DwfrUHir6CKaAjTFBoMF0EgBBDO3gCLpzK6fCnLPTpf3-Aq4DH-g5DvQ0DEZW_o_wLA_uU5y_tuRdkF-vG4oL9GflextcydbIkyqPQhrI0NB9mBaB607ja12HNOSIww9qQgQYFwKvidA06oU2816iPNPKSFUyTsWud0NglBwuO5gOgTe9wF7zC8VpggDRR0cslespcRr9AMQpj4Y=&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">Vizualizace toku a vrstevnic pro anizotropní materiál, kdy tok není vždy kolmý na směr maximálního spádu stavové veličiny.</a></p>
+<section id="fickuv-zakon-difuze">
+<h3><span class="section-number">10.4.1. </span>Fickův zákon (difuze)<a class="headerlink" href="#fickuv-zakon-difuze" title="Link to this heading">#</a></h3>
+<p>V roce 1855 německý lékař A. Fick objevil, že difuzní tok <span class="math notranslate nohighlight">\(\displaystyle \vec J\)</span>
+(množství látky které projde při difuzi jednotkovou plochou za
+jednotku času) je úměrný gradientu koncentrace <span class="math notranslate nohighlight">\(\displaystyle c\)</span> této
+látky. Matematicky vyjádřeno pomocí moderní terminologie to znamená, že platí
+<div class="math notranslate nohighlight">
+\[\vec J=-D\nabla c. \]</div>
+
+Veličina <span class="math notranslate nohighlight">\(\displaystyle D\)</span> se nazývá difuzní koeficient. Pokud má <span class="math notranslate nohighlight">\(\displaystyle \vec J\)</span> stejný
+směr jako <span class="math notranslate nohighlight">\(\displaystyle \nabla c\)</span>, je <span class="math notranslate nohighlight">\(\displaystyle D\)</span> skalární veličina. Pokud směry nejsou
+stejné, je <span class="math notranslate nohighlight">\(\displaystyle D\)</span> tenzor. Z fyzikálních důvodů je tenzor <span class="math notranslate nohighlight">\(\displaystyle D\)</span> symetrický.</p>
+<p>Difuzí se například dřevo zbavuje vlhkosti při vysoušení.</p>
+</section>
+<section id="darcyho-zakon-proudeni-podzemni-vody">
+<h3><span class="section-number">10.4.2. </span>Darcyho zákon (proudění podzemní vody)<a class="headerlink" href="#darcyho-zakon-proudeni-podzemni-vody" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id3">
+<img alt="../_images/karany.jpg" src="../_images/karany.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.3 </span><span class="caption-text">Vodárna <a class="reference external" href="http://www.vodarnakarany.cz/">Káraný</a> infiltruje vodu do podzemí. Znalost, co se tam s vodou děje a kudy a jak teče je nezbytná. Základním zákonem pro popis tohoto děje je Darcyho zákon. Zdroj: nase-voda.cz, Nina Havlová</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>V letech 1855 a 1856 francouzský inženýr H. Darcy pokusy prokázal
+přímou úměru mezi rozdílem tlaků na koncích
+trubice naplněné porézní zeminou (jednalo se vlastně o rozdíl výšek
+pro šikmou trubici) a rychlostí proudění vody touto trubicí. Tok
+(množství vody, která proteče jednotkovou plochou za jednotku času) je
+dán vztahem <div class="math notranslate nohighlight">
+\[\vec q=-K\nabla p,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle p\)</span> je tlak a <span class="math notranslate nohighlight">\(\displaystyle K\)</span> je koeficient
+vodivosti (někdy též koeficient filtrace), v obecném případě
+symetrický tenzor, v izotropním případě, kdy <span class="math notranslate nohighlight">\(\displaystyle \vec q\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \nabla p\)</span>
+mají stejný směr, veličina skalární.</p>
+<p>Někdy se tento zákon neformuluje pomocí gradientu tlaku, ale pomocí
+gradientu jiné veličiny, kterou zavádíme v hydrologii pro názorné
+studium efektů, souvisejících s prouděním vody. Nejčastěji se jedná o
+<em>vodní potenciál</em> a  hydraulickou výšku či
+<a class="reference external" href="https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody">piezometrickou hladinu</a>. Piezometrická hladina je veličina používaná k tomu, abychom do jednoho
+jednoduše modelovatelného faktoru (má rozměr stejný jako délka)
+započítali všechny veličiny mající vliv na proudění podzemní vody, od
+rozdílu nadmořských výšek, přes kapilární a osmotické jevy až po
+vnější síly vyvolané tlakem geologických vrstev a jiné. Jedná se
+vlastně o celkovou energii vody s tím, že některé části považujeme za
+zanedbatelné. Například často neuvažujeme
+kinetickou energii nebo osmózu a kapilární jevy.</p>
+</section>
+<section id="fourieruv-zakon-vedeni-tepla">
+<h3><span class="section-number">10.4.3. </span>Fourierův zákon (vedení tepla)<a class="headerlink" href="#fourieruv-zakon-vedeni-tepla" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id4">
+<img alt="../_images/rozhrani.png" src="../_images/rozhrani.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.4 </span><span class="caption-text">Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Fourierův zákon se týká vedení tepla a vyjadřuje,
+že vektor hustoty tepelného toku <span class="math notranslate nohighlight">\(\displaystyle \vec q\)</span> vyvolaného gradientem teploty <span class="math notranslate nohighlight">\(\displaystyle \nabla T\)</span>
+je dán vztahem
+<div class="math notranslate nohighlight">
+\[\vec q=-k\nabla T.\]</div>
+
+Je-li materiál anizotropní, což je nejobecnější
+případ, je veličina <span class="math notranslate nohighlight">\(\displaystyle k\)</span> symetrickým
+tenzorem. Je-li materiál izotropní, je
+<span class="math notranslate nohighlight">\(\displaystyle k\)</span> skalární veličinou, případně skalární veličina násobená
+jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter.</p>
+</section>
+<section id="soretuv-efekt-termodifuze">
+<h3><span class="section-number">10.4.4. </span>Soretův efekt (termodifuze)<a class="headerlink" href="#soretuv-efekt-termodifuze" title="Link to this heading">#</a></h3>
+<p>Tok tepla je vyvolaný nerovnoměrným rozložením teploty. Difuze chemické
+látky je vyvolána nerovnoměrným rozložením koncentrace této
+látky. Většinou je hybatelem procesu nerovnoměrnost v rozložení látky,
+která se tímto procesem transportuje. Nemusí to však být
+vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný
+nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s nerovnoměrným rozložením teploty je tok dán vztahem <div class="math notranslate nohighlight">
+\[\vec J=-D\nabla c - sD\nabla T, \]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle s\)</span> je koeficient termodifuze.</p>
+<p>Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. Te je v kontrastu s ostatními konstitutivními zákony, kde tok proudí vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis. Viz Wikipedia a heslo Thermophoresis.</p>
+</section>
+</section>
+<section id="specialni-pripady-vztahu-mezi-gradientem-a-tokem">
+<h2><span class="section-number">10.5. </span>Speciální případy vztahu mezi gradientem a tokem<a class="headerlink" href="#specialni-pripady-vztahu-mezi-gradientem-a-tokem" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id5">
+<img alt="../_images/rezistory.png" src="../_images/rezistory.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.5 </span><span class="caption-text">Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Uvažujme vztah mezi gradientem a tokem ve tvaru <div class="math notranslate nohighlight">
+\[\vec j=-K\nabla u ,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle K\)</span> je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření <div class="math notranslate nohighlight">
+\[\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y},\frac{\partial u }{\partial z}\right)^T\]</div>
+ a ve 2D <div class="math notranslate nohighlight">
+\[\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y}\right)^T,\]</div>
+ kde horní index <span class="math notranslate nohighlight">\(\displaystyle T\)</span> značí transponovanou matici, tj. jedná se o sloupcový vektor.</p>
+<section id="obecny-pripad-anizotropni">
+<h3><span class="section-number">10.5.1. </span>Obecný případ (anizotropní)<a class="headerlink" href="#obecny-pripad-anizotropni" title="Link to this heading">#</a></h3>
+<p>Veličina <span class="math notranslate nohighlight">\(\displaystyle K\)</span> je matice <div class="math notranslate nohighlight">
+\[\begin{split}K=\begin{pmatrix}  k_{11}&amp; k_{12} &amp; k_{13}\\  k_{21}&amp; k_{22} &amp; k_{23}\\  k_{31}&amp; k_{32} &amp; k_{33}\end{pmatrix}\end{split}\]</div>
+ jejíž komponenty splňují <span class="math notranslate nohighlight">\(\displaystyle k_{ij}=k_{ji}\)</span>. Často jsou všechny veličiny kladné a prvky v hlavní diagonále jsou dominantní.</p>
+<p>Komponenty vektoru <span class="math notranslate nohighlight">\(\displaystyle \vec j=(j_x, j_y, j_z)^T\)</span> jsou <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}  j_x&amp;=-k_{11}\frac{\partial u }{\partial x}-k_{12}\frac{\partial u }{\partial y}-k_{13}\frac{\partial u }{\partial z},\\  j_y&amp;=-k_{21}\frac{\partial u }{\partial x}-k_{22}\frac{\partial u }{\partial y}-k_{23}\frac{\partial u }{\partial z},\\  j_z&amp;=-k_{31}\frac{\partial u }{\partial x}-k_{32}\frac{\partial u }{\partial y}-k_{33}\frac{\partial u }{\partial z},\end{aligned}\end{split}\]</div>
+ což zjistíme prostým maticovým násobením. Prostor pro další úpravu není.</p>
+</section>
+<section id="ortotropni-pripad-vhodne-zvolene-osy">
+<h3><span class="section-number">10.5.2. </span>Ortotropní případ, vhodně zvolené osy<a class="headerlink" href="#ortotropni-pripad-vhodne-zvolene-osy" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id6">
+<img alt="../_images/lepenka.jpg" src="../_images/lepenka.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.6 </span><span class="caption-text">Ortotropní materiál je typicky materiál z jednotlivých vrstev. Typicky dřevo, půda z různých vrstev, lepenka. Zdroj: pixabay.com</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>V obecném případě je zpravidla možné transformovat soustavu souřadnic tak, aby tenzor <span class="math notranslate nohighlight">\(\displaystyle K\)</span> byl diagonální. Pro praktické výpočty se toto však často nevyplatí. Pokud však je studovaný problém ortotropní, má charakteristické směry (přesněji, má tři roviny symetrie materiálových vlastností), je možné zvolit souřadnice v souladu s těmito směry a matice <span class="math notranslate nohighlight">\(\displaystyle K\)</span> je diagonální.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}K= \begin{pmatrix}
+  k_{11}&amp; 0 &amp; 0\\
+ 0&amp; k_{22} &amp; 0\\
+  0&amp; 0 &amp; k_{33}
+\end{pmatrix}
+\end{split}\]</div>
+<p>Komponenty vektoru <span class="math notranslate nohighlight">\(\displaystyle \vec j\)</span> jsou
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  j_x&amp;=-k_{11}\frac{\partial u }{\partial x},\\
+  j_y&amp;=-k_{22}\frac{\partial u }{\partial y},\\
+  j_z&amp;=-k_{33}\frac{\partial u }{\partial z}.
+\end{aligned}
+\end{split}\]</div>
+</p>
+<p>S diagonální maticí se pracuje velmi dobře, protože má v hlavní
+diagonále vlastní čísla. Tato vlastní čísla jsou fyzikální
+charakteristikou úlohy. Například největší vlastní číslo a odpovídající
+vlastní směr charakterizují směr, ve kterém je odezva materiálu na
+vnější podnět maximální a vlastní číslo udává velikost této
+reakce. Tyto fyzikální charakteristiky nemohou být závislé na volbě
+souřadné soustavy, ve které úlohu popisujeme. Co se mění s volbou
+souřadné soustavy jsou pouze souřadnice vlastního vektoru. Vlastní
+čísla jsou však skalární a proto jsou invariantní při otočení soustavy
+souřadnic. Pokud bychom neměli možnost zvolit
+soustavu souřadnic tak, aby matice byla diagonální, máme alespoň
+jistotu, že vlastní čísla zůstanou stejná.</p>
+</section>
+<section id="ortotropni-pripad-ve-2d">
+<h3><span class="section-number">10.5.3. </span>Ortotropní případ ve 2D<a class="headerlink" href="#ortotropni-pripad-ve-2d" title="Link to this heading">#</a></h3>
+<p>Stejné jako ve 3D, pouze chybí třetí rovnice.</p>
+</section>
+<section id="izotropni-pripad">
+<h3><span class="section-number">10.5.4. </span>Izotropní případ<a class="headerlink" href="#izotropni-pripad" title="Link to this heading">#</a></h3>
+<p>Stejné jako ortotropní případ, ale navíc platí <span class="math notranslate nohighlight">\(\displaystyle k_{11}=k_{22}=k_{33}=k.\)</span> Potom
+<span class="math notranslate nohighlight">\(\displaystyle \vec j=-k\nabla u\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle k\)</span> je konstanta a vektory toku a gradientu mají opačný směr.</p>
+</section>
+</section>
+<section id="divergence">
+<h2><span class="section-number">10.6. </span>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/wrYpaPerg3M">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id7">
+<img alt="../_images/divergence.png" src="../_images/divergence.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.7 </span><span class="caption-text">Divergence a tok pole <span class="math notranslate nohighlight">\(\displaystyle \vec q=(0,Q, R)\)</span> tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v daném místě mění.</p>
+<ul class="simple">
+<li><p>Pro jednoduchost rozdělíme tok na tři nezávislé části ve směru jednotlivých os a vztáhneme vše k jednotkám času a průřezu, tj. budeme uvažovat hustotu toku nějaké fyzikální veličiny.</p></li>
+<li><p>Je-li tato hustota toku popsána vektorovým polem  <span class="math notranslate nohighlight">\(\displaystyle \vec q=(P,Q,R)\)</span> v jednotkách kilogram na metr čtvereční za sekundu, znamená to, že kolmým průřezem jednotkového obsahu projde za jednotku času <span class="math notranslate nohighlight">\(\displaystyle P\)</span> kilogramů sledované látky, jejíž tok popisujeme. Často se pracuje i s objemovým tokem, kdy množství neměříme v kilogramech ale v metrech krychlových a například při ustáleném proudění v trubici (hydrodynamika) je tok roven vektoru rychlosti a při proudění porézním materiálem (proudění podzemní vody) je roven filtrační rychlosti.</p></li>
+<li><p>Derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial P}{\partial x}\)</span> udává, o kolik studovaný tok v daném místě vzroste ve směru osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a tento nárůst je vztažený na jednotku délky.</p></li>
+<li><p>Ve směru osy <span class="math notranslate nohighlight">\(\displaystyle y\)</span> máme tok vyjádřený veličinou <span class="math notranslate nohighlight">\(\displaystyle Q\)</span> a proto nás podobně zajímá <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial Q}{\partial y}\)</span>.</p></li>
+<li><p>Analogicky <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial R}{\partial z}\)</span>.</p></li>
+<li><p>Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Jestli se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli v daném místě může ubývat z tohoto rozboru nezjistíme. Záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, …).</p></li>
+<li><p>Při preciznější argumentaci dávající do souvislosti parciální derivace jednotlivých komponent toku s tím, co se reálně s vektorovým polem děje, je nutné si pomoci stejně jako u derivací, tj. uvažovat ne dané místo, ale jistý konečně velký objem (viz obrázek), vztáhnout dané veličiny na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.</p></li>
+</ul>
+<!--
+Budeme sledovat tok vektorového pole ze zvoleného 
+místa. Vyjádříme bilanci, o kolik je větší tok vektorového pole z daného místa ven ve srovnání s tokem tohoto pole dovnitř (viz krychlička na obrázku). Protože
+záleží na objemu, ve kterém tok sledujeme, je  vztáhneme tento tok na
+jednotku objemu.
+
+Fyzikálně tok ven uvažujeme jako kladný a tok dovnitř jako záporný. Velikost toku rovinnou plochou určíme jako součin vektorového pole v tomto místě a  obsahu plochy.
+Celkový tok $\vec q=(0,q_y,q_z)$ do krychle na obrázku je součtem toků levou boční stěnou a dolní stěnou, tj. 
+$$Q_{in}=-q _y\Delta x \Delta z - q _z\Delta x \Delta y.$$
+Podobně tok ven z krychle je  $$Q_{out}=\left(q_z+\frac {\partial q_z}{\partial z}\Delta z\right)\Delta x\Delta y + \left(q_y+\frac {\partial q_y}{\partial y}\Delta y\right)\Delta x\Delta z$$
+a celková bilance je 
+$$Q_{in}+Q_{out}= \left(\frac {\partial q_y}{\partial y}+\frac {\partial q_z}{\partial z}\right)\Delta x\Delta y\Delta z.
+$$
+V případě proudění i v ose $x$ bude přítomen ještě další analogický člen charakterizující tuto dodatečnou položku. 
+
+-->
+<p>Výše uvedenými úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci.)</p>
+<div class="proof definition admonition" id="definition-1">
+<p class="admonition-title"><span>Definice </span> (Divergence)</p>
+<section class="definition-content" id="proof-content">
+<p><em>Divergence</em> vektorového pole <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> označujeme <span class="math notranslate nohighlight">\(\displaystyle \nabla\cdot\vec F\)</span> nebo <span class="math notranslate nohighlight">\(\displaystyle \mathop{\mathrm{div}} \vec F\)</span>.</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-2">
+<p class="admonition-title"><span>Věta </span> (Výpočet divergence)</p>
+<section class="theorem-content" id="proof-content">
+<p>Pro vektorovou funkci <div class="math notranslate nohighlight">
+\[\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle P\)</span>, <span class="math notranslate nohighlight">\(\displaystyle Q\)</span> a <span class="math notranslate nohighlight">\(\displaystyle R\)</span> jsou funkce tří proměnných <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y\)</span> a <span class="math notranslate nohighlight">\(\displaystyle z\)</span> vypočteme divergenci vztahem 	  <div class="math notranslate nohighlight">
+\[\nabla\cdot\vec F=\mathop{\mathrm{div}}\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.\]</div>
+
+Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen.</p>
+</section>
+</div><div class="proof remark admonition" id="remark-3">
+<p class="admonition-title"><span>Poznámka </span> (Fyzikální interpretace divergence)</p>
+<section class="remark-content" id="proof-content">
+<p>Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.</p>
+</section>
+</div><p>Divergence je lokální veličina. Udává informaci o daném bodě. Pro měření však je nutné mít konečný objem a pro stanovení toku konečně velkou hranici. Vzájemný vztah mezi lokální veličinou a konečným objemem je založený na předpokladu, že podmínky se nemění skokem a okolí každého bodu jsou nepříliš odlišné od podmínek v okolních bodech.</p>
+<div class="proof remark admonition" id="remark-4">
+<p class="admonition-title"><span>Poznámka </span> (Fyzikální interpretace divergence v měřitelných pojmech)</p>
+<section class="remark-content" id="proof-content">
+<p>Protože tok přes hranici umíme měřit u těles, představíme si okolo bodu který nás zajímá, těleso. Například kouli nebo krychli. Poté určíme tok přes hranici. Tok hranicí ven počítáme kladně a dovnitř záporně. Celkový tok hranicí určíme jako součet přes všechny části hranice. Podíl celkového toku přes hranici tělesa a objemu tohoto tělesa je odhad pro divergenci v daném bodě.</p>
+</section>
+</div><p>Přesnou divergenci získáme postupem uvedeným v předchozí poznámce, pokud limitním přechodem stáhneme rozměry tělesa k nule.</p>
+<p>Pokud se daném místě množství veličiny nemění s časem, tj. žádná veličina se tam neakumuluje ani neubývá, mluvíme o stacionárním proudění a stacionárním poli. Situace se zjednoduší, protože potom divergence souvisí jenom s přítomností zdrojů a spotřebičů.</p>
+<div class="proof remark admonition" id="remark-5">
+<p class="admonition-title"><span>Poznámka </span> (Praktická interpretace divergence stacionárního pole)</p>
+<section class="remark-content" id="proof-content">
+<p>Pokud při ustáleném proudění je v některém místě divergence kladná, znamená to, že v tomto místě musí být zdroj této veličiny. Pokud je záporná, je v daném místě spotřebič. Pro pohodlí při popisu toku bereme spotřebiče jako záporné zdroje. Vektorové pole, jehož divergence je rovna nule, se nazývá <strong>nezřídlové pole</strong>. To proto, že pokud toto pole popisuje ustálený tok, tak se jedná o tok v prostředí bez zdrojů a spotřebičů.</p>
+</section>
+</div><p>Ze střední školy z fyziky umíme modelovat vektorové pole
+pomocí siločar. Siločáry nezřídlového pole nikde nezačínají ani
+nekončí a jsou to uzavřené křivky.
+Například stacionární magnetické pole je
+nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříznutím tyčového magnetu vzniknou dva menší plnohodnotné magnety. Nevznikne samostatný jižní pól a samostatný severní pól magnetu. To je rozdíl oproti poli elektrickému, kdy rozdělením tyče s opačně nabitými konci vznikne jedna kladně nabitá a jedna záporně nabitá tyč poloviční délky.</p>
+</section>
+<section id="vypocet-gradientu-a-divergence">
+<h2><span class="section-number">10.7. </span>Výpočet gradientu a divergence<a class="headerlink" href="#vypocet-gradientu-a-divergence" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/UzT_PDj5ukY">Minivideo</a> </div>
+<p>Viz přednáška.</p>
+</section>
+<section id="rovnice-kontinuity">
+<h2><span class="section-number">10.8. </span>Rovnice kontinuity<a class="headerlink" href="#rovnice-kontinuity" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/_iHeE-9DJrA">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id8">
+<img alt="../_images/ucto.jpg" src="../_images/ucto.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.8 </span><span class="caption-text">Rovnice kontinuity je vlastně bilance zisků a ztrát pro danou stavovou veličinu v libovolném bodě. Zdroj: pixabay.com</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Přírůstek stavové veličiny za jednotku času v jednotkovém objemu
+(nebo ploše, nebo délce, podle dimenzionality úlohy) je derivace
+hustoty <span class="math notranslate nohighlight">\(\displaystyle u\)</span> podle času.
+<div class="math notranslate nohighlight">
+\[\text{Přírůstek}=\frac{\partial u}{\partial t}\]</div>
+</p></li>
+<li><p>Přírůstek veličiny v jednotkovém objemu (nebo ploše, nebo délce) za
+jednotku času způsobený tokem <span class="math notranslate nohighlight">\(\displaystyle \vec \jmath\)</span> je záporně vzatá divergence
+vektorového pole <span class="math notranslate nohighlight">\(\displaystyle \vec \jmath\)</span>. Tento přírůstek je způsobený snížením
+toku, proto má předřazeno záporné znaménko.
+<div class="math notranslate nohighlight">
+\[    \text{
+     Přírůstek způsobený tokem
+}=-\nabla\cdot \vec \jmath\]</div>
+</p></li>
+</ul>
+<p>Matematickou formulací celkové bilance  je <strong>rovnice kontinuity</strong>.
+<div class="math notranslate nohighlight">
+\[
+      {\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   \]</div>
+</p>
+<blockquote>
+<div><p>Poznámka (fyzikální interpretace členů rovnice kontinuity).</p>
+<ul class="simple">
+<li><p>Člen <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial u}{\partial t}\)</span> udává, jak rychle se roste hustota stavové veličiny <span class="math notranslate nohighlight">\(\displaystyle u\)</span> v daném místě a čase.</p></li>
+<li><p>Člen <span class="math notranslate nohighlight">\(\displaystyle \sigma\)</span> udává vydatnost zdrojů stavové veličiny, přičemž spotřebiče jsou uvažovány jako zdroje záporné vydatnosti. Tento člen tedy udává, kolik stavové veličiny v tomto místě vzniká v jednotkovém objemu za jednotku času.</p></li>
+<li><p>Člen <span class="math notranslate nohighlight">\(\displaystyle \nabla\cdot \vec j\)</span> udává v daném bodě změnu ve velikosti proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do tohoto místa vteče. Jinak řečeno, udává, o kolik zesílí v daném místě tok <span class="math notranslate nohighlight">\(\displaystyle \vec \jmath\)</span>. My potřebujeme mít zachyceno zeslabení (množství které chybí v toku se „použije“ na akumulaci veličiny v daném místě) a proto uvažujeme záporně vzatou divergenci, tj. <span class="math notranslate nohighlight">\(\displaystyle -\nabla\cdot \vec j\)</span>.</p></li>
+<li><p>Pokud zdroje stavové veličiny neexistují, jedná se o <em>bezzdrojovou rovnici</em> a klademe <span class="math notranslate nohighlight">\(\displaystyle \sigma=0\)</span>.</p></li>
+<li><p>Pokud studujeme systém v ustáleném stavu, kdy se stavová veličina nemění v čase, je člen <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial u}{\partial t}\)</span> na levé straně nulový. V tomto případě mluvíme o <em>stacionárním stavu</em> a <em>stacionární rovnici kontinuity</em>. Stacionární rovnice kontinuity typicky popisuje systémy, které byly dostatečně dlouhou dobu ve stabilních podmínkách a dosáhly rovnovážného stavu.</p></li>
+<li><p>Viděli jsme, že za určitých podmínek mohou některé členy v rovnici kontinuty chybět. Naopak člen <span class="math notranslate nohighlight">\(\displaystyle \nabla\cdot \vec j\)</span> charakterizující změny v toku je v rovnici kontinuity přítomen vždy. Bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).</p></li>
+</ul>
+</div></blockquote>
+<p>V matematice často rovnici kontinuity uvažujeme ve výše uvedeném tvaru.  Při
+praktickém použití většinou preferujeme názornou interpretaci
+jednotlivých veličin a proto se v rovnici mohou objevit další
+konstanty úměrnosti, které umožní sladit jednotky a fyzikální
+interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce
+redukovat metodami transformace popsanými v přednášce o diferenciálních rovnicích. Proto volíme vhodné násobky veličin
+vystupujících v matematické formulaci tak, aby se co nejvíce konstant
+eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují,
+že je vhodné volit veličiny bezrozměrné. Například v publikaci
+P. Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena
+<a class="reference external" href="https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz">bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná
+vzdálenost</a>
+na straně 61 pro rovnici popisující difuzi a <a class="reference external" href="https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz">charakteristická délka,
+Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota,
+bezrozměrný čas a bezrozměrná
+vzdálenost</a>
+pro rovnici popisující vedení tepla na stranách 88 a 89.</p>
+<p>V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i prouděním hmotného prostředí (konvekce).</p>
+
+<a onclick=otevrit("problems/difuzni_rce/interpretace_clenu.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+</section>
+<section id="rovnice-melke-vody">
+<h2><span class="section-number">10.9. </span>Rovnice mělké vody<a class="headerlink" href="#rovnice-melke-vody" title="Link to this heading">#</a></h2>
+<div class='obtekat'>
+
+<figure class="align-default" id="id9">
+<img alt="../_images/ricka.jpg" src="../_images/ricka.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.9 </span><span class="caption-text">Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+</div>
+<p>Rovnici kontinuity můžeme použít pro popis vody v korytě. Úloha je jednodimenzionální a tok <span class="math notranslate nohighlight">\(\displaystyle Q\)</span> je skalární veličina. Divergence toku se díky jednodimenzionálnosti redukuje na derivaci podle prostorové proměnné <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial Q}{\partial x}\)</span>. Zachovávající se veličinou je množství vody. Hustota zachovávající se veličiny je množství vody na metr délky toku, tj. <em>průtočný průřez</em> <span class="math notranslate nohighlight">\(\displaystyle A\)</span> (obsah průřezu říčního toku  v daném místě). Zdroje zpravidla neuvažujeme, tj. <span class="math notranslate nohighlight">\(\displaystyle \sigma=0\)</span>. Rovnice kontinuity má potom tvar
+<div class="math notranslate nohighlight">
+\[
+      {\frac{\partial A}{\partial t}= - {\frac{\partial Q}{\partial x}}}
+\]</div>
+
+a nazývá se Saint-Venantova rovnice nebo též <em>rovnice mělké vody</em>. Tato rovnice se používá při popisu <em>proudění v korytě</em> nebo při modelování <em>vln tsunami</em>.</p>
+<p>V rovnici jsou dvě funkce, tok <span class="math notranslate nohighlight">\(\displaystyle Q\)</span> definující pohyb stavové veličiny a
+průřez <span class="math notranslate nohighlight">\(\displaystyle A\)</span> definující množství stavové veličiny. Někdy je vhodnější
+pracovat se stavovou veličinou <span class="math notranslate nohighlight">\(\displaystyle h\)</span> udávající výšku hladiny. Jak jsme
+zmínili v úvodní přednášce o derivacích, je derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm
+dA}{\mathrm d h}\)</span> rovna šířce hladiny. Abychom mohli celou rovnici
+převést na tvar pracující jenom se stavovou veličinou <span class="math notranslate nohighlight">\(\displaystyle h\)</span>, je nutné udělat
+nějaké dodatečné předpoklady, jako například pracovat s konkrétním
+tvarem koryta.</p>
+</section>
+<section id="proudeni-tekutiny-v-mechanice-kontinua">
+<h2><span class="section-number">10.10. </span>Proudění tekutiny v mechanice kontinua<a class="headerlink" href="#proudeni-tekutiny-v-mechanice-kontinua" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id10">
+<img alt="../_images/med.jpg" src="../_images/med.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.10 </span><span class="caption-text">Rovnice mechaniky kontinua dokáží popsat i děje, které se odehrávají v tekutinách tekoucích jinak, než voda nebo ideální tekutina. Běžným příkladem je med, technicky významným například beton. Kromě rovnice kontinuity je nutné dodat ještě další fyzikální vztahy. Zdroj: pixabay.com.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>V mechanice kontinua podobně jako u vedení tepla neuvažujeme zdroje. Stavovou veličinou je hustota <span class="math notranslate nohighlight">\(\displaystyle \rho\)</span>, která popisuje množství látky v daném místě. Tato látka je přenášena tokem, který je roven součinu rychlosti <span class="math notranslate nohighlight">\(\displaystyle \vec u\)</span> a hustoty <span class="math notranslate nohighlight">\(\displaystyle \rho\)</span>. Rovnice kontinuity popisující proudění dané rychlostí <span class="math notranslate nohighlight">\(\displaystyle \vec u\)</span> má poté tvar
+<div class="math notranslate nohighlight">
+\[\frac{\partial \rho}{\partial t} + \nabla\cdot (\rho \vec {u}) = 0,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle \rho\)</span> je hustota.
+Tato rovnice napsána pro vzduch je jednou z rovnic používaných při <a class="reference external" href="http://www-history.mcs.st-and.ac.uk/HistTopics/Weather_forecasts.html">modelování vývoje počasí</a></p>
+<p>Pro nestlačitelnou tekutinu je hustota konstantní, což eliminuje
+nestacionární člen a redukuje rovnici na <div class="math notranslate nohighlight">
+\[ \nabla\cdot\vec
+u =0.\]</div>
+ Důsledkem této rovnosti je zvýšení rychlosti molekul
+pohybující se nestlačitelné tekutiny při proudění místem s menším
+průřezem.</p>
+<p><a class="reference external" href="https://cs.wikipedia.org/wiki/Rovnice_kontinuity#Rovnice_kontinuity_ve_st%C5%99edo%C5%A1kolsk%C3%A9_fyzice">Středoškolský makroskopický tvar</a> jednorozměrné rovnice kontinuity pro proudění nestlačitelné tekutiny je <div class="math notranslate nohighlight">
+\[S u = \mathrm{konst}.\]</div>
+</p>
+</section>
+<section id="difuzni-rovnice">
+<h2><span class="section-number">10.11. </span>Difuzní rovnice<a class="headerlink" href="#difuzni-rovnice" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/MH8IzenZZCo">Minivideo</a> </div>
+<p>Difuzní rovnice je rovnice kontiuity s dosazeným konstitučním vztahem
+pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu
+lineární aproximaci, je možné psát
+<div class="math notranslate nohighlight">
+\[      \vec \jmath=-D\nabla u,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle D\)</span> konstanta
+úměrnosti. Pokud tok <span class="math notranslate nohighlight">\(\displaystyle \vec \jmath\)</span> a gradient <span class="math notranslate nohighlight">\(\displaystyle \nabla u\)</span> leží v jedné přímce,
+je <span class="math notranslate nohighlight">\(\displaystyle D\)</span> reálné číslo, jinak je <span class="math notranslate nohighlight">\(\displaystyle D\)</span> matice. Například při
+studiu pohybu vody ve dřevě se voda řídí nejen směrem maximálního
+poklesu vlhkosti, ale stáčí se současně do podélného směru, ve kterém dřevo
+vede vlhkost nejlépe. V takovém případě je <span class="math notranslate nohighlight">\(\displaystyle D\)</span> matice.
+Spojením rovnice kontinuity
+<div class="math notranslate nohighlight">
+\[
+      {\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   \]</div>
+
+a vztahu  pro tok stavové veličiny dostáváme rovnici
+<div class="math notranslate nohighlight">
+\[
+      {\frac{\partial u}{\partial t}=\sigma - \nabla\cdot \bigl(-D\nabla u\bigr)}.\]</div>
+
+Tuto rovici je možno upravit na tvar
+<div class="math notranslate nohighlight">
+\[
+      {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)},\]</div>
+
+který se nazývá <em>difuzní rovnice</em>.</p>
+<div class="proof remark admonition" id="remark-6">
+<p class="admonition-title"><span>Poznámka </span> (Fyzikální interpretace rovnice difuzní rovnice)</p>
+<section class="remark-content" id="proof-content">
+<ul class="simple">
+<li><p>Člen <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial u}{\partial t}\)</span> udává, jak rychle se mění hustota stavové veličiny <span class="math notranslate nohighlight">\(\displaystyle u\)</span>. Je stejný jako v rovnici kontinuity.</p></li>
+<li><p>Člen <span class="math notranslate nohighlight">\(\displaystyle \sigma\)</span> udává vydatnost zdrojů stavové veličiny. Je stejný jako v rovnici kontinuity.</p></li>
+<li><p>Člen <span class="math notranslate nohighlight">\(\displaystyle \nabla u\)</span> udává nerovnoměrnost v prostorovém rozložení stavové veličiny. Pomocí difuzní matice <span class="math notranslate nohighlight">\(\displaystyle D\)</span> a konstitutivního zákona tuto nerovnoměrnost přepočítáme na tok, který se snaží uvažovanou nerovnoměrnost vyrovnat. Tento tok je reprezentován výrazem <span class="math notranslate nohighlight">\(\displaystyle -D\nabla u\)</span>.</p></li>
+<li><p>Záporně vzatá divergence toku udává, jak tok v daném místě ztrácí na intenzitě. Vzhledem k zápornému znaménku v konstitutivním zákoně má záporně vzatá divergence tvar <div class="math notranslate nohighlight">
+\[\nabla\cdot \bigl(D\nabla u\bigr).\]</div>
+ Představuje přírůstek hustoty stavové veličiny v daném místě za jednotku času, způsobený zeslábnutím toku.</p></li>
+<li><p>Rovnice jako celek vyjadřuje, že navýšení hustoty stavové veličiny (tj. množství stavové veličiny v jednotkovém objemu) je součtem navýšení díky zdrojům a navýšení díky zeslabení toku v daném místě.</p></li>
+</ul>
+</section>
+</div></section>
+<section id="vedeni-tepla">
+<h2><span class="section-number">10.12. </span>Vedení tepla<a class="headerlink" href="#vedeni-tepla" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id11">
+<img alt="../_images/teplo.jpg" src="../_images/teplo.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.11 </span><span class="caption-text">Stromy umí ochlazovat své okolí. Ulice v Melbourne vyfocená termokamerou to dokazuje. A difuzní rovnice toto dokáže modelovat. Photograph: City of Melbourne. Zdroj: theguardian.com.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Důležitým speciálním případem difuzní rovnice je rovnice vedení tepla.
+Stavovou veličinou, která se zachovává v úlohách s vedením tepla, je vnitřní energie ve
+formě tepla. Zpravidla nemá smysl uvažovat členy vyjadřující
+zdroje, tj. <span class="math notranslate nohighlight">\(\displaystyle \sigma =0\)</span>. Protože teplo neměříme přímo, je vhodnější
+model formulovat pro teplotu <span class="math notranslate nohighlight">\(\displaystyle T\)</span>. Jsou-li <span class="math notranslate nohighlight">\(\displaystyle \varrho\)</span> a <span class="math notranslate nohighlight">\(\displaystyle c\)</span> po řadě hustota a měrná tepelná kapacita materiálu, má člen vyjadřující změnu hustoty
+energie v daném místě tvar
+<span class="math notranslate nohighlight">\(\displaystyle \varrho c\frac{\partial T}{\partial t}.\)</span> Úměrnost mezi gradientem
+teploty a tokem tepla zprostředkovává
+<em>Fourierův zákon</em>. Difuzní rovnice má v tomto případě tvar
+<div class="math notranslate nohighlight">
+\[{\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}\]</div>
+</p>
+<div class="proof remark admonition" id="remark-7">
+<p class="admonition-title"><span>Poznámka </span> (Fyzikální interpretace rovnice vedení tepla)</p>
+<section class="remark-content" id="proof-content">
+<ul class="simple">
+<li><p>Veličina <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial T}{\partial t}\)</span> udává rychlost růstu teploty tělesa a koeficient <span class="math notranslate nohighlight">\(\displaystyle \rho c\)</span> tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)</p></li>
+<li><p>Výraz <span class="math notranslate nohighlight">\(\displaystyle D\nabla T\)</span> udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je <span class="math notranslate nohighlight">\(\displaystyle -D\nabla T\)</span>.</p></li>
+<li><p>Člen <span class="math notranslate nohighlight">\(\displaystyle \nabla\cdot(D\nabla T)\)</span> udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.</p></li>
+<li><p>Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divegrence toku <span class="math notranslate nohighlight">\(\displaystyle \nabla\cdot (-D\nabla T)\)</span> kladná a výraz z rovnice <span class="math notranslate nohighlight">\(\displaystyle \nabla\cdot (D\nabla T)\)</span> je proto záporný.</p></li>
+</ul>
+</section>
+</div>
+<div class='obtekat'>
+<figure class="align-default" id="id12">
+<img alt="../_images/vrstvy.png" src="../_images/vrstvy.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.12 </span><span class="caption-text">Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+
+<a onclick=otevrit("problems/difuzni_rce/vedeni_tepla_vypocet.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+<p>Tato rovnice je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
+odvodili primitivními prostředky (jenom pomocí parciálních derivací, bez gradientu a divergence) ve tvaru
+<div class="math notranslate nohighlight">
+\[\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(D\frac{\partial T}{\partial x}\right)\]</div>
+
+v úvodní přednášce.</p>
+<p>Rovnice vedení tepla se používá například při <em>tepelné ochraně budov</em>, při modelování <em>tepelných ostrovů</em> v krajině, při <em>tepelné modifikaci dřeva</em>, nebo při studiu <em>permafrostu</em>.</p>
+<p>V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fourierův zákon (P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 88).</p>
+<p>V některých případech nemusí být člen charakterizující zdroje
+nulový. Teplo může vznikat například při tření nebo při průchodu
+elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po <a class="reference external" href="http://www.ebeton.cz/pojmy/hydratacni-teplo">přidání vody do cementu</a>, známý je problém jak <a class="reference external" href="http://www.ebeton.cz/encyklopedie/hooverova-prehrada">uchladit Hooverovu přehradu</a> při stavbě.</p>
+</section>
+<section id="voda-v-poreznim-materialu">
+<h2><span class="section-number">10.13. </span>Voda v porézním materiálu<a class="headerlink" href="#voda-v-poreznim-materialu" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id13">
+<img alt="../_images/drevo.jpg" src="../_images/drevo.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.13 </span><span class="caption-text">Difuzní rovnice se používá k modelování sušení dřeva. Zdroj: pixabay.com.</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>V porézním materiálu voda prostupuje materiálem a zachovává se její
+množství, což bude stavová veličina. Hustotu tohoto množství, tj. obsah vody v jednotce
+objemu, označíme <span class="math notranslate nohighlight">\(\displaystyle c\)</span> a pro tuto veličinu formulujeme matematický
+model. Zdroje neuvažujeme. Úměrnost mezi gradientem koncentrace vody a
+jejím tokem zprostředkovává <em>Fickův
+zákon</em>. Modelem je potom  difuzní rovnice bez zdrojů.
+<div class="math notranslate nohighlight">
+\[
+      {\frac{\partial c}{\partial t}= \nabla\cdot \bigl(D\nabla c\bigr)}
+	  \]</div>
+
+Tato rovnice se používá například při modelování procesu
+<em>sušení dřeva</em> v sušárnách nebo při modelování <em>dřeva
+ve vlhkém prostředí</em>. Stejná rovnice napsaná pro vzduch se používá
+k modelování proudění v atmosféře při <em>předpovídání počasí</em>.</p>
+<p>V literatuře věnované problematice dřeva se rovnice difuze použitá na modelování vlhkosti ve dřevě označuje jako Druhý Fickův zákon (A. Požgaj a kol., Štruktúra a vlastnosti dreva, str. 202, P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60).</p>
+<p>V praxi je dřevo často s jistou přesností homogenní, ale difuzní
+koeficient dřeva závisí na vlhkosti, tedy vztah mezi gradientem
+vlhkosti a difuzním tokem není lineární. Přesto i v tomto případě
+používáme Fickův zákon, ovšem složky difuzního koeficientu
+nepovažujeme za konstanty, jsou závislé na <span class="math notranslate nohighlight">\(\displaystyle c\)</span> a jejím prostřednictvím
+i na <span class="math notranslate nohighlight">\(\displaystyle x\)</span>.</p>
+</section>
+<section id="rovnice-podzemni-vody">
+<h2><span class="section-number">10.14. </span>Rovnice podzemní vody<a class="headerlink" href="#rovnice-podzemni-vody" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id14">
+<img alt="../_images/voda1.jpg" src="../_images/voda1.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.14 </span><span class="caption-text">Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Proudění podzemní vody je vlastně úloha s řekou se zasypaným
+korytem. Taková voda teče ve srovnání s povrchovou vodou velmi pomalu,
+protože prosakuje půdou. Prostor, kde se podzemní voda nachází, se
+nazývá <em>zvodeň</em>. Stejně jako řeka v korytě na povrchu, i voda
+v podzemní zvodni teče v jistém smyslu „z kopce“. V tomto případě
+však kromě nadmořské výšky může hrát roli i rozdíl tlaků nebo další
+efekty. Vliv všech těchto efektů shrnujeme do jediného pojmu
+<em>piezometrická výška</em>. Směr „z kopce“ pro podzemní vodu je
+poté směr poklesu piezometrické výšky. V daném místě se může voda
+hromadit, to poznáme nárůstem hladiny spodní vody. Také může
+z hlediska zvodně část vody zanikat, například pokud je zde čerpaná
+studna nebo průsak do jiné zvodně. Voda může ve zvodni i vznikat,
+například zasakovacím vrtem nebo průsakem dešťových srážek. Pokud do
+celkové bilance započteme rozdíl mezi přítokem a odtokem a všechny
+zdroje a spotřebiče, množství vody se zachovává.</p>
+<p>Podzemní zvodeň je typickým porézním materiálem, přesto k modelování
+vody v tomto prostředí přistupujeme speciálním způsobem. Úloha se většinou uvažuje ve dvou dimenzích, protože
+horizontální rozměry zvodně jsou mnohem větší než její
+hloubka. Zachovává se množství vody, ale stejně
+jako u vedení tepla je výhodné formulovat model pro lépe
+měřitelnou veličinu, <em>piezometrickou výšku</em>
+<span class="math notranslate nohighlight">\(\displaystyle h\)</span>. Přírůstek množství podzemní vody za časovou jednotku na jednotkové ploše v daném
+místě zvodně má tvar <span class="math notranslate nohighlight">\(\displaystyle S_S \frac{\partial h}{\partial t}\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle S_S\)</span> je
+<em>specifická zásobnost</em>.  Úměrnost mezi gradientem piezometrické výšky a
+filtračním tokem  zprostředkovává <em>Darcyho
+zákon</em>. Difuzní rovnice  má (s konstantou úměrnosti <span class="math notranslate nohighlight">\(\displaystyle T\)</span>, <em>transmisivitou</em>) tvar
+<div class="math notranslate nohighlight">
+\[ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(T\nabla h\bigr).}\]</div>
+ Tato rovnice se nazývá <em>rovnice podzemní vody</em>. Zdroje jsou nejčastěji zasakovací nebo odvodňovací vrty, dále studny, poldry, výkopy nebo zářezy. Informace získané z rovnice podzemní vody se využívají například
+k ochraně lomů, dolů a stavebních jam před <em>zaplavením</em>, k hospodaření s <em>pitnou vodou</em>,  k ochraně před šířením <em>kontaminace z chemických
+provozů</em>. Aplikace jsou dále v detekci zdroje kontaminace pitné vody a odhadu rychlosti  šíření kontaminace, včetně
+<em>kontaminace slanou mořskou vodou</em> v přímořských oblastech.</p>
+<p>U proudění s napjatou hladinou (mezi dvěma nepropustnými vrstvami, angl. <em>confined aquifer</em>) transmisitiva závisí pouze na fyzikálních vlastnostech zvodně. Například pro homogenní izotropní materiál je konstantní. U proudění s volnou hladinou (bez horní nepropustné vrstvy, angl. <em>unconfined aquifer</em>) je transmisivita úměrná tloušťce vrstvy obsahující vodu. Zpravidla nulovou hodnotu piezometrické hladiny volíme na dolní nepropustné vrstvě a potom platí <span class="math notranslate nohighlight">\(\displaystyle T=kh\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle k\)</span> závisí pouze na fyzikálních vlastnostech půdy. Proto se často rovnice podzemní vody pro proudění s volnou hladinou zapisuje ve tvaru
+<div class="math notranslate nohighlight">
+\[ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\bigr).}\]</div>
+</p>
+</section>
+<section id="rovnice-vedeni-tepla-ve-2d-v-ruznych-podminkach">
+<h2><span class="section-number">10.15. </span>Rovnice vedení tepla ve 2D v různých podmínkách<a class="headerlink" href="#rovnice-vedeni-tepla-ve-2d-v-ruznych-podminkach" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/5hy6lB1O4KQ">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id15">
+<img alt="../_images/VCJR_modifikace_pravidelne.jpg" src="../_images/VCJR_modifikace_pravidelne.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.15 </span><span class="caption-text">Teplotní modifikace dřeva ve VCJR v Útěchově. Díky jednoduché geometrii vzorků je možno provést i přesný analytický výpočet teplotního pole. Výřez ukazuje detail čtyř vzorků. Jeden z nich je nařezán šikmo. V takovém případě je výpočet mnohem obtížnější než u vzorků, jejichž tvar respektuje anatomické směry ve dřevě. Zdroj: J. Dömény.</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id16">
+<img alt="../_images/VCJR_sindel.jpg" src="../_images/VCJR_sindel.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.16 </span><span class="caption-text">Teplotní modifikace šindele ve VCJR v Útěchově. Řídí se stejnou rovnicí jako hranoly na obrázku výše. Vinou komplikovaného tvaru je však matematické modelování teplotního pole možné jenom numerickou cestou. Skutečně, v podobných úlohách hraje geometrie úlohy důležitou roli a netriviální geometrie zpravidla znemožní efektivní řešení analytickou cestou. Zdroj: J. Dömény.</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id17">
+<img alt="../_images/rtb.png" src="../_images/rtb.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.17 </span><span class="caption-text">Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.</span><a class="headerlink" href="#id17" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Uvažujme rovnici vedení tepla ve dvou rozměrech a v prostředí bez zdrojů.</p>
+<div class="math notranslate nohighlight" id="equation-vp3">
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-vp3" title="Link to this equation">#</a></span>\[\rho c\frac{\partial T}{\partial t}=\nabla\cdot (D\nabla T)\]</div>
+<section id="stacionarni-stav">
+<h3><span class="section-number">10.15.1. </span>Stacionární stav<a class="headerlink" href="#stacionarni-stav" title="Link to this heading">#</a></h3>
+<p>Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice <a class="reference internal" href="#equation-vp3">(10.1)</a> se redukuje na
+<div class="math notranslate nohighlight">
+\[\nabla\cdot (D\nabla T)=0.\]</div>
+</p>
+</section>
+<section id="homogenni-izotropni-material-a-linearni-materialove-vztahy">
+<h3><span class="section-number">10.15.2. </span>Homogenní izotropní materiál a lineární materiálové vztahy<a class="headerlink" href="#homogenni-izotropni-material-a-linearni-materialove-vztahy" title="Link to this heading">#</a></h3>
+<p>Materiál má ve všech místech (homogenní) a ve všech směrech (izotropní) stejné vlastnosti.
+Veličina <span class="math notranslate nohighlight">\(\displaystyle D\)</span> je reálná skalární veličina (konstanta).</p>
+<p>Podle pravidla derivace konstantního násobku se rovnice <a class="reference internal" href="#equation-vp3">(10.1)</a> redukuje na<br />
+<div class="math notranslate nohighlight">
+\[\rho c\frac{\partial T}{\partial t}=D\nabla\cdot (\nabla T)\]</div>
+
+a ve složkách
+<div class="math notranslate nohighlight">
+\[\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).\]</div>
+
+Pro <span class="math notranslate nohighlight">\(\displaystyle \tau=\frac{Dt}{\rho c}\)</span> (změna jednotky času) dostáváme
+<div class="math notranslate nohighlight">
+\[\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}.\]</div>
+</p>
+</section>
+<section id="ortotropni-material-nehomogenni-nebo-nelinearni">
+<h3><span class="section-number">10.15.3. </span>Ortotropní materiál, nehomogenní nebo nelineární<a class="headerlink" href="#ortotropni-material-nehomogenni-nebo-nelinearni" title="Link to this heading">#</a></h3>
+<p>Materiál má dva charakteristické směry související s rovinami
+symetrie. Zvolíme soustavu souřadnic tak, aby osy byly orientovány ve
+směru vlastních vektorů.</p>
+<p>Veličina <span class="math notranslate nohighlight">\(\displaystyle D\)</span> je diagonální matice. Pro <div class="math notranslate nohighlight">
+\[\begin{split}D=\begin{pmatrix}D_x &amp; 0\\ 0&amp; D_y\end{pmatrix}\end{split}\]</div>
+ je tvar rovnice <a class="reference internal" href="#equation-vp3">(10.1)</a> ve složkách
+<div class="math notranslate nohighlight">
+\[\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial T}{\partial x}\right)
++\frac{\partial }{\partial y}\left(D_y\frac{\partial T}{\partial y}\right).\]</div>
+</p>
+</section>
+<section id="homogenni-ortotropni-material-a-linearni-materialove-vztahy">
+<h3><span class="section-number">10.15.4. </span>Homogenní ortotropní materiál a lineární materiálové vztahy<a class="headerlink" href="#homogenni-ortotropni-material-a-linearni-materialove-vztahy" title="Link to this heading">#</a></h3>
+<p>Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné a nezávislá na <span class="math notranslate nohighlight">\(\displaystyle T\)</span>.
+Stejné jako předchozí případ, ale <span class="math notranslate nohighlight">\(\displaystyle D_x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle D_y\)</span> jsou konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice <a class="reference internal" href="#equation-vp3">(10.1)</a> redukuje na
+<div class="math notranslate nohighlight">
+\[\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.\]</div>
+</p>
+</section>
+</section>
+<section id="umeni-identifikace-predpokladu-z-tvaru-difuzni-rovnice">
+<h2><span class="section-number">10.16. </span>Umění identifikace předpokladů z tvaru difuzní rovnice<a class="headerlink" href="#umeni-identifikace-predpokladu-z-tvaru-difuzni-rovnice" title="Link to this heading">#</a></h2>
+<p>Jasná kuchařka, jak identifikovat předpoklady vedoucí ke konkrétní formě difuzní rovnice může vypadat násedovně. Obecný tvar v kartézských souřadnicích je
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t} =\sigma +
+\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+
+\frac{\partial }{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)+
+\frac{\partial }{\partial z}\left(D_z\frac{\partial u}{\partial z}\right)
+\]</div>
+
+a pokud máte před sebou podobnou rovnici, ve které některý člen chybí, znamená to, že tato rovnice v sobě již obsahuje jisté předpoklady. Ty se pokusíme identifikovat. Některý člen může být lehce modifikovaný, například a levé straně mohou figurovat dodatečné multiplikativní konstanty (například v případě rovnice vedení tepla) nebo člen popisující zdroje může být nekonstantní (například při studiu vývoje populace se zahrnutím prostorového rozložení používáme logistický růst <span class="math notranslate nohighlight">\(\displaystyle \sigma = ru\left(1-\frac uK\right)\)</span>), zajímavé však pro nás jsou podstatné odlišnosti shrnuté v následujících odrážkách. Vždy je to „něco za něco“. Jednodušší rovnice se lépe dále zpracovává, ale neumí zachytit plnou škálu efektů, které jsou v obecné rovnici.</p>
+<ul class="simple">
+<li><p>Je v rovnici člen <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial u}{\partial t}\)</span> s derivací podle času? Pokud ano, je rovnice <em>nestacionární</em> a dokáže popsat časový vývoj děje. Pokud ne, jedná se o <em>stacionánrní</em> rovnici popisující děj po dosažení ustáleného stavu. Stacionární rovnice je jednodušší, ale nedokáže zachytit časový vývoj.</p></li>
+<li><p>Je v rovnici člen bez časové a prostorové derivace? Tj. v našem označení <span class="math notranslate nohighlight">\(\displaystyle \sigma\)</span>? Pokud ano, popisuje tento člen vydatnost zdrojů nebo spotřebičů a rovnice je schopna zachytit situace, kdy stavová veličina vzniká nebo zaniká. Pokud ne, jedná se o <em>bezzdrojovou rovnici</em>. Takové rovnice popisuje stav, kdy se stavová veličina může jenom přemisťovat nebo kumulovat. Bezzdrojová rovnice je jednodušší, ale nedokáže modelovat vznik či zánik stavové veličiny.</p></li>
+<li><p>Jsou přítomny všechny prostorové souřadnice, nebo jenom některé? Počet prostorových souřadnic defiuje <em>dimenzi problému</em>, tj. určuje, zda se jedná o úlohu v prostoru, v rovině nebo na přímce.</p></li>
+<li><p>Jsou všechny difuzní koeficienty stejné (například <span class="math notranslate nohighlight">\(\displaystyle D\)</span>), nebo jsou odlišeny (například indexy <span class="math notranslate nohighlight">\(\displaystyle D_x\)</span>, <span class="math notranslate nohighlight">\(\displaystyle D_y\)</span>, <span class="math notranslate nohighlight">\(\displaystyle D_z\)</span>)? Pokud jsou stejné, jedná se o <em>izotropní</em> materiál a rovnice dokáže popsat pouze materiál mající ve všech směrech stejné vlastnosti. Pokud jsou difuzní koeficienty odlišeny, jedná se o <em>anizotropní</em> nebo <em>ortotropní</em> materiál a dokážeme s ní popsat i materiály mající díky své struktuře jiné vlastnosti v jednotlivých směrech.</p></li>
+<li><p>Jsou difuzní koeficienty uvnitř derivací ve členech typu <div class="math notranslate nohighlight">
+\[\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)\]</div>
+ nebo jsou difuzní členy zjednodušeny do tvaru <div class="math notranslate nohighlight">
+\[D_x\frac{\partial ^2 u}{\partial x^2}\]</div>
+ s druhými derivacemi? Pokud jsou zjednodušeny do druhého tvaru se součinem difuzního koeficientu a druhé derivace, znamená to, že rovnice je sice jednodušší, ale rovnice je schopna popsat pouze materiál, který je <em>homogenní</em> a konstitutivní zákon v tomto materiálu je <em>lineární</em>. V opačném případě (nehomogenita materiálu, nelinearita materiálu, případně obojí) necháváme difuzní koeficienty uvnitř derivace, tak jak to je v obecném případě. Rovnice je komplikovanější, ale umožňuje práci s obecnějšími materiály.</p></li>
+</ul>
+
+<a onclick=otevrit("problems/difuzni_rce/predpoklady.pg"); target="_blank" class="WWotazka">Úkol</a>
+
+</section>
+<section id="shrnuti-hlavni-myslenky">
+<h2><span class="section-number">10.17. </span>Shrnutí, hlavní myšlenky<a class="headerlink" href="#shrnuti-hlavni-myslenky" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/TjyB3kP2uXE">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id18">
+<img alt="../_images/message.jpg" src="../_images/message.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.18 </span><span class="caption-text">A jaká je hlavní message? Zdroj: pixabay.com</span><a class="headerlink" href="#id18" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Pomocí gradientu a aparátu lineární algebry můžeme vyjádřit vztah mezi pohybem fyzikální veličiny a mechanismem, který tento pohyb iniciuje. Většinou se jedná o vztah mezi vektorovým polem toku a gradientem jistého skalárního pole.</p></li>
+<li><p>Pomocí parciálních derivací a divergence dokážeme určit, jestli se v nějakém místě veličina proudící tímto místem „ztrácí“ nebo „přibývá“.</p></li>
+<li><p>Dokážeme dokonce s rozumnou interpretací, čím případné ubývání přenášené veličiny může být způsobeno (zdroje a spotřebiče nebo akumulace v daném místě), zformulovat rovnici, která dané proudění plně popisuje. Výsledkem jsou rovnice vedení tepla, rovnice difuze, rovnice proudění podzemní vody a jiné.</p></li>
+<li><p>Obecná rovnice odvozená podle předchozích bodů je obecná a pro práci na konkrétní úloze se ji snažíme nějak blíže specifikovat. Například zjednodušit, pokud máme informaci o charakteru materiálových vztahů (lineární/nelineární) a materiálu (homogenní/nehomogenní). Jiným zjednodušením je, pokud se zajímáme o stacionární stav, který se nastolí po dosažení rovnováhy.</p></li>
+<li><p>Posláním široké škály příkladů různých specifikací rovnice kontinuity (vedení tepla, proudění povrchové a podzemní vody a další) je, aby si student uvědomil široký záběr obecné formulace rovnice kontinuity. Na zkoušku se naučte obecnou rovnici a jenom informativně si přečtěte její speciální případy. Obory pracující se dřevem (dřevařství, nábytek, dřevostavby) si uložte do paměti rovnice popisující modelování tepla a vlhkosti ve dřevě. Budou se vám hodit  ve studiu. Na krajinářství se zase zaměřte na modelování vody, mělké i podzemní.</p></li>
+</ul>
+</section>
+<section id="shrnuti-vice-matematickou-formou">
+<h2><span class="section-number">10.18. </span>Shrnutí více matematickou formou<a class="headerlink" href="#shrnuti-vice-matematickou-formou" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Ukázali jsme si, že má smysl založit model na bilanci, která vyjadřuje, že rychlost růstu stavové veličiny je součtem příspěvku vygenerovaného zdroji a příspěvku přineseného tokem.</p></li>
+<li><p>Rychlost růstu je derivace podle času, <div class="math notranslate nohighlight">
+\[\frac {\partial u}{\partial t}.\]</div>
+</p></li>
+<li><p>Příspěvek přinesený tokem je roven zeslabení toku v daném místě. Zeslabení toku vypočteme jako záporně vzaté zesílení toku, tj. záporně vzatou divergenci toku, <div class="math notranslate nohighlight">
+\[-\nabla\cdot \vec j.\]</div>
+</p></li>
+<li><p>Celková bilance se poté nazývá rovnice kontinuity a má tvar <div class="math notranslate nohighlight">
+\[
+\frac {\partial u}{\partial t}=\sigma - \nabla\cdot \vec j. \]</div>
+</p></li>
+<li><p>Tok <span class="math notranslate nohighlight">\(\displaystyle \vec j\)</span> zpravidla vypočteme jako záporně vzatý gradient stavové veličiny vynásobený difuzní maticí, tj. <div class="math notranslate nohighlight">
+\[\vec j=-D\nabla u.\]</div>
+</p></li>
+<li><p>Spojením předchozích vztahů dostáváme difuzní rovnici
+<div class="math notranslate nohighlight">
+\[
+\frac {\partial u}{\partial t}=\sigma + \nabla\cdot \left(D\nabla u\right). \]</div>
+ To je rovnice popisující obecně transport energie nebo hmoty prostředím. Například vedení tepla nebo difuzi vody při sušení dřeva.</p></li>
+<li><p>Pro konkrétní výpočet je často nutné rovnici zapsat v souřadnicích. Například pokud máme dvojrozměrný model a směr souřadných os zvolíme ve vlastních směrech matice <span class="math notranslate nohighlight">\(\displaystyle D\)</span> (potom matice <span class="math notranslate nohighlight">\(\displaystyle D\)</span> bude diagonální s diagonálními prvky například <span class="math notranslate nohighlight">\(\displaystyle D_x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle D_y\)</span>), má difuzní rovnice tvar
+<div class="math notranslate nohighlight">
+\[ \frac {\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right ) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right ). \]</div>
+</p></li>
+<li><p>Pokud je materiál homogení a má lineární materiálovou odezvu, je dokonce možné rovnici dále zjednodušit na</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-n">
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-n" title="Link to this equation">#</a></span>\[ \frac {\partial u}{\partial t}=\sigma + D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } .
+\]</div>
+<p>Tato formulace je jednodušší než předešlá, protože obsahuje druhé derivace místo kvaziderivací.</p>
+<ul class="simple">
+<li><p>Pokud je rovnice například stacionární (stavová veličina nezávisí na čase, derivace podle času je nulová), bezzdrojová (neobsahuje zdroje ani spotřebiče, veličina <span class="math notranslate nohighlight">\(\displaystyle \sigma\)</span> je nulová), z homogenního a lineárního materiálu (viz předchozí bod) redukuje se rovnice <a class="reference internal" href="#equation-n">(10.2)</a> na</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-s">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-s" title="Link to this equation">#</a></span>\[ 0= D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } . 
+\]</div>
+<p>Tato rovnice je jednodušší než „plná rovnice“ <a class="reference internal" href="#equation-n">(10.2)</a> a proto ji dokážeme řešit i ve složitějších podmínkách. Někdy například umíme vyřešit nestacionární rovnici <a class="reference internal" href="#equation-n">(10.2)</a> a máme dynamiku jak rychle roste stavová veličina, například jak rychle roste teplota v materiálu. To je nejlepší scénář, někdy však může být nerealizovatelný. Někdy ale umíme vyřešit jenom stacionární rovnici <a class="reference internal" href="#equation-s">(10.3)</a> a najdeme jenom rozložení stavové veličiny po dosažení rovnovážného stavu. To je také dobrá a užitečná informace sama o sobě. Navíc může sloužit jako odrazový můstek k řešení nestacionární rovnice <a class="reference internal" href="#equation-n">(10.2)</a> tak, že od stacionárního řešení postupujeme zpětně v čase.</p>
+<ul class="simple">
+<li><p>Pokud je materiál z předchozího bodu ještě navíc izotropní, tj.  pokud má stejné vlastnosti ve všech směrech, je <span class="math notranslate nohighlight">\(\displaystyle D_x=D_y\)</span> a rovnici je možno vydělit do tvaru <div class="math notranslate nohighlight">
+\[ 0= \frac{\partial^2 u }{\partial x^2 } + \frac{\partial^2 u }{\partial y^2 } .\]</div>
+ O této rovnici si ukážeme, že zapojením druhých diferencí pro numerickou aproximaci druhé derivace se model redukuje na soustavu lineárních rovnic.</p></li>
+</ul>
+</section>
+<section id="prakticka-aplikace-zajimavost-z-jine-oblasti-nez-nauky-o-materialu">
+<h2><span class="section-number">10.19. </span>Praktická aplikace (zajímavost z jiné oblasti než nauky o materiálu)<a class="headerlink" href="#prakticka-aplikace-zajimavost-z-jine-oblasti-nez-nauky-o-materialu" title="Link to this heading">#</a></h2>
+<p>Jste frustrovaní, že k rovnici nemáme řešení? Bohužel ho není obecně možné najít. Rovnici dokážeme přesně vyřešit jenom ve velmi speciálních případech. I bez vyřešení však z rovnice získáváme užitečné informace. Navíc rovnice může být stavebním kamenem složitějšího modelu. Místo slibů konkrétní příklad zase na jiné (ale aktuální) téma.</p>
+<p>V článku  <a class="reference external" href="https://arxiv.org/pdf/2101.12011">A Local and Time Resolution of the COVID-19 Propagation—A
+Two-Dimensional Approach for Germany Including Diffusion
+Phenomena to Describe the Spatial Spread of the
+COVID-19 Pandemic</a>
+je prostorové šíření epidemi COVID modelováno difuzní rovnicí (1) ve tvaru
+<div class="math notranslate nohighlight">
+\[\frac{\partial c}{\partial t}=q+\nabla\cdot \left(D\nabla c\right),\]</div>
+
+což je přesně rovnice, se kterou jsme pracovali zde. Je to rovnice ve své  neobecnější formě, aby bylo možno zachytit</p>
+<ul class="simple">
+<li><p>časový vývoj (o ten nám jde),</p></li>
+<li><p>nehomogenitu v šíření (například ve městech je jiná rychlost šíření než na venkově) a</p></li>
+<li><p>existenci zdrojů (vir se umí množit).</p></li>
+</ul>
+<p>Tato rovnice se řeší pro Německo, což znemožňuje kvůli složité geometrii nalezení analytického přesného řešení. To totiž umíme v prakticky použitelné formě najít jenom pro obdélník a několik málo dalších množin. Proto se tento model řeší numericky. V prvním odstavci podkapitoly 4 článku je numerický model pro jednotlivé spolkové země označen číslem (7) a redukce na soustavu lineárních rovnic (8). V následujícím odstavci je zmíněna Jacobiho metoda pro numerické řešení soustav lineárních rovnic. S touto metodou jsme se setkali v předchozí přednášce o soustavách rovnic.</p>
+<p>Model je dokonce možné doplnit dynamikou růstu zahrnující nárůst nejenom vlivem difuze, ale i vlivem množení viru v daném místě. Přesněji, v odstavci 6 odkazovaného článku se model doplňuje rovnicemi (9) až (11)  ve tvaru
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\frac{\mathrm dS_j}{\mathrm dt}&amp;=-\kappa_j\frac {I_j}{N_j}{S_j},\\
+\frac{\mathrm dI_j}{\mathrm dt}&amp;=\kappa_j\frac {I_j}{N_j}{S_j}-\eta_j I_j,\\
+\frac{\mathrm dR_j}{\mathrm dt}&amp;=\eta_j I_j.
+\end{aligned} \end{split}\]</div>
+
+Toto jsou již naši staří známí ze světa derivací funkce jedné proměnné. Například první rovnice vyjadřuje, že počet <span class="math notranslate nohighlight">\(\displaystyle S_j\)</span> lidí zdravých a náchylných k onemocnění COVID19 ve spolkové zemi s indexem <span class="math notranslate nohighlight">\(\displaystyle j\)</span> se snižuje rychlostí přímo úměrnou současně množství náchylných lidí a množství <span class="math notranslate nohighlight">\(\displaystyle I_j\)</span> infikovaných lidí a nepřímo úměrnou celkové velikosti populace v této zemi <span class="math notranslate nohighlight">\(\displaystyle N_j\)</span>. Konstanta úměrnosti je <span class="math notranslate nohighlight">\(\displaystyle \kappa_j\)</span> a abychom se mohli spolehnout na to, že tato konstanta je kladná, je úbytek skupiny dosud zdravých lidí zachycen záporným znaménkem na pravé straně rovnice. Podobně je možné interpretovat další rovnice, je to vlastně klasický <a class="reference external" href="https://www.matfyz.cz/clanky/matematika-koronaviru-matematicke-modely-sireni-epidemie">SIR model epidemie</a>. Prolistujete si výše odkazovaný anglický článek o modelování epidemie v Německu a všimněte si, že se nic ručně nemusí počítat. Rovnice se nasimulují v počítači a člověk jenom plní ty úlohy, které počítače neumí a nikdy umět nemůžou: sestaví model na základě své představy o fungování procesu a poté interpretuje výstup ze simulace.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../soustavy/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Soustavy lineárních rovnic</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../dvojny_integral/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Dvojný integrál</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pripomenuti-derivaci">10.1. Připomenutí derivací</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obycejna-derivace-frac-mathrm-df-mathrm-dt">10.1.1. (Obyčejná) derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm df}{\mathrm dt}\)</span>.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parcialni-derivace-frac-partial-f-partial-t-frac-partial-f-partial-x-dots">10.1.2. Parciální derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial f}{\partial t}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial f}{\partial x}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \dots\)</span>.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transportni-jevy">10.2. Transportní jevy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tok-a-gradient-v-konstitutivnich-zakonech">10.3. Tok a gradient v konstitutivních zákonech</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vicerozmerne-konstitutivni-zakony">10.4. Vícerozměrné konstitutivní zákony</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fickuv-zakon-difuze">10.4.1. Fickův zákon (difuze)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#darcyho-zakon-proudeni-podzemni-vody">10.4.2. Darcyho zákon (proudění podzemní vody)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fourieruv-zakon-vedeni-tepla">10.4.3. Fourierův zákon (vedení tepla)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soretuv-efekt-termodifuze">10.4.4. Soretův efekt (termodifuze)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specialni-pripady-vztahu-mezi-gradientem-a-tokem">10.5. Speciální případy vztahu mezi gradientem a tokem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obecny-pripad-anizotropni">10.5.1. Obecný případ (anizotropní)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ortotropni-pripad-vhodne-zvolene-osy">10.5.2. Ortotropní případ, vhodně zvolené osy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ortotropni-pripad-ve-2d">10.5.3. Ortotropní případ ve 2D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#izotropni-pripad">10.5.4. Izotropní případ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">10.6. Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-gradientu-a-divergence">10.7. Výpočet gradientu a divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-kontinuity">10.8. Rovnice kontinuity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-melke-vody">10.9. Rovnice mělké vody</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proudeni-tekutiny-v-mechanice-kontinua">10.10. Proudění tekutiny v mechanice kontinua</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difuzni-rovnice">10.11. Difuzní rovnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vedeni-tepla">10.12. Vedení tepla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voda-v-poreznim-materialu">10.13. Voda v porézním materiálu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-podzemni-vody">10.14. Rovnice podzemní vody</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rovnice-vedeni-tepla-ve-2d-v-ruznych-podminkach">10.15. Rovnice vedení tepla ve 2D v různých podmínkách</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacionarni-stav">10.15.1. Stacionární stav</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-izotropni-material-a-linearni-materialove-vztahy">10.15.2. Homogenní izotropní materiál a lineární materiálové vztahy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ortotropni-material-nehomogenni-nebo-nelinearni">10.15.3. Ortotropní materiál, nehomogenní nebo nelineární</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-ortotropni-material-a-linearni-materialove-vztahy">10.15.4. Homogenní ortotropní materiál a lineární materiálové vztahy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umeni-identifikace-predpokladu-z-tvaru-difuzni-rovnice">10.16. Umění identifikace předpokladů z tvaru difuzní rovnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">10.17. Shrnutí, hlavní myšlenky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-vice-matematickou-formou">10.18. Shrnutí více matematickou formou</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prakticka-aplikace-zajimavost-z-jine-oblasti-nez-nauky-o-materialu">10.19. Praktická aplikace (zajímavost z jiné oblasti než nauky o materiálu)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 05.11.2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

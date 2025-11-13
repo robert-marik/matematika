@@ -1,0 +1,560 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-10-12T09:03:58+02:00" />
+    <title>Úvod &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni00';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="1. Výpočet derivací" href="cviceni01.html" />
+    <link rel="prev" title="13. Shrnutí za předmět Matematika" href="../shrnuti/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="12.10.2025"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Úvod</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informacni-zdroje">Informační zdroje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bakterie-escherichia-coli-e-coli">Bakterie <em>Escherichia coli</em> (<em>E. coli</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-se-muze-menit">Rychlost se může měnit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-nemusi-byt-jenom-pro-funkce-casu">Rychlost nemusí být jenom pro funkce času</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-muze-zaviset-na-jine-rychlosti">Rychlost může záviset na jiné rychlosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustavy-linearnich-rovnic">Soustavy lineárních rovnic</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="uvod">
+<h1>Úvod<a class="headerlink" href="#uvod" title="Link to this heading">#</a></h1>
+<p>Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází přednášku. V první úloze si připomeneme exponenciální funkci a jednu její zajímavou vlastnost (neintuitivní rychlost růstu). V dalších úlohách se podíváme na výpočet rychlosti, protože na to navazujeme na přednášce. A na závěr něco k soustavám lineárních rovnic.</p>
+<section id="informacni-zdroje">
+<h2>Informační zdroje<a class="headerlink" href="#informacni-zdroje" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://moodle.mendelu.cz/course/view.php?id=968">Moodle na MENDELU, předmět Matematika</a>. Přihlášení přes Shibboleth pomocí údajů pro přihlášení do UIS. Poté pro zápis do předmětu použijete kód rozlišující formu studia (presenční versus kombinovaná). Zde jsou učební materiáy, podmínky pro ukončení. Odsud se autentizujete do systému pro domácí úkoly.</p></li>
+<li><p>WeBWorK na UM. Systém pro domácí úkoly. Přístup je automaticky z Moodle opory. Domácí úkoly se otevírají a uzavírají podle nastaveného harmonogramu. Plněním těchto nepovinných domácích úkolů si můžete výrazně snížit laťku nutnou pro překonání zkoušky a vylepšit známku. Více viz podmínky pro ukončení předmětu v Moodle.</p></li>
+</ul>
+</section>
+<section id="bakterie-escherichia-coli-e-coli">
+<h2>Bakterie <em>Escherichia coli</em> (<em>E. coli</em>)<a class="headerlink" href="#bakterie-escherichia-coli-e-coli" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id1">
+<img alt="../_images/ecoli.jpg" src="../_images/ecoli.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 2 </span><span class="caption-text">Bakterie <em>E. Coli</em>, autor: byfkfkrErbe, <a class="reference external" href="https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg">https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg</a></span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Michael Crichton (autor scénáře k Jurskému parku) ve svém převratném sci-fi Kmen Andromeda (1969) napsal: <em>Matematika neomezeného růstu je děsivá. Jediná buňka bakterie E. coli se za příznivých okolností dělí každých dvacet minut. Na tom není nic tak zlého, pokud si neuvědomíme, že se bakterie dělí geometrickou řadou. Z jedné vzniknou dvě, ze dvou čtyři, ze čtyř osm a tak dále. Takto lze dojít k závěru, že by se za jeden den mohla jedna buňka rozrůst do superkolonie velikosti a váhy celé planety Země.</em></p>
+<p>V něčem měl spisovatel pravdu. Bakterie <em>E. coli</em> se za optimálních podmínek dělí každých dvacet minut. Tj. za příhodné teploty, pH a při dostatku potravy z každé bakterie během dvaceti minut vzniknou bakterie dvě.</p>
+<p>Je pravdivý i zbytek? Uvažujme na začátku jednu jedinou bakterii. Kolik bakterií bude za 24 hodin? Určete i výslednou hmotnost. Určete i funkci, která udává počet a hmotnost bakterií po uplynutí <span class="math notranslate nohighlight">\(\displaystyle t\)</span> hodin. Hmotnost jedné bakterie uvažujte <span class="math notranslate nohighlight">\(\displaystyle 10^{-12}\,\mathrm{g}\)</span>.</p>
+<p>Srovnejte s hmotností kočky (kilogramy), psa (nízké desítky kilogramů), člověka (vyšší desitky kilogramů), automobilu (tuny, <span class="math notranslate nohighlight">\(\displaystyle 10^3\,\mathrm {kg}\)</span>), Boeingu 737 (desítky tun, <span class="math notranslate nohighlight">\(\displaystyle 10^4\,\mathrm {kg}\)</span>), Empire State Building (stovky tisíc tun, <a class="reference external" href="https://cs.wikipedia.org/wiki/Empire_State_Building">https://cs.wikipedia.org/wiki/Empire_State_Building</a>, <span class="math notranslate nohighlight">\(\displaystyle 10^8\,\mathrm {kg}\)</span>), Země (<span class="math notranslate nohighlight">\(\displaystyle 5\times 10^{24}\,\)</span>kg).</p>
+<p>Bakterie <em>E. coli</em> je přítomna v lidském organismu ve střevech a většina jejích kmenů je neškodná. Její případná přítomnost například v pitné vodě je indikátorem fekálního znečištění. Jedná se o dobře prozkoumanou bakterii, která se využívá v genovém inženýrství a biotechnologiích.</p>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Každých dvacet minut se množství bakterií zdvojnásobí. Za jednu hodinu jsou tři dvacetiminutovky. Počet zdvojnásobení je tedy roven počtu hodin vynásobených třemi.</p>
+<p>Za <span class="math notranslate nohighlight">\(\displaystyle t\)</span> hodin dostáváme pro počet bakterií funkci
+<div class="math notranslate nohighlight">
+\[N(t)=1\cdot\underbrace{2\cdot 2 \cdot 2 \cdots 2}_{3t\text{-krát}} = 2^{3t}.\]</div>
+</p>
+<p>Za den, tj. za 24 hodin, dostáváme
+<div class="math notranslate nohighlight">
+\[N(24)=2^{3\times 24}=2^{72}=4.7\times 10^{21}.\]</div>
+</p>
+<p>Hmotnost bakterií dostaneme jako součin hmotnosti jedné bakterie a jejich počtu, tj. <div class="math notranslate nohighlight">
+\[m(t)=2^{3t}\times 10^{-12}\,\mathrm{g}=2^{3t}\times 10^{-15}\,\mathrm{kg}.\]</div>
+ Pro růst trvající celý den dostáváme
+<div class="math notranslate nohighlight">
+\[m(24)=4.7\times 10^{6}\,\mathrm{kg}.\]</div>
+ Není to hmotnost Země, ale i tak to je úctyhodné číslo. Šance, že by se podařilo bakterie „zásobovat“ tak, aby se celý den mohly množit optimální rychlostí, tedy není ani teoretická. Poměrně rychle dojde k vyčerpání zdrojů a omezení rychlosti růstu.</p>
+<p>Pro zajímavost, při růstu dva dny bychom měli
+<div class="math notranslate nohighlight">
+\[m(48)=2.2 \times 10^{28}\,\mathrm{kg},\]</div>
+
+což je více než hmotnost Země.</p>
+</section>
+</div></section>
+<section id="rychlost-se-muze-menit">
+<h2>Rychlost se může měnit<a class="headerlink" href="#rychlost-se-muze-menit" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id2">
+<img alt="../_images/Pisa_experiment.png" src="../_images/Pisa_experiment.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3 </span><span class="caption-text">Šikmá věž v Pise, na které prováděl své slavné experimenty s volným pádem G. Galilei, autor: Theresa Knott, <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Pisa_experiment.png">https://commons.wikimedia.org/wiki/File:Pisa_experiment.png</a></span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Uvažujme tři různé děje, kde nějaká veličina roste v čase.</p>
+<ul class="simple">
+<li><p>Dráha <span class="math notranslate nohighlight">\(\displaystyle s\)</span> automobilu roste s časem <span class="math notranslate nohighlight">\(\displaystyle t\)</span> podle funkce <div class="math notranslate nohighlight">
+\[s=60t,\]</div>
+
+kde dráhu a čas měříme v kilometrech a hodinách.</p></li>
+<li><p>Dráha <span class="math notranslate nohighlight">\(\displaystyle s\)</span> objektu padajícího volným pádem (ve vakuu nebo při zanedbání odporu vzduchu) roste s časem <span class="math notranslate nohighlight">\(\displaystyle t\)</span> podle funkce <div class="math notranslate nohighlight">
+\[s=5t^2,\]</div>
+ kde dráhu měříme v metrech a čas v sekundách. Na obrázku je Galileův experiment ukazující, že rychlost volného pádu nesouvisí s hmotností, ale je opravdu jenom funkcí času.</p></li>
+<li><p>Počet bakterií <em>E. coli</em> z předchozího příkladu jako funkce času v hodinách.</p></li>
+</ul>
+<p>Porovnejte průměrnou rychlost za první dvě jednotky času (první dvě hodiny pro auto a bakterie, resp. první dvě sekundy v případě volného pádu) a za časový interval od 2 do 4 hodin resp. sekund.</p>
+<p>Shrňte své pozorování a pokuste se odhadnou, pro jaké funkční závislosti budou
+průměrné rychlosti stejné, ať použijeme libovolný interval. (Možná pomůže obrázek.)</p>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>U auta jsou obě průměrné rychlosti stejné a budou stejné i pro jakýkoliv jiný časový úsek.</p>
+<p>U volného pádu a růstu bakterií průměrná rychlost roste.</p>
+<p>Průměrná rychlost nezávisí na intervalu, pokud je grafem přímka, tj. pro lineární funkce.</p>
+<p>Obrázky je možné vygenerovat pomocí <a class="reference external" href="https://www.wolframalpha.com/input?i=draw+2%5E%283t%29">Wolfram Alpha</a> (jednoduché, rychlé) nebo pomocí <a class="reference external" href="https://gist.github.com/robert-marik/d61794d36e9caf503dba96c61c856981">Pythonu</a> (vyspělejší postup, může být součástí složitější simulace, není nutné se bát syntaxe příkazů, pokud využijeme pomoc umělé interligence).</p>
+</section>
+</div></section>
+<section id="rychlost-nemusi-byt-jenom-pro-funkce-casu">
+<h2>Rychlost nemusí být jenom pro funkce času<a class="headerlink" href="#rychlost-nemusi-byt-jenom-pro-funkce-casu" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id3">
+<img alt="../_images/Lanova_draha_Punkevni_jeskyne.jpg" src="../_images/Lanova_draha_Punkevni_jeskyne.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 4 </span><span class="caption-text">Lanovka mezi Macochou a Punkevními jeskyněmi, autor:
+Harold17, <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Lanov%C3%A1_dr%C3%A1ha_Punkevn%C3%AD_jeskyn%C4%9B-Macocha,_lanovka(2).jpg">https://commons.wikimedia.org/wiki/File:Lanová_dráha_Punkevní_jeskyně-Macocha,_lanovka(2).jpg</a></span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Jak rychle stoupá lanovka v Moravském krasu mezi Punkevními jeskyněmi a
+Macochou? Jedná se o nejprudší lanovku v ČR. Výškový rozdíl mezi stanicemi je
+131 metrů, vodorovná vzdálenost je 207 metrů
+(<a class="reference external" href="https://www.kudyznudy.cz/ceska-nej/dopravni/lanovka-v-moravskem-krasu">https://www.kudyznudy.cz/ceska-nej/dopravni/lanovka-v-moravskem-krasu</a>).
+Vypočtěte průměrnou rychlost stoupání lanovky (průměrný sklon).</p>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\frac{131}{207}=0.63\]</div>
+</section>
+</div></section>
+<section id="rychlost-muze-zaviset-na-jine-rychlosti">
+<h2>Rychlost může záviset na jiné rychlosti<a class="headerlink" href="#rychlost-muze-zaviset-na-jine-rychlosti" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id4">
+<img alt="../_images/stara_amaterska_jeskyne.jpg" src="../_images/stara_amaterska_jeskyne.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5 </span><span class="caption-text"><a class="reference external" href="https://ekolist.cz/cz/zpravodajstvi/zpravy/pred-50-lety-byl-objeven-nejdelsi-jeskynni-system-v-cr-amaterska-jeskyne">https://ekolist.cz/cz/zpravodajstvi/zpravy/pred-50-lety-byl-objeven-nejdelsi-jeskynni-system-v-cr-amaterska-jeskyne</a></span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>V Moravském krasu se po vydatných deštích zatopila jeskyně. S prohlídkami je nutné počkat, až voda opadne. Hladina vody klesá rychlostí 0.5 centimetru na metr krychlový, tj. pokud odteče metr krychlový vody, klesne hladina o půl centimetru. Přirozeným odtokem odtéká voda rychlostí tři metry krychlové za den. Jak rychle klesá hladina v centimetrech za den?</p>
+<p>Vyřešte úlohu pro zadané konkrétní hodnoty a pokuste se sestavit obecný vztah, který umožní vypočítat rychlost poklesu hladiny v čase z rychlosti odtoku vody a rychlosti poklesu hladiny v závislosti na množství vody.</p>
+<div class="proof example dropdown admonition" id="example-3">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Za den odtečou tři metry krychlové. Každý metr krychlový, který odteče, způsobí pokles hladiny o půl centimetru. Tři metry krychlové, které odtečou za den, tedy způsobí snížení hladiny o centimetr a půl. Voda klesá rychlostí jeden a půl centimetru za den.</p>
+<p>Pro jiné hodnoty je rychlost poklesu hladiny v centimetrech za den rovna rychlosti odtoku (v metrech krychlových za den) vynásobenému rychlostí, s jakou klesá hladina v závislosti na objemu odtečené vody (v centimetrech výšky hladiny na metr krychlový odtečené vody).</p>
+</section>
+</div></section>
+<section id="soustavy-linearnich-rovnic">
+<h2>Soustavy lineárních rovnic<a class="headerlink" href="#soustavy-linearnich-rovnic" title="Link to this heading">#</a></h2>
+<p>Soustavy dvou rovnic o dvou neznámých můžeme řešit dosazovací nebo sčítací metodou. Dosazovací metoda je jednodušší, ale sčítací metodu je snadné rozšířit na libovolný počet rovnic a libovolný počet neznámých. Zopakujeme si (ze střední školy) obě metody.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../shrnuti/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Shrnutí za předmět Matematika</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cviceni01.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Výpočet derivací</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informacni-zdroje">Informační zdroje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bakterie-escherichia-coli-e-coli">Bakterie <em>Escherichia coli</em> (<em>E. coli</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-se-muze-menit">Rychlost se může měnit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-nemusi-byt-jenom-pro-funkce-casu">Rychlost nemusí být jenom pro funkce času</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rychlost-muze-zaviset-na-jine-rychlosti">Rychlost může záviset na jiné rychlosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustavy-linearnich-rovnic">Soustavy lineárních rovnic</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 12.10.2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

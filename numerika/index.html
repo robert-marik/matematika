@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-02-24T08:00:41+01:00" />
+    <title>12. Vybrané postupy numerické matematiky &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'numerika/index';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="13. Shrnutí za předmět Matematika" href="../shrnuti/index.html" />
+    <link rel="prev" title="11. Dvojný integrál" href="../dvojny_integral/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="24.02.2023"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Vybrané postupy numerické matematiky</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-reseni-diferencialnich-rovnic">12.1. Numerické řešení diferenciálních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-reseni-diferencialnich-rovnic-ve-2d-a-3d">12.2. Numerické řešení diferenciálních rovnic ve 2D a 3D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konkurence-dvou-populaci">12.2.1. Konkurence dvou populací</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-dravce-a-koristi">12.2.2. Model dravce a kořisti</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-epidemie">12.2.3. Model epidemie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nondimenzionalizace-a-bezrozmerne-veliciny">12.3. Nondimenzionalizace a bezrozměrné veličiny</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-konecnych-diferenci">12.4. Metoda konečných diferencí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ukazka-programu-flexpde">12.5. Ukázka programu FlexPDE</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="vybrane-postupy-numericke-matematiky">
+<h1><span class="section-number">12. </span>Vybrané postupy numerické matematiky<a class="headerlink" href="#vybrane-postupy-numericke-matematiky" title="Link to this heading">#</a></h1>
+<section id="numericke-reseni-diferencialnich-rovnic">
+<h2><span class="section-number">12.1. </span>Numerické řešení diferenciálních rovnic<a class="headerlink" href="#numericke-reseni-diferencialnich-rovnic" title="Link to this heading">#</a></h2>
+<p>Již v prvním týdnu jsme se při zdůraznění role derivace dostali k formulování modelů použitím derivací, k diferenciálním rovnicím. Tyto rovnice je možné pro konkrétní hodnoty parametrů a konkrétní počáteční podmínku řešit numericky.</p>
+<p>Následující přehlídka znovu připomene některé modely a odkaz za těmito modely vede na interaktivní nástroj pro numerické řešení. Tímto nástrojem můžeme vizualizovt řešení pro různé počáteční podmínky. Pro náročnější práci, jako například vizualizace různých rovnic (například pro různé nastavení parametrů) by bylo nutné použít nějaký neinteraktivní nástroj, kde se ve speciálním jazyce naformuluje model, nastaví parametry, spustí řešič a vykreslí řešení.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&amp;amp;ODE=t,x&amp;amp;dydx=-0.2*(x-20)&amp;amp;x=0,20,20&amp;amp;y=0,100,15&amp;amp;method=rk4&amp;amp;h=0.1&amp;amp;pts0=%5B0.29233511586452765,79.38571428571429%5D,%5B0.3493761140819964,8.51674641148324%5D,%5B0.14336917562724016,20.71770334928229%5D">Model ochlazování kávy</a>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dT}{\mathrm dt}=-k (T-T_0)\]</div>
+</p></li>
+<li><p><a class="reference external" href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&amp;amp;ODE=t,x&amp;amp;dydx=0.2*x*(1-x/50)&amp;amp;x=0,20,20&amp;amp;y=0,100,15&amp;amp;method=rk4&amp;amp;h=0.1&amp;amp;pts0=%5B0.29233511586452765,79.38571428571429%5D,%5B0.3493761140819964,8.51674641148324%5D,%5B0.14336917562724016,20.71770334928229%5D">Model růstu populace v prostředí s omezenou nosnou kapacitou</a>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dx}{\mathrm dt}=rx\left (1-\frac xK \right)\]</div>
+
+Neinteraktivní model, který vypočte 1000 řešení pro 1000 kombinací hodnot <span class="math notranslate nohighlight">\(\displaystyle r\)</span> a <span class="math notranslate nohighlight">\(\displaystyle K\)</span> je <a class="reference external" href="https://gist.github.com/robert-marik/6b2667e26c09d1b047efab66ace3a58d">zde</a>. Podobné analýzy se dělají, pokud jsou koeficienty v rovnici zatíženy chybou a chceme vědět, jak se tato chyba projevuje na řešení. V takovém případě nestačí „klikací“ přístup, ale je možné udělat dostatečný počet simulací s vhodně nastavenými paraemtry a tyto statisticky vyhodnotit.</p></li>
+<li><p><a class="reference external" href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&amp;amp;ODE=t,x&amp;amp;dydx=x%5E(2/3)&amp;amp;x=0,20,20&amp;amp;y=0,100,15&amp;amp;method=rk4&amp;amp;h=0.1&amp;amp;pts0=%5B0.29233511586452765,79.38571428571429%5D,%5B0.3493761140819964,8.51674641148324%5D,%5B0.14336917562724016,20.71770334928229%5D,%5B12.473118279569894,26.45683453237409%5D,%5B18.06451612903226,23.032374100719423%5D">Model růstu vodní kapky v atmosféře</a>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dV}{\mathrm dt}=k V^{2/3}\]</div>
+</p></li>
+<li><p><a class="reference external" href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&amp;amp;ODE=t,x&amp;amp;dydx=1/x&amp;amp;x=0,10,20&amp;amp;y=0,8,15&amp;amp;method=rk4&amp;amp;h=0.01&amp;amp;pts0=%5B0.09285714285714286,0.11719570405727919%5D,%5B1.4788732394366197,2.1809352517985605%5D,%5B2.9401408450704225,1.2514388489208628%5D">Model růstu ledu podle Stefanova zákona</a>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dh}{\mathrm dt}=\frac kh\]</div>
+</p></li>
+</ul>
+<p>Všimněte si, že v numerickém modelu je prostým pohledem prakticky nerozlišitelný model růstu vodní kapky od modelu růstu úměrného velikost populace (změňte si mocninu <span class="math notranslate nohighlight">\(\displaystyle \frac 23\)</span> na <span class="math notranslate nohighlight">\(\displaystyle 1\)</span>), ale modely se chovají principiálně zcela jinak, protože v jednom je zaručena jednoznačnost řešení a ve druhém je tato jednoznačnost porušena. Dále si všimněte, že model růstu ledu má při prodlužování řešení zpět v čase evidentně problémy s nulou ve jmenovateli. Abychom různé parazitní výstupy numerických algoritmů jako je zde dokázali odchytit a eliminovat, nestačí „umět rovnici naklikat do programu“, ale znalost teorie a kvalitativních vlastností řešení je téměř nezbytná pro jakoukoliv závažnější práci.</p>
+</section>
+<section id="numericke-reseni-diferencialnich-rovnic-ve-2d-a-3d">
+<h2><span class="section-number">12.2. </span>Numerické řešení diferenciálních rovnic ve 2D a 3D<a class="headerlink" href="#numericke-reseni-diferencialnich-rovnic-ve-2d-a-3d" title="Link to this heading">#</a></h2>
+<p>Pokud máme v zásobě zkušenosti s modelováním diferenciálních rovnic, můžeme se pustit do odvážnějších aplikací, jako třeba následující modely.</p>
+<section id="konkurence-dvou-populaci">
+<h3><span class="section-number">12.2.1. </span>Konkurence dvou populací<a class="headerlink" href="#konkurence-dvou-populaci" title="Link to this heading">#</a></h3>
+<p>Dynamika rozvoje jedné populace může být ovlivněna přítomností druhé populace. Například pokud se dvě populace navzájem brzdí v růstu, je vhodným modelem soustava rovnic
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  \frac{\mathrm dx}{\mathrm dt}=r_xx\left(1-\frac x{K_x} - ay\right),\\
+  \frac{\mathrm dy}{\mathrm dt}=r_yy\left(1-\frac y{K_y} - bx\right).
+\end{aligned}
+\end{split}\]</div>
+
+V chování této soustavy je možno podle nastavení parametrů pozorovat všechny možné situace pozorované v přírodě, což zahrnuje dominanci jednoho z druhů, slabou konkurenci druhů nebo silnou konkurenci druhů. Více viz učebnice z populační ekologie.</p>
+<p><a class="reference external" href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&amp;amp;dxdt=3*x%20-%20x%5E2%20-%20x*y&amp;amp;dydt=2*y%20-%20y%5E2%20-%200.5%20*%20x%20*%20y&amp;amp;x=0,4,20&amp;amp;y=0,3,15&amp;amp;method=rk4&amp;amp;h=0.1&amp;amp;pts1=%5B0.3,0.28328571428571436%5D,%5B0.20714285714285716,0.6434928229665071%5D,%5B2.664285714285714,2.158851674641148%5D,%5B3.1714285714285713,0.7533014354066987%5D,%5B1.7785714285714285,0.2115789473684213%5D">Model</a></p>
+</section>
+<section id="model-dravce-a-koristi">
+<h3><span class="section-number">12.2.2. </span>Model dravce a kořisti<a class="headerlink" href="#model-dravce-a-koristi" title="Link to this heading">#</a></h3>
+<p>Dynamika rozvoje ineragujících populací dravce a kořisti může být vyjádřena Lotkovým Volterrovým modelem
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  \frac{\mathrm dx}{\mathrm dt}=ax-bxy,\\
+  \frac{\mathrm dy}{\mathrm dt}=cxy-dy.
+\end{aligned}
+\end{split}\]</div>
+
+V chování této soustavy je možno pozorovat oscilace obou populací přesně tak, jako to vídáme v přírodě. Další pozorované situace model nevysvětluje, protože je jednoduchý. Jedná se však o základní stavební kámen, který je možno dále zpřesňovat a modelovat situaci blíže konkrétní aplikaci.</p>
+<p><a class="reference external" href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&amp;amp;dxdt=0.1*x%20-%200.025*x-0.01*x*y&amp;amp;dydt=-0.1*y+0.05*x*y&amp;amp;x=0,10,20&amp;amp;y=0,40,15&amp;amp;method=rk4&amp;amp;h=0.1&amp;amp;pts1=%5B0.7894736842105263,10.577142857142857%5D,%5B1.795774647887324,12.09377990430622%5D,%5B0.7394366197183099,22.830622009569378%5D">Model</a></p>
+</section>
+<section id="model-epidemie">
+<h3><span class="section-number">12.2.3. </span>Model epidemie<a class="headerlink" href="#model-epidemie" title="Link to this heading">#</a></h3>
+<p>Populaci rozdělíme na tři skupiny.</p>
+<ul class="simple">
+<li><p>Skupina S (<strong>angl. susceptible</strong>) obsahuje tu část populace,
+které je náchylná k onemocnění. Tito jedinci netrpí chorobou, mohou
+však být infikováni při styku s nemocnými.</p></li>
+<li><p>Skupina I (<strong>angl. infected</strong>)  obsahuje část populace
+tvořenou infikovanými jedinci. Tito jedinci vykazují známky
+onemocnění a rozšiřují nemoc mezi členy skupiny <span class="math notranslate nohighlight">\(\displaystyle S\)</span>.</p></li>
+<li><p>Skupina R (<strong>angl. removed</strong>) obsahuje tu část populace,
+která je tvořena jedinci, kteří byli dříve infikováni, ale nyní již
+nemohou šířit chorobu.</p></li>
+</ul>
+<p>Velikosti skupin S, I a R budeme označovat <span class="math notranslate nohighlight">\(\displaystyle S\)</span>, <span class="math notranslate nohighlight">\(\displaystyle I\)</span> a <span class="math notranslate nohighlight">\(\displaystyle R\)</span>.
+Předpoklady, že počet osob které onemocní za jednotku času souvisí s počtem náchylných a infikovaných a že počet osobn, které jsou izolovány souvisí s počtem infikovaných vede k soustavě
+diferenciálních rovnic (Kermack-McKendrik(1927))
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}
+    \frac{\mathrm dS}{\mathrm dt}&amp;=-\alpha SI,\\
+    \frac{\mathrm dI}{\mathrm dt}&amp;=\alpha SI-\beta I,\\
+    \frac{\mathrm dR}{\mathrm dt}&amp;=\beta I\\
+  \end{aligned}
+\end{split}\]</div>
+</p>
+<p>Matematicky je možno chování modelu studovat i bez explicitní formulace diferenciálních rovnic, pouze využitím takzvaného kompartmentového modelu. Tímto způsobem je možno relativně snadno přidávat do modelu skupinu bepříznakových, vakcinovaných, skupinu v inkubační době a podobně.</p>
+<p><a class="reference external" href="https://homepages.bluffton.edu/~nesterd/apps/compartmentalanalysis.html?C&amp;amp;S,999,T,45,189;I,1,T,303,84;R,0,T,593,192&amp;amp;S,I,0.003*S*I;I,R,0.5*I">Model</a></p>
+</section>
+</section>
+<section id="nondimenzionalizace-a-bezrozmerne-veliciny">
+<h2><span class="section-number">12.3. </span>Nondimenzionalizace a bezrozměrné veličiny<a class="headerlink" href="#nondimenzionalizace-a-bezrozmerne-veliciny" title="Link to this heading">#</a></h2>
+<p>Rovnice vedení tepla v jedné dimenzi (prostup tepla stěnou, vedení
+tepla tyčí) má tvar (viz minulá přednáška) <div class="math notranslate nohighlight">
+\[\rho c \frac{\partial T}{\partial
+t}=\frac{\partial }{\partial x} \left(D\frac{\partial  T}{\partial x}\right),\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle T(x,t)\)</span> je teplota v
+místě <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \rho\)</span> je hustota, <span class="math notranslate nohighlight">\(\displaystyle c\)</span> je měrná tepelná
+kapacita, <span class="math notranslate nohighlight">\(\displaystyle D\)</span> je teplotní vodivost.
+Pro homogenní stěnu nebo tyč a lineární materiálovou odezvu je <span class="math notranslate nohighlight">\(\displaystyle D\)</span> konstanta a můžeme ji vytknout z derivace na pravé straně a psát
+<div class="math notranslate nohighlight">
+\[\rho c \frac{\partial T}{\partial
+t}=D\frac{\partial^2  T}{\partial x^2}.\]</div>
+
+Pro úplnou formulaci úlohy na
+nalezení teploty v jednotlivých místech stěny musíme zadat polohu
+stěny, teplotu na vnějším a vnitřním okraji stěny a počáteční
+rozložení teploty ve stěně. Nechť tedy okraje jsou <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x=L\)</span>, a
+teploty na okrajích a počáteční rozložení teploty jsou
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}T(0,t)&amp;=T_0\\T(L,t)&amp;=T_1\\
+T(x,0)&amp;=f(x)\end{aligned}.\end{split}\]</div>
+ Analogicky jako u obdobného příkladu s
+chladnutím tělesa podle Newtonova zákona (viz přednáška o
+diferenciálních rovnicích) zavedeme bezrozměrnou teplotu tak, aby se
+podmínky na okrajích redukovaly na konstanty. Zavedeme-li bezrozměrnou
+teplotu <div class="math notranslate nohighlight">
+\[\xi(x,t) =\frac{T(x,t)-T_0}{T_1-T_0}\]</div>
+ a bezrozměrnou vzdálenost <span class="math notranslate nohighlight">\(\displaystyle \mu =\frac xL\)</span>, redukuje se model podle stejných pravidel, jaká jsme poznali u obyčejných rovnic, na
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\rho c \frac{\partial \xi}{\partial
+t}&amp;=D\frac 1{L^2}\frac{\partial ^2 \xi}{\partial \mu^2},\\
+\xi(0,t)&amp;=0,\\
+\xi(1,t)&amp;=1,\\
+\xi(\mu,t)&amp;=f_\xi(\mu),
+\end{aligned}\end{split}\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle f_\xi(\mu)\)</span> je počáteční rozložení teploty transformované do nových veličin.
+Přepíšeme-li rovnici na tvar
+<div class="math notranslate nohighlight">
+\[\frac 1{\frac {D}{L^2\rho c}} \frac{\partial \xi}{\partial
+t}=\frac{\partial ^2 \xi}{\partial \mu^2},\]</div>
+
+vidíme, že zavedení bezrozměrného času vztahem <span class="math notranslate nohighlight">\(\displaystyle \tau=\frac{Dt}{\rho c L^2}\)</span> redukuje úlohu z původního tvaru (kde každý člen má svůj fyzikální význam a přímou interpretaci)
+<div class="math notranslate nohighlight">
+\[\begin{split}\boxed{\begin{aligned}
+\rho c \frac{\partial T}{\partial
+t}&amp;=D\frac{\partial ^2 T}{\partial x},\\
+T(0,t)&amp;=T_0,\\
+T(L,t)&amp;=T_1,\\
+T(x,t)&amp;=f(x),
+\end{aligned}}\end{split}\]</div>
+
+na tvar
+<div class="math notranslate nohighlight">
+\[\begin{split}\boxed{\begin{aligned}
+\frac{\partial \xi}{\partial
+\tau}&amp;=\frac{\partial ^2 \xi}{\partial \mu^2},\\
+\xi(0,\tau )&amp;=0,\\
+\xi(1,\tau )&amp;=1,\\
+\xi(\mu, 0)&amp;=f_\xi(\mu),
+\end{aligned}}\end{split}\]</div>
+
+který je mnohem jednodušší pro následnou numerickou analýzu nebo
+analytické studium. Mimo jiné je tím ukázáno, že pro danou úlohu
+nemají podstatný význam jednotlivé veličiny samy o sobě, ale veličina
+<span class="math notranslate nohighlight">\(\displaystyle \tau = \frac{Dt}{\rho c L^2}\)</span>, definující bezrozměrný čas. Tato
+veličina se nazývá Fourierovo číslo. Obdobným postupem získáme jiná
+čísla důležitá pro popis jiných procesů, jako jsou Biotovo číslo
+(vedení tepla), Reynoldsovo číslo (proudění tekutin), Froudeho číslo
+(proudění tekutin) apod. Podobná nondimenzionalizace pro vlhkostní
+pole ve dřevě je v publikaci Horáček P., Fyzikální a mechanické
+vlastnosti dřeva. Viz též <a class="reference external" href="https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180">eopora</a>, rovnice (144) a rovnice následující.</p>
+</section>
+<section id="metoda-konecnych-diferenci">
+<h2><span class="section-number">12.4. </span>Metoda konečných diferencí<a class="headerlink" href="#metoda-konecnych-diferenci" title="Link to this heading">#</a></h2>
+<p>Vraťme se s aparátem matematického popisu vedení tepla k úloze hledání
+rozložení teploty na čtvercové desce, kterou jsme představili v
+přednášce o lineární algebře: Je dána deska čtvercového tvaru, jejíž okraje udržujeme na konstatních teplotách (každý okraj obecně na jiné teplotě) a hledáme rovnovážné rozložení teploty. Dvourozměrná rovnice vedení tepla pro homogenní izotropní desku s materiálovými charakteristikami <span class="math notranslate nohighlight">\(\displaystyle \rho\)</span>, <span class="math notranslate nohighlight">\(\displaystyle c\)</span> a <span class="math notranslate nohighlight">\(\displaystyle D\)</span> má tvar
+<div class="math notranslate nohighlight">
+\[\rho c \frac{\partial T}{\partial t}=D\frac{\partial^2 T}{\partial x^2}+D\frac{\partial^2 T}{\partial y^2}.\]</div>
+
+Ve stacionárním stavu se teplota nemění s časem a proto je levá strana nulová a rovnice se redukuje na
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}=0.\]</div>
+</p>
+<p>Použijeme stejnou myšlenku jako v lineární algebře: rozdělíme desku
+čtvercovou sítí na malé oblasti a budeme studovat teplotu v bodech
+této sítě, tj. v rozích jednotlivých čtverců, na které je deska
+čtvercovou sítí rozdělena.</p>
+<p>Z přednášky o derivacích a aproximaci víme, že funkci můžeme aproximovat v okolí námi zvoleného bodu Taylorovým polynomem a v kapitole o diferenciálních rovnicích jsme tuto aproximaci použili pro aproximaci druhé derivace konečnými diferencemi ve tvaru <div class="math notranslate nohighlight">
+\[f''(x)\approx \frac{1}{h^2}[f(x+h)-2f(x)+f(x-h)].\]</div>
+ Podobně pro parciální derivace funkce dvou proměnných <span class="math notranslate nohighlight">\(\displaystyle f(x,y)\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\frac {\partial ^2 f}{\partial x^2}&amp;\approx \frac{1}{h^2}[f(x+h,y)-2f(x,y)+f(x-h,y)]\\
+\frac {\partial ^2 f}{\partial y^2}&amp;\approx \frac{1}{h^2}[f(x,y+h)-2f(x,y)+f(x,y-h)]
+\end{aligned}
+\end{split}\]</div>
+
+a odsud
+<div class="math notranslate nohighlight">
+\[ \frac {\partial ^2 f}{\partial x^2} + \frac {\partial ^2 f}{\partial y^2} \approx \frac{1}{h^2}[f(x+h,y)+f(x-h,y)+f(x,y+h)+f(x,y-h)-4f(x,y)].\]</div>
+
+Z rovnice <div class="math notranslate nohighlight">
+\[\frac {\partial ^2 f}{\partial x^2} + \frac {\partial ^2 f}{\partial y^2} =0,\]</div>
+ popisující rozložení teploty vyplývá, že výraz v hranaté závorce musí být nulový, tj. <div class="math notranslate nohighlight">
+\[f(x,y)=\frac 14 [f(x+h,y)+f(x-h,y)+f(x,y+h)+f(x,y-h)].\]</div>
+
+To však znamená, že teplota v každém uzlovém bodě je průměrem teplot v
+okolních uzlových bodech. Přesně, jak jsme se (možná poněkud naivně)
+domnívali při představení úlohy v přednášce z lineární algebry. Nyní
+tento postup stavíme na solidní vědecký základ, založený na rovnici
+popisující fyzikální proces (rovnice vedení tepla) a na numerické
+aproximaci, která převede parciální diferenciální rovnici na soustavu
+lineárních rovnic.</p>
+
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/water_05.png" src="../_images/water_05.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.1 </span><span class="caption-text">Obrázek z demonstračního souboru programu FlexPDE (Lite verze zdarma) řeší rovnici pro podzemní vodu ve stacionárním stavu (div(k*grad(h)) + s = 0) za přítomnosti dvou studní a jednoho zasakovacího vrtu v nehomogenním prostředí.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Výše popsaná myšlenka je základem <strong>metody konečných diferencí.</strong> Bohužel je tato metoda
+poměrně omezená nutností, mít ekvidistantní rozložení uzlů. Proto se v
+praxi používají vyspělejší metody, metoda konečných prvků nebo metoda
+konečných objemů. Základní myšlenka je stejná (parciální diferenciální
+rovnice se převede na soustavu lineárních rovnic) a praktické
+provedení zpravidla matematicky triviální, protože vše potřebné pro
+výpočty je předprogramováno v softwaru určenému pro danou úlohu. Máme
+takto software umožňující simulovat vedení tepla, tepelné úniky,
+tepelné nebo mechanické namáhání, tok podzemní i povrchové vody a
+další důležité praktické aplikace. Uživatel jenom zadá geometrii, typ
+problému a okrajové a počáteční podmínky a program vypočte potřebná
+řešení a dle požadavků je různým způsobem interpretuje.</p>
+</section>
+<section id="ukazka-programu-flexpde">
+<h2><span class="section-number">12.5. </span>Ukázka programu FlexPDE<a class="headerlink" href="#ukazka-programu-flexpde" title="Link to this heading">#</a></h2>
+<p>Existuje široká škála programů pro řešení diferenciálních rovnic. V
+mnoha jsou předpřipravené modely, předdefinované fyzikální úlohy a
+někdy dokonce databáze materiálových vlastností. V jiných programech
+je řešená rovnice plně pod kontrolou autora modelu a je možné snadno
+řešit i multifyzikální úlohy (například současně modelovat teplotu a
+vlhkost v materiálu). Zástupce druhé skupiny je FlexPDE firmy <a class="reference external" href="https://www.pdesolutions.com/">PDE
+Solutions Inc.</a> Úloha s rozložením
+tepoty na čtvercové desce se zadanými teplotami na okrajích, na kterou
+jsme několikrát jako na motivaci narazili v lineární algebře a
+připomněli na předchozím slidu, by měla následující zápis a výstup.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TITLE</span> <span class="s1">&#39;Stacionarni teplota pro ctvercovou desku se zadanou teplotou na okrajich&#39;</span> 
+<span class="n">VARIABLES</span> <span class="n">T</span> 
+<span class="n">EQUATIONS</span> <span class="n">T</span><span class="p">:</span> <span class="n">div</span><span class="p">(</span><span class="n">grad</span><span class="p">(</span><span class="n">T</span><span class="p">))</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">INITIAL</span> <span class="n">VALUES</span> <span class="n">T</span><span class="o">=</span><span class="mi">10</span>
+
+<span class="n">BOUNDARIES</span>
+<span class="n">REGION</span> <span class="mi">1</span>
+    <span class="n">START</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="n">VALUE</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="o">=</span><span class="mi">30</span> <span class="n">LINE</span> <span class="n">TO</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
+    <span class="n">VALUE</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="o">=</span><span class="mi">40</span> <span class="n">LINE</span> <span class="n">TO</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">VALUE</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="o">=</span><span class="mi">20</span> <span class="n">LINE</span> <span class="n">TO</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
+    <span class="n">VALUE</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="o">=</span><span class="mi">10</span> <span class="n">LINE</span> <span class="n">TO</span> <span class="n">CLOSE</span> 
+
+<span class="n">PLOTS</span>
+  <span class="n">CONTOUR</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+  <span class="n">SURFACE</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<span class="n">END</span>
+</pre></div>
+</div>
+<p>Rovnice je v popisu modelu zadána jako divergence gradientu, což v kartézských souřadnicích ve 2D vede právě na rovnici
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}=0.\]</div>
+
+Jiná forma zápisu je přímo pomocí druhých parciálních derivací ve tvaru <code class="docutils literal notranslate"><span class="pre">DXX(T)+DYY(T)=0</span></code>.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/ctvercova_deska_01_001.png" src="../_images/ctvercova_deska_01_001.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.2 </span><span class="caption-text">Teplota znázorněná pomocí izoterm.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="../_images/ctvercova_deska_02_001.png" src="../_images/ctvercova_deska_02_001.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.3 </span><span class="caption-text">Teplota znázorněná pomocí barev a 3D grafu.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<img alt="../_images/mezi_rekama.png" src="../_images/mezi_rekama.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.4 </span><span class="caption-text">Model podzemní vody mezi rovnoběžnými řekami.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Poslední model je model podzemní vody s konstantními piezometrickýmí hladinami podél dvou rovnoběžných stran (mohou být například dvě řeky) a s rovnoměrně rozloženými zdroji (například nad oblastí jsou rovnoměrné srážky a voda rovnoměrně zasakuje). Řešením modelu vidíme odkud teče voda do které řeky. Tím je možno například usuzovat, kde po případné kontaminaci provádět sanační práce.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../dvojny_integral/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Dvojný integrál</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../shrnuti/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Shrnutí za předmět Matematika</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-reseni-diferencialnich-rovnic">12.1. Numerické řešení diferenciálních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-reseni-diferencialnich-rovnic-ve-2d-a-3d">12.2. Numerické řešení diferenciálních rovnic ve 2D a 3D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konkurence-dvou-populaci">12.2.1. Konkurence dvou populací</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-dravce-a-koristi">12.2.2. Model dravce a kořisti</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-epidemie">12.2.3. Model epidemie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nondimenzionalizace-a-bezrozmerne-veliciny">12.3. Nondimenzionalizace a bezrozměrné veličiny</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-konecnych-diferenci">12.4. Metoda konečných diferencí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ukazka-programu-flexpde">12.5. Ukázka programu FlexPDE</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 24.02.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

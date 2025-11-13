@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-08-16T12:40:17+02:00" />
+    <title>7. Diferenciální rovnice &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni07';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="8. Matice" href="cviceni08.html" />
+    <link rel="prev" title="6. Integrály II" href="cviceni06.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="16.08.2023"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Diferenciální rovnice</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-ode-a-ivp">7.1. Řešení ODE a IVP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tloustka-ledu">7.2. Tloušťka ledu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-vypousteni-nadrze">7.3. Model vypouštění nádrže</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problematika-jednoznacnosti-v-modelu-vypousteni-nadrze">7.4. Problematika jednoznačnosti v modelu vypouštění nádrže</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stavebniny-vedle-cebinskeho-nadrazi-model">7.5. Stavebniny vedle čebínského nádraží: model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stavebniny-vedle-cebinskeho-nadrazi-stabilita-reseni">7.6. Stavebniny vedle čebínského nádraží: stabilita řešení</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="diferencialni-rovnice">
+<h1><span class="section-number">7. </span>Diferenciální rovnice<a class="headerlink" href="#diferencialni-rovnice" title="Link to this heading">#</a></h1>
+<p><em>Umění najít řešení diferenciální rovnice je sympatické a naučíme se v úvodním příkladě. Není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu a připomeneme si v následujícím příkladě s tloušťkou ledu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech.</em></p>
+<section id="reseni-ode-a-ivp">
+<h2><span class="section-number">7.1. </span>Řešení ODE a IVP<a class="headerlink" href="#reseni-ode-a-ivp" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=xy^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dt}=te^y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\sqrt y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dr}{\mathrm dt}=kr^3,\ \ r(0)=r_0&gt;0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2\)</span></p></li>
+</ol>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\cdot y^2\)</span></p>
+<ul class="simple">
+<li><p>Konstantní řešení jsou řešení rovnice <div class="math notranslate nohighlight">
+\[ y^2=0,\]</div>
+ tj. je jediné konstantní řešení <div class="math notranslate nohighlight">
+\[ y=0.\]</div>
+</p></li>
+<li><p>Pro nekonstantní řešení dostaneme po separaci  <div class="math notranslate nohighlight">
+\[ y^{-2}\mathrm dy=x\mathrm dx \]</div>
+ a integrováním <div class="math notranslate nohighlight">
+\[ -\frac 1y=\frac 12 x^2+C.\]</div>
+</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dt}=t\cdot e^y\)</span></p>
+<ul class="simple">
+<li><p>Konstantní řešení jsou řešení rovnice <div class="math notranslate nohighlight">
+\[ e^y=0.\]</div>
+ Protože tato rovnice nemá řešení, zadaná diferenciální rovnice nemá konstantní řešení.</p></li>
+<li><p>Pro nekonstantní řešení dostaneme po separaci  <div class="math notranslate nohighlight">
+\[ e^{-y}\mathrm dy= t\mathrm dt\]</div>
+ a integrováním <div class="math notranslate nohighlight">
+\[ -e^{-y}=\frac 12 t^2 +C.\]</div>
+</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\cdot \sqrt y\)</span></p>
+<ul class="simple">
+<li><p>Konstantní řešení jsou řešení rovnice <div class="math notranslate nohighlight">
+\[ \sqrt y=0,\]</div>
+ tj. jediné řešení <div class="math notranslate nohighlight">
+\[ y=0.\]</div>
+</p></li>
+<li><p>Pro nekonstantní řešení dostaneme po separaci  <div class="math notranslate nohighlight">
+\[ \frac 1{\sqrt y}\mathrm dy=x\mathrm dx \]</div>
+ a integrováním <div class="math notranslate nohighlight">
+\[ 2\sqrt y=\frac 12 x^2+C.\]</div>
+</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1\)</span></p>
+<ul class="simple">
+<li><p>Konstantní řešení <div class="math notranslate nohighlight">
+\[y=0\]</div>
+ (viz předchozí příklad) nesplňuje počáteční podmínku a proto jej nemusíme uvažovat</p></li>
+<li><p>Obecné řešení  <div class="math notranslate nohighlight">
+\[ 2\sqrt y=\frac 12x^2 +C\]</div>
+ dává po dosazení <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y=1\)</span> rovnici <div class="math notranslate nohighlight">
+\[2\sqrt 1=0+C.\]</div>
+ Odsud dostáváme <span class="math notranslate nohighlight">\(\displaystyle C=2\)</span> a řešení zadané počáteční úlohy je <div class="math notranslate nohighlight">
+\[2\sqrt y=\frac 12 x^2+2.\]</div>
+</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dr}{\mathrm dt}=k\cdot r^3,\ \ r(0)=r_0&gt;0\)</span></p>
+<ul class="simple">
+<li><p>Konstantní řešení jsou řešení rovnice <div class="math notranslate nohighlight">
+\[ r^3=0,\]</div>
+ tj. jediné konstantní řešení je <div class="math notranslate nohighlight">
+\[ r=0\]</div>
+ a toto řešení nesplňuje počáteční podmínku.</p></li>
+<li><p>Pro nekonstantní řešení dostaneme po separaci  <div class="math notranslate nohighlight">
+\[ r^{-3}\mathrm dr=k\mathrm dt \]</div>
+ a integrováním <div class="math notranslate nohighlight">
+\[ -\frac 12 r^{-2}=kt+C.\]</div>
+ Dosazením počáteční podmínky <span class="math notranslate nohighlight">\(\displaystyle t=0\)</span>, <span class="math notranslate nohighlight">\(\displaystyle r=r_0\)</span> dostáváme <div class="math notranslate nohighlight">
+\[ -\frac 12 r_0^{-2}=C.\]</div>
+ Tím je dána konstanta <span class="math notranslate nohighlight">\(\displaystyle C\)</span> a po použití této konstanty v obecném řešení dostáváme řešení počáteční úlohy ve tvaru <div class="math notranslate nohighlight">
+\[ -\frac 12 r^{-2}=kt-\frac 12 r_0^{-2}.\]</div>
+</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dm}{\mathrm dt}=m+2\)</span>, <span class="math notranslate nohighlight">\(\displaystyle m(0)=0\)</span></p>
+<ul class="simple">
+<li><p>Konstantní řešení jsou řešení rovnice <div class="math notranslate nohighlight">
+\[ m+2=0,\]</div>
+ tj. <div class="math notranslate nohighlight">
+\[ m=-2\]</div>
+ a toto řešení nesplňuje počáteční podmínku.</p></li>
+<li><p>Pro nekonstantní řešení dostaneme po separaci  <div class="math notranslate nohighlight">
+\[ \frac1{m+2}\mathrm dm=dt \]</div>
+ a integrováním <div class="math notranslate nohighlight">
+\[ \ln|m+2|=t+C.\]</div>
+ Po dosazení počáteční podmínky <span class="math notranslate nohighlight">\(\displaystyle t=m=0\)</span> dostáváme <div class="math notranslate nohighlight">
+\[C=\ln 2\]</div>
+ a počáteční úloha má řešení <div class="math notranslate nohighlight">
+\[\ln(m+2)=t+\ln (2).\]</div>
+ (Vzhledem k počáteční podmínce je <span class="math notranslate nohighlight">\(\displaystyle m\)</span> kladné a nemusíme psát absolutní hodnotu.)</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dm}{\mathrm dt}=m+2\)</span>, <span class="math notranslate nohighlight">\(\displaystyle m(0)=-2\)</span></p>
+<ul class="simple">
+<li><p>Konstantní řešení jsou řešení rovnice <div class="math notranslate nohighlight">
+\[ m+2=0,\]</div>
+ tj. <div class="math notranslate nohighlight">
+\[ m=-2.\]</div>
+ Toto řešení splňuje počáteční podmínku.</p></li>
+<li><p>Pravá strana má ohraničenou (dokonce konstantní) derivaci podle <span class="math notranslate nohighlight">\(\displaystyle m\)</span>. Proto je řešení každé počáteční úlohy určeno jednoznačně. Řešení z předchozího bodu je jediné a další nemusíme hledat.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</div></section>
+<section id="tloustka-ledu">
+<h2><span class="section-number">7.2. </span>Tloušťka ledu<a class="headerlink" href="#tloustka-ledu" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id1">
+<img alt="../_images/ledni_medved.jpg" src="../_images/ledni_medved.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 7.15 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Takzvaný Stefanův zákon (J. Stefan, „Uber die Theorie der Eisbildung, insbesondere „uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve
+stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište
+tento fakt pomocí vhodného matematického modelu a najděte řešení
+vzniklé diferenciální rovnice.</p>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{\mathrm dh}{\mathrm dt}&amp;=\frac kh\\
+h\,\mathrm dh&amp;=k\, \mathrm dt\\
+\int h\,\mathrm dh&amp;=\int k\, \mathrm dt\\
+\frac {h^2}{2}&amp;=kt+C\\
+\end{aligned}
+\end{split}\]</div>
+</section>
+</div></section>
+<section id="model-vypousteni-nadrze">
+<h2><span class="section-number">7.3. </span>Model vypouštění nádrže<a class="headerlink" href="#model-vypousteni-nadrze" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id2">
+<img alt="../_images/voda_plastovky.jpg" src="../_images/voda_plastovky.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 7.16 </span><span class="caption-text">www.rodovystatek.cz</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Z fyziky je známo, že rychlost s jakou
+vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny
+(protože se mění potenciální energie úměrná výšce na kinetickou
+energii úměrnou druhé mocnině rychlosti). Proto je i rychlost s jakou
+se zmenšuje objem vody v nádrži úměrná odmocnině výšky
+hladiny.</p>
+<p>Ukažte, že matematickým popisem procesu je diferenciální rovnice.
+Napište rovnici pro výšku hladiny vody v nádrži jako funkci času.
+Uvažujte tři případy:
+nádrž <em>cylindrického tvaru</em> (válec postavený na podstavu),
+nádrž ve tvaru
+<em>kvádru</em>
+a nádrž ve tvaru <em>kužele</em> otočeného vrcholem dolů (trychtýř).</p>
+<p><em>V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky.</em></p>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Buď <span class="math notranslate nohighlight">\(\displaystyle V\)</span> objem vody a <span class="math notranslate nohighlight">\(\displaystyle h\)</span> výška hladiny od dna.
+Podle zadání ve všech případech platí <div class="math notranslate nohighlight">
+\[\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h\]</div>
+ a musíme derivaci <span class="math notranslate nohighlight">\(\displaystyle \frac {\mathrm dV}{\mathrm dt}\)</span> vyjádřit pomocí <span class="math notranslate nohighlight">\(\displaystyle \frac {\mathrm dh}{\mathrm dt}\)</span>.</p>
+<p>Pro cylindr, kvádr nebo jakoukoliv nádrž se svislými stěnami je objem úměrný výšce hladiny, <span class="math notranslate nohighlight">\(\displaystyle V=k_2 h\)</span>, a proto <span class="math notranslate nohighlight">\(\displaystyle \frac {\mathrm dV}{\mathrm dt}=k_2\frac {\mathrm dh}{\mathrm dt}\)</span>. Odsud
+<div class="math notranslate nohighlight">
+\[k_2\frac {\mathrm dh}{\mathrm dt}=\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h,\]</div>
+
+tj.
+<div class="math notranslate nohighlight">
+\[\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{k_2}\sqrt h\]</div>
+
+a pro <span class="math notranslate nohighlight">\(\displaystyle k=\frac{k_1}{k_2}\)</span> má model tvar
+<div class="math notranslate nohighlight">
+\[\frac {\mathrm dh}{\mathrm dt}=-k\sqrt h.\]</div>
+</p>
+<p>Pro kužel platí díky konstantnímu úhlu u vrcholu vztah <span class="math notranslate nohighlight">\(\displaystyle V=k_3h^3\)</span> (díky podobnosti je objem přímo úměrný třetí mocnině libovolného délkového parametru) a proto
+<span class="math notranslate nohighlight">\(\displaystyle \frac {\mathrm dV}{\mathrm dt}=k_3 \times 3h^2 \frac {\mathrm dh}{\mathrm dt}\)</span>.
+Odsud
+<div class="math notranslate nohighlight">
+\[3k_3 h^2 \frac {\mathrm dh}{\mathrm dt}=\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h,\]</div>
+
+tj.
+<div class="math notranslate nohighlight">
+\[\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{3k_3}h^{-3/2}\]</div>
+
+a po přeznačení konstanty má model pro kuželovou nádrž tvar
+<div class="math notranslate nohighlight">
+\[\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.\]</div>
+</p>
+</section>
+</div></section>
+<section id="problematika-jednoznacnosti-v-modelu-vypousteni-nadrze">
+<h2><span class="section-number">7.4. </span>Problematika jednoznačnosti v modelu vypouštění nádrže<a class="headerlink" href="#problematika-jednoznacnosti-v-modelu-vypousteni-nadrze" title="Link to this heading">#</a></h2>
+<div class="shorten" data-text="Příklad ukazuje, že nemusí být vždy jednoznačně určené řešení a že to není fyzikální nesmysl. Zde není jednoznačnost při prodlužování zpětně v čase.">
+
+<figure class="align-default" id="id3">
+<img alt="../_images/voda_plastovky.jpg" src="../_images/voda_plastovky.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 7.17 </span><span class="caption-text">www.rodovystatek.cz</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Dříve jsme odvodili rovnici
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dh}{\mathrm dt}=-k\sqrt h\]</div>
+
+popisující úbytek hladiny vody v nádrži tvaru kvádru, ze které vypouštíme vodu.</p>
+<ol class="arabic simple">
+<li><p>Zkontrolujte, že pro <span class="math notranslate nohighlight">\(\displaystyle h&gt;0\)</span> má každá počáteční úloha jediné řešení. Interpretujte tento výsledek prakticky.</p></li>
+<li><p>Pro <span class="math notranslate nohighlight">\(\displaystyle h=0\)</span> by řešení nemuselo být určeno jednoznačně. A opravdu
+není. Řešením je například <span class="math notranslate nohighlight">\(\displaystyle h(t)=0\)</span> nebo <div class="math notranslate nohighlight">
+\[\begin{split}h(t)=   \begin{cases}
+ \frac 14 k^2 t^2 &amp; t&lt;0\\
+ 0 &amp; t\geq 0.
+\end{cases}\end{split}\]</div>
+
+Zkontrolujte dosazením (pozor: pro <span class="math notranslate nohighlight">\(\displaystyle t&lt;0\)</span> platí <span class="math notranslate nohighlight">\(\displaystyle \sqrt {t^2}=|t|=-t\)</span>) a rozmyslete, jestli nejednoznačnost je jenom matematický trik, nebo jestli má
+fyzikální interpretaci.</p></li>
+</ol>
+<div class="proof example dropdown admonition" id="example-3">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Ad 1: Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv z nich.</p>
+<ul class="simple">
+<li><p><em>Podle obecné věty o jednoznačnosti:</em> Stačí ověřit, že pravá strana má ohraničenou parciální derivaci podle <span class="math notranslate nohighlight">\(\displaystyle h\)</span>. Protože platí
+<div class="math notranslate nohighlight">
+\[\frac{\partial }{\partial h}(k\sqrt h)=k\frac 12
+h^{-1/2}=\frac{k}{2\sqrt h}\]</div>
+ a tato derivace je definovaná a
+ohraničená v nějakém okolí libovolného bodu splňujícího <span class="math notranslate nohighlight">\(\displaystyle h&gt;0\)</span>.
+Podle věty o existenci a jednoznačnosti řešení obecné
+diferenciální rovnice má počáteční úloha právě jedno řešení.</p></li>
+<li><p><em>Podle věty o jednoznačnosti pro rovnici se separovanými proměnnými:</em> Stačí ověřit,
+že část závislá na <span class="math notranslate nohighlight">\(\displaystyle h\)</span> je nenulová. Toto jistě platí, protože pro
+<span class="math notranslate nohighlight">\(\displaystyle h&gt;0\)</span> je <span class="math notranslate nohighlight">\(\displaystyle \sqrt{h}\neq 0\)</span>.</p></li>
+</ul>
+<p>Pokud je tedy v nádrži nějaká voda, je jednoznačně dáno, jak bude vytékat a je možné vypočítat, jaká bude v libovolném okamžiku hladina.</p>
+<p>Ad 2: Pro <span class="math notranslate nohighlight">\(\displaystyle h=\frac 14 k^2 t^2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle t&lt;0\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      \frac{\mathrm dh}{\mathrm dt}&amp;=\frac 14 k^2 \cdot 2t = \frac 12 k^2 t\\
+      -k\sqrt h&amp;=-k\sqrt{\frac 14 k^2 t^2} = - k \frac 12 |k| \cdot |t| =       - k \frac 12 k (-t) = \frac 12 k^2 t
+    \end{aligned}  \end{split}\]</div>
+
+a obě strany rovnice jsou stejné. Pro <span class="math notranslate nohighlight">\(\displaystyle h=0\)</span> je dosazení triviální.</p>
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle h(t_0)=0\)</span>, může to být proto, že voda v čase <span class="math notranslate nohighlight">\(\displaystyle t_0\)</span> právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například <span class="math notranslate nohighlight">\(\displaystyle h(t)=0\)</span> je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce <span class="math notranslate nohighlight">\(\displaystyle h(t)=\frac 14 k^2t^2\)</span> pro <span class="math notranslate nohighlight">\(\displaystyle t&lt;0\)</span> odpovídá tomu, že pro <span class="math notranslate nohighlight">\(\displaystyle t&lt;0\)</span> v nádrži voda byla a vytekla v čase <span class="math notranslate nohighlight">\(\displaystyle t=0\)</span>.</p>
+</section>
+</div></div>
+</section>
+<section id="stavebniny-vedle-cebinskeho-nadrazi-model">
+<h2><span class="section-number">7.5. </span>Stavebniny vedle čebínského nádraží: model<a class="headerlink" href="#stavebniny-vedle-cebinskeho-nadrazi-model" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id4">
+<img alt="../_images/pokros.jpg" src="../_images/pokros.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 7.18 </span><span class="caption-text">vlastní</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Hromada sypkého materiálu má tvar kužele. Úhel u vrcholu je
+konstantní, daný mechanickými vlastnostmi materiálu a je nezávislý na
+objemu. Předpokládejme, že personál stavebnin přisypává na hromadu
+materiál konstantní rychlostí (v jednotkách objemu za jednotku
+času). Tato hromada je však v poměrně otevřené krajině a vítr
+rozfoukává materiál po okolí. Je rozumné předpokládat, že rozfoukávání
+(opět v jednotkách objemu za jednotku času) se děje rychlostí úměrnou
+povrchu návětrné strany pláště. Vyjádřete proces kvantitativně pomocí
+derivací.  Napište rovnici pro derivaci objemu hromady podle času.</p>
+<p><em>Toto je podobný model jako model vypouštění nádrže, ale kratší. Opět máme po přepisu zadání do matematického modelu dvě veličiny měnící se s časem v jedné rovnici. Derivace objemu, která nás zajímá, již v rovnici přítomna naštěstí je. Stačí vyjádřit obsah pomocí objemu, nejlépe pomocí rozměrové analýzy.</em></p>
+<div class="proof example dropdown admonition" id="example-4">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Rychlost s jakou se mění objem je <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dV}{\mathrm dt}\)</span>, rychlost přisypávání označme <span class="math notranslate nohighlight">\(\displaystyle R\)</span>, povrch návětrné strany <span class="math notranslate nohighlight">\(\displaystyle S\)</span>.
+Podle zadání platí
+<div class="math notranslate nohighlight">
+\[  \frac{\mathrm dV}{\mathrm dt} = R - k_0S.\]</div>
+
+Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměry, povrch kužele, nebo i povrch poloviny pláště, tj. povrch návětrné strany. Z rozměrové analýzy na základě Buckinghamova Pi-teorému z přednášky je zřejmé, že musí platit úměrnost mezi takovými mocninami těchto veličin, pro které jednotky „pasují“, Existuje tedy konstanta taková, že <div class="math notranslate nohighlight">
+\[S=k_1V^{\frac 23}.\]</div>
+ Spojením těchto dvou vztahů dostáváme
+<div class="math notranslate nohighlight">
+\[  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle r\)</span> a <span class="math notranslate nohighlight">\(\displaystyle k=k_0k_1\)</span> jsou konstanty.</p>
+</section>
+</div></section>
+<section id="stavebniny-vedle-cebinskeho-nadrazi-stabilita-reseni">
+<h2><span class="section-number">7.6. </span>Stavebniny vedle čebínského nádraží: stabilita řešení<a class="headerlink" href="#stavebniny-vedle-cebinskeho-nadrazi-stabilita-reseni" title="Link to this heading">#</a></h2>
+
+<figure class="align-default" id="id5">
+<img alt="../_images/pokros.jpg" src="../_images/pokros.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 7.19 </span><span class="caption-text">vlastní</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Hromada sypkého materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný
+mechanickými vlastnostmi materiálu a je nezávislý na
+objemu. V předchozím příkladě jsme sestavili diferenciální rovnici popisující růst hromady ve tvaru
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dV}{\mathrm dt}=R-kV^{\frac 23},\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle R\)</span> je rychlost přisypávání a <span class="math notranslate nohighlight">\(\displaystyle k\)</span> konstanta.</p>
+<ol class="arabic simple">
+<li><p>Existuje konstantní řešení? Pokud ano, je stabilní nebo nestabilní? Zdůvodněte.</p></li>
+<li><p>Může hromada skončit i při neustálém přisypávání celá rozfoukaná?</p></li>
+<li><p>Mohou pracovníci navršit hromadu do libovolné výšky anebo pro velkou hromadu je již rozfoukávání rychlejší než přisypávání?</p></li>
+</ol>
+<div class="proof example dropdown admonition" id="example-5">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Označme <span class="math notranslate nohighlight">\(\displaystyle f(V)=R-kV^{\frac 23}\)</span>.
+Konstantní řešení je řešením rovnice <span class="math notranslate nohighlight">\(\displaystyle f(V)=0\)</span>, tj. <div class="math notranslate nohighlight">
+\[R-kV^{\frac 23}=0.\]</div>
+ Odsud
+<div class="math notranslate nohighlight">
+\[V_0=\left(\frac{R}{k}\right)^{3/2}.\]</div>
+ Protože <span class="math notranslate nohighlight">\(\displaystyle f\)</span> klesá v bodě <span class="math notranslate nohighlight">\(\displaystyle V_0\)</span>, je toto řešení stabilní.</p>
+<p>Protože <span class="math notranslate nohighlight">\(\displaystyle f(0)&gt;0\)</span>, malá hromada vždy roste a proto nemůže skončit celá rozfoukaná. Pro malý objem je přisypávání intenzivnější než rozfoukávání.</p>
+<p>Protože <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je pro velké <span class="math notranslate nohighlight">\(\displaystyle V\)</span> záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou.</p>
+</section>
+</div></section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cviceni06.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Integrály II</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cviceni08.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Matice</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-ode-a-ivp">7.1. Řešení ODE a IVP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tloustka-ledu">7.2. Tloušťka ledu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-vypousteni-nadrze">7.3. Model vypouštění nádrže</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problematika-jednoznacnosti-v-modelu-vypousteni-nadrze">7.4. Problematika jednoznačnosti v modelu vypouštění nádrže</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stavebniny-vedle-cebinskeho-nadrazi-model">7.5. Stavebniny vedle čebínského nádraží: model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stavebniny-vedle-cebinskeho-nadrazi-stabilita-reseni">7.6. Stavebniny vedle čebínského nádraží: stabilita řešení</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 16.08.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

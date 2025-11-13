@@ -1,0 +1,952 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-12-01T09:59:40+01:00" />
+    <title>9. Soustavy lineárních rovnic &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e99fe4b9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'soustavy/index';</script>
+    <script src="../_static/custom.js?v=74b03a85"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="10. Vektorová pole, tok, zákony zachování" href="../vektorove_pole/index.html" />
+    <link rel="prev" title="8. Inverzní matice, determinanty" href="../inverzni_matice/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="01.12.2023"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni00.html">Úvod</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Soustavy lineárních rovnic</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#varianty-zapisu-soustavy-linearnich-rovnic">9.1. Varianty zápisu soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustava-linearnich-rovnic">9.2. Soustava lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorovy-zapis-soustavy-linearnich-rovnic">9.3. Vektorový zápis soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maticovy-zapis-soustavy-linearnich-rovnic">9.4. Maticový zápis soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vyuziti-inverzni-matice-pro-reseni-soustavy-linearnich-rovnic">9.5. Využití inverzní matice pro řešení soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverzni-matice-k-diagonalni-matici">9.6. Inverzní matice k diagonální matici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteracni-metoda-reseni-soustav-linearnich-rovnic">9.7. Iterační metoda řešení soustav lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hodnost-matice">9.8. Hodnost matice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-hodnosti">9.9. Výpočet hodnosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#existence-a-jednoznacnost-reseni-soustavy-linearnich-rovnic">9.10. Existence a jednoznačnost řešení soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussova-eliminace">9.11. Gaussova eliminace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussova-seidelova-iteracni-metoda">9.12. Gaussova-Seidelova iterační metoda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">9.13. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="soustavy-linearnich-rovnic">
+<h1><span class="section-number">9. </span>Soustavy lineárních rovnic<a class="headerlink" href="#soustavy-linearnich-rovnic" title="Link to this heading">#</a></h1>
+<div class="admonition-motivace admonition">
+<p class="admonition-title">Motivace</p>
+<ul class="simple">
+<li><p>Pro popis přírodních dějů je ideální jazyk derivací, protože umožňuje pracovat s okamžitými rychlostmi změn fyzikálních veličin. Pokud mechanismus děje známe, je snadné naformulovat pomocí derivací příslušný matematický model, poté ovšem přijde fáze řešení. Tady málokdy vystačíme s analytickými metodami, které jsme si ukázali v přednášce věnované diferenciálním rovnicím. Často se uchylujeme k numerickému řešení. V naprosté většině případů se toto řešení redukuje na řešení soustav lineárních rovnic. Tyto soustavy ovšem bývají obrovské, řádově obsahující tisíce rovnic a neznámých a proto středoškolské metody nejsou použitelné (například nejsou dostatečně rychlé, nebo mohou být numericky nestabilní). Z tohoto důvodu je nutné se problematice soustav rovnic věnovat podrobněji.</p></li>
+<li><p>Nalezení vlastních směrů matice je zásadní pro zjednodušení popisu anizotropního materiálu, protože díky tomu, že matice má v soustavě respektující vlastní směry diagonální tvar, se redukuje počet materiálových konstant. Hledání těchto směrů je vlastně řešení soustavy lineárních rovnic. Situace je relativně jednoduchá, protože soustava má dimenzi dva nebo tři a k tomu nekonečně mnoho řešení, což výpočty urychluje. (Například ve dvourozměrném případě to znamená, že jedna rovnice je násobkem druhé a nemusíme ji uvažovat.)</p></li>
+<li><p>Podrobněji viz <a class="reference external" href="https://user.mendelu.cz/marik/mtk/soustavy_motivace.pdf">zde</a>. Numerický výpočet vlastních čísel <a class="reference external" href="https://sagecell.sagemath.org/?z=eJyVVbtu4zgU7Q34H4gEgaWBVhtnMY0BFe4WWGyQYpDGMRa0zNiMJZLDh2LpH_IBi6lSThHMF2Qb2f-194qS7HiSYgxDosjLc1-Hh-fkRktS0SUV0pGcWp5yUpRKptxSUmTUWMFJyk1GyeG7YBsrdRkPB-fkRlpGFIAIupZLwbrFA4qSS56RJcvYhsiFppVrbRxCVvBugL4wYWVr_MBIzioOD2E4WjEL7849-pFW-m235UYzk_GckTU3Vq40zYmWVSYrBrYNnosJmv6N6TEEN2XOrObpBrNSsuKWFxD6kt1zwcEFIA8HPFdSWyJcrkpCDRGqn4NCqUzajC9iVeII11VmewPD6EJqgdNGGESbJkLFVGtaBrPZVTSeR7Nx9Md8HhJyjg2on0X9cgis_u67wYaDx4gUJAH3ccYFzVYx46tgCvtgY1G_Krl7YrYtTv2SrsnuqX4xLGvqhnXe_8AAIDmyYvYfk1LAWQUumoaT4QBgyNR5fPCYuyyYRi70C5pZB1kEB99C6jyYuvD3kykXhujkOhlfwm84cOusBNDZ1ScwVByfmoqlzJtXEJJ7qQknXBD4XrHgOpxDOh2HTM50ORx0VAKco-LBMJUm4CGUEMaGCxzPQ_RhvmobnPo6coZhHTvqPJh2Bg4BEHUj3XDgmQiuT4vWoDlEa3cj4Dskb8mNZVGaCxuctQS8ExfmTpxdTMN-5fb4pE3IhTm7eGyY0bXVNxVOYc8Q1hPkLboBguP52EggR84P5xGWMulUihyZ3InGSdE4yX9hZ-_uLymslhARFwXTlZDG8g72wKUiKuIvoSerhXYYJYUsqKifO694HKXbPVEjdt86MEi4WYZ3AOJi4TCTB2AFKELGDzXoNetQyd8--p1hEKS3u2YPXl2W0lCQitK3cNLFT3PgVTPVRi_e33AM6GXqQ0C6PQV8bwMWRGm6gbQ2JShZwYTXv9x1CggjJEpDLTy6xWwSXc7JG7745hG1_xd54_YgL6-op_tnXOysvJTuvmEWcglNbkQz-UkoiKd4_QIcr7-_R_K2CjdNCngfvL0sgFy-eqci7utz5D3EJg0H93wVEbo1EAwIa2zcAnXWBOPoKiKwaHjFkmB8FX32ykO3YAn2s8s5fsR4GfhyR2TBBeJ8vgybJQPJWW4zFoz-7K8Mf1E0p788SW7UOGhCmXHAh_9BUToNGA7K1mD8kUEf4hg-4FqIocLWMo2JBdtkayJSJiU8144lbeiKZgxskpFh3OQ8Hf2Uwi2vHDSqonCWlHT7_7itX-EWgCOGNW7G3T1wtJsaxVIbjNhX2N3OZ2zFQDAb4GR0c9xvX4OmE2v5GIT_A0gl31s=&amp;amp;lang=python&amp;amp;interacts=eJyLjgUAARUAuQ==">zde</a></p></li>
+</ul>
+</div>
+<div class="Ylink">  <a href="https://youtu.be/yAozKR9QBls">Minivideo</a> </div>
+<section id="varianty-zapisu-soustavy-linearnich-rovnic">
+<h2><span class="section-number">9.1. </span>Varianty zápisu soustavy lineárních rovnic<a class="headerlink" href="#varianty-zapisu-soustavy-linearnich-rovnic" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/E1Ey_xz6_ig">Minivideo</a> </div>
+<p>Uvažujme následující tři problémy:</p>
+<ol class="arabic simple">
+<li><p>Najděte všechna reálná čísla <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span>, splňující dvojici rovnic <div class="math notranslate nohighlight">
+\[\begin{split} \begin{aligned}   4x_1&amp;+5x_2=7\\   \phantom{4}x_1&amp;-2x_2=4 \end{aligned} \end{split}\]</div>
+</p></li>
+<li><p>Najděte všechna reálná čísla <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span>, splňující vektorovou rovnici <div class="math notranslate nohighlight">
+\[\begin{split}   \begin{aligned} \begin{pmatrix}       4\\1     \end{pmatrix}     x_1     +     \begin{pmatrix}       5\\-2     \end{pmatrix}     x_2     =     \begin{pmatrix}       7\\4     \end{pmatrix}   \end{aligned}\end{split}\]</div>
+</p></li>
+<li><p>Najděte všechna reálná čísla <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span>, splňující maticovou rovnici <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}     \begin{pmatrix}       4&amp;5\\1&amp;-2     \end{pmatrix}     \begin{pmatrix}       x_1\\x_2     \end{pmatrix}     =     \begin{pmatrix}       7\\4     \end{pmatrix}   \end{aligned} \end{split}\]</div>
+</p></li>
+</ol>
+<p>Všechny problémy jsou ekvivalentní a jedná se o jiný zápis téhož.
+Jednou však používáme soustavu rovnic, vektory a jejich lineární
+kombinaci a jednou matice a maticový součin!</p>
+</section>
+<section id="soustava-linearnich-rovnic">
+<h2><span class="section-number">9.2. </span>Soustava lineárních rovnic<a class="headerlink" href="#soustava-linearnich-rovnic" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span>Definice </span> (Soustava lineárních rovnic)</p>
+<section class="definition-content" id="proof-content">
+<p><em>Soustavou <span class="math notranslate nohighlight">\(\displaystyle m\)</span> lineárních rovnic  o <span class="math notranslate nohighlight">\(\displaystyle n\)</span> neznámých</em> nazýváme soustavu rovnic</p>
+<div class="math notranslate nohighlight" id="equation-soustava1">
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-soustava1" title="Link to this equation">#</a></span>\[\begin{split}  \begin{gathered}   a_{11}x_1+a_{12}x_2+a_{13}x_3+\cdots+a_{1n}x_n=b_1 \\   a_{21}x_1+a_{22}x_2+a_{23}x_3+\cdots+a_{2n}x_n=b_2 \\   a_{31}x_1+a_{32}x_2+a_{33}x_3+\cdots+a_{3n}x_n=b_3 \\   \vdots \\   a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\cdots+a_{mn}x_n=b_m \end{gathered} \end{split}\]</div>
+<p>Proměnné <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span>, …, <span class="math notranslate nohighlight">\(\displaystyle x_n\)</span> nazýváme <em>neznámé</em>. Reálná čísla <span class="math notranslate nohighlight">\(\displaystyle a_{ij}\)</span> nazýváme <em>koeficienty levých stran</em>, reálná čísla <span class="math notranslate nohighlight">\(\displaystyle b_j\)</span> <em>koeficienty pravých stran</em> soustavy rovnic. <em>Řešením soustavy rovnic</em> rozumíme uspořádanou <span class="math notranslate nohighlight">\(\displaystyle n\)</span>-tici reálných čísel <span class="math notranslate nohighlight">\(\displaystyle [t_1, t_2, \ldots, t_n]\)</span> po jejichž dosazení za neznámé (v tomto pořadí) do soustavy dostaneme ve všech rovnicích identity.</p>
+</section>
+</div><div class="proof definition admonition" id="definition-1">
+<p class="admonition-title"><span>Definice </span> (Matice soustavy)</p>
+<section class="definition-content" id="proof-content">
+<p>Matici
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   A=\left(
+    \begin{matrix}
+      a_{11}&amp; a_{12}&amp; a_{13}&amp; \cdots{}&amp; a_{1n}\\
+      a_{21}&amp; a_{22}&amp; a_{23}&amp; \cdots{}&amp; a_{2n}\\
+      \vdots{} &amp;\vdots{}&amp; {} &amp;\ddots{}&amp; \vdots{}\\
+      a_{m1}&amp; a_{m2}&amp; a_{m3}&amp; \cdots{}&amp; a_{mn}\\      
+    \end{matrix}\right)
+  \end{split}\]</div>
+
+nazýváme <em>maticí soustavy</em> <a class="reference internal" href="#equation-soustava1">(9.1)</a>.
+Matici <div class="math notranslate nohighlight">
+\[\begin{split}
+A_r=\left(
+  \begin{array}{ccccc|c}
+    a_{11}&amp; a_{12}&amp; a_{13}&amp; \cdots{}&amp; a_{1n}&amp;b_1\\
+    a_{21}&amp; a_{22}&amp; a_{23}&amp; \cdots{}&amp; a_{2n}&amp;b_2\\
+    \vdots{} &amp;\vdots{}&amp; {} &amp;\ddots{}&amp; \vdots{}&amp;\vdots\\
+    a_{m1}&amp; a_{m2}&amp; a_{m3}&amp; \cdots{}&amp; a_{mn}&amp;b_m\\
+  \end{array}
+\right)
+\end{split}\]</div>
+
+nazýváme <em>rozšířenou maticí soustavy</em> <a class="reference internal" href="#equation-soustava1">(9.1)</a>.</p>
+</section>
+</div></section>
+<section id="vektorovy-zapis-soustavy-linearnich-rovnic">
+<h2><span class="section-number">9.3. </span>Vektorový zápis soustavy lineárních rovnic<a class="headerlink" href="#vektorovy-zapis-soustavy-linearnich-rovnic" title="Link to this heading">#</a></h2>
+<p>Soustavu <a class="reference internal" href="#equation-soustava1">(9.1)</a> lze ekvivalentně přepsat do vektorového
+tvaru
+ <div class="math notranslate nohighlight">
+\[\begin{split}    \begin{pmatrix}      a_{11}\\a_{21}\\\vdots\\a_{m1}    \end{pmatrix}    x_1+    \begin{pmatrix}      a_{12}\\a_{22}\\\vdots\\a_{m2}    \end{pmatrix}    x_2+    \begin{pmatrix}      a_{13}\\a_{23}\\\vdots\\a_{m3}    \end{pmatrix}    x_3+\cdots+    \begin{pmatrix}      a_{1n}\\a_{2n}\\\vdots\\a_{mn}    \end{pmatrix}    x_n=     \begin{pmatrix}      b_{1}\\b_{2}\\\vdots\\b_{m}    \end{pmatrix}. \end{split}\]</div>
+
+Vidíme tedy, že se vlastně jedná o problém, vyjádřit vektor složený
+z čísel na pravé straně soustavy rovnic jako  lineární
+kombinaci vektorů, které tvoří sloupce  matice
+soustavy.</p>
+</section>
+<section id="maticovy-zapis-soustavy-linearnich-rovnic">
+<h2><span class="section-number">9.4. </span>Maticový zápis soustavy lineárních rovnic<a class="headerlink" href="#maticovy-zapis-soustavy-linearnich-rovnic" title="Link to this heading">#</a></h2>
+<p>Soustavu <a class="reference internal" href="#equation-soustava1">(9.1)</a> lze ekvivalentně přepsat do maticového
+tvaru pomocí  maticového součinu
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(
+    \begin{matrix}
+      a_{11}&amp; a_{12}&amp; \cdots{}&amp; a_{1n}\\
+      a_{21}&amp; a_{22}&amp;  \cdots{}&amp; a_{2n}\\
+      \vdots{} &amp;\vdots{} &amp;\ddots{}&amp; \vdots{}\\
+      a_{m1}&amp; a_{m2}&amp;  \cdots{}&amp; a_{mn}\\
+    \end{matrix}\right) 
+\left(  \begin{matrix}
+    x_1\\x_2\\ \vdots \\x_n
+  \end{matrix}
+\right)    = \left(  \begin{matrix}
+    b_1\\b_2\\ \vdots \\b_m
+  \end{matrix}
+\right).
+\end{split}\]</div>
+
+Tento tvar se používá často v inženýrských výpočtech pro
+úspornost. Symbolicky zpravidla píšeme soustavu lineárních rovnic ve
+tvaru
+<div class="math notranslate nohighlight">
+\[
+    A\vec x=\vec b,
+    \]</div>
+
+nebo <div class="math notranslate nohighlight">
+\[AX=B\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle A\)</span> je  matice soustavy a <span class="math notranslate nohighlight">\(\displaystyle \vec b\)</span> resp. <span class="math notranslate nohighlight">\(\displaystyle B\)</span> je vektor pravých stran.</p>
+</section>
+<section id="vyuziti-inverzni-matice-pro-reseni-soustavy-linearnich-rovnic">
+<h2><span class="section-number">9.5. </span>Využití inverzní matice pro řešení soustavy lineárních rovnic<a class="headerlink" href="#vyuziti-inverzni-matice-pro-reseni-soustavy-linearnich-rovnic" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/YpbOWJ_6ZS4">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/matrix.jpg" src="../_images/matrix.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 9.1 </span><span class="caption-text">Inverzní matice umožní zapsat elegantně řešení i neuvěřitelně komplexní a složité soustavy rovnic. Pro praktické počítání se však tato metoda moc nehodí a budeme ji muset ještě o něco vylepšit na iterační metodu. Zdroj: pixabay.com.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Z úvodní přednášky o lineární algebře víme, že pomocí maticového násobení je možné soustavu lineárních rovnic zapsat ve tvaru <div class="math notranslate nohighlight">
+\[AX=B,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle A\)</span> je matice soustavy, <span class="math notranslate nohighlight">\(\displaystyle X\)</span> je sloupcový vektor neznámých a <span class="math notranslate nohighlight">\(\displaystyle B\)</span> je vektor pravých stran. Pokud má matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> inverzní matici, můžeme pomocí této matice soustavu vyřešit. Po vynásobení rovnice inverzní maticí zleva dostáváme
+<div class="math notranslate nohighlight">
+\[A^{-1}(AX)=A^{-1}B\]</div>
+
+a po uplatnění asociativního zákona
+<div class="math notranslate nohighlight">
+\[(A^{-1}A)X=A^{-1}B.\]</div>
+
+Protože výraz v závorce je součinem matice s maticí inverzní, je tento
+součin roven jednotkové matici, která je neutrálním prvkem při
+násobení a proto okamžitě dostáváme řešení soustavy ve tvaru
+<div class="math notranslate nohighlight">
+\[X=A^{-1}B.\]</div>
+
+Jako přirozený důsledek vidíme, že řešení je určeno
+jednoznačně. Známe-li inverzní matici, můžeme řešení dokonce vypočítat
+pro libovolnou pravou stranu velmi pohodlně a rychle pomocí maticového
+násobení. Bohužel, výpočet inverzní matice je zpravidla velmi drahý
+(vyžaduje velké množství operací) a numericky málo stabilní. Proto je
+tento postup užitečným teoretickým nástrojem, ale v praxi postupujeme
+poněkud odlišně.</p>
+</section>
+<section id="inverzni-matice-k-diagonalni-matici">
+<h2><span class="section-number">9.6. </span>Inverzní matice k diagonální matici<a class="headerlink" href="#inverzni-matice-k-diagonalni-matici" title="Link to this heading">#</a></h2>
+<p>Diagonální matice (tj. matice, které mají nenulové prvky jenom na hlavní
+diagonále) se vzhledem k násobení chovají velice hezky: součinem je
+taková matice, která je diagonální a na hlavní diagonále má prvky
+vytvořené jako součin odpovídajících prvků násobených matic.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}  2&amp;0&amp;0 \\  0&amp;3&amp;0 \\  0&amp;0&amp;12  \end{pmatrix}\begin{pmatrix}  5&amp;0&amp;0 \\  0&amp;7&amp;0 \\  0&amp;0&amp;1  \end{pmatrix}=\begin{pmatrix}  10&amp;0&amp;0 \\  0&amp;21&amp;0 \\  0&amp;0&amp;12  \end{pmatrix}\end{split}\]</div>
+<p>Proto je snadné zařídit, aby v hlavní diagonále vyšly jedničky. Stačí
+uvažovat podobně jako v následujícím příkladě.
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}  2&amp;0&amp;0 \\  0&amp;3&amp;0 \\  0&amp;0&amp;12  \end{pmatrix}\begin{pmatrix}  \frac 12&amp;0&amp;0 \\  0&amp;\frac 13&amp;0 \\  0&amp;0&amp;\frac1{12}  \end{pmatrix}=\begin{pmatrix}  1&amp;0&amp;0 \\  0&amp;1&amp;0 \\  0&amp;0&amp;1  \end{pmatrix}\end{split}\]</div>
+
+a tedy
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}  2&amp;0&amp;0 \\  0&amp;3&amp;0 \\  0&amp;0&amp;12  \end{pmatrix}^{-1}=\begin{pmatrix}  \frac 12&amp;0&amp;0 \\  0&amp;\frac 13&amp;0 \\  0&amp;0&amp;\frac1{12}  \end{pmatrix}.\end{split}\]</div>
+</p>
+</section>
+<section id="iteracni-metoda-reseni-soustav-linearnich-rovnic">
+<h2><span class="section-number">9.7. </span>Iterační metoda řešení soustav lineárních rovnic<a class="headerlink" href="#iteracni-metoda-reseni-soustav-linearnich-rovnic" title="Link to this heading">#</a></h2>
+<p>Na předchozím slidu jsme viděli, že je jednoduché najít inverzní
+matici k matici diagonální. Toho využijeme pro řešení soustavy
+lineárních rovnic iterační metodou. Představíme si nejednodušší, přesto však velmi mocnou metodu, <strong>Jacobiho metodu</strong>.</p>
+<p>V úvodní přednášce z lineární algebry jsme modelovali rozložení teploty ve dvourozměrné
+desce pomocí soustavy rovnic
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} \phantom{-}4&amp;-1&amp; \phantom{-}0&amp;-1\\ -1&amp; \phantom{-}4&amp;-1&amp; \phantom{-}0\\ \phantom{-}0 &amp;-1&amp; \phantom{-}4&amp;-1\\ -1&amp; \phantom{-}0&amp;-1&amp; \phantom{-}4\end{pmatrix}\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix}=\begin{pmatrix}  30\\60\\70\\40\end{pmatrix}.\end{split}\]</div>
+
+Pro
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{pmatrix} \phantom{-}4&amp;-1&amp; \phantom{-}0&amp;-1\\ -1&amp; \phantom{-}4&amp;-1&amp; \phantom{-}0\\ \phantom{-}0 &amp;-1&amp; \phantom{-}4&amp;-1\\ -1&amp; \phantom{-}0&amp;-1&amp; \phantom{-}4\end{pmatrix}, \quad X=\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix},\quad B=\begin{pmatrix}  30\\60\\70\\40\end{pmatrix}\end{split}\]</div>
+ tedy</p>
+<div class="math notranslate nohighlight" id="equation-soustava1b">
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-soustava1b" title="Link to this equation">#</a></span>\[AX=B.\]</div>
+<p>Rozdělíme matici <span class="math notranslate nohighlight">\(\displaystyle A\)</span> na součet diagonální matice a matice s nulami v hlavní diagonále, tj. na součet matic
+<div class="math notranslate nohighlight">
+\[\begin{split}D=\begin{pmatrix} 4&amp;0&amp;0&amp;0\\ 0&amp; 4&amp;0&amp;0\\0 &amp;0&amp; 4&amp;0\\ 0&amp;0&amp;0&amp; 4\end{pmatrix}\quad \text{a}\quad T=\begin{pmatrix} \phantom{-}0&amp;-1&amp; \phantom{-}0&amp;-1\\ -1&amp; \phantom{-}0&amp;-1&amp; \phantom{-}0\\ \phantom{-}0 &amp;-1&amp; \phantom{-}0&amp;-1\\ -1&amp; \phantom{-}0&amp;-1&amp; \phantom{-}0\end{pmatrix}\end{split}\]</div>
+
+Potom můžeme psát rovnici ve tvaru
+<div class="math notranslate nohighlight">
+\[(D+T)X=B\]</div>
+
+a odsud
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}DX+TX&amp;=B\\ DX&amp;=B-TX\end{aligned}\end{split}\]</div>
+ a využitím inverzní matice</p>
+<div class="math notranslate nohighlight" id="equation-soustava2b">
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-soustava2b" title="Link to this equation">#</a></span>\[X=D^{-1}(B-TX).\]</div>
+<p>Definujme nyní iterační vzorec</p>
+<div class="math notranslate nohighlight" id="equation-soustava3b">
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-soustava3b" title="Link to this equation">#</a></span>\[X_{k+1}=D^{-1}(B-TX_k).\]</div>
+<p>Podobně jako u Markovových řetězců můžeme najít postupnými iteracemi z
+vhodného (nebo libovolného) počátečního stavu stacionární stav, kdy se
+<span class="math notranslate nohighlight">\(\displaystyle X_k\)</span> dalšími iteracemi nemění a tím dostaneme řešení rovnice <a class="reference internal" href="#equation-soustava2b">(9.3)</a>,
+která je ekvivalentní rovnici <a class="reference internal" href="#equation-soustava1b">(9.2)</a>. Protože inverzní matici počítáme
+pro matici diagonální, je tento výpočet velice rychlý a levný. Vlastně
+není vůbec nutné mít k dispozici maticový počet. Iterace dostaneme
+tak, že z první rovnice osamostatníme <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span>, z druhé rovnice <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span>
+atd. Výchozí odhad dosadíme do pravých stran a obdržíme zpřesněný
+odhad. Postup opakujeme, dokud nejsou dvě následující iterae
+dostatečně blízké.</p>
+<p><strong>Poznámka.</strong> Předchozí postup je možné použít jenom v případě, že
+iterační proces <a class="reference internal" href="#equation-soustava3b">(9.4)</a> konverguje. Pokud by nekonvergoval, není možné o
+řešení rovnice nic říct, pouze to, že Jacobiho metoda
+nefunguje. Postačující podmínka, kdy Jacobiho metoda konverguje, je
+aby každý řádek měl v hlavní diagonále číslo, které je v absolutní
+hodnotě větší než je součet absolutních hodnot zbylých čísel v tomto
+řádku. Matice, která splňuje tuto podmínku se nazývá <em>řádkově ostře
+diagonálně dominantní matice</em> a pro takovou matici Jacobiho metoda
+konverguje. Podobně je možné uvažovat <em>sloupcově ostře diagonálně
+dominantní matice</em> porovnáním absolutních hodnot diagonálních prvků se
+součty absolutních hodnot ostatních prvků v daných sloupcích a i pro
+sloupcově ostře diagonální matice metoda konverguje. I přes
+jednoduchost tohoto kriteria se s diagonálně dominantními maticemi
+setkáváme v aplikacích poměrně často. Podíváme-li se, jak byla
+odvozena soustava popisující rozložení teploty na tepelně vodivé
+desce (poslední slajd minulé přednášky), není to až takové překvapení.</p>
+<p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJxtj8FqwzAMhu-BvIPoLk5wMnfzOij4kJDTTjv0EMjC8GK31aFycMzY3n5O03YMZozRL_3SJ1fqpIPHL9Z1khdrLuLT8y5Gi4zxnDqrJb_Ivs_SpL41Pwq-EfxZcCn6rAxe0zS6ybJoSpNGyRyNpYDh-_3SIWOlQfpU6_v_iztVFU2atDfEk-DX-xcBdzC6QQc7EIIzR23A28kSzuy984CABNF_sOxBZNs0gXhaRWxeIGd1scvbLCJHjxSArV704D7w6OBkgzN6C2-04m1JzOABw6Rkdv7W1f4aaWQvzMVMrCrjbOvn_fKaw2_nD3USakw=&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">Online výpočet.</a></p>
+<p>Podobnými iteračními metodami je možné efektivně řešit soustavy o
+tisících rovnic a neznámých. Výpočty probíhají rychle a nejsou náročné
+na paměť jako u přímých metod, známých například ze střední
+školy. Tímto způsobem se řeší soustavy rovnic při modelování namáhání
+konstrukcí, vedení tepla, proudění vody apod.</p>
+</section>
+<section id="hodnost-matice">
+<h2><span class="section-number">9.8. </span>Hodnost matice<a class="headerlink" href="#hodnost-matice" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/HF-RDBZUenY">Minivideo</a> </div>
+<p>Iterační metoda funguje pro soustavy s jediným řešením. Pokud však hledáme vlastní vektory, musíme být schopni umět řešit i soustavy s nekonečně mnoha řešeními.</p>
+<p>Matice řádu <span class="math notranslate nohighlight">\(\displaystyle m\times n\)</span> obsahuje celkem <span class="math notranslate nohighlight">\(\displaystyle m\cdot n\)</span> čísel. Jedná se tedy
+o relativně komplikovaný objekt. V matematice se často snažíme
+složitější objekty nějakým způsobem charakterizovat pomocí objektů
+jednodušších, např. pomocí čísel. Jedno už známe, determinant. Dalším
+z těchto čísel je hodnost matice, kterou si nadefinujeme nyní.</p>
+<div class="proof definition admonition" id="definition-2">
+<p class="admonition-title"><span>Definice </span> (Hodnost matice)</p>
+<section class="definition-content" id="proof-content">
+<p>Buď <span class="math notranslate nohighlight">\(\displaystyle A\)</span> matice. <em>Hodností matice</em> rozumíme
+maximální počet lineárně nezávislých řádků matice.
+Hodnost matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> označujeme <span class="math notranslate nohighlight">\(\displaystyle {h(A)}\)</span>.</p>
+</section>
+</div><p>Poznámka: Hodnost je v anglické literatuře označována jako <em>rank</em>.</p>
+<p>Schodovitý tvar jsme si představili u determinantu. U matice ve
+schodovitém tvaru je určení determinantu velmi jednoduché. Podobný
+efekt vidíme i u hodnosti.</p>
+<div class="proof definition admonition" id="definition-3">
+<p class="admonition-title"><span>Definice </span> (Schodovitý tvar)</p>
+<section class="definition-content" id="proof-content">
+<p>Řekneme, že matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> je ve <em>schodovitém tvaru</em>, jestliže
+případné nulové řádky jsou uspořádány na konci matice a nenulové
+jsou uspořádány tak, že každý následující řádek začíná větším počtem
+nul než řádek předchozí.</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-4">
+<p class="admonition-title"><span>Věta </span> (Hodnost matice ve schodovitém tvaru)</p>
+<section class="theorem-content" id="proof-content">
+<p>Hodnost matice, která je ve schodovitém
+tvaru je rovna počtu jejích nenulových řádků.</p>
+</section>
+</div><p><strong>Příklad.</strong>  Matice <span class="math notranslate nohighlight">\(\displaystyle A=   \begin{pmatrix}     2&amp;2&amp;2&amp;3&amp;-1&amp;5\\     0&amp;0&amp;1&amp;0&amp;0&amp;3\\     0&amp;0&amp;0&amp;-1&amp;2&amp;1\\     0&amp;0&amp;0&amp;0&amp;0&amp;0   \end{pmatrix}\)</span> je ve schodovitém tvaru a <span class="math notranslate nohighlight">\(\displaystyle h(A)=3\)</span>. Matice   <span class="math notranslate nohighlight">\(\displaystyle B=  \begin{pmatrix}     2&amp;2&amp;2&amp;3&amp;-1&amp;5\\      0&amp;0&amp;1&amp;0&amp;0&amp;3\\      0&amp;0&amp;3&amp;-1&amp;2&amp;1    \end{pmatrix}\)</span> není ve  schodovitém tvaru a její  hodnost na první pohled nepoznáme.</p>
+</section>
+<section id="vypocet-hodnosti">
+<h2><span class="section-number">9.9. </span>Výpočet hodnosti<a class="headerlink" href="#vypocet-hodnosti" title="Link to this heading">#</a></h2>
+<p>Výpočet hodnosti se provádí postupným nahrazením zadané matice maticí, která má stejnou hodnost, ale postupně se přibližuje schodovitému tvaru. Uvedeme si jenom základní postup. Tento se sice dá vylepšit, pro nás je však důležité, že i bez jakýchkoliv vylepšení vždy vede k cíli. (Alespoň teoreticky.)</p>
+<div class="proof theorem admonition" id="theorem-5">
+<p class="admonition-title"><span>Věta </span> (Řádkové operace zachovávající hodnost matice)</p>
+<section class="theorem-content" id="proof-content">
+<p>Následující operace nemění hodnost matice:</p>
+<ol class="arabic simple">
+<li><p>vynechání řádku složeného ze samých nul, nebo vynechání řádku,
+který je totožný s jiným řádkem, nebo vynechání řádku, který je
+násobkem jiného řádku,</p></li>
+<li><p>vynásobení nebo vydělení libovolného řádku nenulovým číslem,</p></li>
+<li><p>záměna pořadí řádků,</p></li>
+<li><p>ponechání jednoho řádku beze změny a opakované přičtení
+libovolných násobků tohoto řádku k nenulovým násobkům ostatních
+řádků matice.</p></li>
+</ol>
+<p>Libovolnou matici lze konečným počtem těchto úprav převést do schodovitého tvaru.</p>
+</section>
+</div><p>Následující věta udává, že veškerá tvrzení, uvedená v souvislosti s
+hodností pro řádky matice, se dají přeformulovat i pro sloupce matice.</p>
+<div class="proof theorem admonition" id="theorem-6">
+<p class="admonition-title"><span>Věta </span> (Hodnost transponované matice)</p>
+<section class="theorem-content" id="proof-content">
+<p>Transponování nemění  hodnost matice.</p>
+</section>
+</div></section>
+<section id="existence-a-jednoznacnost-reseni-soustavy-linearnich-rovnic">
+<h2><span class="section-number">9.10. </span>Existence a jednoznačnost řešení soustavy lineárních rovnic<a class="headerlink" href="#existence-a-jednoznacnost-reseni-soustavy-linearnich-rovnic" title="Link to this heading">#</a></h2>
+<p>V případě, že matice soustavy je čtvercová již víme, že řešení je
+určeno jednoznačně právě tehdy, když má matice soustavy matici
+inverzní.  O počtu řešení v obecném případě obdélníkové matice, kdy
+matici inverzní nemá smysl uvažovat, nám dávají informaci dvě
+následující věty.  První se týká existence řešení a druhá identifikuje
+případ, kdy řešení je určeno jednoznačně.</p>
+<div class="proof theorem admonition" id="theorem-7">
+<p class="admonition-title"><span>Věta </span> (Frobeniova věta, Kronecker-Capelliho věta)</p>
+<section class="theorem-content" id="proof-content">
+<p>Soustava lineárních rovnic je řešitelná právě tehdy, když její matice soustavy a rozšířená matice soustavy mají stejnou hodnost.</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-8">
+<p class="admonition-title"><span>Věta </span> (Jednoznačnost řešení)</p>
+<section class="theorem-content" id="proof-content">
+<p>Nechť soustava lineárních rovnic má řešení. Toto řešení je právě jedno, pokud je společná hodnost matice soustavy a rozšířené matice soustavy rovna počtu neznámých. V opačném případě je společná hodnost matice a rozšířené matice soustavy menší než počet neznámých.</p>
+</section>
+</div></section>
+<section id="gaussova-eliminace">
+<h2><span class="section-number">9.11. </span>Gaussova eliminace<a class="headerlink" href="#gaussova-eliminace" title="Link to this heading">#</a></h2>
+<p>Spočívá v reprezentaci soustavy pomocí rozšířené matice soustavy a
+převodu této matice na schodovitý tvar pomocí řádkových operací
+zachovávajících hodnost. Tyto operace zachovávají i množinu řešení
+soustavy. Jakmile je matice ve schodovitém tvaru, zpětnou substitucí
+postupně dopočítáváme jednotlivé proměnné. (Formálně to u čtvercových
+regulárních matic odpovídá použití inverzní matice k matici, která má
+pod hlavní diagonálou nuly. Ale postup funguje i pro obecnější matice
+a dá se realizovat jednoduchými prostředky a postupným dosazováním.)</p>
+<p>Gaussova eliminace je velice flexibilní a univerzální, umožní nám
+řešit i soustavy mající nekonečně mnoho řešení. V tomto případě
+dokážeme zapsat řešení pomocí parametrů.</p>
+<p><strong>Příklad.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  x_1+2x_2+2x_3+x_4&amp;=0\\
+  x_1-x_2+x_3-2x_4&amp;=1\\
+  x_2-2x_3+x_4&amp;=2
+\end{aligned}
+\end{split}\]</div>
+<p>Rozšířená matice soustavy je
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(
+  \begin{array}{cccc|c}
+ 1&amp; 2&amp; 2&amp; 1&amp; 0\\
+ 1&amp; -1&amp; 1&amp; -2&amp; 1\\
+ 0&amp; 1&amp; -2&amp; 1&amp; 2
+  \end{array}\right)
+  \end{split}\]</div>
+</p>
+<p>V prvním kroku převedeme na tvar, kdy jednom jeden řádek začíná nenulovým prvkem. První řádek už nijak neupravujeme a opíšeme jej. Místo druhého řádku napíšeme jeho součet s <span class="math notranslate nohighlight">\(\displaystyle (-1)\)</span>-násobkem prvního řádku.
+<div class="math notranslate nohighlight">
+\[\begin{split} \left( \begin{array}{cccc|c}
+ 1&amp; 2&amp; 2&amp; 1&amp; 0\\
+ 0&amp; -3&amp; -1&amp; -3&amp; 1\\
+ 0&amp; 1&amp; -2&amp; 1&amp; 2
+    \end{array}\right)
+    \end{split}\]</div>
+</p>
+<p>V dalším kroku převedeme na tvar, kdy z řádků začínajících jednou nulou ponecháme jenom jeden a ostatní upravíme tak, aby začínaly alespoň dvěma nulami. K tomu je vhodné nejprve přehodit poslední dva řádky, abychom mohli použít k vytváření nul jedničku.
+<div class="math notranslate nohighlight">
+\[\begin{split} \left( \begin{array}{cccc|c}
+ 1&amp; 2&amp; 2&amp; 1&amp; 0\\
+ 0&amp; 1&amp; -2&amp; 1&amp; 2\\
+ 0&amp; -3&amp; -1&amp; -3&amp; 1
+    \end{array}\right)
+    \end{split}\]</div>
+</p>
+<p>Nyní provedeme potřebnou úpravu. První dva řádky opíšeme. Místo třetího řádku napíšeme jeho součet s trojnásobkem druhého řádku.
+<div class="math notranslate nohighlight">
+\[\begin{split} \left( \begin{array}{cccc|c}
+ 1&amp; 2&amp; 2&amp; 1&amp; 0\\
+ 0&amp; 1&amp; -2&amp; 1&amp; 2\\
+ 0&amp; 0&amp; -7&amp; 0&amp; 7
+    \end{array}\right)
+    \end{split}\]</div>
+</p>
+<p>Nyní přepíšme do tvaru soustavy rovnic</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+    x_1+2x_2+2x_3+x_4&amp;=0\\
+  x_2-2x_3+x_4&amp;=2\\
+-7x_3\phantom{+x_4}&amp;=7
+\end{aligned}
+\end{split}\]</div>
+<p>Z poslední rovnice máme snadno <span class="math notranslate nohighlight">\(\displaystyle x_3=-1\)</span>. Tuto hodnotu použijeme ve
+druhé rovnici.
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  x_2-2x_3+x_4&amp;=2\\
+  x_2+2+x_4&amp;=2\\
+  x_2+x_4&amp;=0\\
+\end{aligned}
+\end{split}\]</div>
+
+Protože však máme pořád dvě neznámé, jednu z nich
+zvolíme za parametr. Nechť je například <span class="math notranslate nohighlight">\(\displaystyle x_4\)</span> a nechť je parametr označen jako <span class="math notranslate nohighlight">\(\displaystyle t\)</span>.
+<div class="math notranslate nohighlight">
+\[
+  x_4=t
+\]</div>
+
+Rovnice má poté tvar
+<div class="math notranslate nohighlight">
+\[
+  x_2+t=0.
+\]</div>
+
+Odsud již snadno dostáváme
+<div class="math notranslate nohighlight">
+\[
+  x_2=-t.
+\]</div>
+
+Vypočtené hodnoty dosadíme do první rovnice a určíme zbývající
+neznámou <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span>.
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  x_1+2x_2+2x_3+x_4&amp;=0\\
+  x_1-2t-2+t&amp;=0\\
+  x_1&amp;=2+t
+\end{aligned}
+\end{split}\]</div>
+
+Řešení je <span class="math notranslate nohighlight">\(\displaystyle x_1=2+t\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_2=-t\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_3=-1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_4=t\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle t\)</span> je libovolné reálné číslo. Vektorově (maticově) máme řešení ve tvaru
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix} = \begin{pmatrix}  2+t\\-t\\-1\\t\end{pmatrix}=\begin{pmatrix}  2\\0\\-1\\0\end{pmatrix}+t\begin{pmatrix}  1\\-1\\0\\1\end{pmatrix}.\end{split}\]</div>
+</p>
+</section>
+<section id="gaussova-seidelova-iteracni-metoda">
+<h2><span class="section-number">9.12. </span>Gaussova-Seidelova iterační metoda<a class="headerlink" href="#gaussova-seidelova-iteracni-metoda" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/KBg1tllDhxM">Minivideo</a> </div>
+<p>Gaussova-Seidelova iterační metoda je jakýsi mezikrok mezi Jacobiho
+iterační metodou a Gausovou eliminací. Postupujeme jako v Jacobiho
+metodě, ale všechny zpřesněné hodnoty použijeme okamžitě, když jsou k
+dispozici. Nikoliv až v další iteraci jako u Jacobiho metody. Metoda
+konverguje za stejných podmínek jako Jacobiho metoda, ale rychleji a
+přesto nevznikají vyšší nároky na výpočetní výkon.</p>
+<p>Použijeme příklad z <a class="reference external" href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Seidel_method#An_example_for_the_equation_version">Wikipedie</a>.
+Soustavu <div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{rrrrl}
+10x_1 &amp;-   x_2 &amp;+  2x_3 &amp;       &amp; = 6, \\
+ -x_1 &amp;+ 11x_2 &amp;-   x_3 &amp;+ 3x_4 &amp; =  25, \\
+ 2x_1 &amp;-   x_2 &amp;+ 10x_3 &amp;-  x_4 &amp; =  -11, \\
+      &amp;   3x_2 &amp;-   x_3 &amp;+ 8x_4 &amp; =  15.
+\end{array}\end{split}\]</div>
+
+s diagonálně dominantní maticí převedeme na iterační tvar
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  x_1 &amp; = x_2/10 - x_3/5 + 3/5, \\           
+x_2 &amp; = x_1/11 + x_3/11 - 3x_4/11 + 25/11, \\
+x_3 &amp; = -x_1/5  + x_2/10 + x_4/10  - 11/10, \\
+x_4 &amp; = -3x_2/8  + x_3/8 + 15/8.
+\end{aligned}
+\end{split}\]</div>
+
+Poté vyjdeme z počátečního odhadu řešení a dosazujeme do pravých
+stran.</p>
+<p>U Jacobiho metody pro počáteční odhad vypočteme nejprve všechny
+pravé strany a dosadíme do proměnných na levé straně jako zpřesnění
+počáteční aproximace. Tento postup opakujeme.</p>
+<p>U Gaussovy-Seidlovy metody nejprve pomocí počátečního odhadu vypočteme
+z první rovnice <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span> a tuto hodnotu ihned použijeme při výpočtu <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span>
+z další rovnice. Obojí, <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span> i <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span> už využijeme při výpočtu <span class="math notranslate nohighlight">\(\displaystyle x_3\)</span> a
+tak dále. Po výpočtu <span class="math notranslate nohighlight">\(\displaystyle x_4\)</span> je první iterace dokončena a postup opět
+opakujeme, dokud dvě po sobě jdoucí iterace nejsou dostatečně blízké.</p>
+<p>S nulovou počáteční aproximací dostáváme v prvním průchodu
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_1 &amp; = 3/5 = 0.6, \\
+x_2 &amp; = 0.6/11 + 25/11 = 2.3272, \\
+x_3 &amp; = -0.6/5 +(2.3272)/10-11/10 = -0.9873,\\ 
+x_4 &amp; = -3(2.3272)/8 +(-0.9873)/8+15/8 = 0.8789.
+\end{aligned}
+\end{split}\]</div>
+
+Jak vidno, vypočtenou hodnotu <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span> ihned použijeme pro výpočet <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span>. Obě tyto hodnoty ihned použijeme pro výpočet <span class="math notranslate nohighlight">\(\displaystyle x_3\)</span> a tak dále. V dalších iteracích postup <a class="reference external" href="https://sagecell.sagemath.org/?z=eJytUMGKwjAQvRf6D0NPraakk6RShJ4X9rpXL3WtEpAorcLk73eyCYt4UJFNIC8z782DeefJuguUxefwfdrajevjKao8IxSkBGlBpm_E782z_WkCC9bBNLjDWGJTrfMM-HiEHkhJbKAG0rKFJYQXEq0CjRKR-0wz1qAXZGJHtYxJqVlZs5Rnl8mR0QTkGcTwSVITpOyiZAfRt2PAVnZRcLuCR-GV8Fp4E8lzXN0KV7IOdvZgL3O_qkKt7mp9V5ubmqNKVsXGfQzXea6_Rrsbj39pvhkpPY6UXo6UXo-UnkX6b6n9AO8SliU=&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">opakujeme</a>. Mimo jiné hodnoty v paměti přímo přepisujeme a nemusíme držet v paměti starou a novou hodnotu.</p>
+</section>
+<section id="shrnuti-hlavni-myslenky">
+<h2><span class="section-number">9.13. </span>Shrnutí, hlavní myšlenky<a class="headerlink" href="#shrnuti-hlavni-myslenky" title="Link to this heading">#</a></h2>
+<div class="Ylink">  <a href="https://youtu.be/aeUs2y2QrRw">Minivideo</a> </div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id2">
+<img alt="../_images/message.jpg" src="../_images/message.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 9.2 </span><span class="caption-text">A jaká je hlavní message? Zdroj: pixabay.com</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Řada numerických metod pro řešení modelů založených na matematickém modelování fyzikálních zákonů se v nějaké fázi redukuje na řešení soustav lineárních rovnic. Kromě toho se se soustavami lineárních rovnic setkáváme při hledání vlastních směrů matic, což je důlležité pro matice reprezentující materiálové charakteristiky.</p></li>
+<li><p>Ukázali jsme si tři různé formulace soustav lineárních rovnic, klasickou pomocí rovnic, vektorovou pomocí jedné vektorové rovnice a maticovou pomocí jediné maticové rovnice a jediné maticové operace, maticového součinu.</p></li>
+<li><p>Ukázali jsme si, že v případě známé inverze k matici soustavy se řešení redukuje na součin inverzní matice s maticí pravých stran.</p></li>
+<li><p>Kromě možnosti využít inverzní matici jsme si ukázali další tři metody řešení. Dvě čistě numerické metody (Jacobiho a Gaussova-Seidelova metoda) a jednou univerzální (Gaussova eliminační metoda).</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../inverzni_matice/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Inverzní matice, determinanty</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../vektorove_pole/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Vektorová pole, tok, zákony zachování</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#varianty-zapisu-soustavy-linearnich-rovnic">9.1. Varianty zápisu soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soustava-linearnich-rovnic">9.2. Soustava lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorovy-zapis-soustavy-linearnich-rovnic">9.3. Vektorový zápis soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maticovy-zapis-soustavy-linearnich-rovnic">9.4. Maticový zápis soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vyuziti-inverzni-matice-pro-reseni-soustavy-linearnich-rovnic">9.5. Využití inverzní matice pro řešení soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverzni-matice-k-diagonalni-matici">9.6. Inverzní matice k diagonální matici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteracni-metoda-reseni-soustav-linearnich-rovnic">9.7. Iterační metoda řešení soustav lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hodnost-matice">9.8. Hodnost matice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-hodnosti">9.9. Výpočet hodnosti</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#existence-a-jednoznacnost-reseni-soustavy-linearnich-rovnic">9.10. Existence a jednoznačnost řešení soustavy lineárních rovnic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussova-eliminace">9.11. Gaussova eliminace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussova-seidelova-iteracni-metoda">9.12. Gaussova-Seidelova iterační metoda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">9.13. Shrnutí, hlavní myšlenky</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 01.12.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
