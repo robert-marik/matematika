@@ -1,0 +1,91 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[czech]{babel}
+\usepackage[a4paper, margin=.75in]{geometry}
+\begin{document}
+
+
+\title{Lineární algebra}
+\maketitle
+\thispagestyle{empty}
+
+\section*{Vektory}
+
+\textit{Vektor} je uspořádaná množina čísel, která může reprezentovat bod v prostoru,
+směr nebo jiný matematický objekt. V praxi reprezentuje často 
+hnací faktor transportního jevu, například spád teploty pro vedení tepla, spád 
+koncentrace pro difuzi nebo spád hydraulické výšky pro proudění podzemní vody.
+
+Základní operací s vektory je lineární kombinace vektorů, která je definována
+tak, že předepsaná operace se provádí po složkách. 
+
+\section*{Matice}
+
+\textit{Matice} reprezentuje lineární zobrazení mezi dvěma vektorovými prostory. Například v případě
+vedení tepla ve stěně matice popisuje, jaký tok tepla je vyvolán určitý spádem
+teploty.
+Součin matice $A$ a sloupcového vektoru $\vec u$ je vektor, který vznikne jako
+lineární kombinace sloupců matice $A$ s koeficienty z vektoru $\vec u$, tj. 
+\[
+A \vec u = u_1 \vec a_1 + u_2 \vec a_2 + ... + u_n \vec a_n
+\]
+, kde $\vec a_1, \vec a_2, ..., \vec a_n$ jsou sloupce matice $A$ a $u_1, u_2, ..., u_n$ jsou složky vektoru $\vec u$.
+
+Z praktického hlediska mají důležité postavení vektory, které se transformují na vektory rovnoběžné se svým
+vzorem, tj. vektory, pro které platí
+\[A \vec v = \lambda \vec v
+\]
+, kde $\lambda$ je reálné číslo. V tomto případě se vektor v
+nazývá
+\textit{vlastní vektor} matice A. 
+U materiálů s anizotropními vlastnostmi (např. kompozity, horniny, dřevo)
+vlastní vektory určují směry, ve kterých materiál vykazuje chování, které je
+současně extrémní (např. maximální nebo minimální vodivost) a jednoduché
+(odezva na podnět je rovnoběžná s tímto podnětem). Vlastní hodnoty pak udávají 
+míru této odezvy. Pokud jsou vlastní směry materiálu navzájem ortogonální, lze je využít
+k vytvoření zjednodušeného matematického modelu, který popisuje chování materiálu
+v libovolném směru jako kombinaci chování v těchto vlastních směrech.
+Matematickým důsledkem je, že matici materiálových vlastností je možné převést
+na diagonální tvar.
+
+Součin dvou matic $A$ a $B$ je definován jako matice, jejíž sloupce jsou získány
+jako součiny matice $A$ a jednotlivých sloupců matice $B$. Neutrálním prvkem
+maticového součinu je jednotková matice $I$, která má na hlavní diagonále
+jedničky a jinde nuly. Pokud pro matici $A$ existuje matice $A^{-1}$ taková, že platí
+\[A A^{-1} = A^{-1} A = I\]
+potom se matice $A^{-1}$ nazývá \textit{inverzní matice} k matici $A$.
+
+\section*{Soustavy lineárních rovnic}
+
+Pomocí maticového součinu je možné zapsat \textit{soustavy lineárních rovnic}
+ve tvaru
+\[A X = B,\]
+{}\indent kde $A$ je matice koeficientů, X je vektor neznámých a B je vektor pravých stran rovnic.
+Řešení soustavy je možné získat pomocí inverzní matice jako
+\[X = A^{-1} B\]
+Tento postup je možný v případě, že matice A je čtvercová a má nenulový
+determinant ($det A\neq 0$). Výpočet inverzní matice je však výpočetně náročný a v praxi se používají
+efektivnější metody řešení soustav lineárních rovnic. Příkladem je \textit{Jordanova
+metoda}, která je založena na faktu, že je snadné získat inverzní matici k
+diagonální matici. Je-li matice A součtem diagonální matice D a matice T, 
+kde matice T má na hlavní diagonále nuly, pak je možné rovnici přepsat do tvaru 
+\[X = D^{-1}(B-TX)\]
+a řešit pomocí iteračního vztahu 
+\[X_{k+1} = D^{-1}(B-TX_k).\]
+
+
+
+
+
+\vfill
+{\bfseries Instrukce:} \itshape V textu jsou typografické chyby týkající se sazby matematických výrazů. 
+Najděte je a rukou vyznačte barevně ve vytištěném textu. Papír podepište v pravém horním rohu, napište zkratku 
+oboru, který studujete
+a odevzdejte na přednášce 11. prosince. Tam proběhne i zpětná vazba. Protože už nejsou hlavní cvičení, 
+nebude možné práci vhazovat
+do schránky. 
+
+
+\end{document}
