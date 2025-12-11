@@ -1,0 +1,88 @@
+\documentclass[11pt, reqno]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{amsmath}
+\usepackage[a4paper, margin=.75in]{geometry}
+
+
+\begin{document}
+
+
+\title{Rovnice kontiuity, rovnice difuze}
+\maketitle
+\thispagestyle{empty}
+
+Rovnice kontinuity a rovnice difuze jsou základními nástroji pro 
+popis transportních jevů v přírodě.
+
+\section{Rovnice kontinuity}
+
+Rovnice kontinuity vyjadřuje zákon zachování nějaké veličiny (hmotnosti či jiné míry množství, 
+energie, apod.) v čase při transportu této veličiny prostorem. Tato veličina definuje
+stav systému a proto se nazývá \textit{stavová veličina}.
+Obecně lze rovnici kontinuity zapsat ve tvaru
+\[
+\frac{\partial u}{\partial t} = \sigma - \nabla \cdot \vec{\jmath},
+\]
+kde \(u\) je hustota stavové veličiny, \(\sigma\) je zdrojová 
+funkce a \(\vec{\jmath}\) je hustota toku stavové veličiny.
+
+Člen na levé straně rovnice představuje změnu stavové veličiny v čase.
+První člen na pravé straně rovnice představuje přírůstek stavové veličiny za jednotku času 
+vygenerovaný zdrojem (kladná hodnota) nebo ztracený ve spotřebiči (záporná hodnota).
+Druhý člen na pravé straně rovnice představuje změnu stavové veličiny v důsledku toku
+stavové veličiny prostorem. Záporné znaménko před operátorem divergence
+zaručuje, že pokud je tok stavové veličiny z prostoru ven, pak tato
+stavová veličina v prostoru ubývá.
+
+\section{Rovnice difuze}
+
+V přírodě je tok stavové veličiny zpravidla vyvolán tím, že rozložení 
+stavové veličiny v prostoru je nerovnoměrné a příroda se snaží 
+prouděním tuto nerovnováhu vyrovnat. Například pokud má v tepelně 
+vodivém tělese jedna část vyšší teplotu než druhá, pak teplo
+v tělese proudí z teplejší části do chladnější. Podobně, 
+pokud je v jednom místě tělesa vyšší koncentrace nějaké látky než v jiném místě,
+pak tato látka v tělese difunduje z místa s vyšší koncentrací do místa s nižší koncentrací.
+
+Tento jev lze matematicky popsat pomocí tzv. Fickova zákona, který říká, že
+tok stavové veličiny je úměrný záporně vzatému gradientu hustoty stavové veličiny, tedy
+\[\vec{\jmath} = - D \nabla u,
+\]
+kde \(D\) je koeficient difuze. Tento zákon říká, že tok stavové veličiny směřuje 
+od míst s vyšší hustotou stavové veličiny k místům s nižší hustotou. V případě
+anizotropního prostředí nejsou nutně vektory $\vec\jmath$ a $\nabla u$ rovnoběžné
+a proto má koeficient $D$ maticový charakter.
+
+Dosazením Fickova zákona do rovnice kontinuity dostaneme rovnici difuze ve tvaru
+\[\frac{\partial u}{\partial t} = \sigma + \nabla \cdot (D \nabla u).
+\]
+Tato rovnice popisuje, jak se hustota stavové veličiny mění
+v čase v důsledku přítomnosti zdrojů a difuzního transportu stavové veličiny prostorem.
+S rovnicí difuze se často setkáváme v zápise pomocí souřadnic. Zvolíme-li souřadnou soustavu tak, 
+že osy jsou ve vlastních směrech matice \(D\), pak lze rovnici difuze zapsat ve tvaru
+\[\frac{\partial u}{\partial t} = \sigma + 
+\frac{\partial}{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) + 
+\frac{\partial}{\partial y}\left(D_y \frac{\partial u}{\partial y}\right) 
+\]
+v obecném případě a ve tvaru 
+\[\frac{\partial u}{\partial t} = \sigma + 
+D_x \frac{\partial^2 u}{\partial x^2} + 
+D_y \frac{\partial^2 u}{\partial y^2}
+\]
+v případě, že koeficienty difuze \(D_x\) a \(D_y\) jsou konstantní. To nastane, pokud 
+je prostředí homogenní a materiálové vlastnosti nezávisí na stavu systému popsaném
+stavovou veličinou \(u\).
+
+
+
+\vfill
+{\bfseries Instrukce:} \itshape V textu jsou typografické chyby týkající se sazby matematických výrazů. 
+Najděte je a rukou vyznačte barevně ve vytištěném textu. Papír podepište v pravém horním rohu, napište zkratku 
+oboru, který studujete
+a odevzdejte na přednášce 18. prosince. Tam proběhne i zpětná vazba. Protože už nejsou hlavní cvičení, 
+nebude možné práci vhazovat
+do schránky. 
+
+\end{document}
