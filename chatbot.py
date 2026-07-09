@@ -54,6 +54,11 @@ MAX_RETRIEVED_CHARS = 60_000
 # window is not filled by old exchanges at the expense of retrieved content.
 MAX_HISTORY_TURNS = 6
 
+# Minimum number of characters worth including when a section is truncated to
+# fit the remaining char budget.  Shorter snippets would be too small to be
+# useful context for the model.
+MIN_TRUNCATED_SECTION_CHARS = 200
+
 
 @dataclasses.dataclass(frozen=True)
 class Section:
@@ -142,7 +147,7 @@ def find_relevant_sections(
         if len(section.content) > remaining:
             # Include a truncated version rather than nothing when it is
             # the first (best) section and there is still reasonable space.
-            if not result and remaining > 200:
+            if not result and remaining > MIN_TRUNCATED_SECTION_CHARS:
                 result.append(dataclasses.replace(section, content=section.content[:remaining]))
             break
         result.append(section)
