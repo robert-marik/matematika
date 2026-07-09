@@ -69,7 +69,7 @@ def load_sections(repo_root: str) -> list[Section]:
     pattern = os.path.join(repo_root, "**", "*.md")
     md_files = sorted(glob.glob(pattern, recursive=True))
 
-    _heading_re = re.compile(r"^#{1,4}\s+(.+)", re.MULTILINE)
+    heading_re = re.compile(r"^#{1,4}\s+(.+)", re.MULTILINE)
     sections: list[Section] = []
 
     for path in md_files:
@@ -82,7 +82,7 @@ def load_sections(repo_root: str) -> list[Section]:
             continue
 
         # Find all heading positions and their text
-        splits = [(m.start(), m.group(1)) for m in _heading_re.finditer(content)]
+        splits = [(m.start(), m.group(1)) for m in heading_re.finditer(content)]
 
         if not splits:
             # No headings — treat whole file as one section
@@ -314,9 +314,11 @@ def chat_loop(api_key: str, sections: list[Section], requested_model: str) -> No
                 "přímo relevantní pasáž k tomuto dotazu.)"
             )
 
-        # Trim old history to keep context window free for retrieved content
-        if len(history) > MAX_HISTORY_TURNS:
-            history = history[-MAX_HISTORY_TURNS:]
+        # Trim old history to keep context window free for retrieved content.
+        # Trim *before* appending the new message so history stays <= MAX_HISTORY_TURNS
+        # turns after the append below.
+        if len(history) >= MAX_HISTORY_TURNS:
+            history = history[-(MAX_HISTORY_TURNS - 1):]
 
         history.append(types.Content(role="user", parts=[types.Part(text=user_text)]))
 
