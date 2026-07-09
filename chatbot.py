@@ -109,12 +109,12 @@ def _is_quota_exceeded_error(exc: Exception) -> bool:
     return "quota exceeded" in str(exc).lower()
 
 
-def _extract_retry_seconds(error_text: str) -> str | None:
+def _extract_retry_seconds(error_text: str) -> float | None:
     """Extract retry delay from API error text if present."""
     match = re.search(r"retry in ([0-9]+(?:\.[0-9]+)?)s", error_text, flags=re.IGNORECASE)
     if not match:
         return None
-    return match.group(1)
+    return float(match.group(1))
 
 
 def _quota_fallback_models(
@@ -122,15 +122,32 @@ def _quota_fallback_models(
 ) -> list[str]:
     """Return ordered fallback candidates when current model hits quota limits."""
     current = _normalize_model_name(current_model)
-    candidates = list(FALLBACK_MODEL_CANDIDATES) + sorted(available_model_names)
+    normalized_available = {
+        _normalize_model_name(name) for name in available_model_names if name
+    }
+    normalized_available.discard("")
+
+    if normalized_available:
+        candidates = [
+            _normalize_model_name(name)
+            for name in FALLBACK_MODEL_CANDIDATES
+            if _normalize_model_name(name) in normalized_available
+        ]
+        for model in sorted(normalized_available):
+            if model not in candidates:
+                candidates.append(model)
+    else:
+        candidates = [_normalize_model_name(name) for name in FALLBACK_MODEL_CANDIDATES]
+
     result: list[str] = []
     seen = {current}
     for candidate in candidates:
-        normalized = _normalize_model_name(candidate)
-        if not normalized or normalized in seen:
+        if not candidate or candidate in seen:
             continue
-        seen.add(normalized)
-        result.append(normalized)
+        seen.add(candidate)
+        result.append(candidate)
+        if len(result) >= 5:
+            break
     return result
 
 
@@ -280,7 +297,7 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
                     retry_seconds = _extract_retry_seconds(error_text)
                     if retry_seconds:
                         print(
-                            f"[info] API doporučuje opakovat dotaz za ~{retry_seconds} s.",
+                            f"[info] API doporučuje opakovat dotaz za ~{retry_seconds:.1f} s.",
                             file=sys.stderr,
                         )
                     print(
