@@ -221,7 +221,7 @@ def main() -> None:
         default=MODEL_NAME,
         help=(
             "Název Gemini modelu (např. gemini-2.0-flash). "
-            "Výchozí: gemini-2.0-flash."
+            f"Výchozí: {MODEL_NAME}."
         ),
     )
     args = parser.parse_args()
