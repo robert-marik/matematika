@@ -203,7 +203,7 @@ def _is_quota_exceeded_error(exc: Exception) -> bool:
     """Detect quota/rate-limit errors across APIError variants."""
     if not isinstance(exc, genai.errors.APIError):
         return False
-    if (getattr(exc, "code", None) == 429) or (
+    if getattr(exc, "code", None) == 429 or (
         getattr(exc, "status", "").upper() == "RESOURCE_EXHAUSTED"
     ):
         return True
@@ -378,9 +378,7 @@ def chat_loop(api_key: str, sections: list[Section], requested_model: str) -> No
                         )
                         break
                     except (genai.errors.APIError, OSError) as fallback_exc:
-                        if _is_quota_exceeded_error(
-                            fallback_exc
-                        ) or _is_model_not_found_error(fallback_exc):
+                        if _is_quota_exceeded_error(fallback_exc) or _is_model_not_found_error(fallback_exc):
                             continue
                         print(
                             f"[chyba] Nepodařilo se získat odpověď: {fallback_exc}",
