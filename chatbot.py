@@ -166,8 +166,7 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
                 )
                 if available_model_names:
                     print(
-                        "[info] Dostupné modely: "
-                        + ", ".join(sorted(set(available_model_names))),
+                        "[info] Dostupné modely: " + ", ".join(sorted(available_model_names)),
                         file=sys.stderr,
                     )
                 print(f"[info] Původní chyba: {error_text}", file=sys.stderr)
