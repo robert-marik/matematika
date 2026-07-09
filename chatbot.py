@@ -111,8 +111,13 @@ def load_sections(repo_root: str) -> list[Section]:
 
 
 def _tokenize(text: str) -> set[str]:
-    """Return a set of lowercase word tokens longer than 2 characters."""
-    return {w.lower() for w in re.split(r"\W+", text) if len(w) > 2}
+    """Return a set of lowercase word tokens.
+
+    Tokens of length 1 and above are kept to preserve short but significant
+    mathematical notation such as 'pi', 'dx', 'dy', or single-letter variables.
+    Empty strings produced by the split are discarded.
+    """
+    return {w.lower() for w in re.split(r"\W+", text) if w}
 
 
 def find_relevant_sections(
@@ -324,12 +329,6 @@ def chat_loop(api_key: str, sections: list[Section], requested_model: str) -> No
                 "přímo relevantní pasáž k tomuto dotazu.)"
             )
 
-        # Trim old history so the API always sees at most MAX_HISTORY_TURNS
-        # messages (Content items).  Trim before appending the new user
-        # message so the sent list is exactly MAX_HISTORY_TURNS items.
-        if len(history) >= MAX_HISTORY_TURNS:
-            history = history[-(MAX_HISTORY_TURNS - 1):]
-
         history.append(types.Content(role="user", parts=[types.Part(text=user_text)]))
 
         answer = None
@@ -422,6 +421,13 @@ def chat_loop(api_key: str, sections: list[Section], requested_model: str) -> No
         history.append(
             types.Content(role="model", parts=[types.Part(text=answer)])
         )
+
+        # Keep history bounded: trim to MAX_HISTORY_TURNS messages so the
+        # context window is not filled by old exchanges at the expense of
+        # retrieved content.  Trim after both user and model messages are
+        # added so the limit is enforced consistently between iterations.
+        if len(history) > MAX_HISTORY_TURNS:
+            history = history[-MAX_HISTORY_TURNS:]
 
         print("\nOdpověď:")
         # Wrap long lines for readability in a terminal
