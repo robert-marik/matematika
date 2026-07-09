@@ -98,7 +98,12 @@ def choose_model_name(client: genai.Client, requested_model: str) -> tuple[str, 
                 continue
             name = _normalize_model_name(model.name or "")
             available_names.append(name)
-    except (genai.errors.APIError, OSError):
+    except (genai.errors.APIError, OSError) as exc:
+        print(
+            f"[varování] Nepodařilo se načíst seznam modelů ({exc}). "
+            f"Používám model '{requested_model}' bez automatického fallbacku.",
+            file=sys.stderr,
+        )
         return requested_model, available_names
 
     if not available_names:
@@ -165,8 +170,7 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
         except (genai.errors.APIError, OSError) as exc:
             error_text = str(exc)
             model_not_found = (
-                isinstance(exc, genai.errors.APIError)
-                and getattr(exc, "status", "") == "NOT_FOUND"
+                isinstance(exc, genai.errors.APIError) and exc.status == "NOT_FOUND"
             )
             if model_not_found:
                 print(
