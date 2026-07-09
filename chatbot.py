@@ -18,6 +18,7 @@ Pro získání API klíče navštivte: https://aistudio.google.com/app/apikey
 import argparse
 import glob
 import os
+import re
 import sys
 import textwrap
 
@@ -97,6 +98,42 @@ def _is_model_not_found_error(exc: Exception) -> bool:
     )
 
 
+def _is_quota_exceeded_error(exc: Exception) -> bool:
+    """Detect quota/rate-limit errors across APIError variants."""
+    if not isinstance(exc, genai.errors.APIError):
+        return False
+    if (getattr(exc, "code", None) == 429) or (
+        getattr(exc, "status", "").upper() == "RESOURCE_EXHAUSTED"
+    ):
+        return True
+    return "quota exceeded" in str(exc).lower()
+
+
+def _extract_retry_seconds(error_text: str) -> str | None:
+    """Extract retry delay from API error text if present."""
+    match = re.search(r"retry in ([0-9]+(?:\.[0-9]+)?)s", error_text, flags=re.IGNORECASE)
+    if not match:
+        return None
+    return match.group(1)
+
+
+def _quota_fallback_models(
+    current_model: str, available_model_names: list[str]
+) -> list[str]:
+    """Return ordered fallback candidates when current model hits quota limits."""
+    current = _normalize_model_name(current_model)
+    candidates = list(FALLBACK_MODEL_CANDIDATES) + sorted(available_model_names)
+    result: list[str] = []
+    seen = {current}
+    for candidate in candidates:
+        normalized = _normalize_model_name(candidate)
+        if not normalized or normalized in seen:
+            continue
+        seen.add(normalized)
+        result.append(normalized)
+    return result
+
+
 def choose_model_name(client: genai.Client, model_name: str) -> tuple[str, list[str]]:
     """Return a valid model name for generate_content and all discovered model names."""
     requested_model = _normalize_model_name(model_name)
@@ -170,6 +207,7 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
 
         history.append(types.Content(role="user", parts=[types.Part(text=question)]))
 
+        answer = None
         try:
             response = client.models.generate_content(
                 model=model_name,
@@ -180,6 +218,7 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
         except (genai.errors.APIError, OSError) as exc:
             error_text = str(exc)
             model_not_found = _is_model_not_found_error(exc)
+            quota_exceeded = _is_quota_exceeded_error(exc)
             if model_not_found:
                 print(
                     "[chyba] Zvolený model není pro tento API klíč dostupný. "
@@ -192,10 +231,68 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
                         file=sys.stderr,
                     )
                 print(f"[info] Původní chyba: {error_text}", file=sys.stderr)
+            elif quota_exceeded:
+                switched = False
+                hard_failure = False
+                for fallback_model in _quota_fallback_models(
+                    model_name, available_model_names
+                ):
+                    try:
+                        response = client.models.generate_content(
+                            model=fallback_model,
+                            contents=history,
+                            config=config,
+                        )
+                        answer = response.text
+                        previous_model = model_name
+                        model_name = fallback_model
+                        switched = True
+                        print(
+                            f"[info] Model '{previous_model}' měl vyčerpanou kvótu, "
+                            f"přepínám na '{fallback_model}'.",
+                            file=sys.stderr,
+                        )
+                        break
+                    except (genai.errors.APIError, OSError) as fallback_exc:
+                        if _is_quota_exceeded_error(
+                            fallback_exc
+                        ) or _is_model_not_found_error(fallback_exc):
+                            continue
+                        print(
+                            f"[chyba] Nepodařilo se získat odpověď: {fallback_exc}",
+                            file=sys.stderr,
+                        )
+                        hard_failure = True
+                        break
+
+                if not switched and not hard_failure:
+                    print(
+                        f"[chyba] Kvóta pro model '{model_name}' je vyčerpaná "
+                        "nebo není pro tento účet dostupná.",
+                        file=sys.stderr,
+                    )
+                    if available_model_names:
+                        print(
+                            "[info] Dostupné modely: "
+                            + ", ".join(sorted(available_model_names)),
+                            file=sys.stderr,
+                        )
+                    retry_seconds = _extract_retry_seconds(error_text)
+                    if retry_seconds:
+                        print(
+                            f"[info] API doporučuje opakovat dotaz za ~{retry_seconds} s.",
+                            file=sys.stderr,
+                        )
+                    print(
+                        "[info] Pokud se chyba opakuje, použijte jiný model "
+                        "(--model ...) nebo zkontrolujte kvóty/billing v Google AI Studio.",
+                        file=sys.stderr,
+                    )
             else:
                 print(f"[chyba] Nepodařilo se získat odpověď: {error_text}", file=sys.stderr)
-            history.pop()
-            continue
+            if answer is None:
+                history.pop()
+                continue
 
         history.append(
             types.Content(role="model", parts=[types.Part(text=answer)])
