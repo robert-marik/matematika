@@ -33,11 +33,11 @@ z textu."""
 
 MODEL_NAME = "gemini-2.0-flash"
 FALLBACK_MODEL_CANDIDATES = (
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
     "gemini-2.0-flash-lite",
     "gemini-1.5-flash",
     "gemini-1.5-pro",
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
 )
 # Approximate character limit for the combined knowledge base.  English text
 # averages ~4 characters per token; at 900 000 chars the context stays well
@@ -84,7 +84,17 @@ def _supports_generate_content(model: types.Model) -> bool:
     if not name or not name.startswith("gemini"):
         return False
     actions = [action.lower() for action in (model.supported_actions or [])]
-    return (not actions) or ("generatecontent" in actions)
+    return "generatecontent" in actions
+
+
+def _is_model_not_found_error(exc: Exception) -> bool:
+    """Detect model-not-found across APIError variants."""
+    if not isinstance(exc, genai.errors.APIError):
+        return False
+    # Some responses expose HTTP status code, some expose textual status.
+    return (getattr(exc, "code", None) == 404) or (
+        getattr(exc, "status", "").upper() == "NOT_FOUND"
+    )
 
 
 def choose_model_name(client: genai.Client, model_name: str) -> tuple[str, list[str]]:
@@ -169,13 +179,7 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
             answer = response.text
         except (genai.errors.APIError, OSError) as exc:
             error_text = str(exc)
-            model_not_found = (
-                isinstance(exc, genai.errors.APIError)
-                and (
-                    getattr(exc, "code", None) == 404
-                    or getattr(exc, "status", "").upper() == "NOT_FOUND"
-                )
-            )
+            model_not_found = _is_model_not_found_error(exc)
             if model_not_found:
                 print(
                     "[chyba] Zvolený model není pro tento API klíč dostupný. "
