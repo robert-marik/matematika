@@ -31,7 +31,15 @@ Pokud odpověď v textech není, řekni to studentovi a navrhni, kde by mohl hle
 Odpovídej v češtině, stručně a přesně. Pokud je to vhodné, uveď konkrétní vzorce nebo příklady
 z textu."""
 
-MODEL_NAME = "gemini-1.5-flash"
+MODEL_NAME = "gemini-2.0-flash"
+FALLBACK_MODEL_CANDIDATES = (
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-2.0-flash",
+    "gemini-2.0-flash-lite",
+    "gemini-1.5-flash",
+    "gemini-1.5-pro",
+)
 # Approximate character limit for the combined knowledge base.  English text
 # averages ~4 characters per token; at 900 000 chars the context stays well
 # within the Gemini 1.5-Flash 1 M-token window even for Czech text (which is
@@ -67,9 +75,50 @@ def load_texts(repo_root: str) -> str:
     return combined
 
 
-def chat_loop(api_key: str, knowledge_base: str) -> None:
+def _normalize_model_name(model_name: str) -> str:
+    return model_name.removeprefix("models/")
+
+
+def choose_model_name(client: genai.Client, requested_model: str) -> tuple[str, list[str]]:
+    """Return a valid model name for generate_content and all discovered model names."""
+    requested_model = _normalize_model_name(requested_model)
+    available_names: list[str] = []
+
+    try:
+        for model in client.models.list():
+            name = _normalize_model_name(model.name or "")
+            if not name or not name.startswith("gemini"):
+                continue
+            actions = [action.lower() for action in (model.supported_actions or [])]
+            if actions and "generatecontent" not in actions:
+                continue
+            available_names.append(name)
+    except (genai.errors.APIError, OSError):
+        return requested_model, available_names
+
+    if not available_names:
+        return requested_model, available_names
+
+    if requested_model in available_names:
+        return requested_model, available_names
+
+    for candidate in FALLBACK_MODEL_CANDIDATES:
+        if candidate in available_names:
+            return candidate, available_names
+
+    return available_names[0], available_names
+
+
+def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
     """Run an interactive question-answering loop using the Gemini API."""
     client = genai.Client(api_key=api_key)
+    model_name, available_model_names = choose_model_name(client, requested_model)
+
+    if model_name != _normalize_model_name(requested_model):
+        print(
+            f"[info] Požadovaný model '{requested_model}' není dostupný, používám '{model_name}'.",
+            file=sys.stderr,
+        )
 
     full_system = (
         SYSTEM_INSTRUCTION
@@ -103,13 +152,28 @@ def chat_loop(api_key: str, knowledge_base: str) -> None:
 
         try:
             response = client.models.generate_content(
-                model=MODEL_NAME,
+                model=model_name,
                 contents=history,
                 config=config,
             )
             answer = response.text
         except (genai.errors.APIError, OSError) as exc:
-            print(f"[chyba] Nepodařilo se získat odpověď: {exc}", file=sys.stderr)
+            error_text = str(exc)
+            if "NOT_FOUND" in error_text and "models/" in error_text:
+                print(
+                    "[chyba] Zvolený model není pro tento API klíč dostupný. "
+                    "Použijte parametr --model s modelem dostupným ve vašem účtu.",
+                    file=sys.stderr,
+                )
+                if available_model_names:
+                    print(
+                        "[info] Dostupné modely: "
+                        + ", ".join(sorted(set(available_model_names))),
+                        file=sys.stderr,
+                    )
+                print(f"[info] Původní chyba: {error_text}", file=sys.stderr)
+            else:
+                print(f"[chyba] Nepodařilo se získat odpověď: {error_text}", file=sys.stderr)
             history.pop()
             continue
 
@@ -140,6 +204,14 @@ def main() -> None:
         default=os.path.dirname(os.path.abspath(__file__)),
         help="Kořenový adresář repozitáře s učebními texty.",
     )
+    parser.add_argument(
+        "--model",
+        default=MODEL_NAME,
+        help=(
+            "Název Gemini modelu (např. gemini-2.0-flash). "
+            "Výchozí: gemini-2.0-flash."
+        ),
+    )
     args = parser.parse_args()
 
     if not args.api_key:
@@ -154,7 +226,7 @@ def main() -> None:
     knowledge_base = load_texts(args.repo_root)
     print(f"hotovo ({len(knowledge_base):,} znaků).")
 
-    chat_loop(args.api_key, knowledge_base)
+    chat_loop(args.api_key, knowledge_base, args.model)
 
 
 if __name__ == "__main__":
