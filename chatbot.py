@@ -2,8 +2,10 @@
 """
 Chatbot pro předmět Matematika (LDF MENDELU).
 
-Skript načte všechny Markdown soubory z tohoto repozitáře a použije
-Google Generative AI (Gemini) k zodpovězení otázek na základě obsahu těchto textů.
+Skript načte všechny Markdown soubory z tohoto repozitáře, rozdělí je na sekce
+a pro každý dotaz vybere jen nejrelevantnější části textu, které pak vloží do
+promptu modelu Google Generative AI (Gemini).  Tím se chatbot nezadrhne ani
+v případě, že je materiálů více, než by se vešlo do kontextového okna.
 
 Použití:
     export GOOGLE_API_KEY="váš_api_klíč"
@@ -16,6 +18,7 @@ Pro získání API klíče navštivte: https://aistudio.google.com/app/apikey
 """
 
 import argparse
+import dataclasses
 import glob
 import os
 import re
@@ -40,39 +43,123 @@ FALLBACK_MODEL_CANDIDATES = (
     "gemini-2.5-flash",
     "gemini-2.5-flash-lite",
 )
-# Approximate character limit for the combined knowledge base.  English text
-# averages ~4 characters per token; at 900 000 chars the context stays well
-# within the Gemini 1.5-Flash 1 M-token window even for Czech text (which is
-# slightly more compact per token).
-MAX_CONTEXT_CHARS = 900_000
+
+# Per-query retrieval limits: take up to this many sections and this many
+# characters of source text for each question.  This keeps every prompt
+# at a predictable, model-friendly size regardless of corpus size.
+MAX_RETRIEVED_SECTIONS = 6
+MAX_RETRIEVED_CHARS = 60_000
+
+# Keep only the last N turns of conversation history so that the context
+# window is not filled by old exchanges at the expense of retrieved content.
+MAX_HISTORY_TURNS = 6
 
 
-def load_texts(repo_root: str) -> str:
-    """Load all Markdown files from the repository and return them as one string."""
+@dataclasses.dataclass(frozen=True)
+class Section:
+    """One logical chunk of a Markdown source file."""
+
+    source: str   # relative path of the markdown file
+    heading: str  # heading text (or filename for preamble sections)
+    content: str  # full section text including the heading line
+
+
+def load_sections(repo_root: str) -> list[Section]:
+    """Load all Markdown files and split them into sections by headings."""
     pattern = os.path.join(repo_root, "**", "*.md")
     md_files = sorted(glob.glob(pattern, recursive=True))
 
-    chunks = []
+    _heading_re = re.compile(r"^#{1,4}\s+(.+)", re.MULTILINE)
+    sections: list[Section] = []
+
     for path in md_files:
         rel = os.path.relpath(path, repo_root)
         try:
             with open(path, encoding="utf-8") as fh:
                 content = fh.read()
-            chunks.append(f"## Soubor: {rel}\n\n{content}")
         except OSError as exc:
             print(f"[varování] Nelze načíst {rel}: {exc}", file=sys.stderr)
+            continue
 
-    combined = "\n\n---\n\n".join(chunks)
-    if len(combined) > MAX_CONTEXT_CHARS:
-        # Truncate at a paragraph boundary to avoid splitting mid-word or
-        # mid-character (important for multi-byte UTF-8 text).
-        cutoff = combined.rfind("\n\n", 0, MAX_CONTEXT_CHARS)
-        combined = combined[: cutoff if cutoff != -1 else MAX_CONTEXT_CHARS]
-        print(
-            "[info] Učební texty byly zkráceny kvůli limitu kontextového okna.",
-            file=sys.stderr,
-        )
-    return combined
+        # Find all heading positions and their text
+        splits = [(m.start(), m.group(1)) for m in _heading_re.finditer(content)]
+
+        if not splits:
+            # No headings — treat whole file as one section
+            if content.strip():
+                sections.append(Section(source=rel, heading=rel, content=content))
+            continue
+
+        # Text before first heading (preamble)
+        if splits[0][0] > 0:
+            preamble = content[: splits[0][0]].strip()
+            if preamble:
+                sections.append(Section(source=rel, heading=rel, content=preamble))
+
+        for i, (pos, heading) in enumerate(splits):
+            end = splits[i + 1][0] if i + 1 < len(splits) else len(content)
+            section_text = content[pos:end].strip()
+            if section_text:
+                sections.append(Section(source=rel, heading=heading, content=section_text))
+
+    return sections
+
+
+def _tokenize(text: str) -> set[str]:
+    """Return a set of lowercase word tokens longer than 2 characters."""
+    return {w.lower() for w in re.split(r"\W+", text) if len(w) > 2}
+
+
+def find_relevant_sections(
+    sections: list[Section],
+    query: str,
+    max_sections: int = MAX_RETRIEVED_SECTIONS,
+    max_chars: int = MAX_RETRIEVED_CHARS,
+) -> list[Section]:
+    """Return the most relevant sections for *query* using keyword overlap scoring."""
+    query_tokens = _tokenize(query)
+    if not query_tokens:
+        return sections[:max_sections]
+
+    scored: list[tuple[int, int, Section]] = []
+    for idx, section in enumerate(sections):
+        text_tokens = _tokenize(section.heading + " " + section.content)
+        score = len(query_tokens & text_tokens)
+        if score > 0:
+            scored.append((score, idx, section))
+
+    # Best score first; for equal scores keep original document order
+    scored.sort(key=lambda x: (-x[0], x[1]))
+
+    result: list[Section] = []
+    total_chars = 0
+    for _, _, section in scored:
+        if len(result) >= max_sections:
+            break
+        remaining = max_chars - total_chars
+        if remaining <= 0:
+            break
+        if len(section.content) > remaining:
+            # Include a truncated version rather than nothing when it is
+            # the first (best) section and there is still reasonable space.
+            if not result and remaining > 200:
+                result.append(dataclasses.replace(section, content=section.content[:remaining]))
+            break
+        result.append(section)
+        total_chars += len(section.content)
+
+    return result
+
+
+def _build_context_text(sections: list[Section]) -> str:
+    """Format retrieved sections as a context block to prepend to the query."""
+    if not sections:
+        return ""
+    parts = [
+        f"### Zdroj: {sec.source} — {sec.heading}\n\n{sec.content}"
+        for sec in sections
+    ]
+    return "=== RELEVANTNÍ ČÁSTI UČEBNÍCH TEXTŮ ===\n\n" + "\n\n---\n\n".join(parts)
 
 
 def _normalize_model_name(model_name: str) -> str:
@@ -92,7 +179,6 @@ def _is_model_not_found_error(exc: Exception) -> bool:
     """Detect model-not-found across APIError variants."""
     if not isinstance(exc, genai.errors.APIError):
         return False
-    # Some responses expose HTTP status code, some expose textual status.
     return (getattr(exc, "code", None) == 404) or (
         getattr(exc, "status", "").upper() == "NOT_FOUND"
     )
@@ -183,7 +269,7 @@ def choose_model_name(client: genai.Client, model_name: str) -> tuple[str, list[
     return available_names[0], available_names
 
 
-def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
+def chat_loop(api_key: str, sections: list[Section], requested_model: str) -> None:
     """Run an interactive question-answering loop using the Gemini API."""
     client = genai.Client(api_key=api_key)
     model_name, available_model_names = choose_model_name(client, requested_model)
@@ -194,14 +280,7 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
             file=sys.stderr,
         )
 
-    full_system = (
-        SYSTEM_INSTRUCTION
-        + "\n\n"
-        + "=== UČEBNÍ TEXTY ===\n\n"
-        + knowledge_base
-    )
-
-    config = types.GenerateContentConfig(system_instruction=full_system)
+    config = types.GenerateContentConfig(system_instruction=SYSTEM_INSTRUCTION)
     history: list[types.Content] = []
 
     print("=" * 60)
@@ -222,7 +301,24 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
             print("Na shledanou!")
             break
 
-        history.append(types.Content(role="user", parts=[types.Part(text=question)]))
+        # Retrieve relevant sections for this question
+        relevant = find_relevant_sections(sections, question)
+        context_text = _build_context_text(relevant)
+
+        if context_text:
+            user_text = context_text + "\n\n=== OTÁZKA ===\n\n" + question
+        else:
+            user_text = (
+                question
+                + "\n\n(Poznámka: V učebních textech nebyla nalezena žádná "
+                "přímo relevantní pasáž k tomuto dotazu.)"
+            )
+
+        # Trim old history to keep context window free for retrieved content
+        if len(history) > MAX_HISTORY_TURNS:
+            history = history[-MAX_HISTORY_TURNS:]
+
+        history.append(types.Content(role="user", parts=[types.Part(text=user_text)]))
 
         answer = None
         try:
@@ -357,10 +453,10 @@ def main() -> None:
         sys.exit(1)
 
     print("Načítám učební texty…", end=" ", flush=True)
-    knowledge_base = load_texts(args.repo_root)
-    print(f"hotovo ({len(knowledge_base):,} znaků).")
+    sections = load_sections(args.repo_root)
+    print(f"hotovo ({len(sections)} sekcí).")
 
-    chat_loop(args.api_key, knowledge_base, args.model)
+    chat_loop(args.api_key, sections, args.model)
 
 
 if __name__ == "__main__":
