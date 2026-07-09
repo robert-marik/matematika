@@ -87,9 +87,9 @@ def _supports_generate_content(model: types.Model) -> bool:
     return (not actions) or ("generatecontent" in actions)
 
 
-def choose_model_name(client: genai.Client, requested_model: str) -> tuple[str, list[str]]:
+def choose_model_name(client: genai.Client, model_name: str) -> tuple[str, list[str]]:
     """Return a valid model name for generate_content and all discovered model names."""
-    requested_model = _normalize_model_name(requested_model)
+    requested_model = _normalize_model_name(model_name)
     available_names: list[str] = []
 
     try:
@@ -170,7 +170,11 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
         except (genai.errors.APIError, OSError) as exc:
             error_text = str(exc)
             model_not_found = (
-                isinstance(exc, genai.errors.APIError) and exc.status == "NOT_FOUND"
+                isinstance(exc, genai.errors.APIError)
+                and (
+                    getattr(exc, "code", None) == 404
+                    or getattr(exc, "status", "").upper() == "NOT_FOUND"
+                )
             )
             if model_not_found:
                 print(
