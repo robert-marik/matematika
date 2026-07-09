@@ -32,7 +32,11 @@ Odpovídej v češtině, stručně a přesně. Pokud je to vhodné, uveď konkr�
 z textu."""
 
 MODEL_NAME = "gemini-1.5-flash"
-MAX_CONTEXT_CHARS = 900_000  # stay well within the 1M-token context window
+# Approximate character limit for the combined knowledge base.  English text
+# averages ~4 characters per token; at 900 000 chars the context stays well
+# within the Gemini 1.5-Flash 1 M-token window even for Czech text (which is
+# slightly more compact per token).
+MAX_CONTEXT_CHARS = 900_000
 
 
 def load_texts(repo_root: str) -> str:
@@ -52,7 +56,10 @@ def load_texts(repo_root: str) -> str:
 
     combined = "\n\n---\n\n".join(chunks)
     if len(combined) > MAX_CONTEXT_CHARS:
-        combined = combined[:MAX_CONTEXT_CHARS]
+        # Truncate at a paragraph boundary to avoid splitting mid-word or
+        # mid-character (important for multi-byte UTF-8 text).
+        cutoff = combined.rfind("\n\n", 0, MAX_CONTEXT_CHARS)
+        combined = combined[: cutoff if cutoff != -1 else MAX_CONTEXT_CHARS]
         print(
             "[info] Učební texty byly zkráceny kvůli limitu kontextového okna.",
             file=sys.stderr,
@@ -101,7 +108,7 @@ def chat_loop(api_key: str, knowledge_base: str) -> None:
                 config=config,
             )
             answer = response.text
-        except Exception as exc:  # noqa: BLE001
+        except (genai.errors.APIError, OSError) as exc:
             print(f"[chyba] Nepodařilo se získat odpověď: {exc}", file=sys.stderr)
             history.pop()
             continue
