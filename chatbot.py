@@ -78,6 +78,15 @@ def _normalize_model_name(model_name: str) -> str:
     return model_name.removeprefix("models/")
 
 
+def _supports_generate_content(model: types.Model) -> bool:
+    """Return True if model looks usable for generate_content calls."""
+    name = _normalize_model_name(model.name or "")
+    if not name or not name.startswith("gemini"):
+        return False
+    actions = [action.lower() for action in (model.supported_actions or [])]
+    return (not actions) or ("generatecontent" in actions)
+
+
 def choose_model_name(client: genai.Client, requested_model: str) -> tuple[str, list[str]]:
     """Return a valid model name for generate_content and all discovered model names."""
     requested_model = _normalize_model_name(requested_model)
@@ -85,12 +94,9 @@ def choose_model_name(client: genai.Client, requested_model: str) -> tuple[str, 
 
     try:
         for model in client.models.list():
+            if not _supports_generate_content(model):
+                continue
             name = _normalize_model_name(model.name or "")
-            if not name or not name.startswith("gemini"):
-                continue
-            actions = [action.lower() for action in (model.supported_actions or [])]
-            if actions and "generatecontent" not in actions:
-                continue
             available_names.append(name)
     except (genai.errors.APIError, OSError):
         return requested_model, available_names
@@ -158,7 +164,11 @@ def chat_loop(api_key: str, knowledge_base: str, requested_model: str) -> None:
             answer = response.text
         except (genai.errors.APIError, OSError) as exc:
             error_text = str(exc)
-            if "NOT_FOUND" in error_text and "models/" in error_text:
+            model_not_found = (
+                isinstance(exc, genai.errors.APIError)
+                and getattr(exc, "status", "") == "NOT_FOUND"
+            )
+            if model_not_found:
                 print(
                     "[chyba] Zvolený model není pro tento API klíč dostupný. "
                     "Použijte parametr --model s modelem dostupným ve vašem účtu.",
