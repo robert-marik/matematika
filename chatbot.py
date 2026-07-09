@@ -74,7 +74,7 @@ def load_sections(repo_root: str) -> list[Section]:
     pattern = os.path.join(repo_root, "**", "*.md")
     md_files = sorted(glob.glob(pattern, recursive=True))
 
-    heading_re = re.compile(r"^#{1,4}\s+(.+)", re.MULTILINE)
+    heading_re = re.compile(r"^#{1,6}\s+(.+)", re.MULTILINE)
     sections: list[Section] = []
 
     for path in md_files:
@@ -147,8 +147,13 @@ def find_relevant_sections(
         if len(section.content) > remaining:
             # Include a truncated version rather than nothing when it is
             # the first (best) section and there is still reasonable space.
+            # Truncate at the last whitespace to avoid splitting mid-word.
             if not result and remaining > MIN_TRUNCATED_SECTION_CHARS:
-                result.append(dataclasses.replace(section, content=section.content[:remaining]))
+                truncated = section.content[:remaining]
+                cutoff = truncated.rfind(" ")
+                if cutoff > MIN_TRUNCATED_SECTION_CHARS:
+                    truncated = truncated[:cutoff]
+                result.append(dataclasses.replace(section, content=truncated))
             break
         result.append(section)
         total_chars += len(section.content)
@@ -319,9 +324,9 @@ def chat_loop(api_key: str, sections: list[Section], requested_model: str) -> No
                 "přímo relevantní pasáž k tomuto dotazu.)"
             )
 
-        # Trim old history to keep context window free for retrieved content.
-        # Trim *before* appending the new message so history stays <= MAX_HISTORY_TURNS
-        # turns after the append below.
+        # Trim old history so the API always sees at most MAX_HISTORY_TURNS
+        # messages (Content items).  Trim before appending the new user
+        # message so the sent list is exactly MAX_HISTORY_TURNS items.
         if len(history) >= MAX_HISTORY_TURNS:
             history = history[-(MAX_HISTORY_TURNS - 1):]
 
