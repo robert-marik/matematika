@@ -166,7 +166,9 @@ manim:Linearni_aproximace|aOvVJzeWy3o|Lineární aproximace může pomoci zjedno
 ````{prf:algorithm} Lineární aproximace v některých fyzikálních zákonech
 :class: dropdown
 
-### Lineární aproximace v některých fyzikálních zákonech
+```{rubric} Lineární aproximace v některých fyzikálních zákonech
+:heading-level: 3
+```
 
 \iffalse
 
@@ -351,7 +353,9 @@ $$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(
 ````{prf:algorithm} Druhá derivace a deformace nosníků
 :class: dropdown
 
-### Druhá derivace a deformace nosníků
+```{rubric} Druhá derivace a deformace nosníků
+:heading-level: 3
+```
 
 \iffalse
 
@@ -486,7 +490,9 @@ $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h
 ````{prf:algorithm} Od vazeb mezi atomy k materiálovým vlastnostem
 :class: dropdown
 
-## Odbočka: od vazeb mezi atomy k materiálovým vlastnostem
+```{rubric} Odbočka: od vazeb mezi atomy k materiálovým vlastnostem
+:heading-level: 2
+```
 
 
 \iffalse

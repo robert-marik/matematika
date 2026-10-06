@@ -286,7 +286,9 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 ````{prf:algorithm} Příklad: kritická tloušťka izolace trubky
 :class: dropdown
 
-### Příklad: kritická tloušťka izolace trubky
+```{rubric} Příklad: kritická tloušťka izolace trubky
+:heading-level: 3
+```
 
 \iffalse
 
@@ -563,7 +565,9 @@ vektorem. Nazývá se *nabla* nebo *Hamiltonův operátor*.
 ````{prf:algorithm} Lineární aproximace rovinné transformace
 :class: dropdown
 
-### Lineární aproximace rovinné transformace
+```{rubric} Lineární aproximace rovinné transformace
+:heading-level: 3
+```
 
 Následující pasáže jsou motivací pro tematický celek, kterému se
 začneme věnovat na další přednášce.
