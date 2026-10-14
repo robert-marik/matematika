@@ -58,7 +58,7 @@ Kousek pláště válce odpovídající úhlu $\Delta \alpha$ má obsah $rL\Delt
 \dm$$F_x=\int_{-\frac \pi2}^{\frac \pi 2} prL \cos \alpha \,\mathrm d \alpha  =prL [\sin \alpha]_{-\frac \pi 2}^{\frac \pi 2}=prL \left[\sin\frac \pi 2 -\sin\left(-\frac \pi2 \right)\right]=2p rL.$$ Povrch na který tato síla působí odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah $2Lt$ a napětí je tedy 
 $$\sigma_{h}=\frac{2pLr}{2Lt}=\frac{pr}t=2\sigma_p.$$ Vidíme, že toto napětí je dvojnásobkem napětí v podélné ose. 
 
-Ještě je vhodné ověřit, že svislý průmět, tj . $$\Delta F_y=pLr\Delta \alpha \sin \alpha$$ k namáhání nepřispívá, protože 
+Ještě je vhodné ověřit, že svislý průmět, tj. $$\Delta F_y=pLr\Delta \alpha \sin \alpha$$ k namáhání nepřispívá, protože 
 \dm$$F_y=\int_{-\frac \pi2}^{\frac \pi 2} prL \sin \alpha \,\mathrm d \alpha  =0.$$ To však je možné očekávat i ze symetrie.
 
 Pokud se chcete dozvědět více, zkuste Google a heslo "hoop stress".
@@ -72,7 +72,7 @@ https://youtu.be/uyiQAbYZVRU
 <div class='obtekat'>
 
 ```{figure} int_vlastnosti.png
-Monotonie a aditivia vzhledem k mezi pro určitý integrál.
+Monotonie a aditivita vzhledem k mezi pro určitý integrál.
 ```
 
 </div>
@@ -175,7 +175,7 @@ a na konci intervalu.
 
 ```{prf:remark} Střední hodnota materiálové konstanty
 :nonumber:
- Tepelná vodivost materiálu podobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce $k(T)$, je střední hodnota tepelné vodivosti v tepelném rozsahu od $T_1$ do $T_2$ dána vztahem (viz Cengel, Ghajar: Heat and Mass Transfer) $$k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT$$ V praxi nemáme analytický předpis pro funkci $k(T)$, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.
+ Tepelná vodivost materiálu podrobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce $k(T)$, je střední hodnota tepelné vodivosti v tepelném rozsahu od $T_1$ do $T_2$ dána vztahem (viz Cengel, Ghajar: Heat and Mass Transfer) $$k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT$$ V praxi nemáme analytický předpis pro funkci $k(T)$, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.
 ```
 
 
@@ -253,7 +253,7 @@ metrů. Jeden metr řetězu váží dva kilogramy. Vypočítáme práci
 potřebnou pro povytažení řetězu o deset metrů a poté práci potřebnou
 pro úplné vytažení řetězu.
 
-Z fyziky víme, že na těleso o hmotnosti $m$ působí síla $F$ daný vztahem $$F=mg,$$ kde $g$
+Z fyziky víme, že na těleso o hmotnosti $m$ působí síla $F$ daná vztahem $$F=mg,$$ kde $g$
 je tíhové zrychlení a že práce $W$ konaná silou $F$ po dráze $s$ je rovna
 součinu $$W=Fs.$$
 
@@ -271,14 +271,14 @@ $$\begin{aligned}W&=\int_{h_1}^{h_2}-h\tau g\,\mathrm dh=\tau g\int_{h_2}^{h_1}h
 \end{aligned}
 $$
 Pro $\tau =2\,\mathrm{kg}\,\mathrm m^{-1}$ a $g=9.81\,
-\mathrm{kg}\,\mathrm{m}\,\mathrm {s}^{-2}$ dostáváme $W=4905\,\mathrm
+\mathrm{m}\,\mathrm {s}^{-2}$ dostáváme $W=4905\,\mathrm
 J.$ Formálně je tento výsledek stejný, jako bychom hmotnost dolních
 $h_1-h_2$ metrů řetězu soustředili do středu tohoto úseku (tedy do
 úrovně $\frac 12 (h_1+h_2)$ metrů pod střechu) a poté tento hmotný bod
 přemístili konstantní silou po dráze $\frac 12 (h_1+h_2)$ na střechu.
 
 Práci pro vytažení celého řetězu dostaneme volbou $h_2=0$. Tedy
-$$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout první třetinu nejtěžší, očekáváme, že práce potřebná pro vytažení celého řetězu bude menší než trojnásobek práce nutné pro povytažení o třetinu. Toto se přirozeně potvrzuje porovnáním numerických hodnot.
+$$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout první třetinu je nejtěžší, očekáváme, že práce potřebná pro vytažení celého řetězu bude menší než trojnásobek práce nutné pro povytažení o třetinu. Toto se přirozeně potvrzuje porovnáním numerických hodnot.
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9JLFVIV8hQyDBUyDBS1-TlKs7IL9fIzCtJTS9KLElV0NDN0AKq0UrX0cjQyTDUyTDS1CROlUaGka0BsWqBArZGOum2lnoWQBFDW2MDoLitEYX6wdoBxXNBdg==&lang=sage)
 
@@ -286,7 +286,7 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 ```{prf:remark} Práce konaná silou proměnné velikosti
 :nonumber:
- Práce vykonaná silou $F(x)$ při přemístění tělesa z polohy $x=a$ do polohy $x=b$ je $$W=\int_a^b F(x)\,\mathrm dx.$$ Jako speciální případ dostáváme pro konstantní sélu $F$ středoškolský vzorec $$W=Fs,$$ kde $s=b-a$ je posunutí.
+ Práce vykonaná silou $F(x)$ při přemístění tělesa z polohy $x=a$ do polohy $x=b$ je $$W=\int_a^b F(x)\,\mathrm dx.$$ Jako speciální případ dostáváme pro konstantní sílu $F$ středoškolský vzorec $$W=Fs,$$ kde $s=b-a$ je posunutí.
 ```
 
 
@@ -299,7 +299,7 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 <div class='obtekat'>
 
 ```{figure} mojzisuv_most_pod_vodou.jpg
-Mojžíšův most je z obou stran chráněný přehradou umožňující regulací  výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku  však není překvapení, že může být i zatopený. Zdroj:  http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/
+Mojžíšův most je z obou stran chráněný přehradou umožňující regulaci  výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku  však není překvapení, že může být i zatopený. Zdroj:  http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/
 ```
 
 </div>
@@ -340,7 +340,7 @@ konstantní a rovno obsahu dna.)
 
 https://youtu.be/7jo_pZJjgRA
 
-Následující myšlenka se si týká výlučně určitého integrálu, ale dále v
+Následující myšlenka se týká výlučně určitého integrálu, ale dále v
 dnešní přednášce si představíme nástroj, který umožní ji použít i pro
 integrál neurčitý.
 
@@ -522,7 +522,7 @@ integrálu. Používáme jej ve vhodných případech zprava doleva i zleva
 doprava. Variantu pro určitý integrál jsme viděli ve speciálním
 případě ve cvičení, kdy vnitřní funkce reprezentovala konstantní
 násobek. Viděli jsme přirozeným způsobem, že při substituci (vyjádření
-v jiných jednotkách) se s integrovanou funkcí se mění i meze. Obecný
+v jiných jednotkách) se s integrovanou funkcí mění i meze. Obecný
 vzorec pro integrování určitého integrálu substituční metodou je v
 následující větě.
 
@@ -711,14 +711,14 @@ kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 <div class='obtekat'>
 
 ```{figure} zdymadlo.jpg
-Lodní výtah Falkrik Wheel. Zdroj: Wikipedie.
+Lodní výtah Falkirk Wheel. Zdroj: Wikipedie.
 ```
 
 </div>
 
 \fi
 
-Vypočítáme příklad z prací při vytahování řetězu tak, že určíme změnu potenciální energie
+Vypočítáme příklad s prací při vytahování řetězu tak, že určíme změnu potenciální energie
 řetězu. Práci $W$ vykonanou při vyzvednutí tělesa o hmotnosti $m$ o výšku
 $h$ vypočteme jako změnu potenciální energie v tíhovém poli Země,
 tj. $$W=mgh.$$ Komplikace v tomto případě je, že každou část řetězu
@@ -751,7 +751,7 @@ středu se nekoná práce. Tato skutečnost se dá opět dokázat myšlenkovým
 rozdělením řetězu na kousky a sečtením práce nutné pro přemístění
 těchto kousků. Ta bude kladná pro kousky pod těžištěm, záporná pro
 kousky nad těžištěm a výsledný součet bude nulový. Na podobném
-principu pracuje lodní výtah Falkrik Wheel. Práce potřebná pro otočení
+principu pracuje lodní výtah Falkirk Wheel. Práce potřebná pro otočení
 výtahu a vytažení lodě nahoru (nebo spuštění dolů nebo obojí současně)
 je překvapivě malá -- jedna loď potenciální energii získává, druhá loď
 stejně velkou potenciální energii ztrácí (pokud není loď, použije se

@@ -3,7 +3,7 @@
 > * Naučíme se hledat neurčitý integrál funkce. Stačí mít po ruce vzorce.
 > * Naučíme se hledat určitý integrál funkce.
 > * Procvičíme si interpretaci integrálu v kontextu změny veličiny, která se mění nekonstantní rychlostí.
-> * Výpočet na počítači pomocí [WolframAlpha](https://www.wolframalpha.com/) nebo Pythonu (možno automatizovat, spustit v cyklu nebo zakomponovat do rozsáhlejšího výpočtu, [vzorový postup vygeneruje ChatGPT](https://chat.openai.com/share/50b05eb0-39a8-4190-8337-8eaae2e8da2d))
+> * Výpočet na počítači pomocí [WolframAlpha](https://www.wolframalpha.com/) nebo Pythonu (možno automatizovat, spustit v cyklu nebo zakomponovat do rozsáhlejšího výpočtu)
 
 ## Výpočet integrálu
 
@@ -63,7 +63,7 @@ Najděte slovní interpretaci integrálu
 $$
   \int_0^{10} r(t)\mathrm dt,
 $$
-kde $r(t)$ je rychlost s jakou vytéká olej z děravé nádrže (v litrech
+kde $r(t)$ je rychlost, s jakou vytéká olej z děravé nádrže (v litrech
 za hodinu) a $t$ je čas v hodinách. Vypočtěte integrál pro $r(t)=200-4t$.
 
 _Toto a další příklady jsou klasické aplikace integrálu, kdy integrálem rychlosti, s jakou se mění nějaká veličina, je změna této veličiny._
@@ -142,13 +142,13 @@ centimetr, $t$ je čas ve dnech) se po ošetření úniku pro $t\in[0,6]$  vyví
 rychlostí $$C'(t)=10^3(t-7).$$ Jaká je změna koncentrace bakterií mezi
 čtvrtým a šestým dnem?
 
-(Podle Mardsen, Weinstein: Calculus I.)
+(Podle Marsden, Weinstein: Calculus I.)
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
-Změna koncentrace je integrál z rychlosti s jakou se koncentrace mění, tj. 
+Změna koncentrace je integrál z rychlosti, s jakou se koncentrace mění, tj. 
 $$
   \int_4^6 10^3(t-7)\,\mathrm dt= \left[10^3\left (\frac 12 t^2-7t\right)\right]_4^6=-4000
 $$
@@ -170,13 +170,13 @@ Nechť $W(t)$ je počet francouzských slovíček,
 které se naučíme po $t$ minutách. Typicky může být (pro první dvě hodiny učení)
 $$W(0)=0\quad \text {a} \quad W'(t)=\frac{4t}{100}-3\left (\frac  t{100}\right)^2.$$ Najděte pomocí integrálu funkci $W(t)$.
 
-(Podle Mardsen, Weinstein: Calculus I.)
+(Podle Marsden, Weinstein: Calculus I.)
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
-Výsledná funkce integrálem rychlosti učení, tj.
+Výsledná funkce je integrálem rychlosti učení, tj.
 $$
 W(t)=\int W'(t) \,\mathrm dt  =  \int \frac{4t}{100}-3\left (\frac  t{100}\right)^2 \,\mathrm dt  =\frac {2t^2}{100}-\frac{t^3}{10000} +C,
 $$
@@ -193,7 +193,7 @@ Tedy
 $$
   w(T)=\frac {2T^2}{100}-\frac{T^3}{10000}
 $$
-a po přeznační proměnné máme stejný výsledek jako předešlým postupem.
+a po přeznačení proměnné máme stejný výsledek jako předešlým postupem.
 
 ```
 
@@ -237,8 +237,8 @@ _Všimněte si, že v každém případě se integruje jiná funkce a v jiných
 mezích. Protože však všechny výpočty charakterizují stejnou situaci,
 výsledky jsou po převedení na stejné jednotky stejné, což je
 očekávané. 
-Změna jednotek je speciální případ substituce, kdy proměnnou podle
-které integrujeme nahradíme proměnnou jinou. Tuto metodu si pro
+Změna jednotek je speciální případ substituce, kdy proměnnou, podle
+které integrujeme, nahradíme proměnnou jinou. Tuto metodu si pro
 integrál představíme na přednášce._
 
 ```{prf:example} Řešení

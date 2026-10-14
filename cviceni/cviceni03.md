@@ -170,7 +170,7 @@ součinitel $rx$ nulový a
 druhý součinitel $\left(1-\frac xK\right)$ nenulový a platí
 $\left(1-\frac 0K\right)=1$. V okolí $x=0$ je první součinitel lineární a v okolí $x=0$ platí
   $$rx\left(1-\frac xK\right)\approx rx\left(1-\frac 0K\right)=rx.$$
-1. Funkce $f(x)=rx\left(1-\frac xK\right)$ má v bodě $x=K$ první součinitel $rx$ nenulový roven $rK$ a
+1. Funkce $f(x)=rx\left(1-\frac xK\right)$ má v bodě $x=K$ první součinitel $rx$ nenulový a roven $rK$ a
    druhý součinitel $\left(1-\frac xK\right)$ nulový. Druhý součinitel je lineární. Proto v okolí
   $x=K$ platí
   $$rx\left(1-\frac xK\right)\approx rK\left(1-\frac xK\right)=r(K-x).$$
@@ -195,7 +195,7 @@ pixabay.com
 
 Tabulka udává závislost koeficientu tepelné vodivosti mědi na teplotě, $\lambda=\lambda(T)$. Odhadněte pomocí centrální diference derivaci funkce $\lambda$ pro $T=400K$ (cca $127^\circ \mathrm C$). Určete i fyzikální jednotku derivace $\frac{\mathrm d\lambda}{\mathrm dT}$ a slovní interpretaci vypočtené hodnoty.
 
-_Poznámka: Teplota v Kelvinech (termodynamická teplota) je teplota ve stupních Celsia posunutá tak, aby teplota $-273{,}15^\circ\mathrm C$ odpovídala $0\,\mathrm K$. Dílky a tedy i změny teploty jsou na obou stupnicích identické._
+_Poznámka: Teplota v kelvinech (termodynamická teplota) je teplota ve stupních Celsia posunutá tak, aby teplota $-273{,}15^\circ\mathrm C$ odpovídala $0\,\mathrm K$. Dílky a tedy i změny teploty jsou na obou stupnicích identické._
 
 |  $T/\mathrm K$ | $\lambda\Bigm/ \mathrm {W}/(\mathrm{m}\,\mathrm{K})$ |
 |---------|----------|
@@ -210,11 +210,11 @@ Table: Zdroj: Cengel, Mass and heat transfer.
 :class: dropdown
 :nonumber:
 
-Teploty jsou v ekvidistantních krocích po $200$ kelvinech. Vezmeme od výchozí hodnoty $400$ kelvinů nejbližší nižší ($200\,\mathrm K$) a nejbližší vyšší ($600\,\mathrm K$) teplotu, najdeme v tabulce odpovídající koeficienty tepelné vodivosti, rozdílem určíme změnu v tomto koeficientu a podílem přepočteme změnu na jeden Kelvin.
+Teploty jsou v ekvidistantních krocích po $200$ kelvinech. Vezmeme od výchozí hodnoty $400$ kelvinů nejbližší nižší ($200\,\mathrm K$) a nejbližší vyšší ($600\,\mathrm K$) teplotu, najdeme v tabulce odpovídající koeficienty tepelné vodivosti, rozdílem určíme změnu v tomto koeficientu a podílem přepočteme změnu na jeden kelvin.
 $$\frac{\mathrm d\lambda}{\mathrm dT}(400) \approx \frac{(379 -413) \mathrm {W}/(\mathrm m\,\mathrm K)}{2\cdot 200\mathrm K}=-0.085\,\mathrm W \,\mathrm m^{-1}\,\mathrm K^{-2}$$
-Při teplotě $T=400 K$ hodnota koeficientu tepelné vodivosti s rostoucí teplotou klesá. S každým stupněm Celsia (s každým Kelvinem) nad danou teplotu klesne koeficient tepelné vodivosti o $0.085\,\mathrm W \,\mathrm m^{-1}\,\mathrm K^{-1}$.
+Při teplotě $T=400 K$ hodnota koeficientu tepelné vodivosti s rostoucí teplotou klesá. S každým stupněm Celsia (s každým kelvinem) nad danou teplotu klesne koeficient tepelné vodivosti o $0.085\,\mathrm W \,\mathrm m^{-1}\,\mathrm K^{-1}$.
 
-Pokusíme se trošku slovně ilustrovat, co nám vlastně vyšlo. Při teplotě $400\,\mathrm K$ a teplotním gradientu jeden stupeň Celsia na metr délky prochází mědí tepelný výkon $393$ wattů na metr čtvereční, tj. za sekundu se plochou metru čtverečního přenese $393$ joulů. S každým stupněm Celsia navíc tato hodnota malinko poklesne: o $0.085$ joulu. Odsud je patrné, že při změně teploty řádově o desítky stupňů se koeficent změní o malé jednotky procent a v těchto situacích nebude závislost na teplotě významná. 
+Pokusíme se trošku slovně ilustrovat, co nám vlastně vyšlo. Při teplotě $400\,\mathrm K$ a teplotním gradientu jeden stupeň Celsia na metr délky prochází mědí tepelný výkon $393$ wattů na metr čtvereční, tj. za sekundu se plochou metru čtverečního přenese $393$ joulů. S každým stupněm Celsia navíc tato hodnota malinko poklesne: o $0.085$ joulu. Odsud je patrné, že při změně teploty řádově o desítky stupňů se koeficient změní o malé jednotky procent a v těchto situacích nebude závislost na teplotě významná. 
 
 ```
 
@@ -228,8 +228,8 @@ pixabay.com
 
 \fi
 
-Úlohy s tepelnou bilancí (např. osluněná stěna) často vedou na rovnice obsahující čtvrtou mocninu  a první mocninu neznámé veličiny. Toto je dáno tím, že vyzařování tepla souvisí podle Stefanova-Bolzmannova zákona se čtvrtou mocninou teploty  a přenos tepla prouděním nebo vedením souvisí s první mocninou teploty.
-Koeficient u první mocniny bývá větší než u čtvrté mocniny, protože konstanta ze Stefanova-Bolzmannova zákona je velmi malá. Typickým představitelem by mohla být rovnice $$x^4-8x+6=0.$$
+Úlohy s tepelnou bilancí (např. osluněná stěna) často vedou na rovnice obsahující čtvrtou mocninu  a první mocninu neznámé veličiny. Toto je dáno tím, že vyzařování tepla souvisí podle Stefanova-Boltzmannova zákona se čtvrtou mocninou teploty  a přenos tepla prouděním nebo vedením souvisí s první mocninou teploty.
+Koeficient u první mocniny bývá větší než u čtvrté mocniny, protože konstanta ze Stefanova-Boltzmannova zákona je velmi malá. Typickým představitelem by mohla být rovnice $$x^4-8x+6=0.$$
 Napište iterační vzorec pro řešení této rovnice Newtonovou metodou a proveďte několik iterací s počáteční aproximací $x_0=1$. Poté porovnejte s postupem, kdy v rovnici osamostatníte $x$ z lineární části a z takové rovnice sestavíte iterační vzorec.
 
 ```{prf:example} Řešení
@@ -255,7 +255,7 @@ Ad hoc iterace: Rovnici převedeme na tvar
 $$x=\frac{x^4+6}{8}$$
 a zkusíme iterace
 $$x_{n+1}=\frac{x_n^4+6}{8}.$$
-Konergenci pozorujeme, ale je pomalá.
+Konvergenci pozorujeme, ale je pomalá.
 
 |Iterace|Hodnota|
 |:----|:----|

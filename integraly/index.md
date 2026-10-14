@@ -5,7 +5,7 @@ https://youtu.be/w2qTl73CsnI
 Naučili jsme se pracovat s derivacemi, tedy s rychlostí změny.
 Známe-li funkci a zderivujeme ji, dostaneme rychlost změny. Pokud potom
 původní funkci "ztratíme" a zůstane nám jenom derivace, je otázka,
-jestli dokážeme původní funkci z této derivace najít. Odpověď je zní, že v
+jestli dokážeme původní funkci z této derivace najít. Odpověď zní, že v
 jistém smyslu ano. Spojení "v jistém smyslu" naznačuje, že souvislost
 nebude tak snadná jako je souvislost u navzájem inverzních
 funkcí. Derivováním totiž můžeme ztratit aditivní konstanty, které v
@@ -52,11 +52,11 @@ Závislá proměnná|Derivace podle času|
 <div class='obtekat'>
 
 ```{figure} zaveseny_most.jpg
-Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability Zdroj: nzwood.co.nz
+Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability. Zdroj: nzwood.co.nz
 ```
 
 ```{figure} 5.png
-Schema poloviny mostu se silamu působícími na část lana.
+Schema poloviny mostu se silami působícími na část lana.
 ```
 
 </div>
@@ -148,7 +148,7 @@ Následující vzorce jsou zpravidla vzorce pro derivování napsané naopak (in
 <div style='column-count: 2;'>
 
 1. $\displaystyle\int c\,\mathrm dx=cx+C$
-1. $\displaystyle\int  x^n\,\mathrm dx= \frac{x^{n+1}}{n+1}+C$
+1. $\displaystyle\int  x^n\,\mathrm dx= \frac{x^{n+1}}{n+1}+C$, $n\neq -1$
 1. $\displaystyle\int  \frac 1x\,\mathrm dx=\ln |x|+C$
 1. $\displaystyle\int  e^x\,\mathrm dx=e^x+C$
 1. $\displaystyle\int  \sin x\,\mathrm dx=-\cos x+C$
@@ -223,7 +223,7 @@ Hodnota $C$ souvisí s počáteční teplotou. Protože počáteční teplota je
 pro $T$ hodnoty $T=28 ^\circ \mathrm{C}$ a $t=0$ a ze vzniklé rovnice
 určíme $C$. Dostáváme takto podmínku $$28=10 e^0 +C,$$ která implikuje
 $C=18 ^\circ \mathrm C$. Funkce udávající závislost
-teploty místnosti na čase je $$T=\left(18+10 e^{-0.01
+teploty tělesa na čase je $$T=\left(18+10 e^{-0.01
 t}\right)\,{}^\circ \mathrm C.$$
 
 \iffalse
@@ -337,13 +337,13 @@ Integrování určitým integrálem si také můžete procvičit v následujíc�
 
 ```{prf:remark} Změna veličiny vypočtená pomocí rychlosti
 :nonumber:
- Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
+ Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový interval rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
 ```
 
 
 \iffalse
 
-Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v následujících dvou cvičeních (první je s volbou s nabízených odpovědí).
+Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v následujících dvou cvičeních (první je s volbou z nabízených odpovědí).
 
 `ww2:problems/integraly_pouziti/strom.pg`
 
@@ -462,7 +462,7 @@ Obsah pod konstantní funkcí.
 
 https://youtu.be/iKG-4g864Q4
 
-manimp:UrcityIntegral|Určitý integrál dokáže nahradit součin v případě, že koeficeint násobící měnící se veličinu není konstantní.
+manimp:UrcityIntegral|Určitý integrál dokáže nahradit součin v případě, že koeficient násobící měnící se veličinu není konstantní.
 
 <div class='obtekat'>
 
@@ -620,7 +620,7 @@ potřebovali mít konstantní pro výpočet k celkovému příspěvku. V
 následujícím případě je obdobný parametr konstantní na kružnicích a
 proto budeme dělit a sčítat příspěvky pomocí mezikruží.
 
-V potrubí o poloměru $R$ teče viskozní tekutina tak, že uprostřed má
+V potrubí o poloměru $R$ teče viskózní tekutina tak, že uprostřed má
 maximální rychlost a u stěn nulovou. Rychlost ve vzdálenosti $r$ od
 osy potrubí je dána vztahem $$v(r)=v_{max}\frac{R^2-r^2}{R^2}.$$
 Střední rychlost dostaneme jako celkový tok potrubím dělený obsahem
@@ -643,7 +643,7 @@ Tok je tedy formálně stejný, jako by voda tekla v celém průřezu
 rychlostí poloviční ve srovnání s maximální rychlostí ve středu
 trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost průřezu. 
 
-(Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 3.)
+(Volně podle Dany Říhové a Jany Markové, Poznámky k přednáškám z Hydrauliky, přednáška č. 3.)
 
 ````
 

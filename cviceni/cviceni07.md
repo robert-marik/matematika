@@ -26,7 +26,7 @@ _Umění najít řešení diferenciální rovnice je sympatické a naučíme se 
     * Konstantní řešení jsou řešení rovnice $$ \sqrt y=0,$$ tj. jediné řešení $$ y=0.$$
     * Pro nekonstantní řešení dostaneme po separaci  $$ \frac 1{\sqrt y}\mathrm dy=x\mathrm dx $$ a integrováním $$ 2\sqrt y=\frac 12 x^2+C.$$
 1. $\frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1$
-    * Konstantní řešení $$y=0$$ (viz předchozí příklad) nesplňuje počáteční podmínku a proto jej nemusíme uvažovat
+    * Konstantní řešení $$y=0$$ (viz předchozí příklad) nesplňuje počáteční podmínku a proto jej nemusíme uvažovat.
     * Obecné řešení  $$ 2\sqrt y=\frac 12x^2 +C$$ dává po dosazení $x=0$ a $y=1$ rovnici $$2\sqrt 1=0+C.$$ Odsud dostáváme $C=2$ a řešení zadané počáteční úlohy je $$2\sqrt y=\frac 12 x^2+2.$$
 1. $\frac{\mathrm dr}{\mathrm dt}=k\cdot r^3,\ \ r(0)=r_0>0$
     * Konstantní řešení jsou řešení rovnice $$ r^3=0,$$ tj. jediné konstantní řešení je $$ r=0$$ a toto řešení nesplňuje počáteční podmínku.
@@ -50,7 +50,7 @@ pixabay.com
 
 \fi 
 
-Takzvaný Stefanův zákon (J. Stefan, \"Uber die Theorie der Eisbildung, insbesondere \"uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve
+Takzvaný Stefanův zákon (J. Stefan, Über die Theorie der Eisbildung, insbesondere über die Eisbildung im Polarmeere, 1891) vyjadřuje, že tloušťka ledu na hladině moře roste ve
 stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište
 tento fakt pomocí vhodného matematického modelu a najděte řešení
 vzniklé diferenciální rovnice.
@@ -80,11 +80,11 @@ www.rodovystatek.cz
 
 \fi 
 
-Z fyziky je známo, že rychlost s jakou
-vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny
+Z fyziky je známo, že rychlost, s jakou
+vytéká tekutina otvorem u dna nádoby, je úměrná odmocnině výšky hladiny
 (protože se mění potenciální energie úměrná výšce na kinetickou
-energii úměrnou druhé mocnině rychlosti). Proto je i rychlost s jakou
-se zmenšuje objem vody v nádrži úměrná odmocnině výšky
+energii úměrnou druhé mocnině rychlosti). Proto je i rychlost, s jakou
+se zmenšuje objem vody v nádrži, úměrná odmocnině výšky
 hladiny.
 
 Ukažte, že matematickým popisem procesu je diferenciální rovnice.
@@ -95,7 +95,7 @@ nádrž ve tvaru
 *kvádru* 
 a nádrž ve tvaru *kužele* otočeného vrcholem dolů (trychtýř). 
 
-_V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky._
+_V tomto příkladě vystupuje derivace jako rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky._
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -204,12 +204,12 @@ _Toto je podobný model jako model vypouštění nádrže, ale kratší. Opět m
 :class: dropdown
 :nonumber:
 
-Rychlost s jakou se mění objem je $\frac{\mathrm dV}{\mathrm dt}$, rychlost přisypávání označme $R$, povrch návětrné strany $S$.
+Rychlost, s jakou se mění objem, je $\frac{\mathrm dV}{\mathrm dt}$, rychlost přisypávání označme $R$, povrch návětrné strany $S$.
 Podle zadání platí
 $$  \frac{\mathrm dV}{\mathrm dt} = R - k_0S.$$
-Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměry, povrch kužele, nebo i povrch poloviny pláště, tj. povrch návětrné strany. Z rozměrové analýzy na základě Buckinghamova Pi-teorému z přednášky je zřejmé, že musí platit úměrnost mezi takovými mocninami těchto veličin, pro které jednotky "pasují", Existuje tedy konstanta taková, že $$S=k_1V^{\frac 23}.$$ Spojením těchto dvou vztahů dostáváme
+Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměry, povrch kužele, nebo i povrch poloviny pláště, tj. povrch návětrné strany. Z rozměrové analýzy na základě Buckinghamova Pi-teorému z přednášky je zřejmé, že musí platit úměrnost mezi takovými mocninami těchto veličin, pro které jednotky "pasují". Existuje tedy konstanta taková, že $$S=k_1V^{\frac 23}.$$ Spojením těchto dvou vztahů dostáváme
 $$  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},$$
-kde $r$ a $k=k_0k_1$ jsou konstanty.
+kde $R$ a $k=k_0k_1$ jsou konstanty.
 
 ```
 

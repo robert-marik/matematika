@@ -24,6 +24,7 @@ parts:
     numbered: False
     chapters:
     - file: cviceni/cviceni00.md
+    - file: symboly.md
   - caption: Cvičení
     numbered: true
     chapters:

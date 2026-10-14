@@ -64,7 +64,7 @@ Každou funkci definovanou na $(-\infty,\infty)$ je možné takto rozložit na s
 
 **Příklad.** Pro funkci $f(x)=e^x$ dostáváme
 $$e^x=\frac{e^x+e^{-x}}2+\frac{e^x-e^{-x}}2.$$ Dvě funkce na pravé
-straně mají význam v aplikacích a nazývají se hypebolický kosinus,
+straně mají význam v aplikacích a nazývají se hyperbolický kosinus,
 $\cosh x$, a hyperbolický sinus, $\sinh x$.
 
 **Příklad.** Je-li funkce $f(x)$ polynom, potom rozkladem na sudou a lichou část dostaneme polynomy, které jsou tvořeny členy původního polynomu tak, že sudá část obsahuje právě členy se sudým exponentem a lichá část právě členy s lichým exponentem.
@@ -116,7 +116,7 @@ Znalost minima potenciální energie je často zásadní pro nalezení stabilní
 V příkladě s aproximací potenciálu pomocí Taylorova polynomu se nám
 povedlo potenciál aproximovat pomocí kvadratické funkce v okolí
 vrcholu paraboly. To je častá úloha, protože systémy s potenciální
-energií se často nacházejí ve stavu blízkému minimu této
+energií se často nacházejí ve stavu blízkém minimu této
 energie. Otázka je, jak toto minimum najít. Budeme řešit poněkud
 obecnější úlohu, jak hledat nejenom minimální hodnotu, ale i maximální
 hodnotu. Zaměříme se na minima a maxima, která jsou lokální (s funkcí pracujeme
@@ -183,10 +183,10 @@ která má fyzikální smysl na intervalu $(0,1)$.
 
 *Trik 2: Protože uvažujeme jenom 
 kladné délky, je funkce kladná a bude maximální tam, kde bude
-maximální její druhé mocnina.* Je tedy možné studovat ekvivalentní
+maximální její druhá mocnina.* Je tedy možné studovat ekvivalentní
 úlohu
 $$(wh^3)^2=h^6(1-h^2)=h^6-h^8\to \mathrm{MAX}$$
-na intervalu $(0,\infty)$. Výhoda je zřejmá: místo součinu dvou
+na intervalu $(0,1)$. Výhoda je zřejmá: místo součinu dvou
 funkcí, z nichž jedna je navíc složená, studujeme dvoučlenný
 polynom. Pro funkci $$f(h)=h^6-h^8$$ dostáváme
 $$ \frac{\mathrm df}{\mathrm dh}=6h^5-8h^7=2h^5(3-4h^2).$$
@@ -201,7 +201,6 @@ a šířka bude rovna polovině průměru.
 \iffalse
 
 * [Online výpočet.](https://gist.github.com/robert-marik/17c21c17330d7e30b0ffc4ec74eae0e0) 
-* [ChatGPT a jeho totální fail](https://chat.openai.com/share/f56e697a-09b7-4e2d-b05c-2f970b306d02).
 
 \fi
 
@@ -332,13 +331,13 @@ $$\frac Q{2\pi Lk} \ln \frac{R}{r}=T_1-T_2,$$(3.1)
 
 kde $T_1$ je teplota uvnitř, $T_2$ teplota na vnějším okraji a $k$ je tepelná vodivost materiálu. Tento vzorec odvodíme později v přednášce o integrálu. 
 
-Teplo $Q$, které za jednotku času vyzáří plocha trubky o poloměru $R$ a teplotě $T_2$ do okolí o teplotě $T_\infty$, vztažené na jednotku povrchu trubky, je přímo úměrné rozdílu teplot a povrchu, tj. platí $$\frac{Q}{2\pi  R L}=h (T_2-T_\infty).$$ Odsud
+Teplo $Q$, které za jednotku času předá plocha trubky o poloměru $R$ a teplotě $T_2$ do okolí o teplotě $T_\infty$ (přestup tepla prouděním), vztažené na jednotku povrchu trubky, je přímo úměrné rozdílu teplot, tj. platí $$\frac{Q}{2\pi  R L}=h (T_2-T_\infty).$$ Odsud
 
 $$\frac Q{h 2\pi RL}= T_2-T_\infty.$$ (3.2)
 
 Sečtením {eq}`3.1` a {eq}`3.2` dostaneme 
 $$ \frac{Q}{2\pi L}\left(\frac 1k \ln \frac{R}{r}+\frac 1{h R}\right) = T_1-T_\infty.$$
-Tento vzorec popisuje tepelné ztráty při izolaci trubky o vnitřním poloměru $r$ a teplotě $T_1$ izolací o vnějším poloměru $R$ ve vnější teplotě $T_\infty$. Parametry izolace jsou tepelná vodivost $k$ a s koeficient prostupu tepla $h$. Budeme sledovat, jak se chová veličina $Q$ (tepelné ztráty) jako funkce proměnné $R$. 
+Tento vzorec popisuje tepelné ztráty při izolaci trubky o vnitřním poloměru $r$ a teplotě $T_1$ izolací o vnějším poloměru $R$ ve vnější teplotě $T_\infty$. Parametry izolace jsou tepelná vodivost $k$ a součinitel přestupu tepla $h$. Budeme sledovat, jak se chová veličina $Q$ (tepelné ztráty) jako funkce proměnné $R$. 
 $$Q(R)=2\pi L\frac {T_1-T_\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}$$
 Pokud chceme minimalizovat tepelné ztráty $Q$, musíme maximalizovat jmenovatel
 $$f(R)=\frac 1k \ln \frac{R}{r}+\frac 1{h R}=\frac 1k \ln R -\frac 1k \ln r+\frac 1{h} R^{-1}.$$
@@ -369,7 +368,7 @@ proudu. Proto by izolace neměla překročit kritický poloměr.
 ## Odbočka: triky pro práci s funkcemi 1
 
 1. Vhodnou volbou jednotek dokážeme eliminovat některé
-parametry. Přesněji, vhodnou volnou jednotek dokážeme některým
+parametry. Přesněji, vhodnou volbou jednotek dokážeme některým
 parametrům dát konkrétní numerickou hodnotu. Vyšetřovaná funkce je
 potom často jednodušší. Viděli jsme v příkladě s vytesáním nosníku maximální tuhosti z kulatiny. 
 1. Je-li $g$ rostoucí, potom z definice rostoucí funkce plynou ekvivalence
@@ -472,7 +471,7 @@ funkce $f$ konstantní a pro nějakou hodnotu $k$ platí $$V^2 S^{-3}=k$$
 a odsud $$V^2=k S^{3}.$$ Tedy vhodné mocniny objemu a obsahu jsou si
 úměrné. Tento výsledek je možné získat i kombinací vzorců $V=\frac 43
 \pi r^3$ a $S=4\pi r^2$, ovšem je nutná znalost těchto vzorců a
-provedení netriválního množství matematických výpočtů. Jako výsledek
+provedení netriviálního množství matematických výpočtů. Jako výsledek
 takové detailnější analýzy bychom navíc věděli, jaká je hodnota
 konstanty úměrnosti $k$. My jsme si však chtěli ukázat dosažení
 výsledku s minimální námahou a s minimálními vstupními znalostmi,
@@ -488,7 +487,7 @@ Vánoční strom pro Prahu v prosinci 2019. Ořezání průměru kmene na polovi
 ```
 
 ```{figure} nosniky_unod.jpg
-Nosníky obdélníkového průřezu. Trojnásobný nosník má devětkrát vetší tuhost než nosníky tři. Slepením tří nosníků k sobě zvýšíme tuhost devětkrát ve srovnání s případem, kdy bychom je na sebe volně položili.
+Nosníky obdélníkového průřezu. Trojnásobný nosník má devětkrát větší tuhost než nosníky tři. Slepením tří nosníků k sobě zvýšíme tuhost devětkrát ve srovnání s případem, kdy bychom je na sebe volně položili.
 ```
 
 </div>
@@ -500,14 +499,14 @@ daném materiálovém složení je kvadratický moment průřezu $I$ v
 jednotkách metr na čtvrtou. Pokud je průřez nosníku daný jenom jedním
 délkovým parametrem $a$ (například čtvercový nebo kruhový průřez),
 máme stejný případ jako výše, kdy počet parametrů o jedničku převyšuje počet základních jednotek: $n=2$ a $m=1$. Vztah mezi
-kvadratickým průřezem $I$ a rozměrem $a$ se dá vyjádřit pomocí jedné bezrozměrné veličiny a  máme vlastně jenom jedinou možnost jako tuto veličinu sestavit: $$\pi_1=\frac {I}{a^4}.$$ Stejně jako v předchozím
+kvadratickým momentem průřezu $I$ a rozměrem $a$ se dá vyjádřit pomocí jedné bezrozměrné veličiny a  máme vlastně jenom jedinou možnost jak tuto veličinu sestavit: $$\pi_1=\frac {I}{a^4}.$$ Stejně jako v předchozím
 příkladě existuje konstanta $k$ taková, že $\frac I{a^4}=k,$ tj. $$I=ka^4.$$ Po seznámení se
 s dvojným integrálem uvidíme, že pro čtvercový průřez o straně čtverce
 $a$ je $k=\frac 1{12}.$
 
 **Příklad (tuhost nosníků obdélníkového průřezu).** Budeme pokračovat
 v předchozím příkladě. Pro obdélníkový průřez o rozměrech $w$ krát $h$
-je $m=3$ (tři veličiny $w$, $h$, $I$) a $n=1$ (jediná základní
+je $n=3$ (tři veličiny $w$, $h$, $I$) a $m=1$ (jediná základní
 jednotka metr). Pokud však víme, že dva nosníky vedle sebe se
 prohýbají stejně, jako by byly spojeny, víme, že mezi $I$ a $w$ musí
 být přímá úměrnost. Proto můžeme místo kvadratického momentu průřezu
@@ -538,7 +537,7 @@ $$\vec F=(P,Q,R)=P\vec i+Q\vec j+R\vec k = P\vec e_1+Q\vec e_2+R\vec e_3$$
 
 ### Gradient
 
-Pokud nerovnoměrnost v prostorovém rozložení skalární veličiny iniciuje nějaký děj, je nutné znát směr, ve kterém tato veličina roste nebo klesá. To jsme viděli například u rovnice vedení tepla, kde nerovnoměrnost v prostorovém rozložení teploty dává vznik toku tepla. V jednorozměrném případě byla situace jednoduchá a stačí se řídit znaménkem derivace. Ve dvourozměrném nebo trojrozměrném případě je bohužel situace složitější ale i zde máme nástroj pro detekci směrů ve kterém veličina roste nebo klesá a také intenzity tohoto růstu nebo poklesu.
+Pokud nerovnoměrnost v prostorovém rozložení skalární veličiny iniciuje nějaký děj, je nutné znát směr, ve kterém tato veličina roste nebo klesá. To jsme viděli například u rovnice vedení tepla, kde nerovnoměrnost v prostorovém rozložení teploty dává vznik toku tepla. V jednorozměrném případě byla situace jednoduchá a stačí se řídit znaménkem derivace. Ve dvourozměrném nebo trojrozměrném případě je bohužel situace složitější ale i zde máme nástroj pro detekci směrů ve kterých veličina roste nebo klesá a také intenzity tohoto růstu nebo poklesu.
 
 ```{prf:definition} Gradient
 :nonumber:
@@ -585,18 +584,18 @@ popsat transformaci roviny. Protože v tomto případě pracujeme se dvěma
 souřadnicemi, je nutno uvažovat dvě funkce (pro každou souřadnici
 jednu funkci) a každá funkce závisí na dvou proměnných (na obou
 souřadnicích). Popis, který si představíme, využijeme při popisu
-matematického namáhání při odvození veličin, na nichž je založen obecný
+mechanického namáhání při odvození veličin, na nichž je založen obecný
 Hookův zákon dávající do souvislosti deformaci materiálu a působení
 vnější síly.
 
 Lineární aproximaci funkce jedné proměnné můžeme zapsat ve tvaru
 $$f(x+\Delta x)\approx f+\frac{\mathrm df}{\mathrm dx}\Delta x,$$
-kde na pravé straně pro stručnost nevypisujme závislost na
+kde na pravé straně pro stručnost nevypisujeme závislost na
 $x$. Podobně můžeme zapsat lineární aproximaci pro funkci dvou
 proměnných $x_{1}$ a $x_{2}$ ve tvaru
 $$
-f(x_{1}+\Delta x_{1}, x_{2})\approx f +\frac{\partial f}{\partial x_{1}},\qquad
-f(x_{1}, x_{2}+\Delta x_{2})\approx f +\frac{\partial f}{\partial x_{2}}.
+f(x_{1}+\Delta x_{1}, x_{2})\approx f +\frac{\partial f}{\partial x_{1}}\Delta x_{1},\qquad
+f(x_{1}, x_{2}+\Delta x_{2})\approx f +\frac{\partial f}{\partial x_{2}}\Delta x_{2}.
 $$
 
 Uvažujme nyní mechanické namáhání, kdy se těleso posunuje, rotuje a

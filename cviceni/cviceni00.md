@@ -1,10 +1,10 @@
 # Úvod
 
-Toto cvičení je pouze, pokud v týdením rozvrhu cvičení předchází přednášku. V první úloze si připomeneme exponenciální funkci a jednu její zajímavou vlastnost (neintuitivní rychlost růstu). V dalších úlohách se podíváme na výpočet rychlosti, protože na to navazujeme na přednášce. A na závěr něco k soustavám lineárních rovnic.
+Toto cvičení je pouze, pokud v týdenním rozvrhu cvičení předchází přednášce. V první úloze si připomeneme exponenciální funkci a jednu její zajímavou vlastnost (neintuitivní rychlost růstu). V dalších úlohách se podíváme na výpočet rychlosti, protože na to navazujeme na přednášce. A na závěr něco k soustavám lineárních rovnic.
 
 ## Informační zdroje
 
-* [Moodle na MENDELU, předmět Matematika](https://moodle.mendelu.cz/course/view.php?id=968). Přihlášení přes Shibboleth pomocí údajů pro přihlášení do UIS. Poté pro zápis do předmětu použijete kód rozlišující formu studia (presenční versus kombinovaná). Zde jsou učební materiáy, podmínky pro ukončení. Odsud se autentizujete do systému pro domácí úkoly.
+* [Moodle na MENDELU, předmět Matematika](https://moodle.mendelu.cz/course/view.php?id=968). Přihlášení přes Shibboleth pomocí údajů pro přihlášení do UIS. Poté pro zápis do předmětu použijete kód rozlišující formu studia (presenční versus kombinovaná). Zde jsou učební materiály, podmínky pro ukončení. Odsud se autentizujete do systému pro domácí úkoly.
 * WeBWorK na UM. Systém pro domácí úkoly. Přístup je automaticky z Moodle opory. Domácí úkoly se otevírají a uzavírají podle nastaveného harmonogramu. Plněním těchto nepovinných domácích úkolů si můžete výrazně snížit laťku nutnou pro překonání zkoušky a vylepšit známku. Více viz podmínky pro ukončení předmětu v Moodle.
 
 
@@ -26,7 +26,7 @@ V něčem měl spisovatel pravdu. Bakterie _E. coli_ se za optimálních podmín
 
 Je pravdivý i zbytek? Uvažujme na začátku jednu jedinou bakterii. Kolik bakterií bude za 24 hodin? Určete i výslednou hmotnost. Určete i funkci, která udává počet a hmotnost bakterií po uplynutí $t$ hodin. Hmotnost jedné bakterie uvažujte $10^{-12}\,\mathrm{g}$.
 
-Srovnejte s hmotností kočky (kilogramy), psa (nízké desítky kilogramů), člověka (vyšší desitky kilogramů), automobilu (tuny, $10^3\,\mathrm {kg}$), Boeingu 737 (desítky tun, $10^4\,\mathrm {kg}$), Empire State Building (stovky tisíc tun, <https://cs.wikipedia.org/wiki/Empire_State_Building>, $10^8\,\mathrm {kg}$), Země ($5\times 10^{24}\,$kg).
+Srovnejte s hmotností kočky (kilogramy), psa (nízké desítky kilogramů), člověka (vyšší desítky kilogramů), automobilu (tuny, $10^3\,\mathrm {kg}$), Boeingu 737 (desítky tun, $10^4\,\mathrm {kg}$), Empire State Building (stovky tisíc tun, <https://cs.wikipedia.org/wiki/Empire_State_Building>, $10^8\,\mathrm {kg}$), Země ($5\times 10^{24}\,$kg).
 
 Bakterie _E. coli_ je přítomna v lidském organismu ve střevech a většina jejích kmenů je neškodná. Její případná přítomnost například v pitné vodě je indikátorem fekálního znečištění. Jedná se o dobře prozkoumanou bakterii, která se využívá v genovém inženýrství a biotechnologiích.
 
@@ -73,7 +73,7 @@ Uvažujme tři různé děje, kde nějaká veličina roste v čase.
 
 Porovnejte průměrnou rychlost za první dvě jednotky času (první dvě hodiny pro auto a bakterie, resp. první dvě sekundy v případě volného pádu) a za časový interval od 2 do 4 hodin resp. sekund.
 
-Shrňte své pozorování a pokuste se odhadnou, pro jaké funkční závislosti budou
+Shrňte své pozorování a pokuste se odhadnout, pro jaké funkční závislosti budou
 průměrné rychlosti stejné, ať použijeme libovolný interval. (Možná pomůže obrázek.)
 
 
@@ -87,7 +87,7 @@ U volného pádu a růstu bakterií průměrná rychlost roste.
 
 Průměrná rychlost nezávisí na intervalu, pokud je grafem přímka, tj. pro lineární funkce. 
 
-Obrázky je možné vygenerovat pomocí [Wolfram Alpha](https://www.wolframalpha.com/input?i=draw+2%5E%283t%29) (jednoduché, rychlé) nebo pomocí [Pythonu](https://gist.github.com/robert-marik/d61794d36e9caf503dba96c61c856981) (vyspělejší postup, může být součástí složitější simulace, není nutné se bát syntaxe příkazů, pokud využijeme pomoc umělé interligence).
+Obrázky je možné vygenerovat pomocí [Wolfram Alpha](https://www.wolframalpha.com/input?i=draw+2%5E%283t%29) (jednoduché, rychlé) nebo pomocí [Pythonu](https://gist.github.com/robert-marik/d61794d36e9caf503dba96c61c856981) (vyspělejší postup, může být součástí složitější simulace, není nutné se bát syntaxe příkazů, pokud využijeme pomoc umělé inteligence).
 
 ```
 

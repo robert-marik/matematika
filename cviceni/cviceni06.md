@@ -38,7 +38,7 @@ prvním případě je složenou funkcí exponenciální funkce, která má
 vnitřní složku $x^2$. Derivace funkce $x^2$ je $2x$ a toto hledáme v
 součinu se složenou funkcí. Část s proměnnou $x$ vidíme na začátku
 integrované funkce. Dvojku ve funkci nemáme, ale to je naštěstí jenom
-multiplikativní konstanta s takovou konstantou si dokážeme
+multiplikativní konstanta a s takovou konstantou si dokážeme
 poradit. Viz níže.
 
 1. Integrál vypočteme substitucí $$x^2=t,$$ odkud plyne $$2x\,\mathrm dx=\mathrm dt$$ a $$x\,\mathrm dx=\frac 12 \mathrm dt.$$ S touto substitucí dostáváme 
@@ -146,9 +146,9 @@ pixabay.com
 
 \fi 
 
-Určete střední hodnotu koeficientu tepelné vodivosti $\lambda$ mědi na teplotním intervalu od 100 do 400 Kelvinů. Porovnejte výsledek s aritmetickým průměrem.
+Určete střední hodnotu koeficientu tepelné vodivosti $\lambda$ mědi na teplotním intervalu od 100 do 400 kelvinů. Porovnejte výsledek s aritmetickým průměrem.
 
-Pro výpočet na intervalu od 100 do 800 Kelvinů bychom museli integrovat na intervalu, na kterém nemáme rovnoměrně rozložené uzlové body. Navrhněte, jak v takovém případě postupovat a jak vypočítat $\int_{100}^{800}\lambda(T)\,\mathrm dT$
+Pro výpočet na intervalu od 100 do 800 kelvinů bychom museli integrovat na intervalu, na kterém nemáme rovnoměrně rozložené uzlové body. Navrhněte, jak v takovém případě postupovat a jak vypočítat $\int_{100}^{800}\lambda(T)\,\mathrm dT$.
 
 |  $T/\mathrm{K}$ | $\lambda/ (\mathrm{W}/(\mathrm{m}\,\mathrm{K}))$ |
 |-|-|
@@ -233,7 +233,7 @@ $$N(10)=N(0)+\int_0^{10} R(t)\,\mathrm dt=5600+\int_0^{10} 720 e^{0.1 t}\,\mathr
 $$
 kde integrál se dá vypočítat přímou integrací pomocí vzorce.
 
-Se znečištěním: Jedinci, kteří jsou v populaci na začátku, musí přežít 10 let, to znamená, že se jejich počet sníží na $S(10)$-násobek. Jedinci, kteří se narodí v roce $t$ musí přežít $10-t$ let a to znamená, že jejich počet se sníží na $S(10-t)$-násobek. Toto snížení musíme započítat do předchozího modelu bez znečištění a dostaneme
+Se znečištěním: Jedinci, kteří jsou v populaci na začátku, musí přežít 10 let, to znamená, že se jejich počet sníží na $S(10)$-násobek. Jedinci, kteří se narodí v roce $t$, musí přežít $10-t$ let a to znamená, že jejich počet se sníží na $S(10-t)$-násobek. Toto snížení musíme započítat do předchozího modelu bez znečištění a dostaneme
 $$
 \begin{aligned}
 N(10)&=N(0)S(10)+\int_0^{10} R(t)S(10-t)\,\mathrm dt=\\&=5600 e^{-2}+\int_0^{10} 720 e^{0.1 t}e^{-0.2(10-t)}\,\mathrm dt\\&= 5600 e^{-2}+720 e^{-2} \int_0^{10}  e^{0.3 t}\,\mathrm dt= \cdots =7000,
@@ -268,7 +268,7 @@ $$D(r)=D_0 e^{-r^2}.$$ Určete množství semen uvnitř kruhu o poloměru $R$.
 Napište jenom příslušný integrál a okomentujte, jakou metodou bychom
 ho počítali. Vlastní výpočet provádět nemusíte.
 
-_(Volně přeformulováno podle L. Edestein--Keshet: Differential calculus
+_(Volně přeformulováno podle L. Edelstein-Keshet: Differential calculus
 for the life sciences. Příklad je použitelný pro stromy s velkými semeny, například dub. Pro jiné stromy musí semena sbírat stromolezci.)_
 
 ```{prf:example} Řešení
@@ -282,7 +282,7 @@ máme hustotu semen.  Množství je součin hustoty a obsahu, $N=S\cdot D$. Prot
 $$N=\sum_{kruh} D \frac{\Delta S}{\Delta r}\Delta r.$$ Limitním přechodem uděláme skok v součtu nekonečně malý a součet přejde na integrál, podíl změn přejde na derivaci, tj. dostaneme
 $$N=\int_{kruh} D \frac{\mathrm dS}{\mathrm dr}\,\mathrm d r.$$
 Obsah $S=\pi r^2$
-roste s poloměrem, $\frac {\mathrm dS}{\mathrm dr}=2\pi r$. Po dosazení této derivace a po dosazení za $D$ a vyjádření toho, co znamená integrál přes kruh o poloměru $R$ získáme integrál
+roste s poloměrem, $\frac {\mathrm dS}{\mathrm dr}=2\pi r$. Po dosazení této derivace a po dosazení za $D$ a vyjádření toho, co znamená integrál přes kruh o poloměru $R$, získáme integrál
 $$N=\int _0^R D_0e^{-r^2}2\pi r\,\mathrm dr,$$
 který můžeme vypočítat pomocí substituce $-r^2=t$.
 

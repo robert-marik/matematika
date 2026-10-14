@@ -8,7 +8,7 @@ https://youtu.be/gU6ClJwLFs0
 ````{prf:algorithm} Motivace, přehled úspěchů
 :class: dropdown
 
-Diferenciální rovnice jsou jakýmsi zlatým grálem modelování. V historii byly matematické modely založené na těchto rovnicích přímou motivací k rozvoji diferenicálního počtu (aby bylo možno tyto rovnice formulovat) a integrálního počtu (aby bylo možno tyto rovnice řešit). Od té doby dosáhla trojice derivace+integrál+diferenciální rovnice na obrovskou řadu úspěchů napříč mnoha obory.
+Diferenciální rovnice jsou jakýmsi zlatým grálem modelování. V historii byly matematické modely založené na těchto rovnicích přímou motivací k rozvoji diferenciálního počtu (aby bylo možno tyto rovnice formulovat) a integrálního počtu (aby bylo možno tyto rovnice řešit). Od té doby dosáhla trojice derivace+integrál+diferenciální rovnice na obrovskou řadu úspěchů napříč mnoha obory.
 
 \iffalse
 
@@ -37,7 +37,7 @@ Analogové počítače využívaly toho, že různé děje mohou být popisován
 * Vysvětlení podstaty periodického přemnožování *[Choristoneura fumiferana](https://en.wikipedia.org/wiki/Choristoneura_fumiferana)* v kanadských lesích (Ludwig, Jones, Holling).
 * Systémová biologie, výzkum složitých interakcí mezi enzymy, geny a proteiny v živých organismech (Alon).
 * Výzkum meteoritů s rodokmenem ([Zdeněk Ceplecha](https://cs.wikipedia.org/wiki/Zden%C4%9Bk_Ceplecha), [Pavel Spurný](https://cs.wikipedia.org/wiki/Pavel_Spurn%C3%BD)), výpočet jejich místa dopadu a místa, odkud meteorit přiletěl. Nesmírně cenný zdroj studijního materiálu.
-* Zaměřovače pro řízení protiletecké obrany ([Antonín Svoboda](https://historiepocitacu.cz/prukopnik-pocitacu-antonin-svoboda.html), český kybernetik). Svoboda  později konstruoval výkonnější zaměřovače, získal prestižní vyznamenání námořnictva USA, jeho práce pomohla rozhodnout válku v tichomoří. 
+* Zaměřovače pro řízení protiletecké obrany ([Antonín Svoboda](https://historiepocitacu.cz/prukopnik-pocitacu-antonin-svoboda.html), český kybernetik). Svoboda  později konstruoval výkonnější zaměřovače, získal prestižní vyznamenání námořnictva USA, jeho práce pomohla rozhodnout válku v Tichomoří. 
 
 Někdy je nutné znát řešení rovnice, někdy stačí znát rovnici řídící studovaný proces a i bez znalosti řešení je možné získat užitečné informace.
 
@@ -56,7 +56,7 @@ rychlost růstu nebo poklesu veličiny souvisí s její
 velikostí. Například rychlost s jakou se mění teplota horkého tělesa
 je funkcí teploty samotné. Rychlost tepelné výměny mezi dvěma tělesy
 je totiž úměrná rozdílu jejich teplot (Newtonův zákon). Takto se
-přirozeně diferenciální rovnice objevují v modelech nejrůznějších dějů
+přirozeně diferenciální rovnice objevují v modelech nejrůznějších dějů a
 jevů. Podstatu děje, který modelujeme, musí dodat fyzika, biologie
 nebo jiná aplikovaná věda. To v matematice obsaženo není. Matematika
 poté poslouží k analýze, jaké jsou pozorovatelné důsledky a tím se
@@ -86,7 +86,7 @@ kde $\varphi$ je funkce dvou proměnných.
 
 Diferenciální rovnice bývá v aplikacích matematickým modelem
 kvantifikujícím scénář vývoje systému. Řešením jsou všechny možnosti,
-jak se tento systém může vyvjíjet. K jednoznačnému předpovězení
+jak se tento systém může vyvíjet. K jednoznačnému předpovězení
 budoucího stavu je ovšem nutno znát také stav počáteční, který ze
 všech teoreticky možných průběhů vybere průběh odpovídající modelované
 situaci. Tento stav vyjadřuje počáteční podmínka, uvedená v
@@ -120,7 +120,7 @@ křivka*.
 
 ```{prf:theorem} Existence a jednoznačnost řešení Cauchyovy úlohy
 :nonumber:
- Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha {eq}`r1`-{eq}`r2` právě jedno řešení definované v nějakém okolí počáteční podmínky.
+ Je-li funkce $\varphi (x,y)$ spojitá a má-li ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha {eq}`r1`-{eq}`r2` právě jedno řešení definované v nějakém okolí počáteční podmínky.
 ```
 
 
@@ -193,7 +193,7 @@ Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot, https://
   funkce udávající závislost teploty na čase. Chceme-li znát teplotu
   za určitý čas, není nutné provádět pokus a čekat na uplynutí
   požadované doby. Můžeme teplotu přímo vypočítat.
-* Jednotka konstanty úměrnosti $k$ je rovna převrácené hodnotě času. Tato konstanta číselně vyjadřuje rychlost ochlazování horkého tělesa v okamžiku, kde je jednotkový rozdíl teplot. Podrobnější rozbor těchto tvrzení je uveden v úvodní přednášce o derivaci, kdy jsme se s danou rovnicí setkali poprvé. 
+* Jednotka konstanty úměrnosti $k$ je rovna převrácené hodnotě času. Tato konstanta číselně vyjadřuje rychlost ochlazování horkého tělesa v okamžiku, kdy je jednotkový rozdíl teplot. Podrobnější rozbor těchto tvrzení je uveden v úvodní přednášce o derivaci, kdy jsme se s danou rovnicí setkali poprvé. 
 * Někdy může být vhodné nesledovat teplotu $T$, ale rozdíl oproti
   okolní teplotě, $\tau=T-T_0$. Rovnice se potom zjednoduší na $$
   \frac{\mathrm d\tau}{\mathrm dt}=-k\tau,$$
@@ -252,11 +252,11 @@ Při intenzivním lovu může dojít ke zničení populace https://pixabay.com
 \fi
 
 * Zkoumejme velikost $y$  určité populace, v prostředí s nosnou kapacitou $K$.
-* Budeme pracovat s pojmem specifická míru růstu populace, což je rychlost růstu populace vztažená na jednotkové množství
+* Budeme pracovat s pojmem specifická míra růstu populace, což je rychlost růstu populace vztažená na jednotkové množství
   populace. Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s omezenými úživnými
-  vlastnostmi specifická míru růstu populace klesá s tím, jak se velikost populace přibližuje k nosné
+  vlastnostmi specifická míra růstu populace klesá s tím, jak se velikost populace přibližuje k nosné
   kapacitě, a specifická rychlost růstu populace je modelována funkcí $r\left(1-\frac yK\right)$.  Podle
-  velkosti koeficientů v této rovnici dělíme živočichy na [r-stratégy
+  velikosti koeficientů v této rovnici dělíme živočichy na [r-stratégy
   a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
   toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.
 * Za uvedených předpokladů je možno vývoj populace popsat rovnicí 
@@ -266,7 +266,7 @@ Při intenzivním lovu může dojít ke zničení populace https://pixabay.com
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$
   kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
   tohoto procesu umožní nalezení ekonomicky výhodné ale přitom trvale
-  udržitelné strategie lovu. Nejčatěji studované jsou případy konstantního lovu a lovu úměrného velikosti populace, tedy rovnice 
+  udržitelné strategie lovu. Nejčastěji studované jsou případy konstantního lovu a lovu úměrného velikosti populace, tedy rovnice 
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h$$
   a 
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-hy,$$
@@ -287,11 +287,11 @@ Závěry modelu ostrovní biogeografie byly verifikovány pomocí experimentů n
 
 \fi
 
-Matematické modely je možné použít i pro studium ekosystémů. Následující model katapultoval jeho autory, Robert MacArthura a Edwarda Wilson mezi nejvýznamnější ekology. Slouží pro vysvětlení dynamické rovnováhy počtu druhů na ostrově, kdy se druhová skladba na ostrově mění, ale bohatost (počet druhů) zůstává. Původně byl odvozen pro skutečné ostrovy v moři, platí však pro jakýkoliv biotop odlišující se od okolí, například les v moři polí, vrcholky hor v moři krajiny s nižší nadmořskou výškou a podobně. Množství druhů, žijících na ostrově, označíme $N$. 
+Matematické modely je možné použít i pro studium ekosystémů. Následující model katapultoval jeho autory, Roberta MacArthura a Edwarda Wilsona mezi nejvýznamnější ekology. Slouží pro vysvětlení dynamické rovnováhy počtu druhů na ostrově, kdy se druhová skladba na ostrově mění, ale bohatost (počet druhů) zůstává. Původně byl odvozen pro skutečné ostrovy v moři, platí však pro jakýkoliv biotop odlišující se od okolí, například les v moři polí, vrcholky hor v moři krajiny s nižší nadmořskou výškou a podobně. Množství druhů, žijících na ostrově, označíme $N$. 
 
 * Na ostrov migrují nové druhy, které se mohou trvale usadit. Kromě toho, některé druhy, které kolonizovaly ostrov v minulosti, pod tlakem nových kolonizátorů vymírají. Rychlost změny počtu druhů na ostrově je dána jako rozdíl rychlosti kolonizace a vymírání druhů. $$\frac{\mathrm dN}{\mathrm dt}=\text{kolonizace}-\text{vymírání}.$$
 * Rozmanitější ekosystémy jsou stabilnější. Je-li na ostrově hodně druhů, je pro nové kolonizátory těžké se usadit. Proto je rychlost kolonizace klesající funkcí počtu druhů. Pro jednoduchost můžeme předpokládat, že rychlost kolonizace je nepřímo úměrná počtu druhů a tedy pro nějakou konstantu $k_1$ platí $$\text{kolonizace}=\frac{k_1}{N}.$$
-* Je-li na ostrově více druhů, je pravděpodobnější, že některý vymře. Proto je rychlost mizení druhl z ostrova rostoucí funkcí počtu druhů. Pro jednoduchost můžeme předpokládat, že závislost je přímou úměrností, tj. $$\text{vymírání}=k_2 N$$ pro nějakou konstantu $k_2$.
+* Je-li na ostrově více druhů, je pravděpodobnější, že některý vymře. Proto je rychlost mizení druhů z ostrova rostoucí funkcí počtu druhů. Pro jednoduchost můžeme předpokládat, že závislost je přímou úměrností, tj. $$\text{vymírání}=k_2 N$$ pro nějakou konstantu $k_2$.
   
 Model má potom tvar $$\frac{\mathrm dN}{\mathrm dt}=\frac{k_1}{N}-k_2 N.$$ Analýza tohoto modelu dokáže objasnit, jak probíhá kolonizace a jaká je druhová pestrost v izolovaných biotopech. Umožňuje posoudit, jak se tato druhová pestrost mění s velikostí ostrova, jeho izolovaností (vzdáleností od pevniny) a má vliv například na posuzování míry ochrany chráněných lokalit v závislosti na jejich velikosti.
 
@@ -302,7 +302,7 @@ vede k přírůstku tloušťky kmene. Aktivace kambia byla modelována pomocí
 diferenciální rovnice v článku [Computational modeling of cambium activity
 provides a regulatory framework for simulating radial plant
 growth](https://elifesciences.org/articles/66627). V tomto modelu je vysvětlena
-dynamika pomocí enyzmu PXY a jeho aktivátoru CLE41. Tato aktivace probíhá podle
+dynamika pomocí receptoru PXY a jeho aktivátoru CLE41. Tato aktivace probíhá podle
 schematu $$ \text{CLE41} + \text{PXY} \to \text{PXY}_{\text{active}}.$$
 Označíme-li koncentrace látek $\text{PXY}_{\text{active}}$, $\text{PXY}$ a $\text{CLE41}$ po řadě $x$, $y$ a $z$, je v odkazované
 publikaci navržen model popsaný rovnicemi
@@ -319,7 +319,7 @@ vyskytuje ve všech třech rovnicích. Pro produkty reakce je tento člen kladn�
 pro reaktanty záporný. Přítomnost $\text{PXY}_{\text{active}}$ brzdí 
 produkci $\text{PXY}$, což je modelováno členem $\frac{k_2}{1+k_3x}$ v druhé rovnici.
 
-Na rozdíl od předchozích příkladů se zde setkáváme s systémem tří vzájemně
+Na rozdíl od předchozích příkladů se zde setkáváme se systémem tří vzájemně
 propojených diferenciálních rovnic. Takové systémy jsou běžné v modelování
 biologických dějů, kde dochází k vzájemným interakcím mezi několika látkami nebo
 druhy. Studují se podobnými metodami jako obyčejné diferenciální rovnice, ale jejich analýza je
@@ -364,7 +364,7 @@ Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. 
   $$
   \frac{\mathrm dy}{\mathrm dt}  =-ky.
   $$
-* Výše uvedená rovnice na nazývá *rovnice samočištění jezer*, ale
+* Výše uvedená rovnice se nazývá *rovnice samočištění jezer*, ale
   tento název je čistě formální. Jedná se vlastně o stejnou rovnici,
   která popisuje radioaktivní rozpad nebo
   změnu rozdílu mezi teplotou horkého nápoje a místnosti při chladnutí
@@ -381,7 +381,7 @@ Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. 
 ### Akutní normovolemická hemodiluce
 
 
-* Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s
+* Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev a s
   ní i krvinky. Při konstantní intenzitě krvácení to znamená, že
   pacient ztrácí krvinky rychlostí úměrnou počtu krvinek. Formálně na
   krvinky v krvi můžeme pohlížet stejně jako na znečištění
@@ -392,7 +392,7 @@ Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. 
   před operací toto množství snížit tím, že se část krve odebere a
   krev se poté doplní vhodnými roztoky.
 * Protože pacient bude po výše uvedeném zákroku už od začátku operace
-  menší počet krvinek, ztrácí tyto krvinky pomaleji a celkový úbytek
+  mít menší počet krvinek, ztrácí tyto krvinky pomaleji a celkový úbytek
   během operace je menší. Na konci operace se pacientovi vrátí dříve
   odebraná krev. Výsledkem je, že po operaci v jeho těle koluje více
   krvinek, než pokud by byl operován s "původní krví".
@@ -425,16 +425,16 @@ RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,
 ```
 
 ```{figure} RC_circuit_drevostavba.jpg
-Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby.   Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term Wood Moisture Monitoring Based on Electrical Methods (2019)
+Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby.   Zdroj: R. Slávik et al., A Nondestructive Indirect Approach to Long-Term Wood Moisture Monitoring Based on Electrical Methods (2019)
 ```
 
 </div>
 
-Při nabíjení kondenzátoru o kapacitě $C$ přes odpor o velikosti $R$ roste napětí na kondenzátoru, tím se mění nabíjecí proud a proto se mění i rychlost nabíení. Pomocí zákonů elektrotechniky je [možno ukázat](http://fyzikalniolympiada.cz/texty/matematika/difro.pdf), že nabíjecí proud $i$ kondenzátoru se řídí diferenciální rovnicí
+Při nabíjení kondenzátoru o kapacitě $C$ přes odpor o velikosti $R$ roste napětí na kondenzátoru, tím se mění nabíjecí proud a proto se mění i rychlost nabíjení. Pomocí zákonů elektrotechniky je [možno ukázat](http://fyzikalniolympiada.cz/texty/matematika/difro.pdf), že nabíjecí proud $i$ kondenzátoru se řídí diferenciální rovnicí
 $$R\frac{\mathrm di}{\mathrm dt}+\frac 1Ci=0.$$
 Napětí na kondenzátoru je možno odvodit buď z proudu, napětí na rezistoru a napětí zdroje, nebo z celkového proudu, který prošel kondenzátorem.
 
-Rovnice je tedy stejná jako rovnice radioaktivního rozpadu a rovnice samočištění jezer. Vhodnou manipulací s parametry součástek je možno měnit koeficient u této rovnice a vhodným spojováním těchto obvodů dokážeme podobně simulovat i složitější rovnice. To je bylo základem analogových počítačů, které nepracovaly s čísly, ale s napětími. Tyto počítače sehrály svou roli v době, kdy číslicové počítače byly nedostupné, pomalé a nespolehlivé. Tím byla historická úloha analogových počítačů splněna a již se nepoužívají. 
+Rovnice je tedy stejná jako rovnice radioaktivního rozpadu a rovnice samočištění jezer. Vhodnou manipulací s parametry součástek je možno měnit koeficient u této rovnice a vhodným spojováním těchto obvodů dokážeme podobně simulovat i složitější rovnice. To bylo základem analogových počítačů, které nepracovaly s čísly, ale s napětími. Tyto počítače sehrály svou roli v době, kdy číslicové počítače byly nedostupné, pomalé a nespolehlivé. Tím byla historická úloha analogových počítačů splněna a již se nepoužívají. 
 
 RC obvod jako takový má však důležité místo i dnes. Dokáže například filtrovat signály podle frekvence. Výpočet jeho charakteristiky (tj. vyřešení rovnice) a sledování napětí na kondenzátoru umožní měření elektrického odporu tam, kde není vhodné odpor určovat z proudu a napětí pomocí Ohmova zákona. Typickým příkladem je odpor dřeva a jeho vodivost, tj. převrácená hodnota odporu. Tato veličina se používá k rychlému stanovení vlhkosti dřeva, nebo je možno ji dlouhodobě sledovat pomocí senzorů zabudovaných do dřevostavby. 
 
@@ -576,7 +576,7 @@ Model [Janáčkovy koncertní síně](https://www.irozhlas.cz/kultura/desetkrat-
 
 Naučíme se vyjadřovat diferenciální rovnici v jiných proměnných tak,
 aby bylo možné snížit počet parametrů v této rovnici. Pro jednoduchost
-budeme uvažovat jenom případ, kdy nová proměnný je lineární funkcí
+budeme uvažovat jenom případ, kdy nová proměnná je lineární funkcí
 původní proměnné.
 
 Uvažujme funkci $y$ proměnné $x$. Připomeneme si vzorce pro derivaci
@@ -618,9 +618,9 @@ $$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1.$$ (NZ-II)
 
 Nová rovnice {eq}`NZ-II` *neobsahuje žádné parametry* a proto je pro studium
 jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
-rovnici {eq}`NZ-II`. Tuto informaci je však nutno interpretovat v kontextu
+rovnici {eq}`NZ-I`. Tuto informaci je však nutno interpretovat v kontextu
 definice nových proměnných. Například to, že všechna řešení rovnice {eq}`NZ-II` konvergují k nule
-znamená, že všechna řešení rovnice {eq}`NZ-I` konvergují k $T_0$. To, že řešení rovnice {eq}`NZ-II` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`NZ-I` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
+znamená, že všechna řešení rovnice {eq}`NZ-I` konvergují k $T_\infty$. To, že řešení rovnice {eq}`NZ-II` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`NZ-I` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
 
 \iffalse
 
@@ -714,8 +714,8 @@ Rovnice
 $$\frac{\mathrm dy}{\mathrm dx}=f(y)$$ (autonomni)
 
 se nazývá *autonomní*, nebo též nezávislá na čase. Je speciálním
-případem rovnice se separovanými proměnnými, která je uvedena na
-dalším slidu a naučíme se ji řešit analytickou cestou. Proto se nyní
+případem rovnice se separovanými proměnnými, která je uvedena
+níže a naučíme se ji řešit analytickou cestou. Proto se nyní
 nebudeme zaměřovat na hledání obecného řešení, ale pokusíme se popsat
 chování řešení, aniž bychom tato řešení znali. Pokusíme se s co
 nejmenší námahou říct, jak se budou řešení chovat.
@@ -785,7 +785,7 @@ proto můžeme udělat následující závěr.
 ```
 
 
-Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
+Pro grafickou interpretaci je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
 má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z monotonie pravé strany.
 
@@ -802,7 +802,7 @@ manim:Logistic|NyLkjOTYzVQ|U logistické rovnice s lovem dochází v závislosti
   stabilní. Jak se zvyšuje faktor $h$, graf paraboly se posouvá směrem
   dolů a oba stacionární body se posouvají směrem k sobě a k  vrcholu. Jejich stabilita zůstává neporušena. To znamená, že sice
   pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu se
-  tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
+  tento stacionární stav dostává stále blíže ke stavu nestabilnímu a
   rovnováha je tedy poněkud křehká. 
 
 ```{prf:remark} Autonomní rovnice s rozdílem na pravé straně
@@ -820,7 +820,7 @@ Funkce z pravé strany rovnice pro teplotní bilanci Země
 </div>
 
 **Příklad.** Teplotní bilanci Země je možno vyjádřit [rovnicí](http://user.mendelu.cz/marik/wiki/doku.php?id=ode)
-$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů.
+$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je větší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů.
 
 \iffalse
 
@@ -915,15 +915,15 @@ se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
 2.  Pracujme na intervalech, kde $g(y)\neq 0$ a odseparujeme proměnné.
     $$          \frac{\mathrm{d}y}{g(y)}=f(x)\mathrm{d}x$$
 
-4.  Získanou rovnost integrujeme. Tím získáme obecné řešení v implicitním tvaru.
+3.  Získanou rovnost integrujeme. Tím získáme obecné řešení v implicitním tvaru.
     $$           \int \frac{\mathrm{d}y}{g(y)}=\int f(x)\mathrm{d}x+C$$
 
-5.  Pokud je zadána počáteční podmínka, je možné ji na tomto místě
+4.  Pokud je zadána počáteční podmínka, je možné ji na tomto místě
     dosadit do obecného řešení a určit hodnotu konstanty $C$. Tuto
     hodnotu poté dosadíme zpět do obecného řešení a obdržíme řešení
     *partikulární*.
 
-6.  Pokud je to možné, převedeme řešení (obecné nebo partikulární) do
+5.  Pokud je to možné, převedeme řešení (obecné nebo partikulární) do
     explicitního tvaru (vyjádříme odsud $y$).
 
 Poslední krok (převod do explicitního tvaru) je volitelný, zpravidla
@@ -940,9 +940,9 @@ $$
 ```
 
 
-Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivace podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
+Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivaci podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
 
-```{prf:theorem} existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými
+```{prf:theorem} Existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými
 :nonumber:
  Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm dy}{\mathrm dx}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 ```
@@ -958,7 +958,7 @@ Příklad ukazuje, že i u modelů přírodních procesů může být více než
 <div class='obtekat'>
 
 ```{figure} london.jpg
-Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.
+Londýnská mlha. Dnes už to není jako za časů Sherlocka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.
 ```
 
 </div>
@@ -980,7 +980,7 @@ a
 $$V=\left(\frac 13 kt+ \frac 13 C\right)^3,$$
 tj.
 $$V=\left(k_0t+ c\right)^3,$$
-kde $k_0=\frac 13 k$ a $c=\frac 13 C$ jsou konstanta spojená rychlostí
+kde $k_0=\frac 13 k$ a $c=\frac 13 C$ jsou konstanta spojená s rychlostí
 kondenzace a integrační konstanta.
 
 Všimněte si, že počáteční úloha s počáteční podmínkou $V(0)=0$ má

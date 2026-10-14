@@ -48,7 +48,7 @@ zobrazení $f$.
 Množina $A$ z definice funkce se nazývá *definiční obor funkce $f$*.
 Označujeme $\mathrm D(f)$ (resp.  $\mathrm{Dom}(f)$). Je-li $M$
 podmnožina definičního oboru, definujeme množinu $f(M)$ jako množinu
-všech obrazů bodů množiny $M$. Množina $f(\mathrm{Dom}(f))=b$ se
+všech obrazů bodů množiny $M$. Množina $f(\mathrm{Dom}(f))$ se
 nazývá *obor hodnot funkce $f$*.  Označujeme $\mathrm H(f)$ (resp.
 $\mathrm{Im}(f)$).
 
@@ -59,7 +59,7 @@ všech uspořádaných dvojic $[x,y]\in\mathbb R^2$ s vlastností $y=f(x)$.
 
 ## Přímá a nepřímá úměrnost
 
-Je to až k nevíře, ale k popisu obrovského množství dějů stačí čtyři základní operace: sčítání, odčítání, násobení a dělení. Vzhledem k požadavku na konzistenci fyzikálních jednotek se nejčastěji setkáváme s násobením a dělením a proto funkce pracující s těmito operacemi mají výsadní postavení. Takový, že si vysloužily pojmenování běžně užívané i mezi nematematiky: přímá a nepřímá úměrnost. Je to formální popis situace, kdy souvislost mezi dvěma veličinami je zprostředkována násobením konstantou (přímá úměrnost), nebo kdy je násobením konstantou zprostředkována souvislost mezi jednou veličinou a převrácenou hodnotou druhé veličiny.
+Je to až k nevíře, ale k popisu obrovského množství dějů stačí čtyři základní operace: sčítání, odčítání, násobení a dělení. Vzhledem k požadavku na konzistenci fyzikálních jednotek se nejčastěji setkáváme s násobením a dělením a proto funkce pracující s těmito operacemi mají výsadní postavení. Takové, že si vysloužily pojmenování běžně užívané i mezi nematematiky: přímá a nepřímá úměrnost. Je to formální popis situace, kdy souvislost mezi dvěma veličinami je zprostředkována násobením konstantou (přímá úměrnost), nebo kdy je násobením konstantou zprostředkována souvislost mezi jednou veličinou a převrácenou hodnotou druhé veličiny.
 
 ```{prf:definition} Přímá a nepřímá úměrnost
 :nonumber:
@@ -160,19 +160,19 @@ ale v případě logaritmu a základě menším než $1$ se obrací směr
 nerovnosti), umocnit (nemůžeme, leda bychom měli dodatečnou informaci
 například o tom, že obě strany nerovnice jsou kladné nebo obě strany
 nerovnice jsou záporné) apod. Takových situací je mnoho a protože není
-v lidských silách si všechny pamatovat, stačí je míst spojeny s
+v lidských silách si všechny pamatovat, stačí je mít spojeny s
 definicí rostoucí a klesající funkce.
 
 ````{prf:algorithm} Využití monotonie k práci s nerovnostmi
 :class: dropdown
 
-**Příklad (užitečnost monotonie při práci s nerovnicemi).** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a skutečnost, že nezápornost obou stran nerovnice zajišťuje, že pracujeme na intervalu kladných hodnot $x$, kde je druhé mocnina rostoucí funkce. Nestačí říct, že umocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena. Na celém svém definičním oboru totiž druhá mocnina rostoucí není. 
+**Příklad (užitečnost monotonie při práci s nerovnicemi).** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a skutečnost, že nezápornost obou stran nerovnice zajišťuje, že pracujeme na intervalu kladných hodnot $x$, kde je druhá mocnina rostoucí funkce. Nestačí říct, že umocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena. Na celém svém definičním oboru totiž druhá mocnina rostoucí není. 
 
 **Příklad (nerovnice obsahující nemonotonní funkce).** Funkce $\frac 1x$ a $y=x^2$ nejsou ani rostoucí ani klesající a proto z žádné z nerovností
 $$\frac 1x \leq \frac 15$$
 a
 $$x^2 \leq 5^2$$
-neplyne ani $x\leq 5$ ani $x\geq 5$. Tento příklad ukazuje, že nerovnice obsahující nemonotonní funkce jsou v obecném případě složitější, protože nemůžeme speciálních vlastností monotonních funkcí. Někdy však není nutné pracovat na celém definičním oboru, ale je možno definiční obor zúžit na množinu, kde funkce již monotonní je. Například funkce $\sqrt x$ nabývá nezáporných hodnot a funkce $\frac 1x$ je klesající na $(0,\infty)$. Proto z nerovnosti 
+neplyne ani $x\leq 5$ ani $x\geq 5$. Tento příklad ukazuje, že nerovnice obsahující nemonotonní funkce jsou v obecném případě složitější, protože nemůžeme využít speciálních vlastností monotonních funkcí. Někdy však není nutné pracovat na celém definičním oboru, ale je možno definiční obor zúžit na množinu, kde funkce již monotonní je. Například funkce $\sqrt x$ nabývá nezáporných hodnot a funkce $\frac 1x$ je klesající na $(0,\infty)$. Proto z nerovnosti 
 $$\frac 1{\sqrt x} \leq \frac 15$$
 plyne 
 $$\sqrt x\geq 5=\sqrt {25}.$$ 
@@ -268,7 +268,7 @@ Definice spojitosti sice není zcela názorná, ale následující definice a v�
 
 ```{prf:definition} Elementární funkce
 :nonumber:
- Všechny mnohočleny, goniometrické, cyklometrické,   exponenciální a logaritmické funkce a obecná mocnina se nazývají  *základní elementární funkce* Všechny funkce, které ze základních  elementárních funkcí získáme konečným počtem operací sčítání,  odečítání, násobení, dělení a skládání těchto funkcí navzájem se  nazývají *elementární funkce*.
+ Všechny mnohočleny, goniometrické, cyklometrické,   exponenciální a logaritmické funkce a obecná mocnina se nazývají  *základní elementární funkce*. Všechny funkce, které ze základních  elementárních funkcí získáme konečným počtem operací sčítání,  odečítání, násobení, dělení a skládání těchto funkcí navzájem se  nazývají *elementární funkce*.
 ```
 
 
@@ -302,7 +302,7 @@ Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď
 ```
 
 
-Velmi stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit přímo, mohlo by to jít pomocí limity. Například funkce $$\frac{\sin x}{x}$$ není definována v nule. V okolí nuly se však chová v jistém smyslu pěkně: má funkční hodnoty prakticky nerozlišitelné od jedničky, viz graf v odstavci věnovanému spojitosti. Proto platí $$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
+Velmi stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit přímo, mohlo by to jít pomocí limity. Například funkce $$\frac{\sin x}{x}$$ není definována v nule. V okolí nuly se však chová v jistém smyslu pěkně: má funkční hodnoty prakticky nerozlišitelné od jedničky, viz graf v odstavci věnovaném spojitosti. Proto platí $$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
 
 ## Derivace
 
@@ -364,7 +364,7 @@ manimp:PrubehFunkce|Derivace je ideální nástroj pro popis toho, jak rychle ro
 Interpretace derivace $\frac{\mathrm df}{\mathrm dx}$ v
 nematematických disciplínách je okamžitá rychlost s jakou veličina $f$
 reaguje na změny veličiny $x$. Často studujeme veličiny závislé na
-čase s v tomto případě jde tedy o rychlost, s jakou se veličina mění v
+čase a v tomto případě jde tedy o rychlost, s jakou se veličina mění v
 čase. Další možnosti a obraty používané pro slovní vyjádření derivace
 jsou zmíněny níže v podkapitole věnované derivaci podle
 času. Analogickou terminologii (rychlost růstu, rychlost změny)
@@ -416,7 +416,7 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 |Derivace je numericky velká (hodně kladná nebo hodně záporná).|Funkce se mění rychle. Malá změna na vstupu má velký vliv na sledovanou veličinu.|
 |Derivace je konstantní.|Funkce je lineární. Klesá nebo roste pořád stejně rychle. Pokud vstup roste aritmetickou řadou (po stejných skocích), sledovaná veličina roste nebo klesá také aritmetickou řadou.|
 |Derivace roste.|Funkce je nelineární a roste stále rychleji. Pokud je funkce kladná, rostoucí derivace znamená, že růst se stále zrychluje.|
-|Derivace klesá k nule.|Funkce je nelineární a přibližuje se k vodorovné asymptotě. Pokud je funkce kladná, k nule klesající derivace znamená, že růst se stále zpomaluje a zastaví se.|
+|Derivace klesá k nule.|Funkce je nelineární a mění se stále pomaleji. Často se přibližuje k vodorovné asymptotě, ale není to pravidlem (například $\ln x$ nebo $\sqrt x$ rostou nade všechny meze). Pokud je funkce rostoucí, k nule klesající derivace znamená, že růst se stále zpomaluje.|
 
 \iffalse
 
@@ -475,7 +475,7 @@ teplotnímu rozdílu $T-T_0$ je rovnice $$\frac{\mathrm
 dT}{\mathrm dt}=-k(T-T_0),$$ kde $k$ je konstanta úměrnosti a záporné znaménko vyjadřuje, že teplota klesá. 
 * Neznámou v sestavené rovnici je funkce $T$ a v rovnici figuruje derivace této
 funkce. Takové rovnice se naučíme řešit později.
-* Na levé straně rovnice je derivace teploty podle času vyjadřená v jednotkách teploty na jednotku času, například ${}^\circ \mathrm {C}/\mathrm{min}^{-1}$.  Na pravé straně je rozdíl teplot násobený konstantou $k$. Protože fyzikální jednotka na obou stranách musí souhlasit, platí $$\frac{{}^\circ \mathrm C}{\mathrm {min}}=[k]\times {}^\circ \mathrm C,$$ kde $[k]$ je jednotka konstanty $k$. Odsud plyne $$[k]=\frac{{}^\circ \mathrm C}{\mathrm {min}} \cdot \frac{1}{{}^\circ \mathrm C} = \frac{1}{\mathrm {min}}=\mathrm{min}^{-1},$$ a jednotka konstanty $k$ je rovna převrácené hodnotě jednotky času.
+* Na levé straně rovnice je derivace teploty podle času vyjádřená v jednotkách teploty na jednotku času, například ${}^\circ \mathrm {C}/\mathrm{min}$.  Na pravé straně je rozdíl teplot násobený konstantou $k$. Protože fyzikální jednotka na obou stranách musí souhlasit, platí $$\frac{{}^\circ \mathrm C}{\mathrm {min}}=[k]\times {}^\circ \mathrm C,$$ kde $[k]$ je jednotka konstanty $k$. Odsud plyne $$[k]=\frac{{}^\circ \mathrm C}{\mathrm {min}} \cdot \frac{1}{{}^\circ \mathrm C} = \frac{1}{\mathrm {min}}=\mathrm{min}^{-1},$$ a jednotka konstanty $k$ je rovna převrácené hodnotě jednotky času.
 * Je-li teplotní rozdíl roven jedné, tj. je-li $(T-T_0)=1$, plyne z rovnice $$ \frac{\mathrm
   dT}{\mathrm dt}=-k(T-T_0).  $$ vztah $$k = -\frac{\mathrm dT}{\mathrm dt}\qquad (\text{pro }T-T_0=1).$$ To znamená, že v tomto případě je konstanta $k$ rovna záporně vzaté derivaci teploty podle času. To umožňuje vyslovit následující charakterizaci konstanty $k$: _Konstanta $k$ je číselně rovna rychlosti poklesu teploty v okamžiku, kdy je teplotní rozdíl teploty tělesa a okolí roven jedné._ 
 * Protože káva v plechovém hrníčku chladne ve stejných podmínkách rychleji než káva v porcelánovém hrníčku, znamená to, že při modelování ochlazování kávy v plechovém hrníčku je hodnota konstanty $k$ větší.
@@ -492,7 +492,7 @@ V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální pop
 
 ```{prf:remark} Smysl příkladu se zákonem ochlazování
 :nonumber:
- Předchozí příklad je často v různých obměnách používán na modelování ochlazování kávy, což je proces, který většina lidí důvěrně zná. Nemáme pochopitelně ambice se domnívat, že bychom dokázali z této rovnice odvodit nějaké zásadní výsledky aplikovatelné při pití ranní kávy nebo při konzumaci horké polévky. Učíme se na malých věcech, abychom později mohli dělat věci velké. Na známých věcech se učíme aparát, který bude naším jediným nástrojem tam, kde intuice začne selhávat. Z tohoto příkladu je nutné si odnést, že derivace, jako rychlost změny, hraje roli při kvantitativním popisu dějů a při studia procesů, kdy se mění veličiny. Ať už doopravdy (studium pohybu nebo dějů, probíhajících v čase) nebo virtuálně (problémy spojené s mechanikou, včetně statiky, stability a deformací, často pracují s virtuálními změnami, tj. se změnami, které jsou sice z hlediska úlohy přípustné, ale příroda je z nějakého důvodu nerealizuje). Tedy naprostá většina dějů a jevů, které studujeme a chceme jim rozumět. Jakmile se v popisu fyzikálního zákona objeví slovo *rychlost*, někdy nahrazené souslovím *časová změna*, znamená to, že kvantitativní popis se děje pomocí derivací.
+ Předchozí příklad je často v různých obměnách používán na modelování ochlazování kávy, což je proces, který většina lidí důvěrně zná. Nemáme pochopitelně ambice se domnívat, že bychom dokázali z této rovnice odvodit nějaké zásadní výsledky aplikovatelné při pití ranní kávy nebo při konzumaci horké polévky. Učíme se na malých věcech, abychom později mohli dělat věci velké. Na známých věcech se učíme aparát, který bude naším jediným nástrojem tam, kde intuice začne selhávat. Z tohoto příkladu je nutné si odnést, že derivace, jako rychlost změny, hraje roli při kvantitativním popisu dějů a při studiu procesů, kdy se mění veličiny. Ať už doopravdy (studium pohybu nebo dějů, probíhajících v čase) nebo virtuálně (problémy spojené s mechanikou, včetně statiky, stability a deformací, často pracují s virtuálními změnami, tj. se změnami, které jsou sice z hlediska úlohy přípustné, ale příroda je z nějakého důvodu nerealizuje). Tedy naprostá většina dějů a jevů, které studujeme a chceme jim rozumět. Jakmile se v popisu fyzikálního zákona objeví slovo *rychlost*, někdy nahrazené souslovím *časová změna*, znamená to, že kvantitativní popis se děje pomocí derivací.
 ```
 
 
@@ -521,7 +521,7 @@ Při datování pomocí radioaktivního uhlíku využíváme toho, že rychlost 
 V roce 1940 byl objeven uhlík $^{14}C$. Jedná se o
 radioaktivní prvek s mnoha skvělými vlastnostmi. Jednou z nich je
 vhodná rychlost rozpadu, která jej činí vhodným pro datování
-archeologických nálezů pozůstatků živých organismů
+archeologických nálezů pozůstatků živých organismů.
 
 * Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
   vzorku) nerozpadnutého radioaktivního materiálu je úměrná jeho množství (a tedy i koncentraci). Tato skutečnost je přirozeným
@@ -593,7 +593,7 @@ Derivace hraje roli při odvození podmínky pro vznik hydraulického skoku. Zdr
 
 Uvažujme příčný řez korytem řeky, jak je na obrázku. 
 Z tohoto obrázku je
-zřejmé, že při zvyšování obsahu průřezu roste hladina. Pokud by stěny byly svislé (tj. $B$ nezávislé na $h$), byla  by změna průřezu $\Delta A$ (například v milimetrech čtverečních) vyvolaná změnou výšky $\Delta h$ (například v milimetrech) rovna šířce řeky $B$ v milimetrech, protože koryto by bylo obdélníkové a podíl obsahu obdélníka a jeho výšky je šířka. V případě nekonstantního $B$ dostáváme místo podílu derivaci, tj. $$\frac{\mathrm d A}{\mathrm dh}=B.$$ 
+zřejmé, že při zvyšování obsahu průřezu roste hladina. Pokud by stěny byly svislé (tj. $B$ nezávislé na $h$), byl by podíl změny průřezu $\Delta A$ (například v milimetrech čtverečních) a změny výšky $\Delta h$ (například v milimetrech) roven šířce řeky $B$ v milimetrech, protože koryto by bylo obdélníkové a podíl obsahu obdélníka a jeho výšky je šířka. V případě nekonstantního $B$ dostáváme místo podílu derivaci, tj. $$\frac{\mathrm d A}{\mathrm dh}=B.$$ 
 Derivace průřezu koryta podle výšky koryta hraje důležitou roli například při přechodu říčního proudění v bystřinné. Tato veličina vyjadřuje,
 jak rychle se mění obsah průřezu s rostoucí hladinou. 
 V praxi je
@@ -607,7 +607,7 @@ https://youtu.be/-k_roagRII0
 
 * **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme [vzorce](https://raw.githubusercontent.com/robert-marik/matematika/master/cheatsheet/cheatsheet.pdf) pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
 * Viz cvičení v prvním týdnu.
-* Derivace je možno počítat i na počítači. Je možné počítat numericky (hodnota derivace z funkčních hodnot funkce, naučíme se později) nebo analyticky (k funknčnímu předpisu funkce nalezen funkční předpis pro její derivaci s použitím pravidel pro derivování, jak to dělá člověk). Pro analytický výpočet je nutné mít k dispozici program ze skupiny CAS (Computer algebra system). Nejjendodušší je [WolframAlpha](https://www.wolframalpha.com/input?i=find+derivative+of+x%5E4%2B4x%5E3-4x%5E2-24x), který má webové rozhraní, nebo [pythonovská knihovna Sympy](https://gist.github.com/robert-marik/cf41fe54729faf7c36c82bfbc3adfe67), kterou můžete snadno začlenit do rozsáhlejšího výpočtu nebo projektu.
+* Derivace je možno počítat i na počítači. Je možné počítat numericky (hodnota derivace z funkčních hodnot funkce, naučíme se později) nebo analyticky (k funkčnímu předpisu funkce nalezen funkční předpis pro její derivaci s použitím pravidel pro derivování, jak to dělá člověk). Pro analytický výpočet je nutné mít k dispozici program ze skupiny CAS (Computer algebra system). Nejjednodušší je [WolframAlpha](https://www.wolframalpha.com/input?i=find+derivative+of+x%5E4%2B4x%5E3-4x%5E2-24x), který má webové rozhraní, nebo [pythonovská knihovna Sympy](https://gist.github.com/robert-marik/cf41fe54729faf7c36c82bfbc3adfe67), kterou můžete snadno začlenit do rozsáhlejšího výpočtu nebo projektu.
 
 \iffalse
 
@@ -776,15 +776,15 @@ parametru, nijak se nemění.
 https://youtu.be/22F5frFRI60
 
 Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
-proměnných, polohy a času. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase, například  v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
+proměnných, polohy a času. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává jak rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase, například  v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
 
 ```{prf:remark} Poznámka
 :nonumber:
 Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
-model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
+model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "zvenku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
 
 * Rozdílem teplot je způsoben tok tepla. Velikost toku tepla je úměrná
-teplotnímu rozdílu a teplo teče z místa v větší teplotou do místa s menší teplotou.
+teplotnímu rozdílu a teplo teče z místa s větší teplotou do místa s menší teplotou.
 * Teplota se zvyšuje dodáním tepla. Změna teploty je úměrná dodanému teplu.
 ```
 
@@ -812,13 +812,13 @@ mechanický model si můžeme představit proudění tekutiny (pro
 jednoduchou představu) nebo proudění vlhkosti (pro odvození rovnice
 difuze namísto rovnice vedení tepla). Budeme uvažovat libovolné místo materiálu a budeme matematicky vyjadřovat děje, které přispívají ke změně teploty.
 
-* Rychlost s jakou s daném místě roste teplota (v čase) je $$\frac{\partial T}{\partial t}$$ a měříme ji například ve stupních Celsia za minutu. Tato rychlost je úměrná rychlosti s jakou do daného místa dodáváme teplo. Proto v dalším budeme hledat rychlost dodávání tepla a daného místa a poté se sem vrátíme a dáme tuto rychlost do souvislosti s rychlostí růstu teploty.
+* Rychlost s jakou v daném místě roste teplota (v čase) je $$\frac{\partial T}{\partial t}$$ a měříme ji například ve stupních Celsia za minutu. Tato rychlost je úměrná rychlosti s jakou do daného místa dodáváme teplo. Proto v dalším budeme hledat rychlost dodávání tepla do daného místa a poté se sem vrátíme a dáme tuto rychlost do souvislosti s rychlostí růstu teploty.
   * Je-li například parciální derivace $\frac{\partial T}{\partial t}$ rovna $2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že v daném místě roste teplota v čase rychlostí dva stupně Celsia za minutu. 
   * Pokud je parciální derivace záporná a rovna například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že teplota v tomto místě klesá rychlostí dva stupně Celsia za minutu.
-* Rychlost s jakou s daném místě roste teplota jako funkce polohy je $\frac{\partial T}{\partial x}$ a měříme ji například ve stupních Celsia na centimetr. 
+* Rychlost s jakou v daném místě roste teplota jako funkce polohy je $\frac{\partial T}{\partial x}$ a měříme ji například ve stupních Celsia na centimetr. 
   * Je-li například parciální derivace $\frac{\partial T}{\partial x}$ rovna $2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to, že v daném místě roste teplota ve směru osy $x$ tak, že na každém centimetru naroste o dva stupně Celsia. 
   * Pokud je parciální derivace záporná a rovna například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to, že ve směru osy $x$ teplota klesá a na každém centimetru klesne o dva stupně Celsia.
-* Pro přepočet nerovnoměrného rozložení teploty na tok tepla nás zajímá nikoliv jak teplota v prostoru roste, ale jak klesá. Proto musíme vzít derivaci podle prostorové proměnné záporně, abychom dostali pokles teploty.Tento pokles vynásobíme konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme $k$ (nazývá se součinitel tepelné vodivosti a dodá nám ji fyzika, přesněji Fourierův zákon) a tok tepla $q$ ve směru osy $x$ je $$q=-k\frac{\partial T}{\partial x}.$$ To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času. 
+* Pro přepočet nerovnoměrného rozložení teploty na tok tepla nás zajímá nikoliv jak teplota v prostoru roste, ale jak klesá. Proto musíme vzít derivaci podle prostorové proměnné záporně, abychom dostali pokles teploty. Tento pokles vynásobíme konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme $k$ (nazývá se součinitel tepelné vodivosti a dodá nám ji fyzika, přesněji Fourierův zákon) a tok tepla $q$ ve směru osy $x$ je $$q=-k\frac{\partial T}{\partial x}.$$ To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času. 
   * Je-li $q$ rovno $7\,\mathrm{J}/\mathrm{min}$ znamená to, že průřezem proteče ve směru osy $x$ sedm joulů za minutu. 
   * Je-li $q$ záporné a rovno $-7\,\mathrm{J}/\mathrm{min}$, znamená to, že sedm joulů za minutu proteče v daném místě proti směru osy $x$.
 * Pokud do daného místa přitéká teplo stejnou rychlostí jako odtéká, teplota se nemění a dané místo se ani neohřívá ani neochlazuje. Intenzita ochlazování je dána bilancí mezi přítokem a odtokem. Můžeme si to představit tak, že z tepla které do daného bodu přiteče, se část "oddělí" a přispěje k navýšení teploty a zbytek teče dál. Pro zjištění, kolik tepla se z toku "oddělí" a způsobí v daném místě navýšení teploty potřebujeme vědět, jak rychle v daném místě tok klesá jako funkce proměnné $x$. Nárůst určíme derivací podle $x$ a pokles z nárůstu uděláme změnou znaménka. Pokles toku tepla je tedy $$-\frac{\partial q}{\partial x}= -\frac{\partial }{\partial x}\left(-k\frac{\partial T}{\partial x}\right)= \frac{\partial }{\partial x}\left(k\frac{\partial T}{\partial x}\right).
@@ -829,7 +829,7 @@ $$
 * Pokles toku vypočtený v předchozím bodě je úměrný rychlosti růstu teploty. Příslušné konstanty úměrnosti dodá fyzika a platí
 $$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t},$$
 kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě jsou hustota i měrná tepelná kapacita vztaženy ne k jednotce objemu, jak jsme zvyklí, ale k jednotce délky. Například $\rho$ je lineární hustota, tj. v gramech na centimetr). 
-  * Například pokles $-\frac{\partial q}{\partial x}=2\,\mathrm{J}/(\mathrm{min}\,\mathrm{cm})$ toku $q=10\,\mathrm{J}/\mathrm{min}$ znamená, že o centimetr dál ve směru osy $x$ proteče průřezem směrem doprava už nikoliv deset, ale pouze osm joulů za minutu. Tedy každou minutu se v jenom centimetru délky od toku "odpojí" energie o velikosti dva jouly a ta se "uloží" do materiálu. Navenek se to projeví ohřevem, přičemž hrají roli fyzikální vlastnosti materiálu.
+  * Například pokles $-\frac{\partial q}{\partial x}=2\,\mathrm{J}/(\mathrm{min}\,\mathrm{cm})$ toku $q=10\,\mathrm{J}/\mathrm{min}$ znamená, že o centimetr dál ve směru osy $x$ proteče průřezem směrem doprava už nikoliv deset, ale pouze osm joulů za minutu. Tedy každou minutu se v jednom centimetru délky od toku "odpojí" energie o velikosti dva jouly a ta se "uloží" do materiálu. Navenek se to projeví ohřevem, přičemž hrají roli fyzikální vlastnosti materiálu.
 * Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu. Tato rovnice zachycuje matematicky to, jak funguje vedení tepla. 
 
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
@@ -867,7 +867,7 @@ A jaká je hlavní message? Zdroj: pixabay.com
 
 \fi
 
-* Aplikované vědy (fyzika, biologie, nauka o materiálu, hydrologie) přirozeně formulují své zákony a poznatky mimo jiné i kvantitativně a pomocí pojmů vyjadřujících rychlosti změn. Doteď jsme aparátem střední školy uměli počítat jenom průměrně rychlosti za daný časový interval, s derivací dostáváme do ruky nástroj pro práci s okamžitými rychlostmi. 
+* Aplikované vědy (fyzika, biologie, nauka o materiálu, hydrologie) přirozeně formulují své zákony a poznatky mimo jiné i kvantitativně a pomocí pojmů vyjadřujících rychlosti změn. Doteď jsme aparátem střední školy uměli počítat jenom průměrné rychlosti za daný časový interval, s derivací dostáváme do ruky nástroj pro práci s okamžitými rychlostmi. 
 * Jakmile ve slovním popisu procesu slyšíme slovo rychlost, znamená to, že při matematickém modelování hraje pravděpodobně důležitou roli derivace. Okamžitá rychlost je derivace. Jenom v krásných případech probíhajících konstantní rychlostí můžeme tuto rychlost počítat pomocí podílu, jak to známe u rychlosti pohybu. 
 * Naučili jsme se nebo se naučíme pomocí vzorců derivovat běžné funkce.
 * Derivace umožní předpovědět, co se stane s veličinou, která závisí na jiné veličině a tato jiná veličina se mění známou rychlostí. Ze vztahu, který dává do souvislosti hodnoty dvou veličin, můžeme určit pomocí derivací vztah, dávající do souvislosti rychlosti změn těchto veličin.

@@ -6,7 +6,6 @@
 # Vlastní čísla a směry
 
 > * Vlastní čísla umí numericky najít počítače, WolframAlpha, Python, Matlab, ... 
-> * Pro Python ukázku výpočtu [vygeneruje ChatGPT](https://chat.openai.com/share/7cabf98a-1c64-418a-b61b-f1eba78c4ff1)
 > * Některé výpočty jsou v [zápisníku pro Python](https://gist.github.com/robert-marik/87a5c146c98a8dc0840633e96a417214).
 
 ## Vektor, který není vlastním směrem
@@ -21,13 +20,13 @@ není vlastním směrem matice $$A=\begin{pmatrix}  3& 0 \\ 2 &4\end{pmatrix}.$$
 Pomocí maticového násobení vidíme, že platí
 $$ A\vec a=\begin{pmatrix}  3& 0 \\ 2 &4\end{pmatrix}\begin{pmatrix}  1\\2\end{pmatrix}=\begin{pmatrix}  3\\2\end{pmatrix}+2\begin{pmatrix}  0\\4\end{pmatrix}=\begin{pmatrix}  3\\10\end{pmatrix}.$$
 
-Výsledkem zobrazení vektoru pomocí matice je vektor který není násobkem původního vektoru (podle první komponenty by se muselo jednat o trojnásobek, ale to nekoresponduje s druhou komponentou) a proto se nejedná o vlastní vektor matice.
+Výsledkem zobrazení vektoru pomocí matice je vektor, který není násobkem původního vektoru (podle první komponenty by se muselo jednat o trojnásobek, ale to nekoresponduje s druhou komponentou) a proto se nejedná o vlastní vektor matice.
 
 ```
 
 ## Vektor, který je vlastním směrem
 
-Ukažte, že vektor $\vec a=  \begin{pmatrix}    2\\3  \end{pmatrix}$  je vlastním směrem matice $$A=\begin{pmatrix}  6& 0 \\ 3 &4\end{pmatrix}$$  a určete příslušné vlastní číslo
+Ukažte, že vektor $\vec a=  \begin{pmatrix}    2\\3  \end{pmatrix}$  je vlastním směrem matice $$A=\begin{pmatrix}  6& 0 \\ 3 &4\end{pmatrix}$$  a určete příslušné vlastní číslo.
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -57,14 +56,14 @@ $$\begin{vmatrix}  -2-\lambda &2 \\ 2 & 1-\lambda\end{vmatrix}=(-2-\lambda)(1-\l
 Protože platí $$A-2 I=\begin{pmatrix}  -2 & 2\\2&1\end{pmatrix}-\begin{pmatrix}  2&0\\0&2\end{pmatrix}=\begin{pmatrix}  -4 & 2\\ 2 &-1\end{pmatrix},$$
 řešíme soustavu 
 $$\begin{pmatrix}-4 & 2\\ 2 &-1\end{pmatrix}\begin{pmatrix}  x_1\\x_2\end{pmatrix}=\begin{pmatrix}  0\\0\end{pmatrix},$$
-která má nekonečně mnoho řešení. Musíme najít alespoň jendo nenulové řešení. Pokud zapíšeme jako soustavu rovnic, dostáváme druhou rovnici ve tvaru
+která má nekonečně mnoho řešení. Musíme najít alespoň jedno nenulové řešení. Pokud zapíšeme jako soustavu rovnic, dostáváme druhou rovnici ve tvaru
 $$2x_1-x_2=0$$ a první rovnice je jejím násobkem. Volbou $x_1=1$ dostáváme $x_2=2x_1=2$ a vlastní vektor příslušný vlastnímu číslu $\lambda_1=2$ je $\vec e_1= \begin{pmatrix}
   1\\2
 \end{pmatrix}.$ Tento vektor je dán jednoznačně až na nenulový konstantní násobek.
 
 **Vlastní číslo $\lambda_2=-3$.**
 Protože platí $$A-(-3) I=\begin{pmatrix}  -2 & 2\\2&1\end{pmatrix}+\begin{pmatrix}  3&0\\0&3\end{pmatrix}=\begin{pmatrix}  1 & 2\\ 2 &4\end{pmatrix},$$řešíme soustavu $$\begin{pmatrix}1 & 2\\ 2 &4\end{pmatrix}\begin{pmatrix}  x_1\\x_2\end{pmatrix}=\begin{pmatrix}  0\\0\end{pmatrix},$$
-která má nekonečně mnoho řešení. Musíme najít alespoň jendo nenulové řešení. Pokud zapíšeme jako soustavu rovnic, dostáváme první rovnici ve tvaru
+která má nekonečně mnoho řešení. Musíme najít alespoň jedno nenulové řešení. Pokud zapíšeme jako soustavu rovnic, dostáváme první rovnici ve tvaru
 $$x_1+2x_2=0$$ a druhá rovnice je jejím násobkem. Volbou $x_2=1$ dostáváme $x_1=-2x_2=-2$ a vlastní vektor příslušný vlastnímu číslu $\lambda_2=-3$ je $\vec e_2=\begin{pmatrix}   -2\\1\end{pmatrix}.$ Tento vektor je dán jednoznačně až na nenulový konstantní násobek.
 
 **Poznámka.** Protože je matice symetrická, jsou vlastní vektory na sebe kolmé. Proto není nutné druhý vektor počítat, ale stačí vzít libovolný vektor kolmý k prvnímu vlastnímu vektoru. V praxi tedy stačí vektoru $\vec e_1$ prohodit komponenty a na první nebo druhé pozici změnit znaménko. Tím dostaneme vektor $\vec e_2$.
@@ -98,7 +97,7 @@ To je vlastně dvakrát zopakovaná rovnice
 $$  x_1+x_2=0,$$
 která má řešení například $x_1=1$ a $x_2=-1$. Protože délka vektoru $(1,-1)$ je $\sqrt{1^2+(-1)^2}=\sqrt 2$, jednotkový vlastní vektor je $e_1=\left(\frac 1{\sqrt 2}, -\frac 1 {\sqrt 2}\right)^T$. Podobně by se dal najít jednotkový vlastní vektor příslušný druhé vlastní hodnotě, ale protože oba vektory musí být na sebe kolmé, stačí vzít jednotkový vektor, který je k $e_1$ kolmý, například
 $e_2=\left(\frac 1{\sqrt 2}, \frac 1 {\sqrt 2}\right)^T$. Matici $P$ můžeme vzít
-s $e_1$ v prvním a $e_2$ druhém sloupci, tj.
+s $e_1$ v prvním a $e_2$ ve druhém sloupci, tj.
 $$    P=  \begin{pmatrix}      \frac 1{\sqrt 2} & \frac 1{\sqrt 2}\\      -\frac {1}{\sqrt 2} & \frac 1{\sqrt 2}    \end{pmatrix}.  $$
   Rychlý výpočet ukazuje, že matice $P$ má determinant roven jedné. Kdyby vyšel roven minus jedné, stačí prohodit sloupce nebo jeden sloupec vynásobit faktorem $-1$.
 
@@ -119,7 +118,7 @@ určete podíl délky obrazu $A\vec u$ a vzoru $\vec u$ při zobrazení pomocí 
 
 Platí
 $$A\vec u=\begin{pmatrix}  3&1\\1&3\end{pmatrix}\begin{pmatrix}  -1\\2\end{pmatrix}=-\begin{pmatrix}  3\\1\end{pmatrix}+2\begin{pmatrix}  1\\3\end{pmatrix}=\begin{pmatrix}  -1\\5\end{pmatrix}$$
-a výpočetem délek vektorů
+a výpočtem délek vektorů
 dostáváme
 $$||\vec u||=\sqrt{(-1)^2+(2)^2}=\sqrt 5$$
 a 
@@ -186,10 +185,10 @@ což je podle očekávání hodnota mezi menší a větší vlastní hodnotou, k
 Uvažujme tyč ve směru osy $x$ namáhanou v ose tahem, při kterém vzniká jednotkové tahové napětí. Tyč je slepena spojem, který svírá s kolmicí na osu úhel $\theta$. (Nakreslete si obrázek.) Normálovým napětím rozumíme napětí ve směru kolmém na spoj.
 
 1. Ukažte, že pro nenulový úhel $\theta$ je normálové napětí ve
-  spoji menší, než by odpovídalo normálovém napětí pro spoj kolmý na osu tyče.
+  spoji menší, než by odpovídalo normálovému napětí pro spoj kolmý na osu tyče.
 1. Ukažte, že normálové napětí je klesající funkcí úhlu $\theta$ na intervalu od nuly do $\frac \pi2$.
 1. Určete normálové a smykové napětí pro extrémní případ $\theta=\frac \pi 2$ a popište, jak by takový spoj vypadal.
-1. Určete smykové napětí ve spoji a určte, pro jakou hodnotu úhlu je smykové napětí největší.
+1. Určete smykové napětí ve spoji a určete, pro jakou hodnotu úhlu je smykové napětí největší.
 1. Určete, jestli je v tomto případě z hlediska působícího napětí výhodnější udělat šikmý spoj po směru nebo proti směru hodinových ručiček.  
 
 ```{prf:example} Řešení
@@ -207,8 +206,8 @@ Odsud již dostaneme odpovědi na všechny uvedené otázky.
 1. Normálové napětí udává funkce $$\cos^2\theta.$$ Ta je rovna jedné pro $\theta=0$, tj. pro nulový sklon spoje. Pro nenulový sklon je menší než jedna (uvažujeme sklon maximálně do 90 stupňů).
 1. Derivace normálového napětí pro $\theta$ z intervalu od $0$ do $\frac \pi2$ je $$\frac{\mathrm d}{\mathrm d\theta}\cos^2{\theta}=2\cos\theta (-\sin\theta)=-\sin(2\theta)<0.$$ Záporná derivace značí klesající funkci. 
 1. Pro $\theta=\frac \pi 2$ by normálové napětí bylo nulové a smykové také nulové. Jednalo by se vlastně o podélně spojené kusy materiálu a při uvedeném namáhání by bylo jedno, jestli jsou slepené nebo ne. 
-1. Smykové namáhání je prvek v matici mimo hlavní diagonálu. V našem případě $-\frac 12 \sin(2\theta)$. Smykové namáhání je maximální, pokud má tato funkce maximum nebo minimum. Takový extrém je pro $2\theta=\frac \pi 2$ tj. pro $\theta = \frac\pi4.$ Maximální smykové namáhání je pro spoj skloněný pod úhlem 45 stupňů.
-1. Nezáleží. Změnou znaménka u úhlu $\theta$ se napětí ve směru kolmo na spoj ani podél spoje nemění, funkce $\cos^2\theta$ i $\sin^2\theta$ jsou obě sudé. U smykového napětí se mění znaménko, ale to jenom znamená namáhání v opačném smyslu (Pokud si na stěnu materiálu nakreslíme čtvereček s jednou stranou podél spoje a s druhou stranou kolmo na spoj, podle směru sklonu spoje máme dva zrcadlové případy, jak se tento čtvereček deformuje. Tomu odpovídá opačné znaménko smykové derivace.)
+1. Smykové namáhání je prvek v matici mimo hlavní diagonálu. V našem případě $-\frac 12 \sin(2\theta)$. Smykové namáhání je maximální, pokud má tato funkce maximum nebo minimum. Takový extrém je pro $2\theta=\frac \pi 2$, tj. pro $\theta = \frac\pi4.$ Maximální smykové namáhání je pro spoj skloněný pod úhlem 45 stupňů.
+1. Nezáleží. Změnou znaménka u úhlu $\theta$ se napětí ve směru kolmo na spoj ani podél spoje nemění, funkce $\cos^2\theta$ i $\sin^2\theta$ jsou obě sudé. U smykového napětí se mění znaménko, ale to jenom znamená namáhání v opačném smyslu (Pokud si na stěnu materiálu nakreslíme čtvereček s jednou stranou podél spoje a s druhou stranou kolmo na spoj, podle směru sklonu spoje máme dva zrcadlové případy, jak se tento čtvereček deformuje. Tomu odpovídá opačné znaménko smykového napětí.)
 
 \iffalse
 
@@ -228,7 +227,7 @@ Snadno je odpověď patrná i z obrázku, kde jsou vyneseny funkce z jednotlivý
 
 ## Vlastní čísla a vektory matice $3\times 3$.
 
-V cvičení z minulého týdne jsme ukázali, že nejobecnější symetrická matice zachovávající směr vektoru  $(1,0,0)^T$ má v prvním řádku a prvním sloupci jenom jeden nenulový prvek, prvek v hlavní diagonále.
+Ve cvičení z minulého týdne jsme ukázali, že nejobecnější symetrická matice zachovávající směr vektoru  $(1,0,0)^T$ má v prvním řádku a prvním sloupci jenom jeden nenulový prvek, prvek v hlavní diagonále.
 
 Uvažujme matici
 $$A=  \begin{pmatrix}  5 & 0 & 0\\  0 & 2 & 2\\  0 & 2 & 5\end{pmatrix},$$
@@ -241,7 +240,7 @@ Určete vlastní čísla a zbylé vlastní vektory matice.
 
 Podle zadání víme, že jeden z vlastních vektorů je $e_1=(1,0,0)^T$ a protože se zobrazí na pětinásobek, je příslušná vlastní hodnota $\lambda_1=5$. Charakteristický polynom je
 $$  \begin{aligned}  \begin{vmatrix}  5-\lambda & 0 & 0\\  0 & 2-\lambda & 2\\  0 & 2 & 5-\lambda\end{vmatrix}&=(5-\lambda)(2-\lambda)(5-\lambda)-(5-\lambda)\times 2\times 2\\& =(5-\lambda)\Bigl[(2-\lambda)(5-\lambda) -4\Bigr]\\&=(5-\lambda)(\lambda^2 -7\lambda +6)=(5-\lambda)(\lambda-1)(\lambda-6)\end{aligned}$$
-Další dvě vlastní hodnoty jsou $\lambda_2=1$ a $\lambda_3=6$
+Další dvě vlastní hodnoty jsou $\lambda_2=1$ a $\lambda_3=6$.
 
 Uvažujme matici
 $$  A-1 I=  \begin{pmatrix}    4 & 0 & 0\\    0 & 1 & 2\\    0 & 2& 4  \end{pmatrix}.$$

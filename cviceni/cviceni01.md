@@ -1,6 +1,6 @@
 # Výpočet derivací
 
->  * Derivaci budeme chápat jako zobrazení, které funkci přiřadí jinou funkci. Proč je tak nesmírně užitečná zjistíme v následujících týdnech.
+>  * Derivaci budeme chápat jako zobrazení, které funkci přiřadí jinou funkci. Proč je tak nesmírně užitečná, zjistíme v následujících týdnech.
 >  * Naučíte se derivovat jednoduché funkce (mocninné funkce, další základní elementární funkce a složené funkce). Nejsou nutné žádné předchozí znalosti, budete potřebovat pouze vzorce pro derivování a spoustu cviku.
 >  * Naučíte se interpretovat derivaci jako rychlost růstu v různých kontextech, kdy veličina závisí na čase, případně na jiné veličině.
 >  * Naučíte se ze známého vzorce mezi dvěma veličinami odvodit vzorec dávající do souvislosti rychlosti změn těchto veličin.
@@ -89,7 +89,7 @@ $$
   $\frac{\mathrm{d}l}{\mathrm {d}t}$. Určete jednotku této derivace a
   slovní interpretaci hodnoty derivace v bodě $t=12$.
 
-_Upraveno podle Stewart, Day: Biocalculus. Calculus for the life siences. V tomto příkladě se setkáváme s klasickou interpretací derivace jako rychlosti změny, tj. hodnoty o kterou se změní závislá veličina, když se nezávislá veličina změní o jednotku._
+_Upraveno podle Stewart, Day: Biocalculus. Calculus for the life sciences. V tomto příkladě se setkáváme s klasickou interpretací derivace jako rychlosti změny, tj. hodnoty, o kterou se změní závislá veličina, když se nezávislá veličina změní o jednotku._
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -97,12 +97,12 @@ _Upraveno podle Stewart, Day: Biocalculus. Calculus for the life siences. V tomt
 
 Jednotka derivace délky podle věku je stejná, jako bychom délku dělili věkem. Tedy $\left[\frac{\mathrm dl}{\mathrm dt}\right]=\mathrm{cm}/\mathrm{rok}$, tj. centimetr za rok. 
 
-Derivace je rychlost změny. Pokud derivujeme délku ryby podle času, je derivace rychlost s jakou se mění délka ryby v čase. Převedeno do srozumitelnějšího jazyka to je možné elegantněji vyjádřit tak, že derivace udává (v centimetrech za rok) okamžitou rychlost růstu ryby, přičemž velikost ryby vyjadřujeme její délkou (a ne například hmotností).
+Derivace je rychlost změny. Pokud derivujeme délku ryby podle času, je derivace rychlost, s jakou se mění délka ryby v čase. Převedeno do srozumitelnějšího jazyka to je možné elegantněji vyjádřit tak, že derivace udává (v centimetrech za rok) okamžitou rychlost růstu ryby, přičemž velikost ryby vyjadřujeme její délkou (a ne například hmotností).
 
 Zadaná funkce vyjadřující závislost délky na čase je polynom. Použitím pravidel pro derivování je snadné ukázat, že pro derivaci délky podle času platí $$\frac{\mathrm dl}{\mathrm dt} =3\cdot 0.03937 t^2 - 2\cdot 0.945 t + 10.033 =  0.11811 t^2 -1.89 t + 10.033$$   a pro $t=12\,\mathrm{let}$ dostáváme  $$    \frac{\mathrm dl}{\mathrm dt}\Bigr\vert_{t=12} =4.4\, \mathrm{cm}/\mathrm{rok}.   $$   Dvanáctiletá ryba roste rychlostí přibližně $4.4$ centimetrů za rok, tj. mezi dvanáctým a třináctým rokem vyroste přibližně o $4.4$ centimetru. (Slovo přibližně je použito proto, že derivace je okamžitá rychlost růstu a není zaručeno, že tato rychlost se udrží po celou jednotku času, tj. po celý rok.) 
 
 * <a href="https://sagecell.sagemath.org/?z=eJx1jM0KgkAUhfeC73ChhX81jE0hLtz1AC1aB5MzojjNjZnRsKdPUyGCzupw-M7nip6bMHBBBGs2cDZ4l1pzcFsoufU9FbqooISynGWxu7IdJfnhOLZ9kk4zi13CCM3YeD5J1XIww23wPVvjM5zO3_ZLY1t4GIQWtTOoOt8T0jQ9L2WhiGiqKozgI5rHRbMys23RiD9Muh-hHwYsCLT8JTV2UKPQ6LB7AzQ9S-8=&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a>
-* <a href="https://sagecell.sagemath.org/?z=eJyFUs1uozAQviPxDhN6MQmhJuyqalVuvfXQS29VN3LAERY_RsZpS96pT9EXq8fghG2r3TnYZr4fz4zRNEs2vlcTHWY0pul1erXUf9I1ja9__TanzSrBdLrUqzSmVylcwB2vKwZq2A2-15fylaA4hP_EBTyKvoJOSahkq5WsD75XKVkNkMFTQqMkonESgbltXN122mfxQ2rMP_ueGvKylr0W6Gu-89JUOp1LWbQy563DCq7EC8u5-azjQuz3JCQ60zQE2-cI-t5eKsBSQbR2H25mbd0jgG0xs7yJhuUCZMWao9AczsV0spEGmSXUoeGqNfboU-BQt53cHhve2nqIpiu8LPyLoHhhKfIwcdYzDgLM5L-Yrb-LR74rxkhG6SWQzXJmeKo2Zl3H24K4xITjbPFCtuvJaZZr-IE1OAcrmQCxnxxu7bPfjFmM00M5WfBwH0wqXvf8n9TFYuG4GL6n2e6A_6yZmOg1OYoOiH3H6NxhNJYZnf3C0CprTia9wTgzbW6VfM2eAnQIokAWJSvAdR9EENie8OCsPt6D5_ATIrP-Bw==&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage numerický odhad</a> s ilustrací toho, že výsledek se dá odhadnout u použitím základních aritmetických operací, ale že délka kroku nemůže být ani moc krátká ani moc dlouhá. </a>
+* <a href="https://sagecell.sagemath.org/?z=eJyFUs1uozAQviPxDhN6MQmhJuyqalVuvfXQS29VN3LAERY_RsZpS96pT9EXq8fghG2r3TnYZr4fz4zRNEs2vlcTHWY0pul1erXUf9I1ja9__TanzSrBdLrUqzSmVylcwB2vKwZq2A2-15fylaA4hP_EBTyKvoJOSahkq5WsD75XKVkNkMFTQqMkonESgbltXN122mfxQ2rMP_ueGvKylr0W6Gu-89JUOp1LWbQy563DCq7EC8u5-azjQuz3JCQ60zQE2-cI-t5eKsBSQbR2H25mbd0jgG0xs7yJhuUCZMWao9AczsV0spEGmSXUoeGqNfboU-BQt53cHhve2nqIpiu8LPyLoHhhKfIwcdYzDgLM5L-Yrb-LR74rxkhG6SWQzXJmeKo2Zl3H24K4xITjbPFCtuvJaZZr-IE1OAcrmQCxnxxu7bPfjFmM00M5WfBwH0wqXvf8n9TFYuG4GL6n2e6A_6yZmOg1OYoOiH3H6NxhNJYZnf3C0CprTia9wTgzbW6VfM2eAnQIokAWJSvAdR9EENie8OCsPt6D5_ATIrP-Bw==&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage numerický odhad</a> s ilustrací toho, že výsledek se dá odhadnout i použitím základních aritmetických operací, ale že délka kroku nemůže být ani moc krátká ani moc dlouhá.
 
 ```
 
@@ -128,7 +128,7 @@ _Zpracováno podle Monteith, Unsworth: Principles of Environmental Physics. Tady
 :class: dropdown
 :nonumber:
 
-Pro výpočet si stačí uvědomit, že funkce je konstantním násobkem mocninné funkce a umíme ji tedy zderivovat podle pravidla pro derivaci konstantního násobku a pravidla pro derivaci mocninné funkce. Derivace je $$\frac {\mathrm dM}{\mathrm dW}=\frac {\mathrm d}{\mathrm dW}(AW^n)=nAW^{n-1}$$ podle pravidla pro derivaci konstantního násobku a pro derivaci mocniny. Jednotka derivace je stejná, jako bychom místo derivování dělili, tj. watt na kilogram, $$\left[\frac {\mathrm dM}{\mathrm dW}\right]=\frac{\mathrm W}{\mathrm {kg}}.$$ Derivace udává rychlost, s jakou se projeví změna hmotnosti na bazálním metabolismu. Je to nárůst bazálního metabolismu způsobený nárůstem hmotnosti a přepočtený na jednotkovou změnu hmotnosti. Přibližně také změna bazálního metabolismu ve wattech při změně hmotnosti o kilogram u velkých živočichů nebo v miliwatech při změně hmotnosti o gram u drobných živočichů. Například u malých ptáčků nemá smysl uvažovat nárůst hmotnosti o kilogram a pro interpretaci raději přejdeme k jednotkám tisíckrát menším.
+Pro výpočet si stačí uvědomit, že funkce je konstantním násobkem mocninné funkce a umíme ji tedy zderivovat podle pravidla pro derivaci konstantního násobku a pravidla pro derivaci mocninné funkce. Derivace je $$\frac {\mathrm dM}{\mathrm dW}=\frac {\mathrm d}{\mathrm dW}(AW^n)=nAW^{n-1}$$ podle pravidla pro derivaci konstantního násobku a pro derivaci mocniny. Jednotka derivace je stejná, jako bychom místo derivování dělili, tj. watt na kilogram, $$\left[\frac {\mathrm dM}{\mathrm dW}\right]=\frac{\mathrm W}{\mathrm {kg}}.$$ Derivace udává rychlost, s jakou se projeví změna hmotnosti na bazálním metabolismu. Je to nárůst bazálního metabolismu způsobený nárůstem hmotnosti a přepočtený na jednotkovou změnu hmotnosti. Přibližně také změna bazálního metabolismu ve wattech při změně hmotnosti o kilogram u velkých živočichů nebo v miliwattech při změně hmotnosti o gram u drobných živočichů. Například u malých ptáčků nemá smysl uvažovat nárůst hmotnosti o kilogram a pro interpretaci raději přejdeme k jednotkám tisíckrát menším.
 ```
 
 ## Mezní náklady (marginal cost)
@@ -148,22 +148,22 @@ $$C(x) = 6 + \sqrt{4x + 4},\qquad  0 \leq x \leq 30.$$
 Platí $C'(15)=0.25$. Určete, jakou tato derivace má slovní
 interpretaci a určete i jednotku této derivace.
 
-_Toto je jedna z nejrozšířenější aplikací derivací mimo přírodní vědy. Zajímáme se o to, jak rychle rostou ekonomické veličiny, protože ekonomika je za vším. Veličiny, které v ekonomii získáváme derivováním, obsahují zpravidla slovo "mezní", nebo též "marginální". Podle Wikipedie nastupující technická revoluce nazývaná Průmysl 4.0 přinese výrobu s velmi malými mezními náklady. Tedy derivace nákladů na výrobu podle množství vyrobeného zboží bude malá. To odpovídá představě výroby v robotizovaných halách, kde hlavním nákladem je vybudování výrobního zařízení._
+_Toto je jedna z nejrozšířenějších aplikací derivací mimo přírodní vědy. Zajímáme se o to, jak rychle rostou ekonomické veličiny, protože ekonomika je za vším. Veličiny, které v ekonomii získáváme derivováním, obsahují zpravidla slovo "mezní", nebo též "marginální". Podle Wikipedie nastupující technická revoluce nazývaná Průmysl 4.0 přinese výrobu s velmi malými mezními náklady. Tedy derivace nákladů na výrobu podle množství vyrobeného zboží bude malá. To odpovídá představě výroby v robotizovaných halách, kde hlavním nákladem je vybudování výrobního zařízení._
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
 Jednotka derivace $C'(x)$ je $\mathrm{milion\ Euro}/\mathrm{kus}$, resp. 
-$\mathrm{milion\ Euro}/\mathrm{letadlo}$, resp. milion Euro, podle toho, jak nazveme jednotky v nichž měříme počet letadel.
+$\mathrm{milion\ Euro}/\mathrm{letadlo}$, resp. milion Euro, podle toho, jak nazveme jednotky, v nichž měříme počet letadel.
 
 Derivace $C'(15)$ vyjadřuje rychlost, s jakou rostou náklady při produkci $15$ letadel. Je to cena vztažená na jednotkový přírůstek, tj. jedná se vlastně o cenu výroby šestnáctého letadla. Šestnácté letadlo má výrobní náklady 0.25 milionů euro.
 
-*Poznámka 1:* Jinou cestou jak určit cenu šestáctého letadla je použít rozdíl $$C(16)-C(15)\approx 0.246.$$ Toto je cesta, která se zdá výhodnější, protože není nutné derivovat. Ale tato cesta zpravidla vede ke složitějším postupuům, jakmile tento výpočet vstupuje jako jedna z komponent do složitějšího modelu. Odhad ceny dalšího letadla při produkci $x$ letadel je bez derivace roven
+*Poznámka 1:* Jinou cestou, jak určit cenu šestnáctého letadla je použít rozdíl $$C(16)-C(15)\approx 0.246.$$ Toto je cesta, která se zdá výhodnější, protože není nutné derivovat. Ale tato cesta zpravidla vede ke složitějším postupům, jakmile tento výpočet vstupuje jako jedna z komponent do složitějšího modelu. Odhad ceny dalšího letadla při produkci $x$ letadel je bez derivace roven
 $$C(x+1)-C(x)=\sqrt{4(x+1)+4}-\sqrt{4x+4}$$ a s derivací
 $$C'(x)=\frac{2}{\sqrt{4x+4}}.$$ Ve druhém případě máme zlomek s konstantním čitatelem (vlastně se jedná o mocninnou funkci s exponentem $-\frac 12$), v prvním případě máme rozdíl dvou odmocnin. Druhá metoda tedy vede k jednodušší funkci a tato jednoduchost může být kriticky důležitá, pokud námi odvozená cena dalšího letadla vstupuje do dalšího výpočtu. 
 
-*Poznámka 2:* Možná jste si vzpomněli na příklady z nižších škol týkající se přímé úměrnosti. Jsou to příklady typu "Za výrobu patnácti jachet ruský oligarcha zaplatí částku $C$. Kolik zaplatí za šestnáct jachet?" Takové příklady jsou založeny na předpokladu, že výroba každé jachty stojí stejně a cena je nezávislá na počtu. V takovém případě je možné řešit úlohu trojčlenkou, pomocí přímé úměrnosti. V takové situaci by závislost ceny na množství byla lineární. V praxi tomu tak ale často není, závislost je nelineární. Proto není možné použít úměrnost a proto mají v ekonomii místo i veličiny jako [mezní náklady](https://cs.wikipedia.org/wiki/Mezn%C3%AD_n%C3%A1klady), které jsme vypočítali v tomto příkladě pomocí derivace. Slovo "mezní" je odvozeno od skutečnosti, že tato veličina pomáhá určit mez množství výroby, kdy se zvýší cena za jednotku
+*Poznámka 2:* Možná jste si vzpomněli na příklady z nižších škol týkající se přímé úměrnosti. Jsou to příklady typu "Za výrobu patnácti jachet ruský oligarcha zaplatí částku $C$. Kolik zaplatí za šestnáct jachet?" Takové příklady jsou založeny na předpokladu, že výroba každé jachty stojí stejně a cena je nezávislá na počtu. V takovém případě je možné řešit úlohu trojčlenkou, pomocí přímé úměrnosti. V takové situaci by závislost ceny na množství byla lineární. V praxi tomu tak ale často není, závislost je nelineární. Proto není možné použít úměrnost a proto mají v ekonomii místo i veličiny jako [mezní náklady](https://cs.wikipedia.org/wiki/Mezn%C3%AD_n%C3%A1klady), které jsme vypočítali v tomto příkladě pomocí derivace. Slovo "mezní" je odvozeno od skutečnosti, že tato veličina pomáhá určit mez množství výroby, kdy se zvýší cena za jednotku.
 
 ```
 
@@ -209,15 +209,15 @@ pruh podél železniční trati nedaleko Bzence, kde je extrémní sucho
 požáry kvůli provozu parních vlaků. Předpokládejme, že požár se v této
 vysušené oblasti šíří ve tvaru kruhu. V určitém okamžiku je poloměr $50$
 metrů a roste rychlostí $1.5$ metrů za minutu. Zapište zadání pomocí
-derivací a určete jak rychle roste plocha zasažená ohněm.
+derivací a určete, jak rychle roste plocha zasažená ohněm.
 
-_V tomto příkladě se učíme, že ze znalosti vztahů mezi veličinami můžeme odvodit vztah, mezi rychlostmi změn, tj. do statických vzorců můžeme dodat dynamiku vývoje. V praxi někdy jde příklad tohoto typu obejít úvahou: teď je poloměr 50 metrů, tomu odpovídá jakási plocha, za minutu  bude poloměr 51.5 metru, tomu odpovídá opět jakási plocha a porovnáním s plochou původní snadno zjistím přírůstek. To pro nás může být kontrola, že aparát funguje. Pro nás je teď důležité naučit se tento aparát na malých věcech, abyste mohli později dělat věci velké._
+_V tomto příkladě se učíme, že ze znalosti vztahů mezi veličinami můžeme odvodit vztah mezi rychlostmi změn, tj. do statických vzorců můžeme dodat dynamiku vývoje. V praxi někdy jde příklad tohoto typu obejít úvahou: teď je poloměr 50 metrů, tomu odpovídá jakási plocha, za minutu  bude poloměr 51.5 metru, tomu odpovídá opět jakási plocha a porovnáním s plochou původní snadno zjistím přírůstek. To pro nás může být kontrola, že aparát funguje. Pro nás je teď důležité naučit se tento aparát na malých věcech, abyste mohli později dělat věci velké._
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
-Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
+Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu a derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
 
 Ze zadání známe poloměr $r=50\,\mathrm{m}$ a rychlost růstu poloměru $\frac {\mathrm dr}{\mathrm dt}=1.5\,\text{m}\,\text{min}^{-1}$. Zajímá nás rychlost růstu obsahu $\frac{\mathrm dS}{\mathrm dt}$.
 
@@ -236,7 +236,7 @@ $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathr
 \iffalse 
 
 ```{figure} kopec_soli.jpg
-Že je u koule objem úměrný třetí mocnině poloměru vidíme přímo ze vzorce. Nejinak to je u těles, které si zachovávají proporce, tj. vzniknou zvětšením či zmenšením z jediného vzoru. Typickým příkladem je kromě koule i kužel s pevně zadaným vrcholovým úhlem. Tento tvar zachovávají volně sypané materiály. Obrázek: pixabay.com
+Že je u koule objem úměrný třetí mocnině poloměru vidíme přímo ze vzorce. Nejinak to je u těles, která si zachovávají proporce, tj. vzniknou zvětšením či zmenšením z jediného vzoru. Typickým příkladem je kromě koule i kužel s pevně zadaným vrcholovým úhlem. Tento tvar zachovávají volně sypané materiály. Obrázek: pixabay.com
 ```
 
 \fi 
@@ -247,7 +247,7 @@ V pohádce _Sůl nad zlato_ sype Maruška z bezedné slánky sůl na hromadu sol
 :class: dropdown
 :nonumber:
 
-Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
+Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu a derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
 
 Podle zadání je $\frac{\mathrm dV}{\mathrm dt}=0.01$ krychlových metrů za minutu, $h=0.5$ metru a chceme znát $\frac{\mathrm dh}{\mathrm dt}$. Derivováním dostáváme
 $$\frac{\mathrm dV}{\mathrm dt} = \frac{\mathrm dV}{\mathrm dh} \frac{\mathrm dh}{\mathrm dt} = \frac 34 h^2 \frac{\mathrm dh}{\mathrm dt}.$$

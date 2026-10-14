@@ -12,7 +12,7 @@ C=  \begin{pmatrix}
 \end{pmatrix}.
 $$
 
-_V tomto příkladě si vyzkoušíme násobení matic a kromě toho uvidíme, že násobení diagonální maticí je v jistém smyslu jednoduché. Podle toho, v jakém pořadí násobíme matice, se diagonálními prvky se násobí řádky nebo sloupce druhé matice._
+_V tomto příkladě si vyzkoušíme násobení matic a kromě toho uvidíme, že násobení diagonální maticí je v jistém smyslu jednoduché. Podle toho, v jakém pořadí násobíme matice, diagonálními prvky se násobí řádky nebo sloupce druhé matice._
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -31,7 +31,7 @@ AB=  \begin{pmatrix}
   0 & 0 & -6
 \end{pmatrix}
 $$
-Jinou metodou, s podrobným rozepsáním pomocí skalárního součinu řádků první matice a sloupců druhé matice dostáváme
+Jinou metodou, s podrobným rozepsáním pomocí skalárního součinu řádků první matice a sloupců druhé matice, dostáváme
 $$ 
   \begin{aligned}   AB&=    \begin{pmatrix}
   1 & -2 & 3\\
@@ -110,9 +110,9 @@ $$
 
 ```
 
-Figurka na obrázku je Timmy ve třech situacích. Jednou se pozoruje svůj obraz ve vodě, jednou spadl na záda, a jednou vrhá stín. Vyjádřete pomocí matice transformaci, která vzor (černá malůvka) převádí na obraz (barevná malůvka).
+Figurka na obrázku je Timmy ve třech situacích. Jednou pozoruje svůj obraz ve vodě, jednou spadl na záda a jednou vrhá stín. Vyjádřete pomocí matice transformaci, která vzor (černá malůvka) převádí na obraz (barevná malůvka).
 
-Poznámka: Stačí si všímat, kam se zobrazují jednotkové vektory ve směru os, tj. kam se zobrazí Timmiho nakročená noha a Timyho ruka, která je natažená dozadu. Případné neceločíselné složky matice jenom odhadněte. *Podle LAFF Linear Algebra - Foundations to Frontiers (www.ulaff.net)*
+Poznámka: Stačí si všímat, kam se zobrazují jednotkové vektory ve směru os, tj. kam se zobrazí Timmyho nakročená noha a Timmyho ruka, která je natažená dozadu. Případné neceločíselné složky matice jenom odhadněte. *Podle LAFF Linear Algebra - Foundations to Frontiers (www.ulaff.net)*
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -224,12 +224,12 @@ $$  \begin{pmatrix}    a & b & c \\ d & e & f \\ g& h& i \end{pmatrix}  \begin{p
 a vektory $(1,0,0)^T$
 a $(a,d,g)^T$ musí mít stejný směr. Proto $d=g=0$ a nejobecnější matice s danou vlastností je matice, která ve druhém a třetím řádku začíná nulou.
 $$     \begin{pmatrix}    a & b & c \\ 0 & e & f \\ 0& h& i \end{pmatrix}$$
-ad 2. Jako minulý případ, ale aby byla matice symetrická, musí být také $b=c=0$, a $h=f$ tj.
+ad 2. Jako minulý případ, ale aby byla matice symetrická, musí být také $b=c=0$ a $h=f$, tj.
 $$     \begin{pmatrix}    a & 0 & 0 \\ 0 & e & f \\ 0& f& i \end{pmatrix}.$$
 
 ad 3. Jako minulý případ, ale ještě se musí zachovávat směry vektorů $(0,1,0)^T$ a $(0,0,1)^T$. Platí
 $$    \begin{pmatrix}    a & 0 & 0 \\ 0 & e & f \\ 0& f& i \end{pmatrix}  \begin{pmatrix}    0 \\1\\0  \end{pmatrix}   =   \begin{pmatrix}    0 \\ e\\f  \end{pmatrix},\quad    \begin{pmatrix}    a & 0 & 0 \\ 0 & e & f \\ 0& f& i \end{pmatrix}  \begin{pmatrix}    0 \\0\\1  \end{pmatrix}   =   \begin{pmatrix}    0 \\ f\\i \end{pmatrix}$$
-a aby vzor a obraz měly stejný směr, musí být $f=0$. Nejobecnější symetrická matice, která zachovává směr všech tří základních bázových vektorů je matice, která má mimo hlavní diagonálu nuly.
+a aby vzor a obraz měly stejný směr, musí být $f=0$. Nejobecnější symetrická matice, která zachovává směr všech tří základních bázových vektorů, je matice, která má mimo hlavní diagonálu nuly.
 ```
 
 ## Matice derivování
@@ -238,7 +238,7 @@ Ukažte, že matice
 $A=\begin{pmatrix}  0 & 0 & 0 \\  2 & 0 & 0 \\  0 & 1 & 0\end{pmatrix}$ je matice derivování polynomů stupně nejvýše $2$, pokud polynom $ax^2+bx+c$ ztotožníme s vektorem $\begin{pmatrix}  a \\ b\\c\end{pmatrix}$.  Vysvětlete, jak bychom
 interpretovali matici $A^2$ a $A^3$ a tyto matice vypočtěte.
 
-_Návod: je možné ukázat buď pro obecný polynom $ax^2+bx+c$, nebo samostatně pro polynomy  $x^2$, $x$ a $1$ a poté si všimnout, že ostatní polynomy můžeme dostat lineárními kombinacemi a maticová násobení tyto l	ineární kombinace nepokazí díky tomu, že je distributivní a komutuje při násobení s konstantou.
+_Návod: je možné ukázat buď pro obecný polynom $ax^2+bx+c$, nebo samostatně pro polynomy  $x^2$, $x$ a $1$ a poté si všimnout, že ostatní polynomy můžeme dostat lineárními kombinacemi a maticové násobení tyto lineární kombinace nepokazí díky tomu, že je distributivní a komutuje při násobení s konstantou.
  V tomto příkladě mimo jiné vidíme, že mocnina nenulové matice může být nula. To je efekt, který nemá obdobu u násobení reálných čísel._
 
 ```{prf:example} Řešení

@@ -5,7 +5,7 @@
 \iffalse 
 
 ```{figure} tigr.jpg
-Difuzní rovnice dokáže například objasnit i modelování chemických rekací s přihlédnutím k prostorovému rozložení reagujících látek a jejich koncentrací. Jednou z aplikací je vysvětlení toho, proč jednotný mechanismus tvorby vzorů na srsti savců vede jednou k pruhům a jednou ke skvrnám na srsti. Dokážeme tak například lépe pochopit proces, jakým se geny přepisují do viditelných znaků. Podrobněji Murray: Mathematical biology nebo How the leopard gets its spots. Obrázek: pixabay.com
+Difuzní rovnice dokáže například objasnit i modelování chemických reakcí s přihlédnutím k prostorovému rozložení reagujících látek a jejich koncentrací. Jednou z aplikací je vysvětlení toho, proč jednotný mechanismus tvorby vzorů na srsti savců vede jednou k pruhům a jednou ke skvrnám na srsti. Dokážeme tak například lépe pochopit proces, jakým se geny přepisují do viditelných znaků. Podrobněji Murray: Mathematical biology nebo How the leopard gets its spots. Obrázek: pixabay.com
 ```
 
 \fi 
@@ -28,18 +28,18 @@ $$\frac{\partial u}{\partial t} = \sigma +
 +
 \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right)
 $$
-Toto je nejobecnější tvar a bohužel také nejsložitější. Kdykoliv to jde, zjednodušujeme co se dá. To se dá ovšem udělat pouze v případě některých speciálních vlastností studovaného systému.
+Toto je nejobecnější tvar a bohužel také nejsložitější. Kdykoliv to jde, zjednodušujeme, co se dá. To se dá ovšem udělat pouze v případě některých speciálních vlastností studovaného systému.
 
-* Obecný tvar má schopnosti zachytit i nestacionární děj, děj probíhající v různé časové okamžiky jinou intenzitou. Pokud nás zajímá jenom stacionární stav kdy je hodnota stavové veličiny konstantní, můžeme rovnici zjednodušit předpokladem $$\frac{\partial u}{\partial t}=0$$
+* Obecný tvar má schopnosti zachytit i nestacionární děj, děj probíhající v různé časové okamžiky jinou intenzitou. Pokud nás zajímá jenom stacionární stav, kdy je hodnota stavové veličiny konstantní, můžeme rovnici zjednodušit předpokladem $$\frac{\partial u}{\partial t}=0$$
 do tvaru 
 $$0=\sigma +\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right).$$
-* Obecný tvar má díky přitomnosti zdrojů schopnosti zachytit i proces vzniku či zániku stavové veličiny. Pokud k tomuto nedochází, je rovnice bezzdrojová a můžeme ji zjednodušit předpokladem $$\sigma=0$$ do tvaru 
+* Obecný tvar má díky přítomnosti zdrojů schopnosti zachytit i proces vzniku či zániku stavové veličiny. Pokud k tomuto nedochází, je rovnice bezzdrojová a můžeme ji zjednodušit předpokladem $$\sigma=0$$ do tvaru 
 $$\frac{\partial u}{\partial t} =\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right).$$
-* Obecný tvar má díky přitomnosti dvou různých difuzních koeficientů $D_x$ a $D_y$ schopnosti zachytit chování materiálu, který má odlišné vlastnosti v odlišných směrech, anizotropii či ortotropii. Vždy však toto není potřeba. Někdy je materiál izotropní, tj. má ve všech směrech stejné vlastnosti. V tomto případě stačí uvažovat jediný difuzní koeficient $$D=D_x=D_y,$$ což rovnici zjednodušuje do tvaru
+* Obecný tvar má díky přítomnosti dvou různých difuzních koeficientů $D_x$ a $D_y$ schopnosti zachytit chování materiálu, který má odlišné vlastnosti v odlišných směrech, anizotropii či ortotropii. Vždy však toto není potřeba. Někdy je materiál izotropní, tj. má ve všech směrech stejné vlastnosti. V tomto případě stačí uvažovat jediný difuzní koeficient $$D=D_x=D_y,$$ což rovnici zjednodušuje do tvaru
 $$\frac{\partial u}{\partial t} =\sigma + \frac{\partial }{\partial x}\left(D \frac{\partial u}{\partial x}\right) + \frac{\partial }{\partial y}\left(D \frac{\partial u}{\partial y}\right).$$
 * Pro konstantní difuzní koeficient je možno difuzní členy zjednodušit pomocí pravidla pro derivaci konstantního násobku, tj.
 $$ \frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) = D_x \frac{\partial^2 u}{\partial x^2} $$
-a analogicky pro další proměnné. Výraz na levé straně se nazývá kvaziderivace, výraz napravo je násobkem druhé derivace. Tento matematický předpoklad prakticky odpovídá homogennímu materiálu ve kterém je lineární konstitutivní zákon. Rovnice poté má tvar
+a analogicky pro další proměnné. Výraz na levé straně se nazývá kvaziderivace, výraz napravo je násobkem druhé derivace. Tento matematický předpoklad prakticky odpovídá homogennímu materiálu, ve kterém je lineární konstitutivní zákon. Rovnice poté má tvar
 $$\frac{\partial u}{\partial t} =\sigma + D_x \frac{\partial^2 u}{\partial x^2} + D_y \frac{\partial^2 u}{\partial y^2}.$$
 
 Jednotlivé varianty je pochopitelně možné kombinovat. Například stacionární rovnice v homogenním izotropním prostředí má derivaci podle času nulovou, stejné difuzní koeficienty v obou směrech a díky homogenitě a linearitě je možné kvaziderivace napsat jako druhé derivace, tj. rovnice má tvar
@@ -62,10 +62,10 @@ _Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením vede nap
 :class: dropdown
 :nonumber:
 
-Rovnici můžeme vydělit konstantou $k$
+Rovnici můžeme vydělit konstantou $k$.
 
 Po výpočtu integrálu dostáváme $$ \frac{\partial T}{\partial x}=C_1$$
-a po dále $$T=C_1x+C_2.$$ Teplota se mění lineárně. Dvě konstanty se určí pomocí dvou teplot na hranicích stěny.
+a dále $$T=C_1x+C_2.$$ Teplota se mění lineárně. Dvě konstanty se určí pomocí dvou teplot na hranicích stěny.
 
 ```
 
@@ -79,9 +79,9 @@ všechny funkce splňující
 $$\frac{\partial}{\partial x} \left(k \frac{\partial T}{\partial x}\right)=0$$
 pro $T=T(x)$ a $k=a+bT$, $a,b\in \mathbb R$.
 
-_Poznámka: Výpočet necháme kvalitativní abychom viděli, že teplotní profil ve stěně není lineární. Pro užitečnost v inženýrských aplikacích je vhodné přidat okrajové podmínky a vyjádřit řešení pomocí parametrů v těchto okrajových podmínkách. To jsou typicky teploty na jednotlivých stranách stěny._
+_Poznámka: Výpočet necháme kvalitativní, abychom viděli, že teplotní profil ve stěně není lineární. Pro užitečnost v inženýrských aplikacích je vhodné přidat okrajové podmínky a vyjádřit řešení pomocí parametrů v těchto okrajových podmínkách. To jsou typicky teploty na jednotlivých stranách stěny._
 
-_Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením, pouze pro $a=0$, vede například proudění podzemní vody ve zvodni s volnou hladinou. Na rozdíl od předchozího příkladu chybí horní nepropustná vrstva)._
+_Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením, pouze pro $a=0$, vede například proudění podzemní vody ve zvodni s volnou hladinou. Na rozdíl od předchozího příkladu chybí horní nepropustná vrstva._
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -115,7 +115,7 @@ Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako
 jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou
 vodivostí. Kolem chladiče proudí vzduch o teplotě $T_0$ a chladič
 ztrácí teplo rychlostí úměrnou rozdílu teploty žebra v daném místě a
-teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficientem přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
+teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficientem přestupu tepla a šířkou žebra.) Uvažujte stacionární děj.
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -159,7 +159,7 @@ pixabay.com
 ```
 -->
 
-## Rovnice vedení tepla v dvourozměrném materiálu
+## Rovnice vedení tepla ve dvourozměrném materiálu
 
 <!--
 %sage: x,y = var('x,y')
@@ -193,7 +193,7 @@ Odsud dostáváme gradient $$\nabla T= \begin{pmatrix}
   3x^2 \\ 4y
 \end{pmatrix}
 $$
-a tok	 tepla
+a tok tepla
 $$ \vec q=-\lambda \nabla T=-(3x^2) \begin{pmatrix}   5 \\ 1 \end{pmatrix} -4y \begin{pmatrix} 1\\2   \end{pmatrix} =  \begin{pmatrix}   -15 x^2 -4y\\-3x^2-8y \end{pmatrix} . $$
 1. Pro $x=0$  a $y>0$ je první komponenta toku záporná a teplo teče doleva, tj. ven z desky.
 1. Divergence je
@@ -207,11 +207,11 @@ Nejzásadnější jsou první a poslední příklad.
 
 * V prvním příkladě se trénuje rozepsání rovnice do souřadnic a posouzení, jestli je stacionární, se zdroji atd. To není vlastně žádná matematika ani počítání a dá se to odhalit na první pohled. Toto je také většinou jediné, co člověk s rovnicí dělá. Kromě toho ji už jenom "nacpe" do výpočetního prostředí. 
 * Druhý a třetí příklad jsou jenom reformulace příkladů, kterým jsme se věnovali ve cvičení s integrálem. Nyní to stejné jenom s jiným názvoslovím a aparátem difuzní rovnice. Abychom viděli, že to stejné "vypadne" i z obecného modelu.
-* Čtvrtý příklad je ukázka, že i když je náš svět trojrozměrný, někdy je možné dimenzi úloh redukovat. Třeba i tak, že se nějaká věc započítá méně přirozeným způsobem. Modelový příklad je žebro chladiče. Dvojrozměrné nebo trojrozměrné (podle toho bereme-li ho jako placku nebo jako těleso). Teplo se předává plochou žebra do okolí. Kdybychom chtěli studovat žebro jednodimenzionálně ve směru od součástky ven, můžeme předávání tepla do okolí modelovat tak, že podél žebra jsou spotřebiče, které teplo z žebra odstraňují. Výkon těchto spotřebičů souvisí s teplotou. Vede to na jednoduchou jednodimenzionální rovnici, se kterou se v numerických výpočtech manipuluje lépe, než s rovnicí dvoudimenzionální. 
+* Čtvrtý příklad je ukázka, že i když je náš svět trojrozměrný, někdy je možné dimenzi úloh redukovat. Třeba i tak, že se nějaká věc započítá méně přirozeným způsobem. Modelový příklad je žebro chladiče. Dvojrozměrné nebo trojrozměrné (podle toho, bereme-li ho jako placku nebo jako těleso). Teplo se předává plochou žebra do okolí. Kdybychom chtěli studovat žebro jednodimenzionálně ve směru od součástky ven, můžeme předávání tepla do okolí modelovat tak, že podél žebra jsou spotřebiče, které teplo ze žebra odstraňují. Výkon těchto spotřebičů souvisí s teplotou. Vede to na jednoduchou jednodimenzionální rovnici, se kterou se v numerických výpočtech manipuluje lépe, než s rovnicí dvoudimenzionální. 
 * Pátý příklad je výpočet jednoduchých derivací, ale tentokrát funkce dvou proměnných.  Není to nic nového: proměnnou, přes kterou se nederivuje, považujte za parametr (konstantu). A rovnice s parametrem derivovat umíme. 
 * Poslední příklad je co do matematického aparátu triviální (derivace polynomu a násobení 2x2 matice se sloupcovým vektorem), ale spojuje spoustu dovedností do řetězce, který už má reálné využití. Ve výpočtech je hlavně nutné  neztratit hlavní linii. Nesoustředit se na detaily, ale na to, co se vlastně počítá a jak na to.
     * Výpočtem derivací teploty podle prostorových souřadnic vypočítáme, jak se mění teplota podél osy x a podél osy y. Z toho poté určíme vektor (gradient), ukazující, kterým směrem teplota roste a jak intenzivní tento růst je. 
-    * Vynásobením gradientu záporným znamínkem a maticí se součinitelem tepelné vodivost určíme, jakým směrem teče teplo a jak intenzivně. Tuto informaci budeme mít pro všechny body uvažované množiny a dosazením se můžeme podívat, jestli v jednom konkrétním bodě je tok do studované množiny nebo ven.
-    * Když máme tok, můžeme vypočítat divergenci a v každém bodě budeme mít informaci, zda tok v daném bodě slábne čí zesiluje a jak intenzivně. 
-    * Pokud máme dodatečnou informaci, můžeme říci, na úkor čeho je zeslabování nebo zesilování toku realizováno. Pokud například nejsou zdroj a tok slábne, znamená to, že z toku se teplo "odpojuje a zůstává v materiálu" a to znamená, že v daném místě roste teplota.
+    * Vynásobením gradientu záporným znaménkem a maticí se součinitelem tepelné vodivosti určíme, jakým směrem teče teplo a jak intenzivně. Tuto informaci budeme mít pro všechny body uvažované množiny a dosazením se můžeme podívat, jestli v jednom konkrétním bodě je tok do studované množiny nebo ven.
+    * Když máme tok, můžeme vypočítat divergenci a v každém bodě budeme mít informaci, zda tok v daném bodě slábne či zesiluje a jak intenzivně. 
+    * Pokud máme dodatečnou informaci, můžeme říci, na úkor čeho je zeslabování nebo zesilování toku realizováno. Pokud například nejsou zdroje a tok slábne, znamená to, že z toku se teplo "odpojuje a zůstává v materiálu" a to znamená, že v daném místě roste teplota.
 

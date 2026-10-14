@@ -27,7 +27,7 @@ Deska s nekonstantní plošnou hustotou,  https://www.flickr.com/photos/svacher,
 * Hmotnost desky $\Omega$ je možno vypočítat jako součin plošné
   hustoty (hmotnost na jednotku obsahu) a obsahu desky. $$M=\sigma S$$
 * Toto funguje pro desky s konstantní plošnou hustotou, kdy má deska
-  ve všech místech stejné fyzikální vlastnostmi.
+  ve všech místech stejné fyzikální vlastnosti.
 * Pokud je deska slepená z konečného počtu malých homogenních desek o
   různých plošných hustotách, určíme hmotnost každé jednotlivé desky
   samostatně a výsledky potom sečteme.
@@ -126,7 +126,7 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 
 Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
 veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
-funkcí, nebo integračních oborů) a s násobení integrované funkce
+funkcí, nebo integračních oborů) a s násobením integrované funkce
 konstantou. Přesněji, platí následující věty.
 
 ```{prf:theorem} Linearita dvojného integrálu
@@ -211,7 +211,7 @@ Oblast, pro kterou jsou možná obě pořadí integrace.
 ### Problematika záměny pořadí integrace
 
 Často je možné oblast integrace zapsat pomocí obou možností uvedených
-na předchozích slidech. Například oblast na obrázku je možno zapsat
+výše. Například oblast na obrázku je možno zapsat
 buď jako
 $$\begin{gathered}
 0\leq x \leq 2\\
@@ -319,7 +319,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   osu $x$ je $\rho(x,y)=y$ a pro osu $y$ je $\rho (x,y)=x$. Pro osu
   procházející kolmo počátkem je $\rho(x,y)=\sqrt{x^2+y^2}$.
 
-### Techniké aplikace dvojného integrálu
+### Technické aplikace dvojného integrálu
 
 \iffalse
 
@@ -339,7 +339,7 @@ Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadrati
   $\sigma(x,y)=1$, anglicky *second moment of area*) je veličina,
   která hraje podstatnou roli v mechanice (nábytek, stavby) při
   dimenzování (polic, nosných tyčí, nosníků).
-* V technické praxi zpravidla neuvažujeme nekonstantní plošnou hustotu. Potom je možné je bez újmy na obecnosti nahradit jedničkou.
+* V technické praxi zpravidla neuvažujeme nekonstantní plošnou hustotu. Potom je možné ji bez újmy na obecnosti nahradit jedničkou.
   Vzorce pro obsah, $x$-ovou souřadnici těžiště ($x_0$), $y$-ovou
   souřadnici těžiště ($y_0$), kvadratický moment vzhledem k ose $x$
   ($I_x$) a kvadratický moment vzhledem k ose $y$ ($I_y$) (pro množinu $M$ s plošnou hustotou $1$) jsou
@@ -397,7 +397,7 @@ Odsud máme okamžitě několik pozorování
   $$(0.5)^4=0.0625\approx 6\%.$$ 
   Vidíme, že i s hrozivě vypadající dutinou má kmen pořád tuhost 
   $94\%$ původní tuhosti (za předpokladu dutiny uprostřed
-  kmene). Z hlubšího fyzikálního rozboru, který je nyní nad rámec našeho popisu,  pevnost roste jenom s třetí
+  kmene). Z hlubšího fyzikálního rozboru, který je nyní nad rámec našeho popisu,  pevnost roste jenom s druhou
   mocninou a proto odolnost vůči zlomení klesne o něco více než
   tuhost.
 
@@ -429,7 +429,7 @@ tedy *váženým průměrem* těžišť jednotlivých složek, kde váha každé
 složky je určena její hmotností. Protože se jedná o vážený průměr,
 tj. vlastně o lineární kombinaci bodů, kdy součet koeficientů je roven
 jedné, okamžitě vidíme, že těžiště složeného obrazce je na úsečce mezi
-těžišťmi jednotlivých částí.
+těžišti jednotlivých částí.
 
 Zobecnění výše uvedených myšlenek na množinu rozdělenou na více částí
 je již snadné.
@@ -448,7 +448,7 @@ Nechť $m=\iint \sigma(x,y)\,\mathrm dx\mathrm dy$, $y_0=\frac
 1{m}\iint_M y\sigma(x,y)\,\mathrm dx\mathrm dy$ a $I_{xT}=\iint_M
 (y-y_0)^2\sigma(x,y)\,\mathrm dx\mathrm dy$ jsou hmotnost, $y$-ová poloha těžiště
 a moment setrvačnosti vzhledem k ose jdoucí těžištěm rovnoběžně s osou
-$x$. Moment setrvačnosti vhledem k ose  $x$ je
+$x$. Moment setrvačnosti vzhledem k ose  $x$ je
 $$I_{x0}=\iint y^2\sigma(x,y)\,\mathrm dx\mathrm dy.$$
 Platí (píšeme zkráceně $\sigma$ místo $\sigma(x,y)$)
 $$\begin{aligned}
@@ -475,7 +475,7 @@ y_0^2 m
 $$
 Odsud dostáváme
 $$I_{x0}=I_{xT}+my_0^2,$$
-což lze interpretovat tak, že *moment setrvačnosti vhledem k ose $o$
+což lze interpretovat tak, že *moment setrvačnosti vzhledem k ose $o$
 je součtem momentu setrvačnosti vzhledem k ose procházející těžištěm rovnoběžně s $o$
 a momentu setrvačnosti hmotného bodu ležícího
 v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k ose $o$.*
@@ -556,9 +556,9 @@ Budeme pokračovat v předchozím příkladě a hledat působiště výsledné
 tlakové síly.
 
 Tlaková síla působící na svislou hráz má celkový nulový moment
-vzhledem k ose proházející působištěm. Je-li hráz definována množinou
+vzhledem k ose procházející působištěm. Je-li hráz definována množinou
 $M$ a je-li $y_c$ působiště výsledné tlakové síly, je v hloubce $y$
-tlaková síla na plošku o velikosti $\Delta S$ roven $y\rho g \Delta S$ a
+tlaková síla na plošku o velikosti $\Delta S$ rovna $y\rho g \Delta S$ a
 součin $(y_c-y)y\rho g\Delta S$ je příspěvek k otáčivému momentu
 vzhledem k ose, procházející vodorovně působištěm tlakové
 síly. Součet všech těchto příspěvků se nuluje, tedy musí platit
@@ -586,11 +586,11 @@ působiště tlakové síly pomocí [zatěžovacího obrazce](https://en.wikiped
 Kvadratický moment v čitateli zlomku {eq}`H2` vyjadřujícího $y_c$ je často
 výhodnější rozepsat pomocí Steinerovy věty. Ve jmenovateli je součin
 obsahu $S$ a $y$-ové souřadnice těžiště $y_0$. Tím dostaneme
-$$y_c=\frac{I_{x0}+Sy_0^2}{Sy_0}=\frac{I_{x0}}{Sy_0}+y_0,$$
-kde $I_{x0}$ je kvadratický moment vzhledem k ose procházející vodorovně těžištěm.
+$$y_c=\frac{I_{xT}+Sy_0^2}{Sy_0}=\frac{I_{xT}}{Sy_0}+y_0,$$
+kde $I_{xT}$ je kvadratický moment vzhledem k ose procházející vodorovně těžištěm.
 Působiště tlakové síly $y_c$ je tedy posunuto směrem dolů od těžiště
 $y_0$ o hodnotu odpovídající kvadratickému momentu vzhledem k
-vodorovné ose těžištěm $I_{x0}$ vyděleném součinem obsahu hráze $S$ a
+vodorovné ose těžištěm $I_{xT}$ vydělenému součinem obsahu hráze $S$ a
 $y$-ové polohy těžiště $y_0$.
 
 ## Shrnutí, hlavní myšlenky
@@ -607,7 +607,7 @@ A jaká je hlavní message? Zdroj: pixabay.com
 
 \fi 
 
-* Mnoho veličin, které nás zajímají, počítáme jako součin obsahu plochy s nějakou jinou veličinou. Zpravidla veličina kterou takto počítáme souvisí v objektem jako s celkem a veličina, kterou násobíme s plochou, souvisí se situací v jednom konkrétním místě. Například hmotnost desky z plošného materiálu (vlastnost objektu) je součinem plošné hustoty (charakteristika materiálu) a obsahu. Celková tlaková síla na hráz (vlastnost objektu) je součinem tlaku (vlastnost v daném bodě) a obsahu. Problém však nastane, pokud vlastnosti nejsou všude stejné. Například plošný materiál může mít v různých místech různé vlastnosti, nebo tlak může být v každém místě hráze jiný, protože hráz je napříč více hloubkami. V takových případech je potřeba součin něčím nahradit. Příslušná náhrada je dvojný integrál.
+* Mnoho veličin, které nás zajímají, počítáme jako součin obsahu plochy s nějakou jinou veličinou. Zpravidla veličina kterou takto počítáme souvisí s objektem jako s celkem a veličina, kterou násobíme s plochou, souvisí se situací v jednom konkrétním místě. Například hmotnost desky z plošného materiálu (vlastnost objektu) je součinem plošné hustoty (charakteristika materiálu) a obsahu. Celková tlaková síla na hráz (vlastnost objektu) je součinem tlaku (vlastnost v daném bodě) a obsahu. Problém však nastane, pokud vlastnosti nejsou všude stejné. Například plošný materiál může mít v různých místech různé vlastnosti, nebo tlak může být v každém místě hráze jiný, protože hráz je napříč více hloubkami. V takových případech je potřeba součin něčím nahradit. Příslušná náhrada je dvojný integrál.
 * Vidíte dvojný integrál a potřebujete promyslet, co vyjadřuje? Představte si, že integrovaná veličina je konstantní. Potom se integrál redukuje na součin a ten už zpravidla je snadné vyjádřit slovně. Například dvojný integrál hloubky jezera vypočítaný přes celé jezero. Pro konstantní hloubku se tato veličina redukuje na součin hloubky a obsahu hladiny. To je ale objem jezera. Proto dvojný integrál hloubky jezera vyjadřuje objem vody v jezeře.
 * Dvojný integrál počítáme převodem na dvojnásobný integrál, tj. dva integrály, z nichž jeden je uvnitř druhého. V některých situacích (integrál funkce sestavené jako součin funkcí jedné proměnné a počítaný přes obdélník) se dokonce může situace redukovat na součin dvou integrálů funkce jedné proměnné.
 * Dvojný integrál je také odpověď na problém, jak sesčítat veličinu rozloženou v ploše (kvadratický moment obrazce, veličina důležitá pro posuzování tuhosti a pevnosti nosníků) nebo jak ji zprůměrovat (integrální střední hodnota funkce dvou proměnných).

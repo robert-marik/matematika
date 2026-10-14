@@ -48,7 +48,7 @@ $$
 Vypočtěte integrál
 $$  \iint_\Omega x\,\mathrm dx \mathrm dy
 $$
-přes trojúhelník $\Omega$ s vrcholy v bodech $(0,0)$, $(1,0)$ a $(0,1)$ a poté vydělením obsahem trojúhleníka najděte $x$-ovou polohu těžiště.
+přes trojúhelník $\Omega$ s vrcholy v bodech $(0,0)$, $(1,0)$ a $(0,1)$ a poté vydělením obsahem trojúhelníka najděte $x$-ovou polohu těžiště.
 
 ```{prf:example} Řešení
 :class: dropdown

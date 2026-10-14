@@ -7,7 +7,7 @@
 >
 > **Motivace (podrobněji).**
 >
-> * V předchozích přednáškách jsme se seznámili s derivacemi, s nástroji umožňující převést fyzikální představu o procesech v materiálu do kvantitativní podoby, kdy dokážeme studované jevy kvantifikovat. V praxi však je analytické řešení těchto fyzikálních modelů realizovatelné pouze v nejjednodušších případech. Pro netriviální příklady používáme numerický přístup, který je v mnoha případech nakonec redukován na řešení soustavy rovnic. Tyto soustavy mají typicky obrovské množství rovnic a neznámých (řádově i v jednoduchých aplikacích řádově desetitisíce nebo statisíce rovnic) a proto je nutné mít k dispozici nástroje, umožňující práci s takto obrovskými soustavami rovnic. V této přednášce si představíme nové objekty, matice, se kterými je libovolně velkou soustavu rovnic možno zapsat jako jeden součin tvaru $$AX=B.$$
+> * V předchozích přednáškách jsme se seznámili s derivacemi, s nástroji umožňujícími převést fyzikální představu o procesech v materiálu do kvantitativní podoby, kdy dokážeme studované jevy kvantifikovat. V praxi však je analytické řešení těchto fyzikálních modelů realizovatelné pouze v nejjednodušších případech. Pro netriviální příklady používáme numerický přístup, který je v mnoha případech nakonec redukován na řešení soustavy rovnic. Tyto soustavy mají typicky obrovské množství rovnic a neznámých (i v jednoduchých aplikacích řádově desetitisíce nebo statisíce rovnic) a proto je nutné mít k dispozici nástroje, umožňující práci s takto obrovskými soustavami rovnic. V této přednášce si představíme nové objekty, matice, se kterými je libovolně velkou soustavu rovnic možno zapsat jako jeden součin tvaru $$AX=B.$$
 > * V úvodní přednášce jsme naformulovali [rovnici vedení tepla](https://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/#rovnice-veden%C3%AD-tepla-v-1d) jako rovnici, popisující fyzikální podstatu přenosu tepla v materiálu. Tento popis je ve vícerozměrných úlohách nutno zobecnit na dvourozměrný nebo trojrozměrný případ. Potom však u materiálu, který má v různých směrech různé vlastnosti, dochází k tomu, že odezva nemá stejný směr jako podnět. Například u vedení tepla je tok tepla dán směrem poklesu teploty jenom částečně. Vlivem vysoké vodivosti v podélném směru ve srovnání s příčným směrem však je tok tepla odkloněný částečně do podélného směru. Pro popis takového procesu tedy potřebujeme zobrazení, které dokáže změnit nejenom délku, ale i směr vektoru. Toto zobrazení je možné realizovat pomocí matic.
 
 https://youtu.be/cPrmTKdk3yk
@@ -37,7 +37,7 @@ Množinu $V$ uspořádaných $n$-tic  $(a_1, a_2,\dots, a_n)$ s operacemi sčít
 ```
 
 
-Vektorový prostor, jehož komponenty jsou uspořádané $n$-tice reálých čísel označujeme $\mathbb R^n$.
+Vektorový prostor, jehož komponenty jsou uspořádané $n$-tice reálných čísel označujeme $\mathbb R^n$.
 
 Často pracujeme se sloupcovými vektory. Zápis je potom přehlednější. $$\begin{pmatrix}   1\cr-2\cr1 \end{pmatrix} + 3 \begin{pmatrix}   -1\cr5\cr2 \end{pmatrix} = \begin{pmatrix}   1-3\cr-2+15\cr1+6 \end{pmatrix} = \begin{pmatrix}   -2\cr13\cr7 \end{pmatrix}$$ 
 
@@ -51,7 +51,7 @@ $$\vec u +\vec o=\vec u$$
 <div class='obtekat'>
 
 ```{figure} vektor.png
-Modrý vektor je součtem ostatních tří vektorů. U černého vektoru je pravoúhlý trojúhelník pro výpočet délky pomocí Pythagorovy věty. Zdroj: Wikiepdie.
+Modrý vektor je součtem ostatních tří vektorů. U černého vektoru je pravoúhlý trojúhelník pro výpočet délky pomocí Pythagorovy věty. Zdroj: Wikipedie.
 ```
 
 </div>
@@ -63,7 +63,7 @@ takovou orientovanou úsečkou, že komponenty vektoru označují změnu
 polohy v jednotlivých směrech. Sčítání vektorů 
 odpovídá posunutí počátečního bodu druhého vektoru do koncového bodu
 prvního vektoru a nahrazení dvou částečných posunutí jedním
-celkovým. Je přirozené zavést délku vektoru $\vec u= \begin{pmatrix}   u_1\\u_2 \end{pmatrix}$ pomocí Pythaghorovy věty vzorcem $|\vec u|=\sqrt{u_1^2+u_2^2}$. Násobení vektoru kladným číslem odpovídá
+celkovým. Je přirozené zavést délku vektoru $\vec u= \begin{pmatrix}   u_1\\u_2 \end{pmatrix}$ pomocí Pythagorovy věty vzorcem $|\vec u|=\sqrt{u_1^2+u_2^2}$. Násobení vektoru kladným číslem odpovídá
 změně délky vektoru. Násobení záporným číslem odpovídá změně délky a
 otočení směru.
 
@@ -138,7 +138,7 @@ Stejný modrý vektor vyjádřený ve dvou různých bázích ve 3D, v červené
     {y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}\Bigr).
   $$  
 ukazuje, že určitý integrál je možno aproximovat lineární kombinací
-funkčních hodnot na pravidelné mřížce rozdělující obor integrace. Koeficienty lineární kombinace jsou dvojky s vyjímkou prvního  a posledního koeficientu, které jsou jednotkové. Existují i další aproximační vzorce, které používají jiné koeficienty a jsou založeny například na aproximaci funkce parabolami namísto přímek.
+funkčních hodnot na pravidelné mřížce rozdělující obor integrace. Koeficienty lineární kombinace jsou dvojky s výjimkou prvního  a posledního koeficientu, které jsou jednotkové. Existují i další aproximační vzorce, které používají jiné koeficienty a jsou založeny například na aproximaci funkce parabolami namísto přímek.
 
 **Příklad.** V metodě konečných diferencí (viz druhá přednáška o derivacích)  se derivace aproximují výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Pro konkrétnost, pro první derivaci máme
 $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x-h)}{2h} =\frac 1{2h}f(x+h)-\frac 1{2h}f(x-h), $$
@@ -208,7 +208,7 @@ odstranění tohoto nepohodlí se zavádí pojem matice, viz níže.
 
 V $n$-rozměrném prostoru existuje $n$-tice vektorů, pomocí
 nichž můžeme dostat libovolný vektor jako lineární kombinaci. Taková
-$n$-tice se nazývá *báze*. Dá se ukázat, že bází je nekonečné mnoho a
+$n$-tice se nazývá *báze*. Dá se ukázat, že bází je nekonečně mnoho a
 pro zadanou bázi a vektor je vyjádření vektoru pomocí bázových
 vektorů jednoznačné až na pořadí. Nejjednodušší báze je tvořena
 jednotkovými vektory, které mají všechny komponenty kromě jedné
@@ -302,9 +302,9 @@ https://youtu.be/DY044M_RbVs
 
 ```{prf:definition} Matice
 :nonumber:
- *Maticí řádu $m\times n$*  rozumíme schema $$ A= \begin{pmatrix} a_{11}& a_{12}& a_{13}& \cdots{}& a_{1n}\\a_{21}& a_{22}& a_{23}& \cdots{}& a_{2n}\\\vdots{}& \vdots{}& {}& \ddots{}& \vdots{}\\a_{m1}& a_{m2}& \cdots{}& \cdots{}& a_{mn} \end{pmatrix}$$kde $a_{ij}$ pro $i=1..m$ a $j=1..n$ jsou reálná čísla nebo funkce. Množinuvšech matic řádu $m\times n$, jejichž prvky jsou reálná čísla, označujeme symbolem $\mathbb R^{m\times n}$.Zkráceně zapisujeme též ${A=(a_{ij})}$.
->
-Je-li $m=n$ nazývá se matice $A$ *čtvercová  matice*, jinak *obdélníková matice*. Je-li $A$ čtvercovámatice, nazýváme prvky tvaru $a_{ii}$, tj. prvky, jejichž řádkovýa sloupcový index jsou stejné, *prvky hlavní diagonály*.
+ *Maticí řádu $m\times n$*  rozumíme schema $$ A= \begin{pmatrix} a_{11}& a_{12}& a_{13}& \cdots{}& a_{1n}\\a_{21}& a_{22}& a_{23}& \cdots{}& a_{2n}\\\vdots{}& \vdots{}& {}& \ddots{}& \vdots{}\\a_{m1}& a_{m2}& \cdots{}& \cdots{}& a_{mn} \end{pmatrix}$$kde $a_{ij}$ pro $i=1..m$ a $j=1..n$ jsou reálná čísla nebo funkce. Množinu všech matic řádu $m\times n$, jejichž prvky jsou reálná čísla, označujeme symbolem $\mathbb R^{m\times n}$. Zkráceně zapisujeme též ${A=(a_{ij})}$.
+
+Je-li $m=n$ nazývá se matice $A$ *čtvercová  matice*, jinak *obdélníková matice*. Je-li $A$ čtvercová matice, nazýváme prvky tvaru $a_{ii}$, tj. prvky, jejichž řádkový a sloupcový index jsou stejné, *prvky hlavní diagonály*.
 ```
 
 
@@ -391,13 +391,13 @@ Výpočet operací s maticemi je nejlepší se naučit při výpočtu konkrétn�
 
 \fi
 
-## Aplikace maticového součinu 1/3
+## Aplikace maticového součinu I
 
 Nejdůležitější aplikací maticového součinu je to, že pomocí maticového součinu je  možné vyjádřit zobrazení, kde na vstupu i na výstupu jsou vektorové veličiny. To umožní rozšířit fyzikální zákony na anizotropní látky (různé vlastnosti v různých směrech, například dřevo nebo obecně látky vykazující uspořádanou strukturu). Kromě fyzikálních veličin, které mají číselnou hodnotu (skaláry) nebo číselnou hodnotu a směr (vektory) tak získáváme další fyzikální veličiny, tenzory. Více viz níže a též podkapitola "Matice jako zobrazení v materiálovém inženýrství".
 
 Je-li druhá matice v součinu sloupcový vektor $\vec u$, je výsledkem maticového součinu matice $A$ a tohoto vektoru opět sloupcový vektor $A\vec u$. Matici je tedy možné chápat jako zobrazení, kdy vektoru $\vec u$ je přiřazen vektor $\vec v$ vztahem $$\vec v = A\vec u.$$ Tento vztah je možné chápat jako přímé rozšíření vztahu pro přímou úměrnost mezi veličinami. Zobecnění je v tom, že obě veličiny mezi nimiž je vztah úměrnosti jsou vektorovými veličinami a konstanta úměrnosti je matice. Ve fyzice tato matice mívá ještě některé speciální vlastnosti související například s tím, že fyzikální zákony nezávisí na volbě souřadné soustavy a proto se takové matice nazývají **tenzory** (přesněji tenzory druhého řádu). Používáme je pro popis zobrazení mezi vektory, které nezachovává směr vektoru. Například studium transportních dějů v anizotropních materiálech (tj. například vedení tepla ve dřevě nebo difuze ve dřevě).
 
-## Aplikace maticového součinu 2/3
+## Aplikace maticového součinu II
 
 https://youtu.be/4jqBoskZ9Ak
 
@@ -413,7 +413,7 @@ $$ f''(x_2)\approx\frac{1}{h^2} (f(x_1) - 2 f(x_2) +  f(x_3))$$
 $$ f''(x_3)\approx\frac{1}{h^2} (f(x_2) - 2 f(x_3) + f(x_4))$$
 a
 $$ f''(x_4)\approx\frac{1}{h^2} (f(x_3) - 2 f(x_4) +  f(x_5)).$$
-Tyto tři rovnice je možnou zapsat jediným vztahem pomocí 
+Tyto tři rovnice je možno zapsat jediným vztahem pomocí 
 maticového násobení 
 $$\begin{pmatrix}f''(x_2)\\f''(x_3)\\f''(x_4)\end{pmatrix} =\frac 1{h^2}\begin{pmatrix} 1 & -2 & 1& 0& 0\\0& 1 & -2 & 1& 0\\0& 0 & 1  & -2 & 1\\\end{pmatrix}\begin{pmatrix}f(x_1)\\f(x_2)\\f(x_3)\\f(x_4)\\f(x_5)\end{pmatrix}.$$
 Proto matice 
@@ -491,7 +491,7 @@ dána pravděpodobnost dožití se do další kategorie a průměrný počet
 potomků. Situace je podobná jako u Markovova řetězce s tím, že
 nenulový prvek matice bude jenom tam, kde dochází k přesunu do další
 věkové kategorie nebo tam, kde kumulujeme počet nově narozených
-jedinců v nejnižší věkové kategorie pro jednotlivé věkové skupiny
+jedinců v nejnižší věkové kategorii pro jednotlivé věkové skupiny
 rodičů.
 
 Příslušný model například pro populaci rozdělenou do tří věkových
@@ -512,7 +512,7 @@ Další informace:
 <div class='obtekat'>
 
 ```{figure} food-web.png
-Jednoduchý potravní řetezec. Zdroj: https://linearalgebraapplications19.wordpress.com/2019/04/29/food-webs/
+Jednoduchý potravní řetězec. Zdroj: https://linearalgebraapplications19.wordpress.com/2019/04/29/food-webs/
 ```
 
 </div>
@@ -535,19 +535,19 @@ Analogicky bývají studovány metabolické sítě, kde místo vztahů jsou chem
 $$\frac{\mathrm dX}{\mathrm dt}=Av,$$
 kde derivaci  vektoru chápeme po složkách jako vektor sestavený z derivací jednotlivých komponent. Viz například [Basic concepts and principles of stoichiometric modeling of metabolic networks](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4671265/)
 
-Reálné sítě mají tisíce uzlů a tisíce vztahů mezi nimi a není možné je studovat jinak, než matematickými metodami. Například [model *Escherichia Coli*](http://bigg.ucsd.edu/models/iJO1366), hojně studované bakerie, obsahuje 1805 metabolitů, 2583 reakcí a 1367 genů. Matice umožňují studovat nejenom vztahy ale i intenzitu toku mezi jednotlivými metabolity a umožní studovat vliv vnějších zásahů, například knokautování některých genů nebo umístění bakerie do anaerobního prostředí. V příkladě s potravním řetězcem například můžeme (po dodání dalších informací do modelu) určit, jakým procentem se jednotlivé složky potravy podílí na celkovém jídelníčku a jak se toto složení změní při odstranění nějaké složky potravy. 
+Reálné sítě mají tisíce uzlů a tisíce vztahů mezi nimi a není možné je studovat jinak, než matematickými metodami. Například [model *Escherichia Coli*](http://bigg.ucsd.edu/models/iJO1366), hojně studované bakterie, obsahuje 1805 metabolitů, 2583 reakcí a 1367 genů. Matice umožňují studovat nejenom vztahy ale i intenzitu toku mezi jednotlivými metabolity a umožní studovat vliv vnějších zásahů, například knokautování některých genů nebo umístění bakterie do anaerobního prostředí. V příkladě s potravním řetězcem například můžeme (po dodání dalších informací do modelu) určit, jakým procentem se jednotlivé složky potravy podílí na celkovém jídelníčku a jak se toto složení změní při odstranění nějaké složky potravy. 
 
 <!-- </div> -->
 
-## Aplikace maticového součinu 3/3: matice jako zobrazení, tenzory
+## Aplikace maticového součinu III: matice jako zobrazení, tenzory
 
 https://youtu.be/7NH8p323zxo
 
-Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima materiálového inženýra. Matici budeme chápat jako objekt, který je možné vynásobit s vekorem a získat jiný vektor. V určitém smyslu jde tedy o zobrazení, kdy vzory i obrazy jsou vektory. 
+Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima materiálového inženýra. Matici budeme chápat jako objekt, který je možné vynásobit s vektorem a získat jiný vektor. V určitém smyslu jde tedy o zobrazení, kdy vzory i obrazy jsou vektory. 
 
 ### Matice jako zobrazení v geometrii
 
-manimp:MatrixMultiplication|Nejdůležitější rolí matic v materiálovém inženýrství je jejich schopnost jistým způsobem transformovat vektory (body) prostoru. Přesněji, zobrazení zachovává rovnoběžnost a dělící poměr. Rovnoměrně rozmístěná mřížka se zobrazí zase na rovnoměrně rozmístěnou mřížku. (První část prezentace).
+manimp:MatrixMultiplication|Nejdůležitější rolí matic v materiálovém inženýrství je jejich schopnost jistým způsobem transformovat vektory (body) prostoru. Přesněji, zobrazení zachovává rovnoběžnost a dělicí poměr. Rovnoměrně rozmístěná mřížka se zobrazí zase na rovnoměrně rozmístěnou mřížku. (První část prezentace).
 
 <div class='obtekat'>
 
@@ -599,7 +599,7 @@ Matice chápejme jako zobrazení, které má na vstupu vektor a na výstupu opě
 
 Užitečnost maticového součinu v materiálovém inženýrství si můžeme znázornit na proudění vody po povrchu země. Voda teče z kopce dolů, tento směr však můžeme ovlivnit vyoráním brázd. Hnací síla je gravitace, která směřuje z kopce dolů. Odezvou na gravitaci je tok vody, který směřuje velkou rychlostí dolů, pokud je pooráno po spádnici, malou rychlostí dolů, pokud je pooráno po vrstevnici a pokud je pooráno našikmo, tak něco mezi směrem dolů a směrem brázdy. V materiálu se může odehrávat totéž. 
 
-Výše popsané chování pozorujeme i u proudění podzemní vody, kde hnací silou kromě hladiny podzemní vody může být tlak, nebo u proudění vody ve dřevě, kde hnací silou definující pojem "z kopce dolů" je nerovnoměrnost v rozložení koncentrace vody ve dřevě (jedna část dřeva má větší vlhkost než jiná část) nebo  nerovnoměrnost v teplotě (termodifuze, Sorettův efekt, transport vlhkosti vyvolaný rozdílem teplot). Výsledné proudění však nemusí přesně sledovat pokles koncentrace vlhkosti. Například dřevo vede podélně vlhkost zpravidla více než desetkrát lépe než v jiných směrech a chová se tedy, jako by v něm byly brázdy odklánějící vodu do podélného směru.
+Výše popsané chování pozorujeme i u proudění podzemní vody, kde hnací silou kromě hladiny podzemní vody může být tlak, nebo u proudění vody ve dřevě, kde hnací silou definující pojem "z kopce dolů" je nerovnoměrnost v rozložení koncentrace vody ve dřevě (jedna část dřeva má větší vlhkost než jiná část) nebo  nerovnoměrnost v teplotě (termodifuze, Soretův efekt, transport vlhkosti vyvolaný rozdílem teplot). Výsledné proudění však nemusí přesně sledovat pokles koncentrace vlhkosti. Například dřevo vede podélně vlhkost zpravidla více než desetkrát lépe než v jiných směrech a chová se tedy, jako by v něm byly brázdy odklánějící vodu do podélného směru.
 
 **Matematický prostředek, který umožňuje snadno vektoru změnit velikost nebo i směr je právě tenzor (matice) a maticový součin.**
 
@@ -622,13 +622,13 @@ U zobrazování vektorů pomocí maticového násobení nás velice zajímá, kt
 
 
 Vlastní čísla se nazývají též vlastní hodnoty matice. Každý nenulový
-vlastní násobek vlastního vektoru je vlastní vektor příslušný téže
+násobek vlastního vektoru je vlastní vektor příslušný téže
 vlastní hodnotě.
 
 ```{prf:remark} Vlastní vektory a materiálové inženýrství
 :nonumber:
- Vlastní vektory jsou nesmírně důležité, protože definují směry, podél nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to, jak se působení vnější síly na těleso projeví na deformaci tohoto tělesa nebo jak se gradient teploty nebo vlhkosti projeví na proudění tepla či vody ve dřevě, půdě nebo jiném materiálu. Často se v aplikacích maticové zobrazení objevuje v *konstitučních vztazích*, vztazích mezi podnětem a materiálovou odezvou. Vlastní směry jsou tedy směry, ve kterých má odezva stejný směr jako podnět.  
->
+ Vlastní vektory jsou nesmírně důležité, protože definují směry, podél nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to, jak se působení vnější síly na těleso projeví na deformaci tohoto tělesa nebo jak se gradient teploty nebo vlhkosti projeví na proudění tepla či vody ve dřevě, půdě nebo jiném materiálu. Často se v aplikacích maticové zobrazení objevuje v *konstitutivních vztazích*, vztazích mezi podnětem a materiálovou odezvou. Vlastní směry jsou tedy směry, ve kterých má odezva stejný směr jako podnět.  
+
 Pro pravidelně rostlé dřevo je snadné tyto směry určit, jsou to anatomické směry dřeva. Pro zkroucené dřevo nebo při studiu proudění vody, vzduchu či ropy v půdě to již tak snadné není a je nutné tyto směry vypočítat. To se naučíme později.
 ```
 
@@ -638,7 +638,7 @@ Pro pravidelně rostlé dřevo je snadné tyto směry určit, jsou to anatomick�
 <div class='obtekat'>
 
 ```{figure} drevo.png
-Dřevo není izotropní materiál a nemá stejné vlastnosti v každém směru. Existují ale tři výrazné směry, vzhledem k nimž se dají mechanické a fyzikální vlastnosti popsat snadněji, než vhledem ke směrům ostatním. Matematicky se jedná o vlastní vektory příslušných maticových fyzikálních veličin. Zdroj: http://woodpoint.sk
+Dřevo není izotropní materiál a nemá stejné vlastnosti v každém směru. Existují ale tři výrazné směry, vzhledem k nimž se dají mechanické a fyzikální vlastnosti popsat snadněji, než vzhledem ke směrům ostatním. Matematicky se jedná o vlastní vektory příslušných maticových fyzikálních veličin. Zdroj: http://woodpoint.sk
 ```
 
 </div>
@@ -692,7 +692,7 @@ stavu. (Toto není tvrzení patrné na první pohled, ale dá se dokázat.)
 
 V aplikacích často bývá matice "symetrická podle diagonály" a u takové
 matice vlastní vektory vždy existují. Co se přesně myslí pod pojmem
-"symetrická matice" si uvedeme na následujícím slidu.
+"symetrická matice" si uvedeme níže.
 
 ## Transponovaná matice
 
@@ -731,7 +731,7 @@ Tento trik použijeme pro odvození tvaru tenzoru malých deformací, ze zobraze
 
 ```{prf:theorem} Souvislost transponování matice a maticového součinu
 :nonumber:
- Pro čtvercové matice platí $$(AB)^T=B^T A^T.$$
+ Pro matice $A$ a $B$, pro které je definován součin $AB$, platí $$(AB)^T=B^T A^T.$$
 ```
 
 
@@ -757,7 +757,7 @@ Metodami lineární algebry kombinovanými s diferenciálním počtem dokážeme
 
 \fi
 
-Zobrazení roviny do sebe, které může odpovídat deformaci tělesa působením síly, je možné popsat dvojicí funkcí $u_1(x_1,x_2)$, $u_2(x_1,x_2)$. Lineární aproximace těchto funkcí v okolí bodu $(x_1,x_2)$ dávají (viz závěr prezentace z přednášky věnované derivací, kdy ještě vpravo pro stručnost vynecháváme argument $(x_1,x_2)$)
+Zobrazení roviny do sebe, které může odpovídat deformaci tělesa působením síly, je možné popsat dvojicí funkcí $u_1(x_1,x_2)$, $u_2(x_1,x_2)$. Lineární aproximace těchto funkcí v okolí bodu $(x_1,x_2)$ dávají (viz závěr prezentace z přednášky věnované derivacím, kdy ještě vpravo pro stručnost vynecháváme argument $(x_1,x_2)$)
 $$\begin{aligned}
   u_{1}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&\approx u_{1}+\frac{\partial u_{1}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{1}}{\partial x_{2}}\Delta x_{2},\\
   u_{2}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&\approx u_{2}+\frac{\partial u_{2}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{2}}{\partial x_{2}}\Delta x_{2},
@@ -785,7 +785,7 @@ $$\begin{aligned}
         \frac{\partial u_{2}}{\partial x_{1}} & \frac{\partial u_{2}}{\partial x_{2}}
       \end{pmatrix}
       $$
-       rozdělíme stejným obratem jako na předešlém slidu na součet symetrické a
+       rozdělíme stejným obratem jako výše na součet symetrické a
 antisymetrické matice, dostaneme
 \dm$$D=  \overbrace{\begin{pmatrix}         \frac{\partial u_{1}}{\partial x_{1}} &  \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}     }^{D_{\text{sym}}}  +  \underbrace{ \begin{pmatrix}         0 &  \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)\\        - \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)&  0       \end{pmatrix}}_{D_{\text{asym}}}.$$
       Druhá část reprezentuje pootočení, což snadno nahlédneme, pokud
@@ -797,14 +797,14 @@ $$ D_{\text{asym}}+I=\begin{pmatrix}
       \end{pmatrix}
       $$
       abychom měli celou část zobrazení (ne jenom deformaci). Porovnáním s maticí malých rotací $$R_{\theta,0}=\begin{pmatrix}  1 & - \theta\\  \theta & 1\end{pmatrix}$$
-odvozenou na jednom z předchozích slidů 
+odvozenou výše 
 získáme přímo pootočení. V teorii deformace nás zajímá spíše symetrická část, tj. matice
 $$ D_{\text{sym}}=\begin{pmatrix}
         \frac{\partial u_{1}}{\partial x_{1}} & \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\
         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}
       \end{pmatrix}
       $$
-      popisující změnu tvaru a nazývaná [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátor (souvisí se zmenou tvaru bez započtení zvětšení či zmenšení).
+      popisující změnu tvaru a nazývaná [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátor (souvisí se změnou tvaru bez započtení zvětšení či zmenšení).
 
 Pro využití v dřevařských úlohách viz též A. Požgaj, Štruktúra a
 vlastnosti dreva str 318 nebo P. Horáček, Fyzikální a mechanické
@@ -886,7 +886,7 @@ namáhání od jednoduchých nosníků po komplikované konstrukce nebo stromy.
 Soustava vytvořená pomocí takových modelů je velmi řídká, má hodně
 nul. Je proto možné ji rychle vyřešit i v případě tisíců rovnic. My se
 později například naučíme chytře využít toho, že každý řádek má v
-hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
+hlavní diagonále v absolutní hodnotě větší číslo, než je součet absolutních hodnot zbylých čísel v tomto
 řádku.
 
 **Iterační metoda**
@@ -914,7 +914,7 @@ A jaká je hlavní message? Zdroj: pixabay.com
 
 \fi
 
-* Seznámili jsme se s vektory. S objekty, které umožňují pracovat s veličinami mající kromě numerické hodnoty i směr. 
+* Seznámili jsme se s vektory. S objekty, které umožňují pracovat s veličinami majícími kromě numerické hodnoty i směr. 
 * Seznámili jsme se s maticemi, s objekty, které umožní pracovat se zobrazením vektorů na vektory, kdy směr vzoru a obrazu nemusí být (na rozdíl od násobení reálným číslem) stejný. Díky tomu dokážeme popsat reakci materiálu na podněty v případě, kdy má materiál v různých směrech různé vlastnosti. 
 * Matice umožňují kompaktní zápis soustavy libovolného počtu lineárních rovnic jedinou rovnicí $$AX=B.$$
 * V materiálovém inženýrství pomocí matic (přesněji pomocí tenzorů) umíme popsat materiály, mající v různých směrech různé vlastnosti. V takových materiálech je různý směr vnějšího podnětu a odezvy na vnější podnět a bez matic jenom s použitím skalárních veličin není možné se závislostmi takového typu pracovat. Pokud chceme zobrazení, které mění směr vektorů (a má některé další rozumné vlastnosti), používáme matice. Přesněji, používáme tenzory, které mají v souřadnicích podobu matic.

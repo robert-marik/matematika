@@ -4,14 +4,14 @@
 >
 > Toto jsou hlavní myšlenky, které jsou v přednášce jenom rozvíjeny a precizovány. 
 > 
-> * Příroda "nemá ráda"  nerovnoměrné rozložení celé řady veličin, jako je koncentrace vody ve dřevě nebo v půdě nebo různá teplota dotýkajících se objaktů (jiná hustota vnitřní energie). Proto se snaží případnou nerovnost vyrovnávat transportními ději, jako je difuze nebo vedení tepla. V této přednášce je jednotný přístup ke všem transportním dějům.
+> * Příroda "nemá ráda"  nerovnoměrné rozložení celé řady veličin, jako je koncentrace vody ve dřevě nebo v půdě nebo různá teplota dotýkajících se objektů (jiná hustota vnitřní energie). Proto se snaží případnou nerovnost vyrovnávat transportními ději, jako je difuze nebo vedení tepla. V této přednášce je jednotný přístup ke všem transportním dějům.
 > * Rovnice kontinuity je matematickým vyjádřením základní "selské úvahy", že navýšení transportované veličiny v daném místě je způsobeno produkcí veličiny v tomto místě a tím, co do tohoto místa přinese tok, tj. zeslabením toku.
-> * Difuzní rovnice je rovnice kontinuity doplněná o konstituční zákon. Ten je matematickým vyjádřením pozorování, že větší nerovnosti se vyhlazují intenzivnějším tokem. Moderní formulace konstitučních zákonů vychází z tenzorového (maticového) tvaru, aby bylo možno modelovat i chování anizotropních látek.
+> * Difuzní rovnice je rovnice kontinuity doplněná o konstitutivní zákon. Ten je matematickým vyjádřením pozorování, že větší nerovnosti se vyhlazují intenzivnějším tokem. Moderní formulace konstitutivních zákonů vychází z tenzorového (maticového) tvaru, aby bylo možno modelovat i chování anizotropních látek.
 > * Modely často vyjadřujeme v kartézských souřadnicích. Pro určení, pro jaký materiál a děj je napsána transportní rovnice typu
 >   $${\color{blue}\frac{\partial u}{\partial t}} = {\color{green}\sigma} +
 \frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+
 \frac{\partial }{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)$$ 
->    je potřeba se dívat, zda je v rovnici derivace podle času (posoudíme stacionárnost a nestacionárnost, tady vyznačeno modře), zda je tam člen bez derivací (posoudíme existenci zdrojů a spotřebičů, tady odpovídající člen je a je vyznačen zeleně), zda jsou difuzní konstanty pro jednotlivé směry odlišeny či nikoliv a zda prostorové souřadnice jsou ve výrazech s kvaziderivacemi, nebo se druhými derivacemi. To je snadné, jenom je potřeba vědět, na co se dívat.
+>    je potřeba se dívat, zda je v rovnici derivace podle času (posoudíme stacionárnost a nestacionárnost, tady vyznačeno modře), zda je tam člen bez derivací (posoudíme existenci zdrojů a spotřebičů, tady odpovídající člen je a je vyznačen zeleně), zda jsou difuzní konstanty pro jednotlivé směry odlišeny či nikoliv a zda prostorové souřadnice jsou ve výrazech s kvaziderivacemi, nebo s druhými derivacemi. To je snadné, jenom je potřeba vědět, na co se dívat.
 
 
 https://youtu.be/DonzhFhcyQ4
@@ -239,7 +239,7 @@ vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný
 nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$
 kde $s$ je koeficient termodifuze. 
 
-Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. Te je v kontrastu s ostatními konstitutivními zákony, kde tok proudí vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis. Viz Wikipedia a heslo Thermophoresis.
+Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. To je v kontrastu s ostatními konstitutivními zákony, kde tok proudí vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis.
 
 ## Speciální případy vztahu mezi gradientem a tokem
 
@@ -378,7 +378,7 @@ Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze 
 
 ```{prf:remark} Fyzikální interpretace divergence
 :nonumber:
- Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
+ Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
 ```
 
 
@@ -392,7 +392,7 @@ Divergence je lokální veličina. Udává informaci o daném bodě. Pro měřen
 
 Přesnou divergenci získáme postupem uvedeným v předchozí poznámce, pokud limitním přechodem stáhneme rozměry tělesa k nule. 
 
-Pokud se daném místě množství veličiny nemění s časem, tj. žádná veličina se tam neakumuluje ani neubývá, mluvíme o stacionárním proudění a stacionárním poli. Situace se zjednoduší, protože potom divergence souvisí jenom s přítomností zdrojů a spotřebičů.
+Pokud se v daném místě množství veličiny nemění s časem, tj. žádná veličina se tam neakumuluje ani neubývá, mluvíme o stacionárním proudění a stacionárním poli. Situace se zjednoduší, protože potom divergence souvisí jenom s přítomností zdrojů a spotřebičů.
 
 ```{prf:remark} Praktická interpretace divergence stacionárního pole
 :nonumber:
@@ -402,7 +402,7 @@ Pokud se daném místě množství veličiny nemění s časem, tj. žádná vel
 
 Ze střední školy z fyziky umíme modelovat vektorové pole
 pomocí siločar. Siločáry nezřídlového pole nikde nezačínají ani
-nekončí a jsou to uzavřené křivky. 
+nekončí. Jsou to například uzavřené křivky nebo křivky odcházející do nekonečna. 
 Například stacionární magnetické pole je
 nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříznutím tyčového magnetu vzniknou dva menší plnohodnotné magnety. Nevznikne samostatný jižní pól a samostatný severní pól magnetu. To je rozdíl oproti poli elektrickému, kdy rozdělením tyče s opačně nabitými konci vznikne jedna kladně nabitá a jedna záporně nabitá tyč poloviční délky.
 
@@ -446,12 +446,12 @@ $$
 
 >Poznámka (fyzikální interpretace členů rovnice kontinuity).
 >
->* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se roste hustota stavové veličiny $u$ v daném místě a čase.
+>* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle roste hustota stavové veličiny $u$ v daném místě a čase.
 >* Člen $\sigma$ udává vydatnost zdrojů stavové veličiny, přičemž spotřebiče jsou uvažovány jako zdroje záporné vydatnosti. Tento člen tedy udává, kolik stavové veličiny v tomto místě vzniká v jednotkovém objemu za jednotku času.
->* Člen $\nabla\cdot \vec j$ udává v daném bodě změnu ve velikosti proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do tohoto místa vteče. Jinak řečeno, udává, o kolik zesílí v daném místě tok $\vec \jmath$. My potřebujeme mít zachyceno zeslabení (množství které chybí v toku se "použije" na akumulaci veličiny v daném místě) a proto uvažujeme záporně vzatou divergenci, tj. $-\nabla\cdot \vec j$.
+>* Člen $\nabla\cdot \vec j$ udává v daném bodě změnu ve velikosti proudění přenášejícího stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do tohoto místa vteče. Jinak řečeno, udává, o kolik zesílí v daném místě tok $\vec \jmath$. My potřebujeme mít zachyceno zeslabení (množství které chybí v toku se "použije" na akumulaci veličiny v daném místě) a proto uvažujeme záporně vzatou divergenci, tj. $-\nabla\cdot \vec j$.
 >* Pokud zdroje stavové veličiny neexistují, jedná se o *bezzdrojovou rovnici* a klademe $\sigma=0$.
 >* Pokud studujeme systém v ustáleném stavu, kdy se stavová veličina nemění v čase, je člen $\frac{\partial u}{\partial t}$ na levé straně nulový. V tomto případě mluvíme o *stacionárním stavu* a *stacionární rovnici kontinuity*. Stacionární rovnice kontinuity typicky popisuje systémy, které byly dostatečně dlouhou dobu ve stabilních podmínkách a dosáhly rovnovážného stavu.
->* Viděli jsme, že za určitých podmínek mohou některé členy v rovnici kontinuty chybět. Naopak člen $\nabla\cdot \vec j$ charakterizující změny v toku je v rovnici kontinuity přítomen vždy. Bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
+>* Viděli jsme, že za určitých podmínek mohou některé členy v rovnici kontinuity chybět. Naopak člen $\nabla\cdot \vec j$ charakterizující změny v toku je v rovnici kontinuity přítomen vždy. Bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
 
 V matematice často rovnici kontinuity uvažujeme ve výše uvedeném tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
@@ -486,7 +486,7 @@ V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i�
 \iffalse 
 
 ```{figure} ricka.jpg
-Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.
+Rovnici kontinuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.
 ```
 
 \fi
@@ -497,7 +497,7 @@ Rovnici kontinuity můžeme použít pro popis vody v korytě. Úloha je jednod
 $$
       {\frac{\partial A}{\partial t}= - {\frac{\partial Q}{\partial x}}}
 $$
-a nazývá se Saint-Venantova rovnice nebo též *rovnice mělké vody*. Tato rovnice se používá při popisu *proudění v korytě* nebo při modelování *vln tsunami*.
+a je jednou ze Saint-Venantových rovnic, nazývaných též *rovnice mělké vody* (druhou z nich je pohybová rovnice vyjadřující zachování hybnosti). Tato rovnice se používá při popisu *proudění v korytě* nebo při modelování *vln tsunami*.
 
 V rovnici jsou dvě funkce, tok $Q$ definující pohyb stavové veličiny a
 průřez $A$ definující množství stavové veličiny. Někdy je vhodnější
@@ -539,7 +539,7 @@ průřezem.
 
 https://youtu.be/MH8IzenZZCo
 
-Difuzní rovnice je rovnice kontiuity s dosazeným konstitučním vztahem
+Difuzní rovnice je rovnice kontinuity s dosazeným konstitutivním vztahem
 pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu
 lineární aproximaci, je možné psát
 $$      \vec \jmath=-D\nabla u,$$
@@ -555,12 +555,12 @@ $$
 a vztahu  pro tok stavové veličiny dostáváme rovnici
 $$
       {\frac{\partial u}{\partial t}=\sigma - \nabla\cdot \bigl(-D\nabla u\bigr)}.$$
-      Tuto rovici je možno upravit na tvar
+      Tuto rovnici je možno upravit na tvar
 $$
       {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)},$$
 který se nazývá *difuzní rovnice*.
 
-```{prf:remark} Fyzikální interpretace rovnice difuzní rovnice
+```{prf:remark} Fyzikální interpretace difuzní rovnice
 :nonumber:
 
 * Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se mění hustota stavové veličiny $u$. Je stejný jako v rovnici kontinuity.
@@ -601,7 +601,7 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 * Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
 * Výraz $D\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-D\nabla T$.
 * Člen $\nabla\cdot(D\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
-* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divegrence toku $\nabla\cdot (-D\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (D\nabla T)$ je proto záporný.
+* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divergence toku $\nabla\cdot (-D\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (D\nabla T)$ je proto záporný.
 ```
 
 
@@ -719,7 +719,7 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(T\nabla h\bigr
   provozů*. Aplikace jsou dále v detekci zdroje kontaminace pitné vody a odhadu rychlosti  šíření kontaminace, včetně 
 *kontaminace slanou mořskou vodou* v přímořských oblastech.
 
-U proudění s napjatou hladinou (mezi dvěma nepropustnými vrstvami, angl. *confined aquifer*) transmisitiva závisí pouze na fyzikálních vlastnostech zvodně. Například pro homogenní izotropní materiál je konstantní. U proudění s volnou hladinou (bez horní nepropustné vrstvy, angl. *unconfined aquifer*) je transmisivita úměrná tloušťce vrstvy obsahující vodu. Zpravidla nulovou hodnotu piezometrické hladiny volíme na dolní nepropustné vrstvě a potom platí $T=kh$, kde $k$ závisí pouze na fyzikálních vlastnostech půdy. Proto se často rovnice podzemní vody pro proudění s volnou hladinou zapisuje ve tvaru
+U proudění s napjatou hladinou (mezi dvěma nepropustnými vrstvami, angl. *confined aquifer*) transmisivita závisí pouze na fyzikálních vlastnostech zvodně. Například pro homogenní izotropní materiál je konstantní. U proudění s volnou hladinou (bez horní nepropustné vrstvy, angl. *unconfined aquifer*) je transmisivita úměrná tloušťce vrstvy obsahující vodu. Zpravidla nulovou hodnotu piezometrické hladiny volíme na dolní nepropustné vrstvě a potom platí $T=kh$, kde $k$ závisí pouze na fyzikálních vlastnostech půdy. Proto se často rovnice podzemní vody pro proudění s volnou hladinou zapisuje ve tvaru
 $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\bigr).}$$
 
 ## Rovnice vedení tepla ve 2D v různých podmínkách
@@ -779,23 +779,23 @@ $$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac
 
 ### Homogenní ortotropní materiál a lineární materiálové vztahy
 
-Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné a nezávislá na $T$.
+Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné a nezávislé na $T$.
 Stejné jako předchozí případ, ale $D_x$ a $D_y$ jsou konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice {eq}`VP3` redukuje na 
 $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.$$
 
 ## Umění identifikace předpokladů z tvaru difuzní rovnice
 
-Jasná kuchařka, jak identifikovat předpoklady vedoucí ke konkrétní formě difuzní rovnice může vypadat násedovně. Obecný tvar v kartézských souřadnicích je
+Jasná kuchařka, jak identifikovat předpoklady vedoucí ke konkrétní formě difuzní rovnice může vypadat následovně. Obecný tvar v kartézských souřadnicích je
 $$\frac{\partial u}{\partial t} =\sigma +
 \frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+
 \frac{\partial }{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)+
 \frac{\partial }{\partial z}\left(D_z\frac{\partial u}{\partial z}\right)
 $$
-a pokud máte před sebou podobnou rovnici, ve které některý člen chybí, znamená to, že tato rovnice v sobě již obsahuje jisté předpoklady. Ty se pokusíme identifikovat. Některý člen může být lehce modifikovaný, například a levé straně mohou figurovat dodatečné multiplikativní konstanty (například v případě rovnice vedení tepla) nebo člen popisující zdroje může být nekonstantní (například při studiu vývoje populace se zahrnutím prostorového rozložení používáme logistický růst $\sigma = ru\left(1-\frac uK\right)$), zajímavé však pro nás jsou podstatné odlišnosti shrnuté v následujících odrážkách. Vždy je to "něco za něco". Jednodušší rovnice se lépe dále zpracovává, ale neumí zachytit plnou škálu efektů, které jsou v obecné rovnici.
+a pokud máte před sebou podobnou rovnici, ve které některý člen chybí, znamená to, že tato rovnice v sobě již obsahuje jisté předpoklady. Ty se pokusíme identifikovat. Některý člen může být lehce modifikovaný, například na levé straně mohou figurovat dodatečné multiplikativní konstanty (například v případě rovnice vedení tepla) nebo člen popisující zdroje může být nekonstantní (například při studiu vývoje populace se zahrnutím prostorového rozložení používáme logistický růst $\sigma = ru\left(1-\frac uK\right)$), zajímavé však pro nás jsou podstatné odlišnosti shrnuté v následujících odrážkách. Vždy je to "něco za něco". Jednodušší rovnice se lépe dále zpracovává, ale neumí zachytit plnou škálu efektů, které jsou v obecné rovnici.
 
-* Je v rovnici člen $\frac{\partial u}{\partial t}$ s derivací podle času? Pokud ano, je rovnice _nestacionární_ a dokáže popsat časový vývoj děje. Pokud ne, jedná se o _stacionánrní_ rovnici popisující děj po dosažení ustáleného stavu. Stacionární rovnice je jednodušší, ale nedokáže zachytit časový vývoj.
-* Je v rovnici člen bez časové a prostorové derivace? Tj. v našem označení $\sigma$? Pokud ano, popisuje tento člen vydatnost zdrojů nebo spotřebičů a rovnice je schopna zachytit situace, kdy stavová veličina vzniká nebo zaniká. Pokud ne, jedná se o _bezzdrojovou rovnici_. Takové rovnice popisuje stav, kdy se stavová veličina může jenom přemisťovat nebo kumulovat. Bezzdrojová rovnice je jednodušší, ale nedokáže modelovat vznik či zánik stavové veličiny.
-* Jsou přítomny všechny prostorové souřadnice, nebo jenom některé? Počet prostorových souřadnic defiuje _dimenzi problému_, tj. určuje, zda se jedná o úlohu v prostoru, v rovině nebo na přímce.
+* Je v rovnici člen $\frac{\partial u}{\partial t}$ s derivací podle času? Pokud ano, je rovnice _nestacionární_ a dokáže popsat časový vývoj děje. Pokud ne, jedná se o _stacionární_ rovnici popisující děj po dosažení ustáleného stavu. Stacionární rovnice je jednodušší, ale nedokáže zachytit časový vývoj.
+* Je v rovnici člen bez časové a prostorové derivace? Tj. v našem označení $\sigma$? Pokud ano, popisuje tento člen vydatnost zdrojů nebo spotřebičů a rovnice je schopna zachytit situace, kdy stavová veličina vzniká nebo zaniká. Pokud ne, jedná se o _bezzdrojovou rovnici_. Takové rovnice popisují stav, kdy se stavová veličina může jenom přemisťovat nebo kumulovat. Bezzdrojová rovnice je jednodušší, ale nedokáže modelovat vznik či zánik stavové veličiny.
+* Jsou přítomny všechny prostorové souřadnice, nebo jenom některé? Počet prostorových souřadnic definuje _dimenzi problému_, tj. určuje, zda se jedná o úlohu v prostoru, v rovině nebo na přímce.
 * Jsou všechny difuzní koeficienty stejné (například $D$), nebo jsou odlišeny (například indexy $D_x$, $D_y$, $D_z$)? Pokud jsou stejné, jedná se o _izotropní_ materiál a rovnice dokáže popsat pouze materiál mající ve všech směrech stejné vlastnosti. Pokud jsou difuzní koeficienty odlišeny, jedná se o _anizotropní_ nebo _ortotropní_ materiál a dokážeme s ní popsat i materiály mající díky své struktuře jiné vlastnosti v jednotlivých směrech.
 * Jsou difuzní koeficienty uvnitř derivací ve členech typu $$\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)$$ nebo jsou difuzní členy zjednodušeny do tvaru $$D_x\frac{\partial ^2 u}{\partial x^2}$$ s druhými derivacemi? Pokud jsou zjednodušeny do druhého tvaru se součinem difuzního koeficientu a druhé derivace, znamená to, že rovnice je sice jednodušší, ale rovnice je schopna popsat pouze materiál, který je _homogenní_ a konstitutivní zákon v tomto materiálu je _lineární_. V opačném případě (nehomogenita materiálu, nelinearita materiálu, případně obojí) necháváme difuzní koeficienty uvnitř derivace, tak jak to je v obecném případě. Rovnice je komplikovanější, ale umožňuje práci s obecnějšími materiály.
 
@@ -840,7 +840,7 @@ $$
 \frac {\partial u}{\partial t}=\sigma + \nabla\cdot \left(D\nabla u\right). $$ To je rovnice popisující obecně transport energie nebo hmoty prostředím. Například vedení tepla nebo difuzi vody při sušení dřeva.
 * Pro konkrétní výpočet je často nutné rovnici zapsat v souřadnicích. Například pokud máme dvojrozměrný model a směr souřadných os zvolíme ve vlastních směrech matice $D$ (potom matice $D$ bude diagonální s diagonálními prvky například $D_x$ a $D_y$), má difuzní rovnice tvar 
 $$ \frac {\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right ) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right ). $$
-* Pokud je materiál homogení a má lineární materiálovou odezvu, je dokonce možné rovnici dále zjednodušit na 
+* Pokud je materiál homogenní a má lineární materiálovou odezvu, je dokonce možné rovnici dále zjednodušit na 
 
 $$ \frac {\partial u}{\partial t}=\sigma + D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } .
 $$ (N)
@@ -862,9 +862,9 @@ V článku  [A Local and Time Resolution of the COVID-19 Propagation—A
 Two-Dimensional Approach for Germany Including Diffusion
 Phenomena to Describe the Spatial Spread of the
 COVID-19 Pandemic](https://arxiv.org/pdf/2101.12011)
-je prostorové šíření epidemi COVID modelováno difuzní rovnicí (1) ve tvaru 
+je prostorové šíření epidemie COVID modelováno difuzní rovnicí (1) ve tvaru 
 $$\frac{\partial c}{\partial t}=q+\nabla\cdot \left(D\nabla c\right),$$
-což je přesně rovnice, se kterou jsme pracovali zde. Je to rovnice ve své  neobecnější formě, aby bylo možno zachytit 
+což je přesně rovnice, se kterou jsme pracovali zde. Je to rovnice ve své  nejobecnější formě, aby bylo možno zachytit 
 
 * časový vývoj (o ten nám jde), 
 * nehomogenitu v šíření (například ve městech je jiná rychlost šíření než na venkově) a
@@ -878,5 +878,5 @@ $$\begin{aligned}
 \frac{\mathrm dI_j}{\mathrm dt}&=\kappa_j\frac {I_j}{N_j}{S_j}-\eta_j I_j,\\
 \frac{\mathrm dR_j}{\mathrm dt}&=\eta_j I_j.
 \end{aligned} $$
-Toto jsou již naši staří známí ze světa derivací funkce jedné proměnné. Například první rovnice vyjadřuje, že počet $S_j$ lidí zdravých a náchylných k onemocnění COVID19 ve spolkové zemi s indexem $j$ se snižuje rychlostí přímo úměrnou současně množství náchylných lidí a množství $I_j$ infikovaných lidí a nepřímo úměrnou celkové velikosti populace v této zemi $N_j$. Konstanta úměrnosti je $\kappa_j$ a abychom se mohli spolehnout na to, že tato konstanta je kladná, je úbytek skupiny dosud zdravých lidí zachycen záporným znaménkem na pravé straně rovnice. Podobně je možné interpretovat další rovnice, je to vlastně klasický [SIR model epidemie](https://www.matfyz.cz/clanky/matematika-koronaviru-matematicke-modely-sireni-epidemie). Prolistujete si výše odkazovaný anglický článek o modelování epidemie v Německu a všimněte si, že se nic ručně nemusí počítat. Rovnice se nasimulují v počítači a člověk jenom plní ty úlohy, které počítače neumí a nikdy umět nemůžou: sestaví model na základě své představy o fungování procesu a poté interpretuje výstup ze simulace.
+Toto jsou již naši staří známí ze světa derivací funkce jedné proměnné. Například první rovnice vyjadřuje, že počet $S_j$ lidí zdravých a náchylných k onemocnění COVID19 ve spolkové zemi s indexem $j$ se snižuje rychlostí přímo úměrnou současně množství náchylných lidí a množství $I_j$ infikovaných lidí a nepřímo úměrnou celkové velikosti populace v této zemi $N_j$. Konstanta úměrnosti je $\kappa_j$ a abychom se mohli spolehnout na to, že tato konstanta je kladná, je úbytek skupiny dosud zdravých lidí zachycen záporným znaménkem na pravé straně rovnice. Podobně je možné interpretovat další rovnice, je to vlastně klasický [SIR model epidemie](https://www.matfyz.cz/clanky/matematika-koronaviru-matematicke-modely-sireni-epidemie). Prolistujte si výše odkazovaný anglický článek o modelování epidemie v Německu a všimněte si, že se nic ručně nemusí počítat. Rovnice se nasimulují v počítači a člověk jenom plní ty úlohy, které počítače neumí a nikdy umět nemůžou: sestaví model na základě své představy o fungování procesu a poté interpretuje výstup ze simulace.
 

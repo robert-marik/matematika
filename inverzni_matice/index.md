@@ -2,8 +2,8 @@
 
 > **Motivace**.
 >
-> * Chování libovolného systému nezávisí na souřadné soustavě, ve které tento systém popisujeme. Opravdu, dřevo neví, jak jsme si zvolili osy  soustavy souřadnic. Ani, zda používáme pravoúhlou soustavu či jinou. Už vůbec dřevo nepozná, zda úlohu řešíme v pravotočivé či levotočivé soustavě souřadnic. Vhodná volba souřadné soustavy přirozeně neovlivní chování systému. Může ale značně usnadnit výpočty. Proto například při studiu obdélníkového objektu volíme osy ve směru hran. Proto například při studiu dřeva volíme souřadné osy v anatomických směrech dřeva. Tyto dva požadavky jsou částečně proti sobě v případě, že studujeme obdélníkový materiál s hranami jdoucími jiným směrem, než jsou anatomické směry dřeva. Naučíme se s tímto probléme vypořádat. Naučíme se používat matice k přechodu mezi souřadnými soustavami. Naučíme se transformovat fyzikální vlastnosti popsané maticemi z jedné soustavy do druhé. 
-> * Ukázali jsme si, že soustavu lineárních rovnic je možné zapsat pomocí maticového násobení ve tvaru $AX=B$. Pokud by veličiny v této rovnici byla reálná čísla, řešitelnost je značně ovlivněna nulovostí či nenulovostí veličiny $A$. Ukážeme si zobecnění této vlastnosti i pro matice a soustavy rovnic. K tomu si představíme nový pojem - determinant matice.
+> * Chování libovolného systému nezávisí na souřadné soustavě, ve které tento systém popisujeme. Opravdu, dřevo neví, jak jsme si zvolili osy  soustavy souřadnic. Ani, zda používáme pravoúhlou soustavu či jinou. Už vůbec dřevo nepozná, zda úlohu řešíme v pravotočivé či levotočivé soustavě souřadnic. Vhodná volba souřadné soustavy přirozeně neovlivní chování systému. Může ale značně usnadnit výpočty. Proto například při studiu obdélníkového objektu volíme osy ve směru hran. Proto například při studiu dřeva volíme souřadné osy v anatomických směrech dřeva. Tyto dva požadavky jsou částečně proti sobě v případě, že studujeme obdélníkový materiál s hranami jdoucími jiným směrem, než jsou anatomické směry dřeva. Naučíme se s tímto problémem vypořádat. Naučíme se používat matice k přechodu mezi souřadnými soustavami. Naučíme se transformovat fyzikální vlastnosti popsané maticemi z jedné soustavy do druhé. 
+> * Ukázali jsme si, že soustavu lineárních rovnic je možné zapsat pomocí maticového násobení ve tvaru $AX=B$. Pokud by veličiny v této rovnici byly reálná čísla, řešitelnost je značně ovlivněna nulovostí či nenulovostí veličiny $A$. Ukážeme si zobecnění této vlastnosti i pro matice a soustavy rovnic. K tomu si představíme nový pojem - determinant matice.
 
 ## Inverzní matice
 
@@ -77,7 +77,7 @@ tj. že inverzní a transponovaná matice jsou v případě matice rotace stejn�
 
 Řádky ortogonální matice jsou tvořeny navzájem kolmými vektory
 jednotkové délky. Má-li například symetrická čtvercová matice $A$ řádu
-$n$ celkem $n$ lineárně nezávislých jednotkových vlastních vektorů,
+$n$ celkem $n$ navzájem kolmých jednotkových vlastních vektorů (u symetrické matice je lze vždy takto zvolit),
 potom matice vytvořená tak, že sloupce nebo řádky matice jsou tyto
 vektory, je ortogonální.
 
@@ -94,20 +94,20 @@ manimp:MatrixMultiplication|Pomocí maticového násobení můžeme snadno přec
 <div class='obtekat'>
 
 ```{figure} souradnice.png
-Matice rotace a maticové násobení umožňuje vyjáření souřadnic v různých vzájemně pootočených souřadných soustavách.
+Matice rotace a maticové násobení umožňuje vyjádření souřadnic v různých vzájemně pootočených souřadných soustavách.
 ```
 
 </div>
 
 \fi
 
-Ukážeme si, že pomocí matic je možné přepočítávat souřadnice mezi jednotlivými souřadnými soustavami. Praktické využití je studium ortotropních materiálů v situace, kdy pro matematický popis jsou výhodné směry os, ale roviny symetrie neodpovídají souřadným rovinám. Například dřevěný kvádr je vhodné studovat tak, že hrany kvádru jsou rovnoběžné se souřadnými osami. Materiálové vlastnosti jsou známy v anatomických směrech dřeva. Pokud tyto směry nejsou nejsou rovnoběžné s osami (kvádr je nařezaný našikmo), je potřeba mezi souřadnými soustavami přecházet. To se dá elegantně udělat pomocí maticového násobení a inverzní matice. 
+Ukážeme si, že pomocí matic je možné přepočítávat souřadnice mezi jednotlivými souřadnými soustavami. Praktické využití je studium ortotropních materiálů v situacích, kdy pro matematický popis jsou výhodné směry os, ale roviny symetrie neodpovídají souřadným rovinám. Například dřevěný kvádr je vhodné studovat tak, že hrany kvádru jsou rovnoběžné se souřadnými osami. Materiálové vlastnosti jsou známy v anatomických směrech dřeva. Pokud tyto směry nejsou rovnoběžné s osami (kvádr je nařezaný našikmo), je potřeba mezi souřadnými soustavami přecházet. To se dá elegantně udělat pomocí maticového násobení a inverzní matice. 
 
 Předpokládejme, že v rovině jsou dány dvě kartézské soustavy souřadnic $\mathcal B$ a $\mathcal B'$, které jsou vzájemně pootočené o úhel $\theta$. V těchto soustavách budou souřadnice $(x,y)^T$ a $(x',y')^T$. Je-li soustava $\mathcal B'$ otočená oproti soustavě $\mathcal B$ o úhel $\theta$ proti směru hodinových ručiček, má (viz obrázek) jednotkový vektor ve směru osy $x'$ v bázi $\mathcal B$ souřadnice $(\cos(\theta),\sin(\theta))^T$ a jednotkový vektor ve směru osy $y'$ má v bázi $\mathcal B$ souřadnice $(-\sin(\theta),\cos(\theta))^T$. Proto je vztah mezi souřadnicemi dán maticovým součinem $$\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B}=\begin{pmatrix}  \cos\theta & -\sin \theta\\  \sin\theta & \cos\theta\end{pmatrix}\begin{pmatrix}x'\\y'\end{pmatrix}_{\mathcal B'}.$$
 Matice $$R=\begin{pmatrix}  \cos\theta & -\sin \theta\\  \sin\theta & \cos\theta\end{pmatrix}$$ je matice, kterou jsme poznali jako matici rotace. Je to matice, která svým působením pootočí vektor který ji násobí zprava o úhel $\theta$ proti směru hodinových ručiček.
-Ve výše uvedením kontextu se tato matice nazývá maticí přechodu mezi oběma uvažovanými souřadnými systémy. Matice přechodu umožňuje najít souřadnice
+Ve výše uvedeném kontextu se tato matice nazývá maticí přechodu mezi oběma uvažovanými souřadnými systémy. Matice přechodu umožňuje najít souřadnice
 vektoru v jedné souřadné soustavě pomocí souřadnic vektoru v souřadné soustavě vzniklé pootočením díky vztahu $$\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B}=R\begin{pmatrix}x'\\y'\end{pmatrix}_{\mathcal B'}.$$
-Tato matice má inverní matici a proto evidentně můžeme mezi souřadnicemi přecházet i v opačném směru vztahem $$R^{-1}\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B} = \begin{pmatrix}x'\\y'\end{pmatrix}_{\mathcal B'}.$$
+Tato matice má inverzní matici a proto evidentně můžeme mezi souřadnicemi přecházet i v opačném směru vztahem $$R^{-1}\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B} = \begin{pmatrix}x'\\y'\end{pmatrix}_{\mathcal B'}.$$
 
 V inženýrských problémech je častou aplikací lineární algebry
 transformace úlohy do vhodných souřadnic, ve kterých je popis
@@ -144,7 +144,7 @@ obrazu v souřadné soustavě $\mathcal B$. Budeme chtít toto zobrazení
 vyjádřit v jiné soustavě. Například v soustavě $\mathcal B'$ takové,
 že platí $X=PX'$ a $Y=PY'$, kde čárkovaná písmena jsou souřadnice v
 čárkované souřadné soustavě $\mathcal B'$. Dosazením získáme $$PY'=APX'$$ a po
-vynásobení inverzní maticí $$P^{-1}(PY')=P^{-1}(APX'),$$ tj
+vynásobení inverzní maticí $$P^{-1}(PY')=P^{-1}(APX'),$$ tj.
 $$Y'=(P^{-1}AP)X'.$$ V pootočených souřadnicích $\mathcal B'$ je tedy zobrazení charakterizováno
 maticí $P^{-1}AP$. Pro vhodně zvolenou matici $P$ může být matice v
 nové bázi podstatně jednodušší než matice v bázi původní.
@@ -175,7 +175,7 @@ $P^{-1}AP$ je diagonální.
 
 Častým úkolem je zapsat vztahy mezi veličinami tak, aby byly co
 nejjednodušší a proto jeden z častých úkolů v lineární algebře bývá
-takovou šikovnou bázi nalézt. Nastíníme neoptimističtější variantu
+takovou šikovnou bázi nalézt. Nastíníme nejoptimističtější variantu
 postupu, případné detaily a řešení zádrhelů je možné najít v odborné
 literatuře. Zpravidla vyjadřujeme zobrazení v bázi tvořené
 ortonormálními vlastními vektory matice $A$. Sloupce matice $P$ jsou
@@ -185,7 +185,7 @@ transponovaná. Tomuto procesu se říká diagonalizace matice, protože
 $P^{-1}AP$ vychází diagonální a v diagonále vychází právě vlastní
 čísla matice.
 
-Stejným způsobem se transformují i fyzikální veličiny veličiny popisované maticemi, nazývané tenzory.
+Stejným způsobem se transformují i fyzikální veličiny popisované maticemi, nazývané tenzory.
 
 \iffalse
 
@@ -253,7 +253,7 @@ dostáváme v souřadnicích otočených o úhel $\theta$ proti směru hodinový
 $$\begin{pmatrix}  a'_{11} & a'_{12} \\ a'_{12} & a'_{22}\end{pmatrix} = \begin{pmatrix}  C&S\\-S&C\end{pmatrix}\begin{pmatrix}  a_{11} & a_{12} \\ a_{12} & a_{22}\end{pmatrix}\begin{pmatrix}  C&-S\\S&C\end{pmatrix},$$
 kde [po výpočtu](https://sagecell.sagemath.org/?z=eJyFUMGKgzAQvQv-Q_DSKImsHhc8FI8LPZi9qbukRWlAJxJTWfv1O7Fsa2WXDZkkvMl7M_MmaejOnhsriUwSjJTINCVHB-RE7ELf870i66U16ouWZc64qFkpWF7XmNs_Mkhnjo9ZPBmqLD98bzAKLKHBu5Ewttr0epIwE9vAVZvXCvivK0DuIaO0iK3jDXpsaBhG-6gI41H1Q6fa-bO9dB0N7yUOj2dQwZvuBw0N2HlTJFgxypca9xpIatybH8nzJBXcZ5EnUAQ9UKfmz1F4QHChwsJaefmRMoGRRiLKnan4dhj_AThezAWiHLNoqFO6N7LobWYGa3QniYKpMVfQo_2_vecmfe-mG4-X40hFxkUY3Qptff8GTrag5g==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 $$\begin{aligned}a'_{11}&=C^2a_{11}  + S^2a_{22} + 2CSa_{12},\\a'_{22}&=S^2a_{11}  + C^2a_{22} - 2CSa_{12},\\a'_{12}&=-CSa_{11} + CSa_{22} + (C^2 - S^2)a_{12}.\end{aligned}$$
-Tento vztah je lineání vzhledem ke všem komponentám a je možné jej zapsat pomocí maticového násobení
+Tento vztah je lineární vzhledem ke všem komponentám a je možné jej zapsat pomocí maticového násobení
 $$\begin{pmatrix}  a'_{11}\\a'_{22}\\a'_{12}\end{pmatrix}=\begin{pmatrix}  C^2 & S^2 & 2CS\\  S^2 & C^2 & -2CS\\  -CS  & CS & C^2-S^2\end{pmatrix}\begin{pmatrix}  a_{11}\\a_{22}\\a_{12}\end{pmatrix}.$$
 Tento vztah je uveden i v literatuře A. Požgaj a kol., Štruktúra a vlastnosti
 drevá, a v e-opoře [Fyzikální a mechanické vlastnosti
@@ -330,7 +330,7 @@ tj. (viz předchozí přednášky) $p_1$ je vlastní vektor matice $A$
 příslušný vlastní hodnotě $\lambda_1$. Podobný princip platí pro
 všechny sloupce. Je otázkou, jestli vlastních hodnot a vlastních
 vektorů je tolik, kolik pro diagonalizaci "potřebujeme". Částečně
-pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
+pozitivní odpověď na tuto otázku udávají věty níže.
 
 ## Transformace symetrické matice na diagonální tvar
 
@@ -390,17 +390,17 @@ navíc fyzikální význam a vzhledem ke své povaze pro ni platí speciální
 transformační pravidla. Nicméně je to mimo jiné i matice a proto vše
 výše uvedené platí i pro tenzory.
 
-Transformace tenzorů je užitečná a důležitá činnosti. Bohužel však vzorce s touto transformací spojené nejsou natolik zapamatovatelné, aby bylo obvyklé s nimi pracovat. Možnosti jsou v zásadě tři.
+Transformace tenzorů je užitečná a důležitá činnost. Bohužel však vzorce s touto transformací spojené nejsou natolik zapamatovatelné, aby bylo obvyklé s nimi pracovat. Možnosti jsou v zásadě tři.
 
 * Mít vzorce v psané podobě po ruce a pouze do nich dosazovat.
-* Mít k dispozici jednoduše zapamatovatelný postup, jak s transformacemi pracovat. Takový postup existuje, nazývá se [Mohrova kružnice](https://cs.wikipedia.org/wiki/Mohrova_kru%C5%BEnice) a po zapracování se jedná o efektivní grafickou metodu pro transforamci tenzorů. Zpravidla je v literatuře popsána pro tenzor napětí, funguje však obecně.
-* Pracovat pouze s elementárními prostředky lineární algebry. Narozdíl od předchozích bodů máme přehled o tom, co a proč děláme (oproti vzorcům) a nemusíme se učit další metodu (oproti Mohrově kružnici).
+* Mít k dispozici jednoduše zapamatovatelný postup, jak s transformacemi pracovat. Takový postup existuje, nazývá se [Mohrova kružnice](https://cs.wikipedia.org/wiki/Mohrova_kru%C5%BEnice) a po zapracování se jedná o efektivní grafickou metodu pro transformaci tenzorů. Zpravidla je v literatuře popsána pro tenzor napětí, funguje však obecně.
+* Pracovat pouze s elementárními prostředky lineární algebry. Na rozdíl od předchozích bodů máme přehled o tom, co a proč děláme (oproti vzorcům) a nemusíme se učit další metodu (oproti Mohrově kružnici).
 
 ## Determinant matice
 
 https://youtu.be/XMyzmN3cq-Q
 
-```{prf:definition} Ddeterminant
+```{prf:definition} Determinant
 :nonumber:
    Buď $A\in\mathbb R^{n\times n}$ čtvercová matice řádu $n$.   *Determinant matice $A$* je reálné číslo ${\det A}$   přiřazené matici $A$ následujícím způsobem:
 
@@ -418,9 +418,9 @@ https://youtu.be/XMyzmN3cq-Q
 ```
 
 
-Uff. Zacházejme vyjímečně s touto definicí stejně jako s definicí
+Uff. Zacházejme výjimečně s touto definicí stejně jako s definicí
 limity: vezmeme na vědomí, že nějaká korektní definice existuje,
-ale učit se ji nebudeme. Není to totiž tak úplně potřeba. bude nám
+ale učit se ji nebudeme. Není to totiž tak úplně potřeba. Bude nám
 stačit naučit se několik málo speciálních případů.
 
 Determinant matice $A$ označujeme též $|A|$. Je-li
@@ -446,7 +446,7 @@ Tento determinant je roven nule právě tehdy, když je jeden řádek
 matice násobkem druhého a to bude právě tehdy když je jeden sloupec
 matice násobkem druhého.
 
-## Determinant matice $3\times 3$ (Sarusovo pravidlo)
+## Determinant matice $3\times 3$ (Sarrusovo pravidlo)
 
 $$    \begin{vmatrix}      a&b&c\\      i&j&k\\      x&y&z    \end{vmatrix} =ajz+bkx+ciy-(cjx+biz+aky)$$
 
@@ -593,7 +593,7 @@ $$\begin{pmatrix}
 <div class='obtekat'>
 
 ```{figure} napeti.png
-Složky tenzoru napětí charakterizují sílu způsobující deformaci. Zdroj: Wikiepdie.
+Složky tenzoru napětí charakterizují sílu způsobující deformaci. Zdroj: Wikipedie.
 ```
 
 ```{figure} wood.jpg
@@ -651,7 +651,7 @@ možné se na symetrii odvolávat. Matice $S$ by obsahovala všechny prvky
 a bylo by nutné hledat bázi, v níž je její vyjádření nejjednodušší. U
 dřeva je však snadné rozpoznat význačné směry. Když soustavu souřadnic
 zvolíme tak, aby byla v souladu s těmito význačnými směry, docílíme
-tohot, že obdržíme matici $S$ již přímo ve tvaru s co nejvíce nulami.
+toho, že obdržíme matici $S$ již přímo ve tvaru s co nejvíce nulami.
 
 Někdy je vhodné umět určit napětí pomocí deformací. K tomu stačí
 Hookův zákon vynásobit maticí $S^{-1}$ a obdržíme
@@ -660,7 +660,7 @@ Matice $S^{-1}$ se nazývá *matice tuhosti* a označuje $C$.
 
 Souvislostí vlastních vektorů matice tuhosti a matice poddajnosti
 (nebo obecněji souvislostí vlastních vektorů matice a matice inverzní)
-se budeme zabývat na následujícím slidu.
+se budeme zabývat níže.
 
 ````
 
@@ -699,7 +699,7 @@ A jaká je hlavní message? Zdroj: pixabay.com
 
 * Přestože maticový součin nemá všechny vlastnosti na které jsme zvyklí u součinu čísel, jedna vlastnost zůstává: existence "převrácené hodnoty". V případě matic je zobecnění převrácené hodnoty reprezentováno inverzní maticí.
 * Pomocí matic je možné transformovat souřadnice bodů, vektorů a tenzorů z jedné soustavy souřadnic do jiné. Inverzní matice poté představuje zpětnou transformaci. 
-* Při transormaci tenzorů se snažíme o to, aby po transformaci byl tenzor co nejjednodušší. Pokud použijeme souřadnou soustavu s osami ve vlastních směrech (jsou kolmé a tedy je tato volba smysluplná), je tento tenzor je diagonální s vlastními čísly v diagonále.
-* Pro identifikaci vlastních vektorů matice $A$ je nutné řešit soustavu rovnic $$(A-\lambda I)v=0,$$ ve které figuruje jistým i vlastní číslo $\lambda$. Toto umožňuje definovat podmínku na vlastní čísla: uvažovaná soustava musí mít nenulové řešení. 
+* Při transformaci tenzorů se snažíme o to, aby po transformaci byl tenzor co nejjednodušší. Pokud použijeme souřadnou soustavu s osami ve vlastních směrech (jsou kolmé a tedy je tato volba smysluplná), je tento tenzor diagonální s vlastními čísly v diagonále.
+* Pro identifikaci vlastních vektorů matice $A$ je nutné řešit soustavu rovnic $$(A-\lambda I)v=0,$$ ve které figuruje jistým způsobem i vlastní číslo $\lambda$. Toto umožňuje definovat podmínku na vlastní čísla: uvažovaná soustava musí mít nenulové řešení. 
 * Existence nenulového řešení rovnice z předchozího bodu úzce souvisí s pojmem determinantu matice. Přesněji, aby soustava z předchozího bodu měla nenulové řešení, musí mít matice $A-\lambda I$ nulový determinant. 
 

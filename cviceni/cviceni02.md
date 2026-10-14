@@ -1,15 +1,9 @@
 # Využití derivací v matematických modelech
 
 >   * Procvičíme si interpretaci derivace jako rychlosti změny.
->   * Naučíme se sestavovat matematické modely situací, ve kterých se veličina mění nekonstantní rychlostí
+>   * Naučíme se sestavovat matematické modely situací, ve kterých se veličina mění nekonstantní rychlostí.
 >   * Prerekvizitou je schopnost chápat derivaci jako rychlost změny a umět
 >     matematicky vyjádřit úměrnost mezi veličinami.
->   * V některých řešeních jsou odkazy, jak se s úlohou porvala umělá
->     inteligence (AI). Ukazují, že AI může pomoci, ale může i generovat
->     zavádějící nebo nesprávná řešení. Proto používáme jenom jako doplněk tam,
->     kde úloze plně rozumíme, dokážeme zkontrolovat výstupy AI a AI využíváme
->     jako pomocníka pro urychlení práce. V roce 2023 ještě zdaleka není rozumné
->     AI využívat jako zdroj znalostí (viz halucinace AI).
 
 ## Tepelná výměna podle Newtonova zákona
 
@@ -23,20 +17,20 @@ pixabay.com
 
 Newtonův zákon ochlazování je možné použít pro tělesa, u nichž teplota je ve všech místech stejná a efekty spojené s vedením tepla jsou zanedbatelné. Takové objekty charakterizujeme nízkým Biotovým číslem (naučíte se v navazujících předmětech jako Fyzikální vlastnosti dřeva). Předpokládejme, že nevytápěná místnost tyto podmínky splňuje.
 
-Teplota v místnosti kde se přestalo topit při teplotě
-$T=23^\circ\mathrm{C}$ se mění tepelnou výměnou s okolím. Rychlost,
-s jakou teplota místnosti v zimě klesá je úměrná rozdílu teplot
+Teplota v místnosti, kde se přestalo topit při teplotě
+$T=23^\circ\mathrm{C}$, se mění tepelnou výměnou s okolím. Rychlost,
+s jakou teplota místnosti v zimě klesá, je úměrná rozdílu teplot
 v místnosti a venku. Vyjádřete toto pozorování kvantitativně pomocí
 derivací. Sestavíte tím matematický model popisující pokles teploty
 v této místnosti.
 
-_V tomto příkladu se učíme, že tam, kde se pracuje s rychlostmi změn hraje při kvantitativním popisu roli derivace. Ze střední školy známe tvary fyzikálních zákonů a vztahů v omezené platnosti, kdy se rychlost nemění (jako například  rovnoměrný pohyb) nebo mění jenom velmi speciálním způsobem (jako například  rovnoměrně zrychlený pohyb). Pomocí derivací tato omezení středoškolské fyziky padají._
+_V tomto příkladu se učíme, že tam, kde se pracuje s rychlostmi změn, hraje při kvantitativním popisu roli derivace. Ze střední školy známe tvary fyzikálních zákonů a vztahů v omezené platnosti, kdy se rychlost nemění (jako například  rovnoměrný pohyb) nebo mění jenom velmi speciálním způsobem (jako například  rovnoměrně zrychlený pohyb). Pomocí derivací tato omezení středoškolské fyziky padají._
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
-Je-li $T$ teplota a $t$ čas, je veličina $\frac{\mathrm dT}{\mathrm dt}$ rychlost s jakou roste teplota a veličina $-\frac{\mathrm dT}{\mathrm dt}$ rychlost, s jakou teplota klesá. Podle předpokladů platí
+Je-li $T$ teplota a $t$ čas, je veličina $\frac{\mathrm dT}{\mathrm dt}$ rychlost, s jakou roste teplota a veličina $-\frac{\mathrm dT}{\mathrm dt}$ rychlost, s jakou teplota klesá. Podle předpokladů platí
 $$
   -\frac{\mathrm dT}{\mathrm dt}=k(T-T_{\text{venku}})
 $$
@@ -46,7 +40,7 @@ $$
 $$
 kde $k$ je konstanta úměrnosti a $T_{\text{venku}}$ teplota venku.
 
-*Poznámka:* S úlohou si [poradil i automat chatGPT](https://chat.openai.com/share/85a27270-9a5e-4208-bb86-3f8390af470a) a [nabídl počítačovou simulaci](https://gist.github.com/robert-marik/b7a8a893ffbdd248081314e30b73a2b7) pro vizualizaci řešení. 
+*Poznámka:* K dispozici je [počítačová simulace](https://gist.github.com/robert-marik/b7a8a893ffbdd248081314e30b73a2b7) pro vizualizaci řešení. 
 
 ```
 
@@ -62,30 +56,30 @@ Budeme uvažovat jednorozměrný objekt, tyč nebo stěnu. Počáteční teplota
 
 Vyjádřete následující veličiny a určete jejich znaménko.
 
-1.  Rychlost s jakou v daném místě a čase roste teplota jako funkce času.
-1.  Rychlost s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle  roste teplota směrem doprava.
-1.  Rychlost s jakou klesá teplota jako funkce polohy, tj. směrem doprava.
-1.  Rychlost se kterou roste (směrem doprava) tok tepla jako funkce polohy.
-1.  Rychlost se kterou klesá (směrem doprava) tok tepla jako funkce polohy.
+1.  Rychlost, s jakou v daném místě a čase roste teplota jako funkce času.
+1.  Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle  roste teplota směrem doprava.
+1.  Rychlost, s jakou klesá teplota jako funkce polohy, tj. směrem doprava.
+1.  Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy.
+1.  Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy.
 
-_Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasnění si toho, co derivace vyjadřují a kdy jsou kladné a kdy záporné. To je nutné znát při zadávání modelů do numerických simulací. Výpočet za člověka udělají počítače, ale slovní interpretaci ani kontrolu, že je model relevantní a nemá popletená znaménka, za člověka nikdo neudělá. Používáme postup všeobecně přijímaný ve fyzikálních modelech. To však někdy nekoresponduje s výpočetními nástroji. Například ANSYS, nejpoužívanější program na výpočet modelů typu rovnice vedení tepla, používá pro zadání okrajových podmínek nikoliv tok ven z tělesa, ale tok dovnitř tělesa. Tedy pro fyzika a výpočtáře mají tyto podmínky opačné znaménko. Proto je potřeba vědět co se počítá, jak se systém chová, jak se to projeví na jeho vlastnostech a potom zkontrolovat, jestli to tak vychází i ve výpočetním modelu, jestli nepočítáme něco nesmyslného._
+_Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasnění si toho, co derivace vyjadřují a kdy jsou kladné a kdy záporné. To je nutné znát při zadávání modelů do numerických simulací. Výpočet za člověka udělají počítače, ale slovní interpretaci ani kontrolu, že je model relevantní a nemá popletená znaménka, za člověka nikdo neudělá. Používáme postup všeobecně přijímaný ve fyzikálních modelech. To však někdy nekoresponduje s výpočetními nástroji. Například ANSYS, nejpoužívanější program na výpočet modelů typu rovnice vedení tepla, používá pro zadání okrajových podmínek nikoliv tok ven z tělesa, ale tok dovnitř tělesa. Tedy pro fyzika a výpočtáře mají tyto podmínky opačné znaménko. Proto je potřeba vědět, co se počítá, jak se systém chová, jak se to projeví na jeho vlastnostech a potom zkontrolovat, jestli to tak vychází i ve výpočetním modelu, jestli nepočítáme něco nesmyslného._
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
-Shrneme si, co je možné očekávát během průběhu děje. U studené tyče ohřejeme levý konec a teplotu udržujeme, pravý konec udržujmeme na nízké teplotě. Tyč se postupně ohřeje a pořád, během dosahování rovnováhy i po nastolení rovnováhy, bude blíž k teplému konci teplota vyšší. Směrem doprava tedy teplota bude klesat a tím směrem také poteče teplo. Po dodsažení rovnováhy bude toto teplo stejné, jako energie, kterou musíme na ohřívaném konci dodávat a na ochlazovaném konci odebírat. Než však nastane rovnováha, musí se všechny části tyče prohřát na cílovou teplotu. To znamená, že při předávání tepla směrem k chladnějšímu konci musí část tepla zůstat v daném místě jako vnitřní energie a projeví se zvýšením teploty. Do dosažení rovnovážného stavu tyč vede teplo, ale každá část tyče předává dál jenom část tepla, protože další část použije na zvýšení své teploty. Proto platí, že čím více jsme napravo, tím méně tam teče tepla. 
+Shrneme si, co je možné očekávat během průběhu děje. U studené tyče ohřejeme levý konec a teplotu udržujeme, pravý konec udržujeme na nízké teplotě. Tyč se postupně ohřeje a pořád, během dosahování rovnováhy i po nastolení rovnováhy, bude blíž k teplému konci teplota vyšší. Směrem doprava tedy teplota bude klesat a tím směrem také poteče teplo. Po dosažení rovnováhy bude toto teplo stejné, jako energie, kterou musíme na ohřívaném konci dodávat a na ochlazovaném konci odebírat. Než však nastane rovnováha, musí se všechny části tyče prohřát na cílovou teplotu. To znamená, že při předávání tepla směrem k chladnějšímu konci musí část tepla zůstat v daném místě jako vnitřní energie a projeví se zvýšením teploty. Do dosažení rovnovážného stavu tyč vede teplo, ale každá část tyče předává dál jenom část tepla, protože další část použije na zvýšení své teploty. Proto platí, že čím více jsme napravo, tím méně tam teče tepla. 
 
-1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je $\frac {\partial T}{\partial t}$ a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních Celsia za sekundu.
+1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času, je $\frac {\partial T}{\partial t}$ a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních Celsia za sekundu.
   $\left[\frac {\partial T}{\partial t}\right]={}^\circ\mathrm{C}\,\mathrm{s}^{-1}$
-1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je $\frac {\partial T}{\partial x}$ a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních Celsia na metr.
+1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle roste teplota směrem doprava, je $\frac {\partial T}{\partial x}$ a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních Celsia na metr.
     $\left[\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
-1. Rychlost s jakou klesá teplota jako funkce polohy, tj. směrem doprava, je $-\frac {\partial T}{\partial x}$ a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních Celsia na metr.
+1. Rychlost, s jakou klesá teplota jako funkce polohy, tj. směrem doprava, je $-\frac {\partial T}{\partial x}$ a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních Celsia na metr.
         $\left[-\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
-1. Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy je $\frac {\partial q}{\partial x}$. Teplo teče doprava a přitom se spotřebovává, protože se ohřívá tyč. Proto tok klesá a parciální derivace je záporná.
+1. Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy, je $\frac {\partial q}{\partial x}$. Teplo teče doprava a přitom se spotřebovává, protože se ohřívá tyč. Proto tok klesá a parciální derivace je záporná.
   Měříme v joulech za sekundu na metr.
           $\left[\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}$
-1. Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy je $-\frac {\partial q}{\partial x}$ a tato veličina je kladná, což plyne z předchozího bodu a z toho, že jsme změnili znaménko. Tato veličina udává, kolik tepla za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže "ztratit", ale použije se na zvýšení teploty, což je právě obsahem rovnice vedení tepla. Měříme v joulech za sekundu na metr.
+1. Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy, je $-\frac {\partial q}{\partial x}$ a tato veličina je kladná, což plyne z předchozího bodu a z toho, že jsme změnili znaménko. Tato veličina udává, kolik tepla za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže "ztratit", ale použije se na zvýšení teploty, což je právě obsahem rovnice vedení tepla. Měříme v joulech za sekundu na metr.
             $\left[-\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}$ 
 
 ```
@@ -96,7 +90,7 @@ Shrneme si, co je možné očekávát během průběhu děje. U studené tyče o
 
   Nechť stěna je na intervalu $x\in[0,L]$, $x=0$ je vnitřní okraj a $x=L$ je vnější okraj. Výraz $-k\frac{\partial T}{\partial x}$ udává tok tepla ve směru osy $x$. Tok ve směru osy $x$ má kladné znaménko. Naformulujte okrajové podmínky v následujících scénářích.
 
-1.  Z venku dokonale izolovaná stěna. Na hranici $x=L$ nedochází k toku tepla.
+1.  Zvenku dokonale izolovaná stěna. Na hranici $x=L$ nedochází k toku tepla.
 1.  Vnitřní část stěny je udržovaná na konstantní teplotě $T=23^\circ \mathrm C$.
 1.  Stěna je zvenku osvětlená a zahřívaná Sluncem. Na vnější hranici je konstantní tok tepla směrem do stěny.
 1.  Stěna je zvenku ochlazována prouděním vzduchu. Tok tepla mezi stěnou a okolím je úměrný rozdílu teplot stěny a okolí.
@@ -113,7 +107,7 @@ $T$ je funkce polohy, tj. $T=T(x).$ Je-li podmínka na tok, figuruje v matematic
 
 1.  Nulový tok pro $x=L$ znamená $-k\frac{\partial T}{\partial x}(L)=0$, což je ekvivalentní $\frac{\partial T}{\partial x}(L)=0.$
 1.  Teplota 23 stupňů pro $x=0$ znamená $T(0)=23$
-1.  $-k\frac{\partial T}{\partial x}(L)=-Q$, kde $Q$ je teplo za jednotku času dodané ze Slunce. Jedná se o výkon Slunce dopadající na stěnu vynásobený koeficientem absorbce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy $x$.
+1.  $-k\frac{\partial T}{\partial x}(L)=-Q$, kde $Q$ je teplo za jednotku času dodané ze Slunce. Jedná se o výkon Slunce dopadající na stěnu vynásobený koeficientem absorpce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy $x$.
 1.  $-k\frac{\partial T}{\partial x}(L)=h(T(L)-T_{\text{okolí}})$, kde $h$ je koeficient přestupu tepla.
 1.  $-k\frac{\partial T}{\partial x}(0)=h(T_{\text{místnost}}-T(0))$, kde $h$ je koeficient přestupu tepla.
 
@@ -148,8 +142,6 @@ _Jakmile vidíme, že v zadání figuruje rychlost změny veličiny,
 Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky chybí  $L_{\max}-L$ a model má tvar $$\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).$$
 
 
-Poznámka: ChatGPT úkol splnil [až napodruhé](https://chat.openai.com/share/88d550e4-1b8b-4e1c-9a0e-2ad01cb862dd). Napoprvé nabídl už řešení tohoto modelu.
-
 ```
 
 ## Kontaminace a čištění
@@ -176,8 +168,6 @@ _Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na 
 
 Je-li $y$ znečištění v galonech a $t$ čas ve dnech, má model tvar
 $$\frac{\mathrm dy}{\mathrm dt}=-0.08y-30.$$
-
-*Poznámka:* ChatGPT [zvládl](https://chat.openai.com/share/f79dfceb-5aa4-4ec8-b4d4-f57b0fca2bbc) úlohu, ale napoprvé nabídl model jiného typu a proto byl do otázky vsunut požadavek na přítomnost derivace.
 
 ```
 
@@ -209,7 +199,7 @@ _Toto je asi nejdůležitější rovnice pro modelování biologických jevů. P
 
 Funkce $f(x)=rx\left(1-\frac xK\right)$ je kvadratická funkce s nulovými body $x=0$ a $x=K$, vrcholem uprostřed mezi nulovými body (tj. pro $x=\frac K2$) a parabola je otočená vrcholem nahoru. Proto je napravo od $x=K$ záporná. To odpovídá tomu, že populace s velikostí přesahující nosnou kapacitu v dlouhodobém horizontu vymírá.
 
-Funkce $f_h(x)=rx\left(1-\frac xK\right)-h$ vznikne posunutím funkce $f(x)=rx\left(1-\frac xK\right)$ o $h$ dolů. Pokud posuneme hodně, dostane se celá parabola pod osu $x$ a funkce bude pořád záporná. Kritická hodnota je v situaci, kdy mizí možnost, že $f_h(x)$ má body kde je kladná a populace se může rozvíjet. To nastane,  pokud se vrchol paraboly dostane na osu $x$, tj. $h$ je rovno funkční hodnotě funkce $f(x)$ v bodě $x=\frac K2.$
+Funkce $f_h(x)=rx\left(1-\frac xK\right)-h$ vznikne posunutím funkce $f(x)=rx\left(1-\frac xK\right)$ o $h$ dolů. Pokud posuneme hodně, dostane se celá parabola pod osu $x$ a funkce bude pořád záporná. Kritická hodnota je v situaci, kdy mizí možnost, že $f_h(x)$ má body, kde je kladná a populace se může rozvíjet. To nastane,  pokud se vrchol paraboly dostane na osu $x$, tj. $h$ je rovno funkční hodnotě funkce $f(x)$ v bodě $x=\frac K2.$
 
 ```
 
@@ -237,13 +227,11 @@ $$
 $$
 kde $t$ je čas v letech.
 
-*Poznámka:* ChatGPT [skvěle](https://chat.openai.com/share/df22fb50-8003-4164-adc3-4aebee0c1cdc).
-
 ```
 
 ## Hrubý model chřipkové epidemie
 
-Rychlost s jakou roste počet nemocných chřipkou je úměrný současně
+Rychlost, s jakou roste počet nemocných chřipkou, je úměrná současně
 počtu nemocných a počtu zdravých jedinců. Sestavte model takového
 šíření chřipky.
 
@@ -255,8 +243,6 @@ _Toto je současně model popisující šíření informace v populaci, stačí 
 
 Je-li $M$ velikost populace a $y$ počet nemocných, je v populaci $M-y$ zdravých a model má tvar
 $$\frac{\mathrm dy}{\mathrm dt}=ky(M-y).$$
-
-*Poznámka:* ChatGPT při řešení tohoto úkolu částečně zklamal. Nejprve se snažil podstrčit klasický SIR model pro modelování epidemie a teprve [napodruhé respektoval zadání](https://chat.openai.com/share/b38fdc8b-8646-4b96-b0a8-521036dbb736).
 
 ```
 
@@ -284,8 +270,6 @@ $$\frac{\mathrm dr}{\mathrm dt}=\frac{k}{r^2}.$$
 
 Konstanta úměrnosti $k$ vyjadřuje číselně rychlost růstu skvrny o jednotkovém poloměru. 
 
-*Poznámka:* ChatGPT bohužel v řešení této úlohy zklamal a vnucoval model s klesajícím poloměrem a přímou úměrností. Můžete si prohlédnout [zde](https://chat.openai.com/share/3ccd9009-c599-49de-b537-abefa9dc7e9d).
-
 ```
 
 ## Model učení
@@ -299,7 +283,7 @@ derivací.
 :class: dropdown
 :nonumber:
 
-Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky kterou je možné se naučit, je objem dosud nenaučené látky $L_{\max}-L$ a model má tvar
+Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky, kterou je možné se naučit, je objem dosud nenaučené látky $L_{\max}-L$ a model má tvar
 $$\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).$$
 
 ```
@@ -338,7 +322,7 @@ _V tomto příkladě se učíme mimo jiné derivovat i podle jiné proměnné ne
 1.  $\frac{\mathrm dV}{\mathrm dr}=-2\frac{a}{r^3}$
 1.  $\frac{\mathrm df}{\mathrm dy}=abe^{by}$
 1.  $\frac{\mathrm dS}{\mathrm dr}=4\pi r+2\pi h$, 
-1.  $\frac{\mathrm dS}{\mathrm dr}=2\pi r$, 
+1.  $\frac{\mathrm dS}{\mathrm dh}=2\pi r$, 
 1.  $\frac{\mathrm dS}{\mathrm da}=\frac 12v$,
 1.  $\frac{\mathrm dL}{\mathrm dr}=2\pi$, 
 

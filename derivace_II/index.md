@@ -114,11 +114,11 @@ $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 
 * Veličina $f(x)$ je funkční hodnota v bodě $x$, tu chceme odhadnout.
 * Veličina $f(x_0)$ je známá funkční hodnota v bodě $x_0$, to je
-ýchozí bod pro odhad.
+výchozí bod pro odhad.
 * Veličina $f'(x_0)$ je odhad změny veličiny $f$ způsobený jednotkovou změnou vstupních dat (zvýšení hodnoty $x_0$ o jednotku). Tento faktor ještě v dalším kroku musíme přizpůsobit tomu, že změna vstupních dat není jednotková, což uděláme s využitím přímé úměrnosti.
 * Veličina $f'(x_0)(x-x_0)$ je odhad změny veličiny $f$ vyvolané
 změnou veličiny $x$ z $x_0$ o $\Delta x=x-x_0$ tak, jak jsme jej
-používali v minulé přednášce.
+používali výše.
 ```
 
 
@@ -132,7 +132,7 @@ což získáme dosazením $x+h$ za $x$ a $x$ za $x_0$.
 ```{prf:remark} Význam vzorce pro lineární aproximaci
 :nonumber:
 
-* Vzorec umožňuje složitý funkční předpis předpisem jednodušším (lineární funkce jsou jedny z nejtrivilálnějších). 
+* Vzorec umožňuje nahradit složitý funkční předpis předpisem jednodušším (lineární funkce jsou jedny z nejtriviálnějších). 
 * K použití vzorce stačí znát jeden bod grafu a funkční hodnotu a hodnotu derivace v tomto bodě.
 * Aproximace je pouze lokální, použitelná pouze v určitém okolí uvažovaného bodu. Jak velké toto okolí může být a jaké chyby se dopouštíme při lineární aproximaci je různé pro různé funkce. Obecně platí, že čím blíže jsme k bodu $x_0$, tím je tato aproximace přesnější.
 
@@ -254,7 +254,7 @@ Pokusíme se modelovat funkci dávající do souvislosti velikost podnětu a rea
 * Je přirozené, že při nulovém podnětu není žádná odezva a proto funkce  prochází počátkem.
 * S velikostí podnětu odezva na tento podnět roste a proto funkce v okolí počátku má kladnou derivaci a roste.
 * Z lineární aproximace vidíme, že pro $x_0=0$ a $f(0)=0$ se vzorec pro lineární aproximaci redukuje na $$f(x)\approx f'(0)x,$$ tj. na přímou úměrnost.
-* Ukazuje se, že v řadě praktických úloh je uvedená aproximace dobrá na dostatečně dlouhém intervalu a podle typu úlohy má tato aproximace povahu fyzikálního zákona a svůj vlastní název.  Nejčastěji se setkáme se s *Hookovým zákonem* pro deformaci materiálu (relativní prodloužení je úměrné normálovému napětí), *Darcyho zákonem* pro tok tekutiny půdou (filtrační rychlost je úměrná záporně vzatému hydraulickému gradientu), *Fickovým zákonem* pro difuzi (hustota difuzniho toku je úměrná záporně vzatému gradientu koncentrace) a *Fourierovým zákonem* pro vedení tepla v materiálu (hustota tepelného toku je úměrná záporně vzatému gradientu teploty). Později, v přednášce o zákonech zachování ve vektorovém poli ke konci semestru, si tyto závislosti naformulujeme ve vícerozměrném prostředí a hlavně ve tvaru, který umožní zohlednit práci s neizotropními materiály (různé fyzikální vlastnosti v různých směrech).
+* Ukazuje se, že v řadě praktických úloh je uvedená aproximace dobrá na dostatečně dlouhém intervalu a podle typu úlohy má tato aproximace povahu fyzikálního zákona a svůj vlastní název.  Nejčastěji se setkáme s *Hookovým zákonem* pro deformaci materiálu (relativní prodloužení je úměrné normálovému napětí), *Darcyho zákonem* pro tok tekutiny půdou (filtrační rychlost je úměrná záporně vzatému hydraulickému gradientu), *Fickovým zákonem* pro difuzi (hustota difuzního toku je úměrná záporně vzatému gradientu koncentrace) a *Fourierovým zákonem* pro vedení tepla v materiálu (hustota tepelného toku je úměrná záporně vzatému gradientu teploty). Později, v přednášce o zákonech zachování ve vektorovém poli ke konci semestru, si tyto závislosti naformulujeme ve vícerozměrném prostředí a hlavně ve tvaru, který umožní zohlednit práci s neizotropními materiály (různé fyzikální vlastnosti v různých směrech).
 * Matematicky je tedy povaha přímé úměrnosti v materiálových vztazích zřejmá a experimentálně je možné ověřit, pro jaké oblasti platí. Toto nám však mnohdy nestačí a snažíme se tyto vztahy ještě odvodit ze základních fyzikálních vztahů a z představy jak daný proces funguje. To otevírá možnosti potvrdit si, že naše představa o chování materiálu je správná.
 * V některých velmi speciálních případech dokonce umíme určit materiálovou charakteristiku výpočtem namísto měření. Pro praktické využití tato dovednost není významná (můžeme vypočítat například koeficient filtrace pro půdu složenou z částic ve tvaru stejně velkých kuliček, v praxi se však s takovým materiálem setkáme nanejvýš při speciálních aplikacích v laboratoři), ale dává nám to důležitý prostor pro ověření fyzikálních hypotéz a matematických postupů.
 
@@ -274,7 +274,7 @@ bodem $[x_0,f(x_0)]$, která má směrnici $f'(x_0)$. Proto se o derivaci
 
 ```{prf:definition} Tečna
 :nonumber:
- Nechť $f$ je funkce, která má v bodě $x_0$ derivaci $f(x_0)$. Přímka $$y=f(x_0)+f'(x_0)(x-x_0)$$ se nazývá *tečna ke grafu funkce* $f$ v bodě $x_0$.
+ Nechť $f$ je funkce, která má v bodě $x_0$ derivaci $f'(x_0)$. Přímka $$y=f(x_0)+f'(x_0)(x-x_0)$$ se nazývá *tečna ke grafu funkce* $f$ v bodě $x_0$.
 ```
 
 
@@ -310,7 +310,7 @@ derivace atd.
 
 Aproximaci funkce $\cos x\approx 1$ zmíněnou výše (odvodíme ve
 cvičení), kdy aproximujeme vlastně konstantní funkcí, je možné také
-chápat jako selhání lineární aproximace. Následující slidy a pojem
+chápat jako selhání lineární aproximace. Následující odstavce a pojem
 Taylorův polynom nám umožní najít prostředek pro aproximaci i v těchto
 případech.
 
@@ -382,9 +382,9 @@ odvodit rovnici $$M(x)=EI\frac{\mathrm d^2v}{\mathrm dx^2},$$ kde
 konstanta $E$ souvisí s materiálem (Youngův modul pružnosti) a $I$ s
 průřezem nosníku (kvadratický moment průřezu). Podobně, pro nosník
 namáhaný v ose (například svislá vzpěra) silou $F$ platí vztah
-$$EI\frac{\mathrm d^2v}{\mathrm dx^2}+Fv=0.$$ Aplikace jsou, jak bylo uvedeno, při dimenzování nosníků (angl. beam buclinkg). Odvození výše uvedených rovnic není komplikované, ale vyžaduje dodatečné fyzikální znalosti a proto zde neuvádíme.
+$$EI\frac{\mathrm d^2v}{\mathrm dx^2}+Fv=0.$$ Aplikace jsou, jak bylo uvedeno, při dimenzování nosníků (angl. beam buckling). Odvození výše uvedených rovnic není komplikované, ale vyžaduje dodatečné fyzikální znalosti a proto zde neuvádíme.
 
-Někdy je vhodné mít moment $M(x)$ síly deformující nosník mít vyjádřený pomocí zatížení nosníku. To souvisí s druhou derivací momentu a proto je nutno rovnici ještě dvakrát derivovat. Proto se ohybová rovnice nosníku někdy uvádí jako vztah obsahující dokonce čtvrtou derivaci.
+Někdy je vhodné mít moment $M(x)$ síly deformující nosník vyjádřený pomocí zatížení nosníku. To souvisí s druhou derivací momentu a proto je nutno rovnici ještě dvakrát derivovat. Proto se ohybová rovnice nosníku někdy uvádí jako vztah obsahující dokonce čtvrtou derivaci.
 
 ````
 
@@ -407,11 +407,11 @@ funkce $f$ je relativně malá. V těchto případech je $$f(x)\approx
 T(x).$$  V tomto případě dostáváme
 následující větu. V ní $O((x-x_0)^{n+1})$ je takzvané [Landauovo velké
 O](https://cs.wikipedia.org/wiki/Landauova_notace). Tímto zápisem je
-vyjádřen člen, který je pro $x$ blízká k $x_0$ v absolutní hodnotě
+vyjádřen člen, který je pro $x$ blízké k $x_0$ v absolutní hodnotě
 menší než násobek funkce $(x-x_0)^{n+1}$, tj. v bodě $x_0$ konverguje k nule
 stejně rychle nebo rychleji jako mocninná funkce s exponentem $n+1$.
 
-```{prf:theorem} Taylorova aproximace v okolí nuly
+```{prf:theorem} Taylorova aproximace
 :nonumber:
 
 Platí
@@ -523,11 +523,11 @@ atomy popsané tímto potenciálem se chovají jako tělesa na pružině o tuho
 úhlovou frekvenci oscilací $\omega = \sqrt{\frac km}$, odvozený
 původně pro těleso na pružině. Analogicky se chovají pružné konstrukce. V klidu jsou ve stavu s minimální potenciální energií a při vychýlení z tohoto stavu o malou hodnotu začínají kmitat.
 
-* Pokud aproximujeme potenciál pomocí Taylorova polynomu, z koeficientu u kvadratického člene můžeme určit frekvenci oscilací.
-* Dále můžeme tímto způsobem určit pevnost vazby a tím pro daný materiál určit Youngův modul pružnosti, tj. konstantu úměrnosti mezi deformací materiálu a tahovým nebo tlakovým napětí v materiálu.
+* Pokud aproximujeme potenciál pomocí Taylorova polynomu, z koeficientu u kvadratického členu můžeme určit frekvenci oscilací.
+* Dále můžeme tímto způsobem určit pevnost vazby a tím pro daný materiál určit Youngův modul pružnosti, tj. konstantu úměrnosti mezi deformací materiálu a tahovým nebo tlakovým napětím v materiálu.
 * Poloha rovnovážné polohy, resp. její závislost na teplotě (pokud bychom do matematického modelu dodali skutečné parametry i s jejich teplotní závislostí) zase definuje koeficient teplotní roztažnosti materiálu.
 
-Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyzikální vlastnosti výpočtem. To je důležité, protože teoretické předpovídání vlastností materiálu otevírá cestu k navrhování nových materiálů s výhodnějšími vlastnostmi. materiál můžeme prozkoumat ještě dříve, než jej vyrobíme a dostaneme na stůl.
+Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyzikální vlastnosti výpočtem. To je důležité, protože teoretické předpovídání vlastností materiálu otevírá cestu k navrhování nových materiálů s výhodnějšími vlastnostmi. Materiál můžeme prozkoumat ještě dříve, než jej vyrobíme a dostaneme na stůl.
 
 \iffalse
 
@@ -575,7 +575,7 @@ je určeno jednoznačně, zavádíme následující pojem.
 
 * Funkce $\frac 1x$ je prostá a proto z rovnosti $\frac 1x = \frac 15$ 
 plyne $x=5$.
-* Funkce $x^2$ není prostá a proto z rovnosti $x^2 = 7^2$ neplyne $x=7$. Ve skutečnosti pro každou rovnici ve které není prostá funkce, potřebujeme speciální metodu. Proto máme speciální vzorec pro řešení kvadratické rovnice, nebo například speciální postupy pro řešení goniometrickcýh rovnic.
+* Funkce $x^2$ není prostá a proto z rovnosti $x^2 = 7^2$ neplyne $x=7$. Ve skutečnosti pro každou rovnici ve které není prostá funkce, potřebujeme speciální metodu. Proto máme speciální vzorec pro řešení kvadratické rovnice, nebo například speciální postupy pro řešení goniometrických rovnic.
 
 ### Inverzní funkce
 
@@ -589,7 +589,7 @@ konstrukcí supersložité. Užitečné je ale obojí.
 ```
 
 
-```{prf:remark} Inverzní funkce pří řešení rovnic
+```{prf:remark} Inverzní funkce při řešení rovnic
 :nonumber:
  Jinak zapsáno, je-li $$f(y)=x$$ a $f$ má inverzní funkci, platí
 $$y=f^{-1}(x).$$ Jedná se o zobecnění pouček jak "převádět výrazy na druhou stranu rovnice".
@@ -598,10 +598,10 @@ $$y=f^{-1}(x).$$ Jedná se o zobecnění pouček jak "převádět výrazy na dru
 
 Symbol $f^{-1}(x)$ lze tedy chápat buď jako hodnotu inverzní funkce
   k funkci $f$ v bodě $x$, nebo jako převrácenou hodnotu k číslu
-  $f(x)$, tj jako $[f(x)]^{-1}=\frac{1}{f(x)}$. Nebude-li z kontextu
+  $f(x)$, tj. jako $[f(x)]^{-1}=\frac{1}{f(x)}$. Nebude-li z kontextu
   zřejmé, o kterou variantu se jedná, musíme toto upřesnit.
 
-**Příklad.** Funkce $y=x^2$ není prostá na $\mathbb R$ a proto zde nemá inverzní funkci. Pokud definiční obor funkce $y=x^2$ zúžíme na nezáporná čísla, tj. požadujeme $x\geq 0$, je taková funkce prostá a má inverzní funkci. Protože tato úloha má praktický význam, vyplatí se pro tuto inverzní funkcí zavést speciální označení. Jak dobře víme, inverzní funkcí je druhá odmocnina, tj. funkce $y=\sqrt x$.
+**Příklad.** Funkce $y=x^2$ není prostá na $\mathbb R$ a proto zde nemá inverzní funkci. Pokud definiční obor funkce $y=x^2$ zúžíme na nezáporná čísla, tj. požadujeme $x\geq 0$, je taková funkce prostá a má inverzní funkci. Protože tato úloha má praktický význam, vyplatí se pro tuto inverzní funkci zavést speciální označení. Jak dobře víme, inverzní funkcí je druhá odmocnina, tj. funkce $y=\sqrt x$.
 
 ### Newtonova metoda
 
@@ -633,7 +633,7 @@ a známe přibližné řešení zadané rovnice.
 
 **Příklad.**
 Zkusme najít číslo takové, jehož kosinus je stejný jako toto číslo. 
-Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vlastně řešení nulový bod funkce $f(x)=x-\cos x$. Po dosazení $f'(x)=1+\sin x$ získáváme iterační vzorec $$x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin x_n}$$ a jednotlivé iterace s počátečním odhadem $x_0=1$ a s aproximací na 60 desetinných míst [dávají postupně](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TDXtOLlUgCCCluNCl0gSs4v1qjQ1NTXMNQuzswDMTX18jRSMtMzS4ptLQw0IaoLijLzShSAsgDDoBas&lang=sage&interacts=eJyLjgUAARUAuQ==) následující hodnoty.
+Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vlastně nulový bod funkce $f(x)=x-\cos x$. Po dosazení $f'(x)=1+\sin x$ získáváme iterační vzorec $$x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin x_n}$$ a jednotlivé iterace s počátečním odhadem $x_0=1$ a s aproximací na 60 desetinných míst [dávají postupně](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TDXtOLlUgCCCluNCl0gSs4v1qjQ1NTXMNQuzswDMTX18jRSMtMzS4ptLQw0IaoLijLzShSAsgDDoBas&lang=sage&interacts=eJyLjgUAARUAuQ==) následující hodnoty.
 
 \bgroup \scriptsize
 
@@ -722,7 +722,7 @@ A jaká je hlavní message? Zdroj: pixabay.com
 
 \fi
 
-* Derivace udává trend ve změnách veličin a díky tomu umožňuje za určitých okolností nahrazovat komplikované funkční vztahy pomocí vztahů lineárních. Toto nazýváme lineární aproximace a je to jedna za zásadních metod, jak si inženýři zjednodušují úlohy, které by byly jinak neřešitelné.
+* Derivace udává trend ve změnách veličin a díky tomu umožňuje za určitých okolností nahrazovat komplikované funkční vztahy pomocí vztahů lineárních. Toto nazýváme lineární aproximace a je to jedna ze zásadních metod, jak si inženýři zjednodušují úlohy, které by byly jinak neřešitelné.
 * Derivace dokáže detekovat růst a klesání funkce a díky tomu dokážeme také detekovat body, kde se růst zastaví a změní na klesání nebo naopak. Tyto body nás přirozeně zajímají, protože v těchto bodech je studovaná veličina maximální nebo minimální a to má dopad při minimalizaci nákladů, maximalizaci pevnosti či zisku a jiných úlohách z praktického života.
 * Pokud trend (rychlost změny, derivace) nestačí k podchycení zásadních vlastností veličiny (nastává v lokálním extrému nebo v případě, že potřebujeme lepší aproximaci, než je aproximace lineární), máme k dispozici nástroje i v tomto případě: derivace vyšších řádů a Taylorův polynom.
 

@@ -31,7 +31,7 @@ kombinaci a jednou matice a maticový součin!
  
  $$  \begin{gathered}   a_{11}x_1+a_{12}x_2+a_{13}x_3+\cdots+a_{1n}x_n=b_1 \\   a_{21}x_1+a_{22}x_2+a_{23}x_3+\cdots+a_{2n}x_n=b_2 \\   a_{31}x_1+a_{32}x_2+a_{33}x_3+\cdots+a_{3n}x_n=b_3 \\   \vdots \\   a_{m1}x_1+a_{m2}x_2+a_{m3}x_3+\cdots+a_{mn}x_n=b_m \end{gathered} $$ (soustava1)
  
- Proměnné $x_1$, $x_2$, ..., $x_n$ nazýváme *neznámé*. Reálná čísla $a_{ij}$ nazýváme *koeficienty levých stran*, reálná čísla $b_j$ *koeficienty pravých stran* soustavy rovnic. *Řešením soustavy rovnic* rozumíme uspořádanou $n$-tici reálných čísel $[t_1, t_2, \ldots, t_n]$ po jejichž dosazení za neznámé (v tomto pořadí) do soustavy dostaneme ve všech rovnicích identity.
+ Proměnné $x_1$, $x_2$, ..., $x_n$ nazýváme *neznámé*. Reálná čísla $a_{ij}$ nazýváme *koeficienty levých stran*, reálná čísla $b_i$ *koeficienty pravých stran* soustavy rovnic. *Řešením soustavy rovnic* rozumíme uspořádanou $n$-tici reálných čísel $[t_1, t_2, \ldots, t_n]$ po jejichž dosazení za neznámé (v tomto pořadí) do soustavy dostaneme ve všech rovnicích identity.
 ```
 
 
@@ -150,9 +150,9 @@ $$\begin{pmatrix}  2&0&0 \\  0&3&0 \\  0&0&12  \end{pmatrix}^{-1}=\begin{pmatrix
 
 ## Iterační metoda řešení soustav lineárních rovnic
 
-Na předchozím slidu jsme viděli, že je jednoduché najít inverzní
+Výše jsme viděli, že je jednoduché najít inverzní
 matici k matici diagonální. Toho využijeme pro řešení soustavy
-lineárních rovnic iterační metodou. Představíme si nejednodušší, přesto však velmi mocnou metodu, **Jacobiho metodu**.
+lineárních rovnic iterační metodou. Představíme si nejjednodušší, přesto však velmi mocnou metodu, **Jacobiho metodu**.
 
 V úvodní přednášce z lineární algebry jsme modelovali rozložení teploty ve dvourozměrné
 desce pomocí soustavy rovnic
@@ -183,7 +183,7 @@ pro matici diagonální, je tento výpočet velice rychlý a levný. Vlastně
 není vůbec nutné mít k dispozici maticový počet. Iterace dostaneme
 tak, že z první rovnice osamostatníme $x_1$, z druhé rovnice $x_2$
 atd. Výchozí odhad dosadíme do pravých stran a obdržíme zpřesněný
-odhad. Postup opakujeme, dokud nejsou dvě následující iterae
+odhad. Postup opakujeme, dokud nejsou dvě následující iterace
 dostatečně blízké.
 
 **Poznámka.** Předchozí postup je možné použít jenom v případě, že
@@ -197,11 +197,11 @@ diagonálně dominantní matice* a pro takovou matici Jacobiho metoda
 konverguje. Podobně je možné uvažovat *sloupcově ostře diagonálně
 dominantní matice* porovnáním absolutních hodnot diagonálních prvků se
 součty absolutních hodnot ostatních prvků v daných sloupcích a i pro
-sloupcově ostře diagonální matice metoda konverguje. I přes
+sloupcově ostře diagonálně dominantní matice metoda konverguje. I přes
 jednoduchost tohoto kriteria se s diagonálně dominantními maticemi
 setkáváme v aplikacích poměrně často. Podíváme-li se, jak byla
 odvozena soustava popisující rozložení teploty na tepelně vodivé
-desce (poslední slajd minulé přednášky), není to až takové překvapení.
+desce (konec minulé přednášky), není to až takové překvapení.
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJxtj8FqwzAMhu-BvIPoLk5wMnfzOij4kJDTTjv0EMjC8GK31aFycMzY3n5O03YMZozRL_3SJ1fqpIPHL9Z1khdrLuLT8y5Gi4zxnDqrJb_Ivs_SpL41Pwq-EfxZcCn6rAxe0zS6ybJoSpNGyRyNpYDh-_3SIWOlQfpU6_v_iztVFU2atDfEk-DX-xcBdzC6QQc7EIIzR23A28kSzuy984CABNF_sOxBZNs0gXhaRWxeIGd1scvbLCJHjxSArV704D7w6OBkgzN6C2-04m1JzOABw6Rkdv7W1f4aaWQvzMVMrCrjbOvn_fKaw2_nD3USakw=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
@@ -343,7 +343,7 @@ $$\left(
   \end{array}\right)
   $$
 
-  V prvním kroku převedeme na tvar, kdy jednom jeden řádek začíná nenulovým prvkem. První řádek už nijak neupravujeme a opíšeme jej. Místo druhého řádku napíšeme jeho součet s $(-1)$-násobkem prvního řádku. 
+  V prvním kroku převedeme na tvar, kdy jenom jeden řádek začíná nenulovým prvkem. První řádek už nijak neupravujeme a opíšeme jej. Místo druhého řádku napíšeme jeho součet s $(-1)$-násobkem prvního řádku. 
 $$ \left( \begin{array}{cccc|c}
  1& 2& 2& 1& 0\\
  0& -3& -1& -3& 1\\
@@ -416,7 +416,7 @@ $$\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix} = \begin{pmatrix}  2+t\\-t\\-
 https://youtu.be/KBg1tllDhxM
 
 Gaussova-Seidelova iterační metoda je jakýsi mezikrok mezi Jacobiho
-iterační metodou a Gausovou eliminací. Postupujeme jako v Jacobiho
+iterační metodou a Gaussovou eliminací. Postupujeme jako v Jacobiho
 metodě, ale všechny zpřesněné hodnoty použijeme okamžitě, když jsou k
 dispozici. Nikoliv až v další iteraci jako u Jacobiho metody. Metoda
 konverguje za stejných podmínek jako Jacobiho metoda, ale rychleji a
@@ -445,7 +445,7 @@ U Jacobiho metody pro počáteční odhad vypočteme nejprve všechny
 pravé strany a dosadíme do proměnných na levé straně jako zpřesnění
 počáteční aproximace. Tento postup opakujeme.
 
-U Gaussovy-Seidlovy metody nejprve pomocí počátečního odhadu vypočteme
+U Gaussovy-Seidelovy metody nejprve pomocí počátečního odhadu vypočteme
 z první rovnice $x_1$ a tuto hodnotu ihned použijeme při výpočtu $x_2$
 z další rovnice. Obojí, $x_1$ i $x_2$ už využijeme při výpočtu $x_3$ a
 tak dále. Po výpočtu $x_4$ je první iterace dokončena a postup opět
@@ -478,7 +478,7 @@ A jaká je hlavní message? Zdroj: pixabay.com
 
 \fi
 
-* Řada numerických metod pro řešení modelů založených na matematickém modelování fyzikálních zákonů se v nějaké fázi redukuje na řešení soustav lineárních rovnic. Kromě toho se se soustavami lineárních rovnic setkáváme při hledání vlastních směrů matic, což je důlležité pro matice reprezentující materiálové charakteristiky. 
+* Řada numerických metod pro řešení modelů založených na matematickém modelování fyzikálních zákonů se v nějaké fázi redukuje na řešení soustav lineárních rovnic. Kromě toho se se soustavami lineárních rovnic setkáváme při hledání vlastních směrů matic, což je důležité pro matice reprezentující materiálové charakteristiky. 
 * Ukázali jsme si tři různé formulace soustav lineárních rovnic, klasickou pomocí rovnic, vektorovou pomocí jedné vektorové rovnice a maticovou pomocí jediné maticové rovnice a jediné maticové operace, maticového součinu. 
 * Ukázali jsme si, že v případě známé inverze k matici soustavy se řešení redukuje na součin inverzní matice s maticí pravých stran.
-* Kromě možnosti využít inverzní matici jsme si ukázali další tři metody řešení. Dvě čistě numerické metody (Jacobiho a Gaussova-Seidelova metoda) a jednou univerzální (Gaussova eliminační metoda).
+* Kromě možnosti využít inverzní matici jsme si ukázali další tři metody řešení. Dvě čistě numerické metody (Jacobiho a Gaussova-Seidelova metoda) a jednu univerzální (Gaussova eliminační metoda).
