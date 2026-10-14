@@ -1,0 +1,12 @@
+sphinx
+sphinx-togglebutton
+sphinx-copybutton
+sphinx-notfound-page
+myst-nb
+sphinx-comments
+sphinx-external-toc
+sphinx-design
+sphinx-book-theme
+sphinx-proof
+sphinx-last-updated-by-git
+ghp-import
