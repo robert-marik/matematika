@@ -24,7 +24,8 @@ exclude_patterns = [
     '_build', 
     'reseni*', 
     'cviceni/cviceni14.md', 
-    'README.md'
+    'README.md',
+    'REPORT_OPRAV.md'
     ]
 #execution_allow_errors = False
 #execution_excludepatterns = []
