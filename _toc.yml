@@ -27,6 +27,7 @@ parts:
     - file: symboly.md
   - caption: Cvičení
     numbered: true
+    restart_numbering: true
     chapters:
     - file: cviceni/cviceni01.md
     - file: cviceni/cviceni02.md

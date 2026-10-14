@@ -21,18 +21,6 @@
 | $C$, $c$ | integrační konstanta | |
 | $\mathbb R$, $\mathbb R^2$ | množina reálných čísel, rovina | |
 
-## Diferenciální rovnice
-
-| Symbol | Význam | Poznámka |
-|---|---|---|
-| $y'=\varphi(x,y)$ | obyčejná diferenciální rovnice prvního řádu | |
-| $y(x_0)=y_0$ | počáteční podmínka | |
-| $T$ | teplota | |
-| $T_\infty$ | teplota okolí | ODR, tepelné ztráty izolace |
-| $T_0$ | **teplota okolí** (Newtonův zákon ochlazování v úvodních kapitolách) nebo **počáteční teplota** (bezrozměrné veličiny v ODR) | význam závisí na kapitole |
-| $T_{\text{venku}}$ | teplota okolí | cvičení |
-| $k$ | konstanta úměrnosti v modelu (rychlostní konstanta) | jednotka je převrácená hodnota jednotky času |
-| $r$, $K$ | specifická míra růstu a nosná kapacita v logistickém modelu | $h$ intenzita lovu |
 
 ## Lineární algebra
 
