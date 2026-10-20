@@ -15,6 +15,7 @@ sphinx-build -Ea ../ $directory -b html
 
 sed -i 's/<p>\\iffalse<\/p>//' $directory/*/*.html
 sed -i 's/Algorithm/Volitelný obsah/' $directory/*/*.html
+sed -i 's/Algoritmus/Volitelný obsah/' $directory/*/*.html
 sed -i 's/\\bgroup//' $directory/*/*.html
 sed -i 's/\\scriptsize//' $directory/*/*.html
 sed -i 's/\\egroup//' $directory/*/*.html
