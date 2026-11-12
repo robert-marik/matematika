@@ -9,7 +9,7 @@
 
 ## Dva skutečné stromy
 
-Než se pustíme do matematiky, podívejme se, k čemu má vést. Na obrázku jsou dvě lípy z Valdštjenovy aleje v Jičíně. Oba stromy byly změřeny akustickým tomografem s dvanácti čidly a po pokácení byl kmen v místě měření rozříznut, takže víme, co uvnitř skutečně bylo. Strom 14 má uprostřed velkou dutinu, strom 8 dlouhou trhlinu jdoucí středem kmene. Data i fotografie pořídil Vojtěch Semík v rámci balakářské práce vedené Valentinem Cristinim. 
+Než se pustíme do matematiky, podívejme se, k čemu má vést. Na obrázku jsou dvě lípy z Valdštejnovy aleje v Jičíně. Oba stromy byly změřeny akustickým tomografem s dvanácti čidly a po pokácení byl kmen v místě měření rozříznut, takže víme, co uvnitř skutečně bylo. Strom 14 má uprostřed velkou dutinu, strom 8 dlouhou trhlinu jdoucí středem kmene. Data i fotografie pořídil Vojtěch Semík v rámci bakalářské práce vedené Valentinem Cristinim. 
 
 ```{figure} obr_stromy_uvod.png
 Fotografie řezu kmenem a tomogram vypočtený z časů průchodu zvuku naměřených na stojícím stromě. Červené body jsou polohy čidel, čidlo číslo 1 je nahoře. Fotografie jsou natočeny shodně s tomogramy.
