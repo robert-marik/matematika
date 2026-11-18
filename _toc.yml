@@ -20,6 +20,10 @@ parts:
     - file: dvojny_integral/index.md
     - file: numerika/index.md
     - file: shrnuti/index.md
+  - caption: Případové studie
+    numbered: False
+    chapters:
+    - file: tomograf/index.md
   - caption: Opakování a úvod
     numbered: False
     chapters:

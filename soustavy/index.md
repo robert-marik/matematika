@@ -468,7 +468,7 @@ Jak vidno, vypočtenou hodnotu $x_1$ ihned použijeme pro výpočet $x_2$. Obě 
 
 ## Využití soustav lineárních rovnic
 
-Viz [případová studie](../tomograf) věnovaná akustickému tomografu.
+Viz [případová studie](../tomograf/index.md) věnovaná akustickému tomografu.
 
 ## Shrnutí, hlavní myšlenky
 

@@ -2,9 +2,10 @@
 SCRIPTS = scripts
 BUILD   = _build
 
-.PHONY: all html pdf upload serve clean help
+.PHONY: all install html pdf upload serve clean help
 
 help:
+	@echo "make install - instalace balicku do aktivniho conda/mamba prostredi"
 	@echo "make html    - preklad webu do $(BUILD)/html"
 	@echo "make pdf     - preklad PDF (scripts/Matematika.pdf)"
 	@echo "make all     - html + pdf"
@@ -13,6 +14,10 @@ help:
 	@echo "make clean   - smazani $(BUILD) a pomocnych souboru LaTeXu"
 
 all: html pdf
+
+# Skripty se spousteji z adresare scripts (pouzivaji relativni cesty).
+install:
+	cd $(SCRIPTS) && bash packages.sh
 
 html:
 	cd $(SCRIPTS) && bash build.sh
