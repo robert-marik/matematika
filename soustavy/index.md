@@ -211,6 +211,8 @@ na paměť jako u přímých metod, známých například ze střední
 školy. Tímto způsobem se řeší soustavy rovnic při modelování namáhání
 konstrukcí, vedení tepla, proudění vody apod.
 
+
+<!--
 ## Hodnost matice
 
 https://youtu.be/HF-RDBZUenY
@@ -411,12 +413,14 @@ $$
 Řešení je $x_1=2+t$, $x_2=-t$, $x_3=-1$, $x_4=t$, kde $t$ je libovolné reálné číslo. Vektorově (maticově) máme řešení ve tvaru
 $$\begin{pmatrix}  x_1\\x_2\\x_3\\x_4\end{pmatrix} = \begin{pmatrix}  2+t\\-t\\-1\\t\end{pmatrix}=\begin{pmatrix}  2\\0\\-1\\0\end{pmatrix}+t\begin{pmatrix}  1\\-1\\0\\1\end{pmatrix}.$$
 
+-->
+
 ## Gaussova-Seidelova iterační metoda
 
 https://youtu.be/KBg1tllDhxM
 
-Gaussova-Seidelova iterační metoda je jakýsi mezikrok mezi Jacobiho
-iterační metodou a Gaussovou eliminací. Postupujeme jako v Jacobiho
+Gaussova-Seidelova iterační metoda je modifikace Jacobiho
+iterační metody. Postupujeme jako v Jacobiho
 metodě, ale všechny zpřesněné hodnoty použijeme okamžitě, když jsou k
 dispozici. Nikoliv až v další iteraci jako u Jacobiho metody. Metoda
 konverguje za stejných podmínek jako Jacobiho metoda, ale rychleji a
@@ -462,6 +466,10 @@ x_4 & = -3(2.3272)/8 +(-0.9873)/8+15/8 = 0.8789.
 $$
 Jak vidno, vypočtenou hodnotu $x_1$ ihned použijeme pro výpočet $x_2$. Obě tyto hodnoty ihned použijeme pro výpočet $x_3$ a tak dále. V dalších iteracích postup [opakujeme](https://sagecell.sagemath.org/?z=eJytUMGKwjAQvRf6D0NPraakk6RShJ4X9rpXL3WtEpAorcLk73eyCYt4UJFNIC8z782DeefJuguUxefwfdrajevjKao8IxSkBGlBpm_E782z_WkCC9bBNLjDWGJTrfMM-HiEHkhJbKAG0rKFJYQXEq0CjRKR-0wz1qAXZGJHtYxJqVlZs5Rnl8mR0QTkGcTwSVITpOyiZAfRt2PAVnZRcLuCR-GV8Fp4E8lzXN0KV7IOdvZgL3O_qkKt7mp9V5ubmqNKVsXGfQzXea6_Rrsbj39pvhkpPY6UXo6UXo-UnkX6b6n9AO8SliU=&lang=sage&interacts=eJyLjgUAARUAuQ==). Mimo jiné hodnoty v paměti přímo přepisujeme a nemusíme držet v paměti starou a novou hodnotu. 
 
+## Využití soustav lineárních rovnic
+
+Viz [případová studie](../tomograf) věnovaná akustickému tomografu.
+
 ## Shrnutí, hlavní myšlenky
 
 https://youtu.be/aeUs2y2QrRw
@@ -481,4 +489,4 @@ A jaká je hlavní message? Zdroj: pixabay.com
 * Řada numerických metod pro řešení modelů založených na matematickém modelování fyzikálních zákonů se v nějaké fázi redukuje na řešení soustav lineárních rovnic. Kromě toho se se soustavami lineárních rovnic setkáváme při hledání vlastních směrů matic, což je důležité pro matice reprezentující materiálové charakteristiky. 
 * Ukázali jsme si tři různé formulace soustav lineárních rovnic, klasickou pomocí rovnic, vektorovou pomocí jedné vektorové rovnice a maticovou pomocí jediné maticové rovnice a jediné maticové operace, maticového součinu. 
 * Ukázali jsme si, že v případě známé inverze k matici soustavy se řešení redukuje na součin inverzní matice s maticí pravých stran.
-* Kromě možnosti využít inverzní matici jsme si ukázali další tři metody řešení. Dvě čistě numerické metody (Jacobiho a Gaussova-Seidelova metoda) a jednu univerzální (Gaussova eliminační metoda).
+* Kromě možnosti využít inverzní matici jsme si ukázali další metody řešení.

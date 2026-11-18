@@ -1,0 +1,10 @@
+_build/
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.cb
+*.cb2
+*~
+\#*\#
+DEADJOE
