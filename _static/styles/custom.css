@@ -1,0 +1,129 @@
+div.theorem p.admonition-title {background-color:var(--hint-title-color);} 
+div.theorem {
+  border-color: var(--hint-border-color);
+  background-color: var(--hint-title-color);
+}
+
+div.remark p.admonition-title {background-color:var(--note-title-color);} 
+div.remark {
+  border-color: var(--note-border-color);
+  background-color: var(--note-title-color);
+}
+
+div.definition p.admonition-title {background-color:var(--warning-title-color);} 
+div.definition {
+  border-color: var(--warning-border-color);
+  background-color: var(--warning-title-color);
+}
+
+body {
+  line-height: 1.4;
+}
+
+img {max-width:80%; margin-right:auto; margin-left:auto; text-align:center; display:block;}
+
+.obtekat {max-width:45%; vertical-align:top; float: right;}
+
+.obtekat img {max-width:95%;}
+
+.reseni {background-color:lightgray;}
+
+.cviceni p img {max-width:50%; float:right; padding-left:10px;}
+.cviceni h2 {clear:both;}
+.admonition {clear:both !important;}
+.obtekat {clear:both !important;}
+
+
+.WWotazka {
+    margin-left:auto;
+    margin-right: 0px;
+    /*font-weight:bold; */
+    color:#555 !important; 
+    background-color:var(--hint-title-color);
+    padding:3px;
+    padding-left:8px;
+    padding-right:8px;
+    text-decoration:none;
+    margin-top:2px;
+    margin-bottom:2px;
+    display:inline-block;
+    cursor: pointer;
+}
+
+
+.WWotazka:visited {
+    text-decoration:none;
+}
+
+.Ycontainer {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  border-color:#006131;
+  border-style:solid;
+  border-width:thick;
+  margin:auto;
+  margin-bottom:20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.but-prez, .but-video {
+    background-color: #006131;
+    color: #eeeeee !important;
+    margin:3px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    padding: 1px 3px;
+    text-align: center;
+    display: block;
+}
+
+.but-video {background-color: #a50a0a;}
+
+figcaption {font-size: 60%;}
+
+#bd-toc-nav {background-color: #f4f4f4;}
+
+.admonition figure {max-width:50%; float:right;}
+.cviceni figure {max-width:50%; float:right;}
+
+.toggle-hidden figure {display:none;}
+
+.table img {max-width:200px;}
+
+.announcement {background-color: #C00 !important;}
+.announcement a {color:white !important;}
+
+.bd-header-announcement {background-color: #C00 !important;}
+.bd-header-announcement a {color:white !important;}
+
+.bd-sidebar-secondary {display: none;}
+.bd-main .bd-content .bd-article-container {max-width: 100%;}
+.secondary-toggle {display:none;}
+
+.extra_footer img {display: inline-block;}
+
+.Ylink{
+  text-align: right;
+}
+.Ylink a{border:solid 1px; padding:5px;}
+
+div.algorithm p.admonition-title {background-color: lightyellow;}
+
+.algorithm figure {width:100%; max-width:100%;}
+
+.bd-footer-content__inner {width:100%;}
+.utterances {max-width: 100%;}

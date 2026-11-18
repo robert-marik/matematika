@@ -1,0 +1,1104 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-11-18T16:37:18+01:00" />
+    <title>Případová studie: matematika akustického tomografu &#8212; Matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tomograf/index';</script>
+    <script src="../_static/custom.js"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Úvod" href="../cviceni/cviceni00.html" />
+    <link rel="prev" title="13. Shrnutí za předmět Matematika" href="../shrnuti/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="18.11.2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../derivace_I/index.html">1. Derivace funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_II/index.html">2. Derivace a lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../derivace_III/index.html">3. Derivace a další užitečné nástroje</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly/index.html">4. Integrál, integrál a integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integraly2/index.html">5. Integrály pro pokročilé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ode/index.html">6. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matice/index.html">7. Lineární algebra (operace s vektory a maticemi)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inverzni_matice/index.html">8. Inverzní matice, determinanty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../soustavy/index.html">9. Soustavy lineárních rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorove_pole/index.html">10. Vektorová pole, tok, zákony zachování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dvojny_integral/index.html">11. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numerika/index.html">12. Vybrané postupy numerické matematiky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shrnuti/index.html">13. Shrnutí za předmět Matematika</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Případové studie</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Případová studie: matematika akustického tomografu</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Opakování a úvod</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni00.html">Úvod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../symboly.html">Přehled symbolů</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Výpočet derivací</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Využití derivací v matematických modelech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Výpočet derivací, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Lokální extrémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Integrály I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Integrály II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Matice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Determinanty, soustavy rovnic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Vlastní čísla a směry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Parciální derivace, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Shrnutí</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Případová studie: matematika akustického tomografu</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dva-skutecne-stromy">Dva skutečné stromy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#od-casu-pruchodu-k-linearni-rovnici">Od času průchodu k lineární rovnici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-soustavy">Matice soustavy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tenke-a-tluste-paprsky">Tenké a tlusté paprsky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prima-uloha-od-obrazu-k-casum">Přímá úloha: od obrazu k časům</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#obracena-uloha-a-proc-ji-nelze-proste-vyresit">Obrácená úloha a proč ji nelze prostě vyřešit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zpetna-projekce">Zpětná projekce</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-sirt-opakovana-oprava-obrazu">Metoda SIRT: opakovaná oprava obrazu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#myslenka-iteracni-opravy">Myšlenka iterační opravy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iteracni-vzorec">Iterační vzorec</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-se-deje-behem-iteraci">Co se děje během iterací</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#volba-relaxacniho-parametru">Volba relaxačního parametru</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orez-na-fyzikalne-pripustne-hodnoty">Ořez na fyzikálně přípustné hodnoty</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vyhlazeni">Vyhlazení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrovana-zpetna-projekce">Filtrovaná zpětná projekce</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odvozeni">Odvození</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tlumeni">Tlumení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#srovnani-metod">Srovnání metod</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zpet-ke-skutecnym-stromum">Zpět ke skutečným stromům</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">Shrnutí, hlavní myšlenky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prehled-symbolu">Přehled symbolů</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pripadova-studie-matematika-akustickeho-tomografu">
+<h1>Případová studie: matematika akustického tomografu<a class="headerlink" href="#pripadova-studie-matematika-akustickeho-tomografu" title="Link to this heading">#</a></h1>
+<div class="admonition-motivace admonition">
+<p class="admonition-title">Motivace</p>
+<ul class="simple">
+<li><p>Akustický tomograf umožňuje nahlédnout do kmene stojícího stromu bez toho, abychom jej poškodili. Po obvodu kmene rozmístíme čidla, na každé postupně klepneme kladívkem a měříme, za jak dlouho zvuk dorazí k ostatním čidlům. Zdravým dřevem se zvuk šíří rychle, hnilobou pomalu a dutinu musí obejít. Proto se oba defekty projeví zpožděním paprsku. Z naměřených časů chceme sestavit mapu rychlosti zvuku v průřezu kmene, tzv. tomogram.</p></li>
+<li><p>Úloha je pěknou ukázkou toho, že lineární algebra není jen nástroj pro ruční řešení malých soustav rovnic. Uvidíme, že k rekonstrukci obrazu stačí tři operace, které známe z předchozích přednášek: součin matic, transponování a řešení soustavy lineárních rovnic. Potkáme se zde s integrálem jako nástrojem pro sčítání příspěvků, s maticovým zápisem soustavy, s hodností matice i s iteračními metodami.</p></li>
+<li><p>Ukážeme si dvě metody, které se pro rekonstrukci obrazu používají: iterační metodu SIRT a filtrovanou zpětnou projekci (FBP). Tato případová studie navazuje na přednášky o integrálech, maticích a soustavách lineárních rovnic. Všechny kroky doprovodíme počítačovými simulacemi, na kterých je vidět, proč je daný krok potřeba a co se stane, když jej vynecháme.</p></li>
+</ul>
+</div>
+<section id="dva-skutecne-stromy">
+<h2>Dva skutečné stromy<a class="headerlink" href="#dva-skutecne-stromy" title="Link to this heading">#</a></h2>
+<p>Než se pustíme do matematiky, podívejme se, k čemu má vést. Na obrázku jsou dvě lípy z Valdštejnovy aleje v Jičíně. Oba stromy byly změřeny akustickým tomografem s dvanácti čidly a po pokácení byl kmen v místě měření rozříznut, takže víme, co uvnitř skutečně bylo. Strom 14 má uprostřed velkou dutinu, strom 8 dlouhou trhlinu jdoucí středem kmene. Data i fotografie pořídil Vojtěch Semík v rámci bakalářské práce vedené Valentinem Cristinim.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/obr_stromy_uvod.png" src="../_images/obr_stromy_uvod.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 2 </span><span class="caption-text">Fotografie řezu kmenem a tomogram vypočtený z časů průchodu zvuku naměřených na stojícím stromě. Červené body jsou polohy čidel, čidlo číslo 1 je nahoře. Fotografie jsou natočeny shodně s tomogramy.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Tomogram je mapa rychlosti zvuku v průřezu kmene. Zelená barva znamená rychlost typickou pro zdravé dřevo, červená rychlost výrazně nižší. Jediným vstupem výpočtu jsou polohy čidel a tabulka <span class="math notranslate nohighlight">\(\displaystyle 12\times 11\)</span> naměřených časů, tedy pro každou dvojici čidel čas v obou směrech. V této případové studii si ukážeme, jak se z takové tabulky čísel stane obraz. Budeme k tomu používat uměle vytvořená data, u kterých známe správnou odpověď, a k oběma stromům se vrátíme na konci.</p>
+<p>Všechny obrázky v této případové studii vytvořil jediný skript <a class="reference download internal" download="" href="../_downloads/fdc5d0b3769fdcf9d2d34e35f8139950/simulace.py"><code class="xref download docutils literal notranslate"><span class="pre">simulace.py</span></code></a>, který používá jen knihovny <code class="docutils literal notranslate"><span class="pre">numpy</span></code> a <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. Matematicky skript odpovídá tomu, co dělá knihovna <a class="reference external" href="https://robert-marik.github.io/tomotree/">TomoTree</a> pro vyhodnocování skutečných měření.</p>
+</section>
+<section id="od-casu-pruchodu-k-linearni-rovnici">
+<h2>Od času průchodu k lineární rovnici<a class="headerlink" href="#od-casu-pruchodu-k-linearni-rovnici" title="Link to this heading">#</a></h2>
+<p>Pohybuje-li se zvuk rychlostí <span class="math notranslate nohighlight">\(\displaystyle v\)</span> po dráze délky <span class="math notranslate nohighlight">\(\displaystyle L\)</span>, trvá mu to čas <span class="math notranslate nohighlight">\(\displaystyle t=\frac Lv\)</span>. V kmeni se ale rychlost místo od místa mění. Dráhu proto rozdělíme na krátké úseky délky <span class="math notranslate nohighlight">\(\displaystyle \mathrm ds\)</span>, na každém z nich je rychlost prakticky konstantní a průchod úsekem trvá čas <span class="math notranslate nohighlight">\(\displaystyle \frac 1v\,\mathrm ds\)</span>. Celkový čas je součtem těchto příspěvků, tedy integrálem</p>
+<div class="math notranslate nohighlight" id="equation-tomo1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-tomo1" title="Link to this equation">#</a></span>\[t=\int_{\text{paprsek}}\frac 1{v}\,\mathrm ds.\]</div>
+<p>Je to přesně ta úvaha, kterou jsme používali v přednášce o integrálech: veličinu, která se mění, sčítáme po malých kouscích. Dráhu zvuku mezi dvěma čidly budeme nazývat <em>paprsek</em> a budeme předpokládat, že je to úsečka.</p>
+<p>Ze vztahu <a class="reference internal" href="#equation-tomo1">(1)</a> je vidět, že přirozenou veličinou není rychlost, ale její převrácená hodnota.</p>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span>Definice </span> (Pomalost)</p>
+<section class="definition-content" id="proof-content">
+<p><em>Pomalostí</em> nazýváme převrácenou hodnotu rychlosti, <span class="math notranslate nohighlight">\(\displaystyle x=\frac 1v\)</span>. Udává, kolik sekund potřebuje zvuk na uražení jednoho metru.</p>
+</section>
+</div><p>Zdravé dřevo s rychlostí <span class="math notranslate nohighlight">\(\displaystyle 1500\,\mathrm{m}/\mathrm{s}\)</span> má pomalost přibližně <span class="math notranslate nohighlight">\(\displaystyle 667\,\mathrm{\mu s}/\mathrm{m}\)</span>, hniloba s rychlostí <span class="math notranslate nohighlight">\(\displaystyle 500\,\mathrm{m}/\mathrm{s}\)</span> má pomalost <span class="math notranslate nohighlight">\(\displaystyle 2000\,\mathrm{\mu s}/\mathrm{m}\)</span>. Poškozené dřevo má tedy velkou pomalost.</p>
+<p>Průřez kmene nyní pokryjeme čtvercovou sítí a budeme předpokládat, že uvnitř každé buňky je pomalost konstantní. Buňky očíslujeme a pomalost v <span class="math notranslate nohighlight">\(\displaystyle j\)</span>-té buňce označíme <span class="math notranslate nohighlight">\(\displaystyle x_j\)</span>. Integrál <a class="reference internal" href="#equation-tomo1">(1)</a> se tím změní na konečný součet: je-li <span class="math notranslate nohighlight">\(\displaystyle a_{ij}\)</span> délka, kterou <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tý paprsek urazí v <span class="math notranslate nohighlight">\(\displaystyle j\)</span>-té buňce, potom čas průchodu po <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tém paprsku je</p>
+<div class="math notranslate nohighlight" id="equation-tomo2">
+<span class="eqno">(2)<a class="headerlink" href="#equation-tomo2" title="Link to this equation">#</a></span>\[b_i=a_{i1}x_1+a_{i2}x_2+\cdots+a_{in}x_n.\]</div>
+<p>To je lineární rovnice pro neznámé pomalosti. Kdybychom pracovali s rychlostmi, měli bychom neznámé ve jmenovatelích a rovnice by lineární nebyla. Volba pomalosti jako neznámé je tedy trik, který z obtížné úlohy dělá úlohu lineární algebry.</p>
+<p><strong>Příklad.</strong> Uvažujme čtverec rozdělený na čtyři buňky o straně <span class="math notranslate nohighlight">\(\displaystyle 1\)</span>. Buňky v horní řadě mají pomalosti <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span>, buňky v dolní řadě <span class="math notranslate nohighlight">\(\displaystyle x_3\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_4\)</span>. Dva vodorovné paprsky, dva svislé a jeden paprsek po úhlopříčce přes první a čtvrtou buňku dávají rovnice
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}x_1+x_2&amp;=b_1,\\ x_3+x_4&amp;=b_2,\\ x_1+x_3&amp;=b_3,\\ x_2+x_4&amp;=b_4,\\ \sqrt 2 x_1+\sqrt 2x_4&amp;=b_5,\end{aligned}
+\end{split}\]</div>
+
+nebo maticově
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1&amp;1&amp;0&amp;0\\0&amp;0&amp;1&amp;1\\1&amp;0&amp;1&amp;0\\0&amp;1&amp;0&amp;1\\ \sqrt 2&amp;0&amp;0&amp;\sqrt 2\end{pmatrix} \begin{pmatrix}x_1\\x_2\\x_3\\x_4\end{pmatrix}=\begin{pmatrix}b_1\\b_2\\b_3\\b_4\\b_5\end{pmatrix}. \end{split}\]</div>
+</p>
+<p>Samotné první čtyři rovnice k určení čtyř neznámých nestačí. Zvětšíme-li <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x_4\)</span> o libovolné číslo <span class="math notranslate nohighlight">\(\displaystyle \delta\)</span> a současně o stejné číslo zmenšíme <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x_3\)</span>, žádný z vodorovných ani svislých paprsků změnu nepozná. Teprve úhlopříčný paprsek tuto nejednoznačnost odstraní. Vidíme, že nezáleží jen na počtu paprsků, ale i na tom, kudy vedou. K této myšlence se ještě vrátíme.</p>
+</section>
+<section id="matice-soustavy">
+<h2>Matice soustavy<a class="headerlink" href="#matice-soustavy" title="Link to this heading">#</a></h2>
+<p>Rovnice <a class="reference internal" href="#equation-tomo2">(2)</a> napsané pro všechny paprsky tvoří soustavu lineárních rovnic, kterou zapíšeme stejně jako v přednášce o soustavách ve tvaru</p>
+<div class="math notranslate nohighlight" id="equation-tomo3">
+<span class="eqno">(3)<a class="headerlink" href="#equation-tomo3" title="Link to this equation">#</a></span>\[A\vec x=\vec b.\]</div>
+<p>Vektor <span class="math notranslate nohighlight">\(\displaystyle \vec x\)</span> obsahuje neznámé pomalosti ve všech <span class="math notranslate nohighlight">\(\displaystyle n\)</span> buňkách, vektor <span class="math notranslate nohighlight">\(\displaystyle \vec b\)</span> obsahuje <span class="math notranslate nohighlight">\(\displaystyle m\)</span> naměřených časů a matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> typu <span class="math notranslate nohighlight">\(\displaystyle m\times n\)</span> popisuje geometrii: řádek odpovídá paprsku, sloupec buňce a prvek <span class="math notranslate nohighlight">\(\displaystyle a_{ij}\)</span> je délka <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tého paprsku v <span class="math notranslate nohighlight">\(\displaystyle j\)</span>-té buňce. Matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> závisí jen na poloze čidel a na síti, nikoli na tom, co je uvnitř kmene. To, co je uvnitř, se ukrývá ve vektoru <span class="math notranslate nohighlight">\(\displaystyle \vec x\)</span>.</p>
+<p>V simulacích použijeme kruhový kmen o poloměru <span class="math notranslate nohighlight">\(\displaystyle 30\,\mathrm{cm}\)</span> a 12 čidel rovnoměrně rozmístěných po obvodu. Každá dvojice čidel dává jeden paprsek, celkem jich je <span class="math notranslate nohighlight">\(\displaystyle \frac{12\cdot 11}{2}=66\)</span>. Síť má <span class="math notranslate nohighlight">\(\displaystyle 42\times 42\)</span> buněk o straně přibližně <span class="math notranslate nohighlight">\(\displaystyle 1{,}5\,\mathrm{cm}\)</span>, z nichž <span class="math notranslate nohighlight">\(\displaystyle 1282\)</span> leží v kmeni. Máme tedy <span class="math notranslate nohighlight">\(\displaystyle m=66\)</span> rovnic a <span class="math notranslate nohighlight">\(\displaystyle n=1282\)</span> neznámých.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/obr_geometrie.png" src="../_images/obr_geometrie.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3 </span><span class="caption-text">Čidla na obvodu kmene a paprsky mezi všemi dvojicemi čidel (vlevo). Čidlo číslo 1 je nahoře, stejně jako u skutečných měření. Síť buněk; šedé buňky jsou neznámé soustavy (vpravo).</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Jeden řádek matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> získáme tak, že najdeme průsečíky paprsku s čarami sítě. Ty paprsek rozdělí na úseky a každý úsek leží v jediné buňce. Délka úseku je hledané číslo <span class="math notranslate nohighlight">\(\displaystyle a_{ij}\)</span>. Součet čísel v řádku je roven délce celého paprsku, kterou označíme <span class="math notranslate nohighlight">\(\displaystyle L_i\)</span>.</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/obr_paprsek.png" src="../_images/obr_paprsek.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 4 </span><span class="caption-text">Paprsek mezi čidly 1 a 5 a délky jeho úseků v jednotlivých buňkách. Paprsek prochází jen 48 buňkami z 1282, všechny ostatní prvky tohoto řádku matice jsou nulové.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> je řídká, nenulových prvků má jen necelá tři procenta. Na dalším obrázku je každý nenulový prvek černý bod.</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/obr_matice.png" src="../_images/obr_matice.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5 </span><span class="caption-text">Struktura matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span>. Každý z 66 řádků je jeden paprsek, každý z 1282 sloupců je jedna buňka.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="tenke-a-tluste-paprsky">
+<h3>Tenké a tlusté paprsky<a class="headerlink" href="#tenke-a-tluste-paprsky" title="Link to this heading">#</a></h3>
+<p>Sečteme-li čísla ve sloupci matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span>, dostaneme celkovou délku všech paprsků, které buňkou procházejí. Toto číslo říká, kolik informace o dané buňce v měření máme. Na obrázku vlevo je vidět, že pokrytí je velmi nerovnoměrné a že 99 buňkami neprochází paprsek žádný. O těchto buňkách rovnice <a class="reference internal" href="#equation-tomo3">(3)</a> neříkají vůbec nic.</p>
+<figure class="align-default" id="id5">
+<img alt="../_images/obr_pokryti.png" src="../_images/obr_pokryti.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 6 </span><span class="caption-text">Součty sloupců matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span>: pokrytí buněk paprsky. Tenké paprsky (vlevo) a tlusté paprsky (vpravo).</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Úsečka nulové tloušťky je navíc jen idealizace. Zvuk o vlnové délce desítek centimetrů „ohmatává“ celé okolí spojnice čidel. Proto se používají <em>tlusté paprsky</em>: čas průchodu ovlivňují i buňky v okolí úsečky, a to s vahou, která se vzdáleností od úsečky klesá. Váhy v řádku přitom volíme tak, aby jejich součet byl stále roven délce paprsku <span class="math notranslate nohighlight">\(\displaystyle L_i\)</span>. Matice soustavy pak má v řádku více nenulových prvků a pokrytí kmene je spojité (obrázek vpravo). Soustava má pořád tvar <a class="reference internal" href="#equation-tomo3">(3)</a>, mění se jen čísla v matici.</p>
+<div class="proof algorithm dropdown admonition" id="algorithm-1">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 1 </span> (Výpočet matice soustavy v Pythonu)</p>
+<section class="algorithm-content" id="proof-content">
+<h3 class="rubric">Výpočet matice soustavy v Pythonu</h3>
+<p>Jeden řádek matice pro paprsek z bodu <code class="docutils literal notranslate"><span class="pre">a</span></code> do bodu <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">u</span></code> na síti s čarami <code class="docutils literal notranslate"><span class="pre">hrany</span></code> (stejnými ve směru obou os).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>                              <span class="c1"># parametry průsečíků s čarami sítě</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>                            <span class="c1"># svislé a vodorovné čáry</span>
+    <span class="n">tk</span> <span class="o">=</span> <span class="p">(</span><span class="n">hrany</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="o">/</span> <span class="n">u</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">tk</span><span class="p">[(</span><span class="n">tk</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">tk</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)])</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>                            <span class="c1"># seřazené dělicí body</span>
+<span class="n">delky</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>      <span class="c1"># délky úseků</span>
+<span class="n">stredy</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">((</span><span class="n">t</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+<span class="n">ix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">hrany</span><span class="p">,</span> <span class="n">stredy</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">iy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">hrany</span><span class="p">,</span> <span class="n">stredy</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ix</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="n">iy</span><span class="p">,</span> <span class="n">delky</span><span class="p">)</span>         <span class="c1"># zápis do i-tého řádku</span>
+</pre></div>
+</div>
+</section>
+</div></section>
+</section>
+<section id="prima-uloha-od-obrazu-k-casum">
+<h2>Přímá úloha: od obrazu k časům<a class="headerlink" href="#prima-uloha-od-obrazu-k-casum" title="Link to this heading">#</a></h2>
+<p>Známe-li pomalost ve všech buňkách, je výpočet časů snadný: stačí vynásobit matici <span class="math notranslate nohighlight">\(\displaystyle A\)</span> vektorem <span class="math notranslate nohighlight">\(\displaystyle \vec x\)</span>. Tomu se říká <em>přímá úloha</em>. Použijeme ji k tomu, abychom si vyrobili data, na kterých budeme metody zkoušet. Zvolíme si „pravdu“, tzv. <em>fantom</em>: kmen s rychlostí <span class="math notranslate nohighlight">\(\displaystyle 1500\,\mathrm{m}/\mathrm{s}\)</span> a s kruhovou dutinou o poloměru <span class="math notranslate nohighlight">\(\displaystyle 9\,\mathrm{cm}\)</span> mimo střed kmene, ve které je rychlost <span class="math notranslate nohighlight">\(\displaystyle 500\,\mathrm{m}/\mathrm{s}\)</span>. Výhodou simulace oproti skutečnému stromu je, že výsledek rekonstrukce můžeme porovnat se správnou odpovědí.</p>
+<figure class="align-default" id="id6">
+<img alt="../_images/obr_fantom.png" src="../_images/obr_fantom.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 7 </span><span class="caption-text">Fantom (vlevo) a to, co z něj tomograf „vidí“: každý paprsek je obarven svou zdánlivou rychlostí <span class="math notranslate nohighlight">\(\displaystyle L_i/b_i\)</span>, tedy délkou paprsku dělenou časem průchodu (vpravo).</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Časy průchodu vycházejí od <span class="math notranslate nohighlight">\(\displaystyle 104\)</span> do <span class="math notranslate nohighlight">\(\displaystyle 640\,\mathrm{\mu s}\)</span>. Paprsky, které dutinu míjejí, mají zdánlivou rychlost <span class="math notranslate nohighlight">\(\displaystyle 1500\,\mathrm{m}/\mathrm{s}\)</span>. Paprsky procházející dutinou jsou pomalejší, nejpomalejší má zdánlivou rychlost <span class="math notranslate nohighlight">\(\displaystyle 935\,\mathrm{m}/\mathrm{s}\)</span>. Žádný paprsek však neukazuje skutečných <span class="math notranslate nohighlight">\(\displaystyle 500\,\mathrm{m}/\mathrm{s}\)</span>, protože každý vede zčásti i zdravým dřevem. Zdánlivá rychlost paprsku je průměr přes celou dráhu a sama o sobě neříká, kde na dráze vada leží. To zjistíme jen kombinací informací z paprsků, které se kříží.</p>
+<p><strong>Poznámka.</strong> Časy v simulacích nepočítáme součinem <span class="math notranslate nohighlight">\(\displaystyle A\vec x\)</span>, ale jemnou numerickou integrací vztahu <a class="reference internal" href="#equation-tomo1">(1)</a> přímo ze zadaného tvaru dutiny. Je to poctivější: skutečný strom také není poskládán ze čtverečků. Rozdíl mezi oběma způsoby výpočtu je <span class="math notranslate nohighlight">\(\displaystyle 1{,}8\,\%\)</span>.</p>
+</section>
+<section id="obracena-uloha-a-proc-ji-nelze-proste-vyresit">
+<h2>Obrácená úloha a proč ji nelze prostě vyřešit<a class="headerlink" href="#obracena-uloha-a-proc-ji-nelze-proste-vyresit" title="Link to this heading">#</a></h2>
+<p>Nás ovšem zajímá opačný směr: známe matici <span class="math notranslate nohighlight">\(\displaystyle A\)</span> a časy <span class="math notranslate nohighlight">\(\displaystyle \vec b\)</span> a hledáme <span class="math notranslate nohighlight">\(\displaystyle \vec x\)</span>. To je <em>obrácená úloha</em>. Nabízí se použít inverzní matici nebo Gaussovu eliminaci, v obou případech však narazíme.</p>
+<p>Matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> není čtvercová, inverzní matice k ní neexistuje. Soustava má 66 rovnic a 1282 neznámých. Hodnost matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> je 66 a stejnou hodnost má i rozšířená matice soustavy. Podle Frobeniovy věty z přednášky o soustavách rovnic řešení existuje, ale protože hodnost je menší než počet neznámých, je řešení nekonečně mnoho. Volných parametrů je <span class="math notranslate nohighlight">\(\displaystyle 1282-66=1216\)</span>.</p>
+<p>Že nejde o teoretickou zvláštnost, ukazuje následující obrázek. První tři obrazy jsou tři různá řešení soustavy <a class="reference internal" href="#equation-tomo3">(3)</a>. Všechna reprodukují „naměřené“ časy s přesností na 16 platných cifer, a přesto se od sebe výrazně liší. Žádné z nich se navíc příliš nepodobá fantomu.</p>
+<figure class="align-default" id="id7">
+<img alt="../_images/obr_nejednoznacnost.png" src="../_images/obr_nejednoznacnost.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 8 </span><span class="caption-text">Tři různé obrazy, které dávají přesně stejné časy průchodu (tenké paprsky). Čtvrtý obraz přesně odpovídá časům, ke kterým byla přidána náhodná chyba 2 %.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Poučení je dvojí.</p>
+<ul class="simple">
+<li><p>Samotný požadavek „obraz musí souhlasit s naměřenými časy“ obraz neurčuje. Musíme přidat další požadavky, například že se pomalost v sousedních buňkách příliš neliší, že leží ve fyzikálně rozumných mezích nebo že se obraz co nejméně liší od stejnorodého kmene.</p></li>
+<li><p>Měření je vždy zatíženo chybou. Trvat na přesném splnění všech rovnic proto ani není rozumné, nutili bychom obraz vysvětlovat i chyby měření.</p></li>
+</ul>
+<p>Obě metody, které si ukážeme, se s těmito dvěma problémy vyrovnávají, každá po svém.</p>
+</section>
+<section id="zpetna-projekce">
+<h2>Zpětná projekce<a class="headerlink" href="#zpetna-projekce" title="Link to this heading">#</a></h2>
+<p>Začněme tím nejjednodušším, co lze s časy udělat. Každý paprsek má průměrnou pomalost <span class="math notranslate nohighlight">\(\displaystyle \frac{b_i}{L_i}\)</span>. Nevíme, kde na paprsku se zvuk zdržel, tak tuto průměrnou pomalost přisoudíme všem buňkám, kterými paprsek prochází. Buňkou ovšem prochází více paprsků a každý navrhuje jinou hodnotu. Vezmeme tedy jejich průměr, přičemž větší váhu dostanou paprsky, které jsou v buňce delší:</p>
+<div class="math notranslate nohighlight" id="equation-tomo4">
+<span class="eqno">(4)<a class="headerlink" href="#equation-tomo4" title="Link to this equation">#</a></span>\[x_j=\frac{\displaystyle\sum_{i=1}^m a_{ij}\frac{b_i}{L_i}}{\displaystyle\sum_{i=1}^m a_{ij}}.\]</div>
+<p>Tomuto postupu se říká <em>zpětná projekce</em>: naměřenou hodnotu promítáme zpět podél paprsku do obrazu. Všimněme si čitatele. Sčítáme přes řádkový index <span class="math notranslate nohighlight">\(\displaystyle i\)</span> při pevném sloupcovém indexu <span class="math notranslate nohighlight">\(\displaystyle j\)</span>, pracujeme tedy se sloupci matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span>. Jinými slovy, jde o součin <em>transponované</em> matice <span class="math notranslate nohighlight">\(\displaystyle A^T\)</span> s vektorem průměrných pomalostí. To je obecné pravidlo, které budeme dále používat:</p>
+<ul class="simple">
+<li><p>součin <span class="math notranslate nohighlight">\(\displaystyle A\vec x\)</span> převádí obraz na data (z buněk na paprsky),</p></li>
+<li><p>součin <span class="math notranslate nohighlight">\(\displaystyle A^T\vec y\)</span> převádí data na obraz (z paprsků do buněk).</p></li>
+</ul>
+<figure class="align-default" id="id8">
+<img alt="../_images/obr_zpetna_projekce.png" src="../_images/obr_zpetna_projekce.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 9 </span><span class="caption-text">Zpětná projekce jednoho paprsku, všech paprsků z jednoho čidla a všech 66 paprsků (tenkých a tlustých).</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Zpětná projekce dutinu najde, ale obraz je rozmazaný a kontrast je malý: v místě dutiny vychází rychlost kolem <span class="math notranslate nohighlight">\(\displaystyle 1000\,\mathrm{m}/\mathrm{s}\)</span> místo <span class="math notranslate nohighlight">\(\displaystyle 500\,\mathrm{m}/\mathrm{s}\)</span>. Důvod je vidět na dalším pokusu s malou vadou. Paprsek, který vadou prošel, roznese své zpoždění po celé své délce, tedy i do zdravého dřeva. V obraze tak z vady vybíhají paprskovité stopy a vada se rozplyne do okolí.</p>
+<figure class="align-default" id="id9">
+<img alt="../_images/obr_bodova_vada.png" src="../_images/obr_bodova_vada.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10 </span><span class="caption-text">Zpětná projekce malé vady. U tenkých paprsků jsou dobře vidět stopy paprsků, které vadou prošly. Barevná stupnice je oproti ostatním obrázkům roztažena, aby byl slabý obraz vady vůbec vidět.</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Zpětná projekce tedy není řešením soustavy <a class="reference internal" href="#equation-tomo3">(3)</a>. Kdybychom z jejího obrazu spočítali časy, s naměřenými časy by nesouhlasily. Právě tento nesouhlas využijí obě následující metody k opravě obrazu.</p>
+</section>
+<section id="metoda-sirt-opakovana-oprava-obrazu">
+<h2>Metoda SIRT: opakovaná oprava obrazu<a class="headerlink" href="#metoda-sirt-opakovana-oprava-obrazu" title="Link to this heading">#</a></h2>
+<section id="myslenka-iteracni-opravy">
+<h3>Myšlenka iterační opravy<a class="headerlink" href="#myslenka-iteracni-opravy" title="Link to this heading">#</a></h3>
+<p>S iteračními metodami jsme se setkali v přednášce o soustavách lineárních rovnic u Jacobiho a Gaussovy–Seidelovy metody: začneme s libovolným odhadem a opakovaně jej zpřesňujeme. Stejný přístup použijeme zde. Jeden krok vypadá takto.</p>
+<ol class="arabic simple">
+<li><p>Z aktuálního obrazu <span class="math notranslate nohighlight">\(\displaystyle \vec x_k\)</span> spočteme přímou úlohou časy <span class="math notranslate nohighlight">\(\displaystyle A\vec x_k\)</span>.</p></li>
+<li><p>Porovnáme je s naměřenými časy. Rozdíl <span class="math notranslate nohighlight">\(\displaystyle \vec r=\vec b-A\vec x_k\)</span> se nazývá <em>reziduum</em>. Je-li <span class="math notranslate nohighlight">\(\displaystyle r_i&gt;0\)</span>, je <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tý paprsek ve skutečnosti pomalejší, než tvrdí náš obraz, a pomalost podél něj je potřeba zvýšit.</p></li>
+<li><p>Reziduum každého paprsku rozdělíme zpětnou projekcí do buněk, kterými paprsek prochází, a obraz opravíme.</p></li>
+</ol>
+<p>Nejprve se podívejme, jak taková oprava vypadá u dvou rovnic o dvou neznámých, kde si vše můžeme nakreslit. Každá rovnice je přímka v rovině a řešení je průsečík. <em>Kaczmarzova metoda</em> bere rovnice postupně: z aktuálního bodu se přesune kolmo na první přímku, odtud kolmo na druhou přímku a tak stále dokola. Druhá možnost je spočítat opravy podle všech rovnic najednou a použít jejich průměr. Obě cesty vedou k průsečíku.</p>
+<figure class="align-default" id="id10">
+<img alt="../_images/obr_kaczmarz.png" src="../_images/obr_kaczmarz.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 11 </span><span class="caption-text">Soustava dvou rovnic řešená opravami po jednotlivých rovnicích (vlevo) a opravou podle všech rovnic současně (vpravo). Hvězdička je přesné řešení <span class="math notranslate nohighlight">\(\displaystyle x_1=2\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_2=3\)</span>.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Oprava podle všech rovnic současně dala metodě jméno: SIRT je zkratka pro <em>Simultaneous Iterative Reconstruction Technique</em>. Její výhodou je, že výsledek nezávisí na pořadí paprsků a že chyba jednoho měření se zprůměruje s ostatními.</p>
+</section>
+<section id="iteracni-vzorec">
+<h3>Iterační vzorec<a class="headerlink" href="#iteracni-vzorec" title="Link to this heading">#</a></h3>
+<p>Opravu z bodu 3 zapíšeme vzorcem podobným zpětné projekci <a class="reference internal" href="#equation-tomo4">(4)</a>. Reziduum <span class="math notranslate nohighlight">\(\displaystyle r_i\)</span> vydělíme délkou paprsku, dostaneme opravu pomalosti připadající na jeden metr paprsku. V každé buňce pak vezmeme vážený průměr oprav od všech paprsků, které buňkou procházejí:</p>
+<div class="math notranslate nohighlight">
+\[x_j^{\text{nové}}=x_j+\omega\,\frac{\displaystyle\sum_{i=1}^m a_{ij}\frac{r_i}{L_i}}{\displaystyle\sum_{i=1}^m a_{ij}}.\]</div>
+<p>Číslo <span class="math notranslate nohighlight">\(\displaystyle \omega\)</span> se nazývá <em>relaxační parametr</em> a určuje, jak velkou část navržené opravy skutečně provedeme. Maticově lze totéž zapsat jediným řádkem.</p>
+<div class="proof definition admonition" id="definition-2">
+<p class="admonition-title"><span>Definice </span> (Metoda SIRT)</p>
+<section class="definition-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle R\)</span> je diagonální matice, která má v hlavní diagonále převrácené hodnoty součtů řádků matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span>, a <span class="math notranslate nohighlight">\(\displaystyle C\)</span> diagonální matice, která má v hlavní diagonále převrácené hodnoty součtů sloupců matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span>. <em>Metodou SIRT</em> nazýváme iterační postup</p>
+<div class="math notranslate nohighlight" id="equation-tomo5">
+<span class="eqno">(5)<a class="headerlink" href="#equation-tomo5" title="Link to this equation">#</a></span>\[\vec x_{k+1}=\vec x_k+\omega\, C A^T R\,(\vec b-A\vec x_k).\]</div>
+</section>
+</div><p>Čteme zprava doleva: spočítáme reziduum, maticí <span class="math notranslate nohighlight">\(\displaystyle R\)</span> je vydělíme délkami paprsků, maticí <span class="math notranslate nohighlight">\(\displaystyle A^T\)</span> je promítneme zpět do buněk a maticí <span class="math notranslate nohighlight">\(\displaystyle C\)</span> vydělíme součtem vah v buňce. Podobně jako u Jacobiho metody potřebujeme inverzní matice jen k maticím diagonálním, a to je zadarmo. Celý krok tvoří dvě násobení matice vektorem.</p>
+<p>Jako počáteční odhad <span class="math notranslate nohighlight">\(\displaystyle \vec x_0\)</span> bereme stejnorodý kmen, tedy ve všech buňkách stejnou pomalost <span class="math notranslate nohighlight">\(\displaystyle s_0=\frac{b_1+\cdots+b_m}{L_1+\cdots+L_m}\)</span>. Pro náš fantom je <span class="math notranslate nohighlight">\(\displaystyle s_0=759\,\mathrm{\mu s}/\mathrm{m}\)</span>, což odpovídá rychlosti <span class="math notranslate nohighlight">\(\displaystyle 1318\,\mathrm{m}/\mathrm{s}\)</span>.</p>
+<div class="proof algorithm dropdown admonition" id="algorithm-3">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 2 </span> (Metoda SIRT v Pythonu)</p>
+<section class="algorithm-content" id="proof-content">
+<h3 class="rubric">Metoda SIRT v Pythonu</h3>
+<p>Diagonální matice <span class="math notranslate nohighlight">\(\displaystyle R\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C\)</span> není nutné sestavovat, stačí vektory jejich diagonálních prvků a násobení po složkách.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">A</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>                 <span class="c1"># převrácené součty řádků</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">A</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>                 <span class="c1"># převrácené součty sloupců</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">L</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>     <span class="c1"># stejnorodý počáteční odhad</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">omega</span> <span class="o">*</span> <span class="n">C</span> <span class="o">*</span> <span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="p">(</span><span class="n">R</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">A</span> <span class="o">@</span> <span class="n">x</span><span class="p">)))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>      <span class="c1"># ořez na přípustné hodnoty, viz dále</span>
+</pre></div>
+</div>
+</section>
+</div></section>
+<section id="co-se-deje-behem-iteraci">
+<h3>Co se děje během iterací<a class="headerlink" href="#co-se-deje-behem-iteraci" title="Link to this heading">#</a></h3>
+<p>Sledujme během iterací dvě čísla. <em>Neshoda s daty</em> je velikost rezidua vydělená velikostí vektoru <span class="math notranslate nohighlight">\(\displaystyle \vec b\)</span> a umíme ji spočítat vždy. <em>Chyba vůči fantomu</em> je relativní odchylka vypočtených pomalostí od správných hodnot. Tu známe jen v simulaci, u skutečného stromu správnou odpověď nemáme.</p>
+<figure class="align-default" id="id11">
+<img alt="../_images/obr_sirt_iterace.png" src="../_images/obr_sirt_iterace.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12 </span><span class="caption-text">Průběh metody SIRT s <span class="math notranslate nohighlight">\(\displaystyle \omega=1{,}5\)</span> pro tenké paprsky (nahoře) a pro tlusté paprsky (dole), přesná data, bez dalších úprav.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id12">
+<img alt="../_images/obr_sirt_konvergence.png" src="../_images/obr_sirt_konvergence.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 13 </span><span class="caption-text">Neshoda s naměřenými časy (vlevo) a chyba vůči fantomu (vpravo) v závislosti na počtu iterací.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Simulace ukazuje dvě věci, které na první pohled překvapí.</p>
+<ul class="simple">
+<li><p><strong>Tenké paprsky.</strong> Metoda konverguje velmi rychle, po pěti iteracích je neshoda s daty <span class="math notranslate nohighlight">\(\displaystyle 0{,}01\,\%\)</span>. Obraz je ale špatný: chyba vůči fantomu je <span class="math notranslate nohighlight">\(\displaystyle 38\,\%\)</span>, jen o málo lepší než <span class="math notranslate nohighlight">\(\displaystyle 43\,\%\)</span> u stejnorodého počátečního odhadu. Metoda poctivě našla jedno z nekonečně mnoha řešení soustavy, bohužel takové, které mění jen buňky ležící přímo na paprscích. Výsledkem je hvězdice.</p></li>
+<li><p><strong>Tlusté paprsky.</strong> Obraz je zpočátku rozmazaný, postupně se zaostřuje a po deseti iteracích je nejlepší, chyba je <span class="math notranslate nohighlight">\(\displaystyle 21\,\%\)</span>. Další iterace však obraz kazí. Neshoda s daty dále klesá, ale v obraze rostou falešné vady při okraji kmene a po tisíci iteracích je chyba <span class="math notranslate nohighlight">\(\displaystyle 82\,\%\)</span>. Metoda se snaží do posledního detailu vysvětlit data, která model s tlustými paprsky na čtvercové síti přesně vysvětlit nedokáže. S chybou měření <span class="math notranslate nohighlight">\(\displaystyle 2\,\%\)</span> je tento efekt ještě o něco silnější.</p></li>
+</ul>
+<p>Druhý jev se nazývá <em>semikonvergence</em> a je typický pro obrácené úlohy: lepší shoda s daty neznamená lepší obraz. Jednou z možností je iterace včas zastavit. U skutečného stromu ale nepoznáme, kdy je obraz nejlepší. Lepší je metodu upravit tak, aby ji bylo možné nechat doběhnout.</p>
+</section>
+<section id="volba-relaxacniho-parametru">
+<h3>Volba relaxačního parametru<a class="headerlink" href="#volba-relaxacniho-parametru" title="Link to this heading">#</a></h3>
+<p>Než se k úpravám dostaneme, podívejme se na vliv parametru <span class="math notranslate nohighlight">\(\displaystyle \omega\)</span>. Dá se dokázat, že metoda <a class="reference internal" href="#equation-tomo5">(5)</a> konverguje pro <span class="math notranslate nohighlight">\(\displaystyle 0&lt;\omega&lt;2\)</span>. Simulace to potvrzuje: s rostoucím <span class="math notranslate nohighlight">\(\displaystyle \omega\)</span> konvergence nejprve zrychluje, nejrychlejší je v našem případě pro <span class="math notranslate nohighlight">\(\displaystyle \omega=1{,}5\)</span>, poté se zpomaluje a pro <span class="math notranslate nohighlight">\(\displaystyle \omega=2{,}5\)</span> metoda diverguje.</p>
+<figure class="align-default" id="id13">
+<img alt="../_images/obr_omega.png" src="../_images/obr_omega.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 14 </span><span class="caption-text">Neshoda s daty v prvních 60 iteracích pro různé hodnoty relaxačního parametru (tenké paprsky).</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Je to stejná situace jako s délkou kroku u jiných iteračních metod. Příliš opatrný krok znamená pomalý postup, příliš dlouhý krok cíl přestřelí a každá další oprava je větší než ta předchozí.</p>
+</section>
+<section id="orez-na-fyzikalne-pripustne-hodnoty">
+<h3>Ořez na fyzikálně přípustné hodnoty<a class="headerlink" href="#orez-na-fyzikalne-pripustne-hodnoty" title="Link to this heading">#</a></h3>
+<p>První úprava využívá znalost fyziky. Rychlost zvuku v kmeni nemůže být větší než rychlost nejrychlejšího paprsku (lepší než zdravé dřevo materiál není) a nemůže být libovolně malá. Jako dolní mez se bere polovina zdánlivé rychlosti nejpomalejšího paprsku, nejméně však rychlost zvuku ve vzduchu <span class="math notranslate nohighlight">\(\displaystyle 340\,\mathrm{m}/\mathrm{s}\)</span>. Pro náš fantom jsou meze <span class="math notranslate nohighlight">\(\displaystyle 470\)</span> a <span class="math notranslate nohighlight">\(\displaystyle 1586\,\mathrm{m}/\mathrm{s}\)</span>. Po každé iteraci hodnoty, které z těchto mezí vybočí, vrátíme na mez.</p>
+</section>
+<section id="vyhlazeni">
+<h3>Vyhlazení<a class="headerlink" href="#vyhlazeni" title="Link to this heading">#</a></h3>
+<p>Druhá úprava vyjadřuje očekávání, že se vlastnosti dřeva nemění skokem v každé buňce. Pro každou buňku přidáme k soustavě rovnici, která říká, že pomalost v buňce je rovna průměru pomalostí v sousedních buňkách. Pro buňku se čtyřmi sousedy má tvar
+<div class="math notranslate nohighlight">
+\[4x_j-x_{\text{vlevo}}-x_{\text{vpravo}}-x_{\text{nahoře}}-x_{\text{dole}}=0.\]</div>
+
+Stejný výraz jsme potkali v přednášce o numerických metodách při řešení rovnice vedení tepla metodou konečných diferencí; je to diskrétní obdoba Laplaceova operátoru. Zapíšeme-li tyto rovnice pomocí matice <span class="math notranslate nohighlight">\(\displaystyle D\)</span>, řešíme metodou SIRT rozšířenou soustavu</p>
+<div class="math notranslate nohighlight" id="equation-tomo6">
+<span class="eqno">(6)<a class="headerlink" href="#equation-tomo6" title="Link to this equation">#</a></span>\[\begin{split}\begin{pmatrix}A\\ \alpha h D\end{pmatrix}\vec x=\begin{pmatrix}\vec b\\ \vec 0\end{pmatrix},\end{split}\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\displaystyle h\)</span> je velikost buňky a číslo <span class="math notranslate nohighlight">\(\displaystyle \alpha\)</span> určuje, jak velkou váhu požadavek hladkosti má. Rozšířená soustava má <span class="math notranslate nohighlight">\(\displaystyle 66+1282\)</span> rovnic o <span class="math notranslate nohighlight">\(\displaystyle 1282\)</span> neznámých a obecně nemá přesné řešení: požadavek na shodu s daty a požadavek na hladkost jdou proti sobě. Metoda SIRT mezi nimi najde kompromis. Vyhlazení navíc řeší problém buněk, kterými neprochází žádný paprsek, protože jejich hodnotu určí sousedé.</p>
+<figure class="align-default" id="id14">
+<img alt="../_images/obr_stabilizace.png" src="../_images/obr_stabilizace.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 15 </span><span class="caption-text">Chyba vůči fantomu během 3000 iterací pro čtyři varianty metody (tlusté paprsky, data s chybou 2 %, <span class="math notranslate nohighlight">\(\displaystyle \alpha=10\)</span>).</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Bez úprav chyba po desáté iteraci roste. Samotný ořez i samotné vyhlazení růst chyby výrazně omezí a obě úpravy společně vedou k tomu, že se obraz po zhruba tisíci iteracích ustálí a dále se nemění. Počet iterací pak není nutné hlídat. Cenou za vyhlazení je pomalejší konvergence, a proto se používají tisíce iterací.</p>
+<figure class="align-default" id="id15">
+<img alt="../_images/obr_orez.png" src="../_images/obr_orez.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 16 </span><span class="caption-text">Vliv ořezu na výsledný obraz (tlusté paprsky, <span class="math notranslate nohighlight">\(\displaystyle \alpha=10\)</span>, 1000 iterací). Vpravo je vodorovný řez obrazem vedený dutinou; šedé čáry vyznačují přípustné meze rychlosti.</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Na řezu obrazem je vidět, co ořez dělá. Bez něj rekonstrukce v okolí dutiny „překmitne“ a vychází rychlost až <span class="math notranslate nohighlight">\(\displaystyle 1800\,\mathrm{m}/\mathrm{s}\)</span>, tedy vyšší než ve zdravém dřevě. Aby časy souhlasily, musí pak být jinde rychlost naopak nižší a v obraze vznikají falešné vady. Ořez tomu zabrání. Na řezu je také vidět, čeho dosáhnout nelze: ostrý okraj dutiny se z 66 čísel zrekonstruovat nedá, přechod mezi zdravým dřevem a dutinou je vždy pozvolný.</p>
+<figure class="align-default" id="id16">
+<img alt="../_images/obr_vyhlazeni.png" src="../_images/obr_vyhlazeni.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 17 </span><span class="caption-text">Vliv parametru vyhlazení <span class="math notranslate nohighlight">\(\displaystyle \alpha\)</span> pro tenké a tlusté paprsky (data s chybou 2 %, ořez, 1000 iterací).</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Bez vyhlazení (<span class="math notranslate nohighlight">\(\displaystyle \alpha=0\)</span>) dávají tenké paprsky hvězdici a tlusté paprsky falešné vady u okraje. Malé vyhlazení obraz výrazně zlepší, a to i pro tenké paprsky. Příliš silné vyhlazení (<span class="math notranslate nohighlight">\(\displaystyle \alpha=50\)</span>) naopak dutinu rozmaže a sníží kontrast. V našem příkladě vychází nejmenší chyba pro <span class="math notranslate nohighlight">\(\displaystyle \alpha=1\)</span>; knihovna tomotree používá jako výchozí opatrnější hodnotu <span class="math notranslate nohighlight">\(\displaystyle \alpha=10\)</span>, která lépe snáší větší chyby reálných měření.</p>
+</section>
+</section>
+<section id="filtrovana-zpetna-projekce">
+<h2>Filtrovaná zpětná projekce<a class="headerlink" href="#filtrovana-zpetna-projekce" title="Link to this heading">#</a></h2>
+<section id="odvozeni">
+<h3>Odvození<a class="headerlink" href="#odvozeni" title="Link to this heading">#</a></h3>
+<p>Metoda SIRT opravuje obraz mnoha malými kroky. Nešlo by správnou opravu najít najednou? Vyjděme opět ze stejnorodého kmene <span class="math notranslate nohighlight">\(\displaystyle \vec x_0\)</span> s pomalostí <span class="math notranslate nohighlight">\(\displaystyle s_0\)</span> ve všech buňkách a z jeho rezidua <span class="math notranslate nohighlight">\(\displaystyle \vec r=\vec b-A\vec x_0\)</span>. Hledejme opravu obrazu ve tvaru zpětné projekce nějakých vhodných čísel <span class="math notranslate nohighlight">\(\displaystyle \vec y\)</span>, pro každý paprsek jednoho:</p>
+<div class="math notranslate nohighlight" id="equation-tomo7">
+<span class="eqno">(7)<a class="headerlink" href="#equation-tomo7" title="Link to this equation">#</a></span>\[\vec x=\vec x_0+A^T\vec y.\]</div>
+<p>Obyčejná zpětná projekce by za <span class="math notranslate nohighlight">\(\displaystyle \vec y\)</span> dosadila přímo reziduum a viděli jsme, že výsledkem je rozmazaný obraz. Zkusme proto čísla <span class="math notranslate nohighlight">\(\displaystyle \vec y\)</span> určit chytřeji: z požadavku, aby opravený obraz souhlasil s daty. Dosadíme <a class="reference internal" href="#equation-tomo7">(7)</a> do soustavy <span class="math notranslate nohighlight">\(\displaystyle A\vec x=\vec b\)</span> a upravíme,
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}A(\vec x_0+A^T\vec y)&amp;=\vec b,\\ AA^T\vec y&amp;=\vec b-A\vec x_0,\\ AA^T\vec y&amp;=\vec r.\end{aligned}\end{split}\]</div>
+
+Dostali jsme soustavu lineárních rovnic pro <span class="math notranslate nohighlight">\(\displaystyle \vec y\)</span>. Podstatné je, že matice <span class="math notranslate nohighlight">\(\displaystyle AA^T\)</span> je čtvercová, typu <span class="math notranslate nohighlight">\(\displaystyle 66\times 66\)</span>. Místo soustavy s 1282 neznámými tak řešíme soustavu s 66 neznámými, se kterou si poradí Gaussova eliminace za zlomek sekundy.</p>
+<p>Matice <span class="math notranslate nohighlight">\(\displaystyle AA^T\)</span> má názorný význam. Její prvek v <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tém řádku a <span class="math notranslate nohighlight">\(\displaystyle k\)</span>-tém sloupci je <span class="math notranslate nohighlight">\(\displaystyle \sum_j a_{ij}a_{kj}\)</span>, tedy součet součinů délek <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tého a <span class="math notranslate nohighlight">\(\displaystyle k\)</span>-tého paprsku ve společných buňkách. Měří, jak moc se paprsky překrývají. Dva paprsky, které nemají žádnou společnou buňku, zde mají nulu.</p>
+<figure class="align-default" id="id17">
+<img alt="../_images/obr_aat.png" src="../_images/obr_aat.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 18 </span><span class="caption-text">Matice <span class="math notranslate nohighlight">\(\displaystyle AA^T\)</span> pro tenké a tlusté paprsky (světlejší barva znamená větší překryv paprsků). Vpravo reziduum <span class="math notranslate nohighlight">\(\displaystyle \vec r\)</span> a čísla <span class="math notranslate nohighlight">\(\displaystyle \vec y\)</span> získaná filtrací, obojí vyděleno největší hodnotou.</span><a class="headerlink" href="#id17" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Pro tenké paprsky dominuje hlavní diagonála: tenké paprsky se potkávají jen v jednotlivých buňkách, kde se kříží. Tlusté paprsky se překrývají výrazně. A právě překryv je příčinou rozmazání: zpoždění způsobené jednou vadou se objeví ve všech paprscích, které jdou kolem, a zpětná projekce je do obrazu započítá vícekrát. Vyřešením soustavy s maticí <span class="math notranslate nohighlight">\(\displaystyle AA^T\)</span> tento vícenásobný příspěvek odstraníme. Na grafu vpravo je vidět, že čísla <span class="math notranslate nohighlight">\(\displaystyle \vec y\)</span> mají oproti reziduu výraznější záporné hodnoty: paprsky v sousedství vady dostanou zápornou váhu, a tím se z obrazu odečte to, co tam zpětná projekce přidala navíc.</p>
+<p>Přechodu od <span class="math notranslate nohighlight">\(\displaystyle \vec r\)</span> k <span class="math notranslate nohighlight">\(\displaystyle \vec y\)</span> se říká <em>filtrace</em> a celé metodě <em>filtrovaná zpětná projekce</em>, zkráceně FBP z anglického <em>filtered back projection</em>. V lékařských tomografech, kde jsou paprsků statisíce a jsou pravidelně uspořádané, se filtrace provádí jinými prostředky, myšlenka je ale stejná.</p>
+</section>
+<section id="tlumeni">
+<h3>Tlumení<a class="headerlink" href="#tlumeni" title="Link to this heading">#</a></h3>
+<p>Kdybychom soustavu <span class="math notranslate nohighlight">\(\displaystyle AA^T\vec y=\vec r\)</span> vyřešili přesně, dostali bychom obraz, který přesně souhlasí s daty, tedy i s chybami měření. Navíc je matice <span class="math notranslate nohighlight">\(\displaystyle AA^T\)</span> pro tlusté paprsky špatně podmíněná: malá změna pravé strany vede k velké změně řešení. To je stejný problém jako u metody SIRT s příliš mnoha iteracemi. Pomoc je jednoduchá, k hlavní diagonále matice přičteme kladné číslo <span class="math notranslate nohighlight">\(\displaystyle \mu\)</span>.</p>
+<div class="proof definition admonition" id="definition-4">
+<p class="admonition-title"><span>Definice </span> (Filtrovaná zpětná projekce)</p>
+<section class="definition-content" id="proof-content">
+<p><em>Filtrovanou zpětnou projekcí s tlumením <span class="math notranslate nohighlight">\(\displaystyle \mu\)</span></em> nazýváme obraz</p>
+<div class="math notranslate nohighlight" id="equation-tomo8">
+<span class="eqno">(8)<a class="headerlink" href="#equation-tomo8" title="Link to this equation">#</a></span>\[\vec x=\vec x_0+A^T(AA^T+\mu I)^{-1}(\vec b-A\vec x_0),\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\displaystyle \vec x_0\)</span> je stejnorodý počáteční odhad a <span class="math notranslate nohighlight">\(\displaystyle I\)</span> je jednotková matice.</p>
+</section>
+</div><p>Výpočet má tři kroky a každý je jednou maticovou operací:</p>
+<ol class="arabic simple">
+<li><p>reziduum stejnorodého kmene, <span class="math notranslate nohighlight">\(\displaystyle \vec r=\vec b-A\vec x_0\)</span>,</p></li>
+<li><p>filtrace, tj. vyřešení soustavy <span class="math notranslate nohighlight">\(\displaystyle (AA^T+\mu I)\vec y=\vec r\)</span>,</p></li>
+<li><p>zpětná projekce, <span class="math notranslate nohighlight">\(\displaystyle \vec x=\vec x_0+A^T\vec y\)</span>.</p></li>
+</ol>
+<figure class="align-default" id="id18">
+<img alt="../_images/obr_fbp_kroky.png" src="../_images/obr_fbp_kroky.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 19 </span><span class="caption-text">Kroky filtrované zpětné projekce: reziduum na jednotlivých paprscích, jeho zpětná projekce bez filtrace, výsledek s filtrací a fantom (tlusté paprsky, přesná data).</span><a class="headerlink" href="#id18" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Tlumení <span class="math notranslate nohighlight">\(\displaystyle \mu\)</span> se zadává jako násobek průměrného prvku v hlavní diagonále matice <span class="math notranslate nohighlight">\(\displaystyle AA^T\)</span>, aby jeho význam nezávisel na velikosti kmene ani na jednotkách. Tento násobek budeme nazývat stručně tlumení. Jeho vliv ukazuje následující obrázek.</p>
+<figure class="align-default" id="id19">
+<img alt="../_images/obr_tlumeni.png" src="../_images/obr_tlumeni.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 20 </span><span class="caption-text">Filtrovaná zpětná projekce pro různé hodnoty tlumení (tlusté paprsky, data s chybou 2 %).</span><a class="headerlink" href="#id19" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Pro malé tlumení obraz téměř přesně souhlasí s daty (neshoda <span class="math notranslate nohighlight">\(\displaystyle 0{,}1\,\%\)</span>), ale je znehodnocen falešnými vadami. Chyba vůči fantomu je <span class="math notranslate nohighlight">\(\displaystyle 141\,\%\)</span>.</p></li>
+<li><p>Pro velké tlumení je filtr skoro vyřazen z činnosti. Matice <span class="math notranslate nohighlight">\(\displaystyle AA^T+\mu I\)</span> je pak přibližně rovna <span class="math notranslate nohighlight">\(\displaystyle \mu I\)</span>, tedy <span class="math notranslate nohighlight">\(\displaystyle \vec y\approx\frac 1\mu\vec r\)</span>, a dostáváme obyčejnou zpětnou projekci rezidua, navíc s malou vahou. Obraz je rozmazaný a blíží se stejnorodému kmeni.</p></li>
+<li><p>Mezi oběma krajnostmi leží rozumný kompromis. Pro tlumení rovné jedné je chyba <span class="math notranslate nohighlight">\(\displaystyle 21\,\%\)</span>, tedy srovnatelná s metodou SIRT.</p></li>
+</ul>
+<p>Tlumení zde hraje stejnou roli jako vyhlazení a včasné zastavení iterací u metody SIRT: brání tomu, abychom datům věřili víc, než si zaslouží.</p>
+<div class="proof algorithm dropdown admonition" id="algorithm-5">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 3 </span> (Filtrovaná zpětná projekce v Pythonu)</p>
+<section class="algorithm-content" id="proof-content">
+<h3 class="rubric">Filtrovaná zpětná projekce v Pythonu</h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">L</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>           <span class="c1"># stejnorodý kmen</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span>                                  <span class="c1"># překryvy paprsků, matice m x m</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">tlumeni</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">G</span><span class="p">)</span> <span class="o">/</span> <span class="n">m</span>               <span class="c1"># násobek průměrného diagonálního prvku</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">G</span> <span class="o">+</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="n">b</span> <span class="o">-</span> <span class="n">A</span> <span class="o">@</span> <span class="n">x0</span><span class="p">)</span>   <span class="c1"># filtrace</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">y</span>                             <span class="c1"># zpětná projekce</span>
+</pre></div>
+</div>
+</section>
+</div><div class="proof algorithm dropdown admonition" id="algorithm-6">
+<p class="admonition-title"><span class="caption-number">Volitelný obsah 4 </span> (Souvislost s metodou nejmenších čtverců)</p>
+<section class="algorithm-content" id="proof-content">
+<h3 class="rubric">Souvislost s metodou nejmenších čtverců</h3>
+<p>Vzorec <a class="reference internal" href="#equation-tomo8">(8)</a> lze získat i jinou cestou. Hledejme obraz <span class="math notranslate nohighlight">\(\displaystyle \vec x\)</span>, který je kompromisem mezi shodou s daty a blízkostí ke stejnorodému kmeni, tedy obraz, pro který je nejmenší součet
+<div class="math notranslate nohighlight">
+\[|A\vec x-\vec b|^2+\mu\,|\vec x-\vec x_0|^2.\]</div>
+
+Hledání minima vede (derivováním podle všech neznámých) na soustavu, jejíž řešení je
+<div class="math notranslate nohighlight">
+\[\vec x=\vec x_0+(A^TA+\mu I)^{-1}A^T(\vec b-A\vec x_0).\]</div>
+
+Zde se řeší soustava s maticí <span class="math notranslate nohighlight">\(\displaystyle A^TA+\mu I\)</span> typu <span class="math notranslate nohighlight">\(\displaystyle 1282\times 1282\)</span>. Oba vzorce dávají stejný výsledek, protože platí
+<div class="math notranslate nohighlight">
+\[(A^TA+\mu I)^{-1}A^T=A^T(AA^T+\mu I)^{-1}.\]</div>
+
+O tom se přesvědčíme tak, že rovnost vynásobíme zleva maticí <span class="math notranslate nohighlight">\(\displaystyle A^TA+\mu I\)</span> a zprava maticí <span class="math notranslate nohighlight">\(\displaystyle AA^T+\mu I\)</span>. Na obou stranách dostaneme <span class="math notranslate nohighlight">\(\displaystyle A^TAA^T+\mu A^T\)</span>. Numerický výpočet oběma způsoby se liší až na patnáctém desetinném místě. Filtrovaná zpětná projekce je tedy úsporný způsob, jak tutéž úlohu vyřešit pomocí malé matice místo velké.</p>
+</section>
+</div></section>
+</section>
+<section id="srovnani-metod">
+<h2>Srovnání metod<a class="headerlink" href="#srovnani-metod" title="Link to this heading">#</a></h2>
+<p>Obě metody vycházejí ze stejné soustavy <span class="math notranslate nohighlight">\(\displaystyle A\vec x=\vec b\)</span>, ze stejného počátečního odhadu a obě používají dvojici operací „přímá úloha <span class="math notranslate nohighlight">\(\displaystyle A\)</span>, zpětná projekce <span class="math notranslate nohighlight">\(\displaystyle A^T\)</span>“. Liší se v tom, jak se vyrovnávají s nejednoznačností řešení a s chybami měření.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>SIRT</p></th>
+<th class="head"><p>FBP</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Výpočet</p></td>
+<td><p>tisíce jednoduchých kroků</p></td>
+<td><p>jedno řešení soustavy <span class="math notranslate nohighlight">\(\displaystyle 66\times 66\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ochrana před chybami měření</p></td>
+<td><p>vyhlazení <span class="math notranslate nohighlight">\(\displaystyle \alpha\)</span>, ořez</p></td>
+<td><p>tlumení <span class="math notranslate nohighlight">\(\displaystyle \mu\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Fyzikální meze rychlosti</p></td>
+<td><p>v každé iteraci</p></td>
+<td><p>až dodatečně na hotovém obraze</p></td>
+</tr>
+<tr class="row-odd"><td><p>Co se dodává navíc k datům</p></td>
+<td><p>hladkost obrazu</p></td>
+<td><p>blízkost ke stejnorodému kmeni</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Na čtyřech různých fantomech s chybou měření <span class="math notranslate nohighlight">\(\displaystyle 2\,\%\)</span> dávají obě metody podobné výsledky a obě jsou výrazně lepší než obyčejná zpětná projekce.</p>
+<figure class="align-default" id="id20">
+<img alt="../_images/obr_srovnani.png" src="../_images/obr_srovnani.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 21 </span><span class="caption-text">Čtyři fantomy a jejich rekonstrukce zpětnou projekcí, metodou SIRT (<span class="math notranslate nohighlight">\(\displaystyle \alpha=10\)</span>, ořez, 1000 iterací) a filtrovanou zpětnou projekcí (tlumení 1). Tlusté paprsky, data s chybou 2 %.</span><a class="headerlink" href="#id20" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fantom</p></th>
+<th class="head"><p>Zpětná projekce</p></th>
+<th class="head"><p>SIRT</p></th>
+<th class="head"><p>FBP</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>středová dutina</p></td>
+<td><p>39 %</p></td>
+<td><p>21 %</p></td>
+<td><p>23 %</p></td>
+</tr>
+<tr class="row-odd"><td><p>dutina mimo střed</p></td>
+<td><p>36 %</p></td>
+<td><p>20 %</p></td>
+<td><p>20 %</p></td>
+</tr>
+<tr class="row-even"><td><p>dvě dutiny</p></td>
+<td><p>41 %</p></td>
+<td><p>25 %</p></td>
+<td><p>25 %</p></td>
+</tr>
+<tr class="row-odd"><td><p>prstenec hniloby</p></td>
+<td><p>26 %</p></td>
+<td><p>19 %</p></td>
+<td><p>20 %</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Obraz z metody SIRT bývá o něco klidnější, FBP má ve zdravém dřevě více slabých falešných struktur. Polohu a přibližnou velikost vady určí obě metody správně. Žádná z nich ale nevykreslí ostrý okraj dutiny a u prstence hniloby je zdravé jádro uprostřed sotva naznačeno.</p>
+<p>Lepší obraz už nezískáme důmyslnějším výpočtem, ale jen větším množstvím dat. Zvýšení počtu čidel z 8 na 24 zvýší počet paprsků z 28 na 276 a obraz se viditelně zpřesní.</p>
+<figure class="align-default" id="id21">
+<img alt="../_images/obr_pocet_cidel.png" src="../_images/obr_pocet_cidel.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 22 </span><span class="caption-text">Vliv počtu čidel na rekonstrukci metodou SIRT (nahoře) a FBP (dole). Data s chybou 2 %.</span><a class="headerlink" href="#id21" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Počet čidel</p></th>
+<th class="head"><p>Počet paprsků</p></th>
+<th class="head"><p>Chyba SIRT</p></th>
+<th class="head"><p>Chyba FBP</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>28</p></td>
+<td><p>25 %</p></td>
+<td><p>28 %</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>66</p></td>
+<td><p>19 %</p></td>
+<td><p>20 %</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>120</p></td>
+<td><p>18 %</p></td>
+<td><p>18 %</p></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p>276</p></td>
+<td><p>16 %</p></td>
+<td><p>15 %</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Poznámka (meze modelu).</strong> Celou dobu jsme předpokládali, že se zvuk šíří po úsečce. Ve skutečnosti se šíří po nejrychlejší dráze a dutinu obejde zdravým dřevem. Naměřený čas je pak kratší, než odpovídá přímému paprsku, a dutina se v tomogramu jeví menší a „zdravější“, než ve skutečnosti je. Dřevo je navíc anizotropní materiál: rychlost zvuku v radiálním a tangenciálním směru se liší, takže ani ve zcela zdravém kmeni nejsou zdánlivé rychlosti všech paprsků stejné. S oběma jevy je nutné při interpretaci skutečných tomogramů počítat. Naše simulace je záměrně neobsahují, aby byla vidět samotná matematika rekonstrukce.</p>
+</section>
+<section id="zpet-ke-skutecnym-stromum">
+<h2>Zpět ke skutečným stromům<a class="headerlink" href="#zpet-ke-skutecnym-stromum" title="Link to this heading">#</a></h2>
+<p>Vraťme se ke dvěma lípám z úvodu a proveďme s jejich měřeními přesně tytéž kroky jako s fantomy. Liší se jen vstup: polohy čidel nejsou na kružnici, ale tam, kde byla čidla na kmeni skutečně umístěna, a časy pocházejí z přístroje. Každý paprsek byl změřen v obou směrech a do vektoru <span class="math notranslate nohighlight">\(\displaystyle \vec b\)</span> bereme průměr obou časů. Matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span>, metoda SIRT i filtrovaná zpětná projekce zůstávají beze změny, včetně hodnot parametrů (tlusté paprsky, <span class="math notranslate nohighlight">\(\displaystyle \alpha=10\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \omega=1{,}5\)</span>, tlumení 1).</p>
+<figure class="align-default" id="id22">
+<img alt="../_images/obr_stromy.png" src="../_images/obr_stromy.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 23 </span><span class="caption-text">Skutečná měření: fotografie řezu, zdánlivé rychlosti paprsků, zpětná projekce, metoda SIRT a filtrovaná zpětná projekce. Čidlo číslo 1 je nahoře a fotografie jsou natočeny shodně s tomogramy.</span><a class="headerlink" href="#id22" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Strom 14 (dutina)</p></th>
+<th class="head"><p>Strom 8 (trhlina)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Obvod kmene v místě měření</p></td>
+<td><p>1,68 m</p></td>
+<td><p>1,81 m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Naměřené časy</p></td>
+<td><p>68–874 μs</p></td>
+<td><p>102–717 μs</p></td>
+</tr>
+<tr class="row-even"><td><p>Zdánlivé rychlosti paprsků</p></td>
+<td><p>641–1956 m/s</p></td>
+<td><p>783–1514 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p>Neshoda s daty, zpětná projekce</p></td>
+<td><p>22 %</p></td>
+<td><p>17 %</p></td>
+</tr>
+<tr class="row-even"><td><p>Neshoda s daty, SIRT</p></td>
+<td><p>8 %</p></td>
+<td><p>12 %</p></td>
+</tr>
+<tr class="row-odd"><td><p>Neshoda s daty, FBP</p></td>
+<td><p>10 %</p></td>
+<td><p>12 %</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>U skutečných stromů správnou odpověď v číslech neznáme, chybu vůči fantomu tedy spočítat nelze. Máme jen neshodu s daty a fotografii.</p>
+<ul class="simple">
+<li><p><strong>Strom 14.</strong> Zpětná projekce ukazuje uprostřed kmene rozmazanou pomalejší oblast. Obě metody z ní udělají výraznou vadu obklopenou zdravým dřevem. Její poloha, mírně posunutá od středu kmene doprava, odpovídá poloze dutiny na fotografii. Rychlost v dutině vychází u metody SIRT na dolní přípustné mezi, kterou je rychlost zvuku ve vzduchu, u FBP těsně nad ní.</p></li>
+<li><p><strong>Strom 8.</strong> Zde je výsledek poučný jinak. Trhlina je úzká, tomogram však ukazuje rozsáhlou oblast nízké rychlosti v té části kmene, kterou trhlina prochází. Zvuk trhlinu nepřekoná a musí ji obejít, takže všechny paprsky, které trhlinu kříží, jsou pomalé, ať ji kříží kdekoli. Model s přímými paprsky toto zpoždění vysvětlí jediným možným způsobem, pomalým materiálem v celé oblasti, kterou tyto paprsky procházejí. Tomogram zde tedy neukazuje tvar vady, ale její akustický stín. To je přesně ta mez modelu, o které jsme mluvili v předchozí poznámce.</p></li>
+</ul>
+<p>Na skutečných datech se také projeví vše, co simulace neobsahovaly: chyby měření, anizotropie dřeva a nepřesnosti v poloze čidel. Je to vidět na neshodě s daty, která je i po rekonstrukci kolem deseti procent, a na tom, že nejrychlejší paprsky mezi sousedními čidly mají zdánlivou rychlost vyšší, než bývá ve dřevě obvyklé. Bez vyhlazení, ořezu a tlumení by se všechny tyto chyby propsaly do obrazu jako falešné vady.</p>
+</section>
+<section id="shrnuti-hlavni-myslenky">
+<h2>Shrnutí, hlavní myšlenky<a class="headerlink" href="#shrnuti-hlavni-myslenky" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id23">
+<img alt="../_images/message.jpg" src="../_images/message.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 24 </span><span class="caption-text">A jaká je hlavní message? Zdroj: pixabay.com</span><a class="headerlink" href="#id23" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Čas průchodu zvuku kmenem je integrál z převrácené hodnoty rychlosti. Rozdělením průřezu na buňky se z integrálu stane součet a pro pomalosti v buňkách dostáváme soustavu lineárních rovnic <span class="math notranslate nohighlight">\(\displaystyle A\vec x=\vec b\)</span>. Matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> obsahuje délky paprsků v buňkách a závisí jen na geometrii měření.</p></li>
+<li><p>Soustava má mnohem více neznámých než rovnic, a proto má nekonečně mnoho řešení. Shoda s naměřenými časy sama o sobě obraz neurčuje a kvůli chybám měření ani není rozumné na přesné shodě trvat. K datům je nutné přidat další požadavek: hladkost obrazu, fyzikálně přípustné hodnoty nebo blízkost ke stejnorodému kmeni.</p></li>
+<li><p>Součin s maticí <span class="math notranslate nohighlight">\(\displaystyle A\)</span> převádí obraz na časy, součin s transponovanou maticí <span class="math notranslate nohighlight">\(\displaystyle A^T\)</span> rozděluje hodnoty z paprsků zpět do buněk. Tato zpětná projekce sama dává jen rozmazaný obraz, je však základem obou metod.</p></li>
+<li><p>Metoda SIRT obraz opakovaně opravuje: spočítá časy pro aktuální obraz, porovná je s naměřenými a rozdíl promítne zpět do obrazu. Aby se obraz dalšími iteracemi nekazil, doplňuje se vyhlazením a ořezem na přípustné hodnoty rychlosti.</p></li>
+<li><p>Na skutečných stromech obě metody spolehlivě odhalí velkou dutinu. U trhliny ukazuje tomogram spíše oblast, kterou zvuk musí obcházet, než skutečný tvar vady. Tomogram je proto nutné číst se znalostí toho, co model zanedbává.</p></li>
+<li><p>Filtrovaná zpětná projekce najde opravu najednou. Před zpětnou projekcí data upraví vyřešením malé soustavy s maticí <span class="math notranslate nohighlight">\(\displaystyle AA^T+\mu I\)</span>, která popisuje vzájemný překryv paprsků. Tlumení <span class="math notranslate nohighlight">\(\displaystyle \mu\)</span> zde hraje stejnou roli jako vyhlazení u metody SIRT.</p></li>
+</ul>
+</section>
+<section id="prehled-symbolu">
+<h2>Přehled symbolů<a class="headerlink" href="#prehled-symbolu" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Význam</p></th>
+<th class="head"><p>Poznámka</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle v\)</span></p></td>
+<td><p>rychlost zvuku</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\displaystyle x_j\)</span></p></td>
+<td><p>pomalost v <span class="math notranslate nohighlight">\(\displaystyle j\)</span>-té buňce, <span class="math notranslate nohighlight">\(\displaystyle x_j=1/v_j\)</span></p></td>
+<td><p>neznámé soustavy <span class="math notranslate nohighlight">\(\displaystyle A\vec x=\vec b\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle b_i\)</span></p></td>
+<td><p>čas průchodu po <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tém paprsku</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\displaystyle a_{ij}\)</span></p></td>
+<td><p>délka <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tého paprsku v <span class="math notranslate nohighlight">\(\displaystyle j\)</span>-té buňce</p></td>
+<td><p>prvky matice soustavy <span class="math notranslate nohighlight">\(\displaystyle A\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle L_i\)</span></p></td>
+<td><p>délka <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tého paprsku</p></td>
+<td><p>součet <span class="math notranslate nohighlight">\(\displaystyle i\)</span>-tého řádku matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\displaystyle m\)</span>, <span class="math notranslate nohighlight">\(\displaystyle n\)</span></p></td>
+<td><p>počet paprsků, počet buněk</p></td>
+<td><p><span class="math notranslate nohighlight">\(\displaystyle m\)</span> jinde hmotnost</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle s_0\)</span></p></td>
+<td><p>pomalost stejnorodého kmene</p></td>
+<td><p>počáteční odhad</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\displaystyle \vec r\)</span></p></td>
+<td><p>reziduum, <span class="math notranslate nohighlight">\(\displaystyle \vec r=\vec b-A\vec x\)</span></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle R\)</span>, <span class="math notranslate nohighlight">\(\displaystyle C\)</span></p></td>
+<td><p>diagonální matice převrácených součtů řádků a sloupců</p></td>
+<td><p>metoda SIRT</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\displaystyle \omega\)</span></p></td>
+<td><p>relaxační parametr</p></td>
+<td><p>metoda SIRT</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle \alpha\)</span></p></td>
+<td><p>váha vyhlazení</p></td>
+<td><p>metoda SIRT</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\displaystyle D\)</span></p></td>
+<td><p>matice diskrétního Laplaceova operátoru</p></td>
+<td><p>jinde diagonální matice nebo difuzní koeficient</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle h\)</span></p></td>
+<td><p>velikost buňky sítě</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\displaystyle \mu\)</span></p></td>
+<td><p>tlumení</p></td>
+<td><p>filtrovaná zpětná projekce</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Upozornění</strong> Velká část dokumentu byla vygenerována pomocí LLM Claude Fable 5.2. Dokument však vychází ze zkušeností autora s tvorbou knihovny pro zpracování dat akustického tomografu a za správnost odpovídá autor.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../shrnuti/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Shrnutí za předmět Matematika</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../cviceni/cviceni00.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title">Úvod</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dva-skutecne-stromy">Dva skutečné stromy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#od-casu-pruchodu-k-linearni-rovnici">Od času průchodu k lineární rovnici</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matice-soustavy">Matice soustavy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tenke-a-tluste-paprsky">Tenké a tlusté paprsky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prima-uloha-od-obrazu-k-casum">Přímá úloha: od obrazu k časům</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#obracena-uloha-a-proc-ji-nelze-proste-vyresit">Obrácená úloha a proč ji nelze prostě vyřešit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zpetna-projekce">Zpětná projekce</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-sirt-opakovana-oprava-obrazu">Metoda SIRT: opakovaná oprava obrazu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#myslenka-iteracni-opravy">Myšlenka iterační opravy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iteracni-vzorec">Iterační vzorec</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-se-deje-behem-iteraci">Co se děje během iterací</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#volba-relaxacniho-parametru">Volba relaxačního parametru</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orez-na-fyzikalne-pripustne-hodnoty">Ořez na fyzikálně přípustné hodnoty</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vyhlazeni">Vyhlazení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrovana-zpetna-projekce">Filtrovaná zpětná projekce</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odvozeni">Odvození</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tlumeni">Tlumení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#srovnani-metod">Srovnání metod</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zpet-ke-skutecnym-stromum">Zpět ke skutečným stromům</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-hlavni-myslenky">Shrnutí, hlavní myšlenky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prehled-symbolu">Přehled symbolů</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 18.11.2026.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/matematika" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
