@@ -1,4 +1,4 @@
-# Případová studie: matematika akustického tomografu
+# Matematika akustického tomografu
 
 ```{admonition} Motivace
 
